@@ -1,0 +1,6 @@
+pod 'pop','~>1.0'
+
+pod 'MMTweenAnimation', :head
+
+pod 'MMPlaceHolder', :head
+

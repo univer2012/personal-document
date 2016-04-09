@@ -1,0 +1,357 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 STHeitiSC-Light;
+\f3\fnil\fcharset0 LucidaGrande;\f4\fnil\fcharset0 Menlo-Bold;\f5\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red46\green13\blue110;
+\red63\green110\blue116;\red196\green26\blue22;\red0\green116\blue0;\red38\green71\blue75;\red28\green0\blue207;
+\red35\green35\blue35;\red255\green255\blue255;\red83\green104\blue112;\red252\green244\blue220;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li214\fi-14\pardirnatural
+
+\f0\fs30 \cf0 \
+\pard\tx505\pardeftab505\pardirnatural
+
+\f1\fs21 \cf2 \CocoaLigature0 @interface\cf0  Person : \cf3 NSObject\cf0 \
+\cf2 @property\cf0 (\cf2 copy\cf0 ,\cf2 nonatomic\cf0 )\cf3 NSString\cf0  *name;\
+-(\cf2 void\cf0 )changeName:(\cf3 NSString\cf0  *)name;\
+\
+\cf2 @end\cf0 \
+\
+\cf2 @implementation\cf0  Person\
+\
+- (\cf2 instancetype\cf0 )init\
+\{\
+    \cf2 self\cf0  = [\cf2 super\cf0  \cf4 init\cf0 ];\
+    \cf2 if\cf0  (\cf2 self\cf0 ) \{\
+        \cf2 self\cf0 .\cf5 name\cf0 =\cf6 @"default"\cf0 ;\
+    \}\
+    \cf2 return\cf0  \cf2 self\cf0 ;\
+\}\
+-(\cf2 void\cf0 )changeName:(\cf3 NSString\cf0  *)name \{\
+    \cf5 _name\cf0 =name;\
+\}\
+\cf2 @end\cf0 \
+\
+\cf2 @interface\cf0  Observer : \cf3 NSObject\cf0 \
+\
+\cf2 @end\cf0 \
+\
+\cf2 @implementation\cf0  Observer\
+\
+-(\cf2 void\cf0 )observeValueForKeyPath:(\cf3 NSString\cf0  *)keyPath ofObject:(\cf2 id\cf0 )object change:(\cf3 NSDictionary\cf0  *)change context:(\cf2 void\cf0  *)context \{\
+    \cf4 NSLog\cf0 (\cf6 @"%@-%@-%@"\cf0 ,[\cf2 self\cf0  \cf4 class\cf0 ],object,change);\
+\}\
+\
+\cf2 @end\cf0 \
+\
+\cf2 int\cf0  main(\cf2 int\cf0  argc, \cf2 const\cf0  \cf2 char\cf0  * argv[]) \{\
+    \cf2 @autoreleasepool\cf0  \{\
+        \
+        \cf5 Observer\cf0  *observer=[\cf5 Observer\cf0  \cf4 new\cf0 ];\
+        \cf5 Person\cf0  *person=[[\cf5 Person\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+        [person \cf4 addObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 options\cf0 :\cf4 NSKeyValueObservingOptionNew\cf0  | \cf4 NSKeyValueObservingOptionOld\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+        person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;\
+\cf7 //        person.name=@"Jack";\cf0 \
+        [person \cf4 setValue\cf0 :\cf6 @"Jhon"\cf0  \cf4 forKey\cf0 :\cf6 @"name"\cf0 ];\
+        [person \cf8 changeName\cf0 :\cf6 @"Jiji"\cf0 ];\
+        \
+        [person \cf4 removeObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+    \}\
+    \cf2 return\cf0  \cf9 0\cf0 ;\
+\}\
+\
+\pard\pardeftab720\sl544
+
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'be\'ad\'b2\'e2\'ca\'d4\'a3\'ac
+\f1\fs27 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'ba\'cd
+\f1\fs27 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 [person \cf4 setValue\cf0 :\cf6 @"Jhon"\cf0  \cf4 forKey\cf0 :\cf6 @"name"\cf0 ];
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'be\'f9\'bf\'c9\'b4\'a5\'b7\'a2
+\f3 KVO
+\f2 \'a3\'ac\'b6\'f8
+\f1\fs27 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 [person \cf8 changeName\cf0 :\cf6 @"Jiji"\cf0 ];
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'b2\'bb\'c4\'dc\'a1\'a3\'c7\'b0\'c1\'bd\'d6\'d6\'b7\'bd\'ca\'bd\'bb\'e1\'b7\'c3\'ce\'ca
+\f3 setter
+\f2 \'a3\'ac\'b5\'da\'c8\'fd\'d6\'d6\'d6\'b1\'bd\'d3\'b7\'c3\'ce\'ca\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf\'a3\'ac\'bf\'c9\'d2\'d4\'b2\'c2\'b2\'e2
+\f3 KVO
+\f2 \'c4\'da\'b2\'bf\'ca\'c7\'d4\'da
+\f3 setter
+\f2 \'d6\'d0\'b4\'a5\'b7\'a2\'b5\'c4\'a1\'a3
+\f3 \
+
+\f2 \'d4\'da
+\f1\fs27 \cf6 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 Foundation/NSKeyValueObserving.h
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'bf\'c9\'d2\'d4\'d5\'d2\'b5\'bd\'d2\'d4\'cf\'c2\'b7\'bd\'b7\'a8
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx505\pardeftab505\pardirnatural
+\cf0 \
+\
+- (\cf2 void\cf0 )willChangeValueForKey:(\cf3 NSString\cf0  *)key;\
+- (\cf2 void\cf0 )didChangeValueForKey:(\cf3 NSString\cf0  *)key;\
++ (\cf2 BOOL\cf0 )automaticallyNotifiesObserversForKey:(\cf3 NSString\cf0  *)key;\
+\
+\pard\pardeftab720\sl544
+
+\fs32 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec12 +(BOOL)automaticallyNotifiesObserversForKey:(NSString *)key
+\f2 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'bf\'d8\'d6\'c6\'ca\'c7\'b7\'f1\'d7\'d4\'b6\'af\'b7\'a2\'cb\'cd\'cd\'a8\'d6\'aa\'a3\'ac\'c8\'e7\'b9\'fb\'b7\'b5\'bb\'d8
+\f3 NO
+\f2 \'a3\'ac
+\f3 KVO
+\f2 \'ce\'de\'b7\'a8\'d7\'d4\'b6\'af\'d4\'cb\'d7\'f7\'a3\'ac\'d0\'e8\'ca\'d6\'b6\'af\'b4\'a5\'b7\'a2\'a1\'a3\'d2\'f2\'ce\'aa\'c7\'b0\'c1\'bd\'b8\'f6\'b7\'bd\'b7\'a8\'c4\'ac\'c8\'cf\'ca\'c7\'d4\'da
+\f3 setter
+\f2 \'d6\'d0\'ca\'b5\'cf\'d6\'b5\'c4\'a3\'a8\'d3\'c3
+\f3 KVO
+\f2 \'d7\'f6\'bc\'fc\'d6\'b5\'b9\'db\'b2\'ec\'ba\'f3\'a3\'ac\'cf\'b5\'cd\'b3\'bb\'e1\'d4\'da\'d4\'cb\'d0\'d0\'ca\'b1\'d6\'d8\'d0\'b4\'b1\'bb\'b9\'db\'b2\'ec\'b6\'d4\'cf\'f3\'ca\'f4\'d0\'d4\'b5\'c4
+\f3 setter
+\f2 \'a3\'a9\'a3\'ac\'bc\'b4\'a3\'ba
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx505\pardeftab505\pardirnatural
+\cf0 \
+-(\cf2 void\cf0 )changeName:(\cf3 NSString\cf0  *)name \{\
+    [\cf2 self\cf0  \cf4 willChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+    \cf5 _name\cf0 =name;\
+    [\cf2 self\cf0  \cf4 didChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+\}\
+\
+\cf2 int\cf0  main(\cf2 int\cf0  argc, \cf2 const\cf0  \cf2 char\cf0  * argv[]) \{\
+    \cf2 @autoreleasepool\cf0  \{\
+        \
+        \cf5 Observer\cf0  *observer=[\cf5 Observer\cf0  \cf4 new\cf0 ];\
+        \cf5 Person\cf0  *person=[[\cf5 Person\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+        [person \cf4 addObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 options\cf0 :\cf4 NSKeyValueObservingOptionNew\cf0  | \cf4 NSKeyValueObservingOptionOld\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+        [person \cf8 changeName\cf0 :\cf6 @"Jiji"\cf0 ];\
+        \
+        [person \cf4 removeObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+    \}\
+    \cf2 return\cf0  \cf9 0\cf0 ;\
+\}\
+\
+\pard\tx505\pardeftab505\pardirnatural
+
+\f4\b\fs22 \cf0 2015-10-29 22:20:33.490 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68544:1599099] -[Person changeName:]\
+2015-10-29 22:20:33.494 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68544:1599099] Observer-<Person: 0x100206890>-\{\
+    kind = 1;\
+    new = Jiji;\
+    old = default;\
+\}\
+\pard\pardeftab720\sl544\sa500\qj
+
+\f2\b0\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'bf\'b4\'b0\'c9\'a3\'ac
+\f3 KVO
+\f2 \'d3\'d6\'c5\'dc\'c6\'f0\'c0\'b4\'c1\'cb\'a1\'a3
+\f3 \
+
+\f2 \'d4\'d9\'c0\'b4\'bf\'b4\'d2\'bb\'cf\'c2\'cb\'fb\'c3\'c7\'b5\'c4\'b5\'f7\'d3\'c3\'cb\'b3\'d0\'f2\
+\pard\tx505\pardeftab505\pardirnatural
+
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 -(\cf2 void\cf0 )changeName:(\cf3 NSString\cf0  *)name \{\
+    \cf2 if\cf0  ([\cf5 _name\cf0  \cf4 isEqualToString\cf0 :name]) \{\
+        \cf2 return\cf0 ;\
+    \}\
+    \cf4 NSLog\cf0 (\cf6 @"%s"\cf0 ,__func__);\
+    [\cf2 self\cf0  \cf4 willChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+    \cf5 _name\cf0 =name;\
+    [\cf2 self\cf0  \cf4 didChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+\}\
+\
++(\cf2 BOOL\cf0 )automaticallyNotifiesObserversForKey:(\cf3 NSString\cf0  *)key \{\
+\cf7 //    return YES;\cf0 \
+    \cf4 NSLog\cf0 (\cf6 @"%s"\cf0 ,__func__);\
+    \cf2 if\cf0  ([key \cf4 isEqualToString\cf0 :\cf6 @"name"\cf0 ]) \{\
+        \cf2 return\cf0  \cf2 NO\cf0 ;\
+    \}\
+    \cf2 return\cf0  [\cf2 super\cf0  \cf4 automaticallyNotifiesObserversForKey\cf0 :key];\
+\}
+\f3\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \
+\pard\tx505\pardeftab505\pardirnatural
+
+\f4\b\fs22 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 2015-10-29 22:21:20.266 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68560:1599509] +[Person automaticallyNotifiesObserversForKey:]\
+2015-10-29 22:21:20.267 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68560:1599509] -[Person changeName:]\
+2015-10-29 22:21:20.270 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68560:1599509] Observer-<Person: 0x100206910>-\{\
+    kind = 1;\
+    new = Jiji;\
+    old = default;\
+\}
+\f1\b0\fs21 \
+\pard\pardeftab720\sl544
+
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'cf\'d4\'c8\'bb\'ba\'cd\'ce\'d2\'c3\'c7\'b2\'c2\'b2\'e2\'b5\'c4\'cb\'b3\'d0\'f2\'c3\'bb\'d3\'d0\'b3\'f6\'c8\'eb\'a3\'ac\'cd\'ea\'c8\'ab\'d5\'fd\'c8\'b7
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx505\pardeftab505\pardirnatural
+\cf7 //
+\f2 \'d5\'e2\'c0\'ef\'d6\'d8\'d0\'b4
+\f1   + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key\cf0 \
+\cf7 //
+\f2 \'c3\'bb\'d3\'d0\'ca\'b2\'c3\'b4\'c2\'d1\'d3\'c3\'a3\'ac\'d6\'bb\'ca\'c7\'b7\'bd\'b1\'e3\'b2\'e9\'bf\'b4\'b5\'f7\'d3\'c3\'cb\'b3\'d0\'f2\'a1\'a3\'d2\'f2\'ce\'aa
+\f1 auto
+\f2 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d6\'bb\'ba\'cd
+\f1 setter
+\f2 \'cf\'e0\'b9\'d8\'a3\'ac\'b6\'f8\'cf\'d6\'d4\'da\'ca\'c7\'b5\'f7\'d3\'c3\'d7\'d4\'b6\'a8\'d2\'e5\'b7\'bd\'b7\'a8\'b2\'a2\'c7\'d2\'c4\'da\'b2\'bf\'d6\'b1\'bd\'d3\'b7\'c3\'ce\'ca\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf\'a1\'a3
+\f1 \cf0 \
+\cf7 //
+\f2 \'d6\'c1\'d3\'da\'c4\'da\'b2\'bf\'c9\'e8\'d6\'c3\'b5\'c4\'c4\'c7\'b8\'f6
+\f1 name
+\f2 \'c0\'b9\'bd\'d8\'a3\'ac\'b4\'bf\'ca\'f4\'ce\'aa\'c1\'cb\'d3\'e9\'c0\'d6
+\f5 \uc0\u55357 \u56834 
+\f1 \cf0 \
+\
+\pard\pardeftab720\sl264\slmult1\qj
+
+\f2\fs30 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'d7\'d4\'bc\'ba\'b3\'f6\'b7\'a2
+\f3 KVO
+\f2 \'cd\'a8\'d6\'aa\'bb\'e1\'c9\'fa\'b3\'c9\'d6\'d0\'bc\'e4\'c0\'e0\'c2\'f0\'a3\'bf\'a3\'a8\'b9\'d8\'d3\'da\'d6\'d0\'bc\'e4\'c0\'e0\'a3\'ac\'c7\'d2\'cc\'fd\'cf\'c2\'bb\'d8\'b7\'d6\'bd\'e2\'a1\'a3\'a1\'a3\'a3\'a9\'b5\'b1\'c8\'bb\'bb\'e1\'a3\'a1
+\f3 \
+
+\f2 \'b9\'d8\'d3\'da\'ca\'d6\'b6\'af\'b4\'a5\'b7\'a2\'b5\'c4\'c0\'fd\'d7\'d3\'ba\'dc\'b6\'e0\'a3\'ac\'b1\'c8\'c8\'e7\'d6\'f7\'c1\'f7\'c8\'fd\'b7\'bd\'bf\'f2\'bc\'dc
+\f1 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 SDWebImage
+\f2 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'d6\'d0\'b5\'c4
+\f1 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 SDWebImageDownloaderOperation.h
+\f2 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'ba\'cd
+\f1 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 MJRefesh
+\f2 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'d6\'d0\'b5\'c4
+\f1 \cf12 \cb13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec12 UIScrollView+MJRefresh.h
+\f2 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \'a3\'ac\'d3\'d0\'d0\'cb\'c8\'a4\'bf\'c9\'d2\'d4\'bf\'b4\'cf\'c2\'d4\'b4\'c2\'eb\'a3\'ac\'d5\'e2\'c0\'ef\'b2\'bb\'d7\'f6\'bd\'e2\'ce\'f6\'a1\'a3
+\f3 \
+
+\f2 \'c8\'e7\'b9\'fb\'c1\'bd\'b4\'ce\'c9\'e8\'d6\'c3\'b5\'c4\'d6\'b5\'cf\'e0\'cd\'ac\'bb\'e1\'d4\'f5\'d1\'f9\'a3\'bf
+\f3 \
+\pard\tx505\pardeftab505\pardirnatural
+
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\cf2 int\cf0  main(\cf2 int\cf0  argc, \cf2 const\cf0  \cf2 char\cf0  * argv[]) \{\
+    \cf2 @autoreleasepool\cf0  \{\
+        \
+        \cf5 Observer\cf0  *observer=[\cf5 Observer\cf0  \cf4 new\cf0 ];\
+        \cf5 Person\cf0  *person=[[\cf5 Person\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+        [person \cf4 addObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 options\cf0 :\cf4 NSKeyValueObservingOptionNew\cf0  | \cf4 NSKeyValueObservingOptionOld\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+        person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;\
+        person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;\
+\cf7 //        [person setValue:@"Jhon" forKey:@"name"];\cf0 \
+\cf7 //        [person changeName:@"Jiji"];\cf0 \
+        \
+        [person \cf4 removeObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+    \}\
+    \cf2 return\cf0  \cf9 0\cf0 ;\
+\}\
+\pard\tx505\pardeftab505\pardirnatural
+
+\f4\b\fs22 \cf0 2015-10-29 22:23:00.080 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68593:1600483] Observer-<Person: 0x1003069e0>-\{\
+    kind = 1;\
+    new = Jack;\
+    old = default;\
+\}\
+2015-10-29 22:23:00.081 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68593:1600483] Observer-<Person: 0x1003069e0>-\{\
+    kind = 1;\
+    new = Jack;\
+    old = Jack;\
+\}\
+\pard\pardeftab720\sl544
+
+\f3\b0\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 WTF
+\f2 \'a3\'a1\'cf\'e0\'cd\'ac\'b5\'c4\'d6\'b5\'b8\'c9\'c2\'ef\'bb\'b9\'d2\'aa\'bc\'e0\'cc\'fd\'a3\'bf\'b0\'d1\'b4\'fa\'c2\'eb\'b8\'c4\'bd\'f8\'d2\'bb\'cf\'c2
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx505\pardeftab505\pardirnatural
+\cf0 +(\cf2 BOOL\cf0 )automaticallyNotifiesObserversForKey:(\cf3 NSString\cf0  *)key \{\
+    \cf4 NSLog\cf0 (\cf6 @"%s"\cf0 ,__func__);\
+    \cf2 if\cf0  ([key \cf4 isEqualToString\cf0 :\cf6 @"name"\cf0 ]) \{\
+        \cf2 return\cf0  \cf2 NO\cf0 ;\
+    \}\
+    \cf2 return\cf0  [\cf2 super\cf0  \cf4 automaticallyNotifiesObserversForKey\cf0 :key];\
+\}\
+\
+-(\cf2 void\cf0 )setName:(\cf3 NSString\cf0  *)name \{\
+    \cf2 if\cf0  ([\cf5 _name\cf0  \cf4 isEqualToString\cf0 :name]) \{\
+        \cf2 return\cf0 ;\
+    \}\
+    [\cf2 self\cf0  \cf4 willChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+    \cf5 _name\cf0 =name;\
+    [\cf2 self\cf0  \cf4 didChangeValueForKey\cf0 :\cf6 @"name"\cf0 ];\
+\}\
+\
+\pard\pardeftab720\sl544
+
+\f2\fs32 \cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec10 \'d4\'d9\'c0\'b4\'bf\'b4\'d2\'bb\'cf\'c2\'bd\'e1\'b9\'fb
+\f1\fs21 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\pard\tx505\pardeftab505\pardirnatural
+\cf2 int\cf0  main(\cf2 int\cf0  argc, \cf2 const\cf0  \cf2 char\cf0  * argv[]) \{\
+    \cf2 @autoreleasepool\cf0  \{\
+        \
+        \cf5 Observer\cf0  *observer=[\cf5 Observer\cf0  \cf4 new\cf0 ];\
+        \cf5 Person\cf0  *person=[[\cf5 Person\cf0  \cf4 alloc\cf0 ]\cf4 init\cf0 ];\
+        [person \cf4 addObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 options\cf0 :\cf4 NSKeyValueObservingOptionNew\cf0  | \cf4 NSKeyValueObservingOptionOld\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+        person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;\
+        person.\cf5 name\cf0 =\cf6 @"Jack"\cf0 ;\
+\cf7 //        [person setValue:@"Jhon" forKey:@"name"];\cf0 \
+\cf7 //        [person changeName:@"Jiji"];\cf0 \
+        \
+        [person \cf4 removeObserver\cf0 :observer \cf4 forKeyPath\cf0 :\cf6 @"name"\cf0  \cf4 context\cf0 :\cf2 NULL\cf0 ];\
+    \}\
+    \cf2 return\cf0  \cf9 0\cf0 ;\
+\}\
+\pard\tx505\pardeftab505\pardirnatural
+
+\f4\b\fs22 \cf0 2015-10-29 22:25:57.041 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68619:1601675] +[Person automaticallyNotifiesObserversForKey:]\
+2015-10-29 22:25:57.044 KVO
+\f2 \'bd\'f8\'bd\'d7
+\f4 (
+\f2 \'b6\'fe
+\f4 )[68619:1601675] Observer-<Person: 0x100206a20>-\{\
+    kind = 1;\
+    new = Jack;\
+    old = default;\
+\}
+\f1\b0\fs21 \
+}

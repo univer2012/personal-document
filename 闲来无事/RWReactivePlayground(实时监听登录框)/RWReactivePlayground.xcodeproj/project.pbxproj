@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		670DE2991BB7F1A70002E495 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DE2981BB7F1A70002E495 /* main.m */; };
+		670DE29C1BB7F1A70002E495 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DE29B1BB7F1A70002E495 /* AppDelegate.m */; };
+		670DE29F1BB7F1A70002E495 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DE29E1BB7F1A70002E495 /* ViewController.m */; };
+		670DE2A21BB7F1A70002E495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670DE2A01BB7F1A70002E495 /* Main.storyboard */; };
+		670DE2A41BB7F1A70002E495 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670DE2A31BB7F1A70002E495 /* Images.xcassets */; };
+		670DE2A71BB7F1A70002E495 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670DE2A51BB7F1A70002E495 /* LaunchScreen.xib */; };
+		670DE2B31BB7F1A70002E495 /* RWReactivePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DE2B21BB7F1A70002E495 /* RWReactivePlaygroundTests.m */; };
+		670DE2BD1BB7F1C20002E495 /* kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 670DE2BC1BB7F1C20002E495 /* kitten.jpg */; };
+		670DE2C01BB7F70E0002E495 /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 670DE2BF1BB7F70E0002E495 /* RWDummySignInService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		670DE2AD1BB7F1A70002E495 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 670DE28B1BB7F1A70002E495 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 670DE2921BB7F1A70002E495;
+			remoteInfo = RWReactivePlayground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		670DE2931BB7F1A70002E495 /* RWReactivePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWReactivePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		670DE2971BB7F1A70002E495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670DE2981BB7F1A70002E495 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		670DE29A1BB7F1A70002E495 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		670DE29B1BB7F1A70002E495 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		670DE29D1BB7F1A70002E495 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		670DE29E1BB7F1A70002E495 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		670DE2A11BB7F1A70002E495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		670DE2A31BB7F1A70002E495 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		670DE2A61BB7F1A70002E495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		670DE2AC1BB7F1A70002E495 /* RWReactivePlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RWReactivePlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		670DE2B11BB7F1A70002E495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670DE2B21BB7F1A70002E495 /* RWReactivePlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWReactivePlaygroundTests.m; sourceTree = "<group>"; };
+		670DE2BC1BB7F1C20002E495 /* kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten.jpg; sourceTree = "<group>"; };
+		670DE2BE1BB7F70E0002E495 /* RWDummySignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
+		670DE2BF1BB7F70E0002E495 /* RWDummySignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		670DE2901BB7F1A70002E495 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670DE2A91BB7F1A70002E495 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		670DE28A1BB7F1A70002E495 = {
+			isa = PBXGroup;
+			children = (
+				670DE2951BB7F1A70002E495 /* RWReactivePlayground */,
+				670DE2AF1BB7F1A70002E495 /* RWReactivePlaygroundTests */,
+				670DE2941BB7F1A70002E495 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		670DE2941BB7F1A70002E495 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				670DE2931BB7F1A70002E495 /* RWReactivePlayground.app */,
+				670DE2AC1BB7F1A70002E495 /* RWReactivePlaygroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		670DE2951BB7F1A70002E495 /* RWReactivePlayground */ = {
+			isa = PBXGroup;
+			children = (
+				670DE2BC1BB7F1C20002E495 /* kitten.jpg */,
+				670DE29A1BB7F1A70002E495 /* AppDelegate.h */,
+				670DE29B1BB7F1A70002E495 /* AppDelegate.m */,
+				670DE29D1BB7F1A70002E495 /* ViewController.h */,
+				670DE29E1BB7F1A70002E495 /* ViewController.m */,
+				670DE2A01BB7F1A70002E495 /* Main.storyboard */,
+				670DE2BE1BB7F70E0002E495 /* RWDummySignInService.h */,
+				670DE2BF1BB7F70E0002E495 /* RWDummySignInService.m */,
+				670DE2A31BB7F1A70002E495 /* Images.xcassets */,
+				670DE2A51BB7F1A70002E495 /* LaunchScreen.xib */,
+				670DE2961BB7F1A70002E495 /* Supporting Files */,
+			);
+			path = RWReactivePlayground;
+			sourceTree = "<group>";
+		};
+		670DE2961BB7F1A70002E495 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670DE2971BB7F1A70002E495 /* Info.plist */,
+				670DE2981BB7F1A70002E495 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		670DE2AF1BB7F1A70002E495 /* RWReactivePlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				670DE2B21BB7F1A70002E495 /* RWReactivePlaygroundTests.m */,
+				670DE2B01BB7F1A70002E495 /* Supporting Files */,
+			);
+			path = RWReactivePlaygroundTests;
+			sourceTree = "<group>";
+		};
+		670DE2B01BB7F1A70002E495 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				670DE2B11BB7F1A70002E495 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		670DE2921BB7F1A70002E495 /* RWReactivePlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670DE2B61BB7F1A70002E495 /* Build configuration list for PBXNativeTarget "RWReactivePlayground" */;
+			buildPhases = (
+				670DE28F1BB7F1A70002E495 /* Sources */,
+				670DE2901BB7F1A70002E495 /* Frameworks */,
+				670DE2911BB7F1A70002E495 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RWReactivePlayground;
+			productName = RWReactivePlayground;
+			productReference = 670DE2931BB7F1A70002E495 /* RWReactivePlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		670DE2AB1BB7F1A70002E495 /* RWReactivePlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670DE2B91BB7F1A70002E495 /* Build configuration list for PBXNativeTarget "RWReactivePlaygroundTests" */;
+			buildPhases = (
+				670DE2A81BB7F1A70002E495 /* Sources */,
+				670DE2A91BB7F1A70002E495 /* Frameworks */,
+				670DE2AA1BB7F1A70002E495 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				670DE2AE1BB7F1A70002E495 /* PBXTargetDependency */,
+			);
+			name = RWReactivePlaygroundTests;
+			productName = RWReactivePlaygroundTests;
+			productReference = 670DE2AC1BB7F1A70002E495 /* RWReactivePlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		670DE28B1BB7F1A70002E495 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = huangaengoln;
+				TargetAttributes = {
+					670DE2921BB7F1A70002E495 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					670DE2AB1BB7F1A70002E495 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 670DE2921BB7F1A70002E495;
+					};
+				};
+			};
+			buildConfigurationList = 670DE28E1BB7F1A70002E495 /* Build configuration list for PBXProject "RWReactivePlayground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 670DE28A1BB7F1A70002E495;
+			productRefGroup = 670DE2941BB7F1A70002E495 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				670DE2921BB7F1A70002E495 /* RWReactivePlayground */,
+				670DE2AB1BB7F1A70002E495 /* RWReactivePlaygroundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		670DE2911BB7F1A70002E495 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670DE2BD1BB7F1C20002E495 /* kitten.jpg in Resources */,
+				670DE2A21BB7F1A70002E495 /* Main.storyboard in Resources */,
+				670DE2A71BB7F1A70002E495 /* LaunchScreen.xib in Resources */,
+				670DE2A41BB7F1A70002E495 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670DE2AA1BB7F1A70002E495 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		670DE28F1BB7F1A70002E495 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670DE29F1BB7F1A70002E495 /* ViewController.m in Sources */,
+				670DE29C1BB7F1A70002E495 /* AppDelegate.m in Sources */,
+				670DE2991BB7F1A70002E495 /* main.m in Sources */,
+				670DE2C01BB7F70E0002E495 /* RWDummySignInService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670DE2A81BB7F1A70002E495 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670DE2B31BB7F1A70002E495 /* RWReactivePlaygroundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		670DE2AE1BB7F1A70002E495 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 670DE2921BB7F1A70002E495 /* RWReactivePlayground */;
+			targetProxy = 670DE2AD1BB7F1A70002E495 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		670DE2A01BB7F1A70002E495 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670DE2A11BB7F1A70002E495 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		670DE2A51BB7F1A70002E495 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				670DE2A61BB7F1A70002E495 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		670DE2B41BB7F1A70002E495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		670DE2B51BB7F1A70002E495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		670DE2B71BB7F1A70002E495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RWReactivePlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		670DE2B81BB7F1A70002E495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RWReactivePlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		670DE2BA1BB7F1A70002E495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RWReactivePlaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RWReactivePlayground.app/RWReactivePlayground";
+			};
+			name = Debug;
+		};
+		670DE2BB1BB7F1A70002E495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RWReactivePlaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RWReactivePlayground.app/RWReactivePlayground";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		670DE28E1BB7F1A70002E495 /* Build configuration list for PBXProject "RWReactivePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670DE2B41BB7F1A70002E495 /* Debug */,
+				670DE2B51BB7F1A70002E495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670DE2B61BB7F1A70002E495 /* Build configuration list for PBXNativeTarget "RWReactivePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670DE2B71BB7F1A70002E495 /* Debug */,
+				670DE2B81BB7F1A70002E495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		670DE2B91BB7F1A70002E495 /* Build configuration list for PBXNativeTarget "RWReactivePlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670DE2BA1BB7F1A70002E495 /* Debug */,
+				670DE2BB1BB7F1A70002E495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 670DE28B1BB7F1A70002E495 /* Project object */;
+}
