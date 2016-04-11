@@ -66,7 +66,8 @@
                           @"SGHAttributedStringViewController",
                           @"SGHUniqueUUID_UDIDViewController",
                           @"SGHTableViewStyleGroupedViewController",
-                          @"SGHPresentTransitionStyleViewController"] mutableCopy];
+                          @"SGHPresentTransitionStyleViewController",
+                          @"SGHStringShowViewController"] mutableCopy];
     self.titlesArray=[@[@"UIDatePickerDemo",
                         @"UIPickerView",
                         @"NSArray&NSMutableArray常用操作梳理",
@@ -77,7 +78,8 @@
                         @"NSAttributedString和NSMutableAttributedString",
                         @"获取唯一UUID:UDID的方案",
                         @"tableViewStyleGroupedDemo",
-                        @"presentViewController转场样式"] mutableCopy];
+                        @"presentViewController转场样式",
+                        @"字符串的显示"] mutableCopy];
     
 }
 
