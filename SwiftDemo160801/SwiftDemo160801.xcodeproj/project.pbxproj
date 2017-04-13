@@ -1,0 +1,1417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */; };
+		6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B12A1E0B70CB0010E6A8 /* User.swift */; };
+		6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */; };
+		6735B1331E0B81420010E6A8 /* users:onevcat in Resources */ = {isa = PBXBuildFile; fileRef = 6735B1321E0B81420010E6A8 /* users:onevcat */; };
+		6739F4BD1E00E883009C5073 /* SGH161214TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4BC1E00E883009C5073 /* SGH161214TabBarController.swift */; };
+		6739F5391E00E93C009C5073 /* SGH160802ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4C31E00E93C009C5073 /* SGH160802ViewController.swift */; };
+		6739F53A1E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4C71E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift */; };
+		6739F53B1E00E93C009C5073 /* Arial Rounded Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4C91E00E93C009C5073 /* Arial Rounded Bold.ttf */; };
+		6739F53C1E00E93C009C5073 /* Collide0802.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4CA1E00E93C009C5073 /* Collide0802.xcassets */; };
+		6739F53D1E00E93C009C5073 /* SGH0802CollideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4CC1E00E93C009C5073 /* SGH0802CollideViewController.storyboard */; };
+		6739F53E1E00E93C009C5073 /* SGH0802CollideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4CD1E00E93C009C5073 /* SGH0802CollideViewController.swift */; };
+		6739F53F1E00E93C009C5073 /* SGH0802CollideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4CE1E00E93C009C5073 /* SGH0802CollideViewController.xib */; };
+		6739F5401E00E93C009C5073 /* SGHAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4D01E00E93C009C5073 /* SGHAvatarView.swift */; };
+		6739F5411E00E93C009C5073 /* SGH0803GradientLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4D31E00E93C009C5073 /* SGH0803GradientLayerViewController.swift */; };
+		6739F5421E00E93C009C5073 /* SGH0803GradientLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4D41E00E93C009C5073 /* SGH0803GradientLayerViewController.xib */; };
+		6739F5431E00E93C009C5073 /* SGHGradientLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4D51E00E93C009C5073 /* SGHGradientLayerViewController.swift */; };
+		6739F5441E00E93C009C5073 /* SGHGradientLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4D61E00E93C009C5073 /* SGHGradientLayerViewController.xib */; };
+		6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4D81E00E93C009C5073 /* SGHAnimatedMaskLabel.swift */; };
+		6739F5461E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4DB1E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift */; };
+		6739F5471E00E93C009C5073 /* SGHPullToRefreshTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4DC1E00E93C009C5073 /* SGHPullToRefreshTableViewController.xib */; };
+		6739F5481E00E93C009C5073 /* PullRefresh0803.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4DD1E00E93C009C5073 /* PullRefresh0803.xcassets */; };
+		6739F5491E00E93C009C5073 /* SGH0803RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4DF1E00E93C009C5073 /* SGH0803RefreshView.swift */; };
+		6739F54A1E00E93C009C5073 /* SGHAssistantIrisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4E21E00E93C009C5073 /* SGHAssistantIrisViewController.swift */; };
+		6739F54B1E00E93C009C5073 /* SGHAssistantIrisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4E31E00E93C009C5073 /* SGHAssistantIrisViewController.xib */; };
+		6739F54C1E00E93C009C5073 /* SGH0804Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4E51E00E93C009C5073 /* SGH0804Assistant.swift */; };
+		6739F54D1E00E93C009C5073 /* SGH0804MicMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4E61E00E93C009C5073 /* SGH0804MicMonitor.swift */; };
+		6739F54E1E00E93C009C5073 /* SGH0804ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4E91E00E93C009C5073 /* SGH0804ViewController.swift */; };
+		6739F54F1E00E93C009C5073 /* BahamaAirLogin.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4EC1E00E93C009C5073 /* BahamaAirLogin.xcassets */; };
+		6739F5501E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4EE1E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift */; };
+		6739F5511E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4EF1E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib */; };
+		6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4F21E00E93C009C5073 /* SGHUsingSpringViewController.swift */; };
+		6739F5531E00E93C009C5073 /* SGHUsingSpringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4F31E00E93C009C5073 /* SGHUsingSpringViewController.xib */; };
+		6739F5541E00E93C009C5073 /* SGHTransitionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4F61E00E93C009C5073 /* SGHTransitionAnimationViewController.swift */; };
+		6739F5551E00E93C009C5073 /* SGHTransitionAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4F71E00E93C009C5073 /* SGHTransitionAnimationViewController.xib */; };
+		6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4FA1E00E93C009C5073 /* SGH0808FlightData.swift */; };
+		6739F5571E00E93C009C5073 /* SGH0808SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4FB1E00E93C009C5073 /* SGH0808SnowView.swift */; };
+		6739F5581E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4FD1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift */; };
+		6739F5591E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F4FE1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib */; };
+		6739F55A1E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5011E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift */; };
+		6739F55B1E00E93C009C5073 /* SGHAnimateKeyFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5021E00E93C009C5073 /* SGHAnimateKeyFrameViewController.xib */; };
+		6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5051E00E93C009C5073 /* SGH160811ViewController.swift */; };
+		6739F55D1E00E93C009C5073 /* SGH0812LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5091E00E93C009C5073 /* SGH0812LayerViewController.swift */; };
+		6739F55E1E00E93C009C5073 /* SGH0812LayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F50A1E00E93C009C5073 /* SGH0812LayerViewController.xib */; };
+		6739F55F1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F50D1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift */; };
+		6739F5601E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F50E1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.xib */; };
+		6739F5611E00E93C009C5073 /* SGHAnimationGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5111E00E93C009C5073 /* SGHAnimationGroupViewController.swift */; };
+		6739F5621E00E93C009C5073 /* SGHAnimationGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5121E00E93C009C5073 /* SGHAnimationGroupViewController.xib */; };
+		6739F5631E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5151E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift */; };
+		6739F5641E00E93C009C5073 /* SGH0816SpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5161E00E93C009C5073 /* SGH0816SpringAnimationViewController.xib */; };
+		6739F5651E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5191E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift */; };
+		6739F5661E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F51A1E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.xib */; };
+		6739F5671E00E93C009C5073 /* autoLayoutIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6739F51C1E00E93C009C5073 /* autoLayoutIcon.xcassets */; };
+		6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F51E1E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift */; };
+		6739F5691E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5221E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift */; };
+		6739F56A1E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5231E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib */; };
+		6739F56B1E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5261E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift */; };
+		6739F56C1E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5271E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.xib */; };
+		6739F56D1E00E93C009C5073 /* SGH0819HorizonalItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5291E00E93C009C5073 /* SGH0819HorizonalItemList.swift */; };
+		6739F56E1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F52C1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift */; };
+		6739F56F1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F52D1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.xib */; };
+		6739F5701E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5301E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift */; };
+		6739F5711E00E93C009C5073 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5321E00E93C009C5073 /* PageControl.swift */; };
+		6739F5721E00E93C009C5073 /* SGH1213TrackProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5351E00E93C009C5073 /* SGH1213TrackProgramViewController.swift */; };
+		6739F5741E00E95E009C5073 /* SGH1214BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5731E00E95E009C5073 /* SGH1214BookmarksViewController.swift */; };
+		6739F5761E00EA27009C5073 /* SGH1214FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5751E00EA27009C5073 /* SGH1214FavoritesViewController.swift */; };
+		6739F5841E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5821E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.swift */; };
+		6739F5851E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5831E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.xib */; };
+		6739F5871E00F50C009C5073 /* SGH1214AutolayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F5861E00F50C009C5073 /* SGH1214AutolayoutViewController.swift */; };
+		6739F5E21E0127F0009C5073 /* README.doc in Resources */ = {isa = PBXBuildFile; fileRef = 6739F5E11E0127F0009C5073 /* README.doc */; };
+		674CCC8E1D532EE000F66235 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 674CCC8D1D532EE000F66235 /* AVFoundation.framework */; };
+		6778E0671D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778E0661D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift */; };
+		67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E72E1D4F4DF20094520D /* AppDelegate.swift */; };
+		67F1E7341D4F4DF20094520D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F1E7321D4F4DF20094520D /* Main.storyboard */; };
+		67F1E7361D4F4DF20094520D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F1E7351D4F4DF20094520D /* Assets.xcassets */; };
+		67F1E7391D4F4DF20094520D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F1E7371D4F4DF20094520D /* LaunchScreen.storyboard */; };
+		67F1E7441D4F4DF20094520D /* SwiftDemo160801Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E7431D4F4DF20094520D /* SwiftDemo160801Tests.swift */; };
+		67F1E74F1D4F4DF20094520D /* SwiftDemo160801UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67F1E7401D4F4DF20094520D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67F1E7231D4F4DF20094520D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F1E72A1D4F4DF20094520D;
+			remoteInfo = SwiftDemo160801;
+		};
+		67F1E74B1D4F4DF20094520D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67F1E7231D4F4DF20094520D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F1E72A1D4F4DF20094520D;
+			remoteInfo = SwiftDemo160801;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1222POPAndCocoaViewController.swift; sourceTree = "<group>"; };
+		6735B12A1E0B70CB0010E6A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNetworkTests.swift; sourceTree = "<group>"; };
+		6735B1321E0B81420010E6A8 /* users:onevcat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "users:onevcat"; sourceTree = "<group>"; };
+		6739F4BC1E00E883009C5073 /* SGH161214TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH161214TabBarController.swift; sourceTree = "<group>"; };
+		6739F4C31E00E93C009C5073 /* SGH160802ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH160802ViewController.swift; sourceTree = "<group>"; };
+		6739F4C71E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0802TableEditDeleteViewController.swift; sourceTree = "<group>"; };
+		6739F4C91E00E93C009C5073 /* Arial Rounded Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arial Rounded Bold.ttf"; sourceTree = "<group>"; };
+		6739F4CA1E00E93C009C5073 /* Collide0802.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Collide0802.xcassets; sourceTree = "<group>"; };
+		6739F4CC1E00E93C009C5073 /* SGH0802CollideViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SGH0802CollideViewController.storyboard; sourceTree = "<group>"; };
+		6739F4CD1E00E93C009C5073 /* SGH0802CollideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0802CollideViewController.swift; sourceTree = "<group>"; };
+		6739F4CE1E00E93C009C5073 /* SGH0802CollideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0802CollideViewController.xib; sourceTree = "<group>"; };
+		6739F4D01E00E93C009C5073 /* SGHAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHAvatarView.swift; sourceTree = "<group>"; };
+		6739F4D31E00E93C009C5073 /* SGH0803GradientLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0803GradientLayerViewController.swift; sourceTree = "<group>"; };
+		6739F4D41E00E93C009C5073 /* SGH0803GradientLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0803GradientLayerViewController.xib; sourceTree = "<group>"; };
+		6739F4D51E00E93C009C5073 /* SGHGradientLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHGradientLayerViewController.swift; sourceTree = "<group>"; };
+		6739F4D61E00E93C009C5073 /* SGHGradientLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHGradientLayerViewController.xib; sourceTree = "<group>"; };
+		6739F4D81E00E93C009C5073 /* SGHAnimatedMaskLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHAnimatedMaskLabel.swift; sourceTree = "<group>"; };
+		6739F4DB1E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHPullToRefreshTableViewController.swift; sourceTree = "<group>"; };
+		6739F4DC1E00E93C009C5073 /* SGHPullToRefreshTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHPullToRefreshTableViewController.xib; sourceTree = "<group>"; };
+		6739F4DD1E00E93C009C5073 /* PullRefresh0803.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PullRefresh0803.xcassets; sourceTree = "<group>"; };
+		6739F4DF1E00E93C009C5073 /* SGH0803RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0803RefreshView.swift; sourceTree = "<group>"; };
+		6739F4E21E00E93C009C5073 /* SGHAssistantIrisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHAssistantIrisViewController.swift; sourceTree = "<group>"; };
+		6739F4E31E00E93C009C5073 /* SGHAssistantIrisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHAssistantIrisViewController.xib; sourceTree = "<group>"; };
+		6739F4E51E00E93C009C5073 /* SGH0804Assistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0804Assistant.swift; sourceTree = "<group>"; };
+		6739F4E61E00E93C009C5073 /* SGH0804MicMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0804MicMonitor.swift; sourceTree = "<group>"; };
+		6739F4E91E00E93C009C5073 /* SGH0804ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0804ViewController.swift; sourceTree = "<group>"; };
+		6739F4EC1E00E93C009C5073 /* BahamaAirLogin.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BahamaAirLogin.xcassets; sourceTree = "<group>"; };
+		6739F4EE1E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHBahamaAirLoginViewController.swift; sourceTree = "<group>"; };
+		6739F4EF1E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHBahamaAirLoginViewController.xib; sourceTree = "<group>"; };
+		6739F4F21E00E93C009C5073 /* SGHUsingSpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHUsingSpringViewController.swift; sourceTree = "<group>"; };
+		6739F4F31E00E93C009C5073 /* SGHUsingSpringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHUsingSpringViewController.xib; sourceTree = "<group>"; };
+		6739F4F61E00E93C009C5073 /* SGHTransitionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHTransitionAnimationViewController.swift; sourceTree = "<group>"; };
+		6739F4F71E00E93C009C5073 /* SGHTransitionAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHTransitionAnimationViewController.xib; sourceTree = "<group>"; };
+		6739F4FA1E00E93C009C5073 /* SGH0808FlightData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0808FlightData.swift; sourceTree = "<group>"; };
+		6739F4FB1E00E93C009C5073 /* SGH0808SnowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0808SnowView.swift; sourceTree = "<group>"; };
+		6739F4FD1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHFadeCubeTransitionViewController.swift; sourceTree = "<group>"; };
+		6739F4FE1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHFadeCubeTransitionViewController.xib; sourceTree = "<group>"; };
+		6739F5011E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHAnimateKeyFrameViewController.swift; sourceTree = "<group>"; };
+		6739F5021E00E93C009C5073 /* SGHAnimateKeyFrameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHAnimateKeyFrameViewController.xib; sourceTree = "<group>"; };
+		6739F5051E00E93C009C5073 /* SGH160811ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH160811ViewController.swift; sourceTree = "<group>"; };
+		6739F5091E00E93C009C5073 /* SGH0812LayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0812LayerViewController.swift; sourceTree = "<group>"; };
+		6739F50A1E00E93C009C5073 /* SGH0812LayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0812LayerViewController.xib; sourceTree = "<group>"; };
+		6739F50D1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHBasicAnimationDelegateViewController.swift; sourceTree = "<group>"; };
+		6739F50E1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHBasicAnimationDelegateViewController.xib; sourceTree = "<group>"; };
+		6739F5111E00E93C009C5073 /* SGHAnimationGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGHAnimationGroupViewController.swift; sourceTree = "<group>"; };
+		6739F5121E00E93C009C5073 /* SGHAnimationGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHAnimationGroupViewController.xib; sourceTree = "<group>"; };
+		6739F5151E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0816SpringAnimationViewController.swift; sourceTree = "<group>"; };
+		6739F5161E00E93C009C5073 /* SGH0816SpringAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0816SpringAnimationViewController.xib; sourceTree = "<group>"; };
+		6739F5191E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0817KeyFrameAnimationViewController.swift; sourceTree = "<group>"; };
+		6739F51A1E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0817KeyFrameAnimationViewController.xib; sourceTree = "<group>"; };
+		6739F51C1E00E93C009C5073 /* autoLayoutIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = autoLayoutIcon.xcassets; sourceTree = "<group>"; };
+		6739F51E1E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH160818AutoLayoutViewController.swift; sourceTree = "<group>"; };
+		6739F5221E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0818BasicAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		6739F5231E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0818BasicAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		6739F5261E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0819MiddleAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		6739F5271E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0819MiddleAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		6739F5291E00E93C009C5073 /* SGH0819HorizonalItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0819HorizonalItemList.swift; sourceTree = "<group>"; };
+		6739F52C1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0819AdvancedAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		6739F52D1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0819AdvancedAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		6739F5301E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1208CustomPageControlViewController.swift; sourceTree = "<group>"; };
+		6739F5321E00E93C009C5073 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		6739F5351E00E93C009C5073 /* SGH1213TrackProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1213TrackProgramViewController.swift; sourceTree = "<group>"; };
+		6739F5731E00E95E009C5073 /* SGH1214BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1214BookmarksViewController.swift; sourceTree = "<group>"; };
+		6739F5751E00EA27009C5073 /* SGH1214FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1214FavoritesViewController.swift; sourceTree = "<group>"; };
+		6739F5821E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1214AutolayoutOneViewController.swift; sourceTree = "<group>"; };
+		6739F5831E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH1214AutolayoutOneViewController.xib; sourceTree = "<group>"; };
+		6739F5861E00F50C009C5073 /* SGH1214AutolayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1214AutolayoutViewController.swift; sourceTree = "<group>"; };
+		6739F5E11E0127F0009C5073 /* README.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.doc; sourceTree = "<group>"; };
+		674CCC8D1D532EE000F66235 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6778E0661D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0819PresentBackButtonProtocol.swift; sourceTree = "<group>"; };
+		67F1E72B1D4F4DF20094520D /* SwiftDemo160801.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo160801.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F1E72E1D4F4DF20094520D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67F1E7331D4F4DF20094520D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67F1E7351D4F4DF20094520D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67F1E7381D4F4DF20094520D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67F1E73A1D4F4DF20094520D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F1E73F1D4F4DF20094520D /* SwiftDemo160801Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemo160801Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F1E7431D4F4DF20094520D /* SwiftDemo160801Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemo160801Tests.swift; sourceTree = "<group>"; };
+		67F1E7451D4F4DF20094520D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F1E74A1D4F4DF20094520D /* SwiftDemo160801UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemo160801UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemo160801UITests.swift; sourceTree = "<group>"; };
+		67F1E7501D4F4DF20094520D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67F1E7281D4F4DF20094520D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				674CCC8E1D532EE000F66235 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E73C1D4F4DF20094520D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E7471D4F4DF20094520D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */ = {
+			isa = PBXGroup;
+			children = (
+				6735B1291E0B70BB0010E6A8 /* Other */,
+				6735B1261E0B70710010E6A8 /* Ctrl */,
+			);
+			path = "8面向协议编程与 Cocoa 的邂逅 (下)";
+			sourceTree = "<group>";
+		};
+		6735B1261E0B70710010E6A8 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6735B1291E0B70BB0010E6A8 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6735B12A1E0B70CB0010E6A8 /* User.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6739F4BE1E00E93C009C5073 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4BF1E00E93C009C5073 /* Ctrl */,
+				6739F4C01E00E93C009C5073 /* Example */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		6739F4BF1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5731E00E95E009C5073 /* SGH1214BookmarksViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4C01E00E93C009C5073 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */,
+				6739F57D1E00F497009C5073 /* 7Auto Layout 使用心得 */,
+				6739F4C11E00E93C009C5073 /* 1iOS 界面动画教程之 Layer 动画进阶 */,
+				6739F4E71E00E93C009C5073 /* 2iOS 界面动画教程之与视图相关的动画 */,
+				6739F5031E00E93C009C5073 /* 3iOS 界面动画教程之 Layer 动画基础 */,
+				6739F51B1E00E93C009C5073 /* 4iOS 界面动画教程之自动布局 */,
+				6739F52E1E00E93C009C5073 /* 5自定义PageControl */,
+				6739F5331E00E93C009C5073 /* 6尝试面向轨道编程 */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6739F4C11E00E93C009C5073 /* 1iOS 界面动画教程之 Layer 动画进阶 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C21E00E93C009C5073 /* Ctrl */,
+				6739F4C41E00E93C009C5073 /* Modlues */,
+			);
+			path = "1iOS 界面动画教程之 Layer 动画进阶";
+			sourceTree = "<group>";
+		};
+		6739F4C21E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C31E00E93C009C5073 /* SGH160802ViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4C41E00E93C009C5073 /* Modlues */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C51E00E93C009C5073 /* 1UITableView编辑删除添加 */,
+				6739F4C81E00E93C009C5073 /* 2形状、遮罩层和挤压动画的实现 */,
+				6739F4D11E00E93C009C5073 /* 3渐变动画的实现 */,
+				6739F4D91E00E93C009C5073 /* 4路径动画的实现 */,
+				6739F4E01E00E93C009C5073 /* 5复制动画的实现 */,
+			);
+			path = Modlues;
+			sourceTree = "<group>";
+		};
+		6739F4C51E00E93C009C5073 /* 1UITableView编辑删除添加 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C61E00E93C009C5073 /* Ctrl */,
+			);
+			path = "1UITableView编辑删除添加";
+			sourceTree = "<group>";
+		};
+		6739F4C61E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C71E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4C81E00E93C009C5073 /* 2形状、遮罩层和挤压动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4C91E00E93C009C5073 /* Arial Rounded Bold.ttf */,
+				6739F4CA1E00E93C009C5073 /* Collide0802.xcassets */,
+				6739F4CB1E00E93C009C5073 /* Ctrl */,
+				6739F4CF1E00E93C009C5073 /* View */,
+			);
+			path = "2形状、遮罩层和挤压动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F4CB1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4CC1E00E93C009C5073 /* SGH0802CollideViewController.storyboard */,
+				6739F4CD1E00E93C009C5073 /* SGH0802CollideViewController.swift */,
+				6739F4CE1E00E93C009C5073 /* SGH0802CollideViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4CF1E00E93C009C5073 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4D01E00E93C009C5073 /* SGHAvatarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6739F4D11E00E93C009C5073 /* 3渐变动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4D21E00E93C009C5073 /* Ctrl */,
+				6739F4D71E00E93C009C5073 /* Views */,
+			);
+			path = "3渐变动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F4D21E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4D31E00E93C009C5073 /* SGH0803GradientLayerViewController.swift */,
+				6739F4D41E00E93C009C5073 /* SGH0803GradientLayerViewController.xib */,
+				6739F4D51E00E93C009C5073 /* SGHGradientLayerViewController.swift */,
+				6739F4D61E00E93C009C5073 /* SGHGradientLayerViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4D71E00E93C009C5073 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4D81E00E93C009C5073 /* SGHAnimatedMaskLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6739F4D91E00E93C009C5073 /* 4路径动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4DA1E00E93C009C5073 /* Ctrl */,
+				6739F4DD1E00E93C009C5073 /* PullRefresh0803.xcassets */,
+				6739F4DE1E00E93C009C5073 /* Views */,
+			);
+			path = "4路径动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F4DA1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4DB1E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift */,
+				6739F4DC1E00E93C009C5073 /* SGHPullToRefreshTableViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4DE1E00E93C009C5073 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4DF1E00E93C009C5073 /* SGH0803RefreshView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6739F4E01E00E93C009C5073 /* 5复制动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4E11E00E93C009C5073 /* Ctrl */,
+				6739F4E41E00E93C009C5073 /* Object */,
+			);
+			path = "5复制动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F4E11E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4E21E00E93C009C5073 /* SGHAssistantIrisViewController.swift */,
+				6739F4E31E00E93C009C5073 /* SGHAssistantIrisViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4E41E00E93C009C5073 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4E51E00E93C009C5073 /* SGH0804Assistant.swift */,
+				6739F4E61E00E93C009C5073 /* SGH0804MicMonitor.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		6739F4E71E00E93C009C5073 /* 2iOS 界面动画教程之与视图相关的动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4E81E00E93C009C5073 /* Ctrl */,
+				6739F4EA1E00E93C009C5073 /* Modlues */,
+			);
+			path = "2iOS 界面动画教程之与视图相关的动画";
+			sourceTree = "<group>";
+		};
+		6739F4E81E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4E91E00E93C009C5073 /* SGH0804ViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4EA1E00E93C009C5073 /* Modlues */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4EB1E00E93C009C5073 /* 1创建视图动画 */,
+				6739F4F01E00E93C009C5073 /* 2创建弹簧效果的线性动画 */,
+				6739F4F41E00E93C009C5073 /* 3变形动画的实现 */,
+				6739F4F81E00E93C009C5073 /* 4视图动画的综合实践 */,
+				6739F4FF1E00E93C009C5073 /* 5关键帧动画 */,
+			);
+			path = Modlues;
+			sourceTree = "<group>";
+		};
+		6739F4EB1E00E93C009C5073 /* 1创建视图动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4EC1E00E93C009C5073 /* BahamaAirLogin.xcassets */,
+				6739F4ED1E00E93C009C5073 /* Ctrl */,
+			);
+			path = "1创建视图动画";
+			sourceTree = "<group>";
+		};
+		6739F4ED1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4EE1E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift */,
+				6739F4EF1E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4F01E00E93C009C5073 /* 2创建弹簧效果的线性动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4F11E00E93C009C5073 /* Ctrl */,
+			);
+			path = "2创建弹簧效果的线性动画";
+			sourceTree = "<group>";
+		};
+		6739F4F11E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4F21E00E93C009C5073 /* SGHUsingSpringViewController.swift */,
+				6739F4F31E00E93C009C5073 /* SGHUsingSpringViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4F41E00E93C009C5073 /* 3变形动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4F51E00E93C009C5073 /* Ctrl */,
+			);
+			path = "3变形动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F4F51E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4F61E00E93C009C5073 /* SGHTransitionAnimationViewController.swift */,
+				6739F4F71E00E93C009C5073 /* SGHTransitionAnimationViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4F81E00E93C009C5073 /* 4视图动画的综合实践 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4F91E00E93C009C5073 /* Classes */,
+				6739F4FC1E00E93C009C5073 /* Ctrl */,
+			);
+			path = "4视图动画的综合实践";
+			sourceTree = "<group>";
+		};
+		6739F4F91E00E93C009C5073 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4FA1E00E93C009C5073 /* SGH0808FlightData.swift */,
+				6739F4FB1E00E93C009C5073 /* SGH0808SnowView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6739F4FC1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4FD1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift */,
+				6739F4FE1E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F4FF1E00E93C009C5073 /* 5关键帧动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5001E00E93C009C5073 /* Ctrl */,
+			);
+			path = "5关键帧动画";
+			sourceTree = "<group>";
+		};
+		6739F5001E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5011E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift */,
+				6739F5021E00E93C009C5073 /* SGHAnimateKeyFrameViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5031E00E93C009C5073 /* 3iOS 界面动画教程之 Layer 动画基础 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5041E00E93C009C5073 /* Ctrl */,
+				6739F5061E00E93C009C5073 /* Modlues */,
+			);
+			path = "3iOS 界面动画教程之 Layer 动画基础";
+			sourceTree = "<group>";
+		};
+		6739F5041E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5051E00E93C009C5073 /* SGH160811ViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5061E00E93C009C5073 /* Modlues */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5071E00E93C009C5073 /* 1Layer 动画的实现 */,
+				6739F50B1E00E93C009C5073 /* 2动画的键和委托的实现 */,
+				6739F50F1E00E93C009C5073 /* 3分组动画 */,
+				6739F5131E00E93C009C5073 /* 4Layer 层面的弹簧动画实现 */,
+				6739F5171E00E93C009C5073 /* 5Layer 层面的关键帧动画 */,
+			);
+			path = Modlues;
+			sourceTree = "<group>";
+		};
+		6739F5071E00E93C009C5073 /* 1Layer 动画的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5081E00E93C009C5073 /* Ctrl */,
+			);
+			path = "1Layer 动画的实现";
+			sourceTree = "<group>";
+		};
+		6739F5081E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5091E00E93C009C5073 /* SGH0812LayerViewController.swift */,
+				6739F50A1E00E93C009C5073 /* SGH0812LayerViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F50B1E00E93C009C5073 /* 2动画的键和委托的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F50C1E00E93C009C5073 /* Ctrl */,
+			);
+			path = "2动画的键和委托的实现";
+			sourceTree = "<group>";
+		};
+		6739F50C1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F50D1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift */,
+				6739F50E1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F50F1E00E93C009C5073 /* 3分组动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5101E00E93C009C5073 /* Ctrl */,
+			);
+			path = "3分组动画";
+			sourceTree = "<group>";
+		};
+		6739F5101E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5111E00E93C009C5073 /* SGHAnimationGroupViewController.swift */,
+				6739F5121E00E93C009C5073 /* SGHAnimationGroupViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5131E00E93C009C5073 /* 4Layer 层面的弹簧动画实现 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5141E00E93C009C5073 /* Ctrl */,
+			);
+			path = "4Layer 层面的弹簧动画实现";
+			sourceTree = "<group>";
+		};
+		6739F5141E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5151E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift */,
+				6739F5161E00E93C009C5073 /* SGH0816SpringAnimationViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5171E00E93C009C5073 /* 5Layer 层面的关键帧动画 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5181E00E93C009C5073 /* Ctrl */,
+			);
+			path = "5Layer 层面的关键帧动画";
+			sourceTree = "<group>";
+		};
+		6739F5181E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5191E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift */,
+				6739F51A1E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F51B1E00E93C009C5073 /* 4iOS 界面动画教程之自动布局 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F51C1E00E93C009C5073 /* autoLayoutIcon.xcassets */,
+				6739F51D1E00E93C009C5073 /* Ctrl */,
+				6739F51F1E00E93C009C5073 /* Modlues */,
+			);
+			path = "4iOS 界面动画教程之自动布局";
+			sourceTree = "<group>";
+		};
+		6739F51D1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F51E1E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F51F1E00E93C009C5073 /* Modlues */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5201E00E93C009C5073 /* 1自动布局基础 */,
+				6739F5241E00E93C009C5073 /* 2自动布局进阶 */,
+				6739F52A1E00E93C009C5073 /* 3自动布局高阶 */,
+			);
+			path = Modlues;
+			sourceTree = "<group>";
+		};
+		6739F5201E00E93C009C5073 /* 1自动布局基础 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5211E00E93C009C5073 /* Ctrl */,
+			);
+			path = "1自动布局基础";
+			sourceTree = "<group>";
+		};
+		6739F5211E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5221E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift */,
+				6739F5231E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5241E00E93C009C5073 /* 2自动布局进阶 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5251E00E93C009C5073 /* Ctrl */,
+				6739F5281E00E93C009C5073 /* Views */,
+			);
+			path = "2自动布局进阶";
+			sourceTree = "<group>";
+		};
+		6739F5251E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5261E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift */,
+				6739F5271E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5281E00E93C009C5073 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5291E00E93C009C5073 /* SGH0819HorizonalItemList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6739F52A1E00E93C009C5073 /* 3自动布局高阶 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F52B1E00E93C009C5073 /* Ctrl */,
+			);
+			path = "3自动布局高阶";
+			sourceTree = "<group>";
+		};
+		6739F52B1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F52C1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift */,
+				6739F52D1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F52E1E00E93C009C5073 /* 5自定义PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F52F1E00E93C009C5073 /* Ctrl */,
+				6739F5311E00E93C009C5073 /* PageControl */,
+			);
+			path = "5自定义PageControl";
+			sourceTree = "<group>";
+		};
+		6739F52F1E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5301E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5311E00E93C009C5073 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5321E00E93C009C5073 /* PageControl.swift */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		6739F5331E00E93C009C5073 /* 6尝试面向轨道编程 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5341E00E93C009C5073 /* Ctrl */,
+			);
+			path = "6尝试面向轨道编程";
+			sourceTree = "<group>";
+		};
+		6739F5341E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5351E00E93C009C5073 /* SGH1213TrackProgramViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5361E00E93C009C5073 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5371E00E93C009C5073 /* Ctrl */,
+				6739F5381E00E93C009C5073 /* Example */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		6739F5371E00E93C009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5751E00EA27009C5073 /* SGH1214FavoritesViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F5381E00E93C009C5073 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6739F57D1E00F497009C5073 /* 7Auto Layout 使用心得 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F57E1E00F497009C5073 /* Ctrl */,
+				6739F57F1E00F4AB009C5073 /* Modules */,
+			);
+			path = "7Auto Layout 使用心得";
+			sourceTree = "<group>";
+		};
+		6739F57E1E00F497009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5861E00F50C009C5073 /* SGH1214AutolayoutViewController.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6739F57F1E00F4AB009C5073 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5801E00F4DF009C5073 /* 1Auto Layout 使用心得(一)初体验 */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6739F5801E00F4DF009C5073 /* 1Auto Layout 使用心得(一)初体验 */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5811E00F4DF009C5073 /* Ctrl */,
+			);
+			path = "1Auto Layout 使用心得(一)初体验";
+			sourceTree = "<group>";
+		};
+		6739F5811E00F4DF009C5073 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6739F5E11E0127F0009C5073 /* README.doc */,
+				6739F5821E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.swift */,
+				6739F5831E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6772B02B1D5082470006A274 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		6772B02C1D5082470006A274 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6739F4BE1E00E93C009C5073 /* Bookmarks */,
+				6739F5361E00E93C009C5073 /* Favorites */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6778E0641D67669200A414ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6778E0651D67669200A414ED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6778E0661D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		67F1E7221D4F4DF20094520D = {
+			isa = PBXGroup;
+			children = (
+				674CCC8D1D532EE000F66235 /* AVFoundation.framework */,
+				67F1E72D1D4F4DF20094520D /* SwiftDemo160801 */,
+				67F1E7421D4F4DF20094520D /* SwiftDemo160801Tests */,
+				67F1E74D1D4F4DF20094520D /* SwiftDemo160801UITests */,
+				67F1E72C1D4F4DF20094520D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67F1E72C1D4F4DF20094520D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67F1E72B1D4F4DF20094520D /* SwiftDemo160801.app */,
+				67F1E73F1D4F4DF20094520D /* SwiftDemo160801Tests.xctest */,
+				67F1E74A1D4F4DF20094520D /* SwiftDemo160801UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67F1E72D1D4F4DF20094520D /* SwiftDemo160801 */ = {
+			isa = PBXGroup;
+			children = (
+				6778E0641D67669200A414ED /* Extensions */,
+				6778E0651D67669200A414ED /* Protocols */,
+				6772B02B1D5082470006A274 /* Component */,
+				6772B02C1D5082470006A274 /* Example */,
+				67F1E72E1D4F4DF20094520D /* AppDelegate.swift */,
+				6739F4BC1E00E883009C5073 /* SGH161214TabBarController.swift */,
+				67F1E7321D4F4DF20094520D /* Main.storyboard */,
+				67F1E7351D4F4DF20094520D /* Assets.xcassets */,
+				67F1E7371D4F4DF20094520D /* LaunchScreen.storyboard */,
+				67F1E73A1D4F4DF20094520D /* Info.plist */,
+			);
+			path = SwiftDemo160801;
+			sourceTree = "<group>";
+		};
+		67F1E7421D4F4DF20094520D /* SwiftDemo160801Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6735B1321E0B81420010E6A8 /* users:onevcat */,
+				67F1E7431D4F4DF20094520D /* SwiftDemo160801Tests.swift */,
+				67F1E7451D4F4DF20094520D /* Info.plist */,
+				6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */,
+			);
+			path = SwiftDemo160801Tests;
+			sourceTree = "<group>";
+		};
+		67F1E74D1D4F4DF20094520D /* SwiftDemo160801UITests */ = {
+			isa = PBXGroup;
+			children = (
+				67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */,
+				67F1E7501D4F4DF20094520D /* Info.plist */,
+			);
+			path = SwiftDemo160801UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67F1E72A1D4F4DF20094520D /* SwiftDemo160801 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F1E7531D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801" */;
+			buildPhases = (
+				67F1E7271D4F4DF20094520D /* Sources */,
+				67F1E7281D4F4DF20094520D /* Frameworks */,
+				67F1E7291D4F4DF20094520D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftDemo160801;
+			productName = SwiftDemo160801;
+			productReference = 67F1E72B1D4F4DF20094520D /* SwiftDemo160801.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67F1E73E1D4F4DF20094520D /* SwiftDemo160801Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F1E7561D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801Tests" */;
+			buildPhases = (
+				67F1E73B1D4F4DF20094520D /* Sources */,
+				67F1E73C1D4F4DF20094520D /* Frameworks */,
+				67F1E73D1D4F4DF20094520D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67F1E7411D4F4DF20094520D /* PBXTargetDependency */,
+			);
+			name = SwiftDemo160801Tests;
+			productName = SwiftDemo160801Tests;
+			productReference = 67F1E73F1D4F4DF20094520D /* SwiftDemo160801Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67F1E7491D4F4DF20094520D /* SwiftDemo160801UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F1E7591D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801UITests" */;
+			buildPhases = (
+				67F1E7461D4F4DF20094520D /* Sources */,
+				67F1E7471D4F4DF20094520D /* Frameworks */,
+				67F1E7481D4F4DF20094520D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67F1E74C1D4F4DF20094520D /* PBXTargetDependency */,
+			);
+			name = SwiftDemo160801UITests;
+			productName = SwiftDemo160801UITests;
+			productReference = 67F1E74A1D4F4DF20094520D /* SwiftDemo160801UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67F1E7231D4F4DF20094520D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = huangaengoln;
+				TargetAttributes = {
+					67F1E72A1D4F4DF20094520D = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
+					};
+					67F1E73E1D4F4DF20094520D = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
+						TestTargetID = 67F1E72A1D4F4DF20094520D;
+					};
+					67F1E7491D4F4DF20094520D = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
+						TestTargetID = 67F1E72A1D4F4DF20094520D;
+					};
+				};
+			};
+			buildConfigurationList = 67F1E7261D4F4DF20094520D /* Build configuration list for PBXProject "SwiftDemo160801" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67F1E7221D4F4DF20094520D;
+			productRefGroup = 67F1E72C1D4F4DF20094520D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67F1E72A1D4F4DF20094520D /* SwiftDemo160801 */,
+				67F1E73E1D4F4DF20094520D /* SwiftDemo160801Tests */,
+				67F1E7491D4F4DF20094520D /* SwiftDemo160801UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67F1E7291D4F4DF20094520D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6739F5471E00E93C009C5073 /* SGHPullToRefreshTableViewController.xib in Resources */,
+				6739F5851E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.xib in Resources */,
+				6739F53F1E00E93C009C5073 /* SGH0802CollideViewController.xib in Resources */,
+				6739F53C1E00E93C009C5073 /* Collide0802.xcassets in Resources */,
+				6739F5481E00E93C009C5073 /* PullRefresh0803.xcassets in Resources */,
+				67F1E7391D4F4DF20094520D /* LaunchScreen.storyboard in Resources */,
+				6739F5661E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.xib in Resources */,
+				6739F5551E00E93C009C5073 /* SGHTransitionAnimationViewController.xib in Resources */,
+				6739F5601E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.xib in Resources */,
+				6739F53B1E00E93C009C5073 /* Arial Rounded Bold.ttf in Resources */,
+				6739F55E1E00E93C009C5073 /* SGH0812LayerViewController.xib in Resources */,
+				6739F5591E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib in Resources */,
+				6739F56A1E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib in Resources */,
+				6739F5671E00E93C009C5073 /* autoLayoutIcon.xcassets in Resources */,
+				6739F5621E00E93C009C5073 /* SGHAnimationGroupViewController.xib in Resources */,
+				6739F5511E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib in Resources */,
+				67F1E7361D4F4DF20094520D /* Assets.xcassets in Resources */,
+				67F1E7341D4F4DF20094520D /* Main.storyboard in Resources */,
+				6739F56F1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.xib in Resources */,
+				6739F5641E00E93C009C5073 /* SGH0816SpringAnimationViewController.xib in Resources */,
+				6739F5E21E0127F0009C5073 /* README.doc in Resources */,
+				6739F5531E00E93C009C5073 /* SGHUsingSpringViewController.xib in Resources */,
+				6739F5421E00E93C009C5073 /* SGH0803GradientLayerViewController.xib in Resources */,
+				6739F54B1E00E93C009C5073 /* SGHAssistantIrisViewController.xib in Resources */,
+				6739F56C1E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.xib in Resources */,
+				6739F54F1E00E93C009C5073 /* BahamaAirLogin.xcassets in Resources */,
+				6739F55B1E00E93C009C5073 /* SGHAnimateKeyFrameViewController.xib in Resources */,
+				6739F5441E00E93C009C5073 /* SGHGradientLayerViewController.xib in Resources */,
+				6739F53D1E00E93C009C5073 /* SGH0802CollideViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E73D1D4F4DF20094520D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6735B1331E0B81420010E6A8 /* users:onevcat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E7481D4F4DF20094520D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67F1E7271D4F4DF20094520D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6778E0671D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift in Sources */,
+				6739F54D1E00E93C009C5073 /* SGH0804MicMonitor.swift in Sources */,
+				6739F54C1E00E93C009C5073 /* SGH0804Assistant.swift in Sources */,
+				6739F5761E00EA27009C5073 /* SGH1214FavoritesViewController.swift in Sources */,
+				6739F5721E00E93C009C5073 /* SGH1213TrackProgramViewController.swift in Sources */,
+				6739F5841E00F4F7009C5073 /* SGH1214AutolayoutOneViewController.swift in Sources */,
+				6739F5711E00E93C009C5073 /* PageControl.swift in Sources */,
+				6739F53A1E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift in Sources */,
+				6739F5741E00E95E009C5073 /* SGH1214BookmarksViewController.swift in Sources */,
+				6739F5651E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift in Sources */,
+				6739F56B1E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift in Sources */,
+				6739F5401E00E93C009C5073 /* SGHAvatarView.swift in Sources */,
+				6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */,
+				6739F55A1E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift in Sources */,
+				6739F5541E00E93C009C5073 /* SGHTransitionAnimationViewController.swift in Sources */,
+				6739F55F1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift in Sources */,
+				6739F56E1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift in Sources */,
+				6739F5631E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift in Sources */,
+				6739F5501E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift in Sources */,
+				6739F4BD1E00E883009C5073 /* SGH161214TabBarController.swift in Sources */,
+				6739F54E1E00E93C009C5073 /* SGH0804ViewController.swift in Sources */,
+				6739F5701E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift in Sources */,
+				6739F53E1E00E93C009C5073 /* SGH0802CollideViewController.swift in Sources */,
+				6739F5491E00E93C009C5073 /* SGH0803RefreshView.swift in Sources */,
+				6739F5691E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift in Sources */,
+				6739F5411E00E93C009C5073 /* SGH0803GradientLayerViewController.swift in Sources */,
+				6739F5391E00E93C009C5073 /* SGH160802ViewController.swift in Sources */,
+				6739F54A1E00E93C009C5073 /* SGHAssistantIrisViewController.swift in Sources */,
+				6739F55D1E00E93C009C5073 /* SGH0812LayerViewController.swift in Sources */,
+				6739F5611E00E93C009C5073 /* SGHAnimationGroupViewController.swift in Sources */,
+				6739F5461E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift in Sources */,
+				6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */,
+				6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */,
+				6739F56D1E00E93C009C5073 /* SGH0819HorizonalItemList.swift in Sources */,
+				6739F5581E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift in Sources */,
+				67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */,
+				6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */,
+				6739F5871E00F50C009C5073 /* SGH1214AutolayoutViewController.swift in Sources */,
+				6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */,
+				6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */,
+				6739F5571E00E93C009C5073 /* SGH0808SnowView.swift in Sources */,
+				6739F5431E00E93C009C5073 /* SGHGradientLayerViewController.swift in Sources */,
+				6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E73B1D4F4DF20094520D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */,
+				67F1E7441D4F4DF20094520D /* SwiftDemo160801Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F1E7461D4F4DF20094520D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F1E74F1D4F4DF20094520D /* SwiftDemo160801UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67F1E7411D4F4DF20094520D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67F1E72A1D4F4DF20094520D /* SwiftDemo160801 */;
+			targetProxy = 67F1E7401D4F4DF20094520D /* PBXContainerItemProxy */;
+		};
+		67F1E74C1D4F4DF20094520D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67F1E72A1D4F4DF20094520D /* SwiftDemo160801 */;
+			targetProxy = 67F1E74B1D4F4DF20094520D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67F1E7321D4F4DF20094520D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F1E7331D4F4DF20094520D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67F1E7371D4F4DF20094520D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F1E7381D4F4DF20094520D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67F1E7511D4F4DF20094520D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67F1E7521D4F4DF20094520D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67F1E7541D4F4DF20094520D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftDemo160801/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		67F1E7551D4F4DF20094520D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftDemo160801/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		67F1E7571D4F4DF20094520D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftDemo160801Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDemo160801.app/SwiftDemo160801";
+			};
+			name = Debug;
+		};
+		67F1E7581D4F4DF20094520D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftDemo160801Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDemo160801.app/SwiftDemo160801";
+			};
+			name = Release;
+		};
+		67F1E75A1D4F4DF20094520D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftDemo160801UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SwiftDemo160801;
+			};
+			name = Debug;
+		};
+		67F1E75B1D4F4DF20094520D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftDemo160801UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SwiftDemo160801;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67F1E7261D4F4DF20094520D /* Build configuration list for PBXProject "SwiftDemo160801" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F1E7511D4F4DF20094520D /* Debug */,
+				67F1E7521D4F4DF20094520D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F1E7531D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F1E7541D4F4DF20094520D /* Debug */,
+				67F1E7551D4F4DF20094520D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F1E7561D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F1E7571D4F4DF20094520D /* Debug */,
+				67F1E7581D4F4DF20094520D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F1E7591D4F4DF20094520D /* Build configuration list for PBXNativeTarget "SwiftDemo160801UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F1E75A1D4F4DF20094520D /* Debug */,
+				67F1E75B1D4F4DF20094520D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67F1E7231D4F4DF20094520D /* Project object */;
+}

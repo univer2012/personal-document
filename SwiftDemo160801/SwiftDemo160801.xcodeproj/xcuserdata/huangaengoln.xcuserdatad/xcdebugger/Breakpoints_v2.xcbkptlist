@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo160801/Example/3iOS &#x754c;&#x9762;&#x52a8;&#x753b;&#x6559;&#x7a0b;&#x4e4b; Layer &#x52a8;&#x753b;&#x57fa;&#x7840;/Modlues/1Layer &#x52a8;&#x753b;&#x7684;&#x5b9e;&#x73b0;/Ctrl/SGH0812LayerViewController.swift"
+            timestampString = "492945117.170079"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo160801/Example/Bookmarks/Example/8&#x9762;&#x5411;&#x534f;&#x8bae;&#x7f16;&#x7a0b;&#x4e0e; Cocoa &#x7684;&#x9082;&#x9005; (&#x4e0b;)/Ctrl/SGH1222POPAndCocoaViewController.swift"
+            timestampString = "504067390.101321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo160801/Example/Bookmarks/Example/8&#x9762;&#x5411;&#x534f;&#x8bae;&#x7f16;&#x7a0b;&#x4e0e; Cocoa &#x7684;&#x9082;&#x9005; (&#x4e0b;)/Ctrl/SGH1222POPAndCocoaViewController.swift"
+            timestampString = "504068605.352519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo160801Tests/ProtocolNetworkTests.swift"
+            timestampString = "504070237.033325"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "send(_:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

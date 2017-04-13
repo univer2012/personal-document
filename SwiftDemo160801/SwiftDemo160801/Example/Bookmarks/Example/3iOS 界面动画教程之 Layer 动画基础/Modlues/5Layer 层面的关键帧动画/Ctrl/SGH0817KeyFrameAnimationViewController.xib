@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SGH0817KeyFrameAnimationViewController" customModule="SwiftDemo160801" customModuleProvider="target">
+            <connections>
+                <outlet property="cloud1" destination="HwL-ip-duc" id="cu2-cX-5o3"/>
+                <outlet property="cloud2" destination="M7V-uY-IXJ" id="iY1-BB-PfP"/>
+                <outlet property="cloud3" destination="7g7-qz-aHF" id="0mU-IN-jx7"/>
+                <outlet property="cloud4" destination="RAS-uP-76b" id="Y3f-ot-nqQ"/>
+                <outlet property="heading" destination="A6j-sn-nRv" id="Njq-Bv-DyR"/>
+                <outlet property="loginButton" destination="CrM-iV-XxM" id="zu0-hA-L37"/>
+                <outlet property="password" destination="8OD-e9-uQH" id="K1z-0X-IIf"/>
+                <outlet property="username" destination="aZP-Z9-R00" id="Gmv-Ws-L3N"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny" translatesAutoresizingMaskIntoConstraints="NO" id="gSm-YA-gMv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-1" translatesAutoresizingMaskIntoConstraints="NO" id="HwL-ip-duc">
+                    <rect key="frame" x="-71" y="187" width="159" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-2" translatesAutoresizingMaskIntoConstraints="NO" id="M7V-uY-IXJ">
+                    <rect key="frame" x="256" y="212" width="158" height="49"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-3" translatesAutoresizingMaskIntoConstraints="NO" id="7g7-qz-aHF">
+                    <rect key="frame" x="283" y="425" width="74" height="35"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-sunny-cloud-4" translatesAutoresizingMaskIntoConstraints="NO" id="RAS-uP-76b">
+                    <rect key="frame" x="8" y="442" width="115" height="50"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bahama Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6j-sn-nRv">
+                    <rect key="frame" x="57" y="120" width="300" height="34"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZP-Z9-R00">
+                    <rect key="frame" x="57" y="237" width="300" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8OD-e9-uQH">
+                    <rect key="frame" x="57" y="282" width="300" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-iV-XxM">
+                    <rect key="frame" x="107" y="327" width="200" height="52"/>
+                    <color key="backgroundColor" red="0.50537889309999995" green="0.74055003159999999" blue="0.22900098369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Log In"/>
+                    <connections>
+                        <action selector="login" destination="-1" eventType="touchUpInside" id="mnw-5T-gCa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg-sunny" width="320" height="568"/>
+        <image name="bg-sunny-cloud-1" width="159" height="50"/>
+        <image name="bg-sunny-cloud-2" width="138" height="49"/>
+        <image name="bg-sunny-cloud-3" width="74" height="35"/>
+        <image name="bg-sunny-cloud-4" width="115" height="50"/>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SGH0819MiddleAutoLayoutViewController" customModule="SwiftDemo160801" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonMenu" destination="Yg2-wb-ioi" id="N9h-Ab-foX"/>
+                <outlet property="tableView" destination="Btt-PI-7PR" id="4cI-yR-khi"/>
+                <outlet property="titleLabel" destination="IFr-Nk-gX2" id="ZvD-gd-O5Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpT-qw-cCT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Nk-gX2">
+                            <rect key="frame" x="151" y="22" width="113" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-wb-ioi">
+                            <rect key="frame" x="376" y="12" width="30" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <state key="normal" title="+"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="IFr-Nk-gX2" firstAttribute="centerX" secondItem="UpT-qw-cCT" secondAttribute="centerX" id="93d-ds-cjk"/>
+                        <constraint firstItem="IFr-Nk-gX2" firstAttribute="centerY" secondItem="UpT-qw-cCT" secondAttribute="centerY" constant="5" id="FmD-qT-lTa"/>
+                        <constraint firstAttribute="trailing" secondItem="Yg2-wb-ioi" secondAttribute="trailing" constant="8" id="c5j-R0-lFR"/>
+                        <constraint firstAttribute="height" constant="60" id="huX-Cn-ELb"/>
+                        <constraint firstItem="Yg2-wb-ioi" firstAttribute="centerY" secondItem="IFr-Nk-gX2" secondAttribute="centerY" id="ySB-ip-BsG"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Btt-PI-7PR">
+                    <rect key="frame" x="0.0" y="60" width="414" height="676"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Btt-PI-7PR" secondAttribute="trailing" id="5jX-Fs-0u4"/>
+                <constraint firstItem="Btt-PI-7PR" firstAttribute="top" secondItem="UpT-qw-cCT" secondAttribute="bottom" id="BAL-lL-Q7i"/>
+                <constraint firstItem="UpT-qw-cCT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LxR-DL-dXJ"/>
+                <constraint firstAttribute="bottom" secondItem="Btt-PI-7PR" secondAttribute="bottom" id="SOt-Lj-Jq0"/>
+                <constraint firstAttribute="trailing" secondItem="UpT-qw-cCT" secondAttribute="trailing" id="SQY-7h-yqG"/>
+                <constraint firstItem="Btt-PI-7PR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XTg-RK-adq"/>
+                <constraint firstItem="UpT-qw-cCT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="haH-PS-1jR"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="175" y="237"/>
+        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="2ys-xF-hvn">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ys-xF-hvn" id="3J5-6C-sSe">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="143" y="-208"/>
+        </tableViewCell>
+    </objects>
+</document>
