@@ -30,9 +30,11 @@
         tableView;
     });
     _controllersArray= [@[@"SGH0208UncaughtExceptionViewController",
+                          @"SGHReusableHeaderFooterTableViewController",
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
+                        @"2、dequeueReusableHeaderFooterViewWithIdentifier"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

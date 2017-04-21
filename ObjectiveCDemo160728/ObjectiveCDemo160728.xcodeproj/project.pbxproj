@@ -75,6 +75,7 @@
 		67D2A6BD1E0CED24000B30EE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D2A6B91E0CED24000B30EE /* UIView+Frame.m */; };
 		67D2A6BE1E0CED24000B30EE /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D2A6BB1E0CED24000B30EE /* UIView+WZLBadge.m */; };
 		67D3D59A1DD086B70049B021 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D3D5991DD086B70049B021 /* MobileCoreServices.framework */; };
+		67DF24DA1EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF24D91EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m */; };
 		67EDCF491D4A07E300058E8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDCF481D4A07E300058E8D /* main.m */; };
 		67EDCF4C1D4A07E300058E8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDCF4B1D4A07E300058E8D /* AppDelegate.m */; };
 		67EDCF521D4A07E300058E8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EDCF501D4A07E300058E8D /* Main.storyboard */; };
@@ -227,6 +228,8 @@
 		67D2A6BA1E0CED24000B30EE /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
 		67D2A6BB1E0CED24000B30EE /* UIView+WZLBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLBadge.m"; sourceTree = "<group>"; };
 		67D3D5991DD086B70049B021 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		67DF24D81EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHReusableHeaderFooterTableViewController.h; sourceTree = "<group>"; };
+		67DF24D91EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHReusableHeaderFooterTableViewController.m; sourceTree = "<group>"; };
 		67EDCF441D4A07E300058E8D /* ObjectiveCDemo160728.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCDemo160728.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EDCF481D4A07E300058E8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67EDCF4A1D4A07E300058E8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -950,6 +953,7 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				67DF24D61EA85C7F00F71659 /* 2dequeueReusableHeaderFooterViewWithIdentifier */,
 				678594561E4AF218006BA5CB /* 1iOS自动捕获程序崩溃日志再发送邮件提示开发者 */,
 			);
 			path = Modules;
@@ -1062,6 +1066,23 @@
 				67D3D5991DD086B70049B021 /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67DF24D61EA85C7F00F71659 /* 2dequeueReusableHeaderFooterViewWithIdentifier */ = {
+			isa = PBXGroup;
+			children = (
+				67DF24D71EA85C7F00F71659 /* Ctrl */,
+			);
+			path = 2dequeueReusableHeaderFooterViewWithIdentifier;
+			sourceTree = "<group>";
+		};
+		67DF24D71EA85C7F00F71659 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67DF24D81EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.h */,
+				67DF24D91EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		67EDCF3B1D4A07E300058E8D = {
@@ -1342,6 +1363,7 @@
 				67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */,
 				677177DF1DEBD081009AB627 /* SGH0824PresentAndPushThreeViewController.m in Sources */,
 				677177DB1DEBD081009AB627 /* SGH0824PresentAndPushFourViewController.m in Sources */,
+				67DF24DA1EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m in Sources */,
 				677178FF1DEC3A12009AB627 /* SGHNavigation1128Controller.m in Sources */,
 				67D2A6BC1E0CED24000B30EE /* CAAnimation+WAnimation.m in Sources */,
 				677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */,
