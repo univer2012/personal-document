@@ -84,6 +84,8 @@
 		67F1E7391D4F4DF20094520D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F1E7371D4F4DF20094520D /* LaunchScreen.storyboard */; };
 		67F1E7441D4F4DF20094520D /* SwiftDemo160801Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E7431D4F4DF20094520D /* SwiftDemo160801Tests.swift */; };
 		67F1E74F1D4F4DF20094520D /* SwiftDemo160801UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */; };
+		67FC93571EADD8BF00F67956 /* DreamGenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */; };
+		67FC93591EADDAD600F67956 /* DreamUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93581EADDAD600F67956 /* DreamUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		67F1E74A1D4F4DF20094520D /* SwiftDemo160801UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemo160801UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemo160801UITests.swift; sourceTree = "<group>"; };
 		67F1E7501D4F4DF20094520D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamGenericViewController.swift; sourceTree = "<group>"; };
+		67FC93581EADDAD600F67956 /* DreamUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 		6739F4C01E00E93C009C5073 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				67FC93541EADD87D00F67956 /* 9架构师之泛型应用分析介绍 */,
 				6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */,
 				6739F57D1E00F497009C5073 /* 7Auto Layout 使用心得 */,
 				6739F4C11E00E93C009C5073 /* 1iOS 界面动画教程之 Layer 动画进阶 */,
@@ -952,6 +957,23 @@
 			path = SwiftDemo160801UITests;
 			sourceTree = "<group>";
 		};
+		67FC93541EADD87D00F67956 /* 9架构师之泛型应用分析介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				67FC93551EADD87D00F67956 /* Ctrl */,
+			);
+			path = "9架构师之泛型应用分析介绍";
+			sourceTree = "<group>";
+		};
+		67FC93551EADD87D00F67956 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */,
+				67FC93581EADDAD600F67956 /* DreamUser.swift */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1133,6 +1155,7 @@
 				6739F5631E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift in Sources */,
 				6739F5501E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift in Sources */,
 				6739F4BD1E00E883009C5073 /* SGH161214TabBarController.swift in Sources */,
+				67FC93571EADD8BF00F67956 /* DreamGenericViewController.swift in Sources */,
 				6739F54E1E00E93C009C5073 /* SGH0804ViewController.swift in Sources */,
 				6739F5701E00E93C009C5073 /* SGH1208CustomPageControlViewController.swift in Sources */,
 				6739F53E1E00E93C009C5073 /* SGH0802CollideViewController.swift in Sources */,
@@ -1154,6 +1177,7 @@
 				6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */,
 				6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */,
 				6739F5571E00E93C009C5073 /* SGH0808SnowView.swift in Sources */,
+				67FC93591EADDAD600F67956 /* DreamUser.swift in Sources */,
 				6739F5431E00E93C009C5073 /* SGHGradientLayerViewController.swift in Sources */,
 				6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */,
 			);

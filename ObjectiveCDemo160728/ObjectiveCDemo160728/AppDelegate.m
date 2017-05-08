@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SGH161128TabBarViewController.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     SGH161128TabBarViewController *tabBarController = [SGH161128TabBarViewController new];
     

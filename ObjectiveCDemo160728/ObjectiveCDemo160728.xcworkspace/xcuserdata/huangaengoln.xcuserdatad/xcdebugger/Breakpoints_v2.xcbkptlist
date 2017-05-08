@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/4&#x5229;&#x7528;runloop&#x6765;&#x89e3;&#x51b3;&#x56fe;&#x50cf;&#x5361;&#x987f;/Ctrl/SGH0425RunloopImageViewController.m"
+            timestampString = "514790573.991928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "CallBack()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/6Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e00;&#xff1a;&#x7c7b;&#x4e0e;&#x5bf9;&#x8c61;/Other/SGH0506Test.m"
+            timestampString = "515725983.860421"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-ex_registerClassPair"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

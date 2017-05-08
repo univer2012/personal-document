@@ -30,11 +30,11 @@ extension SwiftMobile :_ObjectiveCBridgeable {
         return Mobile(brand: brand, system: system)
     }
     //强制将 Objective-C 对象转换成Swift结构体类型
-    static func _forceBridgeFromObjectiveC(source: _ObjectiveCType, inout result: SwiftMobile?) {
+    static func _forceBridgeFromObjectiveC(_ source: _ObjectiveCType, result: inout SwiftMobile?) {
         result=SwiftMobile(brand: source.brand, system: source.system)
     }
     //有条讲地将 Objective-C 对象转换成Swift结构体类型
-    static func _conditionallyBridgeFromObjectiveC(source: _ObjectiveCType, inout result: SwiftMobile?) -> Bool {
+    static func _conditionallyBridgeFromObjectiveC(_ source: _ObjectiveCType, result: inout SwiftMobile?) -> Bool {
         _forceBridgeFromObjectiveC(source, result: &result)
         return true
     }
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         
         let numbers=[1,29,40]
         let numberArray=(numbers as NSArray).objectAtIndex(2)
-        print(numberArray.dynamicType)
+        print(type(of: numberArray))
         /* 输出 :
         __NSCFNumber        */
         #endif

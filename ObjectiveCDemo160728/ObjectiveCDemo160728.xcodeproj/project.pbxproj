@@ -10,7 +10,19 @@
 		6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700C67D1E30BF90006AC47B /* SGH170119CrashRankViewController.m */; };
 		6700C6821E30C3FE006AC47B /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700C6811E30C3FE006AC47B /* NSDictionary+NilSafe.m */; };
 		6735B1231E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1221E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m */; };
+		6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1821EB0906A00F51BA9 /* SGH0424GaodeFactory.m */; };
+		6735C18E1EB0906A00F51BA9 /* SGH0424GaodeMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1851EB0906A00F51BA9 /* SGH0424GaodeMapView.m */; };
+		6735C18F1EB0906A00F51BA9 /* SGH0424BaiduFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1891EB0906A00F51BA9 /* SGH0424BaiduFactory.m */; };
+		6735C1901EB0906A00F51BA9 /* SGH0424BaiduMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C18C1EB0906A00F51BA9 /* SGH0424BaiduMapView.m */; };
+		6735C1931EB0908B00F51BA9 /* SGH0424MapEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1921EB0908B00F51BA9 /* SGH0424MapEngine.m */; };
+		6735C2091EB416AB00F51BA9 /* SGH0429CryptographyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C2071EB416AB00F51BA9 /* SGH0429CryptographyViewController.m */; };
+		6735C20A1EB416AB00F51BA9 /* SGH0429CryptographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6735C2081EB416AB00F51BA9 /* SGH0429CryptographyViewController.xib */; };
+		6735C20D1EB4684300F51BA9 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C20C1EB4684300F51BA9 /* NSString+Hash.m */; };
+		6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 6735C20E1EB46C2A00F51BA9 /* readme.md */; };
 		67399D241D4AEFAA0048EF3B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67399D231D4AEFAA0048EF3B /* QuartzCore.framework */; };
+		67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */; };
+		67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA51EBD580600AE8899 /* SGH0506Test.m */; };
+		67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA81EBD6A2000AE8899 /* SGH170506MyClass.m */; };
 		677177281DEBCFE7009AB627 /* SGH161128TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677177271DEBCFE7009AB627 /* SGH161128TabBarViewController.m */; };
 		677177BB1DEBD081009AB627 /* SGH1128BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6771772D1DEBD081009AB627 /* SGH1128BookmarksViewController.m */; };
 		677177BC1DEBD081009AB627 /* SGH160728ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677177321DEBD081009AB627 /* SGH160728ViewController.m */; };
@@ -87,6 +99,10 @@
 		67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA0D1A1DE817710012EDFF /* TBXML+HTTP.m */; };
 		67FA0D1F1DE817710012EDFF /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FA0D1C1DE817710012EDFF /* TBXML.m */; };
 		67FA0D211DE81FC00012EDFF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FA0D201DE81FC00012EDFF /* libz.tbd */; };
+		67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */; };
+		67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */; };
+		67FC937E1EAF115200F67956 /* spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FC937D1EAF115200F67956 /* spaceship.png */; };
+		8E60E0114CE177A1FDBFCCD2 /* libPods-ObjectiveCDemo160728.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +130,29 @@
 		6735B1211E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH1221SelectedCellsViewController.h; sourceTree = "<group>"; };
 		6735B1221E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH1221SelectedCellsViewController.m; sourceTree = "<group>"; };
 		6735B1241E0B680C0010E6A8 /* README.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.docx; sourceTree = "<group>"; };
+		6735C1811EB0906A00F51BA9 /* SGH0424GaodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424GaodeFactory.h; sourceTree = "<group>"; };
+		6735C1821EB0906A00F51BA9 /* SGH0424GaodeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424GaodeFactory.m; sourceTree = "<group>"; };
+		6735C1841EB0906A00F51BA9 /* SGH0424GaodeMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424GaodeMapView.h; sourceTree = "<group>"; };
+		6735C1851EB0906A00F51BA9 /* SGH0424GaodeMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424GaodeMapView.m; sourceTree = "<group>"; };
+		6735C1881EB0906A00F51BA9 /* SGH0424BaiduFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424BaiduFactory.h; sourceTree = "<group>"; };
+		6735C1891EB0906A00F51BA9 /* SGH0424BaiduFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424BaiduFactory.m; sourceTree = "<group>"; };
+		6735C18B1EB0906A00F51BA9 /* SGH0424BaiduMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424BaiduMapView.h; sourceTree = "<group>"; };
+		6735C18C1EB0906A00F51BA9 /* SGH0424BaiduMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424BaiduMapView.m; sourceTree = "<group>"; };
+		6735C1911EB0908B00F51BA9 /* SGH0424MapEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapEngine.h; sourceTree = "<group>"; };
+		6735C1921EB0908B00F51BA9 /* SGH0424MapEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424MapEngine.m; sourceTree = "<group>"; };
+		6735C2061EB416AB00F51BA9 /* SGH0429CryptographyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0429CryptographyViewController.h; sourceTree = "<group>"; };
+		6735C2071EB416AB00F51BA9 /* SGH0429CryptographyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0429CryptographyViewController.m; sourceTree = "<group>"; };
+		6735C2081EB416AB00F51BA9 /* SGH0429CryptographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0429CryptographyViewController.xib; sourceTree = "<group>"; };
+		6735C20B1EB4684300F51BA9 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		6735C20C1EB4684300F51BA9 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		6735C20E1EB46C2A00F51BA9 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		67399D231D4AEFAA0048EF3B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		67548AA01EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0506OCRuntime1ViewController.h; sourceTree = "<group>"; };
+		67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0506OCRuntime1ViewController.m; sourceTree = "<group>"; };
+		67548AA41EBD580600AE8899 /* SGH0506Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0506Test.h; sourceTree = "<group>"; };
+		67548AA51EBD580600AE8899 /* SGH0506Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0506Test.m; sourceTree = "<group>"; };
+		67548AA71EBD6A2000AE8899 /* SGH170506MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH170506MyClass.h; sourceTree = "<group>"; };
+		67548AA81EBD6A2000AE8899 /* SGH170506MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170506MyClass.m; sourceTree = "<group>"; };
 		677177261DEBCFE7009AB627 /* SGH161128TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH161128TabBarViewController.h; sourceTree = "<group>"; };
 		677177271DEBCFE7009AB627 /* SGH161128TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH161128TabBarViewController.m; sourceTree = "<group>"; };
 		6771772C1DEBD081009AB627 /* SGH1128BookmarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH1128BookmarksViewController.h; sourceTree = "<group>"; };
@@ -251,6 +289,16 @@
 		67FA0D1B1DE817710012EDFF /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
 		67FA0D1C1DE817710012EDFF /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 		67FA0D201DE81FC00012EDFF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		67FC935C1EADEE0700F67956 /* SGH0424DreamLBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424DreamLBSViewController.h; sourceTree = "<group>"; };
+		67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0424DreamLBSViewController.m; sourceTree = "<group>"; };
+		67FC93601EADF85F00F67956 /* SGH0424MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapView.h; sourceTree = "<group>"; };
+		67FC936A1EAE00DE00F67956 /* SGH0424MapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapFactory.h; sourceTree = "<group>"; };
+		67FC937A1EAF07B800F67956 /* SGH0425RunloopImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0425RunloopImageViewController.h; sourceTree = "<group>"; };
+		67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
+		67FC937D1EAF115200F67956 /* spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaceship.png; sourceTree = "<group>"; };
+		A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.debug.xcconfig"; sourceTree = "<group>"; };
+		B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.release.xcconfig"; sourceTree = "<group>"; };
+		CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCDemo160728.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +309,7 @@
 				67FA0D211DE81FC00012EDFF /* libz.tbd in Frameworks */,
 				67D3D59A1DD086B70049B021 /* MobileCoreServices.framework in Frameworks */,
 				67399D241D4AEFAA0048EF3B /* QuartzCore.framework in Frameworks */,
+				8E60E0114CE177A1FDBFCCD2 /* libPods-ObjectiveCDemo160728.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +372,118 @@
 				6735B1221E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m */,
 			);
 			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6735C17F1EB0906A00F51BA9 /* Gaode */ = {
+			isa = PBXGroup;
+			children = (
+				6735C1801EB0906A00F51BA9 /* Factory */,
+				6735C1831EB0906A00F51BA9 /* Views */,
+			);
+			path = Gaode;
+			sourceTree = "<group>";
+		};
+		6735C1801EB0906A00F51BA9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6735C1811EB0906A00F51BA9 /* SGH0424GaodeFactory.h */,
+				6735C1821EB0906A00F51BA9 /* SGH0424GaodeFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6735C1831EB0906A00F51BA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6735C1841EB0906A00F51BA9 /* SGH0424GaodeMapView.h */,
+				6735C1851EB0906A00F51BA9 /* SGH0424GaodeMapView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6735C1861EB0906A00F51BA9 /* Baidu */ = {
+			isa = PBXGroup;
+			children = (
+				6735C1871EB0906A00F51BA9 /* Factory */,
+				6735C18A1EB0906A00F51BA9 /* Views */,
+			);
+			path = Baidu;
+			sourceTree = "<group>";
+		};
+		6735C1871EB0906A00F51BA9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6735C1881EB0906A00F51BA9 /* SGH0424BaiduFactory.h */,
+				6735C1891EB0906A00F51BA9 /* SGH0424BaiduFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6735C18A1EB0906A00F51BA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6735C18B1EB0906A00F51BA9 /* SGH0424BaiduMapView.h */,
+				6735C18C1EB0906A00F51BA9 /* SGH0424BaiduMapView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6735C2031EB4168700F51BA9 /* 5浅谈密码学 */ = {
+			isa = PBXGroup;
+			children = (
+				6735C20E1EB46C2A00F51BA9 /* readme.md */,
+				6735C2041EB4168700F51BA9 /* Component */,
+				6735C2051EB4168700F51BA9 /* Ctrl */,
+			);
+			path = "5浅谈密码学";
+			sourceTree = "<group>";
+		};
+		6735C2041EB4168700F51BA9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				6735C20B1EB4684300F51BA9 /* NSString+Hash.h */,
+				6735C20C1EB4684300F51BA9 /* NSString+Hash.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		6735C2051EB4168700F51BA9 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6735C2061EB416AB00F51BA9 /* SGH0429CryptographyViewController.h */,
+				6735C2071EB416AB00F51BA9 /* SGH0429CryptographyViewController.m */,
+				6735C2081EB416AB00F51BA9 /* SGH0429CryptographyViewController.xib */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		67548A9E1EBD55EF00AE8899 /* 6Objective-C Runtime 运行时之一：类与对象 */ = {
+			isa = PBXGroup;
+			children = (
+				67548AA31EBD57F400AE8899 /* Other */,
+				67548A9F1EBD55EF00AE8899 /* Ctrl */,
+			);
+			path = "6Objective-C Runtime 运行时之一：类与对象";
+			sourceTree = "<group>";
+		};
+		67548A9F1EBD55EF00AE8899 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67548AA01EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.h */,
+				67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		67548AA31EBD57F400AE8899 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				67548AA41EBD580600AE8899 /* SGH0506Test.h */,
+				67548AA51EBD580600AE8899 /* SGH0506Test.m */,
+				67548AA71EBD6A2000AE8899 /* SGH170506MyClass.h */,
+				67548AA81EBD6A2000AE8899 /* SGH170506MyClass.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		677177291DEBD081009AB627 /* Modules */ = {
@@ -953,6 +1114,10 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				67548A9E1EBD55EF00AE8899 /* 6Objective-C Runtime 运行时之一：类与对象 */,
+				6735C2031EB4168700F51BA9 /* 5浅谈密码学 */,
+				67FC93781EAF079E00F67956 /* 4利用runloop来解决图像卡顿 */,
+				67FC935A1EADEDD100F67956 /* 3架构师之面向协议编程(OC语言)介绍 */,
 				67DF24D61EA85C7F00F71659 /* 2dequeueReusableHeaderFooterViewWithIdentifier */,
 				678594561E4AF218006BA5CB /* 1iOS自动捕获程序崩溃日志再发送邮件提示开发者 */,
 			);
@@ -1064,6 +1229,7 @@
 			children = (
 				67FA0D201DE81FC00012EDFF /* libz.tbd */,
 				67D3D5991DD086B70049B021 /* MobileCoreServices.framework */,
+				CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1094,6 +1260,7 @@
 				67EDCF6B1D4A07E300058E8D /* ObjectiveCDemo160728UITests */,
 				67EDCF451D4A07E300058E8D /* Products */,
 				67D3D5981DD086B70049B021 /* Frameworks */,
+				68A07F0E88B76B6CF487933F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1175,6 +1342,64 @@
 			path = TBXML;
 			sourceTree = "<group>";
 		};
+		67FC935A1EADEDD100F67956 /* 3架构师之面向协议编程(OC语言)介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				6735C17F1EB0906A00F51BA9 /* Gaode */,
+				6735C1861EB0906A00F51BA9 /* Baidu */,
+				67FC935F1EADF84100F67956 /* Base */,
+				67FC935B1EADEDD100F67956 /* Ctrl */,
+			);
+			path = "3架构师之面向协议编程(OC语言)介绍";
+			sourceTree = "<group>";
+		};
+		67FC935B1EADEDD100F67956 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67FC935C1EADEE0700F67956 /* SGH0424DreamLBSViewController.h */,
+				67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */,
+				6735C1911EB0908B00F51BA9 /* SGH0424MapEngine.h */,
+				6735C1921EB0908B00F51BA9 /* SGH0424MapEngine.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		67FC935F1EADF84100F67956 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				67FC93601EADF85F00F67956 /* SGH0424MapView.h */,
+				67FC936A1EAE00DE00F67956 /* SGH0424MapFactory.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		67FC93781EAF079E00F67956 /* 4利用runloop来解决图像卡顿 */ = {
+			isa = PBXGroup;
+			children = (
+				67FC937D1EAF115200F67956 /* spaceship.png */,
+				67FC93791EAF079E00F67956 /* Ctrl */,
+			);
+			path = "4利用runloop来解决图像卡顿";
+			sourceTree = "<group>";
+		};
+		67FC93791EAF079E00F67956 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67FC937A1EAF07B800F67956 /* SGH0425RunloopImageViewController.h */,
+				67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		68A07F0E88B76B6CF487933F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */,
+				B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1182,9 +1407,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67EDCF711D4A07E300058E8D /* Build configuration list for PBXNativeTarget "ObjectiveCDemo160728" */;
 			buildPhases = (
+				43AE8735BD79D2D14FD1656B /* [CP] Check Pods Manifest.lock */,
 				67EDCF401D4A07E300058E8D /* Sources */,
 				67EDCF411D4A07E300058E8D /* Frameworks */,
 				67EDCF421D4A07E300058E8D /* Resources */,
+				9D453D81E99489EA30C84C05 /* [CP] Embed Pods Frameworks */,
+				5C96A647B0687251AE40F155 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1279,6 +1507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6735C20A1EB416AB00F51BA9 /* SGH0429CryptographyViewController.xib in Resources */,
 				67EDCF571D4A07E300058E8D /* LaunchScreen.storyboard in Resources */,
 				677177CE1DEBD081009AB627 /* SGH0728CALayerViewController.xib in Resources */,
 				677177E01DEBD081009AB627 /* SGH0824PresentAndPushThreeViewController.xib in Resources */,
@@ -1291,6 +1520,7 @@
 				677177D31DEBD081009AB627 /* SGH0729TransitionGroupViewController.xib in Resources */,
 				677177E41DEBD081009AB627 /* SGH0824AlertViewViewController.xib in Resources */,
 				677177C91DEBD081009AB627 /* books.xml in Resources */,
+				67FC937E1EAF115200F67956 /* spaceship.png in Resources */,
 				67EDCF521D4A07E300058E8D /* Main.storyboard in Resources */,
 				677177D81DEBD081009AB627 /* SGHWheelView.xib in Resources */,
 				677177D51DEBD081009AB627 /* SGH0729WheelViewController.xib in Resources */,
@@ -1314,6 +1544,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43AE8735BD79D2D14FD1656B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C96A647B0687251AE40F155 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D453D81E99489EA30C84C05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67EDCF401D4A07E300058E8D /* Sources */ = {
@@ -1347,6 +1625,7 @@
 				677177D41DEBD081009AB627 /* SGH0729WheelViewController.m in Sources */,
 				67EDCF4C1D4A07E300058E8D /* AppDelegate.m in Sources */,
 				677177F41DEBF935009AB627 /* readme.md in Sources */,
+				67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */,
 				677177EA1DEBD081009AB627 /* SGH160911CoreLocationViewController.m in Sources */,
 				677177D61DEBD081009AB627 /* SGH0729Button.m in Sources */,
 				67D2A6B31E0CECFB000B30EE /* SGH161223WZLBadgeViewController.m in Sources */,
@@ -1355,28 +1634,40 @@
 				677177E51DEBD081009AB627 /* SGH1012BecomeHtmlStringViewController.m in Sources */,
 				677177E11DEBD081009AB627 /* SGH0824PresentAndPushTwoViewController.m in Sources */,
 				677177BC1DEBD081009AB627 /* SGH160728ViewController.m in Sources */,
+				6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */,
 				677177C31DEBD081009AB627 /* TKAesHelper.m in Sources */,
 				67EDCF491D4A07E300058E8D /* main.m in Sources */,
 				677177C81DEBD081009AB627 /* SGH1108ShareItem.m in Sources */,
 				677177BF1DEBD081009AB627 /* SGH1013TextViewViewController.m in Sources */,
 				677177C71DEBD081009AB627 /* SGH1108ActivityShareViewController.m in Sources */,
 				67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */,
+				67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */,
 				677177DF1DEBD081009AB627 /* SGH0824PresentAndPushThreeViewController.m in Sources */,
 				677177DB1DEBD081009AB627 /* SGH0824PresentAndPushFourViewController.m in Sources */,
 				67DF24DA1EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m in Sources */,
+				67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */,
 				677178FF1DEC3A12009AB627 /* SGHNavigation1128Controller.m in Sources */,
+				6735C1931EB0908B00F51BA9 /* SGH0424MapEngine.m in Sources */,
 				67D2A6BC1E0CED24000B30EE /* CAAnimation+WAnimation.m in Sources */,
+				6735C18F1EB0906A00F51BA9 /* SGH0424BaiduFactory.m in Sources */,
+				67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */,
 				677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */,
 				677177E71DEBD081009AB627 /* SXNewsDetailEntity.m in Sources */,
 				677177F21DEBDAA7009AB627 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				677177CD1DEBD081009AB627 /* SGH0728CALayerViewController.m in Sources */,
 				6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */,
+				6735C2091EB416AB00F51BA9 /* SGH0429CryptographyViewController.m in Sources */,
 				677177E91DEBD081009AB627 /* SGH1012PlaceholderColorViewController.m in Sources */,
+				6735C20D1EB4684300F51BA9 /* NSString+Hash.m in Sources */,
+				67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */,
 				677177E61DEBD081009AB627 /* SXDetailImgEntity.m in Sources */,
 				67D2A6BE1E0CED24000B30EE /* UIView+WZLBadge.m in Sources */,
+				6735C1901EB0906A00F51BA9 /* SGH0424BaiduMapView.m in Sources */,
 				67D2A6BD1E0CED24000B30EE /* UIView+Frame.m in Sources */,
 				677177E31DEBD081009AB627 /* SGH0824AlertViewViewController.m in Sources */,
+				6735C18E1EB0906A00F51BA9 /* SGH0424GaodeMapView.m in Sources */,
 				67B1AD4D1E5441920034D4DE /* UIButton+timeCountDown.m in Sources */,
+				6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */,
 				677177C21DEBD081009AB627 /* GTMBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1518,6 +1809,7 @@
 		};
 		67EDCF721D4A07E300058E8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mengshi Li (QCNF96K99P)";
@@ -1535,6 +1827,7 @@
 		};
 		67EDCF731D4A07E300058E8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.thinkive.pushTest";

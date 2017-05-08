@@ -1,0 +1,18 @@
+PODS:
+  - AMap2DMap-NO-IDFA (4.3.0):
+    - AMapFoundation-NO-IDFA (~> 1.2)
+  - AMapFoundation-NO-IDFA (1.3.1)
+  - BaiduMapKit (3.0.0)
+
+DEPENDENCIES:
+  - AMap2DMap-NO-IDFA
+  - BaiduMapKit
+
+SPEC CHECKSUMS:
+  AMap2DMap-NO-IDFA: 710e218ec76c9a1b5f74ab915b723961e48d5216
+  AMapFoundation-NO-IDFA: 383d7f34f8c2be5794152eec18ca623e44b6938b
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+
+PODFILE CHECKSUM: f8dcc3fd9972140d896afedd0cbb60b9e377e5cf
+
+COCOAPODS: 1.2.1

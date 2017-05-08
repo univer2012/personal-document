@@ -42,8 +42,9 @@ static NSString *headerIdentifier = @"tableViewHeaderIdentifier";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-//    [self.tableView registerClass:[UITableViewHeaderFooterView class] forCellReuseIdentifier:cellIdentifier];
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:headerIdentifier];
+    //test
+//    [self.tableView registerClass:[UITableViewHeaderFooterView class] forCellReuseIdentifier:cellIdentifier];
     
     self.yearArray = [@[@"2010年", @"2011年", @"2012年", @"2013年", @"2014年", @"2015年", @"2016年", @"2017年", @"2018年", @"2019年", @"2020年"] mutableCopy];
     self.monthArray = [@[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"] mutableCopy];
