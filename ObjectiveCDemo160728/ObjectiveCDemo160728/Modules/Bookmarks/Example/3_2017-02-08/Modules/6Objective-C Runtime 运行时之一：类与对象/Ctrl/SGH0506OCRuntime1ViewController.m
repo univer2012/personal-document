@@ -35,9 +35,45 @@
     
     //[self p_testMyClass];
     
-    [self p_testRuntimeCreateAClass];
+    //[self p_testRuntimeCreateAClass];
+    
+    [self p_testAlloc];
+    
+    //[self p_testGetClassList];
     
 }
+
+-(void)p_testGetClassList {
+    int numClasses;
+    Class *classes = NULL;
+    numClasses = objc_getClassList(NULL, 0);
+    if (numClasses > 0) {
+        classes = malloc(sizeof(Class) * numClasses);
+        numClasses = objc_getClassList(classes, numClasses);
+        
+        NSLog(@"number of classes: %d", numClasses);
+        
+        for (int i = 0; i < numClasses; i++) {
+            Class cls = classes[i];
+            NSLog(@"class name: %s", class_getName(cls));
+        }
+    }
+    free(classes);
+}
+
+
+-(void)p_testAlloc {
+    id theObject = class_createInstance(NSString.class, sizeof(unsigned));
+    id str1 = [theObject init];
+    NSLog(@"%@", [str1 class]);
+    
+    id str2 = [[NSString alloc]initWithString:@"test"];
+    NSLog(@"%@", [str2 class]);
+}
+
+
+
+
 
 void imp_submethod1(id self, SEL _cmd) {
     NSLog(@"run sub method 1");

@@ -34,7 +34,8 @@
                           @"SGH0424DreamLBSViewController",
                           @"SGH0425RunloopImageViewController",
                           @"SGH0429CryptographyViewController",
-                          @"SGH0506OCRuntime1ViewController"
+                          @"SGH0506OCRuntime1ViewController",
+                          @"SGH0509AboutRunLoopViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -42,7 +43,8 @@
                         @"3、架构师之面向协议编程(OC语言)介绍",
                         @"4、利用runloop来解决图像卡顿",
                         @"5、浅谈密码学",
-                        @"6、Objective-C Runtime 运行时之一：类与对象"
+                        @"6、Objective-C Runtime 运行时之一：类与对象",
+                        @"7、使用runloop对象"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

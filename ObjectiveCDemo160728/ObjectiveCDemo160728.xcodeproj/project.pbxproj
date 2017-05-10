@@ -20,7 +20,7 @@
 		6735C20D1EB4684300F51BA9 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C20C1EB4684300F51BA9 /* NSString+Hash.m */; };
 		6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 6735C20E1EB46C2A00F51BA9 /* readme.md */; };
 		67399D241D4AEFAA0048EF3B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67399D231D4AEFAA0048EF3B /* QuartzCore.framework */; };
-		67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */; };
+		67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA51EBD580600AE8899 /* SGH0506Test.m */; };
 		67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA81EBD6A2000AE8899 /* SGH170506MyClass.m */; };
 		677177281DEBCFE7009AB627 /* SGH161128TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677177271DEBCFE7009AB627 /* SGH161128TabBarViewController.m */; };
@@ -80,6 +80,7 @@
 		677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677179011DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m */; };
 		6785945B1E4AF22E006BA5CB /* SGH170208ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6785945A1E4AF22E006BA5CB /* SGH170208ViewController.m */; };
 		6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6785945D1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m */; };
+		67A550011EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A550001EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m */; };
 		67B1AD4D1E5441920034D4DE /* UIButton+timeCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1AD4C1E5441920034D4DE /* UIButton+timeCountDown.m */; };
 		67D2A6B01E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D2A6AF1E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m */; };
 		67D2A6B31E0CECFB000B30EE /* SGH161223WZLBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D2A6B21E0CECFB000B30EE /* SGH161223WZLBadgeViewController.m */; };
@@ -253,6 +254,8 @@
 		6785945A1E4AF22E006BA5CB /* SGH170208ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170208ViewController.m; sourceTree = "<group>"; };
 		6785945C1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0208UncaughtExceptionViewController.h; sourceTree = "<group>"; };
 		6785945D1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0208UncaughtExceptionViewController.m; sourceTree = "<group>"; };
+		67A54FFF1EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0509AboutRunLoopViewController.h; sourceTree = "<group>"; };
+		67A550001EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0509AboutRunLoopViewController.m; sourceTree = "<group>"; };
 		67B1AD4B1E5441920034D4DE /* UIButton+timeCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+timeCountDown.h"; sourceTree = "<group>"; };
 		67B1AD4C1E5441920034D4DE /* UIButton+timeCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+timeCountDown.m"; sourceTree = "<group>"; };
 		67D2A6AE1E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH161223ComponentsDemoViewController.h; sourceTree = "<group>"; };
@@ -1114,6 +1117,7 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				67A54FFD1EC1B7630052DCC3 /* 7使用runloop对象 */,
 				67548A9E1EBD55EF00AE8899 /* 6Objective-C Runtime 运行时之一：类与对象 */,
 				6735C2031EB4168700F51BA9 /* 5浅谈密码学 */,
 				67FC93781EAF079E00F67956 /* 4利用runloop来解决图像卡顿 */,
@@ -1149,6 +1153,23 @@
 				67B1AD4C1E5441920034D4DE /* UIButton+timeCountDown.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		67A54FFD1EC1B7630052DCC3 /* 7使用runloop对象 */ = {
+			isa = PBXGroup;
+			children = (
+				67A54FFE1EC1B7630052DCC3 /* Ctrl */,
+			);
+			path = "7使用runloop对象";
+			sourceTree = "<group>";
+		};
+		67A54FFE1EC1B7630052DCC3 /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				67A54FFF1EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.h */,
+				67A550001EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		67D2A6A81E0CEC6F000B30EE /* 3第三方组件 */ = {
@@ -1613,6 +1634,7 @@
 				6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */,
 				677177CB1DEBD081009AB627 /* SGH1125XMLParserViewController.m in Sources */,
 				67FA0D1F1DE817710012EDFF /* TBXML.m in Sources */,
+				67A550011EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m in Sources */,
 				67D2A6B01E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m in Sources */,
 				677177D21DEBD081009AB627 /* SGH0729TransitionGroupViewController.m in Sources */,
 				677177C61DEBD081009AB627 /* SGH1108AppStoreViewController.m in Sources */,
@@ -1812,6 +1834,7 @@
 			baseConfigurationReference = A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mengshi Li (QCNF96K99P)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mengshi Li (QCNF96K99P)";
 				DEVELOPMENT_TEAM = HCXVYWN652;
@@ -1830,6 +1853,7 @@
 			baseConfigurationReference = B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.thinkive.pushTest";
 				INFOPLIST_FILE = ObjectiveCDemo160728/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
