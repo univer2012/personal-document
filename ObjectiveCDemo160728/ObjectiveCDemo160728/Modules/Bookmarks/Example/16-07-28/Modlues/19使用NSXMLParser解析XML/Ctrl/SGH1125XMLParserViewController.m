@@ -112,7 +112,8 @@
         //判断属性节点
         if ([attributeDict objectForKey:@"addr"]) {
             //获取属性节点中的值
-            NSString *addr=[attributeDict objectForKey:@"addr"];
+            NSString *addr = [attributeDict objectForKey:@"addr"];
+            NSLog(@"addr: %@", addr);
         }
     }
     //判断member

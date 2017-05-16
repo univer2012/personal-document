@@ -24,11 +24,12 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0, 0, 100, 40);
         button.center = self.view.center;
-        [self.view addSubview:button];
+        //[self.view addSubview:button];
         button.backgroundColor = [UIColor colorWithRed:84/255.0 green:180/255.0 blue:98/255.0 alpha:1.0f];
         [button addTarget:self action:@selector(p_buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         button;
     });
+    [self.view addSubview:button];
 }
 
 -(void)p_buttonClick:(UIButton *)button {

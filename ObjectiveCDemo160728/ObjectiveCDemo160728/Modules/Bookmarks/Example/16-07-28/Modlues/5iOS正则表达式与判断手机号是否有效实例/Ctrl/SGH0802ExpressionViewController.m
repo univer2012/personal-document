@@ -31,10 +31,9 @@
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.placeholder = @"请输入手机号";
         textField.delegate = self;
-        [self.view addSubview:textField];
         textField;
     });
-    
+    [self.view addSubview:phoneTextField];
     
 #if 0
     

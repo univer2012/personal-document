@@ -126,7 +126,7 @@
      */
     CGPathAddEllipseInRect(path, NULL, CGRectMake(100, 100, 200, 200));
     anim.path = path;
-    
+    CGPathRelease(path);
     //设置动画的执行节奏
     /**
      *	kCAMediaTimingFunctionEaseInEaseOut 刚开始比较慢，中间加速，结束时又会变慢

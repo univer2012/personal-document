@@ -35,7 +35,15 @@
                           @"SGH0425RunloopImageViewController",
                           @"SGH0429CryptographyViewController",
                           @"SGH0506OCRuntime1ViewController",
-                          @"SGH0509AboutRunLoopViewController"
+                          @"SGH0509AboutRunLoopViewController",
+                          @"SGH0510Runtime2ViewController",
+                          @"SGH0511Runtime3ViewController",
+                          @"SGH0512Runtime4ViewController",
+                          @"SGH0512Runtime5ViewController",
+                          @"SGH0515Runtime6ViewController",
+                          @"SGH0515AttibuteStringInitViewController",
+                          @"SGH0515ClassViewController",
+                          
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -44,7 +52,14 @@
                         @"4、利用runloop来解决图像卡顿",
                         @"5、浅谈密码学",
                         @"6、Objective-C Runtime 运行时之一：类与对象",
-                        @"7、使用runloop对象"
+                        @"7、使用runloop对象",
+                        @"8、Objective-C Runtime 运行时之二：成员变量与属性",
+                        @"9、Objective-C Runtime 运行时之三：方法与消息",
+                        @"10、Objective-C Runtime 运行时之四：Method Swizzling",
+                        @"11、Objective-C Runtime 运行时之五：协议与分类",
+                        @"12、Objective-C Runtime 运行时之六：拾遗",
+                        @"13、NSAttributedString initWithData 阻塞App问题",
+                        @"14、Runtime方法的使用—Class篇"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

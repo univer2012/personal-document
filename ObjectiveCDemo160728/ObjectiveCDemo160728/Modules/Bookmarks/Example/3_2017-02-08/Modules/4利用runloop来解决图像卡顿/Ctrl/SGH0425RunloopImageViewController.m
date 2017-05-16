@@ -166,9 +166,9 @@ static void CallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
         label.textColor = [UIColor redColor];
         label.text = [NSString stringWithFormat:@"%zd - Drawing index is top priority", indexPath.row];
         label.tag = 4;
-        [cell.contentView addSubview:label];
         label;
     });
+    [cell.contentView addSubview:label];
     
     UILabel *label1 = ({
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5, 99, 300, 25)];
@@ -178,9 +178,9 @@ static void CallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
         label.textColor = [UIColor colorWithRed:0 green:100.f/255.0 blue:0 alpha:1];
         label.text = [NSString stringWithFormat:@"%zd - Drawing index is top priority. Should be distributed into different run loop passes.", indexPath.row];
         label.tag = 5;
-        [cell.contentView addSubview:label];
         label;
     });
+    [cell.contentView addSubview:label1];
     
 }
 //加载第1张图片

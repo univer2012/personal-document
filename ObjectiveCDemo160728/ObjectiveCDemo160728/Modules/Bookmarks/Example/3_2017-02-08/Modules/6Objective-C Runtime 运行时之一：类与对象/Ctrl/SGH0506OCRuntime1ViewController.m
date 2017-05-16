@@ -41,7 +41,11 @@
     
     //[self p_testGetClassList];
     
+    
+    
+    
 }
+
 
 -(void)p_testGetClassList {
     int numClasses;
@@ -69,6 +73,7 @@
     
     id str2 = [[NSString alloc]initWithString:@"test"];
     NSLog(@"%@", [str2 class]);
+    [str2 release];
 }
 
 
@@ -108,7 +113,7 @@ void imp_submethod1(id self, SEL _cmd) {
     SGH170506MyClass *myClass = [[SGH170506MyClass alloc]init];
     unsigned int outCount = 0;
     Class cls = myClass.class;
-    
+    [myClass release];
     //类名
     NSLog(@"class name: %s", class_getName(cls));
     NSLog(@"===============================================");
@@ -178,7 +183,7 @@ void imp_submethod1(id self, SEL _cmd) {
     NSLog(@"MyClass is %@response to selector: method3WithArg1:arg2:", (isResponds ? @"" : @"not"));
     
     IMP imp = class_getMethodImplementation(cls, @selector(method1));
-    imp();
+    imp;//imp();  在Build Settings中找`Enable Strict Checking of objc_msgSend Calls`
     NSLog(@"===============================================");
     
     //协议
@@ -191,6 +196,7 @@ void imp_submethod1(id self, SEL _cmd) {
     BOOL isConforms = class_conformsToProtocol(cls, protocol);
     NSLog(@"MyClass is %@ responsed to protocol %s",(isConforms ? @"" : @"not"), protocol_getName(protocol));
     NSLog(@"===============================================");
+    
 }
 
 
@@ -221,6 +227,7 @@ void imp_submethod1(id self, SEL _cmd) {
 //针对cache，我们用下面例子来说明其执行过程：
 -(void)p_testOne {
     NSArray *array = [[NSArray alloc] init];
+    [array release];
 }
 /*
  其流程是：

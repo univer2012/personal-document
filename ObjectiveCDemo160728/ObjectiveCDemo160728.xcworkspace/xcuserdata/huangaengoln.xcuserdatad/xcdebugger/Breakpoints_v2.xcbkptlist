@@ -51,5 +51,149 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/8Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e8c;&#xff1a;&#x6210;&#x5458;&#x53d8;&#x91cf;&#x4e0e;&#x5c5e;&#x6027;/Views/UIView+SGHTapGesture.m"
+            timestampString = "516122362.763152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "-setTapActionWithBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/8Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e8c;&#xff1a;&#x6210;&#x5458;&#x53d8;&#x91cf;&#x4e0e;&#x5c5e;&#x6027;/Views/UIView+SGHTapGesture.m"
+            timestampString = "516122364.145255"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-__handleActionForTapGesture:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Ctrl/SGH0511Runtime3ViewController.m"
+            timestampString = "516261039.381826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "+resolveInstanceMethod:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Ctrl/SGH0511Runtime3ViewController.m"
+            timestampString = "516261039.381826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "@implementation SGH0511Runtime3ViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Ctrl/SGH0511Runtime3ViewController.m"
+            timestampString = "516261039.381826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "functionForMethod1()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Helper/SGH0511RuntimeMethod.m"
+            timestampString = "516266680.477354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-forwardingTargetForSelector:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Helper/SGH0511RuntimeMethod.m"
+            timestampString = "516261193.494275"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-method2"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Helper/SGH0511RuntimeMethod.m"
+            timestampString = "516266680.477354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-methodSignatureForSelector:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/9Objective-C Runtime &#x8fd0;&#x884c;&#x65f6;&#x4e4b;&#x4e09;&#xff1a;&#x65b9;&#x6cd5;&#x4e0e;&#x6d88;&#x606f;/Helper/SGH0511RuntimeMethod.m"
+            timestampString = "516266680.477354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-forwardInvocation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
