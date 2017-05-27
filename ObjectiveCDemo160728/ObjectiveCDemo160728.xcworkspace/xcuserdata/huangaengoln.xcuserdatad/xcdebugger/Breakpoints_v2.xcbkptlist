@@ -195,5 +195,133 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516714211.255122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516770673.430939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516770673.430939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516714811.70527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516729147.737683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1117"
+            endingLineNumber = "1117"
+            landmarkName = "-method_exchangeImplementations:method:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516729168.514163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516729276.734322"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "-logRuntimeAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo160728/Modules/Bookmarks/Example/3_2017-02-08/Modules/14Runtime&#x65b9;&#x6cd5;&#x7684;&#x4f7f;&#x7528;&#x2014;Class&#x7bc7;/Ctrl/SGH0515ClassViewController.m"
+            timestampString = "516729483.993442"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1304"
+            endingLineNumber = "1304"
+            landmarkName = "-protocol_copyMethodDescriptionList:isRequiredMethod:isInstanceMethod:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

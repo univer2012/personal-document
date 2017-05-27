@@ -1,4 +1,9 @@
 target "ObjectiveCDemo160728" do
 pod 'BaiduMapKit' #百度地图SDK
 pod 'AMap2DMap-NO-IDFA' #2D地图SDK,NO IDFA版本(3D地图与2D地图不能同时使用)
+
+pod 'Masonry'
+
+#use_frameworks!
+#pod 'XMPPFramework', '~> 3.6.4'
 end

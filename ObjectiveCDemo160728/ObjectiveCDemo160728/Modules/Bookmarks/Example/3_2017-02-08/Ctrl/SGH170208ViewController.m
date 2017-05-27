@@ -43,7 +43,10 @@
                           @"SGH0515Runtime6ViewController",
                           @"SGH0515AttibuteStringInitViewController",
                           @"SGH0515ClassViewController",
-                          
+                          @"SGH170518ResuableCellViewController",
+                          @"SGHXMPPFrameworkViewController",
+                          @"SGH0522CrashAnalisisViewController",
+                          @"SGH0524PresentAViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -59,7 +62,11 @@
                         @"11、Objective-C Runtime 运行时之五：协议与分类",
                         @"12、Objective-C Runtime 运行时之六：拾遗",
                         @"13、NSAttributedString initWithData 阻塞App问题",
-                        @"14、Runtime方法的使用—Class篇"
+                        @"14、Runtime方法的使用—Class篇",
+                        @"15、iOS亲测UITableView重用机制，用事实说话",
+                        @"16、iOS 的 XMPPFramework 简介",
+                        @"17、奔溃统计和分析",
+                        @"18、弹出的控制器，半透明显示上一个控制器的页面"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

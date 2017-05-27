@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700C67D1E30BF90006AC47B /* SGH170119CrashRankViewController.m */; };
 		6700C6821E30C3FE006AC47B /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700C6811E30C3FE006AC47B /* NSDictionary+NilSafe.m */; };
+		671F715E1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671F715D1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.m */; };
 		6735B1231E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1221E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m */; };
 		6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1821EB0906A00F51BA9 /* SGH0424GaodeFactory.m */; };
 		6735C18E1EB0906A00F51BA9 /* SGH0424GaodeMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6735C1851EB0906A00F51BA9 /* SGH0424GaodeMapView.m */; };
@@ -24,6 +25,8 @@
 		674092B01EC99F09002334AD /* SGH0515AttibuteStringInitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674092AF1EC99F09002334AD /* SGH0515AttibuteStringInitViewController.m */; };
 		674092C11EC9F6D1002334AD /* SGH0515ClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674092BD1EC9F6D1002334AD /* SGH0515ClassViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		674092C21EC9F6D1002334AD /* SGH0515ClassPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 674092C01EC9F6D1002334AD /* SGH0515ClassPerson.m */; };
+		6748E0621ECD495700CF62DA /* SGH170518ResuableCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748E0611ECD495700CF62DA /* SGH170518ResuableCellViewController.m */; };
+		6748E0671ECD971300CF62DA /* SGHXMPPFrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6748E0661ECD971300CF62DA /* SGHXMPPFrameworkViewController.m */; };
 		67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA51EBD580600AE8899 /* SGH0506Test.m */; };
 		67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 67548AA81EBD6A2000AE8899 /* SGH170506MyClass.m */; };
@@ -82,6 +85,9 @@
 		677177F41DEBF935009AB627 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 677177F31DEBF935009AB627 /* readme.md */; };
 		677178FF1DEC3A12009AB627 /* SGHNavigation1128Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 677178FE1DEC3A12009AB627 /* SGHNavigation1128Controller.m */; };
 		677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677179011DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m */; };
+		677BB9C71ED5B30A005A1CA8 /* SGH0524PresentAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677BB9C61ED5B30A005A1CA8 /* SGH0524PresentAViewController.m */; };
+		677BB9CA1ED5B31A005A1CA8 /* SGH0524PresentBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677BB9C91ED5B31A005A1CA8 /* SGH0524PresentBViewController.m */; };
+		677BB9CD1ED5B327005A1CA8 /* SGH0524PresentCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677BB9CC1ED5B327005A1CA8 /* SGH0524PresentCViewController.m */; };
 		6785945B1E4AF22E006BA5CB /* SGH170208ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6785945A1E4AF22E006BA5CB /* SGH170208ViewController.m */; };
 		6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6785945D1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m */; };
 		67A550011EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A550001EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m */; };
@@ -140,6 +146,8 @@
 		6700C67D1E30BF90006AC47B /* SGH170119CrashRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170119CrashRankViewController.m; sourceTree = "<group>"; };
 		6700C6801E30C3FE006AC47B /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		6700C6811E30C3FE006AC47B /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		671F715C1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0522CrashAnalisisViewController.h; sourceTree = "<group>"; };
+		671F715D1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0522CrashAnalisisViewController.m; sourceTree = "<group>"; };
 		6735B1211E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH1221SelectedCellsViewController.h; sourceTree = "<group>"; };
 		6735B1221E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH1221SelectedCellsViewController.m; sourceTree = "<group>"; };
 		6735B1241E0B680C0010E6A8 /* README.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.docx; sourceTree = "<group>"; };
@@ -168,6 +176,10 @@
 		674092BD1EC9F6D1002334AD /* SGH0515ClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0515ClassViewController.m; sourceTree = "<group>"; };
 		674092BF1EC9F6D1002334AD /* SGH0515ClassPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0515ClassPerson.h; sourceTree = "<group>"; };
 		674092C01EC9F6D1002334AD /* SGH0515ClassPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0515ClassPerson.m; sourceTree = "<group>"; };
+		6748E0601ECD495700CF62DA /* SGH170518ResuableCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH170518ResuableCellViewController.h; sourceTree = "<group>"; };
+		6748E0611ECD495700CF62DA /* SGH170518ResuableCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170518ResuableCellViewController.m; sourceTree = "<group>"; };
+		6748E0651ECD971300CF62DA /* SGHXMPPFrameworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHXMPPFrameworkViewController.h; sourceTree = "<group>"; };
+		6748E0661ECD971300CF62DA /* SGHXMPPFrameworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHXMPPFrameworkViewController.m; sourceTree = "<group>"; };
 		67548AA01EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0506OCRuntime1ViewController.h; sourceTree = "<group>"; };
 		67548AA11EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0506OCRuntime1ViewController.m; sourceTree = "<group>"; };
 		67548AA41EBD580600AE8899 /* SGH0506Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0506Test.h; sourceTree = "<group>"; };
@@ -270,6 +282,12 @@
 		677178FE1DEC3A12009AB627 /* SGHNavigation1128Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHNavigation1128Controller.m; sourceTree = "<group>"; };
 		677179001DEC3B4E009AB627 /* SGH1128InterceptPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH1128InterceptPopViewController.h; sourceTree = "<group>"; };
 		677179011DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH1128InterceptPopViewController.m; sourceTree = "<group>"; };
+		677BB9C51ED5B30A005A1CA8 /* SGH0524PresentAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0524PresentAViewController.h; sourceTree = "<group>"; };
+		677BB9C61ED5B30A005A1CA8 /* SGH0524PresentAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0524PresentAViewController.m; sourceTree = "<group>"; };
+		677BB9C81ED5B31A005A1CA8 /* SGH0524PresentBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0524PresentBViewController.h; sourceTree = "<group>"; };
+		677BB9C91ED5B31A005A1CA8 /* SGH0524PresentBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0524PresentBViewController.m; sourceTree = "<group>"; };
+		677BB9CB1ED5B327005A1CA8 /* SGH0524PresentCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0524PresentCViewController.h; sourceTree = "<group>"; };
+		677BB9CC1ED5B327005A1CA8 /* SGH0524PresentCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0524PresentCViewController.m; sourceTree = "<group>"; };
 		678594591E4AF22E006BA5CB /* SGH170208ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH170208ViewController.h; sourceTree = "<group>"; };
 		6785945A1E4AF22E006BA5CB /* SGH170208ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170208ViewController.m; sourceTree = "<group>"; };
 		6785945C1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0208UncaughtExceptionViewController.h; sourceTree = "<group>"; };
@@ -393,6 +411,23 @@
 				6700C6811E30C3FE006AC47B /* NSDictionary+NilSafe.m */,
 			);
 			path = "NSDictionary-NilSafe";
+			sourceTree = "<group>";
+		};
+		671F715A1ED2BF1700B7D21C /* 17奔溃统计和分析 */ = {
+			isa = PBXGroup;
+			children = (
+				671F715B1ED2BF1700B7D21C /* Ctrl */,
+			);
+			path = "17奔溃统计和分析";
+			sourceTree = "<group>";
+		};
+		671F715B1ED2BF1700B7D21C /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				671F715C1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.h */,
+				671F715D1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.m */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		6735B11F1E0A9B7F0010E6A8 /* 21tableView多选cell */ = {
@@ -563,6 +598,40 @@
 				674092C01EC9F6D1002334AD /* SGH0515ClassPerson.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6748E05E1ECD490E00CF62DA /* 15iOS亲测UITableView重用机制，用事实说话 */ = {
+			isa = PBXGroup;
+			children = (
+				6748E05F1ECD490E00CF62DA /* Ctrl */,
+			);
+			path = "15iOS亲测UITableView重用机制，用事实说话";
+			sourceTree = "<group>";
+		};
+		6748E05F1ECD490E00CF62DA /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6748E0601ECD495700CF62DA /* SGH170518ResuableCellViewController.h */,
+				6748E0611ECD495700CF62DA /* SGH170518ResuableCellViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		6748E0631ECD970100CF62DA /* 16iOS 的 XMPPFramework 简介 */ = {
+			isa = PBXGroup;
+			children = (
+				6748E0641ECD970100CF62DA /* Ctrl */,
+			);
+			path = "16iOS 的 XMPPFramework 简介";
+			sourceTree = "<group>";
+		};
+		6748E0641ECD970100CF62DA /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				6748E0651ECD971300CF62DA /* SGHXMPPFrameworkViewController.h */,
+				6748E0661ECD971300CF62DA /* SGHXMPPFrameworkViewController.m */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		67548A9E1EBD55EF00AE8899 /* 6Objective-C Runtime 运行时之一：类与对象 */ = {
@@ -1201,6 +1270,27 @@
 			path = Ctrl;
 			sourceTree = "<group>";
 		};
+		677BB9C31ED5B2D2005A1CA8 /* 18弹出的控制器，半透明显示上一个控制器的页面 */ = {
+			isa = PBXGroup;
+			children = (
+				677BB9C41ED5B2D2005A1CA8 /* Ctrls */,
+			);
+			path = "18弹出的控制器，半透明显示上一个控制器的页面";
+			sourceTree = "<group>";
+		};
+		677BB9C41ED5B2D2005A1CA8 /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				677BB9C51ED5B30A005A1CA8 /* SGH0524PresentAViewController.h */,
+				677BB9C61ED5B30A005A1CA8 /* SGH0524PresentAViewController.m */,
+				677BB9C81ED5B31A005A1CA8 /* SGH0524PresentBViewController.h */,
+				677BB9C91ED5B31A005A1CA8 /* SGH0524PresentBViewController.m */,
+				677BB9CB1ED5B327005A1CA8 /* SGH0524PresentCViewController.h */,
+				677BB9CC1ED5B327005A1CA8 /* SGH0524PresentCViewController.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
 		678594531E4AF218006BA5CB /* 3_2017-02-08 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,6 +1312,10 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				677BB9C31ED5B2D2005A1CA8 /* 18弹出的控制器，半透明显示上一个控制器的页面 */,
+				671F715A1ED2BF1700B7D21C /* 17奔溃统计和分析 */,
+				6748E0631ECD970100CF62DA /* 16iOS 的 XMPPFramework 简介 */,
+				6748E05E1ECD490E00CF62DA /* 15iOS亲测UITableView重用机制，用事实说话 */,
 				674092BA1EC9F6D1002334AD /* 14Runtime方法的使用—Class篇 */,
 				674092AC1EC99EE4002334AD /* 13NSAttributedString initWithData 阻塞App问题 */,
 				674092A31EC97481002334AD /* 12Objective-C Runtime 运行时之六：拾遗 */,
@@ -1867,10 +1961,12 @@
 				677177D21DEBD081009AB627 /* SGH0729TransitionGroupViewController.m in Sources */,
 				677177C61DEBD081009AB627 /* SGH1108AppStoreViewController.m in Sources */,
 				677177BD1DEBD081009AB627 /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
+				677BB9CD1ED5B327005A1CA8 /* SGH0524PresentCViewController.m in Sources */,
 				677177C11DEBD081009AB627 /* SGH1103AESViewController.m in Sources */,
 				677177DA1DEBD081009AB627 /* SGH0802ExpressionViewController.m in Sources */,
 				6700C6821E30C3FE006AC47B /* NSDictionary+NilSafe.m in Sources */,
 				677177D11DEBD081009AB627 /* SGH0729TransitionGroupSecondViewController.m in Sources */,
+				6748E0671ECD971300CF62DA /* SGHXMPPFrameworkViewController.m in Sources */,
 				677177C41DEBD081009AB627 /* SGH16110701ViewController.m in Sources */,
 				677177D41DEBD081009AB627 /* SGH0729WheelViewController.m in Sources */,
 				67EDCF4C1D4A07E300058E8D /* AppDelegate.m in Sources */,
@@ -1888,6 +1984,7 @@
 				677177E11DEBD081009AB627 /* SGH0824PresentAndPushTwoViewController.m in Sources */,
 				677177BC1DEBD081009AB627 /* SGH160728ViewController.m in Sources */,
 				6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */,
+				6748E0621ECD495700CF62DA /* SGH170518ResuableCellViewController.m in Sources */,
 				677177C31DEBD081009AB627 /* TKAesHelper.m in Sources */,
 				67EDCF491D4A07E300058E8D /* main.m in Sources */,
 				677177C81DEBD081009AB627 /* SGH1108ShareItem.m in Sources */,
@@ -1901,6 +1998,7 @@
 				677177DB1DEBD081009AB627 /* SGH0824PresentAndPushFourViewController.m in Sources */,
 				67DF24DA1EA85C9D00F71659 /* SGHReusableHeaderFooterTableViewController.m in Sources */,
 				67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */,
+				677BB9C71ED5B30A005A1CA8 /* SGH0524PresentAViewController.m in Sources */,
 				677178FF1DEC3A12009AB627 /* SGHNavigation1128Controller.m in Sources */,
 				6735C1931EB0908B00F51BA9 /* SGH0424MapEngine.m in Sources */,
 				674092C11EC9F6D1002334AD /* SGH0515ClassViewController.m in Sources */,
@@ -1925,12 +2023,14 @@
 				6735C1901EB0906A00F51BA9 /* SGH0424BaiduMapView.m in Sources */,
 				67D2A6BD1E0CED24000B30EE /* UIView+Frame.m in Sources */,
 				677177E31DEBD081009AB627 /* SGH0824AlertViewViewController.m in Sources */,
+				671F715E1ED2BF4100B7D21C /* SGH0522CrashAnalisisViewController.m in Sources */,
 				6735C18E1EB0906A00F51BA9 /* SGH0424GaodeMapView.m in Sources */,
 				67A5552A1EC3525F0052DCC3 /* SGH0510Runtime2ViewController.m in Sources */,
 				67B1AD4D1E5441920034D4DE /* UIButton+timeCountDown.m in Sources */,
 				674092B01EC99F09002334AD /* SGH0515AttibuteStringInitViewController.m in Sources */,
 				6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */,
 				677177C21DEBD081009AB627 /* GTMBase64.m in Sources */,
+				677BB9CA1ED5B31A005A1CA8 /* SGH0524PresentBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2079,6 +2179,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mengshi Li (QCNF96K99P)";
 				DEVELOPMENT_TEAM = HCXVYWN652;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libresolv",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AMap2DMap-NO-IDFA\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapFoundation-NO-IDFA\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+				);
 				INFOPLIST_FILE = ObjectiveCDemo160728/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2097,6 +2209,18 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.thinkive.pushTest";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SDKROOT)/usr/include/libresolv",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AMap2DMap-NO-IDFA\"",
+					"\"${PODS_ROOT}/Headers/Public/AMapFoundation-NO-IDFA\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+				);
 				INFOPLIST_FILE = ObjectiveCDemo160728/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

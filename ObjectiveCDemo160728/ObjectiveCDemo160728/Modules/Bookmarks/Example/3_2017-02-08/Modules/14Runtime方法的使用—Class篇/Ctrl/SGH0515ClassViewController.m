@@ -64,170 +64,242 @@
     
     // Class
     //获取类的类名
+    NSLog(@"获取SelfClass类的类名");
     [self class_getClassName:SelfClass];
     //获取类的父类
+    NSLog(@"获取SelfClass类的父类");
     [self class_getSuperClass:SelfClass];
     //获取实例大小
+    NSLog(@"获取SelfClass的实例大小");
     [self class_getInstanceSize:SelfClass];
     
     
     //获取类中指定名称实例成员变量的信息
+    NSLog(@"获取SelfClass类中的_person成员变量");
     [self class_getInstanceVariable:SelfClass name:"_person"];
     //获取类成员变量的信息
-    [self class_getClassVariable:SelfClass name:"Person"];
+    NSLog(@"获取SelfClass类中的Person成员变量");
+    [self class_getClassVariable:SelfClass name:"SGH0515ClassPerson"];
     //获取类指定方法的信息
+    NSLog(@"获取SelfClass类中class_getInstanceMethod:selector:方法的信息");
     [self class_getInstanceMethod:SelfClass selector:@selector(class_getInstanceMethod:selector:)];
     //获取类方法的信息
+    NSLog(@"获取SelfClass类中类方法class_getClassMethod:selector:的信息");
     [self.class class_getClassMethod:SelfClass selector:@selector(class_getClassMethod:selector:)];
     
     
     //获取属性的信息(与获取成员变量信息类似，不同的是不用打_)
+    NSLog(@"获取SelfClass类中属性person");
     [self class_getProperty:SelfClass name:"person"];
     //获取方法具体实现
+    NSLog(@"获取SelfClass类中方法class_getMethodImplementation:selector:的IMP");
     [self class_getMethodImplementation:SelfClass selector:@selector(class_getMethodImplementation:selector:)];
     //获取类中的方法的实现
+    NSLog(@"获取SelfClass类中方法class_getMethodImplementation_stret:selector:的IMP");
     [self class_getMethodImplementation_stret:SelfClass selector:@selector(class_getMethodImplementation_stret:selector:)];
     
     //获取成员变量列表
+    NSLog(@"获取_person对象的成员变量列表");
     [self class_copyIvarList:[_person class]];
     //获取属性列表
+    NSLog(@"复制_person对象的属性列表");
     [self class_copyPropertyList:[_person class]];
     //获取方法列表
+    NSLog(@"复制_person对象的方法列表");
     [self class_copyMethodList:[_person class]];
     //获取协议列表
+    NSLog(@"复制_person对象的协议列表");
     [self class_copyProtocolList:[_person class]];
     
     //添加成员变量(添加成员变量只能在运行时创建的类，且不能为元类) // 无效方法
-    [self class_addIvar:[_person class] name:"country" size:sizeof(NSString *) alignment:0 types:"@"];
+    NSLog(@"为_person对象添加成员变量country");//name:"country"会失败
+    //[self class_addIvar:[_person class] name:"country" size:sizeof(NSString *) alignment:0 types:"@"];
+    [self class_addIvar:[_person class] name:"_country" size:sizeof(NSString *) alignment:4 types:"@"];
     //添加属性
+    NSLog(@"为_person对象添加属性country");
     [self class_addProperty:[_person class] name:"country" attributes:nil attributeCount:3];
     //添加方法
+    NSLog(@"给SelfClass添加runtimeTestMethod:方法");
     [self class_addMethod:SelfClass selector:NSSelectorFromString(@"runtimeTestMethod:") imp:nil types:"v@:@"];
     //添加协议
+    NSLog(@"给_person添加RuntimeBaseProtocol协议");
     [self class_addProtocol:[_person class] protocol:@protocol(RuntimeBaseProtocol)];
     //替换属性的信息(如果没有原属性会新建一个属性)
+    NSLog(@"替换_person的country");
     [self class_replaceProperty:[_person class] name:"country" attributes:nil attributeCount:3];
     //替代方法的实现
+    NSLog(@"_person中，替换runtimeTestAction1为runtimeTestAction2");
     [self class_replaceMethod:[_person class] selector:@selector(runtimeTestAction1) imp:class_getMethodImplementation([_person class], @selector(runtimeTestAction2)) types:"v@:"];
     //查看类是否响应指定方法
+    NSLog(@"查看_person是否响应runtimeTestAction1");
     [self class_respondsToSelector:[_person class] selector:@selector(runtimeTestAction1)];
     //查看类是否为元类
+    NSLog(@"查看self.superclass是否为元类");
     [self class_isMetaClass:object_getClass(self.superclass)];
     //查看类是否遵循指定协议
+    NSLog(@"查看_person是否遵循RuntimeBaseProtocol协议");
     [self class_conformsToProtocol:[_person class] protocol:NSProtocolFromString(@"RuntimeBaseProtocol")];
     //创建类实例
+    NSLog(@"创建SGH0515ClassPerson类的实例");
     [self class_createInstance:[_person class] extraBytes:class_getInstanceSize([_person class])];
     
     
     
     // Object
     //获取实例的成员变量
+    NSLog(@"获取实例_person的成员变量_name");
     [self object_getInstanceVariable:_person name:"_name" outValue:nil];
     //获取指定对象的类名
+    NSLog(@"获取_person的类名");
     [self object_getClassName:_person];
     //获取指定对象的类
+    NSLog(@"获取_person的类");
     [self object_getClass:_person];
     //获取指定类名的类
-    [self objc_getClass:"Person"];
+    NSLog(@"获取Person的类");
+    [self objc_getClass:"SGH0515ClassPerson"];
     //获取指定类的元类
-    [self objc_getMetaClass:"Person"];
+    NSLog(@"获取Person的元类");
+    [self objc_getMetaClass:"SGH0515ClassPerson"];
     //获取指定名字的协议
+    NSLog(@"获取RuntimeBaseProtocol协议");
     [self objc_getProtocol:"RuntimeBaseProtocol"];
     //拷贝指定对象
+    NSLog(@"拷贝_person对象");
     [self object_copy:_person size:class_getInstanceSize([_person class])];
     //    [self objc_copyProtocolList];//打印大量数据
     //    [self objc_copyClassList];// 打印大量信息
     //设置指定实例 指定名称的成员变量的 值
+    NSLog(@"设置_person实例的成员变量_name的值为newName");
     [self object_setInstanceVariable:_person name:"_name" value:@"newName"];
     //设置指定对象 的指定的成员变量的 值
+    NSLog(@"设置_person实例的成员变量_name的值为NEWNAME");
     [self object_setIvar:_person ivar:object_getInstanceVariable(_person, "_name", nil) value:@"NEWNAME"];
     //设置关联对象的值
+    NSLog(@"设置_person中，关联_title的值为dev");
     [self objc_setAssociatedObject:_person key:"_title" value:@"dev" policy:OBJC_ASSOCIATION_RETAIN];
     //释放对象
+    NSLog(@"创建SGH0515ClassPerson实例并释放");
     [self object_dispose:nil];
     //在指定位置创建类实例
+    NSLog(@"在ptr位置创建SGH0515ClassPerson实例");
     [self objc_constructInstance:[_person class] bytes:(void *)ptr];
     //销毁类实例
+    NSLog(@"创建SGH0515ClassPerson实例并释放");
     [self objc_destructInstance:nil];
     
     //创建一个新类和元类
+    NSLog(@"创建一个SGH0515ClassPerson的student子类");
     Class class = [self objc_allocateClassPair:[_person class] name:"student" size:0];
     //在应用中注册由objc_allocateClassPair创建的类
+    NSLog(@"注册由objc_allocateClassPair创建的student子类");
     [self objc_registerClassPair:class];
     //销毁一个类及其相关联的类
+    NSLog(@"销毁student子类");
     [self objc_disposeClassPair:class];
     
     //创建新的协议实例
+    NSLog(@"创建NewProtocol协议的一个实例protocol");
     Protocol *protocol = [self objc_allocateProtocol:"NewProtocol"];
     //在运行时注册新创建的协议
+    NSLog(@"在运行时注册新创建的协议protocol");
     [self objc_registerProtocol:protocol];
     //给指定类 添加协议
+    NSLog(@"给_person类添加协议NewProtocol");
     [self class_addProtocol:[_person class] protocol:NSProtocolFromString(@"NewProtocol")];
     //获取指定类的协议列表
+    NSLog(@"获取_person对象的协议列表");
     [self class_copyProtocolList:[_person class]];
     
     
     // Method
     //获取类指定方法的信息
+    NSLog(@"获取SelfClass类的initial:方法信息");
     Method method = [self class_getInstanceMethod:SelfClass selector:@selector(initial:)];
     //获取方法名
+    NSLog(@"获取method方法的SEL");
     [self method_getName:method];
     //返回方法的实现
+    NSLog(@"获取method方法的IMP");
     [self method_getImplementation:method]; // 该方法imp_implementationWithBlock使得imp几乎相当于block
     //获取描述方法参数和返回值类型的字符串
+    NSLog(@"获取method方法的类型字符串");
     [self method_getTypeEncoding:method];
     //获取指定位置参数的类型字符串
+    NSLog(@"获取method方法 指定位置参数的 类型字符串");
     [self method_getArgumentType:method];
     //获取方法的返回值类型的字符串
+    NSLog(@"复制method方法的 返回值类型的字符串");
     [self method_copyReturnType:method];
     //获取方法的指定位置参数的类型字符串
+    NSLog(@"复制method方法 指定位置参数的 类型的字符串");
     [self method_copyArgumentType:method];
     //通过引用返回方法的返回值类型字符串
+    NSLog(@"获取method方法的 返回值类型的字符串");
     [self method_getReturnType:method];
     //设置方法的实现
+    NSLog(@"设置SelfClass类中method_setImplementation:方法的 实现");
     [self method_setImplementation:class_getInstanceMethod(SelfClass, @selector(method_setImplementation:))];
     //交换两个方法的实现
+    NSLog(@"交换_person类中的 runtimeTestAction3 和 runtimeTestAction2 方法");
     [self method_exchangeImplementations:class_getInstanceMethod([_person class], @selector(runtimeTestAction3)) method:class_getInstanceMethod([_person class], @selector(runtimeTestAction2))];
     //获取方法的描述
+    NSLog(@"获取method方法的描述");
     [self method_getDescription:method];
     
     // Sel
     //返回指定选择器指定的方法的名称
+    NSLog(@"返回sel_getName:的方法名称");
     [self sel_getName:@selector(sel_getName:)];
     //在Objective-C Runtime系统中注册一个方法，将方法名映射到一个选择器，并返回这个选择器
+    NSLog(@"注册runtimeTestAction3方法");
     [self sel_registerName:"runtimeTestAction3"];
     //在Objective-C Runtime系统中注册一个方法
+    NSLog(@"注册runtimeTestAction3方法");
     [self sel_getUid:"runtimeTestAction3"];
     //比较两个选择器
+    NSLog(@"比较runtimeTestAction3 和 runtimeTestAction2 是否相等");
     [self sel_isEqual:@selector(runtimeTestAction3) sel2:@selector(runtimeTestAction2)];
     
     // Protocol
     //返回协议名
+    NSLog(@"返回协议protocol的名称");
     [self protocol_getName:protocol];
     //获取协议的指定属性
+    NSLog(@"获取协议RuntimeBaseProtocol的protocolString属性");
     [self protocol_getProperty:NSProtocolFromString(@"RuntimeBaseProtocol") name:"protocolString" isRequiredProperty:YES isInstanceProperty:YES];
     
     //创建新的协议实例
+    NSLog(@"创建协议TestProtocol实例");
     Protocol *testProtocol = [self objc_allocateProtocol:"TestProtocol"];
-    //为协议添加属性（只能向未注册的协议中添加）
+    //为协议添加属性（只能向未注册的协议中添加)
+    NSLog(@"为协议对象testProtocol 添加属性newProperty");
     [self protocol_addProperty:testProtocol name:"newProperty" attributes:attrs attributeCount:3 isRequiredProperty:YES isInstanceProperty:YES];
     //添加一个已注册的协议到一个未注册的协议中（只能向未注册的协议中添加）
+    NSLog(@"添加一个已注册的testProtocol 到 一个未注册的protocol协议中");
     [self protocol_addProtocol:testProtocol addition:protocol];
     //为协议添加方法（只能向未注册的协议中添加）
+    NSLog(@"添加一个已注册的testProtocol 到 一个未注册的protocol协议中");
     [self protocol_addMethodDescription:testProtocol sel:@selector(runtimeTestAction3) types:"v@:" isRequiredMethod:NO isInstanceMethod:YES]; // 已注册的协议无法添加
     
     //在运行时中注册新创建的协议
+    NSLog(@"在运行时中注册新创建的testProtocol协议");
     [self objc_registerProtocol:testProtocol];
     
     //获取协议中的属性列表
+    NSLog(@"获取testProtocol协议中的属性列表");
     [self protocol_copyPropertyList:testProtocol];
     //获取协议中遵循的协议列表
+    NSLog(@"复制testProtocol协议中遵循的协议列表");
     [self protocol_copyProtocolList:testProtocol];
     //获取协议的方法列表
+    NSLog(@"复制testProtocol协议中的方法列表");
     [self protocol_copyMethodDescriptionList:testProtocol isRequiredMethod:NO isInstanceMethod:YES];
     //测试两个协议是否相等
+    NSLog(@"testProtocol协议和protocol协议是否相等");
     [self protocol_isEqual:testProtocol other:protocol];
     //查看协议是否遵循了另一个协议
+    NSLog(@"查看testProtocol协议是否遵循protocol协议");
     [self protocol_conformsToProtocol:testProtocol other:protocol];
     
 }
@@ -242,7 +314,7 @@
 - (void)class_createInstance:(Class)class extraBytes:(size_t)extraBytes {
     SGH0515ClassPerson *tempPerson = class_createInstance(class, extraBytes);
     tempPerson.name = @"instance creat Success";
-    NSLog(@"%s%@",__func__,tempPerson.name);
+    NSLog(@"%@", tempPerson.name);
 }
 
 #pragma mark - Class 类名，父类，元类；实例变量，成员变量；属性；实例方法，类方法，方法实现；
@@ -252,7 +324,7 @@
  *  @param class 类
  */
 - (void)class_getClassName:(Class)class {
-    NSLog(@"%s:%s",__func__,class_getName(class));
+    NSLog(@"%s", class_getName(class));
 }
 
 /**
@@ -261,7 +333,7 @@
  *  @param class 类
  */
 - (void)class_getSuperClass:(Class)class {
-    NSLog(@"%s%@",__func__,NSStringFromClass(class_getSuperclass(class)));
+    NSLog(@"%@", NSStringFromClass(class_getSuperclass(class)));
 }
 
 /**
@@ -270,7 +342,7 @@
  *  @param class 类
  */
 - (void)class_getInstanceSize:(Class)class {
-    NSLog(@"%s%zu",__func__,class_getInstanceSize(class));
+    NSLog(@"%zu", class_getInstanceSize(class));
 }
 
 /**
@@ -281,7 +353,7 @@
  */
 - (void)class_getInstanceVariable:(Class)class name:(const char *)name {
     Ivar ivar = class_getInstanceVariable(class,name);
-    NSLog(@"%s%s%s",__func__,[self ivar_getTypeEncoding:ivar],[self ivar_getName:ivar]);
+    NSLog(@"%s%s", [self ivar_getTypeEncoding:ivar],[self ivar_getName:ivar]);
 }
 
 /**
@@ -292,7 +364,7 @@
  */
 - (void)class_getClassVariable:(Class)class name:(const char *)name {
     Ivar ivar = class_getClassVariable(class,name);
-    NSLog(@"%s%s%s",__func__,[self ivar_getTypeEncoding:ivar],[self ivar_getName:ivar]);
+    NSLog(@"%s%s", [self ivar_getTypeEncoding:ivar],[self ivar_getName:ivar]);
 }
 
 /**
@@ -303,7 +375,7 @@
  */
 - (void)class_getProperty:(Class)class name:(const char *)name {
     objc_property_t property = class_getProperty(class,name);
-    NSLog(@"%s%s%s",__func__,[self property_getName:property] ,[self property_getAttributes:property]);
+    NSLog(@"%s%s", [self property_getName:property] ,[self property_getAttributes:property]);
     [self property_copyAttributeList:property];
 }
 
@@ -315,7 +387,7 @@
  */
 - (Method)class_getInstanceMethod:(Class)class selector:(SEL)selector {
     Method method = class_getInstanceMethod(class, selector);
-    NSLog(@"%s%s%u",__func__,sel_getName(method_getName(method)) ,[self method_getNumberOfArguments:method]);
+    NSLog(@"%s%u", sel_getName(method_getName(method)) ,[self method_getNumberOfArguments:method]);
     return method;
 }
 
@@ -327,7 +399,7 @@
  */
 + (Method)class_getClassMethod:(Class)class selector:(SEL)selector {
     Method method = class_getClassMethod(class, selector);
-    NSLog(@"%s%s%u",__func__,sel_getName(method_getName(method)) ,method_getNumberOfArguments(method));
+    NSLog(@"%s%u", sel_getName(method_getName(method)) ,method_getNumberOfArguments(method));
     return method;
 }
 
@@ -367,7 +439,6 @@
 - (void)class_copyIvarList:(Class)class {
     unsigned int count;
     Ivar *ivarList = class_copyIvarList(class, &count);
-    NSLog(@"%s",__func__);
     for (int i = 0; i < count; i++) {
         Ivar ivar = ivarList[i];
         // 获取成员属性名
@@ -386,7 +457,6 @@
 - (void)class_copyPropertyList:(Class)class {
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList(class,&count);
-    NSLog(@"%s",__func__);
     for (int i = 0; i < count; i++) {
         objc_property_t property = propertyList[i];
         // 获取成员属性名
@@ -406,7 +476,7 @@
     Method *methodList = class_copyMethodList(class,&count);
     for (int i = 0; i < count; i++) {
         Method method = methodList[i];
-        NSLog(@"%s%s",__func__,sel_getName(method_getName(method)));
+        NSLog(@"class_copyMethodList: %s",sel_getName(method_getName(method)));
     }
     free(methodList);
 }
@@ -421,7 +491,7 @@
     Protocol **protocolList = class_copyProtocolList(class,&count);
     for (int i = 0; i < count; i++) {
         Protocol *protocol = protocolList[i];
-        NSLog(@"%s%s",__func__,[self protocol_getName:protocol]);
+        NSLog(@"class_copyProtocolList: %s",[self protocol_getName:protocol]);
     }
     free(protocolList);
 }
@@ -462,9 +532,9 @@
     objc_property_attribute_t attrs[] = { type, ownership, backingivar };
     
     if (class_addProperty(class, name, attrs, attributeCount)) {
-        NSLog(@"%sadd Property success",__func__);
+        NSLog(@"add Property success");
     }else{
-        NSLog(@"%sadd Property fail",__func__);
+        NSLog(@"add Property fail");
     }
     //    [self class_copyPropertyList:class];
 }
@@ -479,9 +549,9 @@
  */
 - (void)class_addMethod:(Class)class selector:(SEL)selector imp:(IMP)imp types:(const char *)types {
     if (class_addMethod(class,selector,class_getMethodImplementation(class, selector),types)) {
-        NSLog(@"%sadd method success",__func__);
+        NSLog(@"add method success");
     }else{
-        NSLog(@"%sadd method fail",__func__);
+        NSLog(@"add method fail");
     }
     //    [self class_copyMethodList:class];
     
@@ -495,9 +565,9 @@
  */
 - (void)class_addProtocol:(Class)class protocol:(Protocol *)protocol {
     if (class_addProtocol(class, protocol)) {
-        NSLog(@"%sadd protocol success",__func__);
+        NSLog(@"add protocol success");
     }else{
-        NSLog(@"%sadd protocol fail",__func__);
+        NSLog(@"add protocol fail");
     }
     //    [self class_copyProtocolList:class];
 }
@@ -533,7 +603,7 @@
  */
 - (void)class_replaceMethod:(Class)class selector:(SEL)selector imp:(IMP)imp types:(const char *)types {
     class_replaceMethod(class, selector, imp, types);
-    NSLog(@"%s",__func__);
+    //NSLog(@"%s",__func__);
     [_person runtimeTestAction1];
 }
 
@@ -546,9 +616,9 @@
  */
 - (void)class_respondsToSelector:(Class)class selector:(SEL)selector {
     if (class_respondsToSelector(class,selector)) {
-        NSLog(@"%s %@ exist",__func__,NSStringFromClass(class));
+        NSLog(@"%@ exist",NSStringFromClass(class));
     }else{
-        NSLog(@"%s %@ non-exist",__func__,NSStringFromClass(class));
+        NSLog(@"%@ non-exist", NSStringFromClass(class));
     }
 }
 
@@ -559,9 +629,9 @@
  */
 - (void)class_isMetaClass:(Class)class {
     if (class_isMetaClass(class)) {
-        NSLog(@"%s %@ isMetaClass",__func__,NSStringFromClass(class));
+        NSLog(@"%@ isMetaClass", NSStringFromClass(class));
     }else{
-        NSLog(@"%s %@ non-isMetaClass",__func__,NSStringFromClass(class));
+        NSLog(@"%@ non-isMetaClass", NSStringFromClass(class));
     }
 }
 
@@ -573,10 +643,10 @@
  */
 - (BOOL)class_conformsToProtocol:(Class)class protocol:(Protocol *)protocol {
     if (class_conformsToProtocol(class, protocol)) {
-        NSLog(@"%s %@ conformsToProtocol %@",__func__,NSStringFromClass(class),NSStringFromProtocol(protocol));
+        NSLog(@"%@ conformsToProtocol %@", NSStringFromClass(class),NSStringFromProtocol(protocol));
         return YES;
     }else{
-        NSLog(@"%s %@ non-conformsToProtocol %@",__func__,NSStringFromClass(class),NSStringFromProtocol(protocol));
+        NSLog(@"%@ non-conformsToProtocol %@", NSStringFromClass(class),NSStringFromProtocol(protocol));
         return NO;
     }
 }
@@ -591,7 +661,7 @@
  */
 - (void)object_getInstanceVariable:(id)obj name:(const char*)name outValue:(void **)outValue{
     Ivar ivar = object_getInstanceVariable(obj, name, nil);
-    NSLog(@"%s personName %@",__func__,[self object_getIvar:obj ivar:ivar]);
+    NSLog(@"%s: %@", name, [self object_getIvar:obj ivar:ivar]);
 }
 
 /**
@@ -612,7 +682,7 @@
  *  @param obj 对象
  */
 - (void)object_getClassName:(id)obj {
-    NSLog(@"%s%s",__func__,object_getClassName(obj));
+    NSLog(@"%s", object_getClassName(obj));
 }
 
 /**
@@ -620,7 +690,7 @@
  *  @param obj 对象
  */
 - (void)object_getClass:(id)obj {
-    NSLog(@"%s%@",__func__,NSStringFromClass(object_getClass(obj)));
+    NSLog(@"%@", NSStringFromClass(object_getClass(obj)));
 }
 
 /**
@@ -631,7 +701,7 @@
 - (void)object_copy:(id)obj size:(size_t)size {
     SGH0515ClassPerson *tempObj = object_copy(obj, size);
     tempObj.name = @"tempxietao";
-    NSLog(@"%s tempPersonName:%@ personName:%@",__func__,tempObj.name,_person.name);
+    NSLog(@"tempPersonName:%@ personName:%@", tempObj.name,_person.name);
 }
 
 /**
@@ -639,7 +709,7 @@
  *  @param name 类名
  */
 - (void)objc_getClass:(const char *)name {
-    NSLog(@"%s%@",__func__,NSStringFromClass(objc_getClass(name)));
+    NSLog(@"%@", NSStringFromClass(objc_getClass(name)));
 }
 
 /**
@@ -647,7 +717,7 @@
  *  @param name 类名
  */
 - (void)objc_getMetaClass:(const char *)name {
-    NSLog(@"%s%@",__func__,NSStringFromClass(objc_getMetaClass(name)));
+    NSLog(@"%@", NSStringFromClass(objc_getMetaClass(name)));
     
 }
 
@@ -657,7 +727,7 @@
  */
 - (void)objc_getProtocol:(const char *)name {
     Protocol *protocol = objc_getProtocol(name);
-    NSLog(@"%s %s",__func__,[self protocol_getName:protocol]);
+    NSLog(@"%s", [self protocol_getName:protocol]);
     //    [self class_conformsToProtocol:[_person class] protocol:protocol];
 }
 
@@ -669,7 +739,7 @@
  */
 - (void)objc_getAssociatedObject:(id)obj key:(const void *)key {
     id object = objc_getAssociatedObject(obj,key);
-    NSLog(@"%s %s %s %@",__func__,object_getClassName(obj),key,object);
+    NSLog(@"获取类名: %s, key: %s, value: %@", object_getClassName(obj),key,object);
 }
 
 /**
@@ -709,7 +779,7 @@
  */
 - (void)object_setInstanceVariable:(id)obj name:(const char *)name value:(void *)value {
     Ivar ivar = object_setInstanceVariable(obj,name,value);
-    NSLog(@"%s %s %@",__func__,[self ivar_getName:ivar],object_getIvar(obj, ivar));
+    NSLog(@"获取成员变量名:%s, 获取Ivar: %@", [self ivar_getName:ivar],object_getIvar(obj, ivar));
 }
 
 
@@ -722,7 +792,7 @@
  */
 - (void)object_setIvar:(id)obj ivar:(Ivar)ivar value:(void *)value {
     object_setIvar(obj,ivar,value);
-    NSLog(@"%s %s %@ ",__func__,[self ivar_getName:ivar],object_getIvar(obj, ivar));
+    NSLog(@"获取成员变量名: %s, 获取Ivar: %@ ", [self ivar_getName:ivar],object_getIvar(obj, ivar));
 }
 
 /**
@@ -749,7 +819,7 @@
     object_dispose(tempPerson);
     // 释放后 无法取得name的值 (注释下面的打印，不然运行会奔溃)
     //NSLog(@"%s release result %@",__func__,tempPerson.name);
-    [tempPerson release];
+    //[tempPerson release]; //不用这句
 }
 
 /**
@@ -760,7 +830,7 @@
 - (void)objc_constructInstance:(Class)class bytes:(void *)bytes {
     SGH0515ClassPerson *obj = objc_constructInstance(class,bytes);
     obj.name = @"objc_constructInstance_name";
-    NSLog(@"%s %@",__func__,obj.name);
+    NSLog(@"%@",obj.name);
 }
 
 /**
@@ -773,7 +843,7 @@
     // 释放后 无法取得name的值
     objc_destructInstance(tempPerson);
     //(注释下面的打印)
-    NSLog(@"%s destruct result %@",__func__,tempPerson.name);
+    NSLog(@"destruct result %@",tempPerson.name);
     [tempPerson release];
 }
 
@@ -820,7 +890,7 @@
     // 检查该协议是否已经注册
     if (![self class_conformsToProtocol:SelfClass protocol:NSProtocolFromString([NSString stringWithUTF8String:name])]) {
         Protocol *protocol = objc_allocateProtocol(name);
-        NSLog(@"%s creat protocol named %@",__func__,NSProtocolFromString([NSString stringWithUTF8String:name]));
+        NSLog(@"Creat protocol named %@",NSProtocolFromString([NSString stringWithUTF8String:name]));
         return protocol;
     }
     return nil;
@@ -903,7 +973,7 @@
     objc_property_attribute_t *objc_property_attributes = property_copyAttributeList(property,&outCount);
     for (int i = 0; i < outCount; i++) {
         objc_property_attribute_t objc_property_attribute = objc_property_attributes[i];
-        NSLog(@"%s %s %s",__func__,objc_property_attribute.name,[self property_copyAttributeValue:property attributeName:objc_property_attribute.name]);
+        NSLog(@"%s %s",objc_property_attribute.name,[self property_copyAttributeValue:property attributeName:objc_property_attribute.name]);
     }
     return objc_property_attributes;
 }
@@ -937,7 +1007,7 @@
  */
 - (SEL)method_getName:(Method)method {
     SEL sel = method_getName(method);
-    NSLog(@"%s %@",__func__,NSStringFromSelector(sel));
+    NSLog(@"%@",NSStringFromSelector(sel));
     return sel;
 }
 
@@ -958,7 +1028,7 @@
  */
 - (const char *)method_getTypeEncoding:(Method)method {
     const char *methodType = method_getTypeEncoding(method);
-    NSLog(@"%s %s",__func__,methodType);
+    NSLog(@"%s",methodType);
     return methodType;
 }
 
@@ -970,7 +1040,7 @@
 - (unsigned int)method_getNumberOfArguments:(Method)method {
     unsigned int num  = method_getNumberOfArguments(method);
     // 估计参数数量多出来的2个是调用的对象和selector
-    NSLog(@"%s %@ has %d Arguments",__func__,NSStringFromSelector(method_getName(method)),num);
+    NSLog(@"%@ has %d Arguments",NSStringFromSelector(method_getName(method)),num);
     return num;
 }
 
@@ -997,7 +1067,7 @@
 - (void)method_copyArgumentType:(Method)method {
     unsigned int argumentsCount = [self method_getNumberOfArguments:method];
     for (int i = 0; i < argumentsCount; i++) {
-        NSLog(@"%s 第%d个 argument type %s",__func__,i,method_copyArgumentType(method,i));
+        NSLog(@"第%d个 argument type %s",i,method_copyArgumentType(method,i));
     }
 }
 
@@ -1008,7 +1078,7 @@
  */
 - (char *)method_copyReturnType:(Method)method {
     char *returnType = method_copyReturnType(method);
-    NSLog(@"%s return type %s",__func__,returnType);
+    NSLog(@"return type: %s",returnType);
     return returnType;
 }
 
@@ -1019,7 +1089,7 @@
 - (void)method_getReturnType:(Method)method {
     char argNameType[512] = {};
     method_getReturnType(method,argNameType,512);
-    NSLog(@"%s return type %s",__func__,argNameType);
+    NSLog(@"return type: %s",argNameType);
     
 }
 
@@ -1058,7 +1128,7 @@
  */
 - (struct objc_method_description *)method_getDescription:(Method)method {
     struct objc_method_description *description = method_getDescription(method);
-    NSLog(@"%s %@",__func__,NSStringFromSelector(description->name));
+    NSLog(@"%@",NSStringFromSelector(description->name));
     return description;
 }
 
@@ -1072,7 +1142,7 @@
  */
 - (const char *)sel_getName:(SEL)sel {
     const char *selName = sel_getName(sel);
-    NSLog(@"%s %s",__func__,selName);
+    NSLog(@"%s",selName);
     return selName;
 }
 
@@ -1129,7 +1199,7 @@
  */
 - (const char *)protocol_getName:(Protocol *)protocol {
     const char *name = protocol_getName(protocol);
-    //    NSLog(@"%s %s",__func__,name);
+    NSLog(@"%s",name);
     return name;
 }
 
@@ -1144,7 +1214,7 @@
  */
 - (objc_property_t)protocol_getProperty:(Protocol *)protocol name:(const char *)name isRequiredProperty:(BOOL)isRequiredProperty isInstanceProperty:(BOOL)isInstanceProperty{
     objc_property_t property = protocol_getProperty(protocol, name, isRequiredProperty, isInstanceProperty);
-    NSLog(@"%s %s",__func__,property_getName(property));
+    NSLog(@"%s",property_getName(property));
     return property;
 }
 
@@ -1199,7 +1269,7 @@
     objc_property_t *propertyList = protocol_copyPropertyList(protocol,&outCount);
     for (int i = 0; i < outCount; i++) {
         objc_property_t property = propertyList[i];
-        NSLog(@"%s %s",__func__,property_getName(property));
+        NSLog(@"%s",property_getName(property));
     }
     return propertyList;
 }
@@ -1215,7 +1285,7 @@
     Protocol **protocolList = protocol_copyProtocolList(protocol,&outCount);
     for (int i = 0; i < outCount; i++) {
         Protocol *protocol = protocolList[i];
-        NSLog(@"%s %s",__func__,protocol_getName(protocol));
+        NSLog(@"%s",protocol_getName(protocol));
     }
     return protocolList;
 }
@@ -1233,7 +1303,7 @@
     struct objc_method_description *methodList = protocol_copyMethodDescriptionList(protocol, isRequiredMethod, isInstanceMethod, &outCount);
     for (int i = 0; i < outCount; i++) {
         struct objc_method_description method = methodList[i];
-        NSLog(@"%s %@",__func__,NSStringFromSelector(method.name));
+        NSLog(@"%@",NSStringFromSelector(method.name));
     }
     return methodList;
 }
@@ -1250,9 +1320,9 @@
 - (BOOL)protocol_isEqual:(Protocol *)protocol other:(Protocol *)other {
     BOOL isEqual = protocol_isEqual(protocol, other);
     if (isEqual) {
-        NSLog(@"%s %s equal %s ",__func__,protocol_getName(protocol),protocol_getName(other));
+        NSLog(@"%s equal %s ",protocol_getName(protocol),protocol_getName(other));
     }else{
-        NSLog(@"%s %s unequal %s ",__func__,protocol_getName(protocol),protocol_getName(other));
+        NSLog(@"%s unequal %s ", protocol_getName(protocol),protocol_getName(other));
     }
     return isEqual;
 }

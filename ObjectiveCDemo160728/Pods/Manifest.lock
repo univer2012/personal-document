@@ -3,16 +3,19 @@ PODS:
     - AMapFoundation-NO-IDFA (~> 1.2)
   - AMapFoundation-NO-IDFA (1.3.1)
   - BaiduMapKit (3.0.0)
+  - Masonry (1.0.2)
 
 DEPENDENCIES:
   - AMap2DMap-NO-IDFA
   - BaiduMapKit
+  - Masonry
 
 SPEC CHECKSUMS:
   AMap2DMap-NO-IDFA: 710e218ec76c9a1b5f74ab915b723961e48d5216
   AMapFoundation-NO-IDFA: 383d7f34f8c2be5794152eec18ca623e44b6938b
   BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: f8dcc3fd9972140d896afedd0cbb60b9e377e5cf
+PODFILE CHECKSUM: eba9f71ebf8fb887e509e1f7ea3017745cbb7d91
 
 COCOAPODS: 1.2.1
