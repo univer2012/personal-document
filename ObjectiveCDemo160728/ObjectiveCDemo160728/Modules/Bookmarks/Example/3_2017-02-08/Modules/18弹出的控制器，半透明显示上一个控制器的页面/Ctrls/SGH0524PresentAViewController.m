@@ -39,6 +39,30 @@
         make.centerX.equalTo(self.view);
         make.top.equalTo(self.view).offset( 100 );
     }];
+    
+    
+    //MARK: 测试
+    //中签弹框
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+//    userInfo[@"stateActionExt"] = @{@"isPopUp": @"1"};
+    userInfo[@"msgId"] = @"4994";
+    
+    NSDictionary *stateActionExtDict = userInfo[@"stateActionExt"];
+    if (stateActionExtDict.count > 0) {
+        NSString *isPopUp = stateActionExtDict[@"isPopUp"];
+        //要弹框
+        if (isPopUp.length > 0 && [isPopUp integerValue] == 1) {
+            
+            NSMutableDictionary *paramsDict = [NSMutableDictionary dictionary];
+            //paramsDict[@"requestServerUrl"] = [TKIMSDKConfig shareInstance].httpPushUrl;
+            paramsDict[@"funcNo"] = @"1003637";
+            paramsDict[@"msg_id"] = userInfo[@"msgId"];
+            
+            //http://114.251.97.186:9610/servlet/json?funcNo=1003637&msg_id=4994
+            
+        }
+    }
+    
 }
 
 -(void)p_presentClick {

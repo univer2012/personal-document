@@ -46,7 +46,10 @@
                           @"SGH170518ResuableCellViewController",
                           @"SGHXMPPFrameworkViewController",
                           @"SGH0522CrashAnalisisViewController",
-                          @"SGH0524PresentAViewController"
+                          @"SGH0524PresentAViewController",
+                          @"SGH0601SystemVersionViewController",
+                          @"SGH0607FetchStringExpressionViewController",
+                          @"SGH170815IdentCodeViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -66,7 +69,10 @@
                         @"15、iOS亲测UITableView重用机制，用事实说话",
                         @"16、iOS 的 XMPPFramework 简介",
                         @"17、奔溃统计和分析",
-                        @"18、弹出的控制器，半透明显示上一个控制器的页面"
+                        @"18、弹出的控制器，半透明显示上一个控制器的页面",
+                        @"19、系统判断方法列举",
+                        @"20、通过正则表达式获取2个特定字符串中间的字符串",
+                        @"21、生成动态验证码及验证"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

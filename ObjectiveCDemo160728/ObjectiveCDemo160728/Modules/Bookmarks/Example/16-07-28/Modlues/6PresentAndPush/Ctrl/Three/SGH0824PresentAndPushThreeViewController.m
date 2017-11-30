@@ -32,7 +32,7 @@
 }
 - (IBAction)p_dismissToRoot:(id)sender {
     
-#if 1
+#if 0
     //从第3页dismiss到第1页
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:^{
     }];

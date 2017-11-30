@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     self.title=@"popover";
-    self.view.backgroundColor=[UIColor whiteColor];
+    self.view.backgroundColor=[UIColor blueColor];//whiteColor];
     
     //设置NavigationBar背景颜色
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:20/255.0 green:155/255.0 blue:213/255.0 alpha:1.0]];
@@ -43,7 +43,7 @@
                           @{@"image":@"stock_search",@"title":@"系统设置"}];
     contentController.paramDictionary=@{@"dataArray":dataArray,@"heightForRow":@(heightForRow)};
     contentController.preferredContentSize=CGSizeMake(150, dataArray.count * heightForRow);
-    contentController.modalPresentationStyle=UIModalPresentationPopover;
+    contentController.modalPresentationStyle = UIModalPresentationPopover;
     
     UIPopoverPresentationController *popPresentationController = contentController.popoverPresentationController;
     popPresentationController.barButtonItem=barButtonItem;

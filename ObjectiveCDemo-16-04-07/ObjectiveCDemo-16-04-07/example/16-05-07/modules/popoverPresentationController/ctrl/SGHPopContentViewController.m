@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor blueColor];
+    //self.view.backgroundColor=[UIColor blueColor];
     self.tableView=({
         UITableView *tableView = [UITableView new];
         tableView.frame=self.view.frame;
@@ -27,6 +27,7 @@
         tableView.dataSource=self;
         tableView.scrollEnabled = NO;
         tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+        tableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
         [self.view addSubview:tableView];
         tableView;
     });

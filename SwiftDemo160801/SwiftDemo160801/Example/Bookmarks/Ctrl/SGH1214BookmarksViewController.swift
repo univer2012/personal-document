@@ -18,7 +18,8 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
                        "5、自定义PageControl",
                        "6、尝试面向轨道编程",
                        "7、Auto Layout 使用心得",
-                       "8、面向协议编程与 Cocoa 的邂逅 (下)"
+                       "8、面向协议编程与 Cocoa 的邂逅 (下)",
+                       "9、架构师之泛型应用分析介绍"
     ]
     
     var controllersArray = [SGH160802ViewController(),
@@ -28,7 +29,8 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
                             SGH1208CustomPageControlViewController(),
                             SGH1213TrackProgramViewController(),
                             SGH1214AutolayoutViewController(),
-                            SGH1222POPAndCocoaViewController()
+                            SGH1222POPAndCocoaViewController(),
+                            DreamGenericViewController()
     ]
     
     override func viewDidLoad() {

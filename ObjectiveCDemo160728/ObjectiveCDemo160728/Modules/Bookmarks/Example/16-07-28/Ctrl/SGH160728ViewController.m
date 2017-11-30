@@ -49,7 +49,8 @@
                           @"SGH1108ActivityShareViewController",
                           @"SGH1125XMLParserViewController",
                           @"SGH1221SelectedCellsViewController",
-                          @"SGH170119CrashRankViewController"
+                          @"SGH170119CrashRankViewController",
+                          @"SGH0713ScreenShotViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、CALayer的介绍",
@@ -72,7 +73,8 @@
                         @"18、调用iOS系统自带的分享功能",
                         @"19、使用NSXMLParser解析XML",
                         @"21、tableView多选cell",
-                        @"22、iOS_Crash杀手排名"
+                        @"22、iOS_Crash杀手排名",
+                        @"23、截屏方案"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

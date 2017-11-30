@@ -11,6 +11,94 @@
 		670187FA1CD8E39B00564CEB /* SGHMethodSwizzlingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 670187F81CD8E39B00564CEB /* SGHMethodSwizzlingObject.m */; };
 		6701880C1CD8EC2300564CEB /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701880B1CD8EC2300564CEB /* NSString+Chinese.m */; };
 		6705241B1CEDAF2D00622F33 /* SGH160519ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6705241A1CEDAF2D00622F33 /* SGH160519ViewController.m */; };
+		670E0A3C1EE965A800C98990 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDCD1CB6171F000CF51C /* ViewController.m */; };
+		670E0A3D1EE965A800C98990 /* SGHDataPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184D91CDD932900F99E2A /* SGHDataPickerViewController.m */; };
+		670E0A3E1EE965A800C98990 /* SGH0629AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D4CCB31D23B83B004FFE47 /* SGH0629AlertViewController.m */; };
+		670E0A3F1EE965A800C98990 /* AccountTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1852C1CDD932900F99E2A /* AccountTableHeaderView.m */; };
+		670E0A401EE965A800C98990 /* SGHPresentTransitionStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1850F1CDD932900F99E2A /* SGHPresentTransitionStyleViewController.m */; };
+		670E0A411EE965A800C98990 /* SGHMethodSwizzlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184EA1CDD932900F99E2A /* SGHMethodSwizzlingViewController.m */; };
+		670E0A421EE965A800C98990 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE361CB62A50000CF51C /* MASViewAttribute.m */; };
+		670E0A431EE965A800C98990 /* SGHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185161CDD932900F99E2A /* SGHPerson.m */; };
+		670E0A441EE965A800C98990 /* SGHOCJSInteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184DD1CDD932900F99E2A /* SGHOCJSInteractiveViewController.m */; };
+		670E0A451EE965A800C98990 /* SGHNSArrayNSMutableArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184F51CDD932900F99E2A /* SGHNSArrayNSMutableArrayViewController.m */; };
+		670E0A461EE965A800C98990 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE321CB62A50000CF51C /* MASLayoutConstraint.m */; };
+		670E0A471EE965A800C98990 /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184F11CDD932900F99E2A /* Harpy.m */; };
+		670E0A481EE965A800C98990 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE3D1CB62A50000CF51C /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		670E0A491EE965A800C98990 /* SGHUDIDKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185301CDD932900F99E2A /* SGHUDIDKeychainViewController.m */; };
+		670E0A4A1EE965A800C98990 /* SGHPresentTransitionSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1850D1CDD932900F99E2A /* SGHPresentTransitionSecondViewController.m */; };
+		670E0A4B1EE965A800C98990 /* SGHPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1851A1CDD932900F99E2A /* SGHPickerViewViewController.m */; };
+		670E0A4C1EE965A800C98990 /* SGH160519ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6705241A1CEDAF2D00622F33 /* SGH160519ViewController.m */; };
+		670E0A4D1EE965A800C98990 /* SHGAboutNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184D61CDD932900F99E2A /* SHGAboutNavigationViewController.m */; };
+		670E0A4E1EE965A800C98990 /* SGH0618DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754391D14E2B200352C55 /* SGH0618DistanceViewController.m */; };
+		670E0A4F1EE965A800C98990 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE301CB62A50000CF51C /* MASConstraintMaker.m */; };
+		670E0A501EE965A800C98990 /* SGH0618LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754341D14E23800352C55 /* SGH0618LocationViewController.m */; };
+		670E0A511EE965A800C98990 /* SGH0728CALayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EDCF311D49FFCB00058E8D /* SGH0728CALayerViewController.m */; };
+		670E0A521EE965A800C98990 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE421CB62A50000CF51C /* ViewController+MASAdditions.m */; };
+		670E0A531EE965A800C98990 /* UIImage+SGHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184E61CDD932900F99E2A /* UIImage+SGHHook.m */; };
+		670E0A541EE965A800C98990 /* SGH0618AntiEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754481D14F83E00352C55 /* SGH0618AntiEncodeViewController.m */; };
+		670E0A551EE965A800C98990 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDCA1CB6171F000CF51C /* AppDelegate.m */; };
+		670E0A561EE965A800C98990 /* SGHShowHTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185481CDD932900F99E2A /* SGHShowHTMLViewController.m */; };
+		670E0A581EE965A800C98990 /* SGH160507ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1858A1CDD933900F99E2A /* SGH160507ViewController.m */; };
+		670E0A591EE965A800C98990 /* SGH0618AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754561D153EC000352C55 /* SGH0618AnnotationViewController.m */; };
+		670E0A5A1EE965A800C98990 /* SGHTableViewStyleGroupedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1851E1CDD932900F99E2A /* SGHTableViewStyleGroupedViewController.m */; };
+		670E0A5B1EE965A800C98990 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDC71CB6171F000CF51C /* main.m */; };
+		670E0A5C1EE965A800C98990 /* SGH0618MapNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754681D15498900352C55 /* SGH0618MapNavigationViewController.m */; };
+		670E0A5D1EE965A800C98990 /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701880B1CD8EC2300564CEB /* NSString+Chinese.m */; };
+		670E0A5E1EE965A800C98990 /* SGHPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185041CDD932900F99E2A /* SGHPopoverPresentationController.m */; };
+		670E0A5F1EE965A800C98990 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE2B1CB62A50000CF51C /* MASCompositeConstraint.m */; };
+		670E0A601EE965A800C98990 /* SGHSesstionDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674808261D3635F6007F2A8C /* SGHSesstionDownloadViewController.m */; };
+		670E0A611EE965A800C98990 /* SGHSKStoreProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184EE1CDD932900F99E2A /* SGHSKStoreProductViewController.m */; };
+		670E0A621EE965A800C98990 /* SGHAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184F81CDD932900F99E2A /* SGHAttributedStringViewController.m */; };
+		670E0A631EE965A800C98990 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE3A1CB62A50000CF51C /* NSArray+MASAdditions.m */; };
+		670E0A641EE965A800C98990 /* SGHPopContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185021CDD932900F99E2A /* SGHPopContentViewController.m */; };
+		670E0A651EE965A800C98990 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE3F1CB62A50000CF51C /* View+MASAdditions.m */; };
+		670E0A661EE965A800C98990 /* SGHPlistDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185531CDD932900F99E2A /* SGHPlistDictionaryViewController.m */; };
+		670E0A671EE965A800C98990 /* SGHUIFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185401CDD932900F99E2A /* SGHUIFontViewController.m */; };
+		670E0A681EE965A800C98990 /* SGH0727CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C371E61D4845CD00A48CCF /* SGH0727CollectionViewController.m */; };
+		670E0A691EE965A800C98990 /* SGHRuntimeAttriMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185131CDD932900F99E2A /* SGHRuntimeAttriMethodViewController.m */; };
+		670E0A6A1EE965A800C98990 /* SGHUIKitDynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754271D14E18700352C55 /* SGHUIKitDynamicsViewController.m */; };
+		670E0A6B1EE965A800C98990 /* SGHStringShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1853C1CDD932900F99E2A /* SGHStringShowViewController.m */; };
+		670E0A6C1EE965A800C98990 /* SGHMethodSwizzlingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 670187F81CD8E39B00564CEB /* SGHMethodSwizzlingObject.m */; };
+		670E0A6D1EE965A800C98990 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE381CB62A50000CF51C /* MASViewConstraint.m */; };
+		670E0A6E1EE965A800C98990 /* SGHWebViewConstrainsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185391CDD932900F99E2A /* SGHWebViewConstrainsViewController.m */; };
+		670E0A6F1EE965A800C98990 /* UIButton+SGHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184E41CDD932900F99E2A /* UIButton+SGHHook.m */; };
+		670E0A701EE965A800C98990 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 670187F51CD8E39B00564CEB /* NSString+MD5.m */; };
+		670E0A711EE965A800C98990 /* SGH0618GeocodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754411D14E8EE00352C55 /* SGH0618GeocodeViewController.m */; };
+		670E0A721EE965A800C98990 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1854C1CDD932900F99E2A /* Reachability.m */; };
+		670E0A731EE965A800C98990 /* SGHUniqueUUID_UDIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674808221D363588007F2A8C /* SGHUniqueUUID_UDIDViewController.m */; };
+		670E0A741EE965A800C98990 /* SGHDateCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184FB1CDD932900F99E2A /* SGHDateCalendarViewController.m */; };
+		670E0A751EE965A800C98990 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DE2E1CB62A50000CF51C /* MASConstraint.m */; };
+		670E0A761EE965A800C98990 /* SGH0618Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787545C1D153F5D00352C55 /* SGH0618Annotation.m */; };
+		670E0A771EE965A800C98990 /* SGHNSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F184FE1CDD932900F99E2A /* SGHNSURLSessionViewController.m */; };
+		670E0A781EE965A800C98990 /* TKAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185291CDD932900F99E2A /* TKAccountModel.m */; };
+		670E0A791EE965A800C98990 /* SGH160531ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754231D14E18700352C55 /* SGH160531ViewController.m */; };
+		670E0A7A1EE965A800C98990 /* YYQKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F185331CDD932900F99E2A /* YYQKeyChain.m */; };
+		670E0A7B1EE965A800C98990 /* SGHNetworkChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F1854F1CDD932900F99E2A /* SGHNetworkChangeViewController.m */; };
+		670E0A7C1EE965A800C98990 /* SGH0618DynaAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678754611D1543E800352C55 /* SGH0618DynaAnnotationViewController.m */; };
+		670E0A7E1EE965A800C98990 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6787542F1D14E1E500352C55 /* MapKit.framework */; };
+		670E0A7F1EE965A800C98990 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6787542D1D14E1E000352C55 /* CoreLocation.framework */; };
+		670E0A801EE965A800C98990 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6782A70F1CDA3DEB002C3A2A /* StoreKit.framework */; };
+		670E0A821EE965A800C98990 /* inform_menu_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F185371CDD932900F99E2A /* inform_menu_selected@2x.png */; };
+		670E0A831EE965A800C98990 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F185181CDD932900F99E2A /* foods.plist */; };
+		670E0A841EE965A800C98990 /* SGH0618MapNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678754691D15498900352C55 /* SGH0618MapNavigationViewController.xib */; };
+		670E0A861EE965A800C98990 /* ocTojs.html in Resources */ = {isa = PBXBuildFile; fileRef = 67F184DF1CDD932900F99E2A /* ocTojs.html */; };
+		670E0A871EE965A800C98990 /* system_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F185081CDD932900F99E2A /* system_setting@2x.png */; };
+		670E0A881EE965A800C98990 /* SGH0618DynaAnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678754621D1543E800352C55 /* SGH0618DynaAnnotationViewController.xib */; };
+		670E0A891EE965A800C98990 /* SGH0618AntiEncodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678754491D14F83E00352C55 /* SGH0618AntiEncodeViewController.xib */; };
+		670E0A8A1EE965A800C98990 /* tableViewStyleGrouped.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67EDCF391D4A056F00058E8D /* tableViewStyleGrouped.xcassets */; };
+		670E0A8B1EE965A800C98990 /* stock_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F185071CDD932900F99E2A /* stock_search@2x.png */; };
+		670E0A8C1EE965A800C98990 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 67F185361CDD932900F99E2A /* demo.html */; };
+		670E0A8D1EE965A800C98990 /* ocTojsBlock.html in Resources */ = {isa = PBXBuildFile; fileRef = 67F184E01CDD932900F99E2A /* ocTojsBlock.html */; };
+		670E0A8E1EE965A800C98990 /* new_home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F184E81CDD932900F99E2A /* new_home_icon.png */; };
+		670E0A8F1EE965A800C98990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6743DDD41CB6171F000CF51C /* LaunchScreen.storyboard */; };
+		670E0A901EE965A800C98990 /* SGH0618AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678754571D153EC000352C55 /* SGH0618AnnotationViewController.xib */; };
+		670E0A911EE965A800C98990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6743DDD21CB6171F000CF51C /* Assets.xcassets */; };
+		670E0A921EE965A800C98990 /* ic_0728_calayer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67EDCF371D4A049E00058E8D /* ic_0728_calayer1.png */; };
+		670E0A931EE965A800C98990 /* SGH0618GeocodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678754421D14E8EE00352C55 /* SGH0618GeocodeViewController.xib */; };
+		670E0A941EE965A800C98990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6743DDCF1CB6171F000CF51C /* Main.storyboard */; };
+		670E0A951EE965A800C98990 /* SGH0728CALayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67EDCF321D49FFCB00058E8D /* SGH0728CALayerViewController.xib */; };
+		670E0A961EE965A800C98990 /* qrcode_screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F185061CDD932900F99E2A /* qrcode_screen@2x.png */; };
+		670E0A971EE965A800C98990 /* SGHSesstionDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 674808271D3635F6007F2A8C /* SGHSesstionDownloadViewController.xib */; };
 		6743DDC81CB6171F000CF51C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDC71CB6171F000CF51C /* main.m */; };
 		6743DDCB1CB6171F000CF51C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDCA1CB6171F000CF51C /* AppDelegate.m */; };
 		6743DDCE1CB6171F000CF51C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6743DDCD1CB6171F000CF51C /* ViewController.m */; };
@@ -108,6 +196,8 @@
 		6701880B1CD8EC2300564CEB /* NSString+Chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Chinese.m"; sourceTree = "<group>"; };
 		670524191CEDAF2D00622F33 /* SGH160519ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160519ViewController.h; sourceTree = "<group>"; };
 		6705241A1CEDAF2D00622F33 /* SGH160519ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160519ViewController.m; sourceTree = "<group>"; };
+		670E0A9B1EE965A800C98990 /* ObjectiveCDemo_iOS7.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCDemo_iOS7.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		670E0A9C1EE965A900C98990 /* ObjectiveCDemo-16-04-07 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ObjectiveCDemo-16-04-07 copy-Info.plist"; path = "/Users/huangaengoln/Desktop/personal-document/ObjectiveCDemo-16-04-07/ObjectiveCDemo-16-04-07 copy-Info.plist"; sourceTree = "<absolute>"; };
 		6743DDC31CB6171F000CF51C /* ObjectiveCDemo-16-04-07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjectiveCDemo-16-04-07.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6743DDC71CB6171F000CF51C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6743DDC91CB6171F000CF51C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,6 +355,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		670E0A7D1EE965A800C98990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670E0A7E1EE965A800C98990 /* MapKit.framework in Frameworks */,
+				670E0A7F1EE965A800C98990 /* CoreLocation.framework in Frameworks */,
+				670E0A801EE965A800C98990 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6743DDC01CB6171F000CF51C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,6 +468,7 @@
 				6782A70F1CDA3DEB002C3A2A /* StoreKit.framework */,
 				6743DDC51CB6171F000CF51C /* ObjectiveCDemo-16-04-07 */,
 				6743DDC41CB6171F000CF51C /* Products */,
+				670E0A9C1EE965A900C98990 /* ObjectiveCDemo-16-04-07 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				6743DDC31CB6171F000CF51C /* ObjectiveCDemo-16-04-07.app */,
+				670E0A9B1EE965A800C98990 /* ObjectiveCDemo_iOS7.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1178,6 +1280,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		670E0A3A1EE965A800C98990 /* ObjectiveCDemo_iOS7.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670E0A981EE965A800C98990 /* Build configuration list for PBXNativeTarget "ObjectiveCDemo_iOS7.0" */;
+			buildPhases = (
+				670E0A3B1EE965A800C98990 /* Sources */,
+				670E0A7D1EE965A800C98990 /* Frameworks */,
+				670E0A811EE965A800C98990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectiveCDemo_iOS7.0;
+			productName = "ObjectiveCDemo-16-04-07";
+			productReference = 670E0A9B1EE965A800C98990 /* ObjectiveCDemo_iOS7.0.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6743DDC21CB6171F000CF51C /* ObjectiveCDemo-16-04-07 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6743DDDA1CB6171F000CF51C /* Build configuration list for PBXNativeTarget "ObjectiveCDemo-16-04-07" */;
@@ -1204,6 +1323,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = huangaengoln;
 				TargetAttributes = {
+					670E0A3A1EE965A800C98990 = {
+						DevelopmentTeam = HCXVYWN652;
+					};
 					6743DDC21CB6171F000CF51C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = HCXVYWN652;
@@ -1224,11 +1346,40 @@
 			projectRoot = "";
 			targets = (
 				6743DDC21CB6171F000CF51C /* ObjectiveCDemo-16-04-07 */,
+				670E0A3A1EE965A800C98990 /* ObjectiveCDemo_iOS7.0 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		670E0A811EE965A800C98990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670E0A821EE965A800C98990 /* inform_menu_selected@2x.png in Resources */,
+				670E0A831EE965A800C98990 /* foods.plist in Resources */,
+				670E0A841EE965A800C98990 /* SGH0618MapNavigationViewController.xib in Resources */,
+				670E0A861EE965A800C98990 /* ocTojs.html in Resources */,
+				670E0A871EE965A800C98990 /* system_setting@2x.png in Resources */,
+				670E0A881EE965A800C98990 /* SGH0618DynaAnnotationViewController.xib in Resources */,
+				670E0A891EE965A800C98990 /* SGH0618AntiEncodeViewController.xib in Resources */,
+				670E0A8A1EE965A800C98990 /* tableViewStyleGrouped.xcassets in Resources */,
+				670E0A8B1EE965A800C98990 /* stock_search@2x.png in Resources */,
+				670E0A8C1EE965A800C98990 /* demo.html in Resources */,
+				670E0A8D1EE965A800C98990 /* ocTojsBlock.html in Resources */,
+				670E0A8E1EE965A800C98990 /* new_home_icon.png in Resources */,
+				670E0A8F1EE965A800C98990 /* LaunchScreen.storyboard in Resources */,
+				670E0A901EE965A800C98990 /* SGH0618AnnotationViewController.xib in Resources */,
+				670E0A911EE965A800C98990 /* Assets.xcassets in Resources */,
+				670E0A921EE965A800C98990 /* ic_0728_calayer1.png in Resources */,
+				670E0A931EE965A800C98990 /* SGH0618GeocodeViewController.xib in Resources */,
+				670E0A941EE965A800C98990 /* Main.storyboard in Resources */,
+				670E0A951EE965A800C98990 /* SGH0728CALayerViewController.xib in Resources */,
+				670E0A961EE965A800C98990 /* qrcode_screen@2x.png in Resources */,
+				670E0A971EE965A800C98990 /* SGHSesstionDownloadViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6743DDC11CB6171F000CF51C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1261,6 +1412,77 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		670E0A3B1EE965A800C98990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670E0A3C1EE965A800C98990 /* ViewController.m in Sources */,
+				670E0A3D1EE965A800C98990 /* SGHDataPickerViewController.m in Sources */,
+				670E0A3E1EE965A800C98990 /* SGH0629AlertViewController.m in Sources */,
+				670E0A3F1EE965A800C98990 /* AccountTableHeaderView.m in Sources */,
+				670E0A401EE965A800C98990 /* SGHPresentTransitionStyleViewController.m in Sources */,
+				670E0A411EE965A800C98990 /* SGHMethodSwizzlingViewController.m in Sources */,
+				670E0A421EE965A800C98990 /* MASViewAttribute.m in Sources */,
+				670E0A431EE965A800C98990 /* SGHPerson.m in Sources */,
+				670E0A441EE965A800C98990 /* SGHOCJSInteractiveViewController.m in Sources */,
+				670E0A451EE965A800C98990 /* SGHNSArrayNSMutableArrayViewController.m in Sources */,
+				670E0A461EE965A800C98990 /* MASLayoutConstraint.m in Sources */,
+				670E0A471EE965A800C98990 /* Harpy.m in Sources */,
+				670E0A481EE965A800C98990 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				670E0A491EE965A800C98990 /* SGHUDIDKeychainViewController.m in Sources */,
+				670E0A4A1EE965A800C98990 /* SGHPresentTransitionSecondViewController.m in Sources */,
+				670E0A4B1EE965A800C98990 /* SGHPickerViewViewController.m in Sources */,
+				670E0A4C1EE965A800C98990 /* SGH160519ViewController.m in Sources */,
+				670E0A4D1EE965A800C98990 /* SHGAboutNavigationViewController.m in Sources */,
+				670E0A4E1EE965A800C98990 /* SGH0618DistanceViewController.m in Sources */,
+				670E0A4F1EE965A800C98990 /* MASConstraintMaker.m in Sources */,
+				670E0A501EE965A800C98990 /* SGH0618LocationViewController.m in Sources */,
+				670E0A511EE965A800C98990 /* SGH0728CALayerViewController.m in Sources */,
+				670E0A521EE965A800C98990 /* ViewController+MASAdditions.m in Sources */,
+				670E0A531EE965A800C98990 /* UIImage+SGHHook.m in Sources */,
+				670E0A541EE965A800C98990 /* SGH0618AntiEncodeViewController.m in Sources */,
+				670E0A551EE965A800C98990 /* AppDelegate.m in Sources */,
+				670E0A561EE965A800C98990 /* SGHShowHTMLViewController.m in Sources */,
+				670E0A581EE965A800C98990 /* SGH160507ViewController.m in Sources */,
+				670E0A591EE965A800C98990 /* SGH0618AnnotationViewController.m in Sources */,
+				670E0A5A1EE965A800C98990 /* SGHTableViewStyleGroupedViewController.m in Sources */,
+				670E0A5B1EE965A800C98990 /* main.m in Sources */,
+				670E0A5C1EE965A800C98990 /* SGH0618MapNavigationViewController.m in Sources */,
+				670E0A5D1EE965A800C98990 /* NSString+Chinese.m in Sources */,
+				670E0A5E1EE965A800C98990 /* SGHPopoverPresentationController.m in Sources */,
+				670E0A5F1EE965A800C98990 /* MASCompositeConstraint.m in Sources */,
+				670E0A601EE965A800C98990 /* SGHSesstionDownloadViewController.m in Sources */,
+				670E0A611EE965A800C98990 /* SGHSKStoreProductViewController.m in Sources */,
+				670E0A621EE965A800C98990 /* SGHAttributedStringViewController.m in Sources */,
+				670E0A631EE965A800C98990 /* NSArray+MASAdditions.m in Sources */,
+				670E0A641EE965A800C98990 /* SGHPopContentViewController.m in Sources */,
+				670E0A651EE965A800C98990 /* View+MASAdditions.m in Sources */,
+				670E0A661EE965A800C98990 /* SGHPlistDictionaryViewController.m in Sources */,
+				670E0A671EE965A800C98990 /* SGHUIFontViewController.m in Sources */,
+				670E0A681EE965A800C98990 /* SGH0727CollectionViewController.m in Sources */,
+				670E0A691EE965A800C98990 /* SGHRuntimeAttriMethodViewController.m in Sources */,
+				670E0A6A1EE965A800C98990 /* SGHUIKitDynamicsViewController.m in Sources */,
+				670E0A6B1EE965A800C98990 /* SGHStringShowViewController.m in Sources */,
+				670E0A6C1EE965A800C98990 /* SGHMethodSwizzlingObject.m in Sources */,
+				670E0A6D1EE965A800C98990 /* MASViewConstraint.m in Sources */,
+				670E0A6E1EE965A800C98990 /* SGHWebViewConstrainsViewController.m in Sources */,
+				670E0A6F1EE965A800C98990 /* UIButton+SGHHook.m in Sources */,
+				670E0A701EE965A800C98990 /* NSString+MD5.m in Sources */,
+				670E0A711EE965A800C98990 /* SGH0618GeocodeViewController.m in Sources */,
+				670E0A721EE965A800C98990 /* Reachability.m in Sources */,
+				670E0A731EE965A800C98990 /* SGHUniqueUUID_UDIDViewController.m in Sources */,
+				670E0A741EE965A800C98990 /* SGHDateCalendarViewController.m in Sources */,
+				670E0A751EE965A800C98990 /* MASConstraint.m in Sources */,
+				670E0A761EE965A800C98990 /* SGH0618Annotation.m in Sources */,
+				670E0A771EE965A800C98990 /* SGHNSURLSessionViewController.m in Sources */,
+				670E0A781EE965A800C98990 /* TKAccountModel.m in Sources */,
+				670E0A791EE965A800C98990 /* SGH160531ViewController.m in Sources */,
+				670E0A7A1EE965A800C98990 /* YYQKeyChain.m in Sources */,
+				670E0A7B1EE965A800C98990 /* SGHNetworkChangeViewController.m in Sources */,
+				670E0A7C1EE965A800C98990 /* SGH0618DynaAnnotationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6743DDBF1CB6171F000CF51C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1355,6 +1577,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		670E0A991EE965A800C98990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HCXVYWN652;
+				INFOPLIST_FILE = "ObjectiveCDemo-16-04-07 copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.ObjectiveCDemo-16-04-07";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		670E0A9A1EE965A800C98990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HCXVYWN652;
+				INFOPLIST_FILE = "ObjectiveCDemo-16-04-07 copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.ObjectiveCDemo-16-04-07";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6743DDD81CB6171F000CF51C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1392,7 +1640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1431,7 +1679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1468,6 +1716,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		670E0A981EE965A800C98990 /* Build configuration list for PBXNativeTarget "ObjectiveCDemo_iOS7.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670E0A991EE965A800C98990 /* Debug */,
+				670E0A9A1EE965A800C98990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6743DDBE1CB6171F000CF51C /* Build configuration list for PBXProject "ObjectiveCDemo-16-04-07" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

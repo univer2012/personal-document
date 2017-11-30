@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo160801/Example/Bookmarks/Example/8&#x9762;&#x5411;&#x534f;&#x8bae;&#x7f16;&#x7a0b;&#x4e0e; Cocoa &#x7684;&#x9082;&#x9005; (&#x4e0b;)/Ctrl/SGH1222POPAndCocoaViewController.swift"
@@ -49,6 +49,38 @@
             endingLineNumber = "25"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDemo160801.SGH1222POPAndCocoaViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "SwiftDemo160801"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangaengoln/Desktop/personal-document/SwiftDemo160801/SwiftDemo160801/Example/Bookmarks/Example/8%E9%9D%A2%E5%90%91%E5%8D%8F%E8%AE%AE%E7%BC%96%E7%A8%8B%E4%B8%8E%20Cocoa%20%E7%9A%84%E9%82%82%E9%80%85%20(%E4%B8%8B)/Ctrl/SGH1222POPAndCocoaViewController.swift"
+                  timestampString = "518059955.634718"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDemo160801.SGH1222POPAndCocoaViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "SwiftDemo160801"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangaengoln/Desktop/personal-document/SwiftDemo160801/SwiftDemo160801/Example/Bookmarks/Example/8%E9%9D%A2%E5%90%91%E5%8D%8F%E8%AE%AE%E7%BC%96%E7%A8%8B%E4%B8%8E%20Cocoa%20%E7%9A%84%E9%82%82%E9%80%85%20(%E4%B8%8B)/Ctrl/SGH1222POPAndCocoaViewController.swift"
+                  timestampString = "518059955.63948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "245">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67ED90741F8EE65A00B7A9F0 /* VarArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 67ED90731F8EE65A00B7A9F0 /* VarArgs.m */; };
 		67FBBEF01E1F80EE00BB353A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBBEEF1E1F80EE00BB353A /* main.m */; };
 		67FBBEF31E1F80EE00BB353A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBBEF21E1F80EE00BB353A /* AppDelegate.m */; };
 		67FBBEF61E1F80EE00BB353A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBBEF51E1F80EE00BB353A /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67ED90721F8EE65A00B7A9F0 /* VarArgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VarArgs.h; sourceTree = "<group>"; };
+		67ED90731F8EE65A00B7A9F0 /* VarArgs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VarArgs.m; sourceTree = "<group>"; };
 		67FBBEEB1E1F80EE00BB353A /* 程序猿群141607754.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "程序猿群141607754.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FBBEEF1E1F80EE00BB353A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67FBBEF11E1F80EE00BB353A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				67FBBEEF1E1F80EE00BB353A /* main.m */,
+				67ED90721F8EE65A00B7A9F0 /* VarArgs.h */,
+				67ED90731F8EE65A00B7A9F0 /* VarArgs.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			files = (
 				67FBBEF61E1F80EE00BB353A /* ViewController.m in Sources */,
 				67FBBEF31E1F80EE00BB353A /* AppDelegate.m in Sources */,
+				67ED90741F8EE65A00B7A9F0 /* VarArgs.m in Sources */,
 				67FBBEF01E1F80EE00BB353A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
