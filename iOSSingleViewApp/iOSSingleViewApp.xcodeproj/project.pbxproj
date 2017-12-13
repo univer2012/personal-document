@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673358061FDE668100F9FD78 /* CYLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 673358051FDE668100F9FD78 /* CYLUser.m */; };
+		6733581A1FDECB0200F9FD78 /* CYLBlockExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 673358191FDECB0200F9FD78 /* CYLBlockExecutor.m */; };
+		6733581D1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733581C1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.m */; };
+		673358231FE0C05600F9FD78 /* SGHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 673358221FE0C05600F9FD78 /* SGHPerson.m */; };
 		6747E1D91FC1526000980BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6747E1D81FC1526000980BFE /* AppDelegate.m */; };
 		6747E1DC1FC1526000980BFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6747E1DB1FC1526000980BFE /* ViewController.m */; };
 		6747E1DF1FC1526000980BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6747E1DD1FC1526000980BFE /* Main.storyboard */; };
@@ -16,10 +20,26 @@
 		67A4ECB81FC5D26A00EA7B37 /* FKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4ECB71FC5D26A00EA7B37 /* FKUser.m */; };
 		67A4ECBB1FC7103B00EA7B37 /* NSDictionary+print.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4ECBA1FC7103B00EA7B37 /* NSDictionary+print.m */; };
 		67A4ECD01FC8FA7A00EA7B37 /* bookinf.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4ECCF1FC8FA7A00EA7B37 /* bookinf.txt */; };
+		67AFA3C91FD164110094D39D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFA3C81FD164110094D39D /* Person.m */; };
+		67AFA3CD1FD164930094D39D /* Girl.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFA3CC1FD164930094D39D /* Girl.m */; };
+		67AFA3D01FD16B960094D39D /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AFA3CF1FD16B960094D39D /* Son.m */; };
+		67AFA3D61FD1B5C70094D39D /* launch_hq_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67AFA3D51FD1B5C70094D39D /* launch_hq_1.png */; };
 		67CA90AF1FCC4DAB00D9E27D /* FKGeometryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CA90AE1FCC4DAB00D9E27D /* FKGeometryView.m */; };
+		67FBA0241FD6DA96000DB901 /* SGHPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBA0231FD6DA96000DB901 /* SGHPushViewController.m */; };
+		67FBA0281FD6DDEF000DB901 /* SGHPushTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBA0261FD6DDEF000DB901 /* SGHPushTwoViewController.m */; };
+		67FBA0291FD6DDEF000DB901 /* SGHPushTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FBA0271FD6DDEF000DB901 /* SGHPushTwoViewController.xib */; };
+		67FBA02C1FD6DEFF000DB901 /* SGHPushCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBA02B1FD6DEFF000DB901 /* SGHPushCodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		673358041FDE668100F9FD78 /* CYLUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLUser.h; sourceTree = "<group>"; };
+		673358051FDE668100F9FD78 /* CYLUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLUser.m; sourceTree = "<group>"; };
+		673358181FDECB0200F9FD78 /* CYLBlockExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLBlockExecutor.h; sourceTree = "<group>"; };
+		673358191FDECB0200F9FD78 /* CYLBlockExecutor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLBlockExecutor.m; sourceTree = "<group>"; };
+		6733581B1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CYLRunAtDealloc.h"; sourceTree = "<group>"; };
+		6733581C1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CYLRunAtDealloc.m"; sourceTree = "<group>"; };
+		673358211FE0C05600F9FD78 /* SGHPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHPerson.h; sourceTree = "<group>"; };
+		673358221FE0C05600F9FD78 /* SGHPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHPerson.m; sourceTree = "<group>"; };
 		6747E1D41FC1526000980BFE /* iOSSingleViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSingleViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6747E1D71FC1526000980BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6747E1D81FC1526000980BFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,8 +55,22 @@
 		67A4ECB91FC7103B00EA7B37 /* NSDictionary+print.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+print.h"; sourceTree = "<group>"; };
 		67A4ECBA1FC7103B00EA7B37 /* NSDictionary+print.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+print.m"; sourceTree = "<group>"; };
 		67A4ECCF1FC8FA7A00EA7B37 /* bookinf.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bookinf.txt; sourceTree = "<group>"; };
+		67AFA3C71FD164110094D39D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		67AFA3C81FD164110094D39D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		67AFA3CB1FD164930094D39D /* Girl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Girl.h; sourceTree = "<group>"; };
+		67AFA3CC1FD164930094D39D /* Girl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Girl.m; sourceTree = "<group>"; };
+		67AFA3CE1FD16B960094D39D /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		67AFA3CF1FD16B960094D39D /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		67AFA3D51FD1B5C70094D39D /* launch_hq_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_hq_1.png; sourceTree = "<group>"; };
 		67CA90AD1FCC4DAB00D9E27D /* FKGeometryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKGeometryView.h; sourceTree = "<group>"; };
 		67CA90AE1FCC4DAB00D9E27D /* FKGeometryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKGeometryView.m; sourceTree = "<group>"; };
+		67FBA0221FD6DA96000DB901 /* SGHPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHPushViewController.h; sourceTree = "<group>"; };
+		67FBA0231FD6DA96000DB901 /* SGHPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHPushViewController.m; sourceTree = "<group>"; };
+		67FBA0251FD6DDEF000DB901 /* SGHPushTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHPushTwoViewController.h; sourceTree = "<group>"; };
+		67FBA0261FD6DDEF000DB901 /* SGHPushTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHPushTwoViewController.m; sourceTree = "<group>"; };
+		67FBA0271FD6DDEF000DB901 /* SGHPushTwoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SGHPushTwoViewController.xib; sourceTree = "<group>"; };
+		67FBA02A1FD6DEFF000DB901 /* SGHPushCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHPushCodeViewController.h; sourceTree = "<group>"; };
+		67FBA02B1FD6DEFF000DB901 /* SGHPushCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHPushCodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +107,30 @@
 				6747E1D81FC1526000980BFE /* AppDelegate.m */,
 				6747E1DA1FC1526000980BFE /* ViewController.h */,
 				6747E1DB1FC1526000980BFE /* ViewController.m */,
+				673358211FE0C05600F9FD78 /* SGHPerson.h */,
+				673358221FE0C05600F9FD78 /* SGHPerson.m */,
+				673358041FDE668100F9FD78 /* CYLUser.h */,
+				673358051FDE668100F9FD78 /* CYLUser.m */,
+				673358181FDECB0200F9FD78 /* CYLBlockExecutor.h */,
+				673358191FDECB0200F9FD78 /* CYLBlockExecutor.m */,
+				6733581B1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.h */,
+				6733581C1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.m */,
+				67FBA0221FD6DA96000DB901 /* SGHPushViewController.h */,
+				67FBA0231FD6DA96000DB901 /* SGHPushViewController.m */,
+				67FBA02A1FD6DEFF000DB901 /* SGHPushCodeViewController.h */,
+				67FBA02B1FD6DEFF000DB901 /* SGHPushCodeViewController.m */,
+				67FBA0251FD6DDEF000DB901 /* SGHPushTwoViewController.h */,
+				67FBA0261FD6DDEF000DB901 /* SGHPushTwoViewController.m */,
+				67FBA0271FD6DDEF000DB901 /* SGHPushTwoViewController.xib */,
 				67CA90AD1FCC4DAB00D9E27D /* FKGeometryView.h */,
 				67CA90AE1FCC4DAB00D9E27D /* FKGeometryView.m */,
 				6747E1DD1FC1526000980BFE /* Main.storyboard */,
 				6747E1E01FC1526000980BFE /* Assets.xcassets */,
 				6747E1E21FC1526000980BFE /* LaunchScreen.storyboard */,
+				67AFA3D51FD1B5C70094D39D /* launch_hq_1.png */,
 				6747E1E51FC1526000980BFE /* Info.plist */,
 				6747E1E61FC1526000980BFE /* main.m */,
+				67AFA3CA1FD164730094D39D /* Persions */,
 				67A4ECB61FC5D26A00EA7B37 /* FKUser.h */,
 				67A4ECB71FC5D26A00EA7B37 /* FKUser.m */,
 				67A4ECB91FC7103B00EA7B37 /* NSDictionary+print.h */,
@@ -87,6 +138,19 @@
 				67A4ECCF1FC8FA7A00EA7B37 /* bookinf.txt */,
 			);
 			path = iOSSingleViewApp;
+			sourceTree = "<group>";
+		};
+		67AFA3CA1FD164730094D39D /* Persions */ = {
+			isa = PBXGroup;
+			children = (
+				67AFA3C71FD164110094D39D /* Person.h */,
+				67AFA3C81FD164110094D39D /* Person.m */,
+				67AFA3CB1FD164930094D39D /* Girl.h */,
+				67AFA3CC1FD164930094D39D /* Girl.m */,
+				67AFA3CE1FD16B960094D39D /* Son.h */,
+				67AFA3CF1FD16B960094D39D /* Son.m */,
+			);
+			path = Persions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +211,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FBA0291FD6DDEF000DB901 /* SGHPushTwoViewController.xib in Resources */,
 				6747E1E41FC1526000980BFE /* LaunchScreen.storyboard in Resources */,
 				67A4ECD01FC8FA7A00EA7B37 /* bookinf.txt in Resources */,
+				67AFA3D61FD1B5C70094D39D /* launch_hq_1.png in Resources */,
 				6747E1E11FC1526000980BFE /* Assets.xcassets in Resources */,
 				6747E1DF1FC1526000980BFE /* Main.storyboard in Resources */,
 			);
@@ -163,10 +229,20 @@
 			files = (
 				6747E1DC1FC1526000980BFE /* ViewController.m in Sources */,
 				6747E1E71FC1526000980BFE /* main.m in Sources */,
+				67FBA02C1FD6DEFF000DB901 /* SGHPushCodeViewController.m in Sources */,
+				673358061FDE668100F9FD78 /* CYLUser.m in Sources */,
+				67AFA3C91FD164110094D39D /* Person.m in Sources */,
 				6747E1D91FC1526000980BFE /* AppDelegate.m in Sources */,
 				67A4ECBB1FC7103B00EA7B37 /* NSDictionary+print.m in Sources */,
 				67A4ECB81FC5D26A00EA7B37 /* FKUser.m in Sources */,
+				67AFA3D01FD16B960094D39D /* Son.m in Sources */,
+				67FBA0241FD6DA96000DB901 /* SGHPushViewController.m in Sources */,
 				67CA90AF1FCC4DAB00D9E27D /* FKGeometryView.m in Sources */,
+				6733581D1FDECEA000F9FD78 /* NSObject+CYLRunAtDealloc.m in Sources */,
+				67AFA3CD1FD164930094D39D /* Girl.m in Sources */,
+				67FBA0281FD6DDEF000DB901 /* SGHPushTwoViewController.m in Sources */,
+				6733581A1FDECB0200F9FD78 /* CYLBlockExecutor.m in Sources */,
+				673358231FE0C05600F9FD78 /* SGHPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +277,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -256,7 +332,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -300,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HCXVYWN652;
 				INFOPLIST_FILE = iOSSingleViewApp/Info.plist;
@@ -314,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HCXVYWN652;
 				INFOPLIST_FILE = iOSSingleViewApp/Info.plist;

@@ -39,7 +39,8 @@
                           @"SGH0618MapNavigationViewController",
                           @"SGH0629AlertViewController",
                           @"SGH0727CollectionViewController",
-                          @"SGH0728CALayerViewController"
+                          @"SGH0728CALayerViewController",
+                          @"SGH171130RetainCycleTestViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1WWDC 2013 Session笔记 - UIKit Dynamics入门",
@@ -54,7 +55,8 @@
                         @"10导航",
                         @"11UIAlertController",
                         @"12CollectionView设置frame时受导航栏影响的问题",
-                        @"13CALayer的介绍"
+                        @"13CALayer的介绍",
+                        @"14使用FBRetainCycleDetector测试"
                         ] mutableCopy];
 }
 

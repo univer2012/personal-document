@@ -22,11 +22,11 @@
 
     //------下面绘制3个线段测试端点形状-----
     //定义4个点，绘制线段
-    const CGPoint points1[] = {CGPointMake(10, 20), CGPointMake(100, 20), CGPointMake(100, 20), CGPointMake(20, 50)}; //定义4个点，绘制线段
+    const CGPoint points1[] = {CGPointMake(10, 40), CGPointMake(100, 40), CGPointMake(100, 40), CGPointMake(20, 70)}; //定义4个点，绘制线段
     CGContextStrokeLineSegments(ctx, points1, 4);//绘制线段（默认不绘制断点）
     CGContextSetLineCap(ctx, kCGLineCapSquare);//设置线段的断点形状：方形端点
 
-    const CGPoint points2[] = {CGPointMake(120, 20), CGPointMake(200, 20), CGPointMake(200, 20), CGPointMake(130, 50)};     //定义4个点，绘制线段
+    const CGPoint points2[] = {CGPointMake(120, 88), CGPointMake(200, 88), CGPointMake(200, 88), CGPointMake(130, 118)};     //定义4个点，绘制线段
     CGContextStrokeLineSegments(ctx, points2, 4);
     CGContextSetLineCap(ctx, kCGLineCapRound);
 

@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[]) {
+    NSLog(@"%s",__func__);
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
@@ -48,18 +49,26 @@ NSString *getPathWithName(NSString *name) {
 
 
 #import "FKUser.h"
+
+
+@interface MyClass:NSObject
+@property(nonatomic, copy)void(^myBlock)(void);
+@end
+@implementation MyClass
+
+@end
+
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        //直接使用多个value，key的形式创建NSDictionary对象
-        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithInt:89],@"Objective-C",
-                              [NSNumber numberWithInt:69],@"Ruby",
-                              [NSNumber numberWithInt:75],@"Python",
-                              [NSNumber numberWithInt:109],@"Perl",nil];
-        //对dict对象进行归档
-        [NSKeyedArchiver archiveRootObject:dict toFile:@"myDict.archive"];
+        MyClass *obj = [[[MyClass alloc] init] autorelease];
+        obj.myBlock = ^{
+        };
+        return 0;
     }
 }
+
+
 
 #endif
 

@@ -8,6 +8,8 @@
 
 #import "SGH161223ComponentsDemoViewController.h"
 
+
+
 @interface SGH161223ComponentsDemoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
@@ -18,8 +20,12 @@
 @implementation SGH161223ComponentsDemoViewController
 
 - (void)viewDidLoad {
+    NSLog(@"%s", __FUNCTION__);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+
+
     self.tableView=({
         UITableView *tableView=[UITableView new];
         [self.view addSubview:tableView];
@@ -28,12 +34,12 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray= [@[@"SGH161223WZLBadgeViewController"
-                          
+    _controllersArray= [@[@"SGH161223WZLBadgeViewController",
+                          @"SGHAFNetworkingViewController"
                           ] mutableCopy];
     
-    self.titlesArray=[@[@"1、WZLBadge"
-                        
+    self.titlesArray=[@[@"1、WZLBadge",
+                        @"2、AFNetworking"
                         ] mutableCopy];
     
 }
@@ -64,10 +70,9 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+
 
 /*
 #pragma mark - Navigation

@@ -4,6 +4,8 @@ pod 'AMap2DMap-NO-IDFA' #2D地图SDK,NO IDFA版本(3D地图与2D地图不能同�
 
 pod 'Masonry'
 
+pod 'AFNetworking', '~> 3.0’
+
 #use_frameworks!
 #pod 'XMPPFramework', '~> 3.6.4'
 end

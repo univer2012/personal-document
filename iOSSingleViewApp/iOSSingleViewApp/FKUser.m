@@ -11,6 +11,10 @@
 @implementation FKUser
 @synthesize name;
 @synthesize pass;
+
+
+
+
 -(id)initWithName:(NSString *)aName pass:(NSString *)aPass {
     if (self = [super init]) {
         name = aName;

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "NSObject+CYLRunAtDealloc.h"
+
 @interface AppDelegate ()
 @property(nonatomic, assign)int count;
 @end
@@ -16,6 +18,11 @@
 @synthesize count;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    NSObject *foo = [[NSObject alloc] init];
+    [foo cyl_runAtDealloc:^{
+        NSLog(@"正在释放foo！");
+    }];
     // Override point for customization after application launch.
     //启动一个定时器
     //[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(info:) userInfo:nil repeats:YES];
