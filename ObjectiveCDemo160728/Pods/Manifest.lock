@@ -26,6 +26,14 @@ DEPENDENCIES:
   - BaiduMapKit
   - Masonry
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AMap2DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - BaiduMapKit
+    - Masonry
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap2DMap-NO-IDFA: 710e218ec76c9a1b5f74ab915b723961e48d5216
@@ -35,4 +43,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9a09616f4be1be9e562347fdfb20f62aa49256bc
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
