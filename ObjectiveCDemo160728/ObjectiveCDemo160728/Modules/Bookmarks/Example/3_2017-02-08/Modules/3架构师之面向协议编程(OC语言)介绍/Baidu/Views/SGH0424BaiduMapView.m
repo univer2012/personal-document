@@ -8,13 +8,13 @@
 
 #import "SGH0424BaiduMapView.h"
 
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
-#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+//#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+//#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
 
 //百度具体的实现类(专门用于处理百度地图MapView)
 //用来管理百度地图MapView
 @interface SGH0424BaiduMapView ()
-@property(nonatomic)BMKMapView* mapView;
+//@property(nonatomic)BMKMapView* mapView;
 
 @end
 
@@ -25,13 +25,14 @@
     self = [super init];
     if (self) {
         //初始化百度地图MapView
-        _mapView = [[BMKMapView alloc]initWithFrame:frame];
+//        _mapView = [[BMKMapView alloc]initWithFrame:frame];
     }
     return self;
 }
 
 -(UIView *)getView {
-    return _mapView;
+//    return _mapView;
+    return [UIView new];
 }
 
 @end

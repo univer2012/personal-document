@@ -129,7 +129,6 @@
 		67FBA0211FD66C79000DB901 /* SGHAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBA0201FD66C79000DB901 /* SGHAFNetworkingViewController.m */; };
 		67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */; };
 		67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */; };
-		67FC937E1EAF115200F67956 /* spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FC937D1EAF115200F67956 /* spaceship.png */; };
 		8E60E0114CE177A1FDBFCCD2 /* libPods-ObjectiveCDemo160728.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */; };
 /* End PBXBuildFile section */
 
@@ -378,7 +377,6 @@
 		67FC936A1EAE00DE00F67956 /* SGH0424MapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapFactory.h; sourceTree = "<group>"; };
 		67FC937A1EAF07B800F67956 /* SGH0425RunloopImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0425RunloopImageViewController.h; sourceTree = "<group>"; };
 		67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
-		67FC937D1EAF115200F67956 /* spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaceship.png; sourceTree = "<group>"; };
 		A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.debug.xcconfig"; sourceTree = "<group>"; };
 		B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.release.xcconfig"; sourceTree = "<group>"; };
 		CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCDemo160728.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1859,7 +1857,6 @@
 		67FC93781EAF079E00F67956 /* 4利用runloop来解决图像卡顿 */ = {
 			isa = PBXGroup;
 			children = (
-				67FC937D1EAF115200F67956 /* spaceship.png */,
 				67FC93791EAF079E00F67956 /* Ctrl */,
 			);
 			path = "4利用runloop来解决图像卡顿";
@@ -1894,7 +1891,6 @@
 				67EDCF401D4A07E300058E8D /* Sources */,
 				67EDCF411D4A07E300058E8D /* Frameworks */,
 				67EDCF421D4A07E300058E8D /* Resources */,
-				5C96A647B0687251AE40F155 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1952,7 +1948,8 @@
 				TargetAttributes = {
 					67EDCF431D4A07E300058E8D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = HCXVYWN652;
+						DevelopmentTeam = K4A67L5PAT;
+						ProvisioningStyle = Automatic;
 					};
 					67EDCF5C1D4A07E300058E8D = {
 						CreatedOnToolsVersion = 7.3;
@@ -2002,7 +1999,6 @@
 				677177D31DEBD081009AB627 /* SGH0729TransitionGroupViewController.xib in Resources */,
 				677177E41DEBD081009AB627 /* SGH0824AlertViewViewController.xib in Resources */,
 				677177C91DEBD081009AB627 /* books.xml in Resources */,
-				67FC937E1EAF115200F67956 /* spaceship.png in Resources */,
 				67EDCF521D4A07E300058E8D /* Main.storyboard in Resources */,
 				677177D81DEBD081009AB627 /* SGHWheelView.xib in Resources */,
 				677177D51DEBD081009AB627 /* SGH0729WheelViewController.xib in Resources */,
@@ -2044,26 +2040,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C96A647B0687251AE40F155 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728-resources.sh",
-				"${PODS_ROOT}/AMap2DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2314,10 +2290,12 @@
 			baseConfigurationReference = A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mengshi Li (QCNF96K99P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mengshi Li (QCNF96K99P)";
-				DEVELOPMENT_TEAM = HCXVYWN652;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4A67L5PAT;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2334,10 +2312,39 @@
 				INFOPLIST_FILE = ObjectiveCDemo160728/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"c++\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.ObjectiveCDemo160728;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e8350c84-ea83-4a29-a9d8-5d21110fdfb7";
-				PROVISIONING_PROFILE_SPECIFIER = iosTest;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -2346,9 +2353,11 @@
 			baseConfigurationReference = B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.thinkive.pushTest";
-				DEVELOPMENT_TEAM = HCXVYWN652;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4A67L5PAT;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2365,10 +2374,39 @@
 				INFOPLIST_FILE = ObjectiveCDemo160728/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"c++\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.ObjectiveCDemo160728;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c5650571-8630-4bf5-8bb0-5f612108c67b";
-				PROVISIONING_PROFILE_SPECIFIER = iosTest;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

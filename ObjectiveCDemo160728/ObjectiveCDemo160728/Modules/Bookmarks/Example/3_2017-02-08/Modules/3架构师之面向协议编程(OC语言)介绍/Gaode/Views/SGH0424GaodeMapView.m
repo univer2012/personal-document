@@ -8,11 +8,11 @@
 
 #import "SGH0424GaodeMapView.h"
 
-#import <MAMapKit/MAMapKit.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>
+//#import <MAMapKit/MAMapKit.h>
+//#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface SGH0424GaodeMapView ()
-@property(nonatomic)MAMapView *mapView;
+//@property(nonatomic)MAMapView *mapView;
 
 @end
 
@@ -25,15 +25,15 @@
     self = [super init];
     if (self) {
         //初始化搞得MapView
-        _mapView = [[MAMapView alloc]initWithFrame:frame];
+//        _mapView = [[MAMapView alloc]initWithFrame:frame];
         
     }
     return self;
 }
 
 
--(UIView *)getView {
-    return _mapView;
-}
+//-(UIView *)getView {
+//    return _mapView;
+//}
 
 @end

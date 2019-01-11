@@ -9,7 +9,7 @@
 #import "SGH0424GaodeFactory.h"
 #import "SGH0424GaodeMapView.h"
 
-#import <AMapFoundationKit/AMapFoundationKit.h>
+//#import <AMapFoundationKit/AMapFoundationKit.h>
 
 //实现类（实现高德地图工厂：用于管理高德地图需要创建的模块）
 @implementation SGH0424GaodeFactory
@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         //初始化高德地图SDK
-        [AMapServices sharedServices].apiKey = @"c60dbb5b054048a08face88f4967f0f6";
+//        [AMapServices sharedServices].apiKey = @"c60dbb5b054048a08face88f4967f0f6";
     }
     return self;
 }
