@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2437D621ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */; };
+		0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */; };
 		6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */; };
 		6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B12A1E0B70CB0010E6A8 /* User.swift */; };
 		6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */; };
@@ -106,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingViewController.swift; sourceTree = "<group>"; };
 		6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1222POPAndCocoaViewController.swift; sourceTree = "<group>"; };
 		6735B12A1E0B70CB0010E6A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNetworkTests.swift; sourceTree = "<group>"; };
@@ -219,6 +223,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2437D421ECA38E005BFBF9 /* 10UICollectionViewCellAutoSizing */ = {
+			isa = PBXGroup;
+			children = (
+				0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */,
+				0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */,
+			);
+			path = 10UICollectionViewCellAutoSizing;
+			sourceTree = "<group>";
+		};
 		6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +277,7 @@
 		6739F4C01E00E93C009C5073 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				0B2437D421ECA38E005BFBF9 /* 10UICollectionViewCellAutoSizing */,
 				67FC93541EADD87D00F67956 /* 9架构师之泛型应用分析介绍 */,
 				6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */,
 				6739F57D1E00F497009C5073 /* 7Auto Layout 使用心得 */,
@@ -1144,6 +1158,7 @@
 				6739F5711E00E93C009C5073 /* PageControl.swift in Sources */,
 				6739F53A1E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift in Sources */,
 				6739F5741E00E95E009C5073 /* SGH1214BookmarksViewController.swift in Sources */,
+				0B2437D621ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift in Sources */,
 				6739F5651E00E93C009C5073 /* SGH0817KeyFrameAnimationViewController.swift in Sources */,
 				6739F56B1E00E93C009C5073 /* SGH0819MiddleAutoLayoutViewController.swift in Sources */,
 				6739F5401E00E93C009C5073 /* SGHAvatarView.swift in Sources */,
@@ -1167,6 +1182,7 @@
 				6739F55D1E00E93C009C5073 /* SGH0812LayerViewController.swift in Sources */,
 				6739F5611E00E93C009C5073 /* SGHAnimationGroupViewController.swift in Sources */,
 				6739F5461E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift in Sources */,
+				0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */,
 				6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */,
 				6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */,
 				6739F56D1E00E93C009C5073 /* SGH0819HorizonalItemList.swift in Sources */,

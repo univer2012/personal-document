@@ -19,7 +19,8 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
                        "6、尝试面向轨道编程",
                        "7、Auto Layout 使用心得",
                        "8、面向协议编程与 Cocoa 的邂逅 (下)",
-                       "9、架构师之泛型应用分析介绍"
+                       "9、架构师之泛型应用分析介绍",
+                       "10、UICollectionViewCell Auto Sizing(自适应高度)"
     ]
     
     var controllersArray = [SGH160802ViewController(),
@@ -30,7 +31,8 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
                             SGH1213TrackProgramViewController(),
                             SGH1214AutolayoutViewController(),
                             SGH1222POPAndCocoaViewController(),
-                            DreamGenericViewController()
+                            DreamGenericViewController(),
+                            SGH1901AutoSizingViewController()
     ]
     
     override func viewDidLoad() {
