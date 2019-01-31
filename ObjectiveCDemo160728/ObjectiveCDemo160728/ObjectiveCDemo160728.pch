@@ -1,0 +1,27 @@
+//
+//  ObjectiveCDemo160728.pch
+//  ObjectiveCDemo160728
+//
+//  Created by 远平 on 2019/1/30.
+//  Copyright © 2019 huangaengoln. All rights reserved.
+//
+
+#ifndef ObjectiveCDemo160728_pch
+#define ObjectiveCDemo160728_pch
+
+
+
+#import "Utility.h"
+#import "XGDeviceManager.h"
+
+#import "UIColor+Hex.h"
+#import "UIView+LCAdd.h"
+
+/** blockSelf和weakSelf 宏定义  */
+#define kWeakSelf __weak typeof(self) weakSelf = self;
+#define kBlockSelf __block typeof(self) blockSelf = self;
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* ObjectiveCDemo160728_pch */
