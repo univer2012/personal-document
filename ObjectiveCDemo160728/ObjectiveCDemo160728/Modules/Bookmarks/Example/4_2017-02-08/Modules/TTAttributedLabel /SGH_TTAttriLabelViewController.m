@@ -66,7 +66,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+#if 0
     NSString *oneString = @"1. 通过AppStore充值书币，可以查看";
     NSString *oneActionString = @"充值引导帮助 ";
     NSString *twoString = @" 。\n2. 苹果政策规定iOS上的书币不能在其它终端使用。 \n3. 充值过程可能会有延迟到账的情况，如果长时间未到账，请 从“我的”一“意见反馈”里进行反馈，客服人员会进行处理。\n4. 本页面显示的赠送书币，为相应充值方式的最高金额 赠送数量。 \n5. 点击充值，代表您已阅读过 ";
@@ -90,9 +90,7 @@
         [self.view addSubview:label];
         label;
     });
-    
-    
-    
+    /** 只改变文字颜色、大小  */
 //    TYTextStorage *textStorage = [[TYTextStorage alloc]init];
 //    textStorage.range = [text rangeOfString:@"总有一天你将破蛹而出"];
 //    textStorage.textColor = [UIColor orangeColor];
@@ -129,7 +127,7 @@
         storage;
     });
     [bottomLabel addTextStorage:threeLinkStorage];
-    
+#endif
     
     
     
@@ -150,8 +148,8 @@
     
     NSString *bottomString = [NSString stringWithFormat:@"%@%@%@%@%@%@",oneString,oneActionString,twoString, twoActionString, threeString, threeActionString];
     /** 内容的宽度  */
-    CGFloat contentWidth = XGDeviceManager.screenWidth - 30;
-    CGSize stringSize = [Utility boundingRactWithSize:CGSizeMake(contentWidth, CGFLOAT_MAX) font:[UIFont systemFontOfSize:12 weight:UIFontWeightLight] content:bottomString];
+    CGFloat contentWidth = SGHDeviceManager.screenWidth - 30;
+    CGSize stringSize = [SHUtility boundingRactWithSize:CGSizeMake(contentWidth, CGFLOAT_MAX) font:[UIFont systemFontOfSize:12 weight:UIFontWeightLight] content:bottomString];
     
     NSMutableAttributedString *bottomAttString = [[NSMutableAttributedString alloc] initWithString:bottomString];
     [bottomAttString addAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#D3392C"]} range:[bottomString rangeOfString:oneActionString]];
@@ -175,7 +173,7 @@
     
     
     
-#if 0
+#if 1
     NSString *text=@"弱者普遍易怒如虎，而且容易暴怒。强者通常平静如水，并且相对平和。一个内心不强大的人，自然内心不够平静。内心不平静的人，处处是风浪。再小的事，都会被无限放大。一个内心不强大的人，心中永远缺乏安全感  https://github.com/TTTAttributedLabel/TTTAttributedLabel  15112345678  2017-05-06 天安门";
     
     TTTAttributedLabel *label = ({
@@ -197,28 +195,12 @@
         label;
     });
     
-    
-//    __block NSString * oneSelsectString = @"强者通常平静如水";
     __block NSString * twoSelsectString = @"一个内心不强大的人，心中永远缺乏安全感";
     __block NSRange twoSelRange = [text rangeOfString:twoSelsectString];
     
     
     //设置需要点击的文字的颜色大小
     [label setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
-        
-        /** ============ oneSelsectString ==================  */
-//        //得到需要点击的文字的位置
-//        NSRange selRange=[text rangeOfString:oneSelsectString];
-//        //设定可点击文字的的大小
-//        UIFont *selFont=[UIFont systemFontOfSize:14];
-//        CTFontRef selFontRef = CTFontCreateWithName((__bridge CFStringRef)selFont.fontName, selFont.pointSize, NULL);
-//        //设置可点击文本的大小
-//        [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)selFontRef range:selRange];
-//        //设置可点击文本的颜色
-//        [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[[UIColor blueColor] CGColor] range:selRange];
-//        //设置可点击文本的背景颜色
-//        [mutableAttributedString addAttribute:(NSString*)kCTBackgroundColorAttributeName value:(id)[[UIColor redColor] CGColor] range:selRange];
-//        CFRelease(selFontRef);
         
         /** ============ twoSelsectString ==================  */
         //得到需要点击的文字的位置
@@ -240,10 +222,6 @@
     }];
     
     /** ============ transitInformation ==================  */
-    //给  强者通常平静如水   添加点击事件
-//    NSRange selRange = [text rangeOfString:oneSelsectString];
-//    [label addLinkToTransitInformation:@{@"select": oneSelsectString} withRange:selRange];
-    
     //给  强者通常平静如水   添加点击事件
     [label addLinkToTransitInformation:@{@"select": @(1)} withRange:twoSelRange];
     

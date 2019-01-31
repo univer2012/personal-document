@@ -1,19 +1,18 @@
 //
-//  Utility.h
-//  DailyRead
+//  SHUtility.h
+//  ObjectiveC
 //
-//  Created by sengoln huang on 2018/12/25.
-//  Copyright © 2018年 爱阅读. All rights reserved.
+//  Created by sengoln huang on 2019/1/31.
+//  Copyright © 2019 huangaengoln. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @class BDTBaseNetworkModel;
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface Utility : NSObject
+@interface SHUtility : NSObject
 
 
 //存取String
@@ -51,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  比较2个字符串时间的时间差
-
+ 
  @param starTime 开始时间
  @param endTime 结束时间
  @return 时间差，单位：秒
@@ -60,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  比较2个字符串时间的时间差
-
+ 
  @param starTime 开始时间
  @param endTime 结束时间
  @return 时间差，包含年、月、日、时、分、秒

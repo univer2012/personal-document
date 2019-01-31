@@ -11,8 +11,8 @@
 
 
 
-#import "Utility.h"
-#import "XGDeviceManager.h"
+#import "SHUtility.h"
+#import "SGHDeviceManager.h"
 
 #import "UIColor+Hex.h"
 #import "UIView+LCAdd.h"

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B08F0672202B7E700D03708 /* SHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F0662202B7E700D03708 /* SHUtility.m */; };
+		0B08F06A2202B8C300D03708 /* SHAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F0692202B8C300D03708 /* SHAlertViewManager.m */; };
+		0B08F06D2202B8ED00D03708 /* SHAlertViewSetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F06C2202B8ED00D03708 /* SHAlertViewSetModel.m */; };
+		0B08F0712202BE3600D03708 /* SGHDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F0702202BE3600D03708 /* SGHDeviceManager.m */; };
 		6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6700C67D1E30BF90006AC47B /* SGH170119CrashRankViewController.m */; };
 		6702E3671FCF9A5D00F036EB /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702E3621FCF9A5D00F036EB /* CAAnimation+WAnimation.m */; };
 		6702E3681FCF9A5D00F036EB /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702E3641FCF9A5D00F036EB /* UIView+Frame.m */; };
@@ -140,8 +144,6 @@
 		8F92670022009A9C009B3FC1 /* WBTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9266FF22009A9C009B3FC1 /* WBTag.m */; };
 		8F92670422009B07009B3FC1 /* WBButtonLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92670322009B07009B3FC1 /* WBButtonLink.m */; };
 		8F9267082201CE42009B3FC1 /* SGH_TTAttriLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267072201CE42009B3FC1 /* SGH_TTAttriLabelViewController.m */; };
-		8F92670C2201E8DD009B3FC1 /* XGDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92670B2201E8DD009B3FC1 /* XGDeviceManager.m */; };
-		8F9267102201E93C009B3FC1 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92670E2201E93C009B3FC1 /* Utility.m */; };
 		8F9267152201EB63009B3FC1 /* BDTConstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267142201EB63009B3FC1 /* BDTConstManager.m */; };
 		8F92671B2201EBC2009B3FC1 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267172201EBC0009B3FC1 /* UIColor+Hex.m */; };
 		8F92671C2201EBC2009B3FC1 /* UIView+LCAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267182201EBC1009B3FC1 /* UIView+LCAdd.m */; };
@@ -166,6 +168,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B08F0652202B7E700D03708 /* SHUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUtility.h; sourceTree = "<group>"; };
+		0B08F0662202B7E700D03708 /* SHUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUtility.m; sourceTree = "<group>"; };
+		0B08F0682202B8C300D03708 /* SHAlertViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAlertViewManager.h; sourceTree = "<group>"; };
+		0B08F0692202B8C300D03708 /* SHAlertViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAlertViewManager.m; sourceTree = "<group>"; };
+		0B08F06B2202B8ED00D03708 /* SHAlertViewSetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAlertViewSetModel.h; sourceTree = "<group>"; };
+		0B08F06C2202B8ED00D03708 /* SHAlertViewSetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAlertViewSetModel.m; sourceTree = "<group>"; };
+		0B08F06F2202BE3600D03708 /* SGHDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDeviceManager.h; sourceTree = "<group>"; };
+		0B08F0702202BE3600D03708 /* SGHDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDeviceManager.m; sourceTree = "<group>"; };
 		6700C67C1E30BF90006AC47B /* SGH170119CrashRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH170119CrashRankViewController.h; sourceTree = "<group>"; };
 		6700C67D1E30BF90006AC47B /* SGH170119CrashRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170119CrashRankViewController.m; sourceTree = "<group>"; };
 		6702E3611FCF9A5D00F036EB /* CAAnimation+WAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+WAnimation.h"; sourceTree = "<group>"; };
@@ -414,10 +424,6 @@
 		8F92670322009B07009B3FC1 /* WBButtonLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBButtonLink.m; sourceTree = "<group>"; };
 		8F9267062201CE42009B3FC1 /* SGH_TTAttriLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH_TTAttriLabelViewController.h; sourceTree = "<group>"; };
 		8F9267072201CE42009B3FC1 /* SGH_TTAttriLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH_TTAttriLabelViewController.m; sourceTree = "<group>"; };
-		8F92670A2201E8DD009B3FC1 /* XGDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGDeviceManager.h; sourceTree = "<group>"; };
-		8F92670B2201E8DD009B3FC1 /* XGDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGDeviceManager.m; sourceTree = "<group>"; };
-		8F92670E2201E93C009B3FC1 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		8F92670F2201E93C009B3FC1 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		8F9267112201E9C7009B3FC1 /* ObjectiveCDemo160728.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCDemo160728.pch; sourceTree = "<group>"; };
 		8F9267132201EB63009B3FC1 /* BDTConstManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTConstManager.h; sourceTree = "<group>"; };
 		8F9267142201EB63009B3FC1 /* BDTConstManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTConstManager.m; sourceTree = "<group>"; };
@@ -462,9 +468,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B08F05E22029B1E00D03708 /* DeviceManager */ = {
+		0B08F05E22029B1E00D03708 /* AlertViewManager */ = {
 			isa = PBXGroup;
 			children = (
+				0B08F0682202B8C300D03708 /* SHAlertViewManager.h */,
+				0B08F0692202B8C300D03708 /* SHAlertViewManager.m */,
+				0B08F06B2202B8ED00D03708 /* SHAlertViewSetModel.h */,
+				0B08F06C2202B8ED00D03708 /* SHAlertViewSetModel.m */,
+			);
+			path = AlertViewManager;
+			sourceTree = "<group>";
+		};
+		0B08F06E2202BE3600D03708 /* DeviceManager */ = {
+			isa = PBXGroup;
+			children = (
+				0B08F06F2202BE3600D03708 /* SGHDeviceManager.h */,
+				0B08F0702202BE3600D03708 /* SGHDeviceManager.m */,
 			);
 			path = DeviceManager;
 			sourceTree = "<group>";
@@ -1839,10 +1858,10 @@
 		67FA0D151DE8173A0012EDFF /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				0B08F05E22029B1E00D03708 /* DeviceManager */,
+				0B08F06E2202BE3600D03708 /* DeviceManager */,
+				0B08F05E22029B1E00D03708 /* AlertViewManager */,
 				8F9267122201EB63009B3FC1 /* Const */,
 				8F92670D2201E93C009B3FC1 /* Utility */,
-				8F9267092201E8C0009B3FC1 /* XGDeviceManager */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -2027,20 +2046,11 @@
 			path = "TTAttributedLabel ";
 			sourceTree = "<group>";
 		};
-		8F9267092201E8C0009B3FC1 /* XGDeviceManager */ = {
-			isa = PBXGroup;
-			children = (
-				8F92670A2201E8DD009B3FC1 /* XGDeviceManager.h */,
-				8F92670B2201E8DD009B3FC1 /* XGDeviceManager.m */,
-			);
-			path = XGDeviceManager;
-			sourceTree = "<group>";
-		};
 		8F92670D2201E93C009B3FC1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				8F92670E2201E93C009B3FC1 /* Utility.m */,
-				8F92670F2201E93C009B3FC1 /* Utility.h */,
+				0B08F0652202B7E700D03708 /* SHUtility.h */,
+				0B08F0662202B7E700D03708 /* SHUtility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -2147,6 +2157,7 @@
 		67EDCF3C1D4A07E300058E8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SH;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = huangaengoln;
 				TargetAttributes = {
@@ -2265,6 +2276,7 @@
 				677177CF1DEBD081009AB627 /* SGH0729Layer.m in Sources */,
 				677177C01DEBD081009AB627 /* SGH1101DidScreenshotNotiViewController.m in Sources */,
 				677177DD1DEBD081009AB627 /* SGH0824PresentAndPushOneViewController.m in Sources */,
+				0B08F0672202B7E700D03708 /* SHUtility.m in Sources */,
 				6785945B1E4AF22E006BA5CB /* SGH170208ViewController.m in Sources */,
 				677177C51DEBD081009AB627 /* SGH1108UpdateAppViewController.m in Sources */,
 				6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */,
@@ -2279,11 +2291,13 @@
 				6702E3681FCF9A5D00F036EB /* UIView+Frame.m in Sources */,
 				677BB9CD1ED5B327005A1CA8 /* SGH0524PresentCViewController.m in Sources */,
 				8F9267082201CE42009B3FC1 /* SGH_TTAttriLabelViewController.m in Sources */,
+				0B08F06D2202B8ED00D03708 /* SHAlertViewSetModel.m in Sources */,
 				677177C11DEBD081009AB627 /* SGH1103AESViewController.m in Sources */,
 				8F9266F422009910009B3FC1 /* WBPictureMetadata.m in Sources */,
 				8F9266F722009959009B3FC1 /* WBPicture.m in Sources */,
 				677177DA1DEBD081009AB627 /* SGH0802ExpressionViewController.m in Sources */,
 				677177D11DEBD081009AB627 /* SGH0729TransitionGroupSecondViewController.m in Sources */,
+				0B08F06A2202B8C300D03708 /* SHAlertViewManager.m in Sources */,
 				8F9267212201ED25009B3FC1 /* NSDictionary+NilSafe.m in Sources */,
 				6748E0671ECD971300CF62DA /* SGHXMPPFrameworkViewController.m in Sources */,
 				677177C41DEBD081009AB627 /* SGH16110701ViewController.m in Sources */,
@@ -2320,6 +2334,7 @@
 				67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */,
 				67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */,
 				67B5F38B1EC3F93F0035A9C0 /* SGH0511Runtime3ViewController.m in Sources */,
+				0B08F0712202BE3600D03708 /* SGHDeviceManager.m in Sources */,
 				8F9266F0220094D6009B3FC1 /* WBStatus.m in Sources */,
 				677177DF1DEBD081009AB627 /* SGH0824PresentAndPushThreeViewController.m in Sources */,
 				677177DB1DEBD081009AB627 /* SGH0824PresentAndPushFourViewController.m in Sources */,
@@ -2340,14 +2355,12 @@
 				677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */,
 				67A5552E1EC35A0D0052DCC3 /* UIView+SGHTapGesture.m in Sources */,
 				677177E71DEBD081009AB627 /* SXNewsDetailEntity.m in Sources */,
-				8F92670C2201E8DD009B3FC1 /* XGDeviceManager.m in Sources */,
 				677177F21DEBDAA7009AB627 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				67C0D46B1F42DD7F00762BFF /* SGH170815IdentCodeViewController.m in Sources */,
 				677177CD1DEBD081009AB627 /* SGH0728CALayerViewController.m in Sources */,
 				67C0D4681F42D92300762BFF /* SGH170815IdentCodeAuthView.m in Sources */,
 				6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */,
 				6735C2091EB416AB00F51BA9 /* SGH0429CryptographyViewController.m in Sources */,
-				8F9267102201E93C009B3FC1 /* Utility.m in Sources */,
 				677177E91DEBD081009AB627 /* SGH1012PlaceholderColorViewController.m in Sources */,
 				6735C20D1EB4684300F51BA9 /* NSString+Hash.m in Sources */,
 				67B5F3861EC367F10035A9C0 /* SGH0510MyObject.m in Sources */,

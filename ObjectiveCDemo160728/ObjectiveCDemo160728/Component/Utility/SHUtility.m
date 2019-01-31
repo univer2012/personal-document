@@ -1,16 +1,13 @@
 //
-//  Utility.m
-//  DailyRead
+//  SHUtility.m
+//  ObjectiveC
 //
-//  Created by sengoln huang on 2018/12/25.
-//  Copyright © 2018年 爱阅读. All rights reserved.
+//  Created by sengoln huang on 2019/1/31.
+//  Copyright © 2019 huangaengoln. All rights reserved.
 //
 
-#import "Utility.h"
+#import "SHUtility.h"
 
-//#import "MBProgressHUD.h"
-
-//#import "BDTBaseNetworkModel.h"
 /** 常量  */
 #import "BDTConstManager.h"
 
@@ -21,8 +18,7 @@
 @protocol UNUserNotificationCenterDelegate <NSObject>@end
 #endif
 
-@implementation Utility
-
+@implementation SHUtility
 
 //NSString
 + (void)setString:(NSString *)str forKey:(NSString *)key {
@@ -102,12 +98,12 @@
 
 //+ (void)showMessage:(NSString *)msg withDelay:(NSTimeInterval)delay {
 //    if (msg.length > 0) {
-//        [Utility showHUDWithMsg:msg detail:nil withDelay:delay];
+//        [SHUtility showHUDWithMsg:msg detail:nil withDelay:delay];
 //    }
 //}
 //+ (void)showHUDWithMsg:(NSString *)msg detail:(NSString *)detail withDelay:(NSTimeInterval)delay {
 //    UIWindow *window = [UIApplication sharedApplication].delegate.window;//防止键盘遮挡
-//    
+//
 //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
 //    hud.mode = MBProgressHUDModeText;
 //    hud.label.text = msg;
@@ -123,7 +119,7 @@
 //        case BDTNetworkingStatus200:
 //            break;
 //        default: {
-//            [Utility showMessage:baseModel.msg withDelay:delay];
+//            [SHUtility showMessage:baseModel.msg withDelay:delay];
 //        }
 //            break;
 //    }
@@ -204,12 +200,12 @@
 + (void)checkRemoteNotificSwitch {
     /** 检测是否开启 远程推送
      安装后第一次启动会走这里，不会走applicationWillEnterForeground:方法*/
-    [Utility setBool:NO forKey:BDTApplicationOpenSettingsFlag];
+    [SHUtility setBool:NO forKey:BDTApplicationOpenSettingsFlag];
     if (@available(iOS 10.0, *)) {
         [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (settings.authorizationStatus == UNAuthorizationStatusAuthorized){
-                    [Utility setBool:YES forKey:BDTApplicationOpenSettingsFlag];
+                    [SHUtility setBool:YES forKey:BDTApplicationOpenSettingsFlag];
                 }
                 [[NSNotificationCenter defaultCenter] postNotificationName:BDTAPPWillEnterForeground object:nil];
             });
@@ -218,7 +214,7 @@
     }
     else if (@available(iOS 8.0, *)) {
         if ([[UIApplication sharedApplication] currentUserNotificationSettings].types  != UIUserNotificationTypeNone) {
-            [Utility setBool:YES forKey:BDTApplicationOpenSettingsFlag];
+            [SHUtility setBool:YES forKey:BDTApplicationOpenSettingsFlag];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:BDTAPPWillEnterForeground object:nil];
     }

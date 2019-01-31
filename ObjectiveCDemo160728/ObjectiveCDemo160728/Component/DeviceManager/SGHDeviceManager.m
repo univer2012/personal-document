@@ -1,12 +1,12 @@
 //
-//  XGDeviceManager.m
-//  xglc
+//  SGHDeviceManager.m
+//  ObjectiveC
 //
-//  Created by sengoln huang on 2018/3/19.
-//  Copyright © 2018年 深圳市温馨港湾网络技术有限公司. All rights reserved.
+//  Created by sengoln huang on 2019/1/31.
+//  Copyright © 2019 huangaengoln. All rights reserved.
 //
 
-#import "XGDeviceManager.h"
+#import "SGHDeviceManager.h"
 
 #import <sys/sysctl.h>
 //判断网络类型
@@ -15,7 +15,7 @@
 #import <UIKit/UIKit.h>
 #import <netinet/in.h>
 
-@implementation XGDeviceManager
+@implementation SGHDeviceManager
 
 /**
  *  根据标志符得到设备系统相关信息
@@ -43,7 +43,7 @@
  *  @return 系统设备平台
  */
 +(NSString *)getDevicePlatform {
-    return [XGDeviceManager getSysInfoByName:"hw.machine"];
+    return [SGHDeviceManager getSysInfoByName:"hw.machine"];
 }
 
 /**
@@ -51,100 +51,100 @@
  *
  *  @return 获取平台类型
  */
-//+(XGUIDevicePlatform)getDevicePlatformType
-+ (XGUIDevicePlatform)devicePlatformType {
-    NSString *platform = [XGDeviceManager getDevicePlatform];
+//+(SGHDevicePlatform)getDevicePlatformType
++ (SGHDevicePlatform)devicePlatformType {
+    NSString *platform = [SGHDeviceManager getDevicePlatform];
     
     // The ever mysterious iFPGA
-    if ([platform isEqualToString:@"iFPGA"])        return XGUIDeviceIFPGA;
+    if ([platform isEqualToString:@"iFPGA"])        return SGHDeviceIFPGA;
     
     // iPhone
-    if ([platform isEqualToString:@"iPhone1,1"])    return XGUIDevice_iPhone1G;
-    if ([platform isEqualToString:@"iPhone1,2"])    return XGUIDevice_iPhone3G;
+    if ([platform isEqualToString:@"iPhone1,1"])    return SGHDevice_iPhone1G;
+    if ([platform isEqualToString:@"iPhone1,2"])    return SGHDevice_iPhone3G;
     
-    if ([platform hasPrefix:@"iPhone2"])            return XGUIDevice_iPhone3GS;
+    if ([platform hasPrefix:@"iPhone2"])            return SGHDevice_iPhone3GS;
     
-    if ([platform hasPrefix:@"iPhone3"])            return XGUIDevice_iPhone4;
+    if ([platform hasPrefix:@"iPhone3"])            return SGHDevice_iPhone4;
     
-    if ([platform hasPrefix:@"iPhone4"])            return XGUIDevice_iPhone4S;
+    if ([platform hasPrefix:@"iPhone4"])            return SGHDevice_iPhone4S;
     
-    if ([platform hasPrefix:@"iPhone5,1"])          return XGUIDevice_iPhone5;
-    if ([platform hasPrefix:@"iPhone5,2"])          return XGUIDevice_iPhone5;
-    if ([platform hasPrefix:@"iPhone5,3"])          return XGUIDevice_iPhone5C;
-    if ([platform hasPrefix:@"iPhone5,4"])          return XGUIDevice_iPhone5C;
+    if ([platform hasPrefix:@"iPhone5,1"])          return SGHDevice_iPhone5;
+    if ([platform hasPrefix:@"iPhone5,2"])          return SGHDevice_iPhone5;
+    if ([platform hasPrefix:@"iPhone5,3"])          return SGHDevice_iPhone5C;
+    if ([platform hasPrefix:@"iPhone5,4"])          return SGHDevice_iPhone5C;
     
-    if ([platform hasPrefix:@"iPhone6,1"])          return XGUIDevice_iPhone5S;
-    if ([platform hasPrefix:@"iPhone6,2"])          return XGUIDevice_iPhone5S;
+    if ([platform hasPrefix:@"iPhone6,1"])          return SGHDevice_iPhone5S;
+    if ([platform hasPrefix:@"iPhone6,2"])          return SGHDevice_iPhone5S;
     
-    if ([platform hasPrefix:@"iPhone7,1"])          return XGUIDevice_iPhone6Plus;
-    if ([platform hasPrefix:@"iPhone7,2"])          return XGUIDevice_iPhone6;
+    if ([platform hasPrefix:@"iPhone7,1"])          return SGHDevice_iPhone6Plus;
+    if ([platform hasPrefix:@"iPhone7,2"])          return SGHDevice_iPhone6;
     
-    if ([platform hasPrefix:@"iPhone8,1"])          return XGUIDevice_iPhone6S;
-    if ([platform hasPrefix:@"iPhone8,2"])          return XGUIDevice_iPhone6SPlus;
-    if ([platform hasPrefix:@"iPhone8,3"])          return XGUIDevice_iPhoneSE;
-    if ([platform hasPrefix:@"iPhone8,4"])          return XGUIDevice_iPhoneSE;
+    if ([platform hasPrefix:@"iPhone8,1"])          return SGHDevice_iPhone6S;
+    if ([platform hasPrefix:@"iPhone8,2"])          return SGHDevice_iPhone6SPlus;
+    if ([platform hasPrefix:@"iPhone8,3"])          return SGHDevice_iPhoneSE;
+    if ([platform hasPrefix:@"iPhone8,4"])          return SGHDevice_iPhoneSE;
     
-    if ([platform hasPrefix:@"iPhone9,1"])          return XGUIDevice_iPhone7;
-    if ([platform hasPrefix:@"iPhone9,2"])          return XGUIDevice_iPhone7Plus;
-    if ([platform hasPrefix:@"iPhone9,3"])          return XGUIDevice_iPhone7;
-    if ([platform hasPrefix:@"iPhone9,4"])          return XGUIDevice_iPhone7Plus;
+    if ([platform hasPrefix:@"iPhone9,1"])          return SGHDevice_iPhone7;
+    if ([platform hasPrefix:@"iPhone9,2"])          return SGHDevice_iPhone7Plus;
+    if ([platform hasPrefix:@"iPhone9,3"])          return SGHDevice_iPhone7;
+    if ([platform hasPrefix:@"iPhone9,4"])          return SGHDevice_iPhone7Plus;
     
-    if ([platform hasPrefix:@"iPhone10,1"])          return XGUIDevice_iPhone8;
-    if ([platform hasPrefix:@"iPhone10,2"])          return XGUIDevice_iPhone8Plus;
-    if ([platform hasPrefix:@"iPhone10,3"])          return XGUIDevice_iPhoneX;
-    if ([platform hasPrefix:@"iPhone10,4"])          return XGUIDevice_iPhone8;
-    if ([platform hasPrefix:@"iPhone10,5"])          return XGUIDevice_iPhone8Plus;
-    if ([platform hasPrefix:@"iPhone10,6"])          return XGUIDevice_iPhoneX;
+    if ([platform hasPrefix:@"iPhone10,1"])          return SGHDevice_iPhone8;
+    if ([platform hasPrefix:@"iPhone10,2"])          return SGHDevice_iPhone8Plus;
+    if ([platform hasPrefix:@"iPhone10,3"])          return SGHDevice_iPhoneX;
+    if ([platform hasPrefix:@"iPhone10,4"])          return SGHDevice_iPhone8;
+    if ([platform hasPrefix:@"iPhone10,5"])          return SGHDevice_iPhone8Plus;
+    if ([platform hasPrefix:@"iPhone10,6"])          return SGHDevice_iPhoneX;
     
-    if ([platform isEqualToString:@"iPhone11,2"]) return XGUIDevice_iPhoneXS;
-    if ([platform isEqualToString:@"iPhone11,4"]) return XGUIDevice_iPhoneXSMax;
-    if ([platform isEqualToString:@"iPhone11,6"]) return XGUIDevice_iPhoneXSMax;
-    if ([platform isEqualToString:@"iPhone11,8"]) return XGUIDevice_iPhoneXR;
+    if ([platform isEqualToString:@"iPhone11,2"]) return SGHDevice_iPhoneXS;
+    if ([platform isEqualToString:@"iPhone11,4"]) return SGHDevice_iPhoneXSMax;
+    if ([platform isEqualToString:@"iPhone11,6"]) return SGHDevice_iPhoneXSMax;
+    if ([platform isEqualToString:@"iPhone11,8"]) return SGHDevice_iPhoneXR;
     
     // iPod
-    if ([platform hasPrefix:@"iPod1"])              return XGUIDevice_iPod1G;
-    if ([platform hasPrefix:@"iPod2"])              return XGUIDevice_iPod2G;
-    if ([platform hasPrefix:@"iPod3"])              return XGUIDevice_iPod3G;
-    if ([platform hasPrefix:@"iPod4"])              return XGUIDevice_iPod4G;
-    if ([platform hasPrefix:@"iPod5"])              return XGUIDevice_iPod5G;
-    if ([platform hasPrefix:@"iPod6"])              return XGUIDevice_iPod6G;
-    if ([platform hasPrefix:@"iPod7"])              return XGUIDevice_iPod7G;
-    if ([platform hasPrefix:@"iPod8"])              return XGUIDevice_iPod8G;
-    if ([platform hasPrefix:@"iPod9"])              return XGUIDevice_iPod9G;
+    if ([platform hasPrefix:@"iPod1"])              return SGHDevice_iPod1G;
+    if ([platform hasPrefix:@"iPod2"])              return SGHDevice_iPod2G;
+    if ([platform hasPrefix:@"iPod3"])              return SGHDevice_iPod3G;
+    if ([platform hasPrefix:@"iPod4"])              return SGHDevice_iPod4G;
+    if ([platform hasPrefix:@"iPod5"])              return SGHDevice_iPod5G;
+    if ([platform hasPrefix:@"iPod6"])              return SGHDevice_iPod6G;
+    if ([platform hasPrefix:@"iPod7"])              return SGHDevice_iPod7G;
+    if ([platform hasPrefix:@"iPod8"])              return SGHDevice_iPod8G;
+    if ([platform hasPrefix:@"iPod9"])              return SGHDevice_iPod9G;
     
     // iPad
-    if ([platform hasPrefix:@"iPad1"])              return XGUIDevice_iPad1G;
-    if ([platform hasPrefix:@"iPad2"])              return XGUIDevice_iPad2G;
-    if ([platform hasPrefix:@"iPad3"])              return XGUIDevice_iPad3G;
-    if ([platform hasPrefix:@"iPad4"])              return XGUIDevice_iPad4G;
-    if ([platform hasPrefix:@"iPad5"])              return XGUIDevice_iPad5G;
-    if ([platform hasPrefix:@"iPad6"])              return XGUIDevice_iPad6G;
-    if ([platform hasPrefix:@"iPad7"])              return XGUIDevice_iPad7G;
-    if ([platform hasPrefix:@"iPad8"])              return XGUIDevice_iPad8G;
-    if ([platform hasPrefix:@"iPad9"])              return XGUIDevice_iPad9G;
+    if ([platform hasPrefix:@"iPad1"])              return SGHDevice_iPad1G;
+    if ([platform hasPrefix:@"iPad2"])              return SGHDevice_iPad2G;
+    if ([platform hasPrefix:@"iPad3"])              return SGHDevice_iPad3G;
+    if ([platform hasPrefix:@"iPad4"])              return SGHDevice_iPad4G;
+    if ([platform hasPrefix:@"iPad5"])              return SGHDevice_iPad5G;
+    if ([platform hasPrefix:@"iPad6"])              return SGHDevice_iPad6G;
+    if ([platform hasPrefix:@"iPad7"])              return SGHDevice_iPad7G;
+    if ([platform hasPrefix:@"iPad8"])              return SGHDevice_iPad8G;
+    if ([platform hasPrefix:@"iPad9"])              return SGHDevice_iPad9G;
     
     // Apple TV
-    if ([platform hasPrefix:@"AppleTV2"])           return XGUIDeviceAppleTV2;
-    if ([platform hasPrefix:@"AppleTV3"])           return XGUIDeviceAppleTV3;
+    if ([platform hasPrefix:@"AppleTV2"])           return SGHDeviceAppleTV2;
+    if ([platform hasPrefix:@"AppleTV3"])           return SGHDeviceAppleTV3;
     
-    if ([platform hasPrefix:@"iPhone"])             return XGUIDeviceUnknowniPhone;
-    if ([platform hasPrefix:@"iPod"])               return XGUIDeviceUnknowniPod;
-    if ([platform hasPrefix:@"iPad"])               return XGUIDeviceUnknowniPad;
-    if ([platform hasPrefix:@"AppleTV"])            return XGUIDeviceUnknownAppleTV;
+    if ([platform hasPrefix:@"iPhone"])             return SGHDeviceUnknowniPhone;
+    if ([platform hasPrefix:@"iPod"])               return SGHDeviceUnknowniPod;
+    if ([platform hasPrefix:@"iPad"])               return SGHDeviceUnknowniPad;
+    if ([platform hasPrefix:@"AppleTV"])            return SGHDeviceUnknownAppleTV;
     
     // Simulator thanks Jordan Breeding
     if ([platform hasSuffix:@"86"] || [platform isEqual:@"x86_64"]) {
         BOOL smallerScreen = [[UIScreen mainScreen] bounds].size.width < 768;
-        return smallerScreen ? XGUIDeviceSimulatoriPhone : XGUIDeviceSimulatoriPad;
+        return smallerScreen ? SGHDeviceSimulatoriPhone : SGHDeviceSimulatoriPad;
     }
     
-    return XGUIDeviceUnknown;
+    return SGHDeviceUnknown;
 }
 
 ///获取平台类型的字符串
 //+ (NSString *)getDevicePlatformTypeString {
 + (NSString *)devicePlatformTypeString {
-    NSString *platform = [XGDeviceManager getDevicePlatform];
+    NSString *platform = [SGHDeviceManager getDevicePlatform];
     
     // The ever mysterious iFPGA
     if ([platform isEqualToString:@"iFPGA"])        return @"iFPGA";
@@ -232,66 +232,66 @@
 }
 
 //获取屏幕尺寸类型
-//+ (XGDeviceScreenSize)getDeviceScreenSize {
-+ (XGDeviceScreenSize)deviceScreenSize {
+//+ (SGHDeviceScreenSize)getDeviceScreenSize {
++ (SGHDeviceScreenSize)deviceScreenSize {
     CGSize size = [UIScreen mainScreen].bounds.size;
     if (size.width == 320 && size.height == 480) {
-        return XGDeviceScreenSize3_5;
+        return SGHDeviceScreenSize3_5;
     }
     else if (size.width == 320 && size.height == 568) {
-        return XGDeviceScreenSize4;
+        return SGHDeviceScreenSize4;
     }
     else if (size.width == 375 && size.height == 667) {
-        return XGDeviceScreenSize4_7;
+        return SGHDeviceScreenSize4_7;
     }
     else if (size.width == 414 && size.height == 736) {
-        return XGDeviceScreenSize5_5;
+        return SGHDeviceScreenSize5_5;
     }
     else if (size.width == 375 && size.height == 812) {
-        return XGDeviceScreenSize5_8;
+        return SGHDeviceScreenSize5_8;
     }
     else if (size.width == 414 && size.height == 896) {
-        switch (XGDeviceManager.devicePlatformType) {
-            case XGUIDevice_iPhoneXR: {
-                return XGDeviceScreenSize6_1;
+        switch (SGHDeviceManager.devicePlatformType) {
+            case SGHDevice_iPhoneXR: {
+                return SGHDeviceScreenSize6_1;
             }
                 break;
-            case XGUIDevice_iPhoneXSMax: {
-                return XGDeviceScreenSize6_5;
+            case SGHDevice_iPhoneXSMax: {
+                return SGHDeviceScreenSize6_5;
             }
                 break;
             default: {
-                return XGDeviceScreenSize6_5;
-                //return XGDeviceScreenSize6_1;
+                return SGHDeviceScreenSize6_5;
+                //return SGHDeviceScreenSize6_1;
             }
                 break;
         }
     }
-    return XGDeviceScreenSize5_8;
+    return SGHDeviceScreenSize5_8;
 }
 
 
 //获取当前网络类型
-+ (XGNetWorkStatus)getCurrentNetworkStatusWithHostName:(NSString *)hostName {
-//    SCNetworkReachabilityRef reachabilityRef;
++ (SGHNetWorkStatus)getCurrentNetworkStatusWithHostName:(NSString *)hostName {
+    //    SCNetworkReachabilityRef reachabilityRef;
     SCNetworkReachabilityRef reachabilityRef = SCNetworkReachabilityCreateWithName(NULL, [hostName UTF8String]);
-    XGNetWorkStatus returnValue = XGNetWorkStatusNotReachable;
+    SGHNetWorkStatus returnValue = SGHNetWorkStatusNotReachable;
     SCNetworkReachabilityFlags flags;
     if (SCNetworkReachabilityGetFlags(reachabilityRef, &flags))
     {
         if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
         {
             // The target host is not reachable.
-            return XGNetWorkStatusNotReachable;
+            return SGHNetWorkStatusNotReachable;
         }
         
-        //XGNetWorkStatus returnValue = XGNetWorkStatusNotReachable;
+        //SGHNetWorkStatus returnValue = SGHNetWorkStatusNotReachable;
         if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
         {
             /*
              If the target host is reachable and no connection is required then we'll assume (for now) that you're on Wi-Fi...
              */
-            returnValue = XGNetWorkStatusWiFi;
+            returnValue = SGHNetWorkStatusWiFi;
         }
         
         if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
@@ -305,7 +305,7 @@
                 /*
                  ... and no [user] intervention is needed...
                  */
-                returnValue = XGNetWorkStatusWiFi;
+                returnValue = SGHNetWorkStatusWiFi;
             }
         }
         
@@ -332,16 +332,16 @@
                 CTTelephonyNetworkInfo *teleInfo= [[CTTelephonyNetworkInfo alloc] init];
                 NSString *accessString = teleInfo.currentRadioAccessTechnology;
                 if ([typeStrings4G containsObject:accessString]) {
-                    return XGNetWorkStatusWWAN4G;
+                    return SGHNetWorkStatusWWAN4G;
                 } else if ([typeStrings3G containsObject:accessString]) {
-                    return XGNetWorkStatusWWAN3G;
+                    return SGHNetWorkStatusWWAN3G;
                 } else if ([typeStrings2G containsObject:accessString]) {
-                    return XGNetWorkStatusWWAN2G;
+                    return SGHNetWorkStatusWWAN2G;
                 } else {
-                    return XGNetWorkStatusUnknown;
+                    return SGHNetWorkStatusUnknown;
                 }
             } else {
-                return XGNetWorkStatusUnknown;
+                return SGHNetWorkStatusUnknown;
             }
         }
     }
@@ -350,58 +350,58 @@
 
 
 //获取手机拥有的安全方式
-//+ (XGDeviceSecurityType)getDeviceSecurityType {
-+ (XGDeviceSecurityType)deviceSecurityType {
-    XGUIDevicePlatform platform = XGDeviceManager.devicePlatformType;
+//+ (SGHDeviceSecurityType)getDeviceSecurityType {
++ (SGHDeviceSecurityType)deviceSecurityType {
+    SGHDevicePlatform platform = SGHDeviceManager.devicePlatformType;
     switch (platform) {
-        case XGUIDevice_iPhone5S:
-        case XGUIDevice_iPhone6:
-        case XGUIDevice_iPhone6Plus:
-        case XGUIDevice_iPhone6S:
-        case XGUIDevice_iPhone6SPlus:
-        case XGUIDevice_iPhoneSE:
-        case XGUIDevice_iPhone7:
-        case XGUIDevice_iPhone7Plus:
-        case XGUIDevice_iPhone8:
-        case XGUIDevice_iPhone8Plus: {
-            return XGDeviceSecurityTypeTouchID;
+        case SGHDevice_iPhone5S:
+        case SGHDevice_iPhone6:
+        case SGHDevice_iPhone6Plus:
+        case SGHDevice_iPhone6S:
+        case SGHDevice_iPhone6SPlus:
+        case SGHDevice_iPhoneSE:
+        case SGHDevice_iPhone7:
+        case SGHDevice_iPhone7Plus:
+        case SGHDevice_iPhone8:
+        case SGHDevice_iPhone8Plus: {
+            return SGHDeviceSecurityTypeTouchID;
         }
             break;
-        case XGUIDevice_iPhoneXSMax:
-        case XGUIDevice_iPhoneXS:
-        case XGUIDevice_iPhoneXR:
-        case XGUIDevice_iPhoneX: {
-            return XGDeviceSecurityTypeFaceID;
+        case SGHDevice_iPhoneXSMax:
+        case SGHDevice_iPhoneXS:
+        case SGHDevice_iPhoneXR:
+        case SGHDevice_iPhoneX: {
+            return SGHDeviceSecurityTypeFaceID;
         }
             break;
             
         default:
             break;
             //UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone
-//            UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad;
+            //            UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad;
     }
-    return XGDeviceSecurityTypeUnknown;
+    return SGHDeviceSecurityTypeUnknown;
 }
 
 /** 获取手机屏幕对应的 像素点比例  @2x,@3x */
-//+ (XGDeviceScreenPixelScale)getDeviceScreenPixelScale {
-+ (XGDeviceScreenPixelScale)deviceScreenPixelScale {
-    switch (XGDeviceManager.deviceScreenSize) {
-        case XGDeviceScreenSize3_5:
-        case XGDeviceScreenSize4:
-        case XGDeviceScreenSize4_7:
-        case XGDeviceScreenSize6_1: {
-            return XGDeviceScreenPixelScale2X;
+//+ (SGHDeviceScreenPixelScale)getDeviceScreenPixelScale {
++ (SGHDeviceScreenPixelScale)deviceScreenPixelScale {
+    switch (SGHDeviceManager.deviceScreenSize) {
+        case SGHDeviceScreenSize3_5:
+        case SGHDeviceScreenSize4:
+        case SGHDeviceScreenSize4_7:
+        case SGHDeviceScreenSize6_1: {
+            return SGHDeviceScreenPixelScale2X;
         }
             break;
-        case XGDeviceScreenSize5_5:
-        case XGDeviceScreenSize5_8:
-        case XGDeviceScreenSize6_5:  {
-            return XGDeviceScreenPixelScale3X;
+        case SGHDeviceScreenSize5_5:
+        case SGHDeviceScreenSize5_8:
+        case SGHDeviceScreenSize6_5:  {
+            return SGHDeviceScreenPixelScale3X;
         }
             break;
         default: {
-            return XGDeviceScreenPixelScale1X;
+            return SGHDeviceScreenPixelScale1X;
         }
             break;
     }
@@ -461,10 +461,10 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        switch (XGDeviceManager.deviceScreenSize) {
-            case XGDeviceScreenSize5_8:
-            case XGDeviceScreenSize6_5:
-            case XGDeviceScreenSize6_1: {
+        switch (SGHDeviceManager.deviceScreenSize) {
+            case SGHDeviceScreenSize5_8:
+            case SGHDeviceScreenSize6_5:
+            case SGHDeviceScreenSize6_1: {
                 shareInstance = 88;
             }
                 break;
@@ -497,10 +497,10 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        switch (XGDeviceManager.deviceScreenSize) {
-            case XGDeviceScreenSize5_8:
-            case XGDeviceScreenSize6_5:
-            case XGDeviceScreenSize6_1: {
+        switch (SGHDeviceManager.deviceScreenSize) {
+            case SGHDeviceScreenSize5_8:
+            case SGHDeviceScreenSize6_5:
+            case SGHDeviceScreenSize6_1: {
                 shareInstance = 83;
             }
                 break;
@@ -589,5 +589,6 @@
     });
     return shareInstance;
 }
+
 
 @end
