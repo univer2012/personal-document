@@ -11,6 +11,10 @@ pod 'Masonry'
 
 pod 'AFNetworking', '~> 3.0'
 
+pod 'TTTAttributedLabel'
+pod 'YBAttributeTextTapAction'
+pod 'TYAttributedLabel'
+
 #use_frameworks!
 #pod 'XMPPFramework', '~> 3.6.4'
 end

@@ -47,7 +47,8 @@
     self.titlesArray=[@[@"16-07-28",
                         @"2、Core Location 框架详解",
                         @"3、第三方组件",
-                        @"3、2017-02-08"
+                        @"4、2017-02-08",
+                        @"5、YYKit"
                         ] mutableCopy];
     
     
