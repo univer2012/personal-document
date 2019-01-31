@@ -462,6 +462,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B08F05E22029B1E00D03708 /* DeviceManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DeviceManager;
+			sourceTree = "<group>";
+		};
 		6700C67A1E30BF51006AC47B /* 22iOS_Crash杀手排名 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1832,6 +1839,7 @@
 		67FA0D151DE8173A0012EDFF /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0B08F05E22029B1E00D03708 /* DeviceManager */,
 				8F9267122201EB63009B3FC1 /* Const */,
 				8F92670D2201E93C009B3FC1 /* Utility */,
 				8F9267092201E8C0009B3FC1 /* XGDeviceManager */,
