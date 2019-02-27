@@ -148,6 +148,11 @@
 		8F92671B2201EBC2009B3FC1 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267172201EBC0009B3FC1 /* UIColor+Hex.m */; };
 		8F92671C2201EBC2009B3FC1 /* UIView+LCAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267182201EBC1009B3FC1 /* UIView+LCAdd.m */; };
 		8F9267212201ED25009B3FC1 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92671F2201ED24009B3FC1 /* NSDictionary+NilSafe.m */; };
+		8F926725221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F926724221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m */; };
+		8F9267292220373F009B3FC1 /* SH1902Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267282220373F009B3FC1 /* SH1902Person.m */; };
+		8F92672D222039A7009B3FC1 /* SH1902SpareWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92672C222039A7009B3FC1 /* SH1902SpareWheel.m */; };
+		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
+		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -433,6 +438,16 @@
 		8F92671A2201EBC2009B3FC1 /* UIView+LCAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LCAdd.h"; sourceTree = "<group>"; };
 		8F92671F2201ED24009B3FC1 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		8F9267202201ED24009B3FC1 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		8F926723221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSocketStruc0218ViewController.h; sourceTree = "<group>"; };
+		8F926724221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSocketStruc0218ViewController.m; sourceTree = "<group>"; };
+		8F9267272220373F009B3FC1 /* SH1902Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH1902Person.h; sourceTree = "<group>"; };
+		8F9267282220373F009B3FC1 /* SH1902Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH1902Person.m; sourceTree = "<group>"; };
+		8F92672B222039A7009B3FC1 /* SH1902SpareWheel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH1902SpareWheel.h; sourceTree = "<group>"; };
+		8F92672C222039A7009B3FC1 /* SH1902SpareWheel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH1902SpareWheel.m; sourceTree = "<group>"; };
+		8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH0227SeniorCampViewController.h; sourceTree = "<group>"; };
+		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
+		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
+		8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SHDefaultDisplay.m"; sourceTree = "<group>"; };
 		A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.debug.xcconfig"; sourceTree = "<group>"; };
 		B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.release.xcconfig"; sourceTree = "<group>"; };
 		CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCDemo160728.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -890,6 +905,8 @@
 		677177331DEBD081009AB627 /* Modlues */ = {
 			isa = PBXGroup;
 			children = (
+				8FD1465F22264F66001E25F8 /* 25高级特训营 */,
+				8F926722221AFE74009B3FC1 /* 24Socket基本结构 */,
 				67AFC2A41F174EBE00F5FEBD /* 23截屏方案 */,
 				6700C67A1E30BF51006AC47B /* 22iOS_Crash杀手排名 */,
 				6735B11F1E0A9B7F0010E6A8 /* 21tableView多选cell */,
@@ -2094,6 +2111,70 @@
 			path = "NSDictionary-NilSafe";
 			sourceTree = "<group>";
 		};
+		8F926722221AFE74009B3FC1 /* 24Socket基本结构 */ = {
+			isa = PBXGroup;
+			children = (
+				8F92672A2220398C009B3FC1 /* Model */,
+				8F92672622203709009B3FC1 /* Controller */,
+			);
+			path = "24Socket基本结构";
+			sourceTree = "<group>";
+		};
+		8F92672622203709009B3FC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F926723221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.h */,
+				8F926724221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F92672A2220398C009B3FC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FD1465F22264F66001E25F8 /* 25高级特训营 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD1466222264FD2001E25F8 /* Controller */,
+				8FD1466122264F8A001E25F8 /* 1Runtime消息转发 */,
+				8FD1466022264F7E001E25F8 /* 2Runtime方法交换 */,
+			);
+			path = "25高级特训营";
+			sourceTree = "<group>";
+		};
+		8FD1466022264F7E001E25F8 /* 2Runtime方法交换 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */,
+				8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */,
+			);
+			path = "2Runtime方法交换";
+			sourceTree = "<group>";
+		};
+		8FD1466122264F8A001E25F8 /* 1Runtime消息转发 */ = {
+			isa = PBXGroup;
+			children = (
+				8F9267272220373F009B3FC1 /* SH1902Person.h */,
+				8F9267282220373F009B3FC1 /* SH1902Person.m */,
+				8F92672B222039A7009B3FC1 /* SH1902SpareWheel.h */,
+				8F92672C222039A7009B3FC1 /* SH1902SpareWheel.m */,
+			);
+			path = "1Runtime消息转发";
+			sourceTree = "<group>";
+		};
+		8FD1466222264FD2001E25F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */,
+				8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2282,10 +2363,12 @@
 				6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */,
 				677177CB1DEBD081009AB627 /* SGH1125XMLParserViewController.m in Sources */,
 				67FA0D1F1DE817710012EDFF /* TBXML.m in Sources */,
+				8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */,
 				67A550011EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m in Sources */,
 				67D2A6B01E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m in Sources */,
 				677177D21DEBD081009AB627 /* SGH0729TransitionGroupViewController.m in Sources */,
 				67ED58071F0F6C1700A525E9 /* Person.m in Sources */,
+				8F926725221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m in Sources */,
 				677177C61DEBD081009AB627 /* SGH1108AppStoreViewController.m in Sources */,
 				677177BD1DEBD081009AB627 /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
 				6702E3681FCF9A5D00F036EB /* UIView+Frame.m in Sources */,
@@ -2296,6 +2379,7 @@
 				8F9266F422009910009B3FC1 /* WBPictureMetadata.m in Sources */,
 				8F9266F722009959009B3FC1 /* WBPicture.m in Sources */,
 				677177DA1DEBD081009AB627 /* SGH0802ExpressionViewController.m in Sources */,
+				8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */,
 				677177D11DEBD081009AB627 /* SGH0729TransitionGroupSecondViewController.m in Sources */,
 				0B08F06A2202B8C300D03708 /* SHAlertViewManager.m in Sources */,
 				8F9267212201ED25009B3FC1 /* NSDictionary+NilSafe.m in Sources */,
@@ -2328,6 +2412,7 @@
 				677177C81DEBD081009AB627 /* SGH1108ShareItem.m in Sources */,
 				674092A81EC9749E002334AD /* SGH0515Runtime6ViewController.m in Sources */,
 				677177BF1DEBD081009AB627 /* SGH1013TextViewViewController.m in Sources */,
+				8F92672D222039A7009B3FC1 /* SH1902SpareWheel.m in Sources */,
 				8F92671C2201EBC2009B3FC1 /* UIView+LCAdd.m in Sources */,
 				677177C71DEBD081009AB627 /* SGH1108ActivityShareViewController.m in Sources */,
 				6747F7AB1EE7AB3A006BCBB0 /* SGH0607FetchStringExpressionViewController.m in Sources */,
@@ -2346,6 +2431,7 @@
 				6735C1931EB0908B00F51BA9 /* SGH0424MapEngine.m in Sources */,
 				8F9265DD2200929D009B3FC1 /* SGH190129YYKitViewController.m in Sources */,
 				674092C11EC9F6D1002334AD /* SGH0515ClassViewController.m in Sources */,
+				8F9267292220373F009B3FC1 /* SH1902Person.m in Sources */,
 				674092C21EC9F6D1002334AD /* SGH0515ClassPerson.m in Sources */,
 				6747F7AF1EE7AB5E006BCBB0 /* RegexKitLite.m in Sources */,
 				6735C18F1EB0906A00F51BA9 /* SGH0424BaiduFactory.m in Sources */,
@@ -2549,7 +2635,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"Masonry\"",
 					"-l\"c++\"",
 					"-l\"sqlite3.0\"",
@@ -2612,7 +2697,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
 					"-l\"Masonry\"",
 					"-l\"c++\"",
 					"-l\"sqlite3.0\"",
