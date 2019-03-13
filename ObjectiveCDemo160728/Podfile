@@ -9,7 +9,7 @@ target "ObjectiveCDemo160728" do
 
 pod 'Masonry'
 
-pod 'AFNetworking', '~> 3.0'
+# pod 'AFNetworking', '~> 3.0'
 
 pod 'TTTAttributedLabel'
 pod 'YBAttributeTextTapAction'

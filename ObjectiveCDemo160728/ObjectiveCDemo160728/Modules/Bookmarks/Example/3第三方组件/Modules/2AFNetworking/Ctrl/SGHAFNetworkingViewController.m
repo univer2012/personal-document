@@ -7,9 +7,9 @@
 //
 
 #import "SGHAFNetworkingViewController.h"
-
+#if 0
 #import <AFNetworking/AFNetworking.h>
-
+#endif
 //#import "AFNetworking.h"
 //#import <>
 
@@ -30,7 +30,7 @@
 
 
 }
-
+#if 0
 - (void)AFNetworkStatus{
     //1.创建网络监测者
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
@@ -65,6 +65,7 @@
 
     NSURLSessionConfiguration *sonfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@""];
 }
+#endif
 
 
 - (void)didReceiveMemoryWarning {
