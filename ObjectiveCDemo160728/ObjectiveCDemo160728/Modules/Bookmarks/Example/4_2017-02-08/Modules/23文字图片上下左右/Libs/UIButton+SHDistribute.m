@@ -24,8 +24,6 @@
     
     CGFloat halfFixedSpace = fixedSpacing * 0.5;
     
-    kWeakSelf
-    
 //    __block typeof(self) weakSelf = self;
     switch (style) {
         case SHViewEdgeInsetsStyleLeading: {

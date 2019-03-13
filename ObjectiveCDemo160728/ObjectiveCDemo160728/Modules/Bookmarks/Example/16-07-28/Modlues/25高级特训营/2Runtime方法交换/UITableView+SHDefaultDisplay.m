@@ -18,8 +18,7 @@ const char *LGDefaultView;
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Method originMethod = class_getInstanceMethod(self,@selecror(reloadData));
-        Method
+        //Method originMethod = class_getInstanceMethod(self,@selecror(reloadData));
     });
     
 }
