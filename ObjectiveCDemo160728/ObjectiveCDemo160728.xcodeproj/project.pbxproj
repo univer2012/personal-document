@@ -151,6 +151,11 @@
 		8F926725221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F926724221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m */; };
 		8F9267292220373F009B3FC1 /* SH1902Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9267282220373F009B3FC1 /* SH1902Person.m */; };
 		8F92672D222039A7009B3FC1 /* SH1902SpareWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F92672C222039A7009B3FC1 /* SH1902SpareWheel.m */; };
+		8FAFB0E52226AB55005152B4 /* SHRuntime3Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0E42226AB55005152B4 /* SHRuntime3Person.m */; };
+		8FAFB0E92226C310005152B4 /* SHRuntime4Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0E82226C310005152B4 /* SHRuntime4Person.m */; };
+		8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0EE222821FF005152B4 /* SHProxy.m */; };
+		8FAFB0F32228B7AA005152B4 /* SHLeaks0301Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */; };
+		8FAFB0F72228FD56005152B4 /* UIViewController+SHLeaksTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
 /* End PBXBuildFile section */
@@ -444,6 +449,16 @@
 		8F9267282220373F009B3FC1 /* SH1902Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH1902Person.m; sourceTree = "<group>"; };
 		8F92672B222039A7009B3FC1 /* SH1902SpareWheel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH1902SpareWheel.h; sourceTree = "<group>"; };
 		8F92672C222039A7009B3FC1 /* SH1902SpareWheel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH1902SpareWheel.m; sourceTree = "<group>"; };
+		8FAFB0E32226AB55005152B4 /* SHRuntime3Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRuntime3Person.h; sourceTree = "<group>"; };
+		8FAFB0E42226AB55005152B4 /* SHRuntime3Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRuntime3Person.m; sourceTree = "<group>"; };
+		8FAFB0E72226C310005152B4 /* SHRuntime4Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRuntime4Person.h; sourceTree = "<group>"; };
+		8FAFB0E82226C310005152B4 /* SHRuntime4Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRuntime4Person.m; sourceTree = "<group>"; };
+		8FAFB0ED222821FF005152B4 /* SHProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHProxy.h; sourceTree = "<group>"; };
+		8FAFB0EE222821FF005152B4 /* SHProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHProxy.m; sourceTree = "<group>"; };
+		8FAFB0F12228B7AA005152B4 /* SHLeaks0301Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLeaks0301Object.h; sourceTree = "<group>"; };
+		8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLeaks0301Object.m; sourceTree = "<group>"; };
+		8FAFB0F52228FD56005152B4 /* UIViewController+SHLeaksTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SHLeaksTest.h"; sourceTree = "<group>"; };
+		8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SHLeaksTest.m"; sourceTree = "<group>"; };
 		8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH0227SeniorCampViewController.h; sourceTree = "<group>"; };
 		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
 		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
@@ -2136,9 +2151,59 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8FAFB0E22226AB0A005152B4 /* 3Runtime字典转模型 */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB0E32226AB55005152B4 /* SHRuntime3Person.h */,
+				8FAFB0E42226AB55005152B4 /* SHRuntime3Person.m */,
+			);
+			path = "3Runtime字典转模型";
+			sourceTree = "<group>";
+		};
+		8FAFB0E62226C234005152B4 /* 4Runtime自定义KVO */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB0E72226C310005152B4 /* SHRuntime4Person.h */,
+				8FAFB0E82226C310005152B4 /* SHRuntime4Person.m */,
+			);
+			path = "4Runtime自定义KVO";
+			sourceTree = "<group>";
+		};
+		8FAFB0EC222821D3005152B4 /* 6iOS开发之NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB0ED222821FF005152B4 /* SHProxy.h */,
+				8FAFB0EE222821FF005152B4 /* SHProxy.m */,
+			);
+			path = "6iOS开发之NSTimer";
+			sourceTree = "<group>";
+		};
+		8FAFB0F02228B775005152B4 /* 7iOS开发之内存泄漏 */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB0F12228B7AA005152B4 /* SHLeaks0301Object.h */,
+				8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */,
+			);
+			path = "7iOS开发之内存泄漏";
+			sourceTree = "<group>";
+		};
+		8FAFB0F42228FD2F005152B4 /* 8iOS开发之内存检测工具 */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB0F52228FD56005152B4 /* UIViewController+SHLeaksTest.h */,
+				8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */,
+			);
+			path = "8iOS开发之内存检测工具";
+			sourceTree = "<group>";
+		};
 		8FD1465F22264F66001E25F8 /* 25高级特训营 */ = {
 			isa = PBXGroup;
 			children = (
+				8FAFB0F42228FD2F005152B4 /* 8iOS开发之内存检测工具 */,
+				8FAFB0F02228B775005152B4 /* 7iOS开发之内存泄漏 */,
+				8FAFB0EC222821D3005152B4 /* 6iOS开发之NSTimer */,
+				8FAFB0E62226C234005152B4 /* 4Runtime自定义KVO */,
+				8FAFB0E22226AB0A005152B4 /* 3Runtime字典转模型 */,
 				8FD1466222264FD2001E25F8 /* Controller */,
 				8FD1466122264F8A001E25F8 /* 1Runtime消息转发 */,
 				8FD1466022264F7E001E25F8 /* 2Runtime方法交换 */,
@@ -2359,6 +2424,7 @@
 				677177DD1DEBD081009AB627 /* SGH0824PresentAndPushOneViewController.m in Sources */,
 				0B08F0672202B7E700D03708 /* SHUtility.m in Sources */,
 				6785945B1E4AF22E006BA5CB /* SGH170208ViewController.m in Sources */,
+				8FAFB0E92226C310005152B4 /* SHRuntime4Person.m in Sources */,
 				677177C51DEBD081009AB627 /* SGH1108UpdateAppViewController.m in Sources */,
 				6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */,
 				677177CB1DEBD081009AB627 /* SGH1125XMLParserViewController.m in Sources */,
@@ -2405,6 +2471,7 @@
 				677177BC1DEBD081009AB627 /* SGH160728ViewController.m in Sources */,
 				67FBA0211FD66C79000DB901 /* SGHAFNetworkingViewController.m in Sources */,
 				6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */,
+				8FAFB0E52226AB55005152B4 /* SHRuntime3Person.m in Sources */,
 				8F92671B2201EBC2009B3FC1 /* UIColor+Hex.m in Sources */,
 				6748E0621ECD495700CF62DA /* SGH170518ResuableCellViewController.m in Sources */,
 				677177C31DEBD081009AB627 /* TKAesHelper.m in Sources */,
@@ -2436,10 +2503,12 @@
 				6747F7AF1EE7AB5E006BCBB0 /* RegexKitLite.m in Sources */,
 				6735C18F1EB0906A00F51BA9 /* SGH0424BaiduFactory.m in Sources */,
 				674987E81EE0185B0089349C /* SGH0601SystemVersionViewController.m in Sources */,
+				8FAFB0F32228B7AA005152B4 /* SHLeaks0301Object.m in Sources */,
 				8F9266FD22009A33009B3FC1 /* WBTopic.m in Sources */,
 				67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */,
 				677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */,
 				67A5552E1EC35A0D0052DCC3 /* UIView+SGHTapGesture.m in Sources */,
+				8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */,
 				677177E71DEBD081009AB627 /* SXNewsDetailEntity.m in Sources */,
 				677177F21DEBDAA7009AB627 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				67C0D46B1F42DD7F00762BFF /* SGH170815IdentCodeViewController.m in Sources */,
@@ -2465,6 +2534,7 @@
 				674092B01EC99F09002334AD /* SGH0515AttibuteStringInitViewController.m in Sources */,
 				6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */,
 				677177C21DEBD081009AB627 /* GTMBase64.m in Sources */,
+				8FAFB0F72228FD56005152B4 /* UIViewController+SHLeaksTest.m in Sources */,
 				677BB9CA1ED5B31A005A1CA8 /* SGH0524PresentBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2664,6 +2734,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e8350c84-ea83-4a29-a9d8-5d21110fdfb7";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
 			};
 			name = Debug;
 		};
@@ -2726,6 +2797,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c5650571-8630-4bf5-8bb0-5f612108c67b";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
 			};
 			name = Release;
 		};
