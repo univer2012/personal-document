@@ -50,7 +50,8 @@
                           @"SGH0601SystemVersionViewController",
                           @"SGH0607FetchStringExpressionViewController",
                           @"SGH170815IdentCodeViewController",
-                          @"SGH_TTAttriLabelViewController"
+                          @"SGH_TTAttriLabelViewController",
+                          @"SHImageText0214ViewController"
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -74,7 +75,8 @@
                         @"19、系统判断方法列举",
                         @"20、通过正则表达式获取2个特定字符串中间的字符串",
                         @"21、生成动态验证码及验证",
-                        @"22、TTAttributedLabel 的使用"
+                        @"22、TTAttributedLabel 的使用",
+                        @"23、文字图片上下左右"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

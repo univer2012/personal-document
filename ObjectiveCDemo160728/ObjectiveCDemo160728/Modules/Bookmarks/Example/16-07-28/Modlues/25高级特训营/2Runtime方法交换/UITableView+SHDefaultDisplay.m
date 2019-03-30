@@ -20,6 +20,10 @@ const char *LGDefaultView;
     Method currentMethod = class_getInstanceMethod(self,@selector(lg_reloadData));
     
     method_exchangeImplementations(originMethod, currentMethod);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //Method originMethod = class_getInstanceMethod(self,@selecror(reloadData));
+    });
     
 }
 - (void)lg_reloadData {
