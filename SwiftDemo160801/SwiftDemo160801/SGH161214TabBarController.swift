@@ -32,11 +32,7 @@ class SGH161214TabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*** curried: 系统自带的柯里化函数 ***/
-    func addCur(a: Int)(b: Int)(c: Int) -> Int{
-        println("\(a) + \(b) + \(c)")
-        return a + b + c
-    }
+
     /*
     // MARK: - Navigation
 

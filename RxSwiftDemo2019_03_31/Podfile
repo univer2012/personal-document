@@ -1,0 +1,23 @@
+# Podfile
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+pod 'ObjectMapper'
+
+target 'RxSwiftDemo2019_03_31' do
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
+    pod 'RxDataSources'
+
+    pod 'NSObject+Rx'
+    pod 'Moya/RxSwift'
+    
+    pod 'Then'
+    pod 'Kingfisher'
+    pod 'SnapKit'
+    pod 'Reusable', '~> 4.0.0'
+    pod 'MJRefresh'
+    pod 'SVProgressHUD'
+
+end
