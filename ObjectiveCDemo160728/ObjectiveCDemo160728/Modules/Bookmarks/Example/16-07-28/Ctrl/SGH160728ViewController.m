@@ -9,6 +9,8 @@
 #import "SGH160728ViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
+#import <FMDB.h>
+
 @interface SGH160728ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
@@ -20,6 +22,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //1.创建database路径
+    NSString *docuPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *dbPath = [docuPath stringByAppendingPathComponent:@"test.db"];
+    NSLog(@"!!!dbPath = %@",dbPath);
+    //2.创建对应路径下数据库
+    FMDatabase  *db = [FMDatabase databaseWithPath:dbPath];
+    [db open];
+    if (![db open]) {
+        NSLog(@"db open fail");
+        return;
+    }
+    // 4.查询
+    NSString *sql = @"select id, name, age FROM t_student";
+    FMResultSet *rs = [db executeQuery:sql];
+    while ([rs next]) {
+        int id = [rs intForColumnIndex:0];
+        NSString *name = [rs stringForColumnIndex:1];
+        int age = [rs intForColumnIndex:2];
+        NSDictionary *studentDict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:id], @"id", name, @"name", [NSNumber numberWithInt:age], @"age", nil];
+        [studentArray addObject:studentDict];
+    }
+    
     // Do any additional setup after loading the view.
     self.tableView=({
         UITableView *tableView=[UITableView new];
