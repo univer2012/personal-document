@@ -13,10 +13,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        float x = 12345.54321;
-        double y = 445566778899.987654321;
-        printf("%f\n",x);
-        printf("%f\n",y);
+        int i = 123;
+        float a= 12.34567;
+        printf("% 6d % 10.4f\n",i, a);
+        printf("%-6d % 10.4f\n",i, a);
+        printf("% 6d%- 10.4f\n",i, a);
     }
 }
 
