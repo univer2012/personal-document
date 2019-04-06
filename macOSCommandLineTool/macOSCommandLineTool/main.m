@@ -10,6 +10,7 @@
 #import "FKApple.h"
 
 #include "stdio.h"
+#include "string.h"
 
 void turn(int arra[][4], int arrb[][3]);
 
@@ -17,6 +18,10 @@ void turn(int arra[][4], int arrb[][3]);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        
+        printf("%s",strupr("AbCd"));
+        
+#if 0
         int a[3][4] = {{1,2,3,4},{5,6,7,8}, {9,10,11,12}};
         int i,j,b[4][3];
         
@@ -38,7 +43,7 @@ int main(int argc, const char * argv[]) {
             printf("\n");
         }
         printf("\n");
-        
+#endif
     }
 }
 /** 转置函数  */
