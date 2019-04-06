@@ -15,6 +15,24 @@
 void turn(int arra[][4], int arrb[][3]);
 
 
+
+void process(int *x, int n, int (*fun)()) {/** 形参fun为函数指针  */
+    int result;
+    result = (*fun)(x, n);  /** 以函数指针fun实现同类型相关函数的调用  */
+    printf("%d\n",result);
+}
+
+int arr_max(int x[], int n) {
+    int max = x[0],k;
+    for (k = 1; k < n; k++) {
+        if (max < x[k]) {
+            max = x[k];
+        }
+    }
+    return (max);
+}
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -56,6 +74,10 @@ void turn(int arra[][4], int arrb[][3])
         }
     }
 }
+
+
+
+
 
 
 
