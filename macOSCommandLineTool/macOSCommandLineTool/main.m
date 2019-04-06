@@ -19,9 +19,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         
-        float x,*p1, *p2;
-        int y, *p3;
-        char name[20], *cp;
+        
         
 #if 0
         int a[3][4] = {{1,2,3,4},{5,6,7,8}, {9,10,11,12}};
