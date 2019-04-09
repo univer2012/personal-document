@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo-16-04-07/example/16-05-07/modules/&#x65ad;&#x70b9;&#x7eed;&#x4f20;&#x4e0b;&#x8f7d;_&#x666e;&#x901a;&#x4e0b;&#x8f7d;_&#x540e;&#x53f0;&#x4e0b;&#x8f7d;_&#x53d6;&#x6d88;&#x4e0b;&#x8f7d;/ctrl/SGHSesstionDownloadViewController.m"
+            timestampString = "576487585.156301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-cancellableDownload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo-16-04-07/example/16-05-07/modules/&#x65ad;&#x70b9;&#x7eed;&#x4f20;&#x4e0b;&#x8f7d;_&#x666e;&#x901a;&#x4e0b;&#x8f7d;_&#x540e;&#x53f0;&#x4e0b;&#x8f7d;_&#x53d6;&#x6d88;&#x4e0b;&#x8f7d;/ctrl/SGHSesstionDownloadViewController.m"
+            timestampString = "576487585.173178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-resumableDownload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo-16-04-07/example/16-05-07/modules/&#x65ad;&#x70b9;&#x7eed;&#x4f20;&#x4e0b;&#x8f7d;_&#x666e;&#x901a;&#x4e0b;&#x8f7d;_&#x540e;&#x53f0;&#x4e0b;&#x8f7d;_&#x53d6;&#x6d88;&#x4e0b;&#x8f7d;/ctrl/SGHSesstionDownloadViewController.m"
+            timestampString = "576487585.173945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-backgroundDownload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ObjectiveCDemo-16-04-07/example/16-05-07/modules/&#x65ad;&#x70b9;&#x7eed;&#x4f20;&#x4e0b;&#x8f7d;_&#x666e;&#x901a;&#x4e0b;&#x8f7d;_&#x540e;&#x53f0;&#x4e0b;&#x8f7d;_&#x53d6;&#x6d88;&#x4e0b;&#x8f7d;/ctrl/SGHSesstionDownloadViewController.m"
+            timestampString = "576487585.174744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "@implementation SGHSesstionDownloadViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

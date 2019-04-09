@@ -58,6 +58,7 @@ static NSString * const kBackgroundSessionID = @"cn.edu.scnu.DownloadTask.Backgr
 */
 #pragma mark - Button Actions
 /// 创建可取消的下载任务
+//【普通下载】
 - (IBAction)cancellableDownload:(id)sender {
     if (!self.cancellableTask) {
         if (!self.currentSession) {
@@ -78,6 +79,7 @@ static NSString * const kBackgroundSessionID = @"cn.edu.scnu.DownloadTask.Backgr
 }
 
 /// 创建可恢复的下载任务
+//【断点续传】
 - (IBAction)resumableDownload:(id)sender {
     if (!self.resumableTask) {
         if (!self.currentSession) {
@@ -101,6 +103,7 @@ static NSString * const kBackgroundSessionID = @"cn.edu.scnu.DownloadTask.Backgr
 }
 
 /// 创建后台下载任务
+//【后台下载】
 - (IBAction)backgroundDownload:(id)sender {
     NSString *imageURLStr = @"http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:imageURLStr]];
@@ -113,6 +116,7 @@ static NSString * const kBackgroundSessionID = @"cn.edu.scnu.DownloadTask.Backgr
 }
 
 /// 取消所有下载任务
+//【取消下载】
 - (IBAction)cancelDownloadTask:(id)sender {
     if (self.cancellableTask) {
         [self.cancellableTask cancel];

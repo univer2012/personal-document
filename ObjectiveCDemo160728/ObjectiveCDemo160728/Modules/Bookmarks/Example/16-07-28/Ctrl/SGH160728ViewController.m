@@ -34,6 +34,7 @@
         return;
     }
     // 4.查询
+    NSMutableArray *studentArray = [NSMutableArray array];
     NSString *sql = @"select id, name, age FROM t_student";
     FMResultSet *rs = [db executeQuery:sql];
     while ([rs next]) {

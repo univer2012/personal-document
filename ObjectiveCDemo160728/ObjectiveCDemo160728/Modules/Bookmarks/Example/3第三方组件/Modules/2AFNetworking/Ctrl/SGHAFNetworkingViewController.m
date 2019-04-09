@@ -7,7 +7,7 @@
 //
 
 #import "SGHAFNetworkingViewController.h"
-#if 0
+#if 1
 #import <AFNetworking/AFNetworking.h>
 #endif
 //#import "AFNetworking.h"
@@ -30,7 +30,7 @@
 
 
 }
-#if 0
+#if 1
 - (void)AFNetworkStatus{
     //1.创建网络监测者
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
