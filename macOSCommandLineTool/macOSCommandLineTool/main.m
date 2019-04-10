@@ -7,73 +7,42 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FKApple.h"
-
-#include "stdio.h"
-#include "string.h"
-
-void turn(int arra[][4], int arrb[][3]);
-
-
-
-void process(int *x, int n, int (*fun)()) {/** 形参fun为函数指针  */
-    int result;
-    result = (*fun)(x, n);  /** 以函数指针fun实现同类型相关函数的调用  */
-    printf("%d\n",result);
-}
-
-int arr_max(int x[], int n) {
-    int max = x[0],k;
-    for (k = 1; k < n; k++) {
-        if (max < x[k]) {
-            max = x[k];
-        }
+//单链表的基本结构：
+typedef struct node {
+    char *data;
+    struct node *next;
+} node_t;
+//设定一个打印链表的函数:
+void list_display(node_t *head) {
+    for (; head; head = head->next) {
+        printf("%s ",head->data);
     }
-    return (max);
+    printf("\n");
 }
+/** 1.计算一个链表的长度（复杂度O(n)）
+ 算法：定义一个p指针指向头结点，步长为1，遍历链表。  */
+int list_len(node_t *head) {
+    int i;
+    for (i = 0; head; head = head->next, i++){}
+    return i;
+}
+/** 2.反转链表（复杂度O(n)）
+ 算法：t遍历链表, q记录t的上一个结点, p是一个临时变量用来缓存t的值。 */
+void reverse(node_t *head) {
+    node_t *p = 0,*q = 0,*t = 0;
+    for (t = head; t; p = t,t = t->next, p->next = q, q = p);
+}
+/** 3.查找倒数第k个元素（尾结点记为倒数第0个）（复杂度O(n)）
+ 算法：2个指针p, q初始化指向头结点.p先跑到k结点处, 然后q再开始跑, 当p跑到最后跑到尾巴时, q正好到达倒数第k个。  */
 
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
-        
-        
-#if 0
-        int a[3][4] = {{1,2,3,4},{5,6,7,8}, {9,10,11,12}};
-        int i,j,b[4][3];
-        
-        printf("转置前的矩阵：\n");
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < 4; j++) {
-                printf("%5d", a[i][j]);
-            }
-            printf("\n");
-        }
-        
-        turn(a, b);
-        
-        printf("转置后的矩阵：\n");
-        for (i = 0; i < 4; i++) {
-            for (j = 0; j < 3; j++) {
-                printf("%5d",b[i][j]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-#endif
+
     }
 }
-/** 转置函数  */
-void turn(int arra[][4], int arrb[][3])
-{
-    int r,c;
-    for (r = 0; r < 3; r++) {
-        for (c = 0; c < 4; c++) {
-            arrb[c][r] = arra[r][c];
-        }
-    }
-}
+
 
 
 
