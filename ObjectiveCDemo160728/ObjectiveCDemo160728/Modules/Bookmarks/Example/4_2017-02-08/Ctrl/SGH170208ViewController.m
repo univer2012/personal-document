@@ -85,7 +85,12 @@
      */
     self.fd_prefersNavigationBarHidden = YES;
     
+    
+    
+    
 }
+
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
