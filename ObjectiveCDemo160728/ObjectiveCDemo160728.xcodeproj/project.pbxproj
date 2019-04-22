@@ -160,6 +160,7 @@
 		8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0EE222821FF005152B4 /* SHProxy.m */; };
 		8FAFB0F32228B7AA005152B4 /* SHLeaks0301Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */; };
 		8FAFB0F72228FD56005152B4 /* UIViewController+SHLeaksTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */; };
+		8FB5B549226D467400E34EC9 /* SHSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB5B548226D467400E34EC9 /* SHSortManager.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
 /* End PBXBuildFile section */
@@ -471,6 +472,8 @@
 		8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLeaks0301Object.m; sourceTree = "<group>"; };
 		8FAFB0F52228FD56005152B4 /* UIViewController+SHLeaksTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SHLeaksTest.h"; sourceTree = "<group>"; };
 		8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SHLeaksTest.m"; sourceTree = "<group>"; };
+		8FB5B547226D467400E34EC9 /* SHSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSortManager.h; sourceTree = "<group>"; };
+		8FB5B548226D467400E34EC9 /* SHSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSortManager.m; sourceTree = "<group>"; };
 		8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH0227SeniorCampViewController.h; sourceTree = "<group>"; };
 		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
 		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
@@ -1557,6 +1560,8 @@
 			children = (
 				678594591E4AF22E006BA5CB /* SGH170208ViewController.h */,
 				6785945A1E4AF22E006BA5CB /* SGH170208ViewController.m */,
+				8FB5B547226D467400E34EC9 /* SHSortManager.h */,
+				8FB5B548226D467400E34EC9 /* SHSortManager.m */,
 			);
 			path = Ctrl;
 			sourceTree = "<group>";
@@ -2379,6 +2384,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2483,7 +2489,6 @@
 				67FA0D1F1DE817710012EDFF /* TBXML.m in Sources */,
 				0B16BA302215840F0071C0A7 /* UIColor+Hex.m in Sources */,
 				0B16BA27221582D10071C0A7 /* SHImageText0214ViewController.m in Sources */,
-
 				8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */,
 				67A550011EC1B7870052DCC3 /* SGH0509AboutRunLoopViewController.m in Sources */,
 				67D2A6B01E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m in Sources */,
@@ -2529,6 +2534,7 @@
 				8FAFB0E52226AB55005152B4 /* SHRuntime3Person.m in Sources */,
 				8F92671B2201EBC2009B3FC1 /* UIColor+Hex.m in Sources */,
 				6748E0621ECD495700CF62DA /* SGH170518ResuableCellViewController.m in Sources */,
+				8FB5B549226D467400E34EC9 /* SHSortManager.m in Sources */,
 				677177C31DEBD081009AB627 /* TKAesHelper.m in Sources */,
 				67EDCF491D4A07E300058E8D /* main.m in Sources */,
 				677177C81DEBD081009AB627 /* SGH1108ShareItem.m in Sources */,

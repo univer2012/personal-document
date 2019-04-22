@@ -9,6 +9,8 @@
 #import "SGH170208ViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
+#import "SHSortManager.h"
+
 @interface SGH170208ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
@@ -21,6 +23,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    SHSortManager *manager = [SHSortManager new];
+    NSMutableArray *oriArray = @[@(12),@(15),@(9),@(20),@(6),@(31),@(24)].mutableCopy;
+#if 0
+    NSLog(@"直接插入排序-排序前：");
+    for (NSNumber *temp in oriArray) {
+        NSLog(@"%@  ",temp);
+    }
+    [manager insertSort:oriArray];
+    NSLog(@"直接插入排序-排序后：");
+    for (NSNumber *temp in oriArray) {
+        NSLog(@"%@  ",temp);
+    }
+#endif
+    NSLog(@"起泡排序-排序前：");
+    for (NSNumber *temp in oriArray) {
+        NSLog(@"%@  ",temp);
+    }
+    [manager bubbleSort:oriArray];
+    NSLog(@"起泡排序-排序后：");
+    for (NSNumber *temp in oriArray) {
+        NSLog(@"%@  ",temp);
+    }
+    
+    
     self.tableView=({
         UITableView *tableView=[UITableView new];
         [self.view addSubview:tableView];

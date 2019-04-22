@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  ObjectiveCDemo160728
+//  SHLocalization
 //
-//  Created by huangaengoln on 16/7/28.
-//  Copyright © 2016年 huangaengoln. All rights reserved.
+//  Created by 远平 on 2019/4/18.
+//  Copyright © 2019 远平. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "SGH161128TabBarViewController.h"
-
 
 @interface AppDelegate ()
 
@@ -20,49 +18,43 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
-    NSLog(@"path: %@",path);
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *language = [languages objectAtIndex:0];
+    if ([language hasPrefix:@"zh"]) {//检测开头匹配，是否为中文
+        [[NSUserDefaults standardUserDefaults] setObject:@"zh-Hans" forKey:@"appLanguage"];//App语言设置为中文
+    }else{//其他语言
+        [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"appLanguage"];//App语言设置为英文
+    }
     
-    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    SGH161128TabBarViewController *tabBarController = [SGH161128TabBarViewController new];
-    
-    self.window.rootViewController = tabBarController;
-    
-    //[[UINavigationController alloc]initWithRootViewController:[ViewController new]];
-    [self.window makeKeyAndVisible];
-    self.window.backgroundColor = [UIColor whiteColor];
-    NSLog(@"%s",__func__);
     return YES;
 }
 
+
 - (void)applicationWillResignActive:(UIApplication *)application {
-    NSLog(@"%s",__func__);
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
+
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    NSLog(@"%s",__func__);
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    NSLog(@"%s",__func__);
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 
+
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSLog(@"%s",__func__);
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
+
 - (void)applicationWillTerminate:(UIApplication *)application {
-    NSLog(@"%s",__func__);
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    NSLog(@"%s",__func__);
-}
+
 
 @end
