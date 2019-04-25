@@ -13,8 +13,9 @@
 		8FDA16F82271B26400C4329E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FDA16F72271B26400C4329E /* Assets.xcassets */; };
 		8FDA16FB2271B26400C4329E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FDA16F92271B26400C4329E /* LaunchScreen.storyboard */; };
 		8FDA16FE2271B26400C4329E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA16FD2271B26400C4329E /* main.m */; };
-		8FDA17062271B28000C4329E /* YFLNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA17052271B28000C4329E /* YFLNotificationCenter.m */; };
-		8FDA17092271B2CD00C4329E /* YFLObserverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA17082271B2CD00C4329E /* YFLObserverModel.m */; };
+		8FDA17122271C5D900C4329E /* HHNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA170E2271C5D800C4329E /* HHNotification.m */; };
+		8FDA17132271C5D900C4329E /* HHNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA17112271C5D800C4329E /* HHNotificationCenter.m */; };
+		8FDA17162271C5FB00C4329E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA17152271C5FB00C4329E /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,12 @@
 		8FDA16FA2271B26400C4329E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FDA16FC2271B26400C4329E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FDA16FD2271B26400C4329E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8FDA17042271B28000C4329E /* YFLNotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLNotificationCenter.h; sourceTree = "<group>"; };
-		8FDA17052271B28000C4329E /* YFLNotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLNotificationCenter.m; sourceTree = "<group>"; };
-		8FDA17072271B2CD00C4329E /* YFLObserverModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLObserverModel.h; sourceTree = "<group>"; };
-		8FDA17082271B2CD00C4329E /* YFLObserverModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLObserverModel.m; sourceTree = "<group>"; };
+		8FDA170E2271C5D800C4329E /* HHNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHNotification.m; sourceTree = "<group>"; };
+		8FDA170F2271C5D800C4329E /* HHNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHNotificationCenter.h; sourceTree = "<group>"; };
+		8FDA17102271C5D800C4329E /* HHNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHNotification.h; sourceTree = "<group>"; };
+		8FDA17112271C5D800C4329E /* HHNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHNotificationCenter.m; sourceTree = "<group>"; };
+		8FDA17142271C5FB00C4329E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		8FDA17152271C5FB00C4329E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		8FDA16ED2271B25700C4329E /* Custome_NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				8FDA170D2271C5C200C4329E /* HHNotification */,
 				8FDA16EE2271B25700C4329E /* AppDelegate.h */,
 				8FDA16EF2271B25700C4329E /* AppDelegate.m */,
 				8FDA16F12271B25700C4329E /* ViewController.h */,
@@ -73,12 +77,21 @@
 				8FDA16F92271B26400C4329E /* LaunchScreen.storyboard */,
 				8FDA16FC2271B26400C4329E /* Info.plist */,
 				8FDA16FD2271B26400C4329E /* main.m */,
-				8FDA17042271B28000C4329E /* YFLNotificationCenter.h */,
-				8FDA17052271B28000C4329E /* YFLNotificationCenter.m */,
-				8FDA17072271B2CD00C4329E /* YFLObserverModel.h */,
-				8FDA17082271B2CD00C4329E /* YFLObserverModel.m */,
+				8FDA17142271C5FB00C4329E /* SecondViewController.h */,
+				8FDA17152271C5FB00C4329E /* SecondViewController.m */,
 			);
 			path = Custome_NotificationCenter;
+			sourceTree = "<group>";
+		};
+		8FDA170D2271C5C200C4329E /* HHNotification */ = {
+			isa = PBXGroup;
+			children = (
+				8FDA17102271C5D800C4329E /* HHNotification.h */,
+				8FDA170E2271C5D800C4329E /* HHNotification.m */,
+				8FDA170F2271C5D800C4329E /* HHNotificationCenter.h */,
+				8FDA17112271C5D800C4329E /* HHNotificationCenter.m */,
+			);
+			path = HHNotification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FDA17162271C5FB00C4329E /* SecondViewController.m in Sources */,
 				8FDA16F32271B25700C4329E /* ViewController.m in Sources */,
-				8FDA17092271B2CD00C4329E /* YFLObserverModel.m in Sources */,
-				8FDA17062271B28000C4329E /* YFLNotificationCenter.m in Sources */,
 				8FDA16FE2271B26400C4329E /* main.m in Sources */,
+				8FDA17132271C5D900C4329E /* HHNotificationCenter.m in Sources */,
+				8FDA17122271C5D900C4329E /* HHNotification.m in Sources */,
 				8FDA16F02271B25700C4329E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
