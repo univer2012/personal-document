@@ -19,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB72AE92286AC92005B7F14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3FB72AEA2286AD8C005B7F14 /* 3Observable介绍、创建可观察序列.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "3Observable介绍、创建可观察序列.md"; sourceTree = "<group>"; };
 		4B38310B1FB54A94391172DA /* Pods-RxSwiftDemo2019_03_31.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.release.xcconfig"; sourceTree = "<group>"; };
 		8F24A2B12252003700954D69 /* SimpleValidation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleValidation.storyboard; sourceTree = "<group>"; };
 		8F24A2B22252003700954D69 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 				8F95FA0222510EA2000407A6 /* Assets.xcassets */,
 				8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */,
 				8F95FA0722510EA2000407A6 /* Info.plist */,
+				3FB72AE92286AC92005B7F14 /* MyPlayground.playground */,
+				3FB72AEA2286AD8C005B7F14 /* 3Observable介绍、创建可观察序列.md */,
 			);
 			path = RxSwiftDemo2019_03_31;
 			sourceTree = "<group>";
