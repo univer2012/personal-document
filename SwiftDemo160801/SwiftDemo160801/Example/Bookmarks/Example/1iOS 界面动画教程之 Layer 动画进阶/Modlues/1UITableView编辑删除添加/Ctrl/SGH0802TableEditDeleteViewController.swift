@@ -44,8 +44,8 @@ class SGH0802TableEditDeleteViewController: UIViewController, UITableViewDelegat
     func setupLeftBarButtonItem() {
         self.leftButton = UIButton(type: .custom)
         self.leftButton!.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
-        self.leftButton?.setTitleColor(UIColor.red, for: UIControlState())
-        self.leftButton?.setTitle("Edit", for: UIControlState())
+        self.leftButton?.setTitleColor(UIColor.red, for: UIControl.State())
+        self.leftButton?.setTitle("Edit", for: UIControl.State())
         self.leftButton!.tag = 100
         self.leftButton!.isUserInteractionEnabled = false
         self.leftButton?.addTarget(self, action: #selector(SGH0802TableEditDeleteViewController.leftBarButtonItemClicked), for: .touchUpInside)
@@ -53,12 +53,12 @@ class SGH0802TableEditDeleteViewController: UIViewController, UITableViewDelegat
         self.navigationItem.leftBarButtonItem = barButtonItem
     }
     //左边按钮事件
-    func leftBarButtonItemClicked() {
+    @objc func leftBarButtonItemClicked() {
         print("leftBarButton")
         if self.leftButton!.tag == 100 {
             self.tableView?.setEditing(true, animated: true)
             self.leftButton?.tag = 200
-            self.leftButton?.setTitle("Done", for: UIControlState())
+            self.leftButton?.setTitle("Done", for: UIControl.State())
             //将增加按钮设置不能用
             self.rightButtonItem!.isEnabled = false
         }
@@ -67,7 +67,7 @@ class SGH0802TableEditDeleteViewController: UIViewController, UITableViewDelegat
             self.rightButtonItem!.isEnabled = true
             self.tableView?.setEditing(false, animated: true)
             self.leftButton?.tag = 100
-            self.leftButton?.setTitle("Edit", for: UIControlState())
+            self.leftButton?.setTitle("Edit", for: UIControl.State())
         }
     }
     
@@ -77,7 +77,7 @@ class SGH0802TableEditDeleteViewController: UIViewController, UITableViewDelegat
         self.navigationItem.rightBarButtonItem = self.rightButtonItem
     }
     
-    func rightBarButtonItemClicked() {
+    @objc func rightBarButtonItemClicked() {
         let row = self.items.count
         let indexPath = IndexPath(row: row, section: 0)
         self.items.append("杭州")
@@ -105,7 +105,7 @@ class SGH0802TableEditDeleteViewController: UIViewController, UITableViewDelegat
         return cell
     }
     //删除一行
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let index = indexPath.row as Int
         self.items.remove(at: index)
         self.tableView?.deleteRows(at: [indexPath], with: .top)

@@ -17,11 +17,11 @@ struct User {
             return nil
         }
         
-        guard let name = obj?["name"] as? String else {
+        guard let name = obj["name"] as? String else {
             return nil
         }
         
-        guard let message = obj?["message"] as? String else {
+        guard let message = obj["message"] as? String else {
             return nil
         }
         self.name = name
