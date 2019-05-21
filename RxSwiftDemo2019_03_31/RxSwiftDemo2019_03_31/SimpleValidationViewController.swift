@@ -37,9 +37,8 @@ class SimpleValidationViewController : ViewController {
             .share(replay: 1) // without this map would be executed once for each binding, rx is stateless by default
         // 密码是否有效
         let passwordValid = passwordOutlet.rx.text.orEmpty
-            // 密码 -> 密码是否有效
-            .map { $0.count >= minimalPasswordLength }
-            .share(replay: 1)
+            .map{ $0.count >= minimalPasswordLength}
+        .share(replay: 1)
 
         // 所有输入是否有效
         //combineLatest  结合最新的
