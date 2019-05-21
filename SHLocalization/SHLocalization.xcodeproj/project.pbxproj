@@ -56,6 +56,7 @@
 			children = (
 				8FB5B50522687E4900E34EC9 /* SHLocalization */,
 				8FB5B50422687E4900E34EC9 /* Products */,
+				8FB5B50F22687E4F00E34EC9 /* Assets.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +76,6 @@
 				8FB5B50922687E4900E34EC9 /* ViewController.h */,
 				8FB5B50A22687E4900E34EC9 /* ViewController.m */,
 				8FB5B50C22687E4900E34EC9 /* Main.storyboard */,
-				8FB5B50F22687E4F00E34EC9 /* Assets.xcassets */,
 				8FB5B51122687E4F00E34EC9 /* LaunchScreen.storyboard */,
 				8FB5B51422687E4F00E34EC9 /* Info.plist */,
 				8FB5B51522687E4F00E34EC9 /* main.m */,

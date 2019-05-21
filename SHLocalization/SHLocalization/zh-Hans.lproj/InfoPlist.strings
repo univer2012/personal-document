@@ -7,4 +7,4 @@
 */
 CFBundleDisplayName = "本地化";
 
-UILaunchStoryboardName = "LaunchScreen_ch";
+//UILaunchStoryboardName = "LaunchScreen_ch";
