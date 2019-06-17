@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F24A2B32252003700954D69 /* SimpleValidation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F24A2B12252003700954D69 /* SimpleValidation.storyboard */; };
-		8F24A2B42252003700954D69 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24A2B22252003700954D69 /* SimpleValidationViewController.swift */; };
+		3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */; };
+		3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */; };
+		3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */; };
+		3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */; };
+		3FB91A6722B78881006F7104 /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */; };
+		3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
-		8F95F9FE22510E98000407A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FD22510E98000407A6 /* ViewController.swift */; };
-		8F95FA0122510E98000407A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95F9FF22510E98000407A6 /* Main.storyboard */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
 		C7CBEC23B288FF6EFAD0E7F3 /* Pods_RxSwiftDemo2019_03_31.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */; };
@@ -19,15 +21,15 @@
 
 /* Begin PBXFileReference section */
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FB72AE92286AC92005B7F14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		3FB72AEA2286AD8C005B7F14 /* 3Observable介绍、创建可观察序列.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "3Observable介绍、创建可观察序列.md"; sourceTree = "<group>"; };
+		3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTabBarViewController.swift; sourceTree = "<group>"; };
+		3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190617BookmarksViewController.swift; sourceTree = "<group>"; };
+		3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_2ViewController.swift; sourceTree = "<group>"; };
+		3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_1ViewController.swift; sourceTree = "<group>"; };
+		3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SHRxswift_3ViewController.swift; path = "/Users/rrd/Desktop/Personal Documents/personal-document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules/SHRxswift_3ViewController.swift"; sourceTree = "<absolute>"; };
+		3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_4ViewController.swift; sourceTree = "<group>"; };
 		4B38310B1FB54A94391172DA /* Pods-RxSwiftDemo2019_03_31.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.release.xcconfig"; sourceTree = "<group>"; };
-		8F24A2B12252003700954D69 /* SimpleValidation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleValidation.storyboard; sourceTree = "<group>"; };
-		8F24A2B22252003700954D69 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95F9FB22510E98000407A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F95F9FD22510E98000407A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8F95FA0022510E98000407A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F95FA0222510EA2000407A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F95FA0522510EA2000407A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F95FA0722510EA2000407A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +48,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FB91A5B22B786C6006F7104 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				3FB91A5F22B787E3006F7104 /* Modules */,
+				3FB91A5C22B786D3006F7104 /* Bookmarks */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		3FB91A5C22B786D3006F7104 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		3FB91A5F22B787E3006F7104 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */,
+				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
+				3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */,
+				3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		8F95F9EF22510E98000407A6 = {
 			isa = PBXGroup;
 			children = (
@@ -67,16 +97,12 @@
 		8F95F9FA22510E98000407A6 /* RxSwiftDemo2019_03_31 */ = {
 			isa = PBXGroup;
 			children = (
-				8F24A2B12252003700954D69 /* SimpleValidation.storyboard */,
-				8F24A2B22252003700954D69 /* SimpleValidationViewController.swift */,
+				3FB91A5B22B786C6006F7104 /* Example */,
 				8F95F9FB22510E98000407A6 /* AppDelegate.swift */,
-				8F95F9FD22510E98000407A6 /* ViewController.swift */,
-				8F95F9FF22510E98000407A6 /* Main.storyboard */,
 				8F95FA0222510EA2000407A6 /* Assets.xcassets */,
 				8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */,
 				8F95FA0722510EA2000407A6 /* Info.plist */,
-				3FB72AE92286AC92005B7F14 /* MyPlayground.playground */,
-				3FB72AEA2286AD8C005B7F14 /* 3Observable介绍、创建可观察序列.md */,
+				3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */,
 			);
 			path = RxSwiftDemo2019_03_31;
 			sourceTree = "<group>";
@@ -161,8 +187,6 @@
 			files = (
 				8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */,
 				8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */,
-				8F95FA0122510E98000407A6 /* Main.storyboard in Resources */,
-				8F24A2B32252003700954D69 /* SimpleValidation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,23 +274,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F95F9FE22510E98000407A6 /* ViewController.swift in Sources */,
+				3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */,
+				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
+				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
 				8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */,
-				8F24A2B42252003700954D69 /* SimpleValidationViewController.swift in Sources */,
+				3FB91A6722B78881006F7104 /* SHRxswift_3ViewController.swift in Sources */,
+				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
+				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8F95F9FF22510E98000407A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F95FA0022510E98000407A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
