@@ -15,16 +15,19 @@ class SHRxswift_4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-let observable = Observable.of("A","B", "C")
-        observable.do(onNext: { (element) in
-            print("Intercepted Next:",element)
-        }, onError: { (error) in
-            print("Intercepted Next:", error)
-        }, onCompleted: {
-            print("Intercepted Completed")
-        }, onDispose: {
-            print("Intercepted Disposed")
-        })
+let disposeBag = DisposeBag()
+//第1个Observable，及其订阅
+let observable1 = Observable.of("A","B","C")
+observable1.subscribe { (event) in
+    print(event)
+}.disposed(by: disposeBag)
+
+//第2个Observable，及其订阅
+let observable2 = Observable.of(1,2,3)
+observable2.subscribe { (event) in
+    print(event)
+}.disposed(by: disposeBag)
+        
     }
         
         
