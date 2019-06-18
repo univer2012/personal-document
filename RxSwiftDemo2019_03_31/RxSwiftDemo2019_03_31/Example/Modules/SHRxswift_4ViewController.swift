@@ -9,39 +9,35 @@
 import UIKit
 
 import RxSwift
+import RxCocoa
 
 class SHRxswift_4ViewController: UIViewController {
+    let label:UILabel = UILabel()
+    
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-let disposeBag = DisposeBag()
-//第1个Observable，及其订阅
-let observable1 = Observable.of("A","B","C")
-observable1.subscribe { (event) in
-    print(event)
-}.disposed(by: disposeBag)
-
-//第2个Observable，及其订阅
-let observable2 = Observable.of(1,2,3)
-observable2.subscribe { (event) in
-    print(event)
-}.disposed(by: disposeBag)
+        view.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
         
+        //观察者
+        let observer :AnyObserver<String> = AnyObserver { (event) in
+            switch event {
+            case .next(let text):
+                //收到发出的索引数后显示到label上
+                self.label.text = text
+            default:
+                break
+            }
+        }
+        //Observable序列（每隔1秒钟发出一个索引数）
+        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+        observable.map{"当前索引数：\($0)"}
+        .bind(to: observer)
+        .disposed(by: disposeBag)
     }
-        
-        
-        // Do any additional setup after loading the view.
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
