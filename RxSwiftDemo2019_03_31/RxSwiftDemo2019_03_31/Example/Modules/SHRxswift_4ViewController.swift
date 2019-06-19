@@ -18,26 +18,15 @@ class SHRxswift_4ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
-        
-        //观察者
-        let observer :AnyObserver<String> = AnyObserver { (event) in
-            switch event {
-            case .next(let text):
-                //收到发出的索引数后显示到label上
-                self.label.text = text
-            default:
-                break
-            }
-        }
-        //Observable序列（每隔1秒钟发出一个索引数）
+        //Observable序列（每隔0.5秒钟发出一个索引数）
         let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         observable.map{"当前索引数：\($0)"}
-        .bind(to: observer)
+        .bind(to: label.rx.text)//根据索引数不断变放大字体
         .disposed(by: disposeBag)
     }
 }
+
