@@ -25,24 +25,27 @@ class SHRxswift_4ViewController: UIViewController {
         
 let disposeBag = DisposeBag()
 
-//创建一个BehaviorSubject
-let subject = BehaviorSubject(value: "111")
+//创建一个初始值为111的Variable
+let variable = Variable("111")
 
-//第1次订阅subject
-subject.subscribe { (event) in
-    print("第1次订阅：",event)
+//修改value值
+variable.value = "222"
+
+//第1次订阅
+variable.asObservable().subscribe{
+    print("第1次订阅：",$0)
 }.disposed(by: disposeBag)
-//发送next事件
-subject.onNext("222")
 
-//发送error事件
-subject.onError(NSError(domain: "local", code: 0, userInfo: nil))
+//修改value值
+variable.value = "333"
 
-//第2次订阅subject
-subject.subscribe { (event) in
-    print("第2次订阅：",event)
-}
-        
+//第2次订阅
+variable.asObservable().subscribe{
+    print("第2次订阅：",$0)
+}.disposed(by: disposeBag)
+
+//修改value值
+variable.value = "444"
         
     }
 }
