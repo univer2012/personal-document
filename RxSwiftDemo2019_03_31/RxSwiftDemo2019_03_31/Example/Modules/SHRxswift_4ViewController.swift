@@ -12,40 +12,42 @@ import RxSwift
 import RxCocoa
 
 class SHRxswift_4ViewController: UIViewController {
-    let label:UILabel = UILabel()
-    
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(label)
-        label.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-        }
         
 let disposeBag = DisposeBag()
 
-//创建一个初始值为111的Variable
-let variable = Variable("111")
+let source = PublishSubject<Int>()
+let notifier = PublishSubject<String>()
 
-//修改value值
-variable.value = "222"
+source
+    .sample(notifier)
+    .subscribe(onNext: { print($0) })
+    .disposed(by: disposeBag)
 
-//第1次订阅
-variable.asObservable().subscribe{
-    print("第1次订阅：",$0)
-}.disposed(by: disposeBag)
+source.onNext(1)
 
-//修改value值
-variable.value = "333"
+//让源序列接收接收消息
+notifier.onNext("A")
 
-//第2次订阅
-variable.asObservable().subscribe{
-    print("第2次订阅：",$0)
-}.disposed(by: disposeBag)
+source.onNext(2)
 
-//修改value值
-variable.value = "444"
+//让源序列接收消息
+notifier.onNext("B")
+notifier.onNext("C")
+
+source.onNext(3)
+source.onNext(4)
+
+//让源序列接收消息
+notifier.onNext("D")
+
+source.onNext(5)
+
+//让源序列接收消息
+notifier.onCompleted()
         
     }
 }
