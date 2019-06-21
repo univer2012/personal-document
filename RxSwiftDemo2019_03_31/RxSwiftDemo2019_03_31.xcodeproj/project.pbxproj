@@ -11,11 +11,11 @@
 		3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */; };
 		3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */; };
 		3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */; };
-		3FB91A6722B78881006F7104 /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */; };
 		3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
+		8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */; };
 		C7CBEC23B288FF6EFAD0E7F3 /* Pods_RxSwiftDemo2019_03_31.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,6 @@
 		3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190617BookmarksViewController.swift; sourceTree = "<group>"; };
 		3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_2ViewController.swift; sourceTree = "<group>"; };
 		3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_1ViewController.swift; sourceTree = "<group>"; };
-		3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SHRxswift_3ViewController.swift; path = "/Users/rrd/Desktop/Personal Documents/personal-document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules/SHRxswift_3ViewController.swift"; sourceTree = "<absolute>"; };
 		3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_4ViewController.swift; sourceTree = "<group>"; };
 		4B38310B1FB54A94391172DA /* Pods-RxSwiftDemo2019_03_31.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.release.xcconfig"; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +32,7 @@
 		8F95FA0222510EA2000407A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F95FA0522510EA2000407A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F95FA0722510EA2000407A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewController.swift; sourceTree = "<group>"; };
 		E1A8CAF78AE0F7F26D1BF5FC /* Pods-RxSwiftDemo2019_03_31.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,9 +68,9 @@
 		3FB91A5F22B787E3006F7104 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */,
 				3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */,
 				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
-				3FB91A6622B78881006F7104 /* SHRxswift_3ViewController.swift */,
 				3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */,
 			);
 			path = Modules;
@@ -278,8 +278,8 @@
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
 				8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */,
-				3FB91A6722B78881006F7104 /* SHRxswift_3ViewController.swift in Sources */,
 				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
+				8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */,
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
