@@ -21,3 +21,4 @@ target 'RxSwiftDemo2019_03_31' do
     pod 'SVProgressHUD'
 
 end
+

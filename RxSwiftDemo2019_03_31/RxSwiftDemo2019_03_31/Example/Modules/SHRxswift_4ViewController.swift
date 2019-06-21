@@ -11,36 +11,51 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
+enum MyError: Error {
+    case A
+    case B
+}
+
 class SHRxswift_4ViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let infiniteInterval$ = Observable<Int>
-            .interval(0.1, scheduler: MainScheduler.instance)
-            .do(onNext: {print("infinite$: \($0)")},
-                onSubscribe: {print("开始订阅 infinite$")},
-                onDispose: {print("销毁 infinite$")})
-        
-        let limited$ = Observable<Int>
-            .interval(0.5, scheduler: MainScheduler.instance)
-            .take(2)
-            .do(onNext: {print("limited$: \($0)")},
-                onSubscribe: {print("开始订阅 limited$")},
-                onDispose: {print("销毁 limited$")})
-        
-        let o: Observable<Int> = Observable.using({ () -> AnyDisposable in
-            return AnyDisposable(infiniteInterval$.subscribe())
-        }, observableFactory: {_ in return limited$})
-        o.subscribe()
+        //获取第0个频道的歌曲信息
+        getPlaylist("0")
+            .subscribe {event in
+                switch event {
+                case .success(let json):
+                    print("JSON结果：",json)
+                case .error(let error):
+                    print("发生错误：",error)
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
-class AnyDisposable: Disposable {
-    let _dispose: () -> Void
-    init(_ disposable: Disposable) {
-        _dispose = disposable.dispose
+//获取豆瓣某频道下的歌曲信息
+func getPlaylist(_ channel: String) -> Single<[String:Any]> {
+    return Single<[String:Any]>.create {single in
+        let url = "https://douban.fm/j/mine/playlist?" + "type=n&channel=\(channel)&from=mainsite"
+        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { (data, _, error) in
+            if let error = error {
+                single(.error(error))
+                return
+            }
+            guard let data = data,
+                let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves),
+                let result = json as? [String: Any] else {
+                    single(.error(DataError.cantParseJSON))
+                    return
+            }
+            single(.success(result))
+        })
+        task.resume()
+        return Disposables.create{ task.cancel() }
     }
-    func dispose() {
-        _dispose()
-    }
+}
+//与数据相关的错误类型
+enum DataError: Error {
+    case cantParseJSON
 }
