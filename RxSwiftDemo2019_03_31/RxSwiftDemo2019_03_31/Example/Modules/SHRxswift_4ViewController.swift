@@ -13,42 +13,34 @@ import RxCocoa
 
 class SHRxswift_4ViewController: UIViewController {
     let disposeBag = DisposeBag()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-let disposeBag = DisposeBag()
-
-let source = PublishSubject<Int>()
-let notifier = PublishSubject<String>()
-
-source
-    .sample(notifier)
-    .subscribe(onNext: { print($0) })
-    .disposed(by: disposeBag)
-
-source.onNext(1)
-
-//让源序列接收接收消息
-notifier.onNext("A")
-
-source.onNext(2)
-
-//让源序列接收消息
-notifier.onNext("B")
-notifier.onNext("C")
-
-source.onNext(3)
-source.onNext(4)
-
-//让源序列接收消息
-notifier.onNext("D")
-
-source.onNext(5)
-
-//让源序列接收消息
-notifier.onCompleted()
+        let infiniteInterval$ = Observable<Int>
+            .interval(0.1, scheduler: MainScheduler.instance)
+            .do(onNext: {print("infinite$: \($0)")},
+                onSubscribe: {print("开始订阅 infinite$")},
+                onDispose: {print("销毁 infinite$")})
         
+        let limited$ = Observable<Int>
+            .interval(0.5, scheduler: MainScheduler.instance)
+            .take(2)
+            .do(onNext: {print("limited$: \($0)")},
+                onSubscribe: {print("开始订阅 limited$")},
+                onDispose: {print("销毁 limited$")})
+        
+        let o: Observable<Int> = Observable.using({ () -> AnyDisposable in
+            return AnyDisposable(infiniteInterval$.subscribe())
+        }, observableFactory: {_ in return limited$})
+        o.subscribe()
     }
 }
-
+class AnyDisposable: Disposable {
+    let _dispose: () -> Void
+    init(_ disposable: Disposable) {
+        _dispose = disposable.dispose
+    }
+    func dispose() {
+        _dispose()
+    }
+}
