@@ -18,7 +18,8 @@ struct SH190617BookmarksViewModel {
         "3Observable介绍、创建可观察序列",
         "4Observable订阅、事件监听、订阅销毁",
         "5UITextView",
-        "6UIButton",]
+        "6UIButton",
+        "7UISwitch 与 UISegmentedControl",]
     let controllers = [
         SHRxswift_1ViewController(),
         SHRxswift_2ViewController(),
@@ -26,6 +27,7 @@ struct SH190617BookmarksViewModel {
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_4ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_4ViewController"),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_5ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_5ViewController"),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_6ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_6ViewController"),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_7ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_7ViewController"),
     ]
 }
 
