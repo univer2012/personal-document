@@ -16,12 +16,16 @@ struct SH190617BookmarksViewModel {
         "1基本介绍、安装配置",
         "2响应式编程与传统式编程的比较样例",
         "3Observable介绍、创建可观察序列",
-        "4Observable订阅、事件监听、订阅销毁"]
+        "4Observable订阅、事件监听、订阅销毁",
+        "5UITextView",
+        "6UIButton",]
     let controllers = [
         SHRxswift_1ViewController(),
         SHRxswift_2ViewController(),
         SHRxswift_3ViewController(),
-        SHRxswift_4ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_4ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_4ViewController"),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_5ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_5ViewController"),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_6ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_6ViewController"),
     ]
 }
 
