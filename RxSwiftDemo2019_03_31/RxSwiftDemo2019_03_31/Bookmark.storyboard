@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbV-5Z-g3K">
-                                <rect key="frame" x="20" y="138" width="61.5" height="24"/>
+                                <rect key="frame" x="19.999999999999996" y="138" width="61.666666666666657" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,13 +31,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmP-aM-rbH">
-                                <rect key="frame" x="89.5" y="137.5" width="274.5" height="30"/>
+                                <rect key="frame" x="89.666666666666657" y="137.66666666666666" width="274.33333333333337" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-9z-FF3">
-                                <rect key="frame" x="89.5" y="178" width="274.5" height="30"/>
+                                <rect key="frame" x="89.666666666666657" y="178" width="274.33333333333337" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -300,6 +300,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6f-wt-Ec8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3933.3333333333335" y="-35.491071428571423"/>
+        </scene>
+        <!--SengolnHuang-->
+        <scene sceneID="UtL-CW-1VN">
+            <objects>
+                <viewController storyboardIdentifier="SHRxswift_10ViewController" id="1BR-LP-Wpw" customClass="SHRxswift_10ViewController" customModule="RxSwiftDemo2019_03_31" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vRb-IF-LIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XDE-gg-Gy3"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SengolnHuang" id="YLm-1w-s44">
+                        <barButtonItem key="leftBarButtonItem" title="停止" id="cqH-rk-ej0"/>
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="Tnv-a7-jEO"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="cqH-rk-ej0" id="z0y-Go-aX2"/>
+                        <outlet property="refreshButton" destination="Tnv-a7-jEO" id="nSU-98-b95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SR1-W5-bPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4882.608695652174" y="-35.491071428571423"/>
         </scene>
     </scenes>
     <resources>
