@@ -14,7 +14,7 @@ class SHTabBarViewController: UITabBarController {
         super.viewDidLoad()
         let bookmarksNavController = UINavigationController(rootViewController: SH190617BookmarksViewController())
         bookmarksNavController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        
+        bookmarksNavController.title = "Bookmarks"
         self.viewControllers = [bookmarksNavController]
     }
     
