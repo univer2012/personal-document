@@ -18,7 +18,20 @@ class SHRxswift_10ViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView = UITableView(frame:self.view.frame, style:.plain)
-//        self.tableView.register
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        view.addSubview(self.tableView)
+        
+        let items = Observable.just([
+            "文本输入框的用法",
+            "开关按钮的用法",
+            "进度条的用法",
+            "文本标签的用法",
+            ])
+        items.bind(to: tableView.rx.items) { (tableView,row, element) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+            cell.textLabel?.text = "\(row): \(element)"
+            return cell
+        }
     }
     
 }
