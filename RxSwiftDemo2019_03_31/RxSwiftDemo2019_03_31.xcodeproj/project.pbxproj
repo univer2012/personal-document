@@ -10,6 +10,8 @@
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
 		3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */; };
+		3F8CFF7F22D369710067194E /* SH190708ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */; };
+		3F8CFF8122D36A440067194E /* SHRxswift_14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */; };
 		3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */; };
 		3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */; };
 		3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */; };
@@ -35,6 +37,8 @@
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190708ContactsViewController.swift; sourceTree = "<group>"; };
+		3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_14ViewController.swift; sourceTree = "<group>"; };
 		3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTabBarViewController.swift; sourceTree = "<group>"; };
 		3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190617BookmarksViewController.swift; sourceTree = "<group>"; };
 		3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_2ViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8CFF7D22D368D10067194E /* Modules2 */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */,
+			);
+			path = Modules2;
+			sourceTree = "<group>";
+		};
 		3FB91A5B22B786C6006F7104 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3F8CFF7D22D368D10067194E /* Modules2 */,
 				3FB91A5F22B787E3006F7104 /* Modules */,
 				3FB91A5C22B786D3006F7104 /* Bookmarks */,
 			);
@@ -83,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */,
+				3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -317,10 +331,12 @@
 				3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */,
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
+				3F8CFF8122D36A440067194E /* SHRxswift_14ViewController.swift in Sources */,
 				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
 				8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */,
 				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
 				8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */,
+				3F8CFF7F22D369710067194E /* SH190708ContactsViewController.swift in Sources */,
 				3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */,
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift in Sources */,
