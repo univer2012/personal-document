@@ -494,20 +494,42 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="SengolnHuang" id="YLm-1w-s44">
-                        <barButtonItem key="leftBarButtonItem" title="停止" id="cqH-rk-ej0"/>
                         <barButtonItem key="rightBarButtonItem" title="刷新" id="Tnv-a7-jEO"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="cancelButton" destination="cqH-rk-ej0" id="z0y-Go-aX2"/>
                         <outlet property="refreshButton" destination="Tnv-a7-jEO" id="nSU-98-b95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SR1-W5-bPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4882.5" y="-35.91549295774648"/>
+        </scene>
+        <!--SengolnHuang-->
+        <scene sceneID="F5N-Uz-Caq">
+            <objects>
+                <viewController storyboardIdentifier="SHRxswift_11ViewController" id="dWr-LY-PwA" customClass="SHRxswift_11ViewController" customModule="RxSwiftDemo2019_03_31" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTM-3c-gnq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KXX-Fm-Gkq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SengolnHuang" id="4DL-vs-DVK">
+                        <barButtonItem key="leftBarButtonItem" title="刷新" id="MbH-z6-czX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hG7-Pn-F1d"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="hG7-Pn-F1d" id="2G3-XC-uvX"/>
+                        <outlet property="refreshButton" destination="MbH-z6-czX" id="LUR-CN-xuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xu4-eX-bcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5686" y="-35"/>
         </scene>
     </scenes>
     <resources>
