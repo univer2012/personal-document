@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
+		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
+		3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */; };
 		3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */; };
 		3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */; };
 		3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13ViewController.swift; sourceTree = "<group>"; };
 		3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTabBarViewController.swift; sourceTree = "<group>"; };
 		3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190617BookmarksViewController.swift; sourceTree = "<group>"; };
 		3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_2ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				3FE4C62522C60FA6007E539C /* SHRxswift_9ViewController.swift */,
 				8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */,
 				8F0D422E22D0839D004C1E53 /* SHRxswift_11ViewController.swift */,
+				3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */,
+				3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
 				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
 				8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */,
+				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
 				8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */,
+				3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */,
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift in Sources */,
 				8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */,

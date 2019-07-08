@@ -23,7 +23,9 @@ struct SH190617BookmarksViewModel {
         "8双向绑定<->",
         "9UIGestureRecognizer",
         "10UITableView",
-        "11可编辑表格"]
+        "11可编辑表格",
+        "12不同单元格混用",
+    "13tableView 样式修改"]
     let controllers = [
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_1ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_1ViewController"),
         SHRxswift_2ViewController(),
@@ -37,6 +39,8 @@ struct SH190617BookmarksViewModel {
         SHRxswift_9ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_10ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_10ViewController"),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_11ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_11ViewController"),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_12ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_12ViewController"),
+        SHRxswift_13ViewController(),
     ]
 }
 

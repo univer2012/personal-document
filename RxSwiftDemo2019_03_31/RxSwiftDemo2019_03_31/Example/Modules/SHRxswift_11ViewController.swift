@@ -113,9 +113,11 @@ enum TableEditingcommand {
     case moveItem(from: IndexPath, to: IndexPath) //移动数据
     case deleteItem(IndexPath)  //删除数据
 }
-
+//定义表格对应的ViewModel
 struct TableViewModel {
+    //表格数据项
     fileprivate var items:[String]
+    
     init(items: [String] = []) {
         self.items = items
     }
