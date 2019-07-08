@@ -24,7 +24,7 @@ struct SH190617BookmarksViewModel {
         "9UIGestureRecognizer",
         "10UITableView"]
     let controllers = [
-        SHRxswift_1ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_1ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_1ViewController"),
         SHRxswift_2ViewController(),
         SHRxswift_3ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_4ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_4ViewController"),
