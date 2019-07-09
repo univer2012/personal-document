@@ -65,7 +65,8 @@ enum SectionItem {
     case TitleImageSectionItem(title: String, image: UIImage)
     case TitleSwitchSectionItem(title: String, enabled: Bool)
 }
-struct MySection {
+
+fileprivate struct MySection {
     var header: String
     var items:[SectionItem]
 }

@@ -16,10 +16,14 @@ import SnapKit
 
 struct SH190708ContactsViewModel {
     let titles = [
-        "1UICollectionView"
+        "1UICollectionView",
+        "2刷新集合数据",
+        "3pickView"
         ]
     let controllers = [
         SHRxswift_14ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_15ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_15ViewController"),
+        SHRxswift_16ViewController()
     ]
 }
 
@@ -30,7 +34,7 @@ class SH190708ContactsViewController: UIViewController, UIGestureRecognizerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Bookmarks"
+        self.title = "Contacts"
         //设置滑动返回
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
