@@ -18,12 +18,14 @@ struct SH190708ContactsViewModel {
     let titles = [
         "1UICollectionView",
         "2刷新集合数据",
-        "3pickView"
+        "3pickView",
+        "4weak_unowned"
         ]
     let controllers = [
         SHRxswift_14ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_15ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_15ViewController"),
-        SHRxswift_16ViewController()
+        SHRxswift_16ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_17ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_17ViewController"),
     ]
 }
 

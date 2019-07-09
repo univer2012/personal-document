@@ -14,6 +14,8 @@
 		3F8CFF8122D36A440067194E /* SHRxswift_14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */; };
 		3F8CFF8322D469BF0067194E /* SHRxswift_15ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8222D469BF0067194E /* SHRxswift_15ViewController.swift */; };
 		3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8422D473B10067194E /* SHRxswift_16ViewController.swift */; };
+		3F8CFF8722D49D2E0067194E /* SHRxswift_17ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8622D49D2E0067194E /* SHRxswift_17ViewController.swift */; };
+		3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8822D49F540067194E /* SHRxswift_17DetailViewController.swift */; };
 		3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */; };
 		3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */; };
 		3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */; };
@@ -43,6 +45,8 @@
 		3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_14ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF8222D469BF0067194E /* SHRxswift_15ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_15ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF8422D473B10067194E /* SHRxswift_16ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_16ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF8622D49D2E0067194E /* SHRxswift_17ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_17ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF8822D49F540067194E /* SHRxswift_17DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_17DetailViewController.swift; sourceTree = "<group>"; };
 		3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTabBarViewController.swift; sourceTree = "<group>"; };
 		3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SH190617BookmarksViewController.swift; sourceTree = "<group>"; };
 		3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_2ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */,
 				3F8CFF8222D469BF0067194E /* SHRxswift_15ViewController.swift */,
 				3F8CFF8422D473B10067194E /* SHRxswift_16ViewController.swift */,
+				3F8CFF8622D49D2E0067194E /* SHRxswift_17ViewController.swift */,
+				3F8CFF8822D49F540067194E /* SHRxswift_17DetailViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
 				3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
+				3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */,
 				8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */,
 				3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */,
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
@@ -342,6 +349,7 @@
 				8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */,
 				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
+				3F8CFF8722D49D2E0067194E /* SHRxswift_17ViewController.swift in Sources */,
 				8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */,
 				3F8CFF8322D469BF0067194E /* SHRxswift_15ViewController.swift in Sources */,
 				3F8CFF7F22D369710067194E /* SH190708ContactsViewController.swift in Sources */,
