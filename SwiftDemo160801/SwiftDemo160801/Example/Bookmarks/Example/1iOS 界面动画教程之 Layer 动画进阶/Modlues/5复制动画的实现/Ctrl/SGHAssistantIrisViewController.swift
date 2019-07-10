@@ -101,7 +101,7 @@ class SGHAssistantIrisViewController: UIViewController {
             scale.toValue = scaleFactor
             scale.duration = 0.1
             scale.isRemovedOnCompletion = false
-            scale.fillMode = kCAFillModeForwards
+            scale.fillMode = CAMediaTimingFillMode.forwards
             self.dot.add(scale, forKey: nil)
             
             //保存这个 scale
@@ -143,7 +143,7 @@ class SGHAssistantIrisViewController: UIViewController {
         scale.repeatCount = Float.infinity
         //往返变
         scale.autoreverses = true
-        scale.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        scale.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         dot.add(scale, forKey: "dotScale")
         
         
@@ -156,7 +156,7 @@ class SGHAssistantIrisViewController: UIViewController {
         fade.beginTime = CACurrentMediaTime() + 0.33
         fade.repeatCount = Float.infinity
         fade.autoreverses = true
-        fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        fade.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         dot.add(fade, forKey: "dotOpacity")
         
         
@@ -169,7 +169,7 @@ class SGHAssistantIrisViewController: UIViewController {
         tint.beginTime = CACurrentMediaTime() + 0.28
         tint.repeatCount = Float.infinity
         tint.autoreverses = true
-        fade.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        fade.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         dot.add(tint, forKey: "dotColor")
         
         
@@ -179,8 +179,8 @@ class SGHAssistantIrisViewController: UIViewController {
         initialRotation.toValue = 0.01
         initialRotation.duration = 0.33
         initialRotation.isRemovedOnCompletion = false
-        initialRotation.fillMode = kCAFillModeForwards
-        initialRotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        initialRotation.fillMode = CAMediaTimingFillMode.forwards
+        initialRotation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         replicator.add(initialRotation, forKey: "initialRotation")
         
         
@@ -192,7 +192,7 @@ class SGHAssistantIrisViewController: UIViewController {
         rotation.beginTime = CACurrentMediaTime() + 0.33
         rotation.repeatCount = Float.infinity
         rotation.autoreverses = true
-        rotation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        rotation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         replicator.add(rotation, forKey: "replicatorRotation")
         
     }
@@ -207,7 +207,7 @@ class SGHAssistantIrisViewController: UIViewController {
         scale.toValue = NSValue(caTransform3D: CATransform3DIdentity)
         scale.duration = 0.33
         scale.isRemovedOnCompletion = false
-        scale.fillMode = kCAFillModeForwards
+        scale.fillMode = CAMediaTimingFillMode.forwards
         dot.add(scale, forKey: nil)
         
         

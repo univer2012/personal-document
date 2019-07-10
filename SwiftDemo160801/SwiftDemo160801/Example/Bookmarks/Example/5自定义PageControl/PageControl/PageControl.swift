@@ -124,10 +124,10 @@ public class PageControl: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: UILayoutConstraintAxis.vertical)
-        setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: UILayoutConstraintAxis.horizontal)
+        setContentHuggingPriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.vertical)
+        setContentHuggingPriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
         
-        autoresizingMask = [UIViewAutoresizing.flexibleWidth]
+        autoresizingMask = [UIView.AutoresizingMask.flexibleWidth]
         
         didInit()
     }
@@ -236,7 +236,7 @@ extension PageControl {
 extension PageControl {
     override public var isEnabled: Bool {
         didSet {
-            tintAdjustmentMode = isEnabled ? UIViewTintAdjustmentMode.normal : UIViewTintAdjustmentMode.dimmed
+            tintAdjustmentMode = isEnabled ? UIView.TintAdjustmentMode.normal : UIView.TintAdjustmentMode.dimmed
         }
     }
 }
@@ -322,7 +322,7 @@ extension PageControl {
                 updateCurrentPageDisplayWithAnimation(true)
                 updateAccessibility()
             }
-            sendActions(for: UIControlEvents.valueChanged)
+            sendActions(for: UIControl.Event.valueChanged)
         }
     }
 }

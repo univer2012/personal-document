@@ -24,6 +24,7 @@ class SGH161214TabBarController: UITabBarController {
         
         self.viewControllers = [bookmarksNavController, favoritesNavController]
         
+        self.selectedIndex = 1
         // Do any additional setup after loading the view.
     }
 

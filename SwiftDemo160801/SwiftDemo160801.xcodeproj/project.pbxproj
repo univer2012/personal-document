@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0B2437D621ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */; };
 		0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */; };
+		3F8CFF8E22D6046F0067194E /* SHUserActivity1907ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */; };
+		3F8CFF9022D605370067194E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8F22D605370067194E /* Favorites.storyboard */; };
+		3F8CFF9222D6064B0067194E /* SHUserActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */; };
+		3F8CFF9522D607AA0067194E /* SHDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9422D607AA0067194E /* SHDataSource.swift */; };
 		6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */; };
 		6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B12A1E0B70CB0010E6A8 /* User.swift */; };
 		6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */; };
@@ -110,6 +114,10 @@
 /* Begin PBXFileReference section */
 		0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingViewController.swift; sourceTree = "<group>"; };
+		3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUserActivity1907ViewController.swift; sourceTree = "<group>"; };
+		3F8CFF8F22D605370067194E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUserActivityDetailViewController.swift; sourceTree = "<group>"; };
+		3F8CFF9422D607AA0067194E /* SHDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDataSource.swift; sourceTree = "<group>"; };
 		6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1222POPAndCocoaViewController.swift; sourceTree = "<group>"; };
 		6735B12A1E0B70CB0010E6A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNetworkTests.swift; sourceTree = "<group>"; };
@@ -230,6 +238,24 @@
 				0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */,
 			);
 			path = 10UICollectionViewCellAutoSizing;
+			sourceTree = "<group>";
+		};
+		3F8CFF8C22D6045B0067194E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CFF9322D607340067194E /* NSUserActivity */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		3F8CFF9322D607340067194E /* NSUserActivity */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */,
+				3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */,
+				3F8CFF9422D607AA0067194E /* SHDataSource.swift */,
+			);
+			path = NSUserActivity;
 			sourceTree = "<group>";
 		};
 		6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */ = {
@@ -818,8 +844,9 @@
 		6739F5361E00E93C009C5073 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				3F8CFF8F22D605370067194E /* Favorites.storyboard */,
+				3F8CFF8C22D6045B0067194E /* Example */,
 				6739F5371E00E93C009C5073 /* Ctrl */,
-				6739F5381E00E93C009C5073 /* Example */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -830,13 +857,6 @@
 				6739F5751E00EA27009C5073 /* SGH1214FavoritesViewController.swift */,
 			);
 			path = Ctrl;
-			sourceTree = "<group>";
-		};
-		6739F5381E00E93C009C5073 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		6739F57D1E00F497009C5073 /* 7Auto Layout 使用心得 */ = {
@@ -1050,6 +1070,7 @@
 		67F1E7231D4F4DF20094520D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SH;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = huangaengoln;
@@ -1075,6 +1096,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1109,6 +1131,7 @@
 				6739F5591E00E93C009C5073 /* SGHFadeCubeTransitionViewController.xib in Resources */,
 				6739F56A1E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.xib in Resources */,
 				6739F5671E00E93C009C5073 /* autoLayoutIcon.xcassets in Resources */,
+				3F8CFF9022D605370067194E /* Favorites.storyboard in Resources */,
 				6739F5621E00E93C009C5073 /* SGHAnimationGroupViewController.xib in Resources */,
 				6739F5511E00E93C009C5073 /* SGHBahamaAirLoginViewController.xib in Resources */,
 				67F1E7361D4F4DF20094520D /* Assets.xcassets in Resources */,
@@ -1150,6 +1173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6778E0671D6766BC00A414ED /* SGH0819PresentBackButtonProtocol.swift in Sources */,
+				3F8CFF9522D607AA0067194E /* SHDataSource.swift in Sources */,
 				6739F54D1E00E93C009C5073 /* SGH0804MicMonitor.swift in Sources */,
 				6739F54C1E00E93C009C5073 /* SGH0804Assistant.swift in Sources */,
 				6739F5761E00EA27009C5073 /* SGH1214FavoritesViewController.swift in Sources */,
@@ -1182,6 +1206,7 @@
 				6739F55D1E00E93C009C5073 /* SGH0812LayerViewController.swift in Sources */,
 				6739F5611E00E93C009C5073 /* SGHAnimationGroupViewController.swift in Sources */,
 				6739F5461E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift in Sources */,
+				3F8CFF9222D6064B0067194E /* SHUserActivityDetailViewController.swift in Sources */,
 				0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */,
 				6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */,
 				6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */,
@@ -1189,6 +1214,7 @@
 				6739F5581E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift in Sources */,
 				67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */,
 				6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */,
+				3F8CFF8E22D6046F0067194E /* SHUserActivity1907ViewController.swift in Sources */,
 				6739F5871E00F50C009C5073 /* SGH1214AutolayoutViewController.swift in Sources */,
 				6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */,
 				6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */,
@@ -1345,7 +1371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1358,7 +1384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.SwiftDemo160801;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

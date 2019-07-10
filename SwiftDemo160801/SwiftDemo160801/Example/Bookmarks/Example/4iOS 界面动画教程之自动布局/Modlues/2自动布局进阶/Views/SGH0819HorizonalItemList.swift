@@ -44,7 +44,7 @@ class SGH0819HorizonalItemList: UIScrollView {
         contentSize = CGSize(width: padding * buttonWidth, height: buttonWidth + 2 * padding)
     }
     
-    func didTapImage(_ tap: UITapGestureRecognizer) {
+    @objc func didTapImage(_ tap: UITapGestureRecognizer) {
         didSelectItem?(tap.view!.tag)
     }
     

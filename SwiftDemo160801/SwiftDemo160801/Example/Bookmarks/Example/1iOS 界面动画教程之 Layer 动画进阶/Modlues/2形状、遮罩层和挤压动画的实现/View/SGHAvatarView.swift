@@ -50,7 +50,6 @@ class SGHAvatarView: UIView {
         
         photoLayer.mask = maskLayer
         layer.addSublayer(circleLayer)
-        self
         
         addSubview(label)
         
@@ -113,7 +112,7 @@ class SGHAvatarView: UIView {
         let morphAnimation = CABasicAnimation(keyPath: "path")
         morphAnimation.duration = animationDuration
         morphAnimation.toValue = UIBezierPath(ovalIn: morphedFrame).cgPath
-        morphAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        morphAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         
         circleLayer.add(morphAnimation, forKey: nil)
         maskLayer.add(morphAnimation, forKey: nil)

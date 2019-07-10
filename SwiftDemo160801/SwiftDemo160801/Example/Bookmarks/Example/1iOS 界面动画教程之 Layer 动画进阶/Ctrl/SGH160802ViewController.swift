@@ -34,7 +34,7 @@ class SGH160802ViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         p_initView()
     }
-    func p_navigationBack() {
+    @objc func p_navigationBack() {
         self.navigationController?.popViewController(animated: true)
     }
     

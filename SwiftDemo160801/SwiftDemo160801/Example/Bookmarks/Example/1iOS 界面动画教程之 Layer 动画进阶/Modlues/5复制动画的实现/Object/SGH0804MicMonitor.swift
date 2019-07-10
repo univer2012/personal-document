@@ -27,7 +27,7 @@ class SGH0804MicMonitor: NSObject {
         
         let audioSession = AVAudioSession.sharedInstance()
         
-        if audioSession.recordPermission() != .granted {
+        if audioSession.recordPermission != .granted {
             audioSession.requestRecordPermission({ (success) in
                 print("microphone permission: \(success)")
             })
@@ -35,7 +35,7 @@ class SGH0804MicMonitor: NSObject {
         
         do {
             try recorder = AVAudioRecorder(url: url, settings: settings)
-            try audioSession.setCategory((AVAudioSessionCategoryPlayAndRecord))
+            try audioSession.setCategory((AVAudioSession.Category.playAndRecord))
         }
         catch {
             print("Couldn't initialize the mic input")
@@ -63,7 +63,7 @@ class SGH0804MicMonitor: NSObject {
         recorder.stop()
     }
     
-    func p_handleMicLevel(_ timer: Timer) {
+    @objc func p_handleMicLevel(_ timer: Timer) {
         recorder.updateMeters()
         levelsHandler?(recorder.averagePower(forChannel: 0))
     }

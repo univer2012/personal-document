@@ -28,7 +28,7 @@ class SGH0812LayerViewController: UIViewController {
     
     
     //MARK: further UI
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let spinner = UIActivityIndicatorView(style: .whiteLarge)
     let status = UIImageView(image: UIImage(named: "banner"))
     let label = UILabel()
     let message = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
@@ -85,7 +85,7 @@ class SGH0812LayerViewController: UIViewController {
         super.viewDidAppear(animated)
         /*  position就是这个层所处的位于父层中的位置。*/
         let flyRight = CABasicAnimation(keyPath: "position.x")
-        flyRight.fillMode = kCAFillModeBoth
+        flyRight.fillMode = CAMediaTimingFillMode.both
         flyRight.fromValue = -view.bounds.size.width / 2
         flyRight.toValue = view.bounds.size.width / 2
         flyRight.isRemovedOnCompletion = false
@@ -123,7 +123,7 @@ class SGH0812LayerViewController: UIViewController {
         fadeIn.fromValue = 0.0
         fadeIn.toValue = 1.0
         fadeIn.duration = 0.5
-        fadeIn.fillMode = kCAFillModeBackwards
+        fadeIn.fillMode = CAMediaTimingFillMode.backwards
         fadeIn.beginTime = CACurrentMediaTime() + 0.5
         cloud1.layer.add(fadeIn, forKey: nil)
         

@@ -30,7 +30,7 @@ class SGHAnimationGroupViewController: UIViewController, CAAnimationDelegate {
     
     
     //MARK: further UI
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let spinner = UIActivityIndicatorView(style: .whiteLarge)
     let status = UIImageView(image: UIImage(named: "banner"))
     let label = UILabel()
     let message = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
@@ -85,7 +85,7 @@ class SGHAnimationGroupViewController: UIViewController, CAAnimationDelegate {
         
         let formGroup = CAAnimationGroup()
         formGroup.duration = 0.5
-        formGroup.fillMode = kCAFillModeBackwards
+        formGroup.fillMode = CAMediaTimingFillMode.backwards
         
         let flyRight = CABasicAnimation(keyPath: "position.x")
         flyRight.fromValue = -view.bounds.size.width / 2
@@ -120,7 +120,7 @@ class SGHAnimationGroupViewController: UIViewController, CAAnimationDelegate {
         fadeIn.fromValue = 0.0
         fadeIn.toValue = 1.0
         fadeIn.duration = 0.5
-        fadeIn.fillMode = kCAFillModeBackwards
+        fadeIn.fillMode = CAMediaTimingFillMode.backwards
         fadeIn.beginTime = CACurrentMediaTime() + 0.5
         cloud1.layer.add(fadeIn, forKey: nil)
         
@@ -137,8 +137,8 @@ class SGHAnimationGroupViewController: UIViewController, CAAnimationDelegate {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.beginTime = CACurrentMediaTime() + 0.5
         groupAnimation.duration = 0.5
-        groupAnimation.fillMode = kCAFillModeBackwards
-        groupAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        groupAnimation.fillMode = CAMediaTimingFillMode.backwards
+        groupAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         
         
         let scaleDown = CABasicAnimation(keyPath: "transform.scale")
@@ -146,7 +146,7 @@ class SGHAnimationGroupViewController: UIViewController, CAAnimationDelegate {
         scaleDown.toValue = 1.0
         
         let rotate = CABasicAnimation(keyPath: "transform.rotation")
-        rotate.fromValue = CGFloat(M_PI_4)
+        rotate.fromValue = Double.pi / 4//CGFloat(M_PI_4)
         rotate.toValue = 1.0
         
         let fade = CABasicAnimation(keyPath: "opacity")

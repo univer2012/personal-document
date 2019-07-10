@@ -28,7 +28,7 @@ class SGHBahamaAirLoginViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: further UI
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let spinner = UIActivityIndicatorView(style: .whiteLarge)
     let status = UIImageView(image: UIImage(named: "banner"))
     let label = UILabel()
     let message = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
@@ -99,7 +99,7 @@ class SGHBahamaAirLoginViewController: UIViewController, UITextFieldDelegate {
          CurveEaseOut: 结束时减速
          CurveLinear: 线性速度，
          */
-        UIView.animate(withDuration: 0.5, delay: 0.3, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: UIView.AnimationOptions(), animations: {
             self.username.center.x += self.view.bounds.width
             }, completion: nil)
         

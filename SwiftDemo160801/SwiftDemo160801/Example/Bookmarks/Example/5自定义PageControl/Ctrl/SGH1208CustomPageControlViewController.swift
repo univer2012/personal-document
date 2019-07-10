@@ -58,7 +58,7 @@ class SGH1208CustomPageControlViewController: UIViewController, UIScrollViewDele
         // Do any additional setup after loading the view.
     }
     
-    func pageControlDidChangeCurrentPage(_ pageControl: PageControl) {
+    @objc func pageControlDidChangeCurrentPage(_ pageControl: PageControl) {
         scrollView.setContentOffset(CGPoint(x: scrollView.bounds.width * CGFloat(pageControl.currentPage), y: 0), animated: true)
     }
     

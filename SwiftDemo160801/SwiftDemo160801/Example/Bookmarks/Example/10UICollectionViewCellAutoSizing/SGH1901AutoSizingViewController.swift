@@ -16,7 +16,7 @@ class SGH1901AutoSizingViewController: UIViewController, UICollectionViewDataSou
         layout.minimumLineSpacing = 0
         layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width, height: 95.0)
         if #available(iOS 10.0, *) {
-            layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
+            layout.itemSize = UICollectionViewFlowLayout.automaticSize
         }
         
         return layout

@@ -60,7 +60,6 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
         self.view.addSubview(self.tableView!)
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,15 +88,4 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
         viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

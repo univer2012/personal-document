@@ -34,19 +34,20 @@ class SGHAnimatedMaskLabel: UIView {
     }()
     
     
-    let textAttributes : [String: AnyObject] = {
+    let textAttributes : [NSAttributedString.Key : AnyObject] = {
         let style = NSMutableParagraphStyle()
         style.alignment = .center
-        return [NSFontAttributeName: UIFont(name: "HelveticaNeue-Thin", size: 28.0)!,
-                NSParagraphStyleAttributeName : style]
+        return [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Thin", size: 28.0)!,
+                NSAttributedString.Key.paragraphStyle : style]
     }()
     
     
-    @IBInspectable var text: String! {
+    @IBInspectable var text: NSString! {//String! {
         didSet {
             setNeedsDisplay()
             UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
-            text.draw(in: bounds, withAttributes: textAttributes)
+            //text.draw(in: bounds, withAttributes: textAttributes)
+            text.draw(at: bounds.origin, withAttributes: textAttributes)
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             

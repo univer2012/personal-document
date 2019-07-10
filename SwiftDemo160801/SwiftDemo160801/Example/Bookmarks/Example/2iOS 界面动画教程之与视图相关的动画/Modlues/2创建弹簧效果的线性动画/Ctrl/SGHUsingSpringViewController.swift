@@ -30,7 +30,7 @@ class SGHUsingSpringViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: further UI
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    let spinner = UIActivityIndicatorView(style: .whiteLarge)
     let status = UIImageView(image: UIImage(named: "banner"))
     let label = UILabel()
     let message = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]

@@ -22,7 +22,7 @@ class SGHGradientLayerViewController: UIViewController {
         slideView.addGestureRecognizer(swipe)
     }
     
-    func p_didSlide() {
+    @objc func p_didSlide() {
         
         // reveal the meme upon successful slide
         let image = UIImageView(image: UIImage(named: "meme"))

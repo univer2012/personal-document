@@ -22,7 +22,7 @@ class SGH0803GradientLayerViewController: UIViewController {
         slideView.addGestureRecognizer(swipe)
     }
     
-    func p_didSlide() {
+    @objc func p_didSlide() {
         //reveal the menu upon successful slide
         let image = UIImageView(image: UIImage(named: "meme"))
         image.center = view.center

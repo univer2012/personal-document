@@ -112,7 +112,7 @@ class SGH0803RefreshView: UIView, UIScrollViewDelegate {
         let flightAnimation = CAKeyframeAnimation(keyPath: "position")
         flightAnimation.path = ovalShapeLayer.path
         // 使用平均速度
-        flightAnimation.calculationMode = kCAAnimationPaced
+        flightAnimation.calculationMode = CAAnimationCalculationMode.paced
         
         //飞机的方向动画
         let airplaneOrientationAnimation = CABasicAnimation(keyPath: "transform.rotation")

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
 
         
-        self.window?.rootViewController = UINavigationController(rootViewController: SGH161214TabBarController())
+        self.window?.rootViewController = SGH161214TabBarController()
 
         self.window?.makeKeyAndVisible()
         
@@ -48,6 +48,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        // Find the ID from the user info
+        let friendID = userActivity.userInfo?["kCSSearchableItemActivityIdentifier"] as! String
+        
+        // Find the root table view controller and make it show the friend with this ID.
+        let navigationController = (window?.rootViewController as! UINavigationController)
+        navigationController.popToRootViewController(animated: false)
+        let friendTableViewController = navigationController.viewControllers.first as! SHUserActivity1907ViewController
+        friendTableViewController.showFriend(id: friendID)
+        
+        return true
     }
 
 
