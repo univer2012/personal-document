@@ -117,7 +117,7 @@ class SGH0803RefreshView: UIView, UIScrollViewDelegate {
         //飞机的方向动画
         let airplaneOrientationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         airplaneOrientationAnimation.fromValue = 0
-        airplaneOrientationAnimation.toValue = 2 * M_PI
+        airplaneOrientationAnimation.toValue = 2 * Double.pi
         
         let flightAnimationGroup = CAAnimationGroup()
         flightAnimationGroup.duration = 1.5

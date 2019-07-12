@@ -41,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
-
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
@@ -53,12 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // Find the ID from the user info
         let friendID = userActivity.userInfo?["kCSSearchableItemActivityIdentifier"] as! String
-        
-        // Find the root table view controller and make it show the friend with this ID.
-        let navigationController = (window?.rootViewController as! UINavigationController)
-        navigationController.popToRootViewController(animated: false)
-        let friendTableViewController = navigationController.viewControllers.first as! SHUserActivity1907ViewController
-        friendTableViewController.showFriend(id: friendID)
+        let coreSpotlightVC = UIStoryboard(name: "Favorites", bundle: Bundle(for: SHCoreSpotlightDetailViewController.self)).instantiateViewController(withIdentifier: "SHCoreSpotlightDetailViewController") as! SHCoreSpotlightDetailViewController
+        coreSpotlightVC.person = SHDataSource.instance.friendFrom(friendID)
+        let curVC = UIViewController.current()
+        if curVC?.navigationController != nil {
+            curVC?.navigationController?.pushViewController(coreSpotlightVC, animated: true)
+        } else {
+            curVC?.present(coreSpotlightVC, animated: true, completion: nil)
+        }
         
         return true
     }

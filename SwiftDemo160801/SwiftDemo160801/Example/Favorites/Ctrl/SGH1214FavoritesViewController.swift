@@ -6,7 +6,16 @@
 //  Copyright © 2016年 huangaengoln. All rights reserved.
 //
 
+/*
+ 
+ HandOff 的教程
+ 1. [多台设备同步 NSUserActivity详解](https://blog.csdn.net/baidu_31683691/article/details/51897542)
+ 2. [iOS Search API - NSUserActivity](https://www.jianshu.com/p/2ec61e2c00cb)
+ */
+
+
 import UIKit
+
 
 class SGH1214FavoritesViewController: UIViewController,UIGestureRecognizerDelegate {
 
@@ -21,8 +30,8 @@ class SGH1214FavoritesViewController: UIViewController,UIGestureRecognizerDelega
     ]
     
     let controllersArray = [
-        UIStoryboard(name: "Favorites", bundle: Bundle(for: SHUserActivity1907ViewController.self)).instantiateViewController(withIdentifier: "SHUserActivity1907ViewController"),
         UIViewController(),
+        UIStoryboard(name: "Favorites", bundle: Bundle(for: SHCoreSpot1907TableViewController.self)).instantiateViewController(withIdentifier: "SHCoreSpot1907TableViewController"),
         UIViewController(),
         UIViewController(),
         UIViewController(),

@@ -19,6 +19,9 @@ class Person: NSObject {
 class SHDataSource: NSObject {
     var people: [Person]
     
+    static let instance: SHDataSource = SHDataSource()
+    
+    
     override init () {
         let becky = Person()
         becky.name = "Becky"
@@ -67,6 +70,7 @@ class SHDataSource: NSObject {
         var searchableItems = [CSSearchableItem]()
         
         for person in people {
+            
             let attributeSet = CSSearchableItemAttributeSet(itemContentType: "image" as String)
             attributeSet.title = person.name
             attributeSet.contentDescription = "This is an entry all about the interesting person called \(person.name)"

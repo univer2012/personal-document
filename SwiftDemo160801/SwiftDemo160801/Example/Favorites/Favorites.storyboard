@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Activity1907 View Controller-->
+        <!--Core Spot1907 Table View Controller-->
         <scene sceneID="Joa-Xy-ROm">
             <objects>
-                <tableViewController storyboardIdentifier="SHUserActivity1907ViewController" id="DJJ-xM-o86" customClass="SHUserActivity1907ViewController" customModule="SwiftDemo160801" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SHCoreSpot1907TableViewController" id="DJJ-xM-o86" customClass="SHCoreSpot1907TableViewController" customModule="SwiftDemo160801" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S6E-dc-z1i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="126" y="52"/>
         </scene>
-        <!--User Activity Detail View Controller-->
+        <!--Core Spotlight Detail View Controller-->
         <scene sceneID="lac-Sx-02c">
             <objects>
-                <viewController id="hD2-Mu-X0d" customClass="SHUserActivityDetailViewController" customModule="SwiftDemo160801" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SHCoreSpotlightDetailViewController" id="hD2-Mu-X0d" customClass="SHCoreSpotlightDetailViewController" customModule="SwiftDemo160801" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HK7-MH-Hgf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,8 +74,8 @@
                         <viewLayoutGuide key="safeArea" id="sLc-GO-DjA"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="qul-Ga-q6D" id="LZd-xe-sNW"/>
-                        <outlet property="nameLabel" destination="iaI-XZ-hYb" id="IBw-Fb-Kth"/>
+                        <outlet property="imageView" destination="qul-Ga-q6D" id="ooS-Tt-jr2"/>
+                        <outlet property="nameLabel" destination="iaI-XZ-hYb" id="OBD-pl-t8D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXA-Ar-MOU" userLabel="First Responder" sceneMemberID="firstResponder"/>

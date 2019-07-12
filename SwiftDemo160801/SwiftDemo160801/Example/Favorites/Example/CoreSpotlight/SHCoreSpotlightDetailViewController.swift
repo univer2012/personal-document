@@ -1,14 +1,14 @@
 //
-//  SHUserActivityDetailViewController.swift
+//  SHCoreSpotlightDetailViewController.swift
 //  SwiftDemo160801
 //
-//  Created by rrd on 2019/7/10.
+//  Created by rrd on 2019/7/11.
 //  Copyright © 2019 huangaengoln. All rights reserved.
 //
 
 import UIKit
 
-class SHUserActivityDetailViewController: UIViewController {
+class SHCoreSpotlightDetailViewController: UIViewController {
     var person: Person!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!

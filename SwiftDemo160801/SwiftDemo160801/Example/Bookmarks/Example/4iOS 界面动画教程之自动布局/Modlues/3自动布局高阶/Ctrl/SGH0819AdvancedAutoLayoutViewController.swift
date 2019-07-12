@@ -47,7 +47,7 @@ class SGH0819AdvancedAutoLayoutViewController: UIViewController {
                 constraint.isActive = false
                 
                 //创建一个新的约束
-                let newConstraint = NSLayoutConstraint(item: titleLabel, attribute: .centerY, relatedBy: .equal, toItem: titleLabel.superview, attribute: .centerY, multiplier: isMenuOpen ? 0.67 : 1.0, constant: 5.0)
+                let newConstraint = NSLayoutConstraint(item: titleLabel as Any, attribute: .centerY, relatedBy: .equal, toItem: titleLabel.superview, attribute: .centerY, multiplier: isMenuOpen ? 0.67 : 1.0, constant: 5.0)
                 
                 newConstraint.identifier = "TitleCenterY"
                 newConstraint.isActive = true
@@ -62,8 +62,8 @@ class SGH0819AdvancedAutoLayoutViewController: UIViewController {
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10.0, options: .curveEaseIn, animations: { 
             self.view.layoutIfNeeded()
-            let angle = self.isMenuOpen ? CGFloat(M_PI_4) : 0.0
-            self.buttonMenu.transform = CGAffineTransform(rotationAngle: angle)
+            let angle = self.isMenuOpen ? Double.pi / 4 : 0.0
+            self.buttonMenu.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
             }, completion: nil)
         
         if isMenuOpen {

@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		0B2437D621ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */; };
 		0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */; };
-		3F8CFF8E22D6046F0067194E /* SHUserActivity1907ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */; };
 		3F8CFF9022D605370067194E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8F22D605370067194E /* Favorites.storyboard */; };
-		3F8CFF9222D6064B0067194E /* SHUserActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */; };
 		3F8CFF9522D607AA0067194E /* SHDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9422D607AA0067194E /* SHDataSource.swift */; };
+		3F8CFF9722D6DCB10067194E /* UIViewControllerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9622D6DCB10067194E /* UIViewControllerCategory.swift */; };
+		3F8CFF9A22D6E1A30067194E /* SHCoreSpot1907TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9922D6E1A30067194E /* SHCoreSpot1907TableViewController.swift */; };
+		3F8CFF9C22D6E1BE0067194E /* SHCoreSpotlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9B22D6E1BE0067194E /* SHCoreSpotlightDetailViewController.swift */; };
+		3F8CFF9E22D6E32F0067194E /* SHUserActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF9D22D6E32F0067194E /* SHUserActivityTableViewController.swift */; };
 		6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */; };
 		6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B12A1E0B70CB0010E6A8 /* User.swift */; };
 		6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */; };
@@ -114,10 +116,12 @@
 /* Begin PBXFileReference section */
 		0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingViewController.swift; sourceTree = "<group>"; };
-		3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUserActivity1907ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF8F22D605370067194E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
-		3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUserActivityDetailViewController.swift; sourceTree = "<group>"; };
 		3F8CFF9422D607AA0067194E /* SHDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDataSource.swift; sourceTree = "<group>"; };
+		3F8CFF9622D6DCB10067194E /* UIViewControllerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerCategory.swift; sourceTree = "<group>"; };
+		3F8CFF9922D6E1A30067194E /* SHCoreSpot1907TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCoreSpot1907TableViewController.swift; sourceTree = "<group>"; };
+		3F8CFF9B22D6E1BE0067194E /* SHCoreSpotlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCoreSpotlightDetailViewController.swift; sourceTree = "<group>"; };
+		3F8CFF9D22D6E32F0067194E /* SHUserActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUserActivityTableViewController.swift; sourceTree = "<group>"; };
 		6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1222POPAndCocoaViewController.swift; sourceTree = "<group>"; };
 		6735B12A1E0B70CB0010E6A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNetworkTests.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 		3F8CFF8C22D6045B0067194E /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3F8CFFA022D6EA670067194E /* HandOff */,
+				3F8CFF9822D6E14B0067194E /* CoreSpotlight */,
 				3F8CFF9322D607340067194E /* NSUserActivity */,
 			);
 			path = Example;
@@ -251,11 +257,27 @@
 		3F8CFF9322D607340067194E /* NSUserActivity */ = {
 			isa = PBXGroup;
 			children = (
-				3F8CFF8D22D6046F0067194E /* SHUserActivity1907ViewController.swift */,
-				3F8CFF9122D6064B0067194E /* SHUserActivityDetailViewController.swift */,
-				3F8CFF9422D607AA0067194E /* SHDataSource.swift */,
+				3F8CFF9D22D6E32F0067194E /* SHUserActivityTableViewController.swift */,
 			);
 			path = NSUserActivity;
+			sourceTree = "<group>";
+		};
+		3F8CFF9822D6E14B0067194E /* CoreSpotlight */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CFF9422D607AA0067194E /* SHDataSource.swift */,
+				3F8CFF9622D6DCB10067194E /* UIViewControllerCategory.swift */,
+				3F8CFF9922D6E1A30067194E /* SHCoreSpot1907TableViewController.swift */,
+				3F8CFF9B22D6E1BE0067194E /* SHCoreSpotlightDetailViewController.swift */,
+			);
+			path = CoreSpotlight;
+			sourceTree = "<group>";
+		};
+		3F8CFFA022D6EA670067194E /* HandOff */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HandOff;
 			sourceTree = "<group>";
 		};
 		6735B1251E0B70710010E6A8 /* 8面向协议编程与 Cocoa 的邂逅 (下) */ = {
@@ -1188,9 +1210,11 @@
 				6739F5401E00E93C009C5073 /* SGHAvatarView.swift in Sources */,
 				6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */,
 				6739F55A1E00E93C009C5073 /* SGHAnimateKeyFrameViewController.swift in Sources */,
+				3F8CFF9E22D6E32F0067194E /* SHUserActivityTableViewController.swift in Sources */,
 				6739F5541E00E93C009C5073 /* SGHTransitionAnimationViewController.swift in Sources */,
 				6739F55F1E00E93C009C5073 /* SGHBasicAnimationDelegateViewController.swift in Sources */,
 				6739F56E1E00E93C009C5073 /* SGH0819AdvancedAutoLayoutViewController.swift in Sources */,
+				3F8CFF9722D6DCB10067194E /* UIViewControllerCategory.swift in Sources */,
 				6739F5631E00E93C009C5073 /* SGH0816SpringAnimationViewController.swift in Sources */,
 				6739F5501E00E93C009C5073 /* SGHBahamaAirLoginViewController.swift in Sources */,
 				6739F4BD1E00E883009C5073 /* SGH161214TabBarController.swift in Sources */,
@@ -1200,13 +1224,13 @@
 				6739F53E1E00E93C009C5073 /* SGH0802CollideViewController.swift in Sources */,
 				6739F5491E00E93C009C5073 /* SGH0803RefreshView.swift in Sources */,
 				6739F5691E00E93C009C5073 /* SGH0818BasicAutoLayoutViewController.swift in Sources */,
+				3F8CFF9C22D6E1BE0067194E /* SHCoreSpotlightDetailViewController.swift in Sources */,
 				6739F5411E00E93C009C5073 /* SGH0803GradientLayerViewController.swift in Sources */,
 				6739F5391E00E93C009C5073 /* SGH160802ViewController.swift in Sources */,
 				6739F54A1E00E93C009C5073 /* SGHAssistantIrisViewController.swift in Sources */,
 				6739F55D1E00E93C009C5073 /* SGH0812LayerViewController.swift in Sources */,
 				6739F5611E00E93C009C5073 /* SGHAnimationGroupViewController.swift in Sources */,
 				6739F5461E00E93C009C5073 /* SGHPullToRefreshTableViewController.swift in Sources */,
-				3F8CFF9222D6064B0067194E /* SHUserActivityDetailViewController.swift in Sources */,
 				0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */,
 				6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */,
 				6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */,
@@ -1214,7 +1238,7 @@
 				6739F5581E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift in Sources */,
 				67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */,
 				6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */,
-				3F8CFF8E22D6046F0067194E /* SHUserActivity1907ViewController.swift in Sources */,
+				3F8CFF9A22D6E1A30067194E /* SHCoreSpot1907TableViewController.swift in Sources */,
 				6739F5871E00F50C009C5073 /* SGH1214AutolayoutViewController.swift in Sources */,
 				6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */,
 				6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */,
