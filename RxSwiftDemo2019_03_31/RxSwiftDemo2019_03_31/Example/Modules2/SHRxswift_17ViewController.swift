@@ -24,23 +24,16 @@ class SHRxswift_17ViewController: UIViewController {
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
         
-        URLSession.shared.rx.json(request: request).subscribe(onNext: { (data) in
-//            let json
-            print("----- 请求成功！返回的如下数据 --------")
-            print(data)
-        })
-            .disposed(by: disposeBag)
-        
-//        startBtn.rx.tap.asObservable()
-//            .flatMap {
-//                URLSession.shared.rx.data(request: request)
-//                .takeUntil(self.cancelBtn.rx.tap)
-//            }
-//            .subscribe(onNext: { (data) in
-//                let str = String(data: data, encoding: String.Encoding.utf8)
-//                print("请求成功！返回的数据是：",str ?? "")
-//            }, onError: { (error) in
-//                print("请求失败！错误原因：",error)
-//            }).disposed(by: disposeBag)
+        startBtn.rx.tap.asObservable()
+            .flatMap {
+                URLSession.shared.rx.data(request: request)
+                .takeUntil(self.cancelBtn.rx.tap)
+            }
+            .subscribe(onNext: { (data) in
+                let str = String(data: data, encoding: String.Encoding.utf8)
+                print("请求成功！返回的数据是：",str ?? "")
+            }, onError: { (error) in
+                print("请求失败！错误原因：",error)
+            }).disposed(by: disposeBag)
     }
 }

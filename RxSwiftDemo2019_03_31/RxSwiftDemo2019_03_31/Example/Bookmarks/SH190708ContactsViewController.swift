@@ -19,13 +19,15 @@ struct SH190708ContactsViewModel {
         "1UICollectionView",
         "2刷新集合数据",
         "3pickView",
-        "4weak_unowned"
+        "4weak_unowned",
+        "5URLSession结果处理、模型转换"
         ]
     let controllers = [
         SHRxswift_14ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_15ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_15ViewController"),
         SHRxswift_16ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_17ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_17ViewController"),
+        SHRxswift_18ViewController(),
     ]
 }
 
