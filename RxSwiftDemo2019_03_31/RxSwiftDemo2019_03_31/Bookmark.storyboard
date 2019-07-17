@@ -655,8 +655,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ror-GK-d0b">
-                                <rect key="frame" x="167" y="99" width="80" height="40"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ror-GK-d0b">
+                                <rect key="frame" x="167" y="264" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GGM-xh-Y14"/>
                                     <constraint firstAttribute="width" constant="80" id="boK-WM-dM1"/>
@@ -667,15 +667,29 @@
                                     <segue destination="kIE-Ad-iEP" kind="show" id="t6p-Q5-QgM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzz-br-MMz">
+                                <rect key="frame" x="83" y="132" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发起请求"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-lK-PA2">
+                                <rect key="frame" x="241" y="131" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="取消请求"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ror-GK-d0b" firstAttribute="top" secondItem="jLz-9Z-WS2" secondAttribute="top" constant="35" id="91n-sh-iMd"/>
+                            <constraint firstItem="ror-GK-d0b" firstAttribute="top" secondItem="jLz-9Z-WS2" secondAttribute="top" constant="200" id="91n-sh-iMd"/>
                             <constraint firstItem="ror-GK-d0b" firstAttribute="centerX" secondItem="soq-gM-oer" secondAttribute="centerX" id="gPa-r8-uaj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jLz-9Z-WS2"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="3TP-lK-PA2" id="yo9-sR-7Hy"/>
+                        <outlet property="startBtn" destination="Zzz-br-MMz" id="Li0-S3-SYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dj7-cg-gud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

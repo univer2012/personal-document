@@ -8,22 +8,39 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+import RxDataSources
+
 class SHRxswift_17ViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    @IBOutlet weak var startBtn: UIButton!
+    
+    @IBOutlet weak var cancelBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let urlString = "https://www.douban.com/j/app/radio/channels"
+        let url = URL(string: urlString)
+        let request = URLRequest(url: url!)
+        
+        URLSession.shared.rx.json(request: request).subscribe(onNext: { (data) in
+//            let json
+            print("----- 请求成功！返回的如下数据 --------")
+            print(data)
+        })
+            .disposed(by: disposeBag)
+        
+//        startBtn.rx.tap.asObservable()
+//            .flatMap {
+//                URLSession.shared.rx.data(request: request)
+//                .takeUntil(self.cancelBtn.rx.tap)
+//            }
+//            .subscribe(onNext: { (data) in
+//                let str = String(data: data, encoding: String.Encoding.utf8)
+//                print("请求成功！返回的数据是：",str ?? "")
+//            }, onError: { (error) in
+//                print("请求失败！错误原因：",error)
+//            }).disposed(by: disposeBag)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
