@@ -7,13 +7,18 @@ struct Money: Codable {
     let amount: Decimal
     let currency: String
 }
-let json = "{\"amount\": 9159795.995,\"currency\": \"BHD\"}"
-let jsonData = json.data(using: .utf8)!
+//let json = "{\"currency\": \"EUR\",\"exponent\": -2,\"significand\": 105}"
+//let jsonData = json.data(using: .utf8)!
+//
+//let decoder = JSONDecoder()
+//
+//let money = try! decoder.decode(Money.self, from: jsonData)
+//
+//money.amount
+//money.currency
 
-let decoder = JSONDecoder()
 
-let money = try! decoder.decode(Money.self, from: jsonData)
-
-money.amount
-money.currency
+var a = Decimal(integerLiteral: 1089687685)
+a._exponent = -7
+print("a = ",a)
 
