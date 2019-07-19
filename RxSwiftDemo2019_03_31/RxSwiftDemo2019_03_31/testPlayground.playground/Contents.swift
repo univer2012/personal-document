@@ -4,10 +4,10 @@ import UIKit
 import PlaygroundSupport
 
 struct Money: Codable {
-    let amount: Double
+    let amount: Decimal
     let currency: String
 }
-let json = "{\"amount\": 128.8,\"currency\": \"EUR\"}"
+let json = "{\"amount\": 9159795.995,\"currency\": \"BHD\"}"
 let jsonData = json.data(using: .utf8)!
 
 let decoder = JSONDecoder()
