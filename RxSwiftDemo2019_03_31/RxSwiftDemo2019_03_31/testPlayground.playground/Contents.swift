@@ -17,8 +17,12 @@ struct Money: Codable {
 //money.amount
 //money.currency
 
-
-var a = Decimal(integerLiteral: 1089687685)
-a._exponent = -7
-print("a = ",a)
+class Baby {
+    var name = "peter"
+    var favoriteActivity: (() -> ())!
+    func outsideActivity(activity: () -> ()) {
+        activity()
+        favoriteActivity = activity
+    }
+}
 
