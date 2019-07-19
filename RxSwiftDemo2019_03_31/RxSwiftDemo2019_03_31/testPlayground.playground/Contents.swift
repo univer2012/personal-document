@@ -19,10 +19,22 @@ struct Money: Codable {
 
 class Baby {
     var name = "peter"
-    var favoriteActivity: (() -> ())!
-    func outsideActivity(activity: () -> ()) {
-        activity()
-        favoriteActivity = activity
+    func outsideActivity(activity: (() -> ())?) {
+        if let activity = activity {
+            activity()
+        }
     }
 }
+
+class Mother {
+    var name = "wendy"
+    var child = Baby()
+    func play() {
+        child.outsideActivity {
+            print("\(self.name)和小孩\(self.child.name)打桌球")
+        }
+    }
+}
+
+
 
