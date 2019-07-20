@@ -40,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_18ViewController.swift; sourceTree = "<group>"; };
+		04CB437622DF36750042A456 /* testPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8ViewController.swift; sourceTree = "<group>"; };
 		3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 				3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */,
 				3FB94F2422C0E858009EB6D7 /* Bookmark.storyboard */,
 				3FB94F2D22C36E84009EB6D7 /* UIImageCategory.swift */,
+				04CB437622DF36750042A456 /* testPlayground.playground */,
 			);
 			path = RxSwiftDemo2019_03_31;
 			sourceTree = "<group>";
