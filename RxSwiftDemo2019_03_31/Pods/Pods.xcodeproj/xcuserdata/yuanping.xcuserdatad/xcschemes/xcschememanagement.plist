@@ -74,10 +74,13 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>RxAtomic.xcscheme</key>
+		<key>RxAlamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+		</dict>
+		<key>RxAtomic.xcscheme</key>
+		<dict>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>

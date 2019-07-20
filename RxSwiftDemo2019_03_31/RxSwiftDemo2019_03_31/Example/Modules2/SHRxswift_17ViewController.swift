@@ -12,6 +12,8 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+import RxAlamofire
+
 class SHRxswift_17ViewController: UIViewController {
     let disposeBag = DisposeBag()
     @IBOutlet weak var startBtn: UIButton!
@@ -20,6 +22,9 @@ class SHRxswift_17ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        #if false //URLSessioni请求
         let urlString = "https://www.douban.com/j/app/radio/channels"
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
@@ -35,5 +40,37 @@ class SHRxswift_17ViewController: UIViewController {
             }, onError: { (error) in
                 print("请求失败！错误原因：",error)
             }).disposed(by: disposeBag)
+        #else
+        // RxAlamofire
+        let urlString = "https://www.douban.com/j/app/radio/channels"
+        let url = URL(string: urlString)!
+
+        requestJSON(.get, url)
+            .map{$1}
+        .mapObject(type: Douban.self)
+            .subscribe(onNext: { (douban: Douban) in
+                if let channels = douban.channels {
+                    print("--- 共\(channels.count)个频道 ----")
+                    for channel in channels {
+                        if let name = channel.name, let channelId = channel.channelId {
+                            print("\(name) (id:\(channelId)")
+                        }
+                    }
+                }
+            }).disposed(by: disposeBag)
+        
+        
+//        startBtn.rx.tap.asObservable()
+//            .flatMap {
+//                request(.get, url).responseString()
+//                .takeUntil(self.cancelBtn.rx.tap)//如果“取消按钮”点击则停止请求
+//            }
+//        .subscribe(onNext: {
+//            response,data in
+//            print("请求成功！返回的数据是：",data)
+//        }, onError: {error in
+//            print("请求失败！错误原因：",error)
+//        }).disposed(by: disposeBag)
+        #endif
     }
 }

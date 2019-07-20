@@ -12,7 +12,8 @@ target 'RxSwiftDemo2019_03_31' do
 
     pod 'NSObject+Rx'
     pod 'Moya/RxSwift'
-    
+    pod 'RxAlamofire'
+
     pod 'Then'
     pod 'Kingfisher'
     pod 'SnapKit'
