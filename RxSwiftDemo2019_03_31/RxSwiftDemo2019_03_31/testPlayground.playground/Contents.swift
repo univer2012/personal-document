@@ -3,38 +3,29 @@
 import UIKit
 import PlaygroundSupport
 
-struct Money: Codable {
-    let amount: Decimal
-    let currency: String
-}
-//let json = "{\"currency\": \"EUR\",\"exponent\": -2,\"significand\": 105}"
-//let jsonData = json.data(using: .utf8)!
-//
-//let decoder = JSONDecoder()
-//
-//let money = try! decoder.decode(Money.self, from: jsonData)
-//
-//money.amount
-//money.currency
 
-class Baby {
-    var name = "peter"
-    func outsideActivity(activity: (() -> ())?) {
-        if let activity = activity {
-            activity()
-        }
-    }
-}
+let numbers = [1,2,3,4]
+let result = numbers.flatMap {$0 + 2}
+print(result) //[3, 4, 5, 6]
 
-class Mother {
-    var name = "wendy"
-    var child = Baby()
-    func play() {
-        child.outsideActivity {
-            print("\(self.name)和小孩\(self.child.name)打桌球")
-        }
-    }
-}
+let numbersCompound = [[1,2,3], [4,5,6]]
+var res = numbersCompound.map { $0.map{$0 + 2} }
+print(res)  //[[3, 4, 5], [6, 7, 8]]
+
+var flatRes = numbersCompound.flatMap{ $0.map{ $0 + 2 } }
+print(flatRes) //[3, 4, 5, 6, 7, 8]
+
+
+let optionalArray: [String?] = ["AA", nil, "BB", "CC"]
+var optionalResult = optionalArray.flatMap { $0 }
+print(optionalResult)   //["AA", "BB", "CC"]
+print(optionalArray)    //[Optional("AA"), nil, Optional("BB"), Optional("CC")]
+
+print(optionalArray.map{ $0 })
+
+var imageNames = ["test.png", "aa.png", "icon.png"]
+imageNames.flatMap { UIImage(named: $0) }
+
 
 
 

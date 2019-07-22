@@ -6,6 +6,7 @@
 2. [iOS Universal Links(通用链接)的使用](https://www.jianshu.com/p/1970fd59de12)
 3. [Support Universal Links](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1)
 4. [Web Browser–to–Native App Handoff](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html#//apple_ref/doc/uid/TP40014338-CH2-SW10)
+5. [iOS9 App Search编程(1)- 搜索基础](https://www.jianshu.com/p/01e6e998ecf5)
 
 ## 一、什么是Universal Links
 
