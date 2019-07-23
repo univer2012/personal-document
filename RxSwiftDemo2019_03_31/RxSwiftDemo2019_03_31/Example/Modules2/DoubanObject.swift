@@ -69,3 +69,58 @@ class Channel: Mappable {
         abbrEn <- map["abbr_en"]
     }
 }
+//歌曲列表模型
+struct Playlist: Mappable {
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        r <- map["r"]
+        isShowQuickStart <- map["is_show_quick_start"]
+        song <- map["song"]
+    }
+    
+    var r: Int!
+    var isShowQuickStart: Int!
+    var song:[Song]!
+}
+//歌曲模型
+struct Song: Mappable {
+    var title: String!
+    var singers: [Singers]!
+    init?(map: Map) { }
+    
+    // Mappable
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        singers <- map["singers"]
+    }
+}
+//歌手模型
+struct Singers {
+    var style: Array<String>!
+    var name: String!
+    var region: Array<String>!
+    var name_usual: String!
+    var genre: Array<String>!
+    var avatar: String!
+    var related_site_id: Int!
+    var is_site_artist: Bool!
+    var id: String!
+    
+    init?(map: Map) { }
+    
+    // Mappable
+    mutating func mapping(map: Map) {
+        style <- map["style"]
+        name <- map["name"]
+        region <- map["region"]
+        name_usual <- map["name_usual"]
+        genre <- map["genre"]
+        avatar <- map["avatar"]
+        related_site_id <- map["related_site_id"]
+        is_site_artist <- map["is_site_artist"]
+        id <- map["id"]
+    }
+}

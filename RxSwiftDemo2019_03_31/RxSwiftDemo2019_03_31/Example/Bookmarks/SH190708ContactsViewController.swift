@@ -22,7 +22,8 @@ struct SH190708ContactsViewModel {
         "4weak_unowned",
         "5URLSession结果处理、模型转换",
         "6结合RxAlamofire使用",
-        "7结合Moya使用"
+        "7结合Moya使用",
+        "8Github搜索"
         ]
     let controllers = [
         SHRxswift_14ViewController(),
@@ -32,6 +33,7 @@ struct SH190708ContactsViewModel {
         SHRxswift_18ViewController(),
         SHRxswift_19ViewController(),
         SHRxswift_20ViewController(),
+        SHRxswift_GithubViewController(),
     ]
 }
 

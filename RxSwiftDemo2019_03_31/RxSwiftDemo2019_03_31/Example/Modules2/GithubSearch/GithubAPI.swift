@@ -1,43 +1,35 @@
 //
-//  DouBanAPI.swift
+//  GithubAPI.swift
 //  RxSwiftDemo2019_03_31
 //
-//  Created by Mac on 2019/7/22.
+//  Created by Mac on 2019/7/23.
 //  Copyright © 2019 远平. All rights reserved.
 //
 
 import Foundation
 import Moya
+import RxSwift
+import RxCocoa
 
-//初始化豆瓣FM请求的provider
-let DouBanProvider = MoyaProvider<DouBanAPI>()
+//初始化GitHub请求的provider
+let GitHubProvider = MoyaProvider<GitHubAPI>()
 
-/** 下面定义豆瓣FM请求的endpoints（供provider使用）**/
-
+/** 下面定义GitHub请求的endpoints（供provider使用）**/
 //请求分类
-public enum DouBanAPI {
-    case channels   //获取频道列表
-    //接口需要在vpn翻墙才能访问，接口数据也变了。
-    case playlist(String)   //获取歌曲
+public enum GitHubAPI {
+    case repositories(String)  //查询资源库
 }
 //请求配置
-extension DouBanAPI: TargetType {
+extension GitHubAPI: TargetType {
     //服务器地址
     public var baseURL: URL {
-        switch self {
-        case .channels:
-            return URL(string: "https://www.douban.com")!
-        case .playlist(_):
-            return URL(string: "https://douban.fm")!
-        }
+        return URL(string: "https://api.github.com")!
     }
     //各个请求的具体路径
     public var path: String {
         switch self {
-        case .channels:
-            return "/j/app/radio/channels"
-        case .playlist(_):
-            return "/j/mine/playlist"
+        case .repositories:
+            return "/search/repositories"
         }
     }
     //请求类型
@@ -46,12 +38,13 @@ extension DouBanAPI: TargetType {
     }
     //请求任务事件（这里附带上参数）
     public var task: Task {
+        print("发起请求")
         switch self {
-        case .playlist(let channel):
+        case .repositories(let query):
             var params: [String: Any] = [:]
-            params["channel"] = channel
-            params["type"] = "n"
-            params["from"] = "mainsite"
+            params["q"] = query
+            params["sort"] = "stars"
+            params["order"] = "desc"
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         default:
             return .requestPlain
@@ -63,11 +56,11 @@ extension DouBanAPI: TargetType {
     }
     //这个就是做单元测试模拟的数据，只会在单元测试文件中有作用
     public var sampleData: Data {
-        return "{}".data(using: String.Encoding.utf8)!
+        return "{}".data(using: .utf8)!
     }
     //请求头
     public var headers: [String : String]? {
         return nil
     }
+    
 }
-

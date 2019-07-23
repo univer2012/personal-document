@@ -22,40 +22,56 @@ class SHRxswift_20ViewController: UIViewController {
         self.tableView = UITableView(frame: self.view.frame, style: .plain)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.view.addSubview(tableView)
+        
         //获取列表数据
+        #if false
         let data = DouBanProvider.rx.request(.channels)
-            .mapJSON()
-            .map { (data) -> [[String: Any]] in
-                print("data:",data)
-                if let json = data as? [String: Any], let channels = json["channels"] as? [[String: Any]] {
-                    return channels
-                } else {
-                    return []
-                }
-            }.asObservable()
+            .mapObject(Douban.self)
+            .map { $0.channels ?? [] }
+            .asObservable()
+        #else
+        //豆瓣网络请求服务
+        let service = DouBanNetworkService()
+        //获取列表数据
+        let data = service.loadChannels()
+        #endif
         //将数据绑定到表格
         data.bind(to: tableView.rx.items) {(tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            cell.textLabel?.text = "\(element["name"]!)"
+            cell.textLabel?.text = "\(element.name!)"
             cell.accessoryType = .disclosureIndicator
             return cell
         }.disposed(by: disposeBag)
-        
+
         //单元格点击
-        tableView.rx.modelSelected([String: Any].self)
-            .map{ $0["channel_id"] as! String }
+        //接口需要在vpn翻墙才能访问，接口数据也变了。
+        #if false
+        tableView.rx.modelSelected(Channel.self)
+            .map{ $0.channelId! }
             .flatMap { DouBanProvider.rx.request(.playlist($0)) }
-            .mapJSON()
-            .subscribe(onNext: { [weak self] (data) in
+            .mapObject(Playlist.self)
+            .subscribe(onNext: { [weak self] (playlist) in
                 //解析数据，获取歌曲信息
-                if let json = data as? [String: Any], let musics = json["song"] as? [[String: Any]] {
-                    let artist = musics[0]["artist"]!
-                    let title = musics[0]["title"]!
+                if playlist.song.count > 0 {
+                    let artist = playlist.song[0].singers[0].name!
+                    let title = playlist.song[0].title!
                     let message = "歌手：\(artist)\n歌曲：\(title)"
                     //将歌曲信息弹出显示
                     self?.showAlert(title: "歌曲信息", message: message)
                 }
             }).disposed(by: disposeBag)
+        #else
+        tableView.rx.modelSelected(Channel.self)
+            .map { $0.channelId! }
+            .flatMap(service.loadFirstSong)
+            .subscribe(onNext: {[weak self] song in
+                let message = "歌手：\(song.singers[0].name!)\n歌曲：\(song.title!)"
+                //将歌曲信息弹出显示
+                self?.showAlert(title: "歌曲信息", message: message)
+            })
+            .disposed(by: disposeBag)
+
+        #endif
     }
     
     func showAlert(title:String, message:String) {
@@ -63,6 +79,5 @@ class SHRxswift_20ViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
-        
     }
 }
