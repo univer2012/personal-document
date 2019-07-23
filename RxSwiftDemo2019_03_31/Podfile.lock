@@ -3,6 +3,8 @@ PODS:
   - Differentiator (3.1.0)
   - Kingfisher (4.10.1)
   - MJRefresh (3.2.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -37,6 +39,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher
   - MJRefresh
+  - Moya (~> 13.0)
   - Moya/RxSwift
   - "NSObject+Rx"
   - ObjectMapper
@@ -86,6 +89,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
 
-PODFILE CHECKSUM: 7766bb34843bfd0a3cb417a67af2986cffcf6be2
+PODFILE CHECKSUM: 93377ad89edea3921cc9cd064571405d29eac8e5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

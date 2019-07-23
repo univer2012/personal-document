@@ -6,13 +6,18 @@ use_frameworks!
 pod 'ObjectMapper'
 
 target 'RxSwiftDemo2019_03_31' do
+    # Rx
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxDataSources'
 
     pod 'NSObject+Rx'
-    pod 'Moya/RxSwift'
+    
     pod 'RxAlamofire'
+    
+    # Moya
+    pod 'Moya', '~> 13.0'
+    pod 'Moya/RxSwift'
 
     pod 'Then'
     pod 'Kingfisher'
