@@ -36,10 +36,10 @@ class GitHubViewModel {
                 .filterSuccessfulStatusCodes()
                 .mapObject(GitHubRepositories.self)
                 .asObservable()
-                    .catchError({ (error) in
-                        print("发生错误：",error.localizedDescription)
-                        return Observable<GitHubRepositories>.empty()
-                    })
+                .catchError({ (error) in
+                    print("发生错误：",error.localizedDescription)
+                    return Observable<GitHubRepositories>.empty()
+                })
             }.share(replay: 1)//让HTTP请求是被共享的
         //生成清空结果动作序列
         self.cleanResult = searchAction.filter { $0.isEmpty }.map{ _ in Void() }
