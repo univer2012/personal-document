@@ -54,6 +54,7 @@ money.amount
 money.currency
 ```
 ![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Decoding%20money%20from%20JSON%20in%20Swift_3.png)
+
 Damn you, 浮点运算！
 
 使用浮点类型可能不是最好的解决方案，试试`Decimal`。也许一开始就用`Double`是个错误。
