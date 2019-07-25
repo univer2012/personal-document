@@ -98,13 +98,13 @@ func index(of pattern: String) -> Index? {
 一旦找到匹配项，就会返回索引。是时候进行测试了。在你的playground底部写下以下内容:
 
 ```swift
-let text = "Hello World"
-text.index(of: "lo") // returns 3
-text.index(of: "ld") // returns 9
+let text2 = "Hello World"
+text2.index(of: "lo")?.utf16Offset(in: "") // returns 3
+text2.index(of: "ld")?.utf16Offset(in: "") // returns 9
 
 //in Swift 5
-text.index(of: "lo")?.utf16Offset(in: "") // returns 3
-text.index(of: "ld")?.utf16Offset(in: "") // returns 9
+text2.index(of: "lo")?.utf16Offset(in: "") // returns 3
+text2.index(of: "ld")?.utf16Offset(in: "") // returns 9
 ```
 蛮力方法是有效的，但它的效率相对较低。在下一节中，您将了解如何使用一种巧妙的技术来优化算法。
 
@@ -177,7 +177,7 @@ fileprivate func match(from currentIndex: Index, with pattern: String) -> Index?
   // more to come
 
   // 2
-  return match(from: index(before: currentIndex), with: "\(pattern.dropLast())")
+  return match(from: self.index(before: currentIndex), with: "\(pattern.dropLast())")
 }
 ```
 
@@ -201,7 +201,7 @@ fileprivate func match(from currentIndex: Index, with pattern: String) -> Index?
 
   // 3
   if pattern.count == 1 && self[currentIndex] == pattern.last { return currentIndex }
-  return match(from: index(before: currentIndex), with: "\(pattern.dropLast())")
+  return match(from: self.index(before: currentIndex), with: "\(pattern.dropLast())")
 }
 ```
 
