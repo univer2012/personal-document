@@ -30,12 +30,17 @@ func kthLargest(a: [Int], k: Int) -> Int? {
  有一种聪明的算法结合了*二元搜索和快速排序的思想*来达到**O(n)**解决方案。
  */
 
+
+
 public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
     var a = array
-    
+    //选出随机的枢轴数字
     func randomPivot<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int) -> T {
-        let pivotIndex =  random(min: low, max: high)
-        a.swapAt(pivotIndex, high)
+        let pivotIndex = arc4random_uniform(UInt32(high - low)) + UInt32(low)
+            //Int(arc4random() % UInt32(high - low)) + low//random(min: low, max: high)
+            //Int.random(in: Range.init(NSRange(location: low, length: high - low))!)
+        print("pivotIndex:", pivotIndex)
+        a.swapAt(Int(pivotIndex), high)
         return a[high]
     }
     
@@ -51,5 +56,24 @@ public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
         a.swapAt(i, high)
         return i
     }
+    
+    func randomizedSelect<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int, _ k: Int) -> T {
+        if low < high {
+            let p = randomizedPartition(&a, low, high)
+            if k == p {
+                return a[p]
+            } else if k < p {
+                return randomizedSelect(&a, low, p - 1, k)
+            } else {
+                return randomizedSelect(&a, p + 1, high, k)
+            }
+        } else {
+            return a[low]
+        }
+    }
+    precondition(a.count > 0)
+    return randomizedSelect(&a, 0, a.count - 1, k)
 }
 
+let array = [ 7, 92, 23, 9, -1, 0, 11, 6 ]
+print(randomizedSelect(array, order: 4))
