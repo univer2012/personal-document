@@ -1,5 +1,5 @@
 import UIKit
-
+import Foundation
 //var str = "Hello, playground"
 
 /*
@@ -33,12 +33,12 @@ func kthLargest(a: [Int], k: Int) -> Int? {
 
 
 public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
-    var a = array
+    var a = Array(array)
     //选出随机的枢轴数字
     func randomPivot<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int) -> T {
-        let pivotIndex = arc4random_uniform(UInt32(high - low)) + UInt32(low)
-            //Int(arc4random() % UInt32(high - low)) + low//random(min: low, max: high)
-            //Int.random(in: Range.init(NSRange(location: low, length: high - low))!)
+        let pivotIndex = Int(arc4random()) % (high - low) + low //随机数1
+        //arc4random_uniform(UInt32(high - low)) + UInt32(low)  //随机数2
+        //random(min: low, max: high)   //没有该函数
         print("pivotIndex:", pivotIndex)
         a.swapAt(Int(pivotIndex), high)
         return a[high]
@@ -51,12 +51,14 @@ public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
             if a[j] <= pivot {
                 a.swapAt(i, j)
                 i += 1
+                print("i = \(i), j = \(j), a = \(a)")
             }
         }
+        
         a.swapAt(i, high)
+        print("i = \(i), a = \(a)")
         return i
     }
-    
     func randomizedSelect<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int, _ k: Int) -> T {
         if low < high {
             let p = randomizedPartition(&a, low, high)
@@ -75,5 +77,13 @@ public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
     return randomizedSelect(&a, 0, a.count - 1, k)
 }
 
-let array = [ 7, 92, 23, 9, -1, 0, 11, 6 ]
-print(randomizedSelect(array, order: 4))
+
+
+
+var array = [ 7, 92, 23, 9, -1, 0, 11, 6 ]
+//print(randomPivot(&array, 0, array.count - 1))        //可以运行
+//print(randomizedPartition(&array, 0, array.count - 1))//可以运行
+print(randomizedSelect(&array, 0, array.count - 1, 4))//可以运行
+
+
+//print(randomizedSelect(array, order: 4))  //无法运行，报错：expression failed to parse, unknown error
