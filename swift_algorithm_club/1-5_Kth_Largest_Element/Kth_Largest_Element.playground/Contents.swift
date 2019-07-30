@@ -34,32 +34,50 @@ func kthLargest(a: [Int], k: Int) -> Int? {
 
 public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
     var a = array
+    
+    //var temp = 0 //测试代码
+    /*第一次取下标为6的数字11，结果为[7,   9,  -1, 0, 6, 11x, 23x, 92x]
+     第二次取下标为4的数字6，  结果为[-1x, 0x, 6x, 9, 7, 11x, 23x, 92x]
+     第二次取下标为3的数字9，  结果为[-1x, 0x, 6x, 7, 9, 11x, 23x, 92x]
+     */
+    //let indexArray = [6, 4, 3] //测试代码
     //选出随机的枢轴数字
     func randomPivot<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int) -> T {
-        let pivotIndex = arc4random_uniform(UInt32(high - low)) + UInt32(low)
-            //Int(arc4random() % UInt32(high - low)) + low//random(min: low, max: high)
-            //Int.random(in: Range.init(NSRange(location: low, length: high - low))!)
+        
+        /*
+         测试代码：
+         let pivotIndex = indexArray[temp]
+         temp += 1*/
+        let pivotIndex = Int(arc4random()) % (high - low) + low // 随机数1
+        //Int(arc4random_uniform(UInt32(high - low))) + low // 随机数2
+        //random(min: low, max: high)  //没有这个函数
         print("pivotIndex:", pivotIndex)
-        a.swapAt(Int(pivotIndex), high)
+        print("swapAt_before:", a)
+        a.swapAt(pivotIndex, high)
+        print("swapAt_after: ", a)
         return a[high]
     }
     
     func randomizedPartition<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int) -> Int {
         let pivot = randomPivot(&a, low, high)
+        print("pivot:", pivot)
         var i = low
         for j in low ..< high {
             if a[j] <= pivot {
                 a.swapAt(i, j)
                 i += 1
+                print("i = \(i), j = \(j), a = \(a)")
             }
         }
         a.swapAt(i, high)
+        print("i = \(i), a = \(a)")
         return i
     }
     
     func randomizedSelect<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int, _ k: Int) -> T {
         if low < high {
             let p = randomizedPartition(&a, low, high)
+            print("low = \(low), high = \(high), k = \(k), p = \(p)")
             if k == p {
                 return a[p]
             } else if k < p {
