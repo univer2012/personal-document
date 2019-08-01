@@ -197,6 +197,26 @@ controls="controls"></video>
 
 逻辑灵感来自：[h5跳转app指定页面及各种坑的总结](https://www.jianshu.com/p/475b398a117d)
 
+
+## 关于`applinks:*.mywebsite.com`或者`applinks:*.users.mywebsite.com`
+在Xcode --> `Capabilities`选项卡的`Associated Domains`中添加关联域名时，是支持使用通配符的。[官方文档](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1)原文如下：
+
+> To match all subdomains of an associated domain, you can specify a wildcard by prefixing `*.` before the beginning of a specific domain (the period is required). Domain matching is based on the longest substring in the `applinks` entries. For example, if you specify the entries `applinks:*.mywebsite.com` and `applinks:*.users.mywebsite.com`, matching for the domain `emily.users.mywebsite.com` is performed against the longer `*.users.mywebsite.com` entry. Note that an entry for `*.mywebsite.com` does not match `mywebsite.com` because of the period after the asterisk. To enable matching for both `*.mywebsite.com` and `mywebsite.com`, you need to provide a separate `applinks` entry for each. 
+> 
+[翻译](https://github.com/univer2012/personal-document/blob/master/Articles/Universal%20Links%E6%8E%A2%E7%A9%B6.md)如下：
+> 要匹配关联域名的所有子域名，可以通过在特定域名的开始之前加上前缀`*.`指定通配符（需要使用句点）。域名匹配基于`applinks`条目中最长的子字符串。例如，如果你指定了条目`applinks:*.mywebsite.com`和`applinks:*.users.mywebsite.com`，则对较长的条目`*.users.mywebsite.com`执行域名`emily.users.mywebsite.com`进行匹配。注意条目`*.mywebsite.com`不能匹配`mywebsite.com`因为星号后面有句点（`.`）。要同时匹配`*.mywebsite.com`和`mywebsite.com`，你需要为它们分别提供一个`applinks`条目。
+> 
+
+但是需要注意以下问题：
+
+1. 注意是“在特定域名的开始之前加上前缀`*.`指定通配符（需要使用句点）“，而不是使用`*`，例如：`applinks:*.mywebsite.com`可以识别，但是`applinks:*mywebsite.com`则无法识别。
+
+2. 要使用`applinks:*.mywebsite.com`这样的通配符配置，不仅 `mywebsite.com` 的子域（例如`subdomain.mywebsite.com`）要支持通用链接， 主域 `mywebsite.com` 本身也要支持通用链接，才可以。
+
+3. 通用链接不支持重定向。
+
+关于这个issue的讨论，可以参考：[Apple Developer Forums - Universal link and wildcard ](https://forums.developer.apple.com/thread/47315) 和 [stackoverflow: iOS Universal Links with Wildcards not working](https://stackoverflow.com/questions/37301392/ios-universal-links-with-wildcards-not-working)
+
 ---
 ## 扩展
 翻译的官方文档：
