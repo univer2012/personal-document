@@ -1,5 +1,5 @@
 import UIKit
-
+import Foundation
 //var str = "Hello, playground"
 
 /*
@@ -69,11 +69,11 @@ public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
                 print("i = \(i), j = \(j), a = \(a)")
             }
         }
+        
         a.swapAt(i, high)
         print("i = \(i), a = \(a)")
         return i
     }
-    
     func randomizedSelect<T: Comparable>(_ a: inout [T], _ low: Int, _ high: Int, _ k: Int) -> T {
         if low < high {
             let p = randomizedPartition(&a, low, high)
@@ -93,5 +93,13 @@ public func randomizedSelect<T: Comparable>(_ array: [T], order k: Int) -> T {
     return randomizedSelect(&a, 0, a.count - 1, k)
 }
 
-let array = [ 7, 92, 23, 9, -1, 0, 11, 6 ]
-print(randomizedSelect(array, order: 4))
+
+
+
+var array = [ 7, 92, 23, 9, -1, 0, 11, 6 ]
+//print(randomPivot(&array, 0, array.count - 1))        //可以运行
+//print(randomizedPartition(&array, 0, array.count - 1))//可以运行
+print(randomizedSelect(&array, 0, array.count - 1, 4))//可以运行
+
+
+//print(randomizedSelect(array, order: 4))  //无法运行，报错：expression failed to parse, unknown error

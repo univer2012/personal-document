@@ -48,7 +48,7 @@ Smart App Banners自动决定app在用户设备上是否支持。如果加载ban
 在[清单8-1]的例子演示了一个将数据传递给一个原生iOS app的网站。为了完成这个，检测URL是否包含`/profile`字符串。如果是，则打开`profile`视图控制器并传递查询字符串中的profile ID number.
 
 清单8-1 路由用户到正确的view controller
-```
+```swift
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     // 在本例中，用户来自的URL是 http://example.com/profile/?12345
