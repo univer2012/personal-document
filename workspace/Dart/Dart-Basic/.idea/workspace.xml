@@ -14,30 +14,12 @@
     <favorites_list name="Dart-Basic" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="hello_world.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter1/hello_world.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="var_and_const.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chapter2/var_and_const.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Gradle Kotlin DSL Build Script" />
         <option value="Dart File" />
       </list>
     </option>
@@ -52,6 +34,25 @@
       <list>
         <option value="$PROJECT_DIR$/chapter1/hello_world.dart" />
         <option value="$PROJECT_DIR$/chapter2/var_and_const.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_number.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_string.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_boolean.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_list.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_map.dart" />
+        <option value="$PROJECT_DIR$/chapter2/data_type_dynamic.dart" />
+        <option value="$PROJECT_DIR$/chapter3/operator_arithmetic.dart" />
+        <option value="$PROJECT_DIR$/chapter3/operator_relational.dart" />
+        <option value="$PROJECT_DIR$/chapter3/operator_logical.dart" />
+        <option value="$PROJECT_DIR$/chapter3/operator_asignment.dart" />
+        <option value="$PROJECT_DIR$/chapter3/operator_conditional.dart" />
+        <option value="$PROJECT_DIR$/chapter4/stmt_if.dart" />
+        <option value="$PROJECT_DIR$/chapter4/stmt_for.dart" />
+        <option value="$PROJECT_DIR$/chapter4/stmt_while.dart" />
+        <option value="$PROJECT_DIR$/chapter4/break_and continue.dart" />
+        <option value="$PROJECT_DIR$/chapter4/stmt_switch.dart" />
+        <option value="$PROJECT_DIR$/chapter5/function_declaration.dart" />
+        <option value="$PROJECT_DIR$/chapter5/function_optional_param.dart" />
+        <option value="$PROJECT_DIR$/chapter5/function_default_param.dart" />
       </list>
     </option>
   </component>
@@ -68,7 +69,7 @@
     <option name="x" value="402" />
     <option name="y" value="331" />
     <option name="width" value="1199" />
-    <option name="height" value="621" />
+    <option name="height" value="705" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -88,7 +89,7 @@
             <path>
               <item name="Dart-Basic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dart-Basic" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dart-Basic" type="b2602c69:ProjectViewProjectNode" />
@@ -106,6 +107,11 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chapter5" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -118,19 +124,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.var_and_const.dart">
+  <component name="RunManager" selected="Dart Command Line App.function_default_param.dart">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="hello_world.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+    <configuration name="break_and continue.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="checkedMode" value="false" />
-      <option name="filePath" value="$PROJECT_DIR$/chapter1/hello_world.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/chapter1" />
+      <option name="filePath" value="$PROJECT_DIR$/chapter4/break_and continue.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/chapter4" />
     </configuration>
-    <configuration name="var_and_const.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+    <configuration name="function_declaration.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="checkedMode" value="false" />
-      <option name="filePath" value="$PROJECT_DIR$/chapter2/var_and_const.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/chapter2" />
+      <option name="filePath" value="$PROJECT_DIR$/chapter5/function_declaration.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/chapter5" />
+    </configuration>
+    <configuration name="function_default_param.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="checkedMode" value="false" />
+      <option name="filePath" value="$PROJECT_DIR$/chapter5/function_default_param.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/chapter5" />
+    </configuration>
+    <configuration name="function_optional_param.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="checkedMode" value="false" />
+      <option name="filePath" value="$PROJECT_DIR$/chapter5/function_optional_param.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/chapter5" />
+    </configuration>
+    <configuration name="stmt_switch.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="checkedMode" value="false" />
+      <option name="filePath" value="$PROJECT_DIR$/chapter4/stmt_switch.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/chapter4" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -171,13 +192,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Dart Command Line App.hello_world.dart" />
-      <item itemvalue="Dart Command Line App.var_and_const.dart" />
+      <item itemvalue="Dart Command Line App.break_and continue.dart" />
+      <item itemvalue="Dart Command Line App.stmt_switch.dart" />
+      <item itemvalue="Dart Command Line App.function_declaration.dart" />
+      <item itemvalue="Dart Command Line App.function_optional_param.dart" />
+      <item itemvalue="Dart Command Line App.function_default_param.dart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Command Line App.var_and_const.dart" />
-        <item itemvalue="Dart Command Line App.hello_world.dart" />
+        <item itemvalue="Dart Command Line App.function_default_param.dart" />
+        <item itemvalue="Dart Command Line App.function_optional_param.dart" />
+        <item itemvalue="Dart Command Line App.function_declaration.dart" />
+        <item itemvalue="Dart Command Line App.stmt_switch.dart" />
+        <item itemvalue="Dart Command Line App.break_and continue.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -191,39 +218,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565850826222</updated>
-      <workItem from="1565850832001" duration="1475000" />
+      <workItem from="1565850832001" duration="15856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1475000" />
+    <option name="totallyTimeSpent" value="15856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="402" y="331" width="1199" height="621" extended-state="0" />
+    <frame x="402" y="331" width="1199" height="705" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" side_tool="true" visible="true" weight="0.488117" />
+      <window_info anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" sideWeight="0.50129646" side_tool="true" visible="true" weight="0.34375" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Dart Analysis" weight="0.4478708" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4095064" />
+      <window_info anchor="bottom" id="Dart Analysis" sideWeight="0.5756266" weight="0.44656488" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49870354" weight="0.34375" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49870354" weight="0.32824427" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29190993" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48872182" visible="true" weight="0.30250648" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5112782" side_tool="true" visible="true" weight="0.30250648" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Favorites" sideWeight="0.51361865" side_tool="true" weight="0.30250648" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -237,7 +265,47 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/double.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/comparable.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="71" column="15" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/num.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/int.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/var_and_const.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chapter1/hello_world.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -245,10 +313,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter2/var_and_const.dart">
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_number.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="185">
+          <caret line="41" column="1" selection-start-line="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/print.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/string.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="104" column="35" lean-forward="true" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_string.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_boolean.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="365" column="7" selection-start-line="365" selection-start-column="7" selection-end-line="365" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_list.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.4.1/libexec/lib/core/map.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="339" column="7" selection-start-line="339" selection-start-column="7" selection-end-line="339" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_map.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter2/data_type_dynamic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/operator_arithmetic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/operator_relational.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/operator_logical.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/operator_asignment.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/operator_conditional.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter4/stmt_if.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter4/stmt_for.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter4/stmt_while.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="1" lean-forward="true" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter4/break_and continue.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter4/stmt_switch.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter5/function_declaration.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter5/function_default_param.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter5/function_optional_param.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
