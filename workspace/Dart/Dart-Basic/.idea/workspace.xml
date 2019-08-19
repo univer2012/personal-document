@@ -18,8 +18,17 @@
       <file leaf-file-name="init_list.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part-two/chapter1/init_list.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixins.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/part-two/chapter1/mixins.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -63,8 +72,8 @@
       <file leaf-file-name="class_extends.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part-two/chapter2/class_extends.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="405">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -73,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/part-two/chapter2/constructor_extends.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -82,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/part-two/chapter2/class_abstract.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -91,14 +100,9 @@
         <entry file="file://$PROJECT_DIR$/part-two/chapter2/interface.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mixins.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/part-two/chapter2/mixins.dart">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -159,6 +163,7 @@
         <option value="$PROJECT_DIR$/part-two/chapter2/class_abstract.dart" />
         <option value="$PROJECT_DIR$/part-two/chapter2/interface.dart" />
         <option value="$PROJECT_DIR$/part-two/chapter2/mixins.dart" />
+        <option value="$PROJECT_DIR$/part-two/chapter1/mixins.dart" />
       </list>
     </option>
   </component>
@@ -172,8 +177,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
-    <option name="y" value="154" />
+    <option name="x" value="636" />
+    <option name="y" value="150" />
     <option name="width" value="1183" />
     <option name="height" value="796" />
   </component>
@@ -182,9 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,6 +219,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.interface.dart">
+  <component name="RunManager" selected="Dart Command Line App.mixins.dart">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -271,9 +276,9 @@
       <option name="filePath" value="$PROJECT_DIR$/part-two/chapter2/interface.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$/part-two/chapter2" />
     </configuration>
-    <configuration name="object_call.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+    <configuration name="mixins.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
       <option name="checkedMode" value="false" />
-      <option name="filePath" value="$PROJECT_DIR$/part-two/chapter1/object_call.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/part-two/chapter1/mixins.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$/part-two/chapter1" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -315,19 +320,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Dart Command Line App.object_call.dart" />
       <item itemvalue="Dart Command Line App.class_extends.dart" />
       <item itemvalue="Dart Command Line App.constructor_extends.dart" />
       <item itemvalue="Dart Command Line App.class_abstract.dart" />
       <item itemvalue="Dart Command Line App.interface.dart" />
+      <item itemvalue="Dart Command Line App.mixins.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Command Line App.mixins.dart" />
         <item itemvalue="Dart Command Line App.interface.dart" />
         <item itemvalue="Dart Command Line App.class_abstract.dart" />
         <item itemvalue="Dart Command Line App.constructor_extends.dart" />
         <item itemvalue="Dart Command Line App.class_extends.dart" />
-        <item itemvalue="Dart Command Line App.object_call.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -347,14 +352,15 @@
       <workItem from="1566187504560" duration="1377000" />
       <workItem from="1566195742268" duration="6131000" />
       <workItem from="1566206458624" duration="3955000" />
+      <workItem from="1566211714281" duration="1220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35932000" />
+    <option name="totallyTimeSpent" value="37152000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="154" width="1183" height="796" extended-state="0" />
+    <frame x="636" y="150" width="1183" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -362,23 +368,23 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" order="7" sideWeight="0.5056968" side_tool="true" visible="true" weight="0.23175965" />
+      <window_info active="true" anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" order="7" sideWeight="0.5065732" side_tool="true" visible="true" weight="0.23175965" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.5756266" weight="0.44656488" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49430326" weight="0.23175965" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49342683" visible="true" weight="0.23175965" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49870354" weight="0.32824427" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5772812" visible="true" weight="0.32690623" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.575419" visible="true" weight="0.33216476" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.42271882" side_tool="true" visible="true" weight="0.32690623" />
+      <window_info id="Structure" order="1" sideWeight="0.424581" side_tool="true" visible="true" weight="0.33216476" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51361865" side_tool="true" weight="0.30250648" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -689,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter1/init_list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -724,34 +730,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter2/class_extends.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter2/constructor_extends.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter2/class_abstract.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter2/interface.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/part-two/chapter2/mixins.dart">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/part-two/chapter1/mixins.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
