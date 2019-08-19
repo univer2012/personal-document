@@ -41,10 +41,16 @@ class GitHubViewModel {
                     return Observable<GitHubRepositories>.empty()
                 })
             }.share(replay: 1)//让HTTP请求是被共享的
+        
         //生成清空结果动作序列
         self.cleanResult = searchAction.filter { $0.isEmpty }.map{ _ in Void() }
+        
         //生成查询结果里的资源列表序列（如果查询到结果则返回结果，如果是清空数据则返回空数组）
-        self.repositories = Observable.of(searchResult.map{ $0.items! }, cleanResult.map{ [] }).merge()
+        self.repositories = Observable.of(searchResult.map{
+            $0.items!
+            
+        }, cleanResult.map{ [] }).merge()
+        
         //生成导航栏标题序列（如果查询到结果则返回数量，如果是清空数据则返回默认标题）
         self.navigationTitle = Observable.of(
             searchResult.map{ "共有 \($0.totalCount!) 个结果" },

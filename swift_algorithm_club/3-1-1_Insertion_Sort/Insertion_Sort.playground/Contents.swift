@@ -87,7 +87,8 @@ print(insertionSort(numbers, >))    // [27, 26, 10, 9, 8, 5, 3, 3, 2, 1, 0, -1]
 let strings = ["b", "a", "d", "c", "e"]
 print(insertionSort(strings, <))    // ["a", "b", "c", "d", "e"]
 
-/*: ## 性能
+/*:
+ ## 性能
  插入排序的最差和平均性能是 O(n^2)。这是因为在函数里有两个嵌套的循环。其他如快速排序和归并排序的性能则是 O(n log n)，在有大量输入的时候会更快。
  */
 

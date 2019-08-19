@@ -11,7 +11,10 @@ import Foundation
 import ObjectMapper
 //包含查询返回的所有库模型
 struct GitHubRepositories: Mappable {
-    init?(map: Map) { }
+    
+    var totalCount: Int!
+    var incompleteResults: Bool!
+    var items: [GitHubRepository]!       //本次查询返回的所有仓库集合
     
     init() {
         print("init()")
@@ -20,16 +23,13 @@ struct GitHubRepositories: Mappable {
         items = []
     }
     
+    init?(map: Map) { }
+    
     mutating func mapping(map: Map) {
         totalCount <- map["total_count"]
         incompleteResults <- map["incomplete_results"]
         items <- map["items"]
     }
-    
-    var totalCount: Int!
-    var incompleteResults: Bool!
-    var items: [GitHubRepository]!       //本次查询返回的所有仓库集合
-    
 }
 //单个仓库模型
 struct GitHubRepository: Mappable {
