@@ -5,7 +5,7 @@
 
 注意：关于 `DouBanProvider` 里的具体内容，可以参考上文（[点击查看](https://link.jianshu.com/?t=http%3A%2F%2Fwww.hangge.com%2Fblog%2Fcache%2Fdetail_2012.html)）。
 
-```
+```swift
 import UIKit
 
 import RxSwift
@@ -32,7 +32,7 @@ class SHRxswift_20ViewController: UIViewController {
 }
 ```
 （2）或者使用下面这种写法也是可以的。
-```
+```swift
 import UIKit
 
 import RxSwift
@@ -70,7 +70,7 @@ class SHRxswift_20ViewController: UIViewController {
 ![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Rxswift/Rx_50_2.png)
 
 （2）样例代码
-```
+```swift
 import UIKit
 
 import RxSwift
@@ -155,7 +155,7 @@ class SHRxswift_20ViewController: UIViewController {
 ### 2，使用样例
 （1）我们还是以前面的豆瓣音乐频道数据为例。首先我定义好相关模型（需要实现 `ObjectMapper` 的 `Mappable` 协议，并设置好成员对象与`JSON` 属性的相互映射关系。）
 
-```
+```swift
 //豆瓣接口模型
 class Douban: Mappable {
     var channels: [Channel]?
@@ -257,7 +257,7 @@ struct Singers {
 //...
 ```
 
-```
+```swift
 DouBanProvider.rx.request(.channels)
     .mapObject(Douban.self)
     .subscribe(onSuccess: { (douban) in
@@ -276,7 +276,7 @@ DouBanProvider.rx.request(.channels)
 （3）下面样例演示将数据换成模型，并绑定到表格上显示。
 ![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Rxswift/Rx_50_2.png)
 
-```
+```swift
 import UIKit
 
 import RxSwift

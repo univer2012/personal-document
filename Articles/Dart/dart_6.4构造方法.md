@@ -41,4 +41,12 @@ class Person {
   }
 }
 ```
+
 那么实例化时的`new Person();`会报错：`2 required argument(s) expected, but 0 found`，这时要在实例化时带上参数：`new Person("Tom", 20);`。
+
+3. 构造方法不能重载
+
+## 命名构造方法
+1. 使用命名构造方法，可以实现多个构造方法
+2. 使用 `类名.方法` 的形式实现
+

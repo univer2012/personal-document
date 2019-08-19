@@ -45,7 +45,7 @@ extension GitHubAPI: TargetType {
             params["q"] = query
             params["sort"] = "stars"
             params["order"] = "desc"
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }
