@@ -1,5 +1,6 @@
 void main() {
-  var person = new Person("Tom", 20, "Male");
+  //var person = new Person("Tom", 20, "Male");
+  var person = new Person("Tom", 20);
   print(person.name); // output: Tom
 
   new Person.withName("Jack");
@@ -11,7 +12,7 @@ class Person {
   String name;
   int age;
 
-  final String gender;
+  //final String gender;
 
   //构造方法 写法1
 //  Person(String name, int age) {
@@ -34,7 +35,8 @@ class Person {
 //  }
 
   //构造方法 写法4 当有final的属性要在构造方法中初始化时，需要使用下面的构造方法
-  Person(this.name, this.age, this.gender);
+  //Person(this.name, this.age, this.gender);
+  Person(this.name, this.age);
 
   //构造方法不能重载：如果重载，会报错：The default constructor is already defined.
   //Person(){}

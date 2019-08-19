@@ -50,3 +50,23 @@ class Person {
 1. 使用命名构造方法，可以实现多个构造方法
 2. 使用 `类名.方法` 的形式实现
 
+```dart
+class Person {
+  String name;
+  int age;
+
+  //final String gender;
+
+  // ==== 类名构造方法 写法1
+  Person.withName(String name) {
+    this.name = name;
+  }
+
+  // ==== 类名构造方法 写法2
+  Person.withAge(this.age);
+
+  void work() {
+    print("Work...");
+  }
+}
+```
