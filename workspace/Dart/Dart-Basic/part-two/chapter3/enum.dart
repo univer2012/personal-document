@@ -7,7 +7,9 @@
 //const winter = 3;
 
 void main() {
-  var currentSeason = Season.autumn;
+  var currentSeason = Season.spring;
+
+  print(currentSeason.index);
 
   switch (currentSeason) {
     case Season.spring:

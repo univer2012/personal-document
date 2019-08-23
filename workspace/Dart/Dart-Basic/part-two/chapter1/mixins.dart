@@ -80,6 +80,8 @@ class Tyre {
 
 class Car = Tyre with ElectricEngine;
 
-class Car extends Type with ElectricEngine {
+//class Car extends Type with ElectricEngine {
+//
+//}
 
-}
+class Bus = Tyre with OilEngine;
