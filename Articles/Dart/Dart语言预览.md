@@ -1,5 +1,32 @@
 # Dart 语法预览
 
+来自：[Dart 语法预览](http://dart.goodev.org/guides/language/language-tour)
+
+---
+
+本页内容告诉你如何使用 Dart 语言的主要特性，从变量到操作符、 从类到库，我们假定你在阅读本页内容之前已经 了解过其他编程语言了。
+
+关于 Dart 核心库的更多内容，请参考[ Dart 核心库预览](http://dart.goodev.org/guides/libraries/library-tour)。
+
+> 注意： 下面所介绍的大部分特性都可以在 [DartPad](http://dart.goodev.org/tools/dartpad) 中运行。
+> 
+如果你需要了解语言特性的更详细的细节， 请查看 [Dart 语言规范](http://dart.goodev.org/guides/language/spec) 。
+
+## A basic Dart program（一个最基本的 Dart 程序）
+
+下面的代码使用了很多 Dart 中最基本的特性：
+```dart
+// 定义个方法。
+printNumber(num aNumber) {
+  print('The number is $aNumber.'); // 在控制台打印内容。
+}
+
+// 这是程序执行的入口。
+main() {
+  var number = 42; // 定义并初始化一个变量。
+  printNumber(number); // 调用一个方法。
+}
+```
 
 * `print()`   一种打印内容的助手方法。
 * `'...'` (或者 `"..."`)     字符串字面量。
