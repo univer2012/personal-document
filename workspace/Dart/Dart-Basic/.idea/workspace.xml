@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b45aa92c-b204-423c-a852-37d90ebce075" name="Default" comment="" />
+    <list default="true" id="b45aa92c-b204-423c-a852-37d90ebce075" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Articles/Dart/Dart语言预览.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Articles/Dart/Dart语言预览.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test.dart" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,8 +76,8 @@
       <file leaf-file-name="test.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="11" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -92,6 +96,9 @@
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -153,11 +160,12 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="492" />
-    <option name="y" value="299" />
+    <option name="x" value="671" />
+    <option name="y" value="316" />
     <option name="width" value="837" />
     <option name="height" value="584" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -318,15 +326,16 @@
       <workItem from="1566206458624" duration="3955000" />
       <workItem from="1566211714281" duration="1220000" />
       <workItem from="1566522170556" duration="130000" />
-      <workItem from="1566522359454" duration="1339000" />
+      <workItem from="1566522359454" duration="7274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40274000" />
+    <option name="totallyTimeSpent" value="46209000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="492" y="299" width="837" height="584" extended-state="0" />
+    <frame x="671" y="316" width="837" height="584" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -338,13 +347,13 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.5756266" weight="0.44656488" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49223417" visible="true" weight="0.4764706" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49870354" weight="0.32824427" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5692884" visible="true" weight="0.4683393" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5692884" visible="true" weight="0.260454" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.4307116" side_tool="true" visible="true" weight="0.4683393" />
+      <window_info id="Structure" order="1" sideWeight="0.4307116" side_tool="true" visible="true" weight="0.260454" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -723,8 +732,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="2" selection-end-column="11" />
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>
