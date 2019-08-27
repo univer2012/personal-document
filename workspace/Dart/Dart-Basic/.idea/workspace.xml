@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b45aa92c-b204-423c-a852-37d90ebce075" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Articles/Dart/Dart语言预览.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Articles/Dart/Dart语言预览.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +65,7 @@
       <file leaf-file-name="enum.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part-two/chapter3/enum.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-97">
+            <state relative-caret-position="90">
               <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
@@ -75,8 +74,8 @@
       <file leaf-file-name="test.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state relative-caret-position="90">
+              <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -162,8 +161,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="615" />
-    <option name="y" value="316" />
+    <option name="x" value="478" />
+    <option name="y" value="242" />
     <option name="width" value="837" />
     <option name="height" value="584" />
   </component>
@@ -173,6 +172,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,9 +195,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,15 +327,16 @@
       <workItem from="1566206458624" duration="3955000" />
       <workItem from="1566211714281" duration="1220000" />
       <workItem from="1566522170556" duration="130000" />
-      <workItem from="1566522359454" duration="15421000" />
+      <workItem from="1566522359454" duration="15825000" />
+      <workItem from="1566874027033" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54356000" />
+    <option name="totallyTimeSpent" value="54764000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="615" y="316" width="837" height="584" extended-state="0" />
+    <frame x="478" y="242" width="837" height="584" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -344,23 +344,23 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" order="7" sideWeight="0.5077658" side_tool="true" visible="true" weight="0.4764706" />
+      <window_info active="true" anchor="bottom" x="414" y="630" width="1199" height="180" id="Event Log" order="7" sideWeight="0.5077658" side_tool="true" visible="true" weight="0.4764706" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.5756266" weight="0.44656488" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49223417" visible="true" weight="0.4764706" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49223417" weight="0.4764706" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49870354" weight="0.32824427" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5692884" visible="true" weight="0.260454" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56554306" visible="true" weight="0.260454" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.4307116" side_tool="true" visible="true" weight="0.260454" />
+      <window_info id="Structure" order="1" sideWeight="0.4344569" side_tool="true" visible="true" weight="0.260454" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.51361865" side_tool="true" weight="0.30250648" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -727,15 +727,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part-two/chapter3/enum.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
+        <state relative-caret-position="90">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="6" />
         </state>
       </provider>
     </entry>
