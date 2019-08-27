@@ -1,8 +1,12 @@
-printNumber(num aNumber) {
-  print('The number is $aNumber.');  // 在控制台打印内容。
+
+import 'todo.dart';
+
+@todo('seth', 'make this do something')
+void doSomething() {
+  print('do something');
 }
-main() {
-  var number = 42;
-  printNumber(number);
+
+void main() {
+  doSomething();
 }
 
