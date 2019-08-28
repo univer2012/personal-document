@@ -249,3 +249,328 @@ child: Container(
 1. ListView组件的语法讲解
 2. ListTitle的使用
 3. 小实例 做一个图片列表
+
+```dart
+home: Scaffold(
+  appBar:  new AppBar(
+    title:  new Text('ListVew Widget'),
+  ),
+  body: new ListView(
+    children: <Widget>[
+      new ListTile(
+        leading: new Icon(Icons.border_right),
+        title: new Text('border_right'),
+      ),
+      new ListTile(
+        leading: new Icon(Icons.android),
+        title: new Text('android'),
+      ),
+      new ListTile(
+        leading: new Icon(Icons.arrow_back_ios),
+        title: new Text('arrow_back_ios'),
+      ),
+    ],
+  ),
+
+),
+```
+
+
+
+3、做一个图片列表
+
+```dart
+home: Scaffold(
+  appBar:  new AppBar(
+    title:  new Text('ListVew Widget'),
+  ),
+  body: new ListView(
+    children: <Widget>[
+      new Image.network('https://img1.mukewang.com/szimg/5d5b6dd109a8f14512000676-360-202.png'),
+      new Image.network('https://img4.mukewang.com/szimg/59b8a486000107fb05400300-360-202.jpg'),
+      new Image.network('https://img2.mukewang.com/szimg/5c18d2d8000141c506000338-360-202.jpg'),
+      new Image.network('https://img4.mukewang.com/szimg/5d1032ab08719e0906000338-360-202.jpg'),
+      new Image.network('https://img2.mukewang.com/szimg/5d31765d08c90cba06000338-360-202.jpg'),
+    ],
+  ),
+
+),
+```
+
+
+
+### 3-6 横向列表和自定义组件讲解
+
+#### 横向列表的使用
+
+1. 制作横向列表，小例子
+2. scrollDirection属性的讲解
+3. 代码优化，自定义组件
+
+
+
+#### scrollDirection属性讲解
+
+1. Axis.horizontal：横向滚动或者叫水平方向滚动
+2. Axis.vertical：纵向滚动或者叫垂直方向滚动
+
+===== 横向滚动：
+
+```dart
+home: Scaffold(
+  appBar:  new AppBar(
+    title:  new Text('ListVew Widget'),
+  ),
+  body: Center(
+    child: Container(
+      height: 200.0,
+      child: new ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          new Container(
+            width: 180.0,
+            color: Colors.lightBlue,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.amber,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.deepOrange,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.deepPurpleAccent,
+          ),
+        ],
+      ),
+    ),
+  ),
+
+),
+```
+
+
+
+=====代码优化，自定义组件:
+
+```dart
+//...
+home: Scaffold(
+  appBar:  new AppBar(
+    title:  new Text('ListVew Widget'),
+  ),
+  body: Center(
+    child: Container(
+      height: 200.0,
+      child: MyList(),
+    ),
+  ),
+),
+//...
+
+class MyList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          new Container(
+            width: 180.0,
+            color: Colors.lightBlue,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.amber,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.deepOrange,
+          ),
+          new Container(
+            width: 180.0,
+            color: Colors.deepPurpleAccent,
+          ),
+        ],
+    );
+  }
+}
+```
+
+
+
+### 3-7 动态列表的使用
+
+#### 动态列表的使用
+
+1. Dart中List类型的使用
+2. 传递和接受参数，实现动态列表的基础
+3. 动态列表案例制作
+
+#### Dart中List的使用
+
+1. List类型简介，可以简单理解为js中的数组
+2. 声明List的4中方式
+
+
+
+#### 参数的传递和接受
+
+1. 如何传递参数
+2. 如何接受参数
+
+
+
+```dart
+void main() => runApp(MyApp(
+  items: new List<String>.generate(1000, (i)=>'Item $i')
+));
+
+class MyApp extends StatelessWidget {
+
+final List<String> items;
+MyApp({Key key, @required this.items}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'IMooc Flutter Demo',
+      home: Scaffold(
+        appBar:  new AppBar(
+          title:  new Text('ListVew Widget'),
+        ),
+        body: new ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index){
+            return new ListTile(
+              title: new Text('${items[index]}'),
+            );
+          },
+        ),
+
+      ),
+    );
+  }
+}
+```
+
+
+
+### 4-1 电影海报实例代码基本结构的建立
+
+#### 电影海报实例制作
+
+1. GridView网格列表的使用
+2. 图片网格列表的使用
+3. 手把手实例的编写和讲解
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()=> runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: '电影海报实例',
+      home: Scaffold(
+        body: Text('电影海报实例'),
+        appBar: new AppBar(
+          title: Text('电影海报实例'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+
+### 4-2 电影海报实例代码GridViewWidget学习
+
+#### GridView Widget
+
+1. padding：设置内边距的属性
+2. crossAxisSpacing：网格间的空隙
+3. crossAxisCount：网格的列数
+
+```dart
+home: Scaffold(
+  appBar: new AppBar(
+    title: Text('电影海报实例'),
+  ),
+  body: GridView.count(
+    padding: const EdgeInsets.all(10.0),//内间距
+    crossAxisSpacing: 10.0, //列之间的空隙
+    crossAxisCount: 3,//列数
+    children: <Widget>[
+      const Text('I love IMooc'),
+      const Text('I love IMooc'),
+      const Text('I love IMooc'),
+      const Text('I love IMooc'),
+      const Text('I love IMooc'),
+      const Text('I love IMooc'),
+    ],
+  ),
+),
+```
+
+
+
+### 4-3 电影海报图片的加入与课程总结
+
+```dart
+home: Scaffold(
+  appBar: new AppBar(
+    title: Text('电影海报实例'),
+  ),
+  body: GridView(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3,
+      mainAxisSpacing: 2.0, //主轴间距
+      crossAxisSpacing: 2.0,//副轴间距
+      childAspectRatio: 0.7,
+    ),
+    children: <Widget>[
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2566618190.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551393832.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2555084871.jpg',fit: BoxFit.cover,),
+
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2547108654.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2555952192.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551119672.jpg',fit: BoxFit.cover,),
+
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2553992741.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2545020183.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2554370800.jpg',fit: BoxFit.cover,),
+
+      new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2564832427.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2563766934.jpg',fit: BoxFit.cover,),
+      new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2565063457.jpg',fit: BoxFit.cover,),
+    ],
+  ),
+),
+```
+
+
+
+测试diff：
+
+```diff
+  class _TodoListState extends State<TodoList> {
+    List<Todo> todos = [];
+
++   _buildItem() {}
++
+    @override
+    Widget build(BuildContext context) {
+-     return Container();
++     return ListView.builder(
++       itemBuilder: _buildItem,
++       itemCount: todos.length,
++     );
+    }
+  }
+```
