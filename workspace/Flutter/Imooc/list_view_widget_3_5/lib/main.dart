@@ -6,7 +6,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '',
+      title: 'IMooc Flutter Demo',
+      home: Scaffold(
+        appBar:  new AppBar(
+          title:  new Text('ListVew Widget'),
+        ),
+        body: new ListView(
+          children: <Widget>[
+            new
+          ],
+        ),
+      ),
     );
   }
 }
