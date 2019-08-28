@@ -13,9 +13,13 @@ class MyApp extends StatelessWidget {
         ),
         body: new ListView(
           children: <Widget>[
-            new
+            new ListTile(
+              leading: new Icon(Icons.border_right),
+              title: new Text('border_right'),
+            ),
           ],
         ),
+
       ),
     );
   }
