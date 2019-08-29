@@ -49,6 +49,8 @@ class MyApp extends StatelessWidget {
 2. maxLines:文本显示的最大行数
 3. overflow：控制文本的溢出效果
 
+
+
 ```dart
 import 'package:flutter/material.dart';
 
