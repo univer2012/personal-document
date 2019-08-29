@@ -1,37 +1,60 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MaterialApp(
+    title: '数据传递案例',
+    home: ProductList(
+      products: List.generate(20, (i)=>Product('商品 $i','这时一个商品详情，编号为:$i'))
+      ),
+    ),
+  );
+}
 
-class MyApp extends StatelessWidget {
+
+class ProductDetail extends StatelessWidget {
+  final Product product;
+  ProductDetail({Key key, @required this.product}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(
+        title: Text('${product.title}'),
+      ),
+      body: Center(child: Text('${product.description}'),),
+    );
+  }
+}
 
-    var stack = new Stack(
-      alignment: const FractionalOffset(0.5, 0.8),
-      children: <Widget>[
-        new CircleAvatar(
-          backgroundImage: new NetworkImage(''),
-          radius: 100.0,
-        ),
 
-        new Container(
-          decoration: new BoxDecoration(
-            color: Colors.lightBlue,
-          ),
-          padding: EdgeInsets.all(5.0),
-          child: new Text('univer的头像'),
-        )
-      ],
-    )
+class ProductList extends StatelessWidget {
+  final List<Product> products;
+  ProductList({Key, key, @required this.products}) : super(key: key);
 
-    return MaterialApp(
-      title:  'ListView widget',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: Text('垂直方向布局'),
-        ),
-        body: Center(child: ),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('商品列表'),),
+      body: ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(products[index].title),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => new ProductDetail(product: products[index],)
+              ));
+            },
+          );
+        },
       ),
     );
   }
+}
+
+
+class Product {
+  final String title; //商品标题
+  final String description;//商品描述
+  Product(this.title, this.description);
 }

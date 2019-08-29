@@ -287,6 +287,8 @@ body: Column(
 
 比如我们现在要作的效果如下：
 
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di3ji_6.png)
+
 在头像上方再放入一个容器，容器里边写上字，这时候我们就可以使用Stack布局。
 
 ### 层叠布局的-alignment-属性
@@ -300,4 +302,213 @@ alignment属性是控制层叠的位置的，建议在两个内容进行层叠�
 **`CircleAvatar`这个经常用来作头像的，组件里边有个`radius`的值可以设置图片的弧度**。
 
 现在我们准备放入一个图像，然后把弧度设置成100，形成一个漂亮的圆形，代码如下：
+
+```dart
+new CircleAvatar(
+  backgroundImage: new NetworkImage('https://avatars2.githubusercontent.com/u/12393280?s=460&v=4'),
+  radius: 100.0,
+),
+```
+
+
+
+### 效果代码
+
+想布局出这个效果还是比较容易的，代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    var stack = new Stack(
+      alignment: const FractionalOffset(0.5, 0.8),
+      children: <Widget>[
+        new CircleAvatar(
+          backgroundImage: new NetworkImage('https://avatars2.githubusercontent.com/u/12393280?s=460&v=4'),
+          radius: 100.0,
+        ),
+
+        new Container(
+          decoration: new BoxDecoration(
+            color: Colors.lightBlue,
+          ),
+          padding: EdgeInsets.all(5.0),
+          child: new Text('univer的头像'),
+        )
+      ],
+    );
+
+    return MaterialApp(
+      title:  'ListView widget',
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: Text('垂直方向布局'),
+        ),
+        body: Center(child: stack),
+      ),
+    );
+  }
+}
+```
+
+
+
+
+
+## 第04节：Stack的Positioned属性
+
+上节课已经学习了`Stack`组件，并且进行了两个组件的层叠布局，但是如果是超过两个组件的层叠该如何进行定位那?这就是我们加今天要学的主角`Positioned`组件了。这个组件也叫做**层叠定位组件**。
+
+
+
+### Positioned组件的属性
+
+- bottom: 距离层叠组件下边的距离
+- left：距离层叠组件左边的距离
+- top：距离层叠组件上边的距离
+- right：距离层叠组件右边的距离
+- width: 层叠定位组件的宽度
+- height: 层叠定位组件的高度
+
+### demo实例
+
+修改上节课的例子，文字不在放入到`container`组件里，而是直接放入到Positioned里，并且不再是两个组件，而是三个子组件，我们先来看要实现的效果。
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di3ji_7.png)
+
+实现图片中的布局，代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    var stack = new Stack(
+      alignment: const FractionalOffset(0.5, 0.8),
+      children: <Widget>[
+        new CircleAvatar(
+          backgroundImage: new NetworkImage('https://avatars2.githubusercontent.com/u/12393280?s=460&v=4'),
+          radius: 100.0,
+        ),
+
+        new Positioned(
+          top: 10.0,
+          left: 10.0,
+          child:  new Text('univer'),
+        ),
+        new Positioned(
+          bottom: 10.0,
+          right: 10.0,
+          child: new Text('的头像'),
+
+        )
+      ],
+    );
+
+    return MaterialApp(
+      title:  'ListView widget',
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: Text('垂直方向布局'),
+        ),
+        body: Center(child: stack),
+      ),
+    );
+  }
+}
+```
+
+是不是觉的有了层叠布局，我们在Flutter中的布局就更加灵活了那。小伙伴们可以动手实现一个你常见的布局效果。
+
+## [#](https://jspang.com/posts/2019/01/28/flutter-base3.html#第05节：卡片组件布局)第05节：卡片组件布局
+
+Flutter还有一种比较比较酷炫的布局方式，我称 它为**卡片式布局**。这种布局类似ViewList，但是列表会以物理卡片的形态进行展示。
+
+### [#](https://jspang.com/posts/2019/01/28/flutter-base3.html#实例开发)实例开发
+
+比如我们现在要开发一个类似收获地址的列表，并且列表外部使用一个卡片式布局。
+
+卡片式布局默认是撑满整个外部容器的，如果你想设置卡片的宽高，需要在外部容器就进行制定。制作的效果如图。
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di3ji_8.png)
+
+代码中使用了一个垂直布局组件Column组件，然后利用了`ListTile`实现内部列表，这里需要说明的是<font color=#FF0000>ListTile不光可以使用在ListView组件中，然后容器组件其实都可以使用。</font>代码如下.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    var card = new Card(
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            title: new Text(
+              '吉林省吉林市昌邑区',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: new Text('技术胖:1513938888'),
+            leading: new Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,),
+          ),
+
+          new Divider(),
+          ListTile(
+            title: new Text(
+              '北京市海淀区中国科技大学',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: new Text('胜宏宇:1513938888'),
+            leading: new Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+
+          new Divider(),
+          ListTile(
+            title: new Text(
+              '河南省濮阳市百姓办公楼',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: new Text('JSPang:1513938888'),
+            leading:  new Icon(Icons.account_box, color: Colors.lightBlue,),
+          ),
+
+          new Divider(),
+
+        ],
+      ),
+    );
+
+    return MaterialApp(
+      title:  'ListView widget',
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: Text('卡片布局'),
+        ),
+        body: Center(child: card),
+      ),
+    );
+  }
+}
+```
+
+---
+
+【完】
 
