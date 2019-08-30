@@ -315,3 +315,310 @@ class ProductDetail extends StatelessWidget {
 这节课学一下页面跳转后，当我们返回页面时返回结果到上一个页面（也就是父页面）。这样的场景经常用于，我们去子页面选择了一项选项，然后把选择的结果返回给父级页面。
 
 这节课要作的例子是这样的，要去找小姐姐，当进入房间后，找到自己喜欢的小姐姐，然后小姐姐给了我们电话，我们这时候就在主页面显示出选择的小姐姐电话。
+
+### 异步请求和等待
+
+Dart中的异步请求和等待和ES6中的方法很像，直接使用async...await就可以实现。比如下面作了一个找小姐姐的方法，然后进行跳转，注意这时候是异步的。等待结果回来之后，我们再显示出来内容。具体代码如下：
+
+```dart
+_navigateToXioJieJie(BuildContext context) async {
+  final result = await Navigator.push(
+    context, 
+    MaterialPageRoute(builder: (context) => XiaoJieJie())
+    );
+
+    Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result'),));
+}
+```
+
+### SnackBar的使用
+
+`SnackBar`是用户操作后，显示提示信息的一个控件，类似`Tost`，会自动隐藏。`SnackBar`是以`Scaffold`的`showSnackBar`方法来进行显示的。
+
+```dart
+Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result'),));
+```
+
+### 返回数据的方式
+
+返回数据其实是特别容易的，只要在返回时带第二个参数就可以了。
+
+```text
+ Navigator.pop(context,'xxxx');  //xxx就是返回的参数
+```
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#找小姐姐demo代码)找小姐姐Demo代码
+
+这节课的代码其实挺多的，我把所有代码都放到下面，你可以在看完视频后，照着练习。
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: '页面跳转返回数据',
+    home: FirstPage(),
+  )
+  );
+}
+
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('找小姐姐要电话'),),
+      body: Center(
+        child: RouteButton(),
+      ),
+    );
+  }
+}
+
+class RouteButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: (){
+        _navigateToXioJieJie(context);
+      },
+      child: Text('去找小姐姐'),
+    );
+  }
+}
+
+_navigateToXioJieJie(BuildContext context) async {//async是启用异步方法
+  final result = await Navigator.push( //等待
+    context, 
+    MaterialPageRoute(builder: (context) => XiaoJieJie())
+    );
+    print('result: $result');
+    Scaffold.of(context).showSnackBar(SnackBar(
+      content: Text('$result'),
+      ));
+}
+
+class XiaoJieJie extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('我是小姐姐'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            RaisedButton(
+              child: Text('大长腿小姐姐'),
+              onPressed: (){
+                Navigator.pop(context, '大长腿:1511008888');
+              },
+            ),
+
+            RaisedButton(
+              child: Text('小蛮腰小姐姐'),
+              onPressed: (){
+                Navigator.pop(context, '大长腿:1511009999');
+              },
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+
+## 第05节：静态资源和项目图片的处理
+
+我们讲图片组件的时候，多使用了网络图片进行讲解，所以造成了小伙伴不会使用项目资源图片，这是我的锅，所以在这里给大家补上。
+
+
+
+### pubspec.yaml 文件
+
+如果想配置项目资源文件，就需要使用`pubspec.yaml`文件，需要把资源文件在这里声明。
+
+比如在项目根目录下新建了一个`images`文件夹，文件夹下面放了一个图片，图片的名称叫做`blogtouxiang.jpg`，那我们在`pubspec.yaml`文件里就要写如下代码进行声明。
+
+```dart
+  assets:
+    - images/blogtouxiang.jpg
+```
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#使用项目图片资源)使用项目图片资源
+
+有了声明后，我们就可以直接在项目中引用这个文件了。这里使用最简单的代码结构，只用了一张图片。代码如下:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()=>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Image.asset('images/blogtouxiang.jpg'),
+    );
+  }
+}
+```
+
+这时候已经在项目中引入成功了，可以预览看一下效果。当然样子很丑，这里主要时学知识，就不做过多的修饰了。
+
+
+
+## [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#第06节：flutter客户端打包)第06节：Flutter客户端打包
+
+到现在为止，我相信小伙伴都能做出一些漂亮的页面了，也有了难道朋友面前显一显的冲动。想要安装到手机上，我们必须要进行打包，这节课我们就学学Android客户端如何打包apk。
+
+
+
+其实这个打包的坑还是比较多的，官方文档显然是站在大神级程序员的角度写的，所以如果你看文档，特别是前端，那基本是打不成功的。
+
+不要怕，我这里就详细的把打包的过程和坑给大家演示一下。
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#配置app的图标)配置APP的图标
+
+想配置APP的图片，你需要找到下面的目录：
+
+> 项目根目录/android/app/src/main/res/
+
+进入之后你会看到很多mipmap-为前缀命名的文件夹，后边的是像素密度，可以看出图标的分辨率。
+
+- mdpi (中) ~160dpi
+- hdpi （高） ~240dip
+- xhdpi （超高） ~320dip
+- xxhdpi （超超高） ~480dip
+- xxxhdpi （超超超高） ~640dip
+
+将对应像素密度的图片放入对应的文件夹中,图片记得用png格式，记得名字要统一，才能一次性进行配置。
+
+
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#androidmanifest-xml-文件)AndroidManifest.xml 文件
+
+这个文件主要用来配置APP的名称、图标和系统权限，所在的目录在:
+
+> 项目根目录/android/app/src/main/AndroidManifest.xml
+
+```text
+android:label="flutter_app"   //配置APP的名称，支持中文
+android:icon="@mipmap/ic_launcher" //APP图标的文件名称
+```
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#生成-keystore)生成 keystore
+
+这里的坑挺多的，小伙伴一定要注意。官方写的非常简单，只要在终端运行如下代码就可以成功,但事实是报错。
+
+```text
+keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+报错截图如下：
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di4ji_3.png)
+
+根本找不到这个目录，真的很坑，其实我们只是没有配置环境变量。但是为了一个包配置环境变量是不知道的。
+
+这时候可以用下面的命令找到keytool.exe的位置。
+
+```text
+flutter doctor -v
+```
+
+![alt](http://jspang.com/static/upload/20181217/cHrgJ3SdAqFk1Ivta82vIP7g.png)
+
+这时候你直接拷贝命令并进行输入，但这里也有个坑，就是如果文件夹中间带有空空，你需要用带引号扩上。
+
+```text
+D:\Program\Android\'Android Studio'\jre\bin\keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+这就可以了吗？那你就太天真了，还是会报错。
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di4ji_4.png)
+
+这个错误的主要问题是目录不存在和没有写权限，所以我们要更换一个有写权限的目录。我们把命令改成了下面的形式。
+
+```text
+ D:\Program\Android\'Android Studio'\jre\bin\keytool -genkey -v -keystore D:\key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+这时候就可以创建成功了。你的D盘下面就会有一个Jks的文件，记住这个文件不能共享给任何人。
+
+有了这个key.jks文件后，可以到项目目录下的`android`文件夹下，创建一个名为key.properties的文件，并打开粘贴下面的代码。
+
+```text
+storePassword=<password from previous step>    //输入上一步创建KEY时输入的 密钥库 密码
+keyPassword=<password from previous step>    //输入上一步创建KEY时输入的 密钥 密码
+keyAlias=key
+storeFile=<E:/key.jks>    //key.jks的存放路径
+```
+
+我的文件最后是这样的：
+
+```text
+storePassword=123123
+keyPassword=123123
+keyAlias=key
+storeFile=D:/key.jks
+```
+
+这个工作中也不要分享出去哦，这个Key就算生成成功了。
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#配置key注册)配置key注册
+
+key生成好后，需要在build.gradle文件中进行配置。这个过程其实很简单，就是粘贴复制一些东西，你是不需要知道这些文件的具体用处的。
+
+第一项：
+
+进入项目目录的/android/app/build.gradle文件，在`android{`这一行前面,加入如下代码：
+
+```text
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+```
+
+把如下代码进行替换
+
+```text
+buildTypes {
+    release {
+        signingConfig signingConfigs.debug
+    }
+}
+```
+
+替换成的代码：
+
+```dart
+signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
+    }
+}
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+    }
+}
+```
+
+### [#](https://jspang.com/posts/2019/02/01/flutter-base4.html#生成apk)生成apk
+
+直接在终端中输入：
+
+```text
+flutter build apk
+```
+
+这时候就打包成功了，剩下的安装过程我就省略，不作过多的介绍了。
+
