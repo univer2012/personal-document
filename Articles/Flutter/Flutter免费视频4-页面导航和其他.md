@@ -530,7 +530,7 @@ keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000
 flutter doctor -v
 ```
 
-![alt](http://jspang.com/static/upload/20181217/cHrgJ3SdAqFk1Ivta82vIP7g.png)
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di4ji_4.png)
 
 这时候你直接拷贝命令并进行输入，但这里也有个坑，就是如果文件夹中间带有空空，你需要用带引号扩上。
 
@@ -540,7 +540,7 @@ D:\Program\Android\'Android Studio'\jre\bin\keytool -genkey -v -keystore ~/key.j
 
 这就可以了吗？那你就太天真了，还是会报错。
 
-![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di4ji_4.png)
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/flutter_di4ji_5.png)
 
 这个错误的主要问题是目录不存在和没有写权限，所以我们要更换一个有写权限的目录。我们把命令改成了下面的形式。
 
