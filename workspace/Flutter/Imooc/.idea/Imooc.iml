@@ -5,10 +5,18 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/demo001/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/demo001/build" />
+      <excludeFolder url="file://$MODULE_DIR$/grid_view_4_1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/grid_view_4_1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/layout_5/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/layout_5/build" />
       <excludeFolder url="file://$MODULE_DIR$/list_view_widget_3_5/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/list_view_widget_3_5/build" />
+      <excludeFolder url="file://$MODULE_DIR$/t_01bottom_navigation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/t_01bottom_navigation/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
