@@ -36,17 +36,633 @@
 
 ## 案例效果查看
 
-| ![img](http://blogimages.jspang.com/FlutterDemo01.gif) | ![img](http://blogimages.jspang.com/FlutterDemo02.gif) | ![img](http://blogimages.jspang.com/FlutterDemo03.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo01.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo02.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo03.gif) |
 | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
-| ![img](http://blogimages.jspang.com/FlutterDemo04.gif) | ![img](http://blogimages.jspang.com/FlutterDemo05.gif) | ![img](http://blogimages.jspang.com/FlutterDemo06.gif) |
-| ![img](http://blogimages.jspang.com/FlutterDemo07.png) | ![img](http://blogimages.jspang.com/FlutterDemo08.gif) | ![img](http://blogimages.jspang.com/FlutterDemo09.gif) |
-| ![img](http://blogimages.jspang.com/FlutterDemo10.gif) | ![img](http://blogimages.jspang.com/FlutterDemo11.gif) | ![img](http://blogimages.jspang.com/FlutterDemo12.gif) |
-| ![img](http://blogimages.jspang.com/FlutterDemo13.png) | ![img](http://blogimages.jspang.com/FlutterDemo14.png) | ![img](http://blogimages.jspang.com/FlutterDemo15.gif) |
-| ![img](http://blogimages.jspang.com/FlutterDemo16.gif) | ![img](http://blogimages.jspang.com/FlutterDemo17.gif) | ![img](http://blogimages.jspang.com/FlutterDemo18.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo04.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo05.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo06.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo07.png) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo08.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo09.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo10.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo11.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo12.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo13.png) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo14.png) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo15.gif) |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo16.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo17.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo18.gif) |
 
 ## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第01节-底部导航栏制作-1)第01节: 底部导航栏制作-1
 
 工作中最简单的一个APP也要具备一个功能，就是底部导航栏，你很难找出没有底部导航栏的应用。这么刚需的功能，那就从这里入手开始学习吧。
 
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo1_01.gif)
 
+### 主入口文件的编写
+
+首先我们先写一个主入口文件，这个文件只是简单的APP通用结构，最主要的是要引入自定义的`BottomNavigationWidget`组件。
+
+main.dart代码如下:
+
+```dart
+import 'package:flutter/material.dart';
+import 'bottom_navigation_widget.dart';
+
+void main()=> runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:'Flutter bottomNavigationBar',
+      theme:ThemeData.light(),
+      home:BottomNavigationWidget()
+    );
+  }.
+}
+```
+
+注意的是`BottomNaivgationWidget`这个组件还没有编写，所以现在会报错。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#statefulwidget-讲解)StatefulWidget 讲解
+
+在编写`BottomNaivgationWidget`组件前，我们需要简单了解一下什么是`StatefulWidget`.
+
+`StatefulWidget`具有可变状态(state)的窗口组件（widget）。使用这个要根据变化状态，调整State值。
+
+在lib目录下，新建一个`bottom_navigation_widget.dart`文件。
+
+它的初始化和以前使用的`StatelessWidget`不同，我们在VSCode中直接使用快捷方式生成代码（直接在VSCode中输入stful）：
+
+```text
+class name extends StatefulWidget {
+  _nameState createState() => _nameState();
+}
+
+class _nameState extends State<name> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       child: child,
+    );
+  }
+}
+```
+
+上面的代码可以清楚的看到，使用`StatefulWidget`分为两个部分，第一个部分是继承与`StatefullWidget`，第二个部分是继承于`State`.其实`State`部分才是我们的重点，主要的代码都会写在`State`中。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#bottomnaivgationwidget自定义)BottomNaivgationWidget自定义
+
+接下来我们就要创建`BottomNaivgationWidget`这个Widget了，只是建立一个底部导航。
+
+```dart
+import 'package:flutter/material.dart';
+
+
+class BottomNavigationWidget extends StatefulWidget {
+  _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();
+}
+
+class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
+  final _BottomNavigationColor = Colors.blue;
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+     
+       bottomNavigationBar: BottomNavigationBar(
+         items: [
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.home,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Home',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.email,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Email',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.pages,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Pages',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.airplay,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'AipPlay',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+         ],
+         type:BottomNavigationBarType.fixed
+       ),
+     );
+  }
+}
+```
+
+这时候我们就可以使用`flutter run`来进行查看代码了，效果已经出现，在APP的页面上已经出现了一个底部导航栏，只不过现在还点击还没有什么效果。
+
+下节课我们继续学习，让点击后可以切换页面，完成我们第一个的小实例效果。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第02节-底部导航栏制作-2)第02节: 底部导航栏制作-2
+
+这节课我们继续上节课的内容，把底部导航的完整效果做出来，我们先把几个要导航的页面创建出来。
+
+### 子页面的编写
+
+子页面我们就采用最简单的编写了，只放入一个`AppBar`和一个`Center`，然后用Text Widget表明即可。
+
+先来写一个HomeScreen组件，新建一个pages目录，然后在目录下面新建`home_screen.dart`文件。
+
+```dart
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(
+        title: Text('HOME'),
+      ),
+      body:Center(
+        child: Text('HOME'),
+      )
+    );
+  }
+}
+```
+
+有了这个文件剩下的文件就可以复制粘贴，然后改少量的代码来完成了。
+
+分别建立:
+
+- email_screen.dart
+- pages_screen.dart
+- airplay_screen.dart
+
+这些都是导航要用的子页面，有了这些页面，我们才能继续编写代码。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#重写initstate-方法)重写initState()方法
+
+我们要重新`initState()`方法，把刚才做好的页面进行初始化到一个Widget数组中。有了数组就可以根据数组的索引来切换不同的页面了。这是现在几乎所有的APP采用的方式。
+
+代码如下:
+
+```dart
+ List<Widget> list = List();
+ @override
+ void initState(){
+    list
+      ..add(HomeScreen())
+      ..add(EmailScreen())
+      ..add(PagesScreen())
+      ..add(AirplayScreen());
+    super.initState();
+  }
+```
+
+这里的`..add()`是Dart语言的..语法，如果你学过编程模式，你一定听说过建造者模式，简单来说就是返回调用者本身。这里list后用了..add()，还会返回list，然后就一直使用..语法，能一直想list里增加widget元素。 最后我们调用了一些父类的`initState()`方法。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#bottomnavigationbar里的响应事件)BottomNavigationBar里的响应事件
+
+`BottomNavigationBar`组件里提供了一个相应事件`onTap`，这个事件自带一个索引值`index`，通过索引值我们就可以和我们list里的索引值相对应了。
+
+```dart
+        onTap:(int index){
+           setState((){
+             _currentIndex= index;
+           });
+         },
+```
+
+现在给出全部的`bottom_navigation_widget.dart`的全部代码，讲解我会在视频中一行一行讲解。
+
+```dart
+import 'package:flutter/material.dart';
+import 'pages/home_screen.dart';
+import 'pages/email_screen.dart';
+import 'pages/pages_screen.dart';
+import 'pages/airplay_screen.dart';
+
+class BottomNavigationWidget extends StatefulWidget {
+  _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();
+}
+
+class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
+  final _BottomNavigationColor = Colors.blue;
+  int _currentIndex = 0;
+  List<Widget> list = List();
+
+  @override
+  void initState(){
+    list
+      ..add(HomeScreen())
+      ..add(EmailScreen())
+      ..add(PagesScreen())
+      ..add(AirplayScreen());
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+       body: list[_currentIndex],
+       bottomNavigationBar: BottomNavigationBar(
+         items: [
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.home,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Home',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.email,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Email',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.pages,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'Pages',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+           BottomNavigationBarItem(
+             icon:Icon(
+               Icons.airplay,
+               color:_BottomNavigationColor,
+             ),
+             title:Text(
+               'AipPlay',
+               style:TextStyle(color:_BottomNavigationColor)
+             )
+           ),
+         ],
+         currentIndex:_currentIndex,
+         onTap:(int index){
+           setState((){
+             _currentIndex= index;
+           });
+         },
+         type:BottomNavigationBarType.fixed
+       ),
+     );
+  }
+}
+```
+
+通过两节的学习，基本掌握了APP底部导航的编写方法，其实这些知识是很面向工作的，因为真是项目中，你也要如此划分你的代码结构。
+
+我希望你一定要动手练习一下，因为不动手练习，你是真的学不会的，这不再是基础知识，而是稍显复杂的小案例，并且这些案例你练习后，以后工作中用到，是可以直接拷贝里边的代码的，绝对不亏的。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第03节-不规则底部工具栏制作-1)第03节: 不规则底部工具栏制作-1
+
+大部分的底部导航都是中规中矩的，但有些时候也需要突出个性，比如在中间部位增加一个突出的按钮。这节课我们主要学习一下不规则的导航如何制作。
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo1_02.gif)
+
+
+
+### 自定义主题样本
+
+Flutter支持自定义主题，如果使用自定义主题，设置的内容项是非常多的，这可能让初学者头疼，Flutter贴心的为给我们准备了主题样本。
+
+> primarySwatch ：现在支持18种主题样本了。
+
+具体代码如下：
+
+```dart
+theme: ThemeData(
+  primarySwatch: Colors.lightBlue,
+),
+```
+
+会了这个知识后，我们就可以先把我们的主入口文件编写一下了，具体代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'bottom_appBar_demo.dart';
+
+void main()=>runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:'Flutter Demo',
+theme: ThemeData(
+  primarySwatch: Colors.lightBlue,
+),
+      home:BottomAppBarDemo(),
+    );
+  }
+}
+```
+
+这时候`bottom_appBar_demo.dart`这个文件还没有，也找不到，这个文件是我们的主要文件，我们的主要业务逻辑会写在这个文件里。
+
+因为没有所以你写完之后会报错，那接下来我们就来编写这个文件。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#floatingactionbutton-widget)floatingActionButton Widget
+
+`floatingActionButton`工作中我们通常简称它为“FAB”，也许只是我们公司这样称呼，从字面理解可以看出，它是“可交互的浮动按钮”,其实在Flutter默认生成的代码中就有这家伙，只是我们没有正式的接触。
+
+一般来说，它是一个圆形，中间放着图标，会优先显示在其他Widget的前面。
+
+下面我们来看看它的常用属性:
+
+- onPressed ：点击相应事件，最常用的一个属性。
+- tooltip：长按显示的提示文字，因为一般只放一个图标在上面，防止用户不知道，当我们点击长按时就会出现一段文字性解释。非常友好，不妨碍整体布局。
+- child ：放置子元素，一般放置Icon Widget。
+
+我们来看一下`floatingActionButton`的主要代码:
+
+```dart
+floatingActionButton: FloatingActionButton(
+    onPressed: (){
+      Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+        return EachView('New Page');
+      }));
+    },
+    tooltip: 'Increment',
+    child: Icon(
+      Icons.add,
+      color: Colors.white,
+    ),
+  ),
+```
+
+写完这些代码已经有了一个悬浮的按钮，但这个悬浮按钮还没有和低栏进行融合，这时候需要一个属性。
+
+```dart
+floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+```
+
+这时候就可以和底栏进行融合了。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#bottomappbar-widget)BottomAppBar Widget
+
+`BottomAppBar`是 底部工具栏的意思，这个要比`BottomNavigationBar`widget灵活很多，可以放置文字和图标，当然也可以放置容器。
+
+`BottomAppBar`的常用属性:
+
+- color:这个不用多说，底部工具栏的颜色。
+- shape：设置底栏的形状，一般使用这个都是为了和`floatingActionButton`融合，所以使用的值都是CircularNotchedRectangle(),有缺口的圆形矩形。
+- child ： 里边可以放置大部分Widget，让我们随心所欲的设计底栏。
+
+这节课先来看看这个布局，下节课我们再添加交互效果。
+
+本节课主要代码：
+
+```dart
+import 'package:flutter/material.dart';
+
+class BottomAppBarDemo extends StatefulWidget {
+  _BottomAppBarDemoState createState() => _BottomAppBarDemoState();
+}
+
+class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+          
+          },
+          tooltip: 'Increment',
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+        ),
+       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+       bottomNavigationBar: BottomAppBar(
+         color:Colors.lightBlue,
+         shape:CircularNotchedRectangle(),
+         child: Row(
+           mainAxisSize: MainAxisSize.max,
+           mainAxisAlignment: MainAxisAlignment.spaceAround,
+           children: <Widget>[
+             IconButton(
+               icon:Icon(Icons.home),
+               color:Colors.white,
+               onPressed:(){
+                
+               }
+             ),
+             IconButton(
+               icon:Icon(Icons.airport_shuttle),
+               color:Colors.white,
+               onPressed:(){
+                 
+               }
+             ),
+           ],
+         ),
+       )
+        ,
+     );
+  }
+}
+```
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第04节-不规则底部工具栏制作-2)第04节: 不规则底部工具栏制作-2
+
+上节课已经完成了基本的页面布局，但是还没有交互效果，这节主要制作一下交互效果。
+
+
+
+### StatefulWidget子页面的制作
+
+在前两节课的实例中我们使用了子页面，但子页面继承与`StatelessWidget`(不可变控件)，所以很麻烦的写了4个页面，其实完全可以写一个继承于`StatefulWidget`的控件，进行搞定。
+
+新建一个`each_view.dart`文件，然后输入如下代码：
+
+```dart
+import 'package:flutter/material.dart';
+
+class EachView extends StatefulWidget {
+  String _title;
+  EachView(this._title);
+  @override
+  _EachViewState createState() => _EachViewState();
+}
+
+class _EachViewState extends State<EachView> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(title:Text(widget._title)),
+      body: Center(child:Text(widget._title)),
+    );
+  }
+}
+```
+
+代码中设置了一个内部的`_title`变量，这个变量是从主页面传递过来的，然后根据传递过来的具体值显示在APP的标题栏和屏幕中间。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#按钮交互效果的制作)按钮交互效果的制作
+
+这些效果都是在`bottom_appBar_demo.dart`页面完成的。首先我们需要引入新作的子页面`each_view.dart`。
+
+```dart
+import 'each_view.dart';
+```
+
+新建两个变量,主要作用是控制body中的试图，也就是显示不同的子页面。
+
+```dart
+  List<Widget> _eachView;  //创建视图数组
+  int _index = 0;          //数组索引，通过改变索引值改变视图
+```
+
+下一步是为`_eachView`进行初始化赋值，我们可以直接重写初始化方法，具体代码如下：
+
+```dart
+  @override
+  void initState() {
+      // TODO: implement initState
+      super.initState();
+      _eachView = List();
+      _eachView..add(EachView('Home'))..add(EachView('Me'));
+    }
+```
+
+剩下的就是写个个按钮的交互事件，交互的动作分两种：
+
+- 直接打开子导航，比如我们点击了中间的”+“按钮，我们直接开启子页面。
+
+```dart
+onPressed: (){
+    Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+      return EachView('New Page');
+    }));
+  },
+```
+
+- 改变状态，通过改变状态，来切换页面，这样我们整体页面并没有被刷新。
+
+```dart
+onPressed:(){
+  setState(() {
+    _index=0;             
+  });
+}
+```
+
+为了方便小伙伴们学习，给出`bottom_appBar_demo.dart`所有代码，代码如下:
+
+```dart
+import 'package:flutter/material.dart';
+import 'each_view.dart';
+
+class BottomAppBarDemo extends StatefulWidget {
+  _BottomAppBarDemoState createState() => _BottomAppBarDemoState();
+}
+
+class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
+  List<Widget> _eachView;  //创建视图数组
+  int _index = 0;          //数组索引，通过改变索引值改变视图
+
+  @override
+  void initState() {
+      // TODO: implement initState
+      super.initState();
+      _eachView = List();
+      _eachView..add(EachView('Home'))..add(EachView('Me'));
+    }
+
+  @override
+  Widget build(BuildContext context) {
+     return Scaffold(
+       body:_eachView[_index],
+        floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+            return EachView('New Page');
+          }));
+        },
+          tooltip: 'Increment',
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+        ),
+       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+       bottomNavigationBar: BottomAppBar(
+         color:Colors.lightBlue,
+         shape:CircularNotchedRectangle(),
+         child: Row(
+           mainAxisSize: MainAxisSize.max,
+           mainAxisAlignment: MainAxisAlignment.spaceAround,
+           children: <Widget>[
+             IconButton(
+               icon:Icon(Icons.home),
+               color:Colors.white,
+                onPressed:(){
+                  setState(() {
+                    _index=0;             
+                  });
+                }
+             ),
+             IconButton(
+               icon:Icon(Icons.airport_shuttle),
+               color:Colors.white,
+               onPressed:(){
+                 setState(() {
+                    _index=1;             
+                 });
+               }
+             ),
+           ],
+         ),
+       )
+        ,
+     );
+  }
+}
+```
+
+我相信小伙伴都制作出了这个效果，这个在工作中也很常见。希望你们都能学会，特别是动态子页面的这个使用技巧。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第05节-酷炫的路由动画-1)第05节: 酷炫的路由动画-1
+
+现在Flutter的路由效果已经非常不错了，能满足大部分App的需求，但是谁不希望自己的App更酷更炫那，学完这节课你就可以给自己的APP加上酷炫的路由动画了。
+
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_01.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_02.gif) |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_03.gif) | ![img](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_04.gif) |
+
+其实路由动画的原理很简单，就是重写并继承`PageRouterBuilder`这个类里的`transitionsBuilder`方法。
+
+不过这个方法还是有很多写法的，通过写法的不同，产生的动画效果也有所不同。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#主入口方法)主入口方法
+
+先编写一个主入口方法，还是最简单的格式，只不过home属性，使用的`FirstPage`的组件是我们自定义的，需要我们再次编写。入口文件的代码如下：
 
