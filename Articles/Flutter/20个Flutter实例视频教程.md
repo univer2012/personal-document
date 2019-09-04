@@ -832,8 +832,106 @@ class SecondPage extends StatelessWidget {
 - curve: 设置动画的节奏，也就是常说的曲线，Flutter准备了很多节奏，通过改变动画取消可以做出很多不同的效果。
 - transitionDuration：设置动画持续的时间，建议再1和2之间。
 
+`pages.dart`文件修改如下：
+
+```dart
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar:  AppBar(
+        title: Text('FirstPage', style: TextStyle(fontSize: 36.0),),
+        elevation: 0.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          child: Icon(
+            Icons.navigate_next,
+            color: Colors.white,
+            size: 64.0,
+          ),
+          onPressed: (){
+            /*Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return SecondPage();
+                }
+              )
+            );*/
+            Navigator.of(context).push(CustomRoute(SecondPage()));
+          },
+        ),
+      ),
+
+    );
+  }
+}
+```
+
+
+
 写完代码，我们已经可以看到在切换路由时有了动画效果，下节课我们再写三个常用动画效果。
 
 ## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第06节-酷炫的路由动画-2)第06节: 酷炫的路由动画-2
 
 这节课我们接着上节课再作三个常用的动画效果，目的是让你更深刻的了解路由动画的使用方法。
+
+### 缩放路由动画
+
+```text
+return ScaleTransition(
+  scale:Tween(begin:0.0,end:1.0).animate(CurvedAnimation(
+    parent:animation1,
+    curve: Curves.fastOutSlowIn
+    )),
+    child:child
+);
+```
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#旋转-缩放路由动画)旋转+缩放路由动画
+
+旋转+缩放的思路是在一个路由动画里的child属性里再加入一个动画，让两个动画同时执行。来看详细代码：
+
+```text
+ return RotationTransition(
+  turns:Tween(begin:0.0,end:1.0)
+  .animate(CurvedAnimation(
+    parent: animation1,
+    curve: Curves.fastOutSlowIn
+  )),
+  child:ScaleTransition(
+    scale:Tween(begin: 0.0,end:1.0)
+    .animate(CurvedAnimation(
+        parent: animation1,
+        curve:Curves.fastOutSlowIn
+    )),
+    child: child,
+  )
+);
+```
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#左右滑动路由动画)左右滑动路由动画
+
+其实用的做多的还是左右滑动路由动画，其实实现起来也是非常简单，直接使用`SlideTransition`就可以了。
+
+```text
+// 幻灯片路由动画
+return SlideTransition(
+  position: Tween<Offset>(
+    begin: Offset(-1.0, 0.0),
+    end:Offset(0.0, 0.0)
+  )
+  .animate(CurvedAnimation(
+    parent: animation1,
+    curve: Curves.fastOutSlowIn
+  )),
+  child: child,
+);
+```
+
+总结:动画的使用会让我们的APP更加酷炫，也会让别人觉的你不是一个新手，再Flutter里使用动画是非常方便的，所以你可以把这些动画效果事先写好，在工作中直接使用。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第07节-毛玻璃效果制作)第07节: 毛玻璃效果制作
+
+Flutter的Fliter Widget 也是非常强大的，它可以制作出你想要的神奇滤镜效果。这节我们就以实战的方式，制作一个毛玻璃效果，通过实例来学习Fitler 的用法。（制作效果如下图）
