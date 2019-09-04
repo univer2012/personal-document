@@ -1,4 +1,4 @@
-name: layout_5
+name: t_03transitions_builder
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -70,6 +70,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-assets:
-  - images/blogtouxiang.jpg
