@@ -6,7 +6,7 @@ class CustomRoute extends PageRouteBuilder {
     transitionDuration: const Duration(seconds: 1),
     pageBuilder: (BuildContext context, Animation<double> animation1, Animation<double> animation2) {
       return widget;
-    }
+    },
     transitionsBuilder: (
       BuildContext context, 
       Animation<double> animation1, 
