@@ -666,3 +666,174 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
 
 先编写一个主入口方法，还是最简单的格式，只不过home属性，使用的`FirstPage`的组件是我们自定义的，需要我们再次编写。入口文件的代码如下：
 
+```dart
+import 'package:flutter/material.dart';
+import 'pages.dart';
+
+void main()=>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:'Flutter Demo',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home:FirstPage()
+    );
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#pages-dart页面的编写)pages.dart页面的编写
+
+主入口文件用`import`引入了`pages.dart`文件，这个文件就是生成了两个页面（Flutter里的页面也是Widget,这个你要跟网页区分开）。有了两个页面就可以实现路由跳转了。
+
+`pages.dart`文件的代码如下，这里我们先用普通路由代替，看一看效果。
+
+```dart
+import 'package:flutter/material.dart';
+
+
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar:AppBar(
+        title:Text('FirstPage',style: TextStyle(fontSize: 36.0)),
+        elevation: 0.0,
+      ),
+      body:Center(
+        child: MaterialButton(
+          child: Icon(
+            Icons.navigate_next,
+            color:Colors.white,
+            size:64.0,
+          ),
+          onPressed: (){
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder:(BuildContext context){
+                     return SecondPage();
+                  }));
+          },
+        ),
+      )
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.pinkAccent,
+      appBar: AppBar(
+        title: Text('SecondPage',style:TextStyle(fontSize:36.0),),
+        backgroundColor: Colors.pinkAccent,
+        leading:Container(),
+        elevation: 0.0,
+      ),
+      body:Center(
+        child: MaterialButton(
+          child: Icon(
+            Icons.navigate_before,
+            color:Colors.white,
+            size:64.0
+          ),
+          onPressed: ()=>Navigator.of(context).pop(),
+        ),
+      )
+    );
+  }
+}
+```
+
+上面代码中有一个新知识点，需要学习一下：
+
+1. **AppBar Widger的 elevation 属性：这个值是AppBar 滚动时的融合程度，一般有滚动时默认是4.0，现在我们设置成0.0，就是和也main完全融合了。**
+
+写完这个页面代码后，已经可以进行最基本的导航了，但是并没有什么酷炫的动画。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#自定义customroute-widget)自定义CustomRoute Widget
+
+新建一个`custome_router.dart`文件，这个就是要自定义的路由方法，自定义首先要继承于通用的路由的构造器类`PageRouterBuilder`。继承之后重写父类的`CustomRoute`构造方法。
+
+构造方法可以简单理解为：只要以调用这个类或者说是Widget，构造方法里的所有代码就执行了。
+
+`custome_router.dart`代码如下(详细解释视频中说):
+
+```dart
+import 'package:flutter/material.dart';
+import 'custome_router.dart';
+
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar:  AppBar(
+        title: Text('FirstPage', style: TextStyle(fontSize: 36.0),),
+        elevation: 0.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          child: Icon(
+            Icons.navigate_next,
+            color: Colors.white,
+            size: 64.0,
+          ),
+          onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return SecondPage();
+                }
+              )
+            );
+          },
+        ),
+      ),
+
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.pinkAccent,
+      appBar: AppBar(
+        title: Text('SecondPage',style: TextStyle(fontSize: 36.0),),
+        backgroundColor: Colors.pinkAccent,
+        leading: Container(),
+        elevation: 0.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          child: Icon(
+            Icons.navigate_before,
+            color: Colors.white,
+            size: 64.0,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+    );
+  }
+}
+```
+
+- FadeTransition:渐隐渐现过渡效果，主要设置opactiy（透明度）属性，值是0.0-1.0。
+- animate :动画的样式，一般使用动画曲线组件（CurvedAnimation）。
+- curve: 设置动画的节奏，也就是常说的曲线，Flutter准备了很多节奏，通过改变动画取消可以做出很多不同的效果。
+- transitionDuration：设置动画持续的时间，建议再1和2之间。
+
+写完代码，我们已经可以看到在切换路由时有了动画效果，下节课我们再写三个常用动画效果。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第06节-酷炫的路由动画-2)第06节: 酷炫的路由动画-2
+
+这节课我们接着上节课再作三个常用的动画效果，目的是让你更深刻的了解路由动画的使用方法。
