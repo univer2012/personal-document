@@ -935,3 +935,314 @@ return SlideTransition(
 ## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第07节-毛玻璃效果制作)第07节: 毛玻璃效果制作
 
 Flutter的Fliter Widget 也是非常强大的，它可以制作出你想要的神奇滤镜效果。这节我们就以实战的方式，制作一个毛玻璃效果，通过实例来学习Fitler 的用法。（制作效果如下图）
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_05.png)
+
+
+
+### main.dart文件编写
+
+这个和以前的写法都一样，所以就直接贴代码了。详细解释会在视频中解说，不过我相信不解释，小伙伴也一定可以看明白。
+
+```dart
+import 'package:flutter/material.dart';
+import 'frosted_glass_emo.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title:'Flutter Demo',
+      theme:ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home:Scaffold(
+        body:FrostedGlassDemo(),
+      )
+    );
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#backdropfilter-widget)BackdropFilter Widget
+
+`BackdropFilter`就是背景滤镜组件，使用它可以给父元素增加滤镜效果，它里边最重要的一个属性是`filter`。`filter`属性中要添加一个滤镜组件，实例中我们添加了图片滤镜组件，并给了模糊效果。
+
+> 图片地址：https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545738629147&di=22e12a65bbc6c4123ae5596e24dbc5d3&imgtype=0&src=http%3A%2F%2Fpic30.photophoto.cn%2F20140309%2F0034034413812339_b.jpg
+
+我们新建一个`frosted_glass_demo.dart`的文件，然后写入下面的代码，具体的解释已经写到了代码的注释中。
+
+```dart
+import 'package:flutter/material.dart';
+import 'dart:ui';   //引入ui库，因为ImageFilter Widget在这个里边。
+
+class FrostedGlassDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Stack(   //重叠的Stack Widget，实现重贴
+        children: <Widget>[
+          ConstrainedBox( //约束盒子组件，添加额外的限制条件到 child上。
+            constraints: const BoxConstraints.expand(), //限制条件，可扩展的。
+            child:Image.network('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545738629147&di=22e12a65bbc6c4123ae5596e24dbc5d3&imgtype=0&src=http%3A%2F%2Fpic30.photophoto.cn%2F20140309%2F0034034413812339_b.jpg')
+          ),
+          Center(
+            child: ClipRect(  //裁切长方形
+              child: BackdropFilter(   //背景滤镜器
+                filter: ImageFilter.blur(sigmaX: 5.0,sigmaY: 5.0), //图片模糊过滤，横向竖向都设置5.0
+                child: Opacity( //透明控件
+                  opacity: 0.5,
+                  child: Container(// 容器组件
+                    width: 500.0,
+                    height: 700.0,
+                    decoration: BoxDecoration(color:Colors.grey.shade200), //盒子装饰器，进行装饰，设置颜色为灰色
+                    child: Center(
+                      child: Text(
+                        'JSPang',
+                        style: Theme.of(context).textTheme.display3, //设置比较酷炫的字体
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      )
+    );
+  }
+}
+```
+
+这个代码嵌套很多，所以一定要注意你的代码层次，容易出错的地方就是嵌套错误。这个效果尽量少用，因为我测试了一下，它对系统的消耗还是比较大的。
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第08节-保持页面状态)第08节: 保持页面状态
+
+在工作中切换页面时，再切换回来，时要求页面状态不发生改变的。这能给APP浏览者最好的体验，机会所有的APP都有这个需求，属于一个大众需求。这节课我们就来看看这样的效果如何实现。
+
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/Flutter/FlutterDemo2_06.gif)
+
+
+
+### With 关键字的使用
+
+with是dart的关键字，意思是混入的意思，就是说可以将一个或者多个类的功能添加到自己的类无需继承这些类， 避免多重继承导致的问题。
+
+比如下面的代码：
+
+```text
+class _KeepAliveDemoState extends State<KeepAliveDemo> with SingleTickerProviderStateMixin {
+
+}
+```
+
+需要注意的是with后边是Mixin，而不是普通的Widget，这个初学者比较爱犯错误。需要强调一下。
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#tabbar-widget的使用)TabBar Widget的使用
+
+`TabBar`是切换组件，它需要设置两个属性。
+
+- controller: 控制器，后边跟的多是`TabController`组件。
+- tabs：具体切换项，是一个数组，里边放的也是Tab Widget。
+
+```dart
+bottom:TabBar(
+  controller: _controller,
+  tabs:[
+    Tab(icon:Icon(Icons.directions_car)),
+    Tab(icon:Icon(Icons.directions_transit)),
+    Tab(icon:Icon(Icons.directions_bike)),
+  ],
+)
+```
+
+### [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#基本页面布局)基本页面布局
+
+我们先把入口页面布局好，下节课我们再让他保持状态。学了上面两个知识，你其实可以做出来布局了。全部代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+
+void main()=>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme:ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home:KeepAliveDemo()
+    );
+  }
+} 
+
+class KeepAliveDemo extends StatefulWidget {
+  _KeepAliveDemoState createState() => _KeepAliveDemoState();
+}
+/*
+with是dart的关键字，意思是混入的意思，
+就是说可以将一个或者多个类的功能添加到自己的类无需继承这些类，
+避免多重继承导致的问题。
+SingleTickerProviderStateMixin 主要是我们初始化TabController时，
+需要用到vsync ，垂直属性，然后传递this
+*/
+class _KeepAliveDemoState extends State<KeepAliveDemo> with SingleTickerProviderStateMixin {
+  TabController _controller;
+
+  @override
+  void initState(){
+    super.initState();
+    _controller = TabController(length:3, vsync: this);
+  }
+
+  //重写被释放的方法，只释放TabController
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(
+        title:Text('Keep Alive Demo'),
+        bottom:TabBar(
+          controller: _controller,
+          tabs:[
+            Tab(icon:Icon(Icons.directions_car)),
+            Tab(icon:Icon(Icons.directions_transit)),
+            Tab(icon:Icon(Icons.directions_bike)),
+          ],
+        )
+      ),
+      body:TabBarView(
+        controller: _controller,
+        children: <Widget>[
+         Text('1111'),
+         Text('2222'),
+         Text('3333')
+        ],
+      )
+    );
+  }
+}
+```
+
+## [#](https://jspang.com/posts/2019/02/22/flutterdemo.html#第09节-保持页面状态-2)第09节: 保持页面状态-2
+
+上节课已经做出了TabBar的效果，这节课主要任务是保持状态。那为了能看出是保持状态的，我们作一个按钮，然后点一下加一。就跟Flutter为我们生成的例子一样。
+
+我这里就直接贴出代码了，知识点我已经在代码中写了注释，并且我会在视频中详细讲解。
+
+如果小伙伴们对代码有什么不了解的，可以私信，我来进行解答。
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyHomePage extends StatefulWidget {
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+//混入AutomaticKeepAliveClientMixin，这是保持状态的关键
+//然后重写wantKeppAlive 的值为true。
+class _MyHomePageState extends State<MyHomePage> with AutomaticKeepAliveClientMixin {
+  int _counter = 0;
+  //重写keepAlive 为ture ，就是可以有记忆功能了。
+  @override
+  bool get wantKeepAlive => true;
+  //声明一个内部方法，用来点击按钮后增加数量
+  void _incrementCounter(){
+    setState((){ _counter++;});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('点一下加1，点一下加1:'),
+            Text(
+              '$_counter',
+              style:Theme.of(context).textTheme.display1,
+            )
+          ],
+        ),
+      ),
+      //增加一个悬浮按钮，点击时触犯_incrementCounter方法
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+写完这个Widget，然后在入口文件中引入。
+
+```dart
+import 'keep_alive_demo.dart';
+```
+
+然后把Body区域改成我们刚写的MyHomePage Widget 就可以了，注意是改三个。
+
+修改之后的`KeepAliveDemo`代码为：
+
+```dart
+class KeepAliveDemo extends StatefulWidget {
+  @override
+  _KeepAliveDemoState createState() => _KeepAliveDemoState();
+}
+
+class _KeepAliveDemoState extends State<KeepAliveDemo> with SingleTickerProviderStateMixin {
+  TabController _controller;
+
+@override
+  void initState() {
+    super.initState();
+    _controller = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Keep Alive Demo'),
+        bottom: TabBar(
+          controller: _controller,
+          tabs: <Widget>[
+            Tab(icon: Icon(Icons.directions_car)),
+            Tab(icon: Icon(Icons.directions_transit)),
+            Tab(icon: Icon(Icons.directions_bike)),
+          ],
+        ),
+      ),
+      body: TabBarView(
+        controller: _controller,
+        children: <Widget>[
+          MyHomePage(),
+          MyHomePage(),
+          MyHomePage(),
+        ],
+      ),
+    );
+  }
+}
+```
+
