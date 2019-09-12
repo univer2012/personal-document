@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'expansion_tile.dart';
-import 'expansion_panel_list.dart';
-
+import 'custom_clipper.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +8,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData.dark(),
-      //home: ExpansionTileDemo(),
-      home: ExpansionPanelListDemo(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
     );
   }
 }
