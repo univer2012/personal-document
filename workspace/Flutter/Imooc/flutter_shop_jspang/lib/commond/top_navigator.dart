@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';//屏幕适配
 
-//导航组件
+//顶部导航组件
 class TopNavigator extends StatelessWidget {
   final List navigatorList;
 
@@ -31,6 +31,7 @@ class TopNavigator extends StatelessWidget {
       height: ScreenUtil().setWidth(320),
       padding: EdgeInsets.all(3.0),
       child: GridView.count(
+        physics: NeverScrollableScrollPhysics(),//禁止滑动
         crossAxisCount: 5, //每行有多少个
         padding: EdgeInsets.all(4.0),
         children: navigatorList.map((item){
