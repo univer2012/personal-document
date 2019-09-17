@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart'; //banner轮播
 import 'package:flutter_screenutil/flutter_screenutil.dart';//屏幕适配
+
 //首页轮播组件
 class SwiperDiy extends StatelessWidget {
   final List swiperDataList;
