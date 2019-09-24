@@ -177,7 +177,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
 先改动一下`child_ategory.dart`的Provide类，增加一个大类ID，然后在更改大类的时候改变ID。
 
-```text
+```diff
 import 'package:flutter/material.dart';
 import '../model/category.dart';
 
@@ -192,8 +192,11 @@ class ChildCategory with ChangeNotifier{
 
 
     //点击大类时更换
-    getChildCategory(List<BxMallSubDto> list,String id){
-      categoryId=id;
+-  getChildCategory(List<BxMallSubDto> list) {
+-
++  getChildCategory(List<BxMallSubDto> list, String id) {
++    categoryId = id;
+
       childIndex=0;
       BxMallSubDto all=  BxMallSubDto();
       all.mallSubId='00';
@@ -216,44 +219,90 @@ class ChildCategory with ChangeNotifier{
 
 增加了参数，以前的调用方法也就都不对了，所以需要修改一下。直接用搜索功能就可以找到`getChildCategory`方法，一共两处，直接修改就可以了
 
-```text
-Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
-Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto,list[0].mallCategoryId);
+```diff
+   Widget _leftInkWell(int index) {
+     bool isClick = false;
+     isClick = (index == listIndex)? true : false;
+     return InkWell(
+       onTap: (){
+         setState(() {
+           listIndex = index;
+         });
+         var childList = list[index].bxMallSubDto;
+         var categoryId = list[index].mallCategoryId;
+-        Provide.value<ChildCategory>(context).getChildCategory(childList);
++        Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+         _getGoodsList(categoryId: categoryId);
+       },
+//... ...
+
+
+   void _getCategory()async{
+     await request('getCategory').then((val){
+       var data = json.decode(val.toString());
+       CategoryModel category = CategoryModel.fromJson(data);
+       setState((){
+         list = category.data;
+       });
+-      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto);
++      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto, list[0].mallCategoryId);
+     });
+   }
+//...
 ```
 
 ### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#增加getgoodslist方法)增加getGoodsList方法
 
 拷贝`_getGoodsList`方法到子列表类里边，然后把传递参数换成子类的参数`categorySubId`.代码如下：
 
-```text
-   //得到商品列表数据
-   void _getGoodList(String categorySubId) {
-     
-    var data={
-      'categoryId':Provide.value<ChildCategory>(context).categoryId,
-      'categorySubId':categorySubId,
-      'page':1
-    };
-    
-    request('getMallGoods',formData:data ).then((val){
-        var  data = json.decode(val.toString());
-        CategoryGoodsListModel goodsList=  CategoryGoodsListModel.fromJson(data);
-        // Provide.value<CategoryGoodsList>(context).getGoodsList(goodsList.data);
-        Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
-       
-    });
-  }
+```diff
+ class _RightCategoryNavState extends State<RightCategoryNav> {
+ //... ...
++  void _getGoodsList(String categorySubId) async {
++    var data = {
++      'categoryId': Provide.value<ChildCategory>(context).categoryId,
++      'CategorySubId':categorySubId,
++      'page':1
++    };
++    await request('getMallGoods',formData: data).then((val){
++      var data = json.decode(val.toString());
++      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
++      Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++    });
++  }
+// ... ...
+}
+
 ```
 
 ### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#调用方法改版列表)调用方法改版列表
 
 当点击子类时，调用这个方法，并传入子类ID。
 
-```text
-onTap: (){
-    Provide.value<ChildCategory>(context).changeChildIndex(index);
-    _getGoodList(item.mallSubId);
-},
+```diff
+  Widget _rightInkWell(int index, BxMallSubDto item) {
+    
+    bool isClick = false;
+    isClick = (index == Provide.value<ChildCategory>(context).childIndex) ? true : false;
+
+    return InkWell(
+      onTap: (){ 
+        Provide.value<ChildCategory>(context).changeChildIndex(index);
++        _getGoodsList(item.mallSubId);
+      },
+      child: Container(
+        padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
+        child: Text(
+          item.mallSubName,
+          style: TextStyle(
+            fontSize: ScreenUtil().setSp(28), 
+            color: isClick ? Colors.pink : Colors.black12
+            ),
+        ),
+      ),
+    );
+  }
+
 ```
 
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第34节：列表页-小bug的修复)第34节：列表页_小Bug的修复

@@ -52,7 +52,7 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
         });
         var childList = list[index].bxMallSubDto;
         var categoryId = list[index].mallCategoryId;
-        Provide.value<ChildCategory>(context).getChildCategory(childList);
+        Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
         _getGoodsList(categoryId: categoryId);
       },
       child: Container(
@@ -102,7 +102,7 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
       setState((){
         list = category.data;
       });
-      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto);
+      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto, list[0].mallCategoryId);
     });
   }
   //放在category_page，作为内部方法
@@ -172,6 +172,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
     return InkWell(
       onTap: (){ 
         Provide.value<ChildCategory>(context).changeChildIndex(index);
+        _getGoodsList(item.mallSubId);
       },
       child: Container(
         padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
@@ -185,6 +186,20 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
       ),
     );
   }
+
+  void _getGoodsList(String categorySubId) async {
+    var data = {
+      'categoryId': Provide.value<ChildCategory>(context).categoryId,
+      'CategorySubId':categorySubId,
+      'page':1
+    };
+    await request('getMallGoods',formData: data).then((val){
+      var data = json.decode(val.toString());
+      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
+      Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
+    });
+  }
+
 }
 
 //商品列表，可以上拉加载
