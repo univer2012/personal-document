@@ -308,3 +308,142 @@ class ChildCategory with ChangeNotifier{
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第34节：列表页-小bug的修复)第34节：列表页_小Bug的修复
 
 在列表页还是有小Bug的，这节课我们就利用几分钟，进行修复一下.
+
+
+
+### 子类没有商品时报错
+
+有些小类别里是没有商品的，这时候就会报错。解决这个错误非常简单，只要进行判断就可以了。
+
+**1.判断状态管理时是否存在数据**
+
+首先你要在修改状态的时候，就进行一次判断，方式类型不对，导致整个app崩溃。也就是在点击小类的ontap方法后，当然这里调用了`_getGoodList()`方法。代码如下：
+
+```diff
+class _RightCategoryNavState extends State<RightCategoryNav> {  
+	///...
+  	//得到商品列表数据
+   void _getGoodList(String categorySubId) {
+     
+    var data={
+      'categoryId':Provide.value<ChildCategory>(context).categoryId,
+      'categorySubId':categorySubId,
+      'page':1
+    };
+    
+    request('getMallGoods',formData:data ).then((val){
+        var  data = json.decode(val.toString());
++        
+        CategoryGoodsListModel goodsList=  CategoryGoodsListModel.fromJson(data);        
+-      Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++      if (goodsList.data == null) {
++        Provide.value<CategoryGoodsListProvide>(context).getGoodsList([]);
++      } else {
++        Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++      }
++      
+    });
+  }
+  ///...
+}
+```
+
+**2.判断界面输出时是不是有数据**
+
+这个主要时给用户一个友好的界面提示，如果没有数据，要提示用户。修改的是商品列表类的`build`方法，代码如下：
+
+```diff
+class _CategoryGoodsListState extends State<CategoryGoodsList> {
+	   @override
+   Widget build(BuildContext context) {
+     return Provide<CategoryGoodsListProvide>(
+       builder: (context,child,data){
+-        return  Expanded(
+-            child: Container(
+-            width: ScreenUtil().setWidth(570),
+-            height: ScreenUtil().setHeight(1000),
+-            child: ListView.builder(
+-              itemCount: data.goodsList.length,
+-              itemBuilder: (context,index){
+-                return _listWidget(data.goodsList, index);
+-              },
++        if (data.goodsList.length > 0) {
++          return  Expanded(
++              child: Container(
++              width: ScreenUtil().setWidth(570),
++              height: ScreenUtil().setHeight(1000),
++              child: ListView.builder(
++                itemCount: data.goodsList.length,
++                itemBuilder: (context,index){
++                  return _listWidget(data.goodsList, index);
++                },
++              ),
+             ),
+-          ),
+-        );
++          );
++        } else {
++          return Text('暂时没有数据');
++        }
++        
+         
+         
+       },
+     );
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把子类id也provide化)把子类ID也Provide化
+
+现在的子类ID，我们还没有形成状态，用的是普通的setState，如果要做下拉刷新，那setState肯定是不行的，因为这样就进行跨类了，没办法传递过去。
+
+1.首先修改`provide/child_category.dart`类，增加一个状态变量`subId`,然后在两个方法里都进行修改,代码如下：
+
+```diff
+ import 'package:flutter/material.dart';
+ import '../model/category.dart';
+ 
+ //ChangeNotifier 的混入是不用管理听众
+ class ChildCategory with ChangeNotifier {
+   List<BxMallSubDto> childCategoryList = [];
+   int childIndex = 0; //子类高亮索引
+   String categoryId = '4'; //大类ID
++  String subId = ''; //小类ID
+ 
+   //点击大类时更换
+   getChildCategory(List<BxMallSubDto> list, String id) {
+     categoryId = id;
+     childIndex = 0;
++    subId = ''; //点击大类时，把子类ID清空
++
+     BxMallSubDto all = BxMallSubDto();
+     all.mallSubId = '00';
+     all.mallCategoryId = '00';
+     all.comments = 'null';
+     all.mallSubName = '全部';
+ 
+     childCategoryList = [all]; //把all加到开头
+     childCategoryList.addAll(list);
+ 
+     childCategoryList = list;
+     notifyListeners();
+   }
+ 
+   //改变子类索引
+-  changeChildIndex(index) {
++  changeChildIndex(int index,String id) {
++    //传递两个参数，使用新传递的参数给状态赋值
+     childIndex = index;
++    subId = id;
+     notifyListeners();
+   }
+ }
+
+```
+
+这就为以后我们作上拉加载效果打下了基础。这节学完，你应该对Proive的有了深刻的理解，并且达到工作水平。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第35节-列表页-上拉加载功能的制作)第35节:列表页_上拉加载功能的制作
+
+这节主要制作一下列表页的上拉加载更多功能，因为在首页的视频中，已经讲解了上拉加载更多的效果，所以我们不会再着重讲解语法，而重点会放在上拉加载和Provide结合的方法。小伙伴们学习的侧重点也应该是状态管理的应用。
