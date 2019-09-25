@@ -7,6 +7,7 @@ import '../model/category.dart';
 import '../model/categoryGoodsList.dart';
 import '../provide/child_category.dart';
 import '../provide/category_goods_list.dart';
+import 'package:flutter_easyrefresh/easy_refresh.dart';
 
 
 class CategoryPage extends StatelessWidget {
@@ -228,17 +229,35 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
   Widget build(BuildContext context) {
     return Provide<CategoryGoodsListProvide>(
       builder: (context,child,data){
+
+
         if (data.goodsList.length > 0) {
           return  Expanded(
               child: Container(
               width: ScreenUtil().setWidth(570),
-              height: ScreenUtil().setHeight(1000),
-              child: ListView.builder(
-                itemCount: data.goodsList.length,
-                itemBuilder: (context,index){
-                  return _listWidget(data.goodsList, index);
+              child: EasyRefresh(
+                footer: ClassicalFooter(
+                  key: _footerKey,
+                  bgColor: Colors.white,
+                  textColor: Colors.pink,
+                  infoColor: Colors.pink,
+                  noMoreText: Provide.value<ChildCategory>(context).noMoreText,
+                  infoText: '加载中',
+                  loadReadyText: '上拉加载',
+                ),
+                child: ListView.builder(
+                  itemCount: data.goodsList.length,
+                  itemBuilder: (context,index){
+                    return _listWidget(data.goodsList, index);
+                  },
+                ),
+
+                onLoad: ()async{
+                  print('没有更多了.....');
                 },
               ),
+              
+               
             ),
           );
         } else {
@@ -248,6 +267,26 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
       },
     );
     
+  }
+
+  //上拉加载更多的方法
+  void _getMoreList() {
+    Provide.value<ChildCategory>(context).addPage();
+    var data = {
+      'categoryId': Provide.value<ChildCategory>(context).categoryId,
+      'categorySubId': Provide.value<ChildCategory>(context).subId,
+      'page':Provide.value<ChildCategory>(context).page,
+    };
+
+    request('getMallGoods',formData: data).then((val){
+      var data = json.decode(val.toString());
+
+      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
+
+      if (goodsList.data == null) {
+        Provide.value<ChildCategory>(context).changeNoMore('没有更多了');
+      } else {}
+    });
   }
 
   
