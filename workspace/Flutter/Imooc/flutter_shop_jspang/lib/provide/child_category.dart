@@ -48,7 +48,8 @@ class ChildCategory with ChangeNotifier {
 
   //增加Page的 方法
   addPage(){
-    page ++;
+    page++;
+    //print('page=${page}');
   }
 
   changeNoMore(String text) {

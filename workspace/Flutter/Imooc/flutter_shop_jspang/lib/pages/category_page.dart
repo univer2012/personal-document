@@ -217,8 +217,10 @@ class CategoryGoodsList extends StatefulWidget {
 }
 
 class _CategoryGoodsListState extends State<CategoryGoodsList> {
-
   // List list = [];
+  GlobalKey<RefreshIndicatorState> _footerkey = new GlobalKey<RefreshIndicatorState>();
+
+  var scrollController = new ScrollController();
 
   @override
   void initState() {
@@ -230,6 +232,14 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
     return Provide<CategoryGoodsListProvide>(
       builder: (context,child,data){
 
+        try {
+          if (Provide.value<ChildCategory>(context).page == 1) {
+            //列表位置，放到最上边
+            scrollController.jumpTo(0.0);
+          }
+        } catch (e) {
+          print('进入页面第一次初始化：${e}');
+        }
 
         if (data.goodsList.length > 0) {
           return  Expanded(
@@ -237,7 +247,7 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
               width: ScreenUtil().setWidth(570),
               child: EasyRefresh(
                 footer: ClassicalFooter(
-                  key: _footerKey,
+                  key: _footerkey,
                   bgColor: Colors.white,
                   textColor: Colors.pink,
                   infoColor: Colors.pink,
@@ -246,6 +256,7 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
                   loadReadyText: '上拉加载',
                 ),
                 child: ListView.builder(
+                  controller: scrollController,
                   itemCount: data.goodsList.length,
                   itemBuilder: (context,index){
                     return _listWidget(data.goodsList, index);
@@ -254,6 +265,7 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
                 onLoad: ()async{
                   print('没有更多了.....');
+                  _getMoreList();
                 },
               ),
               
@@ -272,10 +284,12 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
   //上拉加载更多的方法
   void _getMoreList() {
     Provide.value<ChildCategory>(context).addPage();
+    var page =  Provide.value<ChildCategory>(context).page;
+    print('page=${page}');
     var data = {
       'categoryId': Provide.value<ChildCategory>(context).categoryId,
       'categorySubId': Provide.value<ChildCategory>(context).subId,
-      'page':Provide.value<ChildCategory>(context).page,
+      'page': page,
     };
 
     request('getMallGoods',formData: data).then((val){
@@ -285,7 +299,9 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
       if (goodsList.data == null) {
         Provide.value<ChildCategory>(context).changeNoMore('没有更多了');
-      } else {}
+      } else {
+        Provide.value<CategoryGoodsListProvide>(context).getMoreList(goodsList.data);
+      }
     });
   }
 
