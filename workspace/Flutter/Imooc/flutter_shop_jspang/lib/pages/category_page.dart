@@ -40,7 +40,32 @@ class LeftCategoryNav extends StatefulWidget {
 class _LeftCategoryNavState extends State<LeftCategoryNav> {
   List list = [];
 
-  var listIndex = 0;
+  var listIndex = 0; //索引
+
+  @override
+  void initState() {
+    _getCategory();
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       child: Container(
+         width: ScreenUtil().setWidth(180),
+         decoration: BoxDecoration(
+           border: Border(
+             right: BorderSide(width: 1, color: Colors.black12)
+           ),
+         ),
+         child: ListView.builder(
+           itemCount: list.length,
+           itemBuilder: (context, index){
+             return _leftInkWell(index);
+           },
+         ),
+       ),
+    );
+  }
 
   Widget _leftInkWell(int index) {
     bool isClick = false;
@@ -69,32 +94,9 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
     );
   }
 
-  @override
-  void initState() {
-    _getCategory();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-       child: Container(
-         width: ScreenUtil().setWidth(180),
-         decoration: BoxDecoration(
-           border: Border(
-             right: BorderSide(width: 1, color: Colors.black12)
-           ),
-         ),
-         child: ListView.builder(
-           itemCount: list.length,
-           itemBuilder: (context, index){
-             return _leftInkWell(index);
-           },
-         ),
-       ),
-    );
-  }
-
+  
+  ///TODO: 网络请求
+  //TODO: 得到后台大类数据
   void _getCategory()async{
     await request('getCategory').then((val){
       var data = json.decode(val.toString());
@@ -103,6 +105,10 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
         list = category.data;
       });
       Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto);
+
+      // print(list[0].bxMallSubDto);
+
+      // list[0].bxMallSubDto.forEach((item) => print(item.mallSubName));
     });
   }
   //放在category_page，作为内部方法
@@ -124,7 +130,6 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
 
 
 ///右侧小类类别
-
 class RightCategoryNav extends StatefulWidget {
 
   _RightCategoryNavState createState() => _RightCategoryNavState();
@@ -135,32 +140,32 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
   Widget build(BuildContext context) {
 
     //List list = ['名酒','宝丰', '北京二锅头', '舍得','五粮液','茅台','散白'];
-    return Provide<ChildCategory>(
-      builder: (context,child, childCategory){
-        return Container(
-          child: Container(
-            height: ScreenUtil().setHeight(80),
-            width: ScreenUtil().setWidth(570),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border(
-                bottom: BorderSide(width: 1, color: Colors.black12)
-              )
+    return Container(
+      child: Provide<ChildCategory>(
+        builder: (context,child, childCategory){
+          return Container(
+            child: Container(
+              height: ScreenUtil().setHeight(80),
+              width: ScreenUtil().setWidth(570),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border(
+                  bottom: BorderSide(width: 1, color: Colors.black12)
+                )
+              ),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: childCategory.childCategoryList.length,
+                itemBuilder: (context,index) {
+                  return _rightInkWell(childCategory.childCategoryList[index]);
+                },
+              ),
             ),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: childCategory.childCategoryList.length,
-              itemBuilder: (context,index) {
-                return _rightInkWell(childCategory.childCategoryList[index]);
-              },
-            ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
-    
-    
-    
+ 
   }
 
 
@@ -182,34 +187,28 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
 //商品列表，可以上拉加载
 class CategoryGoodsList extends StatefulWidget {
-  CategoryGoodsList({Key key}) : super(key: key);
 
   _CategoryGoodsListState createState() => _CategoryGoodsListState();
 }
 
 class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
-  // List list = [];
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Provide<CategoryGoodsListProvide>(
       builder: (context,child,data){
-        return Container(
-          width: ScreenUtil().setWidth(570),
-          height: ScreenUtil().setHeight(1000),
-          child: ListView.builder(
-            itemCount: data.goodsList.length,
-            itemBuilder: (context,index){
-              return _listWidget(data.goodsList, index);
-            },
+        return Expanded(
+            child: Container(
+            width: ScreenUtil().setWidth(570),
+            child: ListView.builder(
+              itemCount: data.goodsList.length,
+              itemBuilder: (context,index){
+                return _listWidget(data.goodsList, index);
+              },
+            ),
           ),
         );
+ 
       },
     );
     
