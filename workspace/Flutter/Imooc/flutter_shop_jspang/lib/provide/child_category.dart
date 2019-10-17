@@ -32,7 +32,7 @@ class ChildCategory with ChangeNotifier {
     childCategoryList.addAll(list);
     print('childCategoryList_length:${childCategoryList.length}');
 
-    childCategoryList = list;
+    // childCategoryList = list;
     notifyListeners();
   }
 
