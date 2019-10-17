@@ -27,8 +27,10 @@ class ChildCategory with ChangeNotifier {
     all.comments = 'null';
     all.mallSubName = '全部';
 
+    print('list_length:${list.length}');
     childCategoryList = [all]; //把all加到开头
     childCategoryList.addAll(list);
+    print('childCategoryList_length:${childCategoryList.length}');
 
     childCategoryList = list;
     notifyListeners();
