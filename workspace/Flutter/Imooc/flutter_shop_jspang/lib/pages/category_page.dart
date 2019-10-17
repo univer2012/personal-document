@@ -235,7 +235,7 @@ class CategoryGoodsList extends StatefulWidget {
 
 class _CategoryGoodsListState extends State<CategoryGoodsList> {
   // List list = [];
-  GlobalKey<RefreshIndicatorState> _footerkey = new GlobalKey<RefreshIndicatorState>();
+  GlobalKey<RefreshFooterState> _footerkey = new GlobalKey<RefreshFooterState>();
 
   var scrollController = new ScrollController();
 
@@ -263,14 +263,15 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
               child: Container(
               width: ScreenUtil().setWidth(570),
               child: EasyRefresh(
-                footer: ClassicalFooter(
+                refreshFooter: ClassicsFooter(
                   key: _footerkey,
                   bgColor: Colors.white,
                   textColor: Colors.pink,
-                  infoColor: Colors.pink,
+                  moreInfoColor: Colors.pink,
                   noMoreText: Provide.value<ChildCategory>(context).noMoreText,
-                  infoText: '加载中',
-                  loadReadyText: '上拉加载',
+                  moreInfo: '加载中',
+                  loadingText: '上拉加载',
+                  // loadReadyText: '上拉加载',
                 ),
                 child: ListView.builder(
                   controller: scrollController,
@@ -280,7 +281,7 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
                   },
                 ),
                 
-                onLoad: ()async{
+                loadMore: ()async{
                   /// 上拉加载的响应
                   print('上拉加载更多.....');
                   _getMoreList();
@@ -315,7 +316,12 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
       var data = json.decode(val.toString());
 
       CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
-
+      
+      ///测试代码
+      if (Provide.value<CategoryGoodsListProvide>(context).goodsList.length > 0) {
+        goodsList.data = null;
+      }
+      //
       if (goodsList.data == null) {
         Fluttertoast.showToast(
           msg: "已经到底了",

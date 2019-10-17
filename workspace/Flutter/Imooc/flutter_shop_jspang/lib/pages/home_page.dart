@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin {
   int page = 1;
   List<Map> hotGoodsList = [];
-  GlobalKey _footKey = new GlobalKey<RefreshIndicatorState>();
+  GlobalKey<RefreshFooterState> _footKey = new GlobalKey<RefreshFooterState>();
   String homePageContent = '正在获取数据';
 
   @override
@@ -70,14 +70,14 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
               //   infoText: '加载中',
               //   loadReadyText: '上拉加载...'
               // ),
-              footer: ClassicalFooter(
+              refreshFooter: ClassicsFooter(
                 key: _footKey,
                 bgColor: Colors.white,
                 textColor: Colors.pink,
-                infoColor: Colors.pink,
-                showInfo: true,
+                moreInfoColor: Colors.pink,
+                showMore: true,
                 noMoreText: '',
-                infoText: '加载中',
+                moreInfo: '加载中',
                 loadReadyText: '上拉加载...'
               ),
               child: ListView(
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
                   _hotGoods(),
                 ],
               ),
-              onLoad:()async{
+              loadMore:()async{
                 print('开始加载更多');
                 var formPage = {'page': page};
                 await request('homePageBelowConten', formData:formPage).then((val){

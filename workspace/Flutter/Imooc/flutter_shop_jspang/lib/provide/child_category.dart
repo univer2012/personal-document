@@ -22,7 +22,7 @@ class ChildCategory with ChangeNotifier {
     //-------------关键代码end
 
     BxMallSubDto all = BxMallSubDto();
-    all.mallSubId = '00';
+    all.mallSubId = '';//不设置子类
     all.mallCategoryId = '00';
     all.comments = 'null';
     all.mallSubName = '全部';
