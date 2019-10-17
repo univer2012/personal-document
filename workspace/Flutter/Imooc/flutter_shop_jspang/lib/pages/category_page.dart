@@ -41,7 +41,34 @@ class LeftCategoryNav extends StatefulWidget {
 class _LeftCategoryNavState extends State<LeftCategoryNav> {
   List list = [];
 
-  var listIndex = 0;
+  var listIndex = 0; //索引
+
+  @override
+  void initState() {
+    ///左边大类初始化的请求
+    _getCategory();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       child: Container(
+         width: ScreenUtil().setWidth(180),
+         decoration: BoxDecoration(
+           border: Border(
+             right: BorderSide(width: 1, color: Colors.black12)
+           ),
+         ),
+         child: ListView.builder(
+           itemCount: list.length,
+           itemBuilder: (context, index){
+             return _leftInkWell(index);
+           },
+         ),
+       ),
+    );
+  }
 
   Widget _leftInkWell(int index) {
     bool isClick = false;
@@ -74,32 +101,7 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
     );
   }
 
-  @override
-  void initState() {
-    ///左边大类初始化的请求
-    _getCategory();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-       child: Container(
-         width: ScreenUtil().setWidth(180),
-         decoration: BoxDecoration(
-           border: Border(
-             right: BorderSide(width: 1, color: Colors.black12)
-           ),
-         ),
-         child: ListView.builder(
-           itemCount: list.length,
-           itemBuilder: (context, index){
-             return _leftInkWell(index);
-           },
-         ),
-       ),
-    );
-  }
+  
 
   ///左边大类初始化的请求
   void _getCategory()async{
@@ -139,7 +141,6 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
 
 
 ///右侧小类类别
-
 class RightCategoryNav extends StatefulWidget {
 
   _RightCategoryNavState createState() => _RightCategoryNavState();
@@ -170,7 +171,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
                 return _rightInkWell(index, childCategory.childCategoryList[index]);
               },
             ),
-          ),
+          )
         );
       },
     );
@@ -229,7 +230,6 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 /// 商品列表，可以上拉加载
 class CategoryGoodsList extends StatefulWidget {
   CategoryGoodsList({Key key}) : super(key: key);
-
   _CategoryGoodsListState createState() => _CategoryGoodsListState();
 }
 
