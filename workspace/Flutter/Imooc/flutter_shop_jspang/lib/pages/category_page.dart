@@ -48,13 +48,17 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
     isClick = (index == listIndex)? true : false;
     return InkWell(
       onTap: (){
+        ///点击左边大类的响应
+        ///
         setState(() {
           listIndex = index;
         });
         var childList = list[index].bxMallSubDto;
         var categoryId = list[index].mallCategoryId;
         Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+        ///点击左边大类的请求
         _getGoodsList(categoryId: categoryId);
+        print("点击左边大类的响应");
       },
       child: Container(
         height: ScreenUtil().setHeight(100),
@@ -72,6 +76,7 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
 
   @override
   void initState() {
+    ///左边大类初始化的请求
     _getCategory();
     super.initState();
   }
@@ -96,6 +101,7 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
     );
   }
 
+  ///左边大类初始化的请求
   void _getCategory()async{
     await request('getCategory').then((val){
       var data = json.decode(val.toString());
@@ -103,11 +109,19 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
       setState((){
         list = category.data;
       });
-      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto, list[0].mallCategoryId);
+
+      ///选中第1个再请求
+      var first =  list[0];
+      var childList = first.bxMallSubDto;
+      var categoryId = first.mallCategoryId;
+      Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+      ///点击左边大类的请求
+      _getGoodsList(categoryId: categoryId);
     });
   }
   //放在category_page，作为内部方法
   ///得到商品列表数据
+  ///点击左边大类的请求
   void _getGoodsList({String categoryId}) async {
     var data = {
       'categoryId': categoryId == null ? '4' : categoryId,
@@ -152,8 +166,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
               scrollDirection: Axis.horizontal,
               itemCount: childCategory.childCategoryList.length,
               itemBuilder: (context,index) {
-                print('ChildCategory:${childCategory.childCategoryList.length}');
-
+                print("右边小类的数量=${childCategory.childCategoryList.length}");
                 return _rightInkWell(index, childCategory.childCategoryList[index]);
               },
             ),
@@ -161,9 +174,6 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
         );
       },
     );
-    
-    
-    
   }
 
 
@@ -174,7 +184,11 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
     return InkWell(
       onTap: (){ 
+        ///  右边小类类别的点击响应
+        /// 
+        print("右边小类类别的点击响应");
         Provide.value<ChildCategory>(context).changeChildIndex(index, item.mallSubId);
+        ///点击右边子类的请求
         _getGoodsList(item.mallSubId);
       },
       child: Container(
@@ -190,6 +204,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
     );
   }
 
+  ///点击右边子类的请求
   void _getGoodsList(String categorySubId) async {
     var data = {
       'categoryId': Provide.value<ChildCategory>(context).categoryId,
@@ -211,7 +226,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
 }
 
-//商品列表，可以上拉加载
+/// 商品列表，可以上拉加载
 class CategoryGoodsList extends StatefulWidget {
   CategoryGoodsList({Key key}) : super(key: key);
 
@@ -264,9 +279,10 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
                     return _listWidget(data.goodsList, index);
                   },
                 ),
-
+                
                 onLoad: ()async{
-                  print('没有更多了.....');
+                  /// 上拉加载的响应
+                  print('上拉加载更多.....');
                   _getMoreList();
                 },
               ),
@@ -285,9 +301,10 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
   //上拉加载更多的方法
   void _getMoreList() {
-    Provide.value<ChildCategory>(context).addPage();
-    var page =  Provide.value<ChildCategory>(context).page;
-    print('page=${page}');
+    Provide.value<ChildCategory>(context).addPage(); //增加Page的 方法
+    
+    var page =  Provide.value<ChildCategory>(context).page;  
+    print('page=${page}'); //打印page
     var data = {
       'categoryId': Provide.value<ChildCategory>(context).categoryId,
       'categorySubId': Provide.value<ChildCategory>(context).subId,
