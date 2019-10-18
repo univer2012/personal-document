@@ -8,7 +8,7 @@ import '../model/categoryGoodsList.dart';
 import '../provide/child_category.dart';
 import '../provide/category_goods_list.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
 
 class CategoryPage extends StatelessWidget {
   @override
@@ -45,9 +45,11 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
 
   @override
   void initState() {
+    ///左边大类初始化的请求
     _getCategory();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,13 +75,17 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
     isClick = (index == listIndex)? true : false;
     return InkWell(
       onTap: (){
+        ///点击左边大类的响应
+        ///
         setState(() {
           listIndex = index;
         });
         var childList = list[index].bxMallSubDto;
         var categoryId = list[index].mallCategoryId;
         Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+        ///点击左边大类的请求
         _getGoodsList(categoryId: categoryId);
+        print("点击左边大类的响应");
       },
       child: Container(
         height: ScreenUtil().setHeight(100),
@@ -96,8 +102,8 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
   }
 
   
-  ///TODO: 网络请求
-  //TODO: 得到后台大类数据
+
+  ///左边大类初始化的请求
   void _getCategory()async{
     await request('getCategory').then((val){
       var data = json.decode(val.toString());
@@ -105,11 +111,19 @@ class _LeftCategoryNavState extends State<LeftCategoryNav> {
       setState((){
         list = category.data;
       });
-      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto, list[0].mallCategoryId);
+
+      ///选中第1个再请求
+      var first =  list[0];
+      var childList = first.bxMallSubDto;
+      var categoryId = first.mallCategoryId;
+      Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+      ///点击左边大类的请求
+      _getGoodsList(categoryId: categoryId);
     });
   }
   //放在category_page，作为内部方法
   ///得到商品列表数据
+  ///点击左边大类的请求
   void _getGoodsList({String categoryId}) async {
     var data = {
       'categoryId': categoryId == null ? '4' : categoryId,
@@ -153,14 +167,14 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
               scrollDirection: Axis.horizontal,
               itemCount: childCategory.childCategoryList.length,
               itemBuilder: (context,index) {
-                return _rightInkWell(index,childCategory.childCategoryList[index]);
+                print("右边小类的数量=${childCategory.childCategoryList.length}");
+                return _rightInkWell(index, childCategory.childCategoryList[index]);
               },
             ),
           )
         );
       },
     );
- 
   }
 
 
@@ -171,7 +185,11 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
     return InkWell(
       onTap: (){ 
+        ///  右边小类类别的点击响应
+        /// 
+        print("右边小类类别的点击响应");
         Provide.value<ChildCategory>(context).changeChildIndex(index, item.mallSubId);
+        ///点击右边子类的请求
         _getGoodsList(item.mallSubId);
       },
       child: Container(
@@ -187,6 +205,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
     );
   }
 
+  ///点击右边子类的请求
   void _getGoodsList(String categorySubId) async {
     var data = {
       'categoryId': Provide.value<ChildCategory>(context).categoryId,
@@ -208,15 +227,15 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
 }
 
-//商品列表，可以上拉加载
+/// 商品列表，可以上拉加载
 class CategoryGoodsList extends StatefulWidget {
-
+  CategoryGoodsList({Key key}) : super(key: key);
   _CategoryGoodsListState createState() => _CategoryGoodsListState();
 }
 
 class _CategoryGoodsListState extends State<CategoryGoodsList> {
   // List list = [];
-  GlobalKey<RefreshIndicatorState> _footerkey = new GlobalKey<RefreshIndicatorState>();
+  GlobalKey<RefreshFooterState> _footerkey = new GlobalKey<RefreshFooterState>();
 
   var scrollController = new ScrollController();
 
@@ -244,14 +263,15 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
               child: Container(
               width: ScreenUtil().setWidth(570),
               child: EasyRefresh(
-                footer: ClassicalFooter(
+                refreshFooter: ClassicsFooter(
                   key: _footerkey,
                   bgColor: Colors.white,
                   textColor: Colors.pink,
-                  infoColor: Colors.pink,
+                  moreInfoColor: Colors.pink,
                   noMoreText: Provide.value<ChildCategory>(context).noMoreText,
-                  infoText: '加载中',
-                  loadReadyText: '上拉加载',
+                  moreInfo: '加载中',
+                  loadingText: '上拉加载',
+                  // loadReadyText: '上拉加载',
                 ),
                 child: ListView.builder(
                   controller: scrollController,
@@ -260,9 +280,10 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
                     return _listWidget(data.goodsList, index);
                   },
                 ),
-
-                onLoad: ()async{
-                  print('没有更多了.....');
+                
+                loadMore: ()async{
+                  /// 上拉加载的响应
+                  print('上拉加载更多.....');
                   _getMoreList();
                 },
               ),
@@ -281,9 +302,10 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
 
   //上拉加载更多的方法
   void _getMoreList() {
-    Provide.value<ChildCategory>(context).addPage();
-    var page =  Provide.value<ChildCategory>(context).page;
-    print('page=${page}');
+    Provide.value<ChildCategory>(context).addPage(); //增加Page的 方法
+    
+    var page =  Provide.value<ChildCategory>(context).page;  
+    print('page=${page}'); //打印page
     var data = {
       'categoryId': Provide.value<ChildCategory>(context).categoryId,
       'categorySubId': Provide.value<ChildCategory>(context).subId,
@@ -294,8 +316,21 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
       var data = json.decode(val.toString());
 
       CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
-
+      
+      ///测试代码
+      if (Provide.value<CategoryGoodsListProvide>(context).goodsList.length > 0) {
+        goodsList.data = null;
+      }
+      //
       if (goodsList.data == null) {
+        Fluttertoast.showToast(
+          msg: "已经到底了",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.pink,
+          textColor: Colors.white,
+          fontSize: 16.0
+        );
         Provide.value<ChildCategory>(context).changeNoMore('没有更多了');
       } else {
         Provide.value<CategoryGoodsListProvide>(context).getMoreList(goodsList.data);

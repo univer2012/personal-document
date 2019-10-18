@@ -5,15 +5,17 @@ import '../model/categoryGoodsList.dart';
 class CategoryGoodsListProvide with ChangeNotifier {
   List<CategoryListData> goodsList = [];
 
-  //点击大类时更换商品列表
+  //点击左边大类时更换商品列表
   getGoodsList(List<CategoryListData> list) {
+    print("before_goodsList_length=${goodsList.length}");
     goodsList = list;
+    print("after_goodsList_length=${goodsList.length}");
     notifyListeners();
   }
 
   getMoreList(List<CategoryListData> list) {
     goodsList.addAll(list);
-    print('goodsList.length = ${goodsList.length}');
+    print('goodsList_length = ${goodsList.length}');
     notifyListeners();
   }
 

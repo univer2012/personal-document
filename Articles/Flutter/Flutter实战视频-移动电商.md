@@ -3541,3 +3541,992 @@ class ChildCategory with ChangeNotifier {
 }
 ```
 
+然后就可以修改UI部分了，UI部分主要是增加索引参数，然后进行判断。
+
+1. 先把`_rghtInkWell`方法增加一个接收参数`int index`.这就是修改变量的索引值。
+
+```text
+Widget _rightInkWell(int index,BxMallSubDto item)
+```
+
+1. 定义是否高亮变量，再根据状态进行赋值
+
+```text
+   bool isCheck = false;
+   isCheck =(index==Provide.value<ChildCategory>(context).childIndex)?true:false;
+```
+
+3.点击时修改状态
+
+```text
+onTap: (){
+    Provide.value<ChildCategory>(context).changeChildIndex(index);
+},
+```
+
+4.用`isCheck`判断是否高亮
+
+```text
+color:isCheck?Colors.pink:Colors.black ),
+```
+
+到这里，我们的子类高亮就制作完成了，并且当更换大类时，子类自动更改为第一个高亮。
+
+修改的全部代码如下：
+
+```diff
+class _RightCategoryNavState extends State<RightCategoryNav> {
+  @override
+  Widget build(BuildContext context) {
+
+    //List list = ['名酒','宝丰', '北京二锅头', '舍得','五粮液','茅台','散白'];
+    return Provide<ChildCategory>(
+      builder: (context,child, childCategory){
+        return Container(
+          child: Container(
+            height: ScreenUtil().setHeight(80),
+            width: ScreenUtil().setWidth(570),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(
+                bottom: BorderSide(width: 1, color: Colors.black12)
+              )
+            ),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: childCategory.childCategoryList.length,
+              itemBuilder: (context,index) {
+-                return _rightInkWell(childCategory.childCategoryList[index]);
++                return _rightInkWell(index,childCategory.childCategoryList[index]);
+               },
+
+            ),
+          ),
+        );
+      },
+    );
+    
+    
+    
+  }
+
+ 
+-  Widget _rightInkWell(BxMallSubDto item) {
++  Widget _rightInkWell(int index, BxMallSubDto item) {
+     
++    bool isClick = false;
++    isClick = (index == Provide.value<ChildCategory>(context).childIndex) ? true : false;
+ 
+     return InkWell(
+-      onTap: (){ },
++      onTap: (){ 
++        Provide.value<ChildCategory>(context).changeChildIndex(index);
++      },
+       child: Container(
+         padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
+         child: Text(
+           item.mallSubName,
+-          style: TextStyle(fontSize: ScreenUtil().setSp(28)),
++          style: TextStyle(
++            fontSize: ScreenUtil().setSp(28), 
++            color: isClick ? Colors.pink : Colors.black12
++            ),
+         ),
+       ),
+     );
+	}
+	//... ...
+}
+```
+
+
+
+到这里，我们的子类高亮就制作完成了，并且当更换大类时，子类自动更改为第一个高亮。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第33节-列表页-子类和商品列表切换)第33节:列表页_子类和商品列表切换
+
+其实点击大类切换商品列表效果如果你会了，那点击小类切换商品列表效果几乎是一样。只有很小的改动。
+
+### 修改Provide类
+
+先改动一下`child_ategory.dart`的Provide类，增加一个大类ID，然后在更改大类的时候改变ID。
+
+```diff
+import 'package:flutter/material.dart';
+import '../model/category.dart';
+
+
+//ChangeNotifier的混入是不用管理听众
+class ChildCategory with ChangeNotifier{
+
+    List<BxMallSubDto> childCategoryList = [];
+    int childIndex = 0;
+    String categoryId = '4';
+  
+
+
+    //点击大类时更换
+-  getChildCategory(List<BxMallSubDto> list) {
+-
++  getChildCategory(List<BxMallSubDto> list, String id) {
++    categoryId = id;
+
+      childIndex=0;
+      BxMallSubDto all=  BxMallSubDto();
+      all.mallSubId='00';
+      all.mallCategoryId='00';
+      all.mallSubName = '全部';
+      all.comments = 'null';
+      childCategoryList=[all];
+      childCategoryList.addAll(list);   
+      notifyListeners();
+    }
+    //改变子类索引
+    changeChildIndex(index){
+       childIndex=index;
+       notifyListeners();
+    }
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改调用getchildcategory放)修改调用getChildCategory放
+
+增加了参数，以前的调用方法也就都不对了，所以需要修改一下。直接用搜索功能就可以找到`getChildCategory`方法，一共两处，直接修改就可以了
+
+```diff
+   Widget _leftInkWell(int index) {
+     bool isClick = false;
+     isClick = (index == listIndex)? true : false;
+     return InkWell(
+       onTap: (){
+         setState(() {
+           listIndex = index;
+         });
+         var childList = list[index].bxMallSubDto;
+         var categoryId = list[index].mallCategoryId;
+-        Provide.value<ChildCategory>(context).getChildCategory(childList);
++        Provide.value<ChildCategory>(context).getChildCategory(childList,categoryId);
+         _getGoodsList(categoryId: categoryId);
+       },
+//... ...
+
+
+   void _getCategory()async{
+     await request('getCategory').then((val){
+       var data = json.decode(val.toString());
+       CategoryModel category = CategoryModel.fromJson(data);
+       setState((){
+         list = category.data;
+       });
+-      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto);
++      Provide.value<ChildCategory>(context).getChildCategory(list[0].bxMallSubDto, list[0].mallCategoryId);
+     });
+   }
+//...
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#增加getgoodslist方法)增加getGoodsList方法
+
+拷贝`_getGoodsList`方法到子列表类里边，然后把传递参数换成子类的参数`categorySubId`.代码如下：
+
+```diff
+ class _RightCategoryNavState extends State<RightCategoryNav> {
+ //... ...
++  void _getGoodsList(String categorySubId) async {
++    var data = {
++      'categoryId': Provide.value<ChildCategory>(context).categoryId,
++      'CategorySubId':categorySubId,
++      'page':1
++    };
++    await request('getMallGoods',formData: data).then((val){
++      var data = json.decode(val.toString());
++      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
++      Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++    });
++  }
+// ... ...
+}
+
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#调用方法改版列表)调用方法改版列表
+
+当点击子类时，调用这个方法，并传入子类ID。
+
+```diff
+  Widget _rightInkWell(int index, BxMallSubDto item) {
+    
+    bool isClick = false;
+    isClick = (index == Provide.value<ChildCategory>(context).childIndex) ? true : false;
+
+    return InkWell(
+      onTap: (){ 
+        Provide.value<ChildCategory>(context).changeChildIndex(index);
++        _getGoodsList(item.mallSubId);
+      },
+      child: Container(
+        padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
+        child: Text(
+          item.mallSubName,
+          style: TextStyle(
+            fontSize: ScreenUtil().setSp(28), 
+            color: isClick ? Colors.pink : Colors.black12
+            ),
+        ),
+      ),
+    );
+  }
+
+```
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第34节：列表页-小bug的修复)第34节：列表页_小Bug的修复
+
+在列表页还是有小Bug的，这节课我们就利用几分钟，进行修复一下.
+
+
+
+### 子类没有商品时报错
+
+有些小类别里是没有商品的，这时候就会报错。解决这个错误非常简单，只要进行判断就可以了。
+
+**1.判断状态管理时是否存在数据**
+
+首先你要在修改状态的时候，就进行一次判断，方式类型不对，导致整个app崩溃。也就是在点击小类的ontap方法后，当然这里调用了`_getGoodList()`方法。代码如下：
+
+```diff
+class _RightCategoryNavState extends State<RightCategoryNav> {  
+	///...
+  	//得到商品列表数据
+   void _getGoodList(String categorySubId) {
+     
+    var data={
+      'categoryId':Provide.value<ChildCategory>(context).categoryId,
+      'categorySubId':categorySubId,
+      'page':1
+    };
+    
+    request('getMallGoods',formData:data ).then((val){
+        var  data = json.decode(val.toString());
++        
+        CategoryGoodsListModel goodsList=  CategoryGoodsListModel.fromJson(data);        
+-      Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++      if (goodsList.data == null) {
++        Provide.value<CategoryGoodsListProvide>(context).getGoodsList([]);
++      } else {
++        Provide.value<CategoryGoodsListProvide>(context).getGoodsList(goodsList.data);
++      }
++      
+    });
+  }
+  ///...
+}
+```
+
+**2.判断界面输出时是不是有数据**
+
+这个主要时给用户一个友好的界面提示，如果没有数据，要提示用户。修改的是商品列表类的`build`方法，代码如下：
+
+```diff
+class _CategoryGoodsListState extends State<CategoryGoodsList> {
+	   @override
+   Widget build(BuildContext context) {
+     return Provide<CategoryGoodsListProvide>(
+       builder: (context,child,data){
+-        return  Expanded(
+-            child: Container(
+-            width: ScreenUtil().setWidth(570),
+-            height: ScreenUtil().setHeight(1000),
+-            child: ListView.builder(
+-              itemCount: data.goodsList.length,
+-              itemBuilder: (context,index){
+-                return _listWidget(data.goodsList, index);
+-              },
++        if (data.goodsList.length > 0) {
++          return  Expanded(
++              child: Container(
++              width: ScreenUtil().setWidth(570),
++              height: ScreenUtil().setHeight(1000),
++              child: ListView.builder(
++                itemCount: data.goodsList.length,
++                itemBuilder: (context,index){
++                  return _listWidget(data.goodsList, index);
++                },
++              ),
+             ),
+-          ),
+-        );
++          );
++        } else {
++          return Text('暂时没有数据');
++        }
++        
+         
+         
+       },
+     );
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把子类id也provide化)把子类ID也Provide化
+
+现在的子类ID，我们还没有形成状态，用的是普通的setState，如果要做下拉刷新，那setState肯定是不行的，因为这样就进行跨类了，没办法传递过去。
+
+1.首先修改`provide/child_category.dart`类，增加一个状态变量`subId`,然后在两个方法里都进行修改,代码如下：
+
+```diff
+ import 'package:flutter/material.dart';
+ import '../model/category.dart';
+ 
+ //ChangeNotifier 的混入是不用管理听众
+ class ChildCategory with ChangeNotifier {
+   List<BxMallSubDto> childCategoryList = [];
+   int childIndex = 0; //子类高亮索引
+   String categoryId = '4'; //大类ID
++  String subId = ''; //小类ID
+ 
+   //点击大类时更换
+   getChildCategory(List<BxMallSubDto> list, String id) {
+     categoryId = id;
+     childIndex = 0;
++    subId = ''; //点击大类时，把子类ID清空
++
+     BxMallSubDto all = BxMallSubDto();
+     all.mallSubId = '00';
+     all.mallCategoryId = '00';
+     all.comments = 'null';
+     all.mallSubName = '全部';
+ 
+     childCategoryList = [all]; //把all加到开头
+     childCategoryList.addAll(list);
+ 
+     childCategoryList = list;
+     notifyListeners();
+   }
+ 
+   //改变子类索引
+-  changeChildIndex(index) {
++  changeChildIndex(int index,String id) {
++    //传递两个参数，使用新传递的参数给状态赋值
+     childIndex = index;
++    subId = id;
+     notifyListeners();
+   }
+ }
+
+```
+
+这就为以后我们作上拉加载效果打下了基础。这节学完，你应该对Proive的有了深刻的理解，并且达到工作水平。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第35节-列表页-上拉加载功能的制作)第35节:列表页_上拉加载功能的制作
+
+这节主要制作一下列表页的上拉加载更多功能，因为在首页的视频中，已经讲解了上拉加载更多的效果，所以我们不会再着重讲解语法，而重点会放在上拉加载和Provide结合的方法。小伙伴们学习的侧重点也应该是状态管理的应用。
+
+### 增加page和noMoreText到Provide里
+
+因为无论切换大类或者小类的时候，都需要把page变成1，所以需要在`provide/child_category.dart`里新声明一个page变量.`noMoreText`主要用来控制是否显示更多和如果没有数据了，不再向后台请求数据。每一次后台数据的请求都是宝贵的。
+
+```text
+int page=1;  //列表页数，当改变大类或者小类时进行改变
+String noMoreText=''; //显示更多的标识
+```
+
+声明在切换大类和切换小类的时候都把page变成1，代码如下：
+
+```text
+//点击大类时更换
+    getChildCategory(List<BxMallSubDto> list,String id){
+      isNewCategory=true;
+      categoryId=id;
+      childIndex=0;
+      //------------------关键代码start
+      page=1;
+      noMoreText = ''; 
+      //------------------关键代码end
+      subId=''; //点击大类时，把子类ID清空
+      noMoreText='';
+      BxMallSubDto all=  BxMallSubDto();
+      all.mallSubId='00';
+      all.mallCategoryId='00';
+      all.mallSubName = '全部';
+      all.comments = 'null';
+      childCategoryList=[all];
+      childCategoryList.addAll(list);   
+      notifyListeners();
+    }
+    //改变子类索引 ,
+    changeChildIndex(int index,String id){
+      isNewCategory=true;
+      //传递两个参数，使用新传递的参数给状态赋值
+       childIndex=index;
+       subId=id;
+       //------------------关键代码start
+       page=1;
+       noMoreText = ''; //显示更多的表示
+       //------------------关键代码end
+       noMoreText='';
+       notifyListeners();
+    }
+```
+
+还需要写一个增加page数量的方法，用来实现每次上拉加载后，page随之加一，代码如下:
+
+```text
+    //增加Page的方法f
+    addPage(){
+      page++;
+    }
+```
+
+在制作一个改变`noMoreText`方法。
+
+```text
+    //改变noMoreText数据  
+    changeNoMore(String text){
+      noMoreText=text;
+      notifyListeners();
+    }
+```
+
+最终的`child_category.dart`的文件变化情况为：
+
+```diff
+import 'package:flutter/material.dart';
+import '../model/category.dart';
+
+//ChangeNotifier 的混入是不用管理听众
+class ChildCategory with ChangeNotifier {
+  List<BxMallSubDto> childCategoryList = [];
+  int childIndex = 0; //子类高亮索引
+  String categoryId = '4'; //大类ID
+  String subId = ''; //小类ID
++  int page = 1;//列表页数，当改变大类或者小类时进行改变
++  String noMoreText = '';//显示更多的标识
+
+  //点击大类时更换
+  getChildCategory(List<BxMallSubDto> list, String id) {
+    categoryId = id;
+    childIndex = 0;
+    subId = ''; //点击大类时，把子类ID清空
+
++    //-------------关键代码start
++    page = 1;
++    noMoreText = '';
++    //-------------关键代码end
+
+    BxMallSubDto all = BxMallSubDto();
+    all.mallSubId = '00';
+    all.mallCategoryId = '00';
+    all.comments = 'null';
+    all.mallSubName = '全部';
+
+    print('list_length:${list.length}');
+    childCategoryList = [all]; //把all加到开头
+    childCategoryList.addAll(list);
+    print('childCategoryList_length:${childCategoryList.length}');
+
+    // childCategoryList = list;
+    notifyListeners();
+  }
+
+  //改变子类索引
+  changeChildIndex(int index,String id) {
+    //传递两个参数，使用新传递的参数给状态赋值
+    childIndex = index;
+    subId = id;
++    //-------------关键代码start
++    page = 1;
++    noMoreText = ''; //显示更多的表示
++    //-------------关键代码end
+    notifyListeners();
+  }
++
++  //增加Page的 方法
++  addPage(){
++    page++;
++    //print('page=${page}');
++  }
++
++  changeNoMore(String text) {
++    noMoreText = text;
++    notifyListeners();
++  }
+}
+```
+
+
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#增加easyrefresh组件)增加EasyRefresh组件
+
+在`category_page.dart`里增加EasyRefresh组件，首先需要使用import进行引入。
+
+```text
+import 'package:flutter_easyrefresh/easy_refresh.dart';
+```
+
+引入之后，可以直接使用`EasyRefresh`进行包裹，然后加上各种需要的参数，这个部分已经在前几节课讲过了，这里就不作过多的讲解了。
+
+```diff
+@override
+  Widget build(BuildContext context) {
+    return Provide<CategoryGoodsListProvide>(
+        builder: (context,child,data){
+          
+          
+          if(data.goodsList.length>0){
+             return Expanded(
+                child:Container(
+                  width: ScreenUtil().setWidth(570) ,
++                  child:EasyRefresh(
++                    refreshFooter: ClassicsFooter(
++                      key:_footerKey,
++                      bgColor:Colors.white,
++                      textColor:Colors.pink,
++                      moreInfoColor: Colors.pink,
++                      showMore:true,
++                      noMoreText:Provide.value<ChildCategory>(context).noMoreText,
++                      moreInfo:'加载中',
++                      loadReadyText:'上拉加载'
++                    ),
+                    child:ListView.builder(
+                      itemCount: data.goodsList.length,
+                      itemBuilder: (context,index){
+                        return _ListWidget(data.goodsList,index);
+                      },
+                    ) ,
++                    loadMore: ()async{
++                        print('没有更多了.......');
++                    },
+                  )
+                  
+                ) ,
+              ); 
+          }else{
+            return  Text('暂时没有数据');
+          }
+       },
+
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改请求数据的方法)修改请求数据的方法
+
+这个类中也需要一个去后台请求数据的方法，这个方法要求从Provide里读出三个参数，大类ID，小类ID和页数。代码如下:
+
+```diff
++  //上拉加载更多的方法
++  void _getMoreList(){
++     
++    Provide.value<ChildCategory>(context).addPage();
++     var data={
++      'categoryId':Provide.value<ChildCategory>(context).categoryId,
++      'categorySubId':Provide.value<ChildCategory>(context).subId,
++      'page':Provide.value<ChildCategory>(context).page
++    };
++    
++    request('getMallGoods',formData:data ).then((val){
++        var  data = json.decode(val.toString());
++        CategoryGoodsListModel goodsList=  CategoryGoodsListModel.fromJson(data);
++       
++        if(goodsList.data==null){
++         Provide.value<ChildCategory>(context).changeNoMore('没有更多了');
++        }else{
++           
++          Provide.value<CategoryGoodsListProvide>(context).addGoodsList(goodsList.data);
++          
++        }
++    });
++
++
++  }
+```
+
+每次都先调用增加页数的方法，这样请求的数据就是最新的，当没有数据的时候要把`noMoreText`设置成‘没有更多了’。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#切换类别返回顶部)切换类别返回顶部
+
+到目前为止，我们应该可以正常展示上拉加载更多的方法了，但是还有一个小Bug，切换大类或者小类的时候，我们的页面没有回到顶部，这个其实很好解决。再build的Provide的构造器里加入下面的代码就可以了。
+
+```text
+try{
+  if(Provide.value<ChildCategory>(context).page==1){
+    scrollController.jumpTo(0.0);
+  }
+}catch(e){
+  print('进入页面第一次初始化：${e}');
+}
+          
+```
+
+当然你还要再列表类里进行声明`scrollController`,如果你不声明是没办法使用的。
+
+```text
+var scrollController=new ScrollController();
+```
+
+声明完成后，给ListView加上`controller`属性。
+
+```text
+child:ListView.builder(
+  controller: scrollController,
+  itemCount: data.goodsList.length,
+  itemBuilder: (context,index){
+    return _ListWidget(data.goodsList,index);
+  },
+) ,
+```
+
+这时候再进行测试，应该就可以了。这节课就到这里，虽然还有些小Bug，但是总体效果已经制作完成了。
+
+最终的`category_page.dart`文件的修改为：
+
+```diff
+class _CategoryGoodsListState extends State<CategoryGoodsList> {
+  // List list = [];
+  GlobalKey<RefreshIndicatorState> _footerkey = new GlobalKey<RefreshIndicatorState>();
+
++  var scrollController = new ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Provide<CategoryGoodsListProvide>(
+      builder: (context,child,data){
+
++        try {
++          if (Provide.value<ChildCategory>(context).page == 1) {
++            //列表位置，放到最上边
++            scrollController.jumpTo(0.0);
++          }
++        } catch (e) {
++          print('进入页面第一次初始化：${e}');
++        }
+
+        if (data.goodsList.length > 0) {
+          return  Expanded(
+              child: Container(
+              width: ScreenUtil().setWidth(570),
+              child: EasyRefresh(
+                footer: ClassicalFooter(
+                  key: _footerkey,
+                  bgColor: Colors.white,
+                  textColor: Colors.pink,
+                  infoColor: Colors.pink,
+                  noMoreText: Provide.value<ChildCategory>(context).noMoreText,
+                  infoText: '加载中',
+                  loadReadyText: '上拉加载',
+                ),
++                child: ListView.builder(
++                  controller: scrollController,
++                  itemCount: data.goodsList.length,
++                  itemBuilder: (context,index){
++                    return _listWidget(data.goodsList, index);
++                  },
++                ),
+                
+                onLoad: ()async{
+                  /// 上拉加载的响应
+                  print('上拉加载更多.....');
+                  _getMoreList();
+                },
+              ),
+              
+               
+            ),
+          );
+        } else {
+          return Text('暂时没有数据');
+        }
+ 
+      },
+    );
+    
+  }
+}
+```
+
+
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第36节：fluttertoast组件的介绍)第36节：Fluttertoast组件的介绍
+
+在APP的使用过程中，对用户的友好提示是必不可少的，比如当列表页上拉加载更多的时候，到达了数据的底部，没有更多数据了，就要给用户一个友好的提示。但是这种提示又不能影响用户的使用，这节课就介绍一个轻提示组件给大家`FlutterToast`。
+
+
+
+### Fluttertoast 组件简介
+
+这是一个第三方组件，目前版本是3.0.1，当你学习的时候可以到Github上查找最新版本。讲课时此插件又200Star。
+
+> GitHub地址：https://github.com/PonnamKarthik/FlutterToast
+
+这个组件我觉的还时比较好用的，提供了样式自定义，而且自带的效果页是很酷炫的。所以我推荐了这个组件。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#如何使用fluttertoast)如何使用Fluttertoast
+
+首先需要在`pubspec.yaml`中进行引入Fluttertoast组件（也叫保持依赖，也叫包管理），主要版本号，请使用最新的，这里不保证时最新版本。
+
+```text
+fluttertoast: ^3.1.3
+```
+
+引入后在需要使用的页面使用`import`引入,引入代码如下：
+
+```text
+import 'package:fluttertoast/fluttertoast.dart';
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#fluttertoast使用方法)Fluttertoast使用方法
+
+在需要使用的地方直接可以使用，如下代码：
+
+```diff
+//上拉加载更多的方法
+  void _getMoreList() {
+    Provide.value<ChildCategory>(context).addPage(); //增加Page的 方法
+    
+    var page =  Provide.value<ChildCategory>(context).page;  
+    print('page=${page}'); //打印page
+    var data = {
+      'categoryId': Provide.value<ChildCategory>(context).categoryId,
+      'categorySubId': Provide.value<ChildCategory>(context).subId,
+      'page': page,
+    };
+
+    request('getMallGoods',formData: data).then((val){
+      var data = json.decode(val.toString());
+
+      CategoryGoodsListModel goodsList = CategoryGoodsListModel.fromJson(data);
+      
+      ///测试代码
+      if (Provide.value<CategoryGoodsListProvide>(context).goodsList.length > 0) {
+        goodsList.data = null;
+      }
+      //
+      if (goodsList.data == null) {
++        Fluttertoast.showToast(
++          msg: "已经到底了",
++          toastLength: Toast.LENGTH_SHORT,
++          gravity: ToastGravity.CENTER,
++          backgroundColor: Colors.pink,
++          textColor: Colors.white,
++          fontSize: 16.0
++        );
+        Provide.value<ChildCategory>(context).changeNoMore('没有更多了');
+      } else {
+        Provide.value<CategoryGoodsListProvide>(context).getMoreList(goodsList.data);
+      }
+    });
+  }
+```
+
+- msg：提示的文字，String类型。
+- toastLength: 提示的样式，主要是长度，有两个值可以选择：`Toast.LENGTH_SHORT`：短模式，就是比较短。`Toast.LENGTH_LONG`: 长模式，就是比较长。
+- gravity：提示出现的位置，分别是上中下，三个选项。`ToastGravity.TOP`顶部提示，`ToastGravit.CENTER`中部提示，`ToastGravity.BOTTOM`底部提示。
+- bgcolor: 背景颜色，跟从Flutter颜色。
+- textcolor：文字的颜色。
+- fontSize： 文字的大小。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#小bug的处理)小Bug的处理
+
+在列表页还存在着一个小Bug，就是当我们选择子类别后，然后返回全部，这时候会显示没有数据，这个主要是我们在Provide里构造虚拟类别时，传递的参数不对，只要把参数修改成空就可以了。
+
+打开`provide/child_category.dart`，修改`getChildCateg()`方法。 修改代码如下：
+
+```diff
+//点击大类时更换
+getChildCategory(List<BxMallSubDto> list,String id){
+  isNewCategory=true;
+  categoryId=id;
+  childIndex=0;
+  page=1;
+  subId=''; //点击大类时，把子类ID清空
+  noMoreText='';
+  BxMallSubDto all=  BxMallSubDto();
+-    all.mallSubId = '00';
++    all.mallSubId = '';//不设置子类
+  all.mallCategoryId='00';
+  all.mallSubName = '全部';
+  all.comments = 'null';
+  childCategoryList=[all];
+  childCategoryList.addAll(list);   
+  notifyListeners();
+}
+```
+
+这节课主要学习了FlutterToast组件的使用。这个组件虽然很简单，但是在开发中少不了。所以在这里给小伙伴进行了一个详细的讲解。
+
+## 第37节：路由_fluro引入和商品详细页建立
+
+Flutter本身提供了路由机制，作个人的小型项目，完全足够了。但是如果你要作企业级开发，可能就会把入口文件变得臃肿不堪。而再Flutter问世之初，就已经了企业级路由方案fluro。
+
+### flutter_fluro简介
+
+fluro简化了Flutter的路由开发，也是目前Flutter生态中最成熟的路由框架。
+
+> GitHub地址：https://github.com/theyakka/fluro
+
+它出现的比较早啊，是目前用户最多的Flutter路由解决方案，目前Github上有将近1000Star，可以说是相当了不起了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#建立商品详情页面)建立商品详情页面
+
+在学习Fluro之前，我们先建立一个商品详情页面，当然我们只是为了调通路由代码，所以尽量简化代码。在page文件夹下，建立一个`details_page. dart`文件，然后写入下面的代码：
+
+```text
+import 'package:flutter/material.dart';
+
+class DetailsPage extends StatelessWidget {
+  final String goodsId;
+  DetailsPage(this.goodsId);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child:Text('商品ID为：${goodsId}')
+      
+    );
+  }
+}
+```
+
+这里使用了静态组件，测试也没必要使用动态组件，然后组件接收一个goodsId参数，接收参数我们使用了构造方法，因为新版的Flutter已经不在要求key值，所以没必要再写了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#引入fluro)引入fluro
+
+在`pubspec.yaml`文件里，直接注册版本依赖，代码如下。
+
+```text
+dependencies:
+ fluro: "^1.5.1"
+```
+
+如果你这个版本下载不下来，你也可以使用git的方式注册依赖，这样页是可以下载包的(这也是小伙伴提的一个问题)，代码如下：
+
+```text
+dependencies:
+ fluro:
+   git: git://github.com/theyakka/fluro.git
+```
+
+在项目的入口文件，也就是`main.dart`中引入，代码如下：
+
+```text
+import 'package:fluro/fluro.dart';
+```
+
+通过上面的三步，就算把Fluro引入到项目中了，下面就可以开心的使用了。这就好比，衣服脱了，剩下就看你怎么玩了。
+
+总结：我们把路由`flutter_fluro`分4节课来讲，这样调理更清晰，虽然每节课程的代码不多，但是很好理解。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第38节：路由-fluro中handler文件编写)第38节：路由_fluro中Handler文件编写
+
+handler就是每个路由的规则，编写handler就是配置路由规则，比如我们要传递参数，参数的值是什么，这些都需要在Handler中完成。
+
+
+
+### 初始化Fluro
+
+现在可以进行使用了，使用时需要先在Build方法里进行初始化,其实就是把对象new出来。
+
+```diff
+import 'package:flutter/material.dart';
+import './pages/index_page.dart';
+
+import 'package:provide/provide.dart';
+import './provide/counter.dart';
+import './provide/child_category.dart';
+import './provide/category_goods_list.dart';
++import 'package:fluro/fluro.dart';
+
+void main() {
+  var counter = Counter();
+  var childCategory = ChildCategory();
+  var categorygoodsListProvide = CategoryGoodsListProvide();
+
+  var providers = Providers();
++  final router = Router();
+  //... ...
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写rotuer-handler)编写rotuer_handler
+
+handler相当于一个路由的规则，比如我们要到详细页面，这时候就需要传递商品的ID，那就要写一个handler。这次我按照大型企业级真实项目开发来部署项目目录和文件，把路由全部分开，Handler单独写成一个文件。 新建一个`routers`文件夹，然后新建`router_handler.dart`文件
+
+```text
+import 'package:flutter/material.dart';
+import 'package:fluro/fluro.dart';
+import '../pages/details_page.dart';
+
+
+Handler detailsHanderl =Handler(
+  handlerFunc: (BuildContext context,Map<String,List<String>> params){
+    String goodsId = params['id'].first;
+    print('index>details goodsID is ${goodsId}');
+    return DetailsPage(goodsId);
+
+  }
+);
+```
+
+这样一个Handler就写完了。Hanlder的编写是路由中最重要的一个环境，知识点也是比较多的，这里我们学的只是最简单的一个Handler编写，以后会随着课程的增加，我们会再继续深入讲解Handler的编写方法。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第39节：路由-fluro的路由配置和静态化)第39节：路由_fluro的路由配置和静态化
+
+Hanlder只是对每个路由的独立配置文件，fluro当然还需要一个总体配置文件。这节课就来学习一下fluro总体配置文件的编写。这样配置好后，我们还需要一个静态化文件，方便我们在UI页面进行使用。
+
+
+
+### 配置路由
+
+我们还需要对路由有一个总体的配置，比如跟目录，出现不存在的路径如何显示，工作中我们经常把这个文件单独写一个文件。在`routes.dart`里，新建一个`routes.dart`文件。
+
+代码如下:
+
+```text
+import 'package:flutter/material.dart';
+import './router_handler.dart';
+import 'package:fluro/fluro.dart';
+
+class Routes{
+  static String root='/';
+  static String detailsPage = '/detail';
+  static void configureRoutes(Router router){
+    router.notFoundHandler= new Handler(
+      handlerFunc: (BuildContext context,Map<String,List<String>> params){
+        print('ERROR====>ROUTE WAS NOT FONUND!!!');
+      }
+    );
+
+    router.define(detailsPage,handler:detailsHandler);
+  }
+
+}
+```
+
+这段代码在视频中有详细的解释，这里就作过多的文字介绍了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把fluro的router静态化)把Fluro的Router静态化
+
+这一步就是为了使用方便，直接把Router进行静态化，这样在任何一个页面都可以直接进行使用了。`routers`文件目录下新建一个`application.dart`，代码如下：
+
+```text
+import 'package:fluro/fluro.dart';
+
+class Application{
+  static Router router;
+}
+```
+
+总结：这节课完成后，我们基本就把Fluro的路由配置好了，这样的配置虽然稍显复杂，但是跟层次和条理化，扩展性也很强。所以小伙伴们也要练习一下。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第40节：路由-fluro的全局注入和使用)第40节：路由_fluro的全局注入和使用
+
+通过3节课的学习，已经把路由配置好了，但是如果想正常使用，还需要在`main.dart`文件里进行全局注入。注入后就可以爽快的使用了，配置好后的使用方法也是非常简单的。 
+
+
+

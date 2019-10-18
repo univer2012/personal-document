@@ -22,15 +22,17 @@ class ChildCategory with ChangeNotifier {
     //-------------关键代码end
 
     BxMallSubDto all = BxMallSubDto();
-    all.mallSubId = '00';
+    all.mallSubId = '';//不设置子类
     all.mallCategoryId = '00';
     all.comments = 'null';
     all.mallSubName = '全部';
 
+    print('list_length:${list.length}');
     childCategoryList = [all]; //把all加到开头
     childCategoryList.addAll(list);
+    print('childCategoryList_length:${childCategoryList.length}');
 
-    childCategoryList = list;
+    // childCategoryList = list;
     notifyListeners();
   }
 
