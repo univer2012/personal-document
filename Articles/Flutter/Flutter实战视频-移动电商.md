@@ -4512,7 +4512,7 @@ class Routes{
 
 ### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把fluro的router静态化)把Fluro的Router静态化
 
-这一步就是为了使用方便，直接把Router进行静态化，这样在任何一个页面都可以直接进行使用了。代码如下：
+这一步就是为了使用方便，直接把Router进行静态化，这样在任何一个页面都可以直接进行使用了。`routers`文件目录下新建一个`application.dart`，代码如下：
 
 ```text
 import 'package:fluro/fluro.dart';
@@ -4526,7 +4526,7 @@ class Application{
 
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第40节：路由-fluro的全局注入和使用)第40节：路由_fluro的全局注入和使用
 
-通过3节课的学习，已经把路由配置好了，但是如果想正常使用，还需要在`main.dart`文件里进行全局注入。注入后就可以爽快的使用了，配置好后的使用方法也是非常简单的。
+通过3节课的学习，已经把路由配置好了，但是如果想正常使用，还需要在`main.dart`文件里进行全局注入。注入后就可以爽快的使用了，配置好后的使用方法也是非常简单的。 
 
 
 
