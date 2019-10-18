@@ -4364,3 +4364,169 @@ getChildCategory(List<BxMallSubDto> list,String id){
 
 Flutter本身提供了路由机制，作个人的小型项目，完全足够了。但是如果你要作企业级开发，可能就会把入口文件变得臃肿不堪。而再Flutter问世之初，就已经了企业级路由方案fluro。
 
+### flutter_fluro简介
+
+fluro简化了Flutter的路由开发，也是目前Flutter生态中最成熟的路由框架。
+
+> GitHub地址：https://github.com/theyakka/fluro
+
+它出现的比较早啊，是目前用户最多的Flutter路由解决方案，目前Github上有将近1000Star，可以说是相当了不起了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#建立商品详情页面)建立商品详情页面
+
+在学习Fluro之前，我们先建立一个商品详情页面，当然我们只是为了调通路由代码，所以尽量简化代码。在page文件夹下，建立一个`details_page. dart`文件，然后写入下面的代码：
+
+```text
+import 'package:flutter/material.dart';
+
+class DetailsPage extends StatelessWidget {
+  final String goodsId;
+  DetailsPage(this.goodsId);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child:Text('商品ID为：${goodsId}')
+      
+    );
+  }
+}
+```
+
+这里使用了静态组件，测试也没必要使用动态组件，然后组件接收一个goodsId参数，接收参数我们使用了构造方法，因为新版的Flutter已经不在要求key值，所以没必要再写了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#引入fluro)引入fluro
+
+在`pubspec.yaml`文件里，直接注册版本依赖，代码如下。
+
+```text
+dependencies:
+ fluro: "^1.5.1"
+```
+
+如果你这个版本下载不下来，你也可以使用git的方式注册依赖，这样页是可以下载包的(这也是小伙伴提的一个问题)，代码如下：
+
+```text
+dependencies:
+ fluro:
+   git: git://github.com/theyakka/fluro.git
+```
+
+在项目的入口文件，也就是`main.dart`中引入，代码如下：
+
+```text
+import 'package:fluro/fluro.dart';
+```
+
+通过上面的三步，就算把Fluro引入到项目中了，下面就可以开心的使用了。这就好比，衣服脱了，剩下就看你怎么玩了。
+
+总结：我们把路由`flutter_fluro`分4节课来讲，这样调理更清晰，虽然每节课程的代码不多，但是很好理解。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第38节：路由-fluro中handler文件编写)第38节：路由_fluro中Handler文件编写
+
+handler就是每个路由的规则，编写handler就是配置路由规则，比如我们要传递参数，参数的值是什么，这些都需要在Handler中完成。
+
+
+
+### 初始化Fluro
+
+现在可以进行使用了，使用时需要先在Build方法里进行初始化,其实就是把对象new出来。
+
+```diff
+import 'package:flutter/material.dart';
+import './pages/index_page.dart';
+
+import 'package:provide/provide.dart';
+import './provide/counter.dart';
+import './provide/child_category.dart';
+import './provide/category_goods_list.dart';
++import 'package:fluro/fluro.dart';
+
+void main() {
+  var counter = Counter();
+  var childCategory = ChildCategory();
+  var categorygoodsListProvide = CategoryGoodsListProvide();
+
+  var providers = Providers();
++  final router = Router();
+  //... ...
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写rotuer-handler)编写rotuer_handler
+
+handler相当于一个路由的规则，比如我们要到详细页面，这时候就需要传递商品的ID，那就要写一个handler。这次我按照大型企业级真实项目开发来部署项目目录和文件，把路由全部分开，Handler单独写成一个文件。 新建一个`routers`文件夹，然后新建`router_handler.dart`文件
+
+```text
+import 'package:flutter/material.dart';
+import 'package:fluro/fluro.dart';
+import '../pages/details_page.dart';
+
+
+Handler detailsHanderl =Handler(
+  handlerFunc: (BuildContext context,Map<String,List<String>> params){
+    String goodsId = params['id'].first;
+    print('index>details goodsID is ${goodsId}');
+    return DetailsPage(goodsId);
+
+  }
+);
+```
+
+这样一个Handler就写完了。Hanlder的编写是路由中最重要的一个环境，知识点也是比较多的，这里我们学的只是最简单的一个Handler编写，以后会随着课程的增加，我们会再继续深入讲解Handler的编写方法。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第39节：路由-fluro的路由配置和静态化)第39节：路由_fluro的路由配置和静态化
+
+Hanlder只是对每个路由的独立配置文件，fluro当然还需要一个总体配置文件。这节课就来学习一下fluro总体配置文件的编写。这样配置好后，我们还需要一个静态化文件，方便我们在UI页面进行使用。
+
+
+
+### 配置路由
+
+我们还需要对路由有一个总体的配置，比如跟目录，出现不存在的路径如何显示，工作中我们经常把这个文件单独写一个文件。在`routes.dart`里，新建一个`routes.dart`文件。
+
+代码如下:
+
+```text
+import 'package:flutter/material.dart';
+import './router_handler.dart';
+import 'package:fluro/fluro.dart';
+
+class Routes{
+  static String root='/';
+  static String detailsPage = '/detail';
+  static void configureRoutes(Router router){
+    router.notFoundHandler= new Handler(
+      handlerFunc: (BuildContext context,Map<String,List<String>> params){
+        print('ERROR====>ROUTE WAS NOT FONUND!!!');
+      }
+    );
+
+    router.define(detailsPage,handler:detailsHandler);
+  }
+
+}
+```
+
+这段代码在视频中有详细的解释，这里就作过多的文字介绍了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把fluro的router静态化)把Fluro的Router静态化
+
+这一步就是为了使用方便，直接把Router进行静态化，这样在任何一个页面都可以直接进行使用了。代码如下：
+
+```text
+import 'package:fluro/fluro.dart';
+
+class Application{
+  static Router router;
+}
+```
+
+总结：这节课完成后，我们基本就把Fluro的路由配置好了，这样的配置虽然稍显复杂，但是跟层次和条理化，扩展性也很强。所以小伙伴们也要练习一下。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第40节：路由-fluro的全局注入和使用)第40节：路由_fluro的全局注入和使用
+
+通过3节课的学习，已经把路由配置好了，但是如果想正常使用，还需要在`main.dart`文件里进行全局注入。注入后就可以爽快的使用了，配置好后的使用方法也是非常简单的。
+
+
+
