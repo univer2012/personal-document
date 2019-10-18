@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
           onTap: (){
             ///点击了火爆商品
             print('点击了火爆商品');
-            Application.router.navigateTo(context,"/detail?id=${val['goodsId']}");
+            Application.router.navigateTo(context, "/detail?id=${val['goodsId']}");
             
           },
           child: Container(
