@@ -4528,5 +4528,105 @@ class Application{
 
 通过3节课的学习，已经把路由配置好了，但是如果想正常使用，还需要在`main.dart`文件里进行全局注入。注入后就可以爽快的使用了，配置好后的使用方法也是非常简单的。 
 
+###  把路由注册到顶层
 
+打开`main.dart`文件，首页引入`routes.dart`和`application.dart`文件，代码如下：
+
+```text
+import './routers/routes.dart';
+import './routers/application.dart';
+```
+
+引入后需要进行赋值，进行注入程序。这里展示主要build代码。
+
+```diff
+ import 'package:flutter/material.dart';
+ import './pages/index_page.dart';
+ 
+ import 'package:provide/provide.dart';
+ import './provide/counter.dart';
+ import './provide/child_category.dart';
+ import './provide/category_goods_list.dart';
+ import 'package:fluro/fluro.dart';
++import './routers/routers.dart';
++import './routers/application.dart';
+ 
+ void main() {
+   var counter = Counter();
+   var childCategory = ChildCategory();
+   var categorygoodsListProvide = CategoryGoodsListProvide();
+ 
+   var providers = Providers();
+-  final router = Router();
+ 
+   providers
+   ..provide(Provider<Counter>.value(counter))
+   ..provide(Provider<CategoryGoodsListProvide>.value(categorygoodsListProvide))
+   ..provide(Provider<ChildCategory>.value(childCategory));//进行依赖
+ 
+   runApp(ProviderNode(child: MyApp(), providers: providers));
+ }
+ 
+ class MyApp extends StatelessWidget {
+   @override
+   Widget build(BuildContext context) {
++    
++    final router = Router();
++    Routes.configureRoutes(router);
++    Application.router = router;
++
+     return Container(
+       child: MaterialApp(
+         title: '百姓生活+',
++        onGenerateRoute: Application.router.generator,
+         debugShowCheckedModeBanner: false,
+         theme: ThemeData(
+           primarySwatch: Colors.pink,
+         ),
+         home: IndexPage(),
+       ),
+     );
+   }
+ }
+//... ...
+```
+
+上面代码就是注入整个程序，让我们在任何页面直接引入`application.dart`就可以使用。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#在首页使用) 在首页使用
+
+前戏终于完成，现在就可以痛痛快快大干一场了。现在要在首页里使用路由，直接在首页打开商品详细页面。
+
+在`home_page.dart`先引入`application.dart`文件：
+
+```text
+import './routers/application.dart';
+```
+
+然后再火爆专区的列表中使用配置好的路由，打开商品详细页面`details_page.dart`。
+
+打开`home_page.dart`文件，找到火爆专区列表`_wrapList()`里的`ontap`事件，然后在`ontap`事件中直接使用`application`进行跳转，代码如下：
+
+```diff
+//... ...   
+   //火爆专区子项
+   Widget _wrapList(){
+     if (hotGoodsList.length != 0) {
+       List<Widget> listWidget = hotGoodsList.map((val){
+         return InkWell(
+           onTap: (){
+             ///点击了火爆商品
+             print('点击了火爆商品');
+-            Application.router.navigateTo(context,"/detail?id=${val['goodsId']}");
++            Application.router.navigateTo(context, "/detail?id=${val['goodsId']}");
+             
+           },
+//... ...
+```
+
+这时候可以测试一下，如果一切正常，应该可以打开商品详细页面了，当然这时候的商品详细页面实在是太丑了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第41节：详细页-后台数据接口调试) 第41节：详细页_后台数据接口调试
+
+开始作商品详细页，这节课主要是调通商品信息页的后端接口和制作数据模型。我们完全安装真实项目的开发目录接口和文件组织来进行开发。
 
