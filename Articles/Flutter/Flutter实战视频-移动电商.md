@@ -4630,3 +4630,408 @@ import './routers/application.dart';
 
 开始作商品详细页，这节课主要是调通商品信息页的后端接口和制作数据模型。我们完全安装真实项目的开发目录接口和文件组织来进行开发。
 
+###  建立商品详细模型
+
+我们还是用快速生成的方式建立一下商品详细页的接口模型，有这样一段从后端获取的JSON，直接用快速生成的方式，把这段JSON生成模型，然后进行必要的修改。
+
+JSON如下:
+
+```text
+{"code":"0","message":"success","data":{"goodInfo":{"image5":"","amount":10000,"image3":"","image4":"","goodsId":"ed675dda49e0445fa769f3d8020ab5e9","isOnline":"yes","image1":"http://images.baixingliangfan.cn/shopGoodsImg/20190116/20190116162618_2924.jpg","image2":"","goodsSerialNumber":"6928804011173","oriPrice":3.00,"presentPrice":2.70,"comPic":"http://images.baixingliangfan.cn/compressedPic/20190116162618_2924.jpg","state":1,"shopId":"402880e860166f3c0160167897d60002","goodsName":"可口可乐500ml/瓶","goodsDetail":"<img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081109_5060.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081109_1063.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081110_8029.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081110_1074.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081110_8439.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171224/20171224081110_6800.jpg\" width=\"100%\" height=\"auto\" alt=\"\" />"},"goodComments":[{"SCORE":5,"comments":"果断卸载，2.5个小时才送到","userName":"157******27","discussTime":1539491266336}],"advertesPicture":{"PICTURE_ADDRESS":"http://images.baixingliangfan.cn/advertesPicture/20190113/20190113134955_5825.jpg","TO_PLACE":"1"}}}
+```
+
+复制上面的的代码，代开下面的地址，利用JSON代码，快速生成MOdel模型。
+
+> https://javiercbk.github.io/json_to_dart/
+
+在`lib/model`文件夹下新建立`details.dart`文件，然后把生成的代码拷贝到下面。
+
+```text
+class DetailsModel {
+  String code;
+  String message;
+  DetailsGoodsData data;
+
+  DetailsModel({this.code, this.message, this.data});
+
+  DetailsModel.fromJson(Map<String, dynamic> json) {
+    code = json['code'];
+    message = json['message'];
+    data = json['data'] != null ? new DetailsGoodsData.fromJson(json['data']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['code'] = this.code;
+    data['message'] = this.message;
+    if (this.data != null) {
+      data['data'] = this.data.toJson();
+    }
+    return data;
+  }
+}
+
+class DetailsGoodsData {
+  GoodInfo goodInfo;
+  List<GoodComments> goodComments;
+  AdvertesPicture advertesPicture;
+
+  DetailsGoodsData({this.goodInfo, this.goodComments, this.advertesPicture});
+
+  DetailsGoodsData.fromJson(Map<String, dynamic> json) {
+    goodInfo = json['goodInfo'] != null
+        ? new GoodInfo.fromJson(json['goodInfo'])
+        : null;
+    if (json['goodComments'] != null) {
+      goodComments = new List<GoodComments>();
+      json['goodComments'].forEach((v) {
+        goodComments.add(new GoodComments.fromJson(v));
+      });
+    }
+    advertesPicture = json['advertesPicture'] != null
+        ? new AdvertesPicture.fromJson(json['advertesPicture'])
+        : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.goodInfo != null) {
+      data['goodInfo'] = this.goodInfo.toJson();
+    }
+    if (this.goodComments != null) {
+      data['goodComments'] = this.goodComments.map((v) => v.toJson()).toList();
+    }
+    if (this.advertesPicture != null) {
+      data['advertesPicture'] = this.advertesPicture.toJson();
+    }
+    return data;
+  }
+}
+
+class GoodInfo {
+  String image5;
+  int amount;
+  String image3;
+  String image4;
+  String goodsId;
+  String isOnline;
+  String image1;
+  String image2;
+  String goodsSerialNumber;
+  double oriPrice;
+  double presentPrice;
+  String comPic;
+  int state;
+  String shopId;
+  String goodsName;
+  String goodsDetail;
+
+  GoodInfo(
+      {this.image5,
+      this.amount,
+      this.image3,
+      this.image4,
+      this.goodsId,
+      this.isOnline,
+      this.image1,
+      this.image2,
+      this.goodsSerialNumber,
+      this.oriPrice,
+      this.presentPrice,
+      this.comPic,
+      this.state,
+      this.shopId,
+      this.goodsName,
+      this.goodsDetail});
+
+  GoodInfo.fromJson(Map<String, dynamic> json) {
+    image5 = json['image5'];
+    amount = json['amount'];
+    image3 = json['image3'];
+    image4 = json['image4'];
+    goodsId = json['goodsId'];
+    isOnline = json['isOnline'];
+    image1 = json['image1'];
+    image2 = json['image2'];
+    goodsSerialNumber = json['goodsSerialNumber'];
+    oriPrice = json['oriPrice'];
+    presentPrice = json['presentPrice'];
+    comPic = json['comPic'];
+    state = json['state'];
+    shopId = json['shopId'];
+    goodsName = json['goodsName'];
+    goodsDetail = json['goodsDetail'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['image5'] = this.image5;
+    data['amount'] = this.amount;
+    data['image3'] = this.image3;
+    data['image4'] = this.image4;
+    data['goodsId'] = this.goodsId;
+    data['isOnline'] = this.isOnline;
+    data['image1'] = this.image1;
+    data['image2'] = this.image2;
+    data['goodsSerialNumber'] = this.goodsSerialNumber;
+    data['oriPrice'] = this.oriPrice;
+    data['presentPrice'] = this.presentPrice;
+    data['comPic'] = this.comPic;
+    data['state'] = this.state;
+    data['shopId'] = this.shopId;
+    data['goodsName'] = this.goodsName;
+    data['goodsDetail'] = this.goodsDetail;
+    return data;
+  }
+}
+
+class GoodComments {
+  int sCORE;
+  String comments;
+  String userName;
+  int discussTime;
+
+  GoodComments({this.sCORE, this.comments, this.userName, this.discussTime});
+
+  GoodComments.fromJson(Map<String, dynamic> json) {
+    sCORE = json['SCORE'];
+    comments = json['comments'];
+    userName = json['userName'];
+    discussTime = json['discussTime'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['SCORE'] = this.sCORE;
+    data['comments'] = this.comments;
+    data['userName'] = this.userName;
+    data['discussTime'] = this.discussTime;
+    return data;
+  }
+}
+
+class AdvertesPicture {
+  String pICTUREADDRESS;
+  String tOPLACE;
+
+  AdvertesPicture({this.pICTUREADDRESS, this.tOPLACE});
+
+  AdvertesPicture.fromJson(Map<String, dynamic> json) {
+    pICTUREADDRESS = json['PICTURE_ADDRESS'];
+    tOPLACE = json['TO_PLACE'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['PICTURE_ADDRESS'] = this.pICTUREADDRESS;
+    data['TO_PLACE'] = this.tOPLACE;
+    return data;
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#provide建立) Provide建立
+
+在实际开发中，我们是将业务逻辑和UI表现分开的，所以线建立一个Provide文件，所有业务逻辑将写在`Provide`里，然后`pages`文件夹里只写UI层面的东西。这样就把业务逻辑和UI进行了分离。
+
+在`lib/provide/`文件夹下新建立一个`details_info.dart`文件，这个文件就是写商品详细页相关的业务逻辑的。
+
+```text
+import 'package:flutter/material.dart';
+import '../model/details.dart';
+import '../service/service_method.dart';
+import 'dart:convert';
+
+class DetailsInfoProvide with ChangeNotifier{
+  
+   DetailsModel goodsInfo =null;
+
+  //从后台获取商品信息
+
+  getGoodsInfo(String id ){
+    var formData = { 'goodId':id, };
+    
+    request('getGoodDetailById',formData:formData).then((val){
+      var responseData= json.decode(val.toString());
+      print(responseData);
+      goodsInfo=DetailsModel.fromJson(responseData);
+      
+      notifyListeners();
+    });
+   
+
+  }
+
+}
+```
+
+先引入刚建立好的Model，然后引入`service_method.dart`文件。声明`DetailsInfoProvide`l类，在类里边声明一个`DetailsModel`类型的 goodsInfo变量，初始值甚至成null，然后写一个从后台获取数据的方法,命名为`getGoodsInfo`。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#在ui调试接口) 在UI调试接口
+
+直接在pages文件夹的`details_page.dart`文件里，写一个`_getBackInfo`方法，然后在build方法里使用一下。 如果控制台打印出商品详细的数据，说明接口已经调通。
+
+```text
+  void _getBackInfo(BuildContext context )async{
+      await  Provide.value<DetailsInfoProvide>(context).getGoodsInfo(goodsId);
+      print('加载完成............');
+  }
+```
+
+总结：从这节课开始你的重点不应该放到Flutter语法生，要把重点放在项目的组织和分离上。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第42节：详细页ui主页面架构搭建) 第42节：详细页UI主页面架构搭建
+
+上节课已经把详细页大体的业务结构和跟后台的数据接口调通了，这节课开始搭建页面的UI。会把一个详细页分为6个主要部分来编写，也就是说把一个页面拆成六个大组件，并在不同的页面中。
+
+
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#details-page页面的编写) details_page页面的编写
+
+这个页面已经建立好了，在`lib/pages/`目录下，我们主要修改`build`方法。代码如下，视频中我会一行行进行解释。
+
+```diff
+   @override
+   Widget build(BuildContext context) {
+-    return Container(
+-      child: Text('商品ID：${goodsId}'),
++    
++    return Scaffold(
++      appBar: AppBar(
++        leading: IconButton(
++          icon: Icon(Icons.arrow_back),
++          onPressed: (){
++            Navigator.pop(context);
++          },
++        ),
++        title: Text('商品详细页'),
++      ),
++
++      body: FutureBuilder(
++        future: _getBackInfo(context),
++        builder: (context, snapshot) {
++          if (snapshot.hasData) {
++            return Container(
++              child: Column(
++                children: <Widget>[
++                  Text('商品ID：${goodsId}')
++                ],
++              ),
++            );
++          } else {
++            return Text('加载中.......');
++          }
++        },
++      ),
+     );
+   }
+//... ...
+ }
+```
+
+在body区域,使用了`FutureBuilder Widget` ，可以实现异步建在的效果。并且在可以判断`snapshot.hasData`进行判断是否在加载还是在加载中。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#getbackinfo方法的修改) _getBackInfo方法的修改
+
+在build方法里使用了`FutureBuilder`部件，所以使用的后台得到数据的方法，也要相应的做出修改，要最后返回一个Future 部件。代码如下:
+
+```diff
+-  void _getBackInfo(BuildContext context) async {
++  Future _getBackInfo(BuildContext context) async {
++    await Provide.value<DetailsInfoProvide>(context).getGoodsInfo(goodsId);
++    //print('加载完成.......');
++    return '完成加载';
+  }
+```
+
+在这里给出所有代码方便你学习：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../provide/details_info.dart';
+
+
+
+class DetailsPage extends StatelessWidget {
+  final String goodsId;
+  DetailsPage(this.goodsId);
+
+  @override
+  Widget build(BuildContext context) {
+    
+       return Scaffold(
+         appBar: AppBar(
+            leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                print('返回上一页');
+                Navigator.pop(context);
+              },
+              ),
+            title: Text('商品详细页'),
+          ),
+          body:FutureBuilder(
+            future: _getBackInfo(context) ,
+            builder: (context,snapshot){
+              if(snapshot.hasData){
+                  return Container(
+                    child:Row(
+                          children: <Widget>[
+                            
+                          ],
+                    )
+                  );
+              }else{
+                  return Text('加载中........');
+              }
+            }
+          )
+       );
+
+       
+    
+  }
+
+  Future _getBackInfo(BuildContext context )async{
+      await  Provide.value<DetailsInfoProvide>(context).getGoodsInfo(goodsId);
+      return '完成加载';
+  }
+}
+```
+
+总结:这节课主要是把商品详细页的首页制作好，制作好以后会把商品详细页进行拆分，拆分成不同的组件到不同的文件中，虽然这很绕，但是在公司中的开发就是这样的。细致的差分适合于大型项目多人开发。最后由组长组合成一个页面。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第43节：路由-补充首页跳转到详细页) 第43节：路由_补充首页跳转到详细页
+
+前几节课只把首页的“火爆专区”加了跳转，这节课内容正好不多，就把其它需要加跳转到详细页的位置都加上跳转。需要注意的是，这些都需要加入context，上下文文件。
+
+###  轮播图加入跳转
+
+直接打开`home_page.dart`找到轮播图组件，在`ontap`里，加入下面的代码。
+
+```text
+ Application.router.navigateTo(context,"/detail?id=${swiperDataList[index]['goodsId']}");
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品推荐加入跳转) 商品推荐加入跳转
+
+同样在商品推荐的`_item`内部方法里的`onTap`中加入下面代码。
+
+```text
+Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#楼层加入跳转) 楼层加入跳转
+
+在楼层方法的`_goodsItem`中的`onTap`方法中加入下面的代码.
+
+```text
+ Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
+```
+
+总结:我本来觉的这个小伙伴可以自己加入进来，但是还是有很多小伙伴遇到了麻烦，那为了能让每个人都做出视频中的效果，这节课作为一个补充。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第44节：详细页-首屏自定义widget编写) 第44节：详细页_首屏自定义Widget编写
+
+这节课把详细页首屏独立出来，这样业务逻辑更具体，以后也会降低维护成本。最主要的是主UI文件不会变的臃肿不堪。
