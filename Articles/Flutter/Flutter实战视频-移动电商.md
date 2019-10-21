@@ -5010,24 +5010,161 @@ class DetailsPage extends StatelessWidget {
 
 直接打开`home_page.dart`找到轮播图组件，在`ontap`里，加入下面的代码。
 
-```text
- Application.router.navigateTo(context,"/detail?id=${swiperDataList[index]['goodsId']}");
+```diff
+ //首页轮播组件
+ class SwiperDiy extends StatelessWidget {
+   final List swiperDataList;
+   SwiperDiy({Key key, this.swiperDataList}): super(key:key);
+ 
+   @override
+   Widget build(BuildContext context) {
+     return Container(
+       height: ScreenUtil().setHeight(333),
+       width: ScreenUtil().setWidth(750),
+       child: Swiper(
+         itemBuilder: (BuildContext context, int index){
+-          return Image.network('${swiperDataList[index]['image']}',fit: BoxFit.fill,);
++          return InkWell(
++            onTap: (){
++              Application.router.navigateTo(context, "/detail?id=${swiperDataList[index]['goodsId']}");
++            },
++            child: Image.network('${swiperDataList[index]['image']}',fit: BoxFit.fill,),
++          );
+         },
+         itemCount: swiperDataList.length,
+         pagination: new SwiperPagination(),
+         autoplay: true,
+       ),
+     );
+   }
+ }
+
 ```
 
 ### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品推荐加入跳转) 商品推荐加入跳转
 
 同样在商品推荐的`_item`内部方法里的`onTap`中加入下面代码。
 
-```text
-Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
+```diff
+-  Widget _item(index){
++  Widget _item(context, index){
+     return InkWell(
+-      onTap: (){},
++      onTap: (){
++        Application.router.navigateTo(context, "/detail?id=${recommendList[index]['goodsId']}");
++      },
+       child: Container(
+         height: ScreenUtil().setHeight(330),
+         width: ScreenUtil().setWidth(250),
+         padding: EdgeInsets.all(8.0),
+         decoration:BoxDecoration(
+           color:Colors.white,
+           border:Border(
+             left: BorderSide(width:0.5,color:Colors.black12)
+           )
+         ),
+         child: Column(    //列
+           children: <Widget>[
+             Image.network(recommendList[index]['image']),
+             Text('￥${recommendList[index]['mallPrice']}'),
+             Text(
+               '￥${recommendList[index]['price']}',
+               style: TextStyle(
+                 decoration: TextDecoration.lineThrough,
+                 color:Colors.grey
+               ),
+             )
+           ],
+         ),
+       ),
+     );
+   }
+ 
+   Widget _recommedList(){
+ 
+     return Container(
+       height: ScreenUtil().setHeight(330),
+       child: ListView.builder(
+         scrollDirection: Axis.horizontal,
+         itemCount: recommendList.length,
+         itemBuilder: (context,index){
+-          return _item(index);
++          return _item(context,index);
+         },
+       ),
+     );
+   }
 ```
 
 ### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#楼层加入跳转) 楼层加入跳转
 
 在楼层方法的`_goodsItem`中的`onTap`方法中加入下面的代码.
 
-```text
- Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
+```diff
+ //楼层商品组件
+ class FloorContent extends StatelessWidget {
+   final List floorGoodsList;
+ 
+   const FloorContent({Key key, this.floorGoodsList}) : super(key: key);
+ 
+   @override
+   Widget build(BuildContext context) {
+     return Container(
+       child: Column(
+         children: <Widget>[
+-          _firstRow(),
+-          _otherGoods()
++          _firstRow(context),
++          _otherGoods(context)
+         ],
+       ),
+     );
+   }
+ 
+-  Widget _firstRow() {
++  Widget _firstRow(context) {
+     return Row(
+       children: <Widget>[
+-        _goodsItem(floorGoodsList[0]),
++        _goodsItem(context, floorGoodsList[0]),
+         Column(
+           children: <Widget>[
+-            _goodsItem(floorGoodsList[1]),
+-            _goodsItem(floorGoodsList[2]),
++            _goodsItem(context, floorGoodsList[1]),
++            _goodsItem(context, floorGoodsList[2]),
+           ],
+         )
+       ],
+     );
+   }
+ 
+-  Widget _otherGoods(){
++  Widget _otherGoods(context){
+     return Row(
+       children: <Widget>[
+-        _goodsItem(floorGoodsList[3]),
+-        _goodsItem(floorGoodsList[4]),
++        _goodsItem(context, floorGoodsList[3]),
++        _goodsItem(context, floorGoodsList[4]),
+       ],
+     );
+   }
+ 
+-  Widget _goodsItem(Map goods) {
++  Widget _goodsItem(BuildContext context, Map goods) {
+     return Container(
+       width: ScreenUtil().setWidth(375),
+       child: InkWell(
+         onTap: (){
+-          print('点击了楼层商品');
++          Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
+         },
+         child: Image.network(goods['image']),
+       ),
+     );
+   }
+
 ```
 
 总结:我本来觉的这个小伙伴可以自己加入进来，但是还是有很多小伙伴遇到了麻烦，那为了能让每个人都做出视频中的效果，这节课作为一个补充。
