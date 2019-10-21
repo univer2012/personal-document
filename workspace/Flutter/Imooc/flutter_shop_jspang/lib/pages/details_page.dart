@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provide/provide.dart';
 import '../provide/details_info.dart';
+import './details_page/details_top_area.dart';
+
 
 class DetailsPage extends StatelessWidget {
 
@@ -16,6 +18,7 @@ class DetailsPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: (){
+            print('返回上一页');
             Navigator.pop(context);
           },
         ),
@@ -25,23 +28,27 @@ class DetailsPage extends StatelessWidget {
       body: FutureBuilder(
         future: _getBackInfo(context),
         builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return Container(
-              child: Column(
-                children: <Widget>[
-                  Text('商品ID：${goodsId}')
-                ],
-              ),
-            );
-          } else {
-            return Text('加载中.......');
+          if(snapshot.hasData){
+            return Stack(
+                    children: <Widget>[
+                      ListView(
+                        children: <Widget>[
+                            DetailsTopArea(),
+                            
+                          ],
+                        ),
+                      
+                    ],
+                  );      
+          }else{
+              return Text('加载中........');
           }
         },
       ),
     );
   }
 
-  Future _getBackInfo(BuildContext context) async {
+  Future _getBackInfo(BuildContext context)async{
     await Provide.value<DetailsInfoProvide>(context).getGoodsInfo(goodsId);
     //print('加载完成.......');
     return '完成加载';

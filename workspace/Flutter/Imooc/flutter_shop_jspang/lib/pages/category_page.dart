@@ -167,7 +167,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
               scrollDirection: Axis.horizontal,
               itemCount: childCategory.childCategoryList.length,
               itemBuilder: (context,index) {
-                print("右边小类的数量=${childCategory.childCategoryList.length}");
+                //print("右边小类的数量=${childCategory.childCategoryList.length}");
                 return _rightInkWell(index, childCategory.childCategoryList[index]);
               },
             ),

@@ -61,16 +61,6 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
 
 
             return EasyRefresh(
-              // refreshFooter: ClassicalFooter(
-              //   key: _footKey,
-              //   bgColor: Colors.white,
-              //   textColor: Colors.pink,
-              //   infoColor: Colors.pink,
-              //   showInfo: true,
-              //   noMoreText: '',
-              //   infoText: '加载中',
-              //   loadReadyText: '上拉加载...'
-              // ),
               refreshFooter: ClassicsFooter(
                 key: _footKey,
                 bgColor: Colors.white,
@@ -144,7 +134,6 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
             ///点击了火爆商品
             print('点击了火爆商品');
             Application.router.navigateTo(context, "/detail?id=${val['goodsId']}");
-            
           },
           child: Container(
             width: ScreenUtil().setWidth(372),
