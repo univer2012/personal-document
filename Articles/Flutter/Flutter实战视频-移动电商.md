@@ -5172,3 +5172,344 @@ class DetailsPage extends StatelessWidget {
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第44节：详细页-首屏自定义widget编写) 第44节：详细页_首屏自定义Widget编写
 
 这节课把详细页首屏独立出来，这样业务逻辑更具体，以后也会降低维护成本。最主要的是主UI文件不会变的臃肿不堪。
+
+###  建立文件和引入资源
+
+在`/lib/pages/`文件夹下面，新建一个文件夹，命名为`details_page`,然后进入文件夹，新建立文件`details_top_area.dart`。意思是商品详细页的顶部区域。
+
+然后用`import`引入如下文件:
+
+```text
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+```
+
+然后用快速生成的方法，新建一个`StatelessWidget`的类。
+
+```text
+class DetailsTopArea extends StatelessWidget {
+    
+}
+```
+
+先不管build方法，通过分析，我们把这个首屏页面进行一个组件方法的拆分。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品图片方法) 商品图片方法
+
+直接写一个内部方法，然后返回一个商品图片就可以了，代码如下:
+
+```dart
+  //商品图片
+  Widget _goodsImage(url){
+    return  Image.network(
+        url,
+        width:ScreenUtil().setWidth(740) 
+    );
+
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品名称方法) 商品名称方法
+
+```dart
+  //商品名称
+  Widget _goodsName(name){
+
+      return Container(
+        width: ScreenUtil().setWidth(730),
+        padding: EdgeInsets.only(left:15.0),
+        child: Text(
+          name,
+          maxLines: 1,
+          style: TextStyle(
+            fontSize: ScreenUtil().setSp(30)
+          ),
+        ),
+      );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编号方法) 编号方法
+
+```dart
+  Widget _goodsNum(num){
+    return  Container(
+      width: ScreenUtil().setWidth(730),
+      padding: EdgeInsets.only(left:15.0),
+      margin: EdgeInsets.only(top:8.0),
+      child: Text(
+        '编号:${num}',
+        style: TextStyle(
+          color: Colors.black26
+        ),
+      ),
+      
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#build方法编写) Build方法编写
+
+再build方法的最外层，使用了`Provde Widget`，目的就是当状态发生变化时页面也进行变化。在`Provide`的构造器里，声明了一个`goodsInfo`变量，再通过Provide得到变量。然后进行UI的组合编写。
+
+代码如下:
+
+```text
+  Widget build(BuildContext context) {
+    return Provide<DetailsInfoProvide>(
+
+      builder:(context,child,val){
+        var goodsInfo=Provide.value<DetailsInfoProvide>(context).goodsInfo.data.goodInfo;
+
+        if(goodsInfo != null){
+
+           return Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(2.0),
+                child: Column(
+                  children: <Widget>[
+                      _goodsImage( goodsInfo.image1),
+                      _goodsName( goodsInfo.goodsName ),  
+                      _goodsNum(goodsInfo.goodsSerialNumber),
+                      _goodsPrice(goodsInfo.presentPrice,goodsInfo.oriPrice)
+                  ],
+                ),
+              );
+
+        }else{
+          return Text('正在加载中......');
+        }
+      }
+    );
+  }
+```
+
+为了方便学习，现在给出总体代码：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+//商品详情页的首屏区域，包括图片、商品名称，商品价格，商品编号的UI展示
+class DetailsTopArea extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Provide<DetailsInfoProvide>(
+
+      builder:(context,child,val){
+        var goodsInfo=Provide.value<DetailsInfoProvide>(context).goodsInfo.data.goodInfo;
+
+        if(goodsInfo != null){
+
+           return Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(2.0),
+                child: Column(
+                  children: <Widget>[
+                      _goodsImage( goodsInfo.image1),
+                      _goodsName( goodsInfo.goodsName ),  
+                      _goodsNum(goodsInfo.goodsSerialNumber),
+                      _goodsPrice(goodsInfo.presentPrice,goodsInfo.oriPrice)
+                  ],
+                ),
+              );
+
+        }else{
+          return Text('正在加载中......');
+        }
+      }
+    );
+  }
+
+  //商品图片
+  Widget _goodsImage(url){
+    return  Image.network(
+        url,
+        width:ScreenUtil().setWidth(740) 
+    );
+
+  }
+
+  //商品名称
+  Widget _goodsName(name){
+
+      return Container(
+        width: ScreenUtil().setWidth(730),
+        padding: EdgeInsets.only(left:15.0),
+        child: Text(
+          name,
+          maxLines: 1,
+          style: TextStyle(
+            fontSize: ScreenUtil().setSp(30)
+          ),
+        ),
+      );
+  }
+
+  //商品编号
+
+  Widget _goodsNum(num){
+    return  Container(
+      width: ScreenUtil().setWidth(730),
+      padding: EdgeInsets.only(left:15.0),
+      margin: EdgeInsets.only(top:8.0),
+      child: Text(
+        '编号:${num}',
+        style: TextStyle(
+          color: Colors.black26
+        ),
+      ),
+      
+    );
+  }
+
+  //商品价格方法
+
+  Widget _goodsPrice(presentPrice,oriPrice){
+
+    return  Container(
+      width: ScreenUtil().setWidth(730),
+      padding: EdgeInsets.only(left:15.0),
+      margin: EdgeInsets.only(top:8.0),
+      child: Row(
+        children: <Widget>[
+          Text(
+            '￥${presentPrice}',
+            style: TextStyle(
+              color:Colors.pinkAccent,
+              fontSize: ScreenUtil().setSp(40),
+
+            ),
+
+          ),
+          Text(
+            '市场价:￥${oriPrice}',
+            style: TextStyle(
+              color: Colors.black26,
+              decoration: TextDecoration.lineThrough
+            ),
+                
+            
+            )
+        ],
+      ),
+    );
+
+  }
+  
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#加入到ui当中) 加入到UI当中
+
+现在这个首屏组件算是编写好，就可以在主UI文件中`lib/pages/details_page.dart`中进行引入，并展现出来了。
+
+```text
+import './details_page/details_top_area.dart';
+```
+
+引入后，在build方法里的column部件中进行加入下面的代码.
+
+```diff
+           body:FutureBuilder(
+             future: _getBackInfo(context) ,
+             builder: (context,snapshot){
+               if(snapshot.hasData){
+                   return Container(
+                    child: Column(
+                      children: <Widget>[
+-                      
++                        DetailsTopArea(),
+                      ],
+                    ),
+                  );       
+        
+               }else{
+                   return Text('加载中........');
+               }
+               }
+             )
+
+```
+
+总结:本节课的内容比较多，都是些Flutter页面制作的实战方法，希望小伙伴们动手制作，都能实现出完美的效果。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第45节：详细页-说明区域ui编写) 第45节：详细页_说明区域UI编写
+
+这节先把说明区域给制作出来，当然这部分也单独的独立出来。然后再自己学一个`tabBar Widget`。对！你没有听错，就是自己写，不用官方自带的。学习吗，就是要变态的折磨自己，现在不是流行盘吗。那我们也要有盘的心态，赏玩Flutter。
+
+###  说明区域制作
+
+首先在`lib/pages/details_page`文件夹下，建立`details_explain`文件。建立好后，先引入所需要的文件,代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+```
+
+然后生成一个`StatelessWidget`，然后就是编写UI样式了，整体艾玛如下。
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+class DetailsExplain extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       color:Colors.white,
+       margin: EdgeInsets.only(top: 10),
+       width: ScreenUtil().setWidth(750),
+       padding: EdgeInsets.all(10.0),
+       child: Text(
+         '说明：> 急速送达 > 正品保证',
+         style: TextStyle(
+           color:Colors.red,
+           fontSize:ScreenUtil().setSp(30) ),
+      )
+    );
+  }
+}
+```
+
+编写好以后，可以到`details_page.dart`里进行引用和使用，先进行引用。
+
+```dart
+import './details_page/details_explain.dart';
+```
+
+然后在build方法body区域的Column中引用，代码如下，关注关键代码即可。
+
+```diff
+body:FutureBuilder(
+  future: _getBackInfo(context) ,
+  builder: (context,snapshot){
+    if(snapshot.hasData){
+        return Container(
+          child:Column(
+                children: <Widget>[
+                    DetailsTopArea(),
++                    DetailsExplain(),
+                ],
+          )
+        );
+    }else{
+        return Text('加载中........');
+    }
+  }
+)
+```
+
+这步完成后就可以进行预览效果了，看看效果是不是自己想要的。
+
+总结：这节课内容很少，但绝对不是混集数，原计划的60集如果不够，我会把集数调多，保证把规划的知识点都讲了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第46节：详细页-自建tabbar-widget) 第46节：详细页_自建TabBar Widget
+
+这节课自己建一个`tabBar Widget`，而不用Flutter自带的`tabBar widget`。对！你没有听错，就是自己写，不用官方自带的。学习吗，就是要变态的折磨自己，现在不是流行盘吗。那我们也要有盘的心态，赏玩Flutter。这几天我也花了60大洋买了一个文玩核桃，准备学着盘完一下，磨一下放浪不羁的心性。
