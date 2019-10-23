@@ -6259,3 +6259,159 @@ class _CartPageState extends State<CartPage> {
 
 从这节课开始，就正式开始制作购物车部分的内容了。这也算是本套视频最复杂的一个章节，也是我们基本掌握Flutter实战技巧关键的一个章节，当然我会还是采用UI代码和业务逻辑完全分开的形式，让代码完全解耦。
 
+###  Provide的建立
+
+因为要UI和业务进行分离，所以还是需要先建立一个`Provide`文件,在`lib/provide/`文件夹下，建立一个`cart.dart`文件。
+
+先引入下面三个文件和包:
+
+```text
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
+```
+
+引进后建立一个类，并在里边写一个字符串变量（后期会换成对象）。代码如下：
+
+```text
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
+
+class CartProvide with ChangeNotifier{
+
+  String cartString="[]";
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#添加商品到购物车) 添加商品到购物车
+
+先来制作把商品添加到购物车的方法。思路是这样的，利用`shared_preferences`可以保存字符串的特点，我们先把`List`传换成字符串，然后操作的时候，我们再转换回来。说简单点就是持久化的只是一串字符串，然后需要操作的时候，我们变成List，操作List的每一项就可以了。
+
+在`cart.dart`中添加：
+
+```text
+  save(goodsId,goodsName,count,price,images) async{
+    //初始化SharedPreferences
+    SharedPreferences prefs = await  SharedPreferences.getInstance();
+    cartString=prefs.getString('cartInfo');  //获取持久化存储的值
+    //判断cartString是否为空，为空说明是第一次添加，或者被key被清除了。
+    //如果有值进行decode操作
+    var temp=cartString==null?[]:json.decode(cartString.toString());
+    //把获得值转变成List
+    List<Map> tempList= (temp as List).cast();
+    //声明变量，用于判断购物车中是否已经存在此商品ID
+    var isHave= false;  //默认为没有
+    int ival=0; //用于进行循环的索引使用
+    tempList.forEach((item){//进行循环，找出是否已经存在该商品
+      //如果存在，数量进行+1操作
+      if(item['goodsId']==goodsId){
+        tempList[ival]['count']=item['count']+1;
+        isHave=true;
+      }
+      ival++;
+    });
+    //  如果没有，进行增加
+    if(!isHave){
+      tempList.add({
+        'goodsId':goodsId,
+        'goodsName':goodsName,
+        'count':count,
+        'price':price,
+        'images':images
+      });
+    }
+    //把字符串进行encode操作，
+    cartString= json.encode(tempList).toString();
+    print(cartString);
+    prefs.setString('cartInfo', cartString);//进行持久化
+   
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#清空购物车) 清空购物车
+
+为了测试方便，再顺手写一个清空购物车的方法，这个还没有谨慎思考，只是为了测试使用。
+
+```text
+  remove() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    //prefs.clear();//清空键值对
+    prefs.remove('cartInfo');
+    print('清空完成-----------------');
+    notifyListeners();
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#注册全局依赖) 注册全局依赖
+
+到`main.dart`文件中注册全局依赖，先引入`cart.dart`文件.
+
+```text
+import './provide/cart.dart';
+```
+
+然后在main区域进行声明
+
+```text
+var cartProvide = CartProvide();
+```
+
+进行注入:
+
+```text
+..provide(Provider<CartProvide>.value(cartProvide))
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#业务逻辑加入到ui) 业务逻辑加入到UI
+
+在`details_bottom.dart`文件里，加入`Provide`，先进行引入。
+
+```text
+import 'package:provide/provide.dart';
+import '../../provide/cart.dart';
+import '../../provide/details_info.dart';
+```
+
+然后声明`provide`的save方法中需要的参数变量。
+
+```diff
+class DetailsBottom extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
++    var goodsInfo = Provide.value<DetailsInfoProvide>(context).goodsInfo.data.goodInfo;
++    var goodsId = goodsInfo.goodsId;
++    var goodsName = goodsInfo.goodsName;
++    var count = 1;
++    var price = goodsInfo.presentPrice;
++    var images = goodsInfo.image1;
+    return Container(
+      width: ScreenUtil().setWidth(750),
+      color: Colors.white,
+      height: ScreenUtil().setHeight(80),
+// ...
+```
+
+然后在“加入购物车”的按钮的`onTap`方法中，加入下面代码.
+
+```text
+onTap: ()async {
+  await Provide.value<CartProvide>(context).save(goodsID,goodsName,count,price,images);
+  },
+```
+
+先暂时把“马上购买”按钮方式清除购物车的方法，方便我们测试。
+
+```text
+onTap: ()async{
+  await Provide.value<CartProvide>(context).remove();
+},
+```
+
+做完这个写，我们就要查看一下效果了，看看是否可以真的持久化。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第52节：购物车-建立数据模型) 第52节：购物车_建立数据模型
+
+上节课使用了字符串进行持久化，然后输出的时候都是Map，但是在真实工作中为了减少异常的发生，都要进行模型化处理，就是把Map转变为对象。
