@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+import '../model/cartInfo.dart';
 
 class CartProvide with ChangeNotifier {
+  List<CartInfoMode> cartList = [];
   String cartString ="[]";
 
   //添加商品到购物车
@@ -29,17 +31,20 @@ class CartProvide with ChangeNotifier {
 
     //  如果没有，进行增加
     if (!isHave) {
-      tempList.add({
+      Map<String, dynamic> newGoods = {
         'goodsId': goodsId,
         'goodsName': goodsName,
         'count': count,
         'price': price,
         'images': images,
-      });
+      };
+      tempList.add(newGoods);
+      cartList.add(new CartInfoMode.fromJson(newGoods));
     }
     //把字符串进行encode操作，
     cartString = json.encode(tempList).toString();
     print(cartString);
+    print(cartList.toString());
     prefs.setString('cartInfo', cartString);
   }
 
@@ -50,6 +55,25 @@ class CartProvide with ChangeNotifier {
     //prefs.clear();  //清空键值对
     prefs.remove('cartInfo');
     print('清空完成------------');
+    notifyListeners();
+  }
+
+  //得到购物车中的商品
+  getCartInfo() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    //获得购物车中的商品,这时候是一个字符串
+    cartString = prefs.getString('cartInfo');
+    //把cartList进行初始化，防止数据混乱 
+    cartList = [];
+    //判断得到的字符串是否有值，如果不判断会报错
+    if (cartString == null) {
+      cartList = [];
+    } else {
+      List<Map> tempList = (json.decode(cartString.toString()) as List).cast();
+      tempList.forEach((item){
+        cartList.add(new CartInfoMode.fromJson(item));
+      });
+    }
     notifyListeners();
   }
 }

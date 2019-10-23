@@ -6368,7 +6368,7 @@ var cartProvide = CartProvide();
 
 在`details_bottom.dart`文件里，加入`Provide`，先进行引入。
 
-```text
+```dart
 import 'package:provide/provide.dart';
 import '../../provide/cart.dart';
 import '../../provide/details_info.dart';
@@ -6396,7 +6396,7 @@ class DetailsBottom extends StatelessWidget {
 
 然后在“加入购物车”的按钮的`onTap`方法中，加入下面代码.
 
-```text
+```dart
 onTap: ()async {
   await Provide.value<CartProvide>(context).save(goodsID,goodsName,count,price,images);
   },
@@ -6404,7 +6404,7 @@ onTap: ()async {
 
 先暂时把“马上购买”按钮方式清除购物车的方法，方便我们测试。
 
-```text
+```dart
 onTap: ()async{
   await Provide.value<CartProvide>(context).remove();
 },
@@ -6415,3 +6415,220 @@ onTap: ()async{
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第52节：购物车-建立数据模型) 第52节：购物车_建立数据模型
 
 上节课使用了字符串进行持久化，然后输出的时候都是Map，但是在真实工作中为了减少异常的发生，都要进行模型化处理，就是把Map转变为对象。
+
+###  建立模型文件
+
+得到的购物车数据，如下：
+
+```text
+{"goodsId":"2171c20d77c340729d5d7ebc2039c08d","goodsName":"五粮液52°500ml","count":1,"price":830.0,"images":"http://images.baixingliangfan.cn/shopGoodsImg/20181229/20181229211422_8507.jpg"}
+```
+
+拷贝到自动生成mode的页面上,网址是：
+
+> https://javiercbk.github.io/json_to_dart/
+
+生成后，在model文件夹下，建立一个新文件`cartInfo.dart`，然后把生成的mode文件进行改写，代码如下:
+
+```dart
+class CartInfoMode {
+  String goodsId;
+  String goodsName;
+  int count;
+  double price;
+  String images;
+
+  CartInfoMode(
+      {this.goodsId, this.goodsName, this.count, this.price, this.images});
+
+  CartInfoMode.fromJson(Map<String, dynamic> json) {
+    goodsId = json['goodsId'];
+    goodsName = json['goodsName'];
+    count = json['count'];
+    price = json['price'];
+    images = json['images'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['goodsId'] = this.goodsId;
+    data['goodsName'] = this.goodsName;
+    data['count'] = this.count;
+    data['price'] = this.price;
+    data['images'] = this.images;
+    return data;
+  }
+}
+```
+
+这个相对于以前其它Model文件简单很多。其实你完全可以手写练习一下。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#在provide里使用模型) 在provide里使用模型
+
+有了模型文件之后，需要先引入`provide`里，然后进行改造。引入刚刚写好的模型层文件。
+
+```text
+import '../model/cartInfo.dart';
+```
+
+在`provide`类的最上部新声明一个List变量，这就是购物车页面用于显示的购物车列表了.
+
+```dart
+List<CartInfoMode> cartList=[];
+```
+
+然后改造save方法，让他支持模型类，但是要注意，原来的字符串不要改变，因为`shared_preferences`不持支对象的持久化。
+
+```dart
+  save(goodsId,goodsName,count,price,images) async{
+    //初始化SharedPreferences
+    SharedPreferences prefs = await  SharedPreferences.getInstance();
+    cartString=prefs.getString('cartInfo');  //获取持久化存储的值
+    //判断cartString是否为空，为空说明是第一次添加，或者被key被清除了。
+    //如果有值进行decode操作
+    var temp=cartString==null?[]:json.decode(cartString.toString());
+    //把获得值转变成List
+    List<Map> tempList= (temp as List).cast();
+    //声明变量，用于判断购物车中是否已经存在此商品ID
+    var isHave= false;  //默认为没有
+    int ival=0; //用于进行循环的索引使用
+    tempList.forEach((item){//进行循环，找出是否已经存在该商品
+      //如果存在，数量进行+1操作
+      if(item['goodsId']==goodsId){
+        tempList[ival]['count']=item['count']+1;
+         //关键代码-----------------start
+        cartList[ival].count++;
+         //关键代码-----------------end
+        isHave=true;
+      }
+      ival++;
+    });
+    //  如果没有，进行增加
+    if(!isHave){
+       //关键代码-----------------start
+          Map<String, dynamic> newGoods={
+             'goodsId':goodsId,
+            'goodsName':goodsName,
+            'count':count,
+            'price':price,
+            'images':images
+          };
+          tempList.add(newGoods);
+          cartList.add(new CartInfoMode.fromJson(newGoods));
+       //关键代码-----------------end
+    }
+    //把字符串进行encode操作，
+    cartString= json.encode(tempList).toString();
+    print(cartString);
+    print(cartList.toString());
+    prefs.setString('cartInfo', cartString);//进行持久化
+    notifyListeners();
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#得到购物车中商品方法) 得到购物车中商品方法
+
+有了增加方法，我们还需要写一个得到购物车中的方法，现在就学习一下结合Model如何得到持久化的数据。
+
+```dart
+  //得到购物车中的商品
+  getCartInfo() async {
+     SharedPreferences prefs = await SharedPreferences.getInstance();
+     //获得购物车中的商品,这时候是一个字符串
+     cartString=prefs.getString('cartInfo'); 
+     //把cartList进行初始化，防止数据混乱 
+     cartList=[];
+     //判断得到的字符串是否有值，如果不判断会报错
+     if(cartString==null){
+       cartList=[];
+     }else{
+       List<Map> tempList= (json.decode(cartString.toString()) as List).cast();
+       tempList.forEach((item){
+          cartList.add(new CartInfoMode.fromJson(item));
+       });
+
+     }
+      notifyListeners();
+  }
+```
+
+有了这个方法，下节课就可以开心的布局页面了，再也不用在终端里看结果了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第53节：购物车-大体结构布局) 第53节：购物车_大体结构布局
+
+这节课终于可以不再忍受终端中查看结果的苦恼了，开始制作页面。其实在实际开发中也有很多这样的情况。就是先得到数据，再调试页面。
+
+
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#页面基本结构搭建) 页面基本结构搭建
+
+`cart_page.dart`先建立页面的基本接口，还是使用脚手架组件`Scaffold`来进行操作。代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provide/provide.dart';
+import '../provide/cart.dart';
+
+
+class CartPage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('购物车'),
+      ),
+      body:Text('测试')
+    );
+  }
+}
+```
+
+再body区域我们使用`Future Widget`，因为就算是本地持久化，还是有一个时间的，当然这个时间可能你肉眼看不见。不过这样控制台可能会把错误信息返回回来。
+
+```dart
+  body: FutureBuilder(
+    future:_getCartInfo(context),
+    builder: (context,snapshot){
+      List cartList=Provide.value<CartProvide>(context).cartList;
+      if(snapshot.hasData){
+       
+      }else{
+        return Text('正在加载');
+      }
+    },
+  ),
+  );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#future方法编写) Future方法编写
+
+使用了`Future`组件，自然需要一个返回Future的方法了，在这个方法里，我们使用`Provide`取出本地持久化的数据，然后进行变化。
+
+```dart
+  Future<String> _getCartInfo(BuildContext context) async{
+     await Provide.value<CartProvide>(context).getCartInfo();
+     return 'end';
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#用listview简单输出) 用ListView简单输出
+
+```dart
+return ListView.builder(
+  itemCount: cartList.length,
+  itemBuilder: (context,index){
+    return ListTile(
+      title:Text(cartList[index].goodsName)
+    );
+  },
+);
+```
+
+到这步后，就可以简单的进行预览，当然页面还是很丑的，下节课会继续进行美化。会把列表的子项单独拿出一个文件，这样会降低以后的维护成本。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第54节：购物车-商品列表子项组件编写) 第54节：购物车_商品列表子项组件编写
+
+上节课已经把购物车页面的大体结构编写好，并且也可以获得购物车中的商品列表信息了，但是页面依然丑陋，这节课继续上节课完成子项的UI美化.
