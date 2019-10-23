@@ -5934,3 +5934,179 @@ class DetailsWeb extends StatelessWidget {
 
 在详细页面底部是有一个操作栏一直在底部的，主要用于进行加入购物车、直接购买商品和进入购物车页面。制作这个只要需要使用`Stack`组件就可以了。
 
+###  Stack组件介绍
+
+Stack组件是层叠组件，里边的每一个子控件都是定位或者不定位，定位的子控件是被`Positioned Widget`进行包裹的。
+
+比如现在改写之前的`details_page.dart`文件，在`ListView`的外边包裹`Stack Widget`。修改的代码如下。
+
+```diff
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../provide/details_info.dart';
+import './details_page/details_top_area.dart';
+import './details_page/details_explain.dart';
+import './details_page/details_tabBar.dart';
+import './details_page/details_web.dart';
+
+
+
+class DetailsPage extends StatelessWidget {
+  final String goodsId;
+  DetailsPage(this.goodsId);
+  
+   @override
+  Widget build(BuildContext context) {
+    
+       return Scaffold(
+         appBar: AppBar(
+            leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                print('返回上一页');
+                Navigator.pop(context);
+              },
+              ),
+            title: Text('商品详细页'),
+          ),
+                     body:FutureBuilder(
+             future: _getBackInfo(context) ,
+             builder: (context,snapshot){
+               if(snapshot.hasData){
+-                  return Container(
+-                    child: ListView(
+-                      children: <Widget>[
+-                        DetailsTopArea(),
+-                        DetailsExplain(),
+-                        DetailsTabbar(),
+-                        DetailsWeb(),
+-                      ],
+-                    ),
+-                  );       
++                
++                  return Stack(
++                    children: <Widget>[
++                      ListView(
++                        children: <Widget>[
++                          DetailsTopArea(),
++                          DetailsExplain(),
++                          DetailsTabbar(),
++                          DetailsWeb(),
++                        ],
++                      ),
++                      Positioned(
++                        bottom: 0,
++                        left: 0,
++                        child:Text('测试'),
++                      )
++                    ],
++                  );
++                         
+               }else{
+                   return Text('加载中........');
+               }
+               }
+             )
+
+       );
+  }
+
+  Future _getBackInfo(BuildContext context )async{
+      await  Provide.value<DetailsInfoProvide>(context).getGoodsInfo(goodsId);
+      return '完成加载';
+  }
+
+}
+```
+
+修改完成后，就可以看一下效果了。是不是已经实现了层叠效果了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#制作底部工具栏) 制作底部工具栏
+
+这个工具栏我们使用Flutter自带的`bottomNavBar`是没办法实现的，所以，我们才用了Stack，把他固定在页面底部。然后我们还需要新建立一个页面，在`lib/pages/details_page`文件夹下，新建立一个`details_bottom.dart`文件。
+
+在这个文件中，我们才用了`Row`布局，然后使用`Containter`进行了精准的控制，最终实现了想要的结果。代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+class DetailsBottom extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+       width:ScreenUtil().setWidth(750),
+       color: Colors.white,
+       height: ScreenUtil().setHeight(80),
+       child: Row(
+         children: <Widget>[
+           InkWell(
+             onTap: (){},
+             child: Container(
+                width: ScreenUtil().setWidth(110) ,
+                alignment: Alignment.center,
+                child:Icon(
+                      Icons.shopping_cart,
+                      size: 35,
+                      color: Colors.red,
+                    ), 
+              ) ,
+           ),
+           InkWell(
+             onTap: (){},
+             child: Container(
+               alignment: Alignment.center,
+               width: ScreenUtil().setWidth(320),
+               height: ScreenUtil().setHeight(80),
+               color: Colors.green,
+               child: Text(
+                 '加入购物车',
+                 style: TextStyle(color: Colors.white,fontSize: ScreenUtil().setSp(28)),
+               ),
+             ) ,
+           ),
+           InkWell(
+             onTap: (){},
+             child: Container(
+               alignment: Alignment.center,
+               width: ScreenUtil().setWidth(320),
+               height: ScreenUtil().setHeight(80),
+               color: Colors.red,
+               child: Text(
+                 '马上购买',
+                 style: TextStyle(color: Colors.white,fontSize: ScreenUtil().setSp(28)),
+               ),
+             ) ,
+           ),
+         ],
+       ),
+    );
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#加入到页面中) 加入到页面中
+
+写完这个Widget后，需要在商品详细页`details_page.dart`里先用`import`引入。
+
+```text
+import './details_page/details_bottom.dart';
+```
+
+然后把组件放到`Positioned`里，代码如下：
+
+```diff
+Positioned(
+  bottom: 0,
+  left: 0,
+-  child:Text('测试'),
++  child: DetailsBottom(),
+)
+```
+
+总结:这节课完成后，我们商品详细页的大部分交互效果就已经完成了，下节课开始，我们要制作购物车的效果了。希望小伙伴们能耐心的把商品详细页的代码完成。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第50节-持久化-shared-preferences基础1) 第50节:持久化_shared_preferences基础1
+
+购物车中的一项功能是持久化，就是我们关掉APP，下次进入后，还是可以显示出我们放入购物车的商品。但是这些商品不和后台进行数据交互，前台如果使用`sqflite`又显得太重，还要懂SQL知识。所以在购物车页面我们采用`shared_preferences`来进行持久化，它是简单的键-值的操作。
