@@ -6109,4 +6109,153 @@ Positioned(
 
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第50节-持久化-shared-preferences基础1) 第50节:持久化_shared_preferences基础1
 
-购物车中的一项功能是持久化，就是我们关掉APP，下次进入后，还是可以显示出我们放入购物车的商品。但是这些商品不和后台进行数据交互，前台如果使用`sqflite`又显得太重，还要懂SQL知识。所以在购物车页面我们采用`shared_preferences`来进行持久化，它是简单的键-值的操作。
+购物车中的一项功能是持久化，就是我们关掉APP，下次进入后，还是可以显示出我们放入购物车的商品。但是这些商品不和后台进行数据交互，前台如果使用`sqlite`又显得太重，还要懂SQL知识。所以在购物车页面我们采用`shared_preferences`来进行持久化，它是简单的键-值的操作。
+
+> 单词：
+> preference [ˈprefrəns] n. 偏爱，倾向；优先权
+
+
+
+###  认识`shared_preferences`
+
+`shared_preferences`是一个Flutter官方出的插件，它的主要作用就是可以`key-value`的形式来进行APP可客户端的持久化。
+
+> GitHub地址:https://github.com/flutter/plugins/tree/master/packages/shared_preferences
+
+项目包依赖设置
+
+既然是插件，使用前需要在`pubspec.yaml`里进行依赖设置，直接在`dependencies`里加入下面的代码:
+
+```text
+shared_preferences: ^0.5.1
+```
+
+课程编写是`0.5.1`是最新版本，你学习时请使用最新版本。写完以来后，需要进行下载`package`。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#shared-preferences-增加方法) shared_preferences 增加方法
+
+先来看看`shared_preferences`如何进行增加所存储的`key-value`值。删除购物车页面以前的代码，在这个页面进行新知识的学习。
+
+先引入几个必要的包，使用`shared_preferences`前是要用import进行引入的。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+```
+
+然后用快速生成的方法`stful`，生成一个`StatefulWidget`类，起类名叫`CartPage`。在类里声明一个变量`testList`。
+
+```text
+  List<String> testList =[];
+```
+
+此时代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+
+class CartPage extends StatefulWidget {
+  @override
+  _CartPageState createState() => _CartPageState();
+}
+
+class _CartPageState extends State<CartPage> {
+
+  List<String> testList =[];
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+    );
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写增加方法) 编写增加方法
+
+我们在类里声明一个内部方法`add`,代码如下:
+
+```dart
+  void _add() async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      String temp="技术胖是最胖的!";
+      testList.add(temp);
+      prefs.setStringList('testInfo', testList);
+      _show();
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写显示方法) 编写显示方法
+
+```dart
+  void _show() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+        if(prefs.getStringList('testInfo')!=null){
+            testList=prefs.getStringList('testInfo');
+        }
+       
+    });
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写删除方法) 编写删除方法
+
+```dart
+ void _clear() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    //prefs.clear(); //全部清空
+    prefs.remove('testInfo'); //删除key键
+    setState((){
+      testList=[];
+    });
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#build方法编写-2) build方法编写
+
+有了这些方法，我们只要在build里加入一个`ListView`再加上两个按钮就可以了。
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    _show();  //每次进入前进行显示
+    return Container(
+
+      child:Column(
+        children: <Widget>[
+          Container(
+            height: 500.0,
+            child: ListView.builder(
+                itemCount:testList.length ,
+                itemBuilder: (context,index){
+                  return ListTile(
+                    title: Text(testList[index]),
+                  );
+                },
+              ) ,
+          ),
+         
+          RaisedButton(
+            onPressed: (){_add();},
+            child: Text('增加'),
+          ),
+          RaisedButton(
+            onPressed: (){_clear();},
+            child: Text('清空'),
+          ),
+        ],
+      )
+       
+    );
+  }
+```
+
+这样就完成了所有代码的编写，但这节课并不是为了做出什么效果，而是学会`shared_preferences`的增删改查操作。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第51节：购物车-添加商品) 第51节：购物车_添加商品
+
+从这节课开始，就正式开始制作购物车部分的内容了。这也算是本套视频最复杂的一个章节，也是我们基本掌握Flutter实战技巧关键的一个章节，当然我会还是采用UI代码和业务逻辑完全分开的形式，让代码完全解耦。
+
