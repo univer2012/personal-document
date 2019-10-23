@@ -5881,3 +5881,56 @@ children: <Widget>[
 
 这节主要制作一下商品详情和评论页面的切换交互效果，思路是利用`Provide`进行业务处理，然后根据状态进行判断返回不同的Widget。
 
+###  嵌套Provide组件
+
+在build返回里，的return部分，嵌套一个`Provide`组件。然后在builder里取得`isLieft`的值，如果值为`true`，那说明点击了商品详情，如果是`false`，那说明点击了评论的`tabBar`。
+
+全部代码如下:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class DetailsWeb extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    var goodsDetail=Provide.value<DetailsInfoProvide>(context).goodsInfo.data.goodInfo.goodsDetail;
+    
+   
+      return  Provide<DetailsInfoProvide>(
+        
+        builder: (context,child,val){
+           var isLeft = Provide.value<DetailsInfoProvide>(context).isLeft;
+           if(isLeft){
+             return  Container(
+                  child: Html(
+                    data:goodsDetail
+                  ),
+              );
+           }else{
+            return Container(
+              width: ScreenUtil().setWidth(750),
+              padding: EdgeInsets.all(10),
+              alignment: Alignment.center,
+              child:Text('暂时没有数据')
+            );
+           }
+        },
+      );
+      
+  }
+}
+```
+
+我看了小程序中，大部分都是没有商品评论的，而且商品评论的代码也没有什么新的知识点，所以这里就写成固定的内容。如果感兴趣的小伙伴可以自己完成此部分的编写。
+
+总结，到目前位置，详细页面的主要制作已经完成。只是还缺少一个底部的购买按钮。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第49节：详细页页-stack作底部操作栏) 第49节：详细页页_Stack作底部操作栏
+
+在详细页面底部是有一个操作栏一直在底部的，主要用于进行加入购物车、直接购买商品和进入购物车页面。制作这个只要需要使用`Stack`组件就可以了。
+
