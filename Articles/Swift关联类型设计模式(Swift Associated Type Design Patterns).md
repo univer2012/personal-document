@@ -82,6 +82,10 @@ protocol TableViewCell {
 }
 ```
 
+> Tips：
+>
+>  [Protocols with Associated Types](http://www.slideshare.net/natashatherobot/practical-protocols-with-associated-types) (PATs)  ：有关联类型的协议
+
 🤗我们可以很容易地实现协议采用(protocol adoption)，更好的说法是，在**Cocoa**术语中遵守协议，如下:
 
 ```swift
