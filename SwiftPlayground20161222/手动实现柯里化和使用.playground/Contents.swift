@@ -13,3 +13,4 @@ func add(_ a: Int) -> (Int) -> (Int) -> Int{
 let one = add(1)(2)(3)//add(1)
 //let result = one(2)(3)
 print(one)
+//打印结果：6
