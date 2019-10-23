@@ -3,7 +3,8 @@ import UIKit
 
 
 ///=====================================================================
-//文章1的demo
+///文章1的demo
+///来自：[associatedtype](https://www.jianshu.com/p/2e17af7858e0)
 
 #if false
 protocol Food { }
@@ -39,8 +40,8 @@ func isDangerous<T: Animal>(animal: T) -> Bool {
 #endif
 
 ///=====================================================================
-//文章2的demo
-
+///文章2的demo
+///来自：[Swift Associated Type Design Patterns](https://medium.com/@bobgodwinx/swift-associated-type-design-patterns-6c56c5b0a73a)
 
 #if false //原来的
 /// Rows `Interface`
