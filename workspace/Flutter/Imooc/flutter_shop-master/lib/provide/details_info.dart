@@ -14,11 +14,11 @@ class DetailsInfoProvide with ChangeNotifier{
 
   getGoodsInfo(String id )async{
     var formData = { 'goodId':id, };
-    print('formData=${formData}');
+    //print('formData=${formData}');
     await request('getGoodDetailById',formData:formData).then((val){
       var responseData= json.decode(val.toString());
       goodsInfo=DetailsModel.fromJson(responseData);
-      print('goodsInfo=${goodsInfo.data}');
+      //print('goodsInfo=${goodsInfo.data}');
       notifyListeners();
     });
    

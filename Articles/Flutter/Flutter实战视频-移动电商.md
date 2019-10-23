@@ -5779,3 +5779,105 @@ child:Column(
 
 在详细页里的商品详细部分，是由图片和HTML组成的。但是Flutter本身是不支持Html的解析的，所以需要找个轮子，我之前用的是`flutter_webView_plugin`，但是效果不太好。经过大神网友推荐，最终选择了`flutter_html`.
 
+###  首次进入详细页Bug处理
+
+在第一次进入进入详细页的时候，会有错误出现，页面也会变成一篇红色，当然这只是一瞬间。所以很多小伙伴没有看出来，但是如果你注意控制台，就会看出这个错误提示。
+
+这个问题的主要原因是没有使用异步方法，所以在Provide里使用一下异步就可以解决。代码如下:
+
+```text
+  //从后台获取商品数据
+  getGoodsInfo(String id) async{
+    var formData = {'goodId':id};
+    await request('getGoodDetailById',formData:formData).then((val){
+      var responseData= json.decode(val.toString());
+      goodsInfo = DetailsModle.fromJson(responseData);
+      notifyListeners();
+
+    });
+
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#flutter-html介绍) flutter_html介绍
+
+`flutter_html`是一个可以解析静态html标签的Flutter Widget，现在支持超过70种不同的标签。
+
+> github地址：https://github.com/Sub6Resources/flutter_html
+
+也算是目前支持html标签比较多的插件了，先进行插件的依赖注册，打开`pubspec.yaml`文件。在dependencies里边，加入下面的代码:
+
+```text
+flutter_html: ^0.9.6
+```
+
+如果你不是跟着教程走的，你需要到github上看一下最新的版本，然后使用最新的版本。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#代码的编写) 代码的编写
+
+当依赖和包下载好以后，直接在`lib/pages/details_page`文件夹下建立一个`detals_web.dart`文件。
+
+建立好后，先引入依赖包。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+import 'package:flutter_html/flutter_html.dart';
+```
+
+然后写一个`StatelessWidget`，在他的build方法里，声明一个变量goodsDetail，然后用`Provide`的获得值。有了值之后直接使用Html Widget 就可以显示出来了。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+import 'package:flutter_html/flutter_html.dart';
+
+class DetailsWeb extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    var goodsDetail=Provide.value<DetailsInfoProvide>(context).goodsInfo.data.goodInfo.goodsDetail;
+    return Container(
+        child: Html(
+          data:goodsDetail
+        ),
+    
+      
+    );
+  }
+}
+```
+
+这节课我们先不写什么业务逻辑，只是学习一下这个组件就可以。下节课我们在完善具体的业务逻辑。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#加入到details-page-dart种) 加入到`details_page.dart`种
+
+先引入刚才编写的`details_web.dart`文件。
+
+```text
+import './details_page/details_web.dart';
+```
+
+然后在`column`的`children`数组中加入`DetailsWeb()`。
+
+```text
+children: <Widget>[
+    DetailsTopArea(),
+    DetailsExplain(),
+    DetailsTabBar(),
+    //关键代码-------------start
+    DetailsWeb()
+    //关键代码-------------end
+],
+```
+
+如果出现溢出问题，那直接把`Column`换成`ListView`就可以了。
+
+这些都做完了，就可以简单看一下效果了，应该还是很完美的。那需要注意的是，这只是为了讲课每节课都有一个节点，以后还会改动UI代码和业务逻辑增加。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第48节：详细页-详情和评论切换效果制作) 第48节：详细页_详情和评论切换效果制作
+
+这节主要制作一下商品详情和评论页面的切换交互效果，思路是利用`Provide`进行业务处理，然后根据状态进行判断返回不同的Widget。
+
