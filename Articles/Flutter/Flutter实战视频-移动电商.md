@@ -5513,3 +5513,269 @@ body:FutureBuilder(
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第46节：详细页-自建tabbar-widget) 第46节：详细页_自建TabBar Widget
 
 这节课自己建一个`tabBar Widget`，而不用Flutter自带的`tabBar widget`。对！你没有听错，就是自己写，不用官方自带的。学习吗，就是要变态的折磨自己，现在不是流行盘吗。那我们也要有盘的心态，赏玩Flutter。这几天我也花了60大洋买了一个文玩核桃，准备学着盘完一下，磨一下放浪不羁的心性。
+
+###  tabBar编写技巧
+
+在`lib/pages/details_page`文件夹下，新建一个`details_tabbar.dart`文件。
+
+这个文件主要是写bar区域的UI和交互效果，就算这样简单的业务逻辑，也进行了分离。
+
+先打开`provide`文件夹下的`details_info.dart`文件，进行修改。需要增加两个变量,用来控制那个Tab被选中。
+
+```text
+   bool isLeft = true;
+   bool isRight = false;
+```
+
+然后在文件的最下方加入一个方法，用来改变选中的值，这个方法先这样写，以后会随着业务的增加而继续补充和改变.
+
+```text
+  //改变tabBar的状态
+  changeLeftAndRight(String changeState){
+    if(changeState=='left'){
+      isLeft=true;
+      isRight=false;
+    }else{
+      isLeft=false;
+      isRight=true;
+    }
+     notifyListeners();
+
+  }
+```
+
+Provide文件编写好以后，就可以打开刚才建立好的`details_tabbar.dart`文件进行编写了。
+
+先把所需要的文件进行引入：
+
+```text
+mport 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+```
+
+然后用快捷方法生成一个`StatelessWidget`,在build方法的下方，写入一个返回Widget的方法，代码如下：
+
+```text
+  Widget _myTabBarLeft(BuildContext context,bool isLeft){
+    return InkWell(
+      onTap: (){
+      
+        Provide.value<DetailsInfoProvide>(context).changeLeftAndRight('left');
+      },
+      child: Container(
+       
+        padding:EdgeInsets.all(10.0),
+        alignment: Alignment.center,
+        width: ScreenUtil().setWidth(375),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(
+              width: 1.0,
+              color: isLeft?Colors.pink:Colors.black12 
+            )
+          )
+        ),
+        child: Text(
+          '详细',
+          style: TextStyle(
+            color:isLeft?Colors.pink:Colors.black 
+          ),
+        ),
+      ),
+    );
+  }
+```
+
+这个方法就是详细的bar，然后再复制这段代码，修改成右边的bar。
+
+```dart
+Widget _myTabBarRight(BuildContext context,bool isRight){
+    return InkWell(
+      onTap: (){
+      
+        Provide.value<DetailsInfoProvide>(context).changeLeftAndRight('right');
+      },
+      child: Container(
+         
+        padding:EdgeInsets.all(10.0),
+        alignment: Alignment.center,
+        width: ScreenUtil().setWidth(375),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(
+              width: 1.0,
+              color: isRight?Colors.pink:Colors.black12 
+            )
+          )
+        ),
+        child: Text(
+          '评论',
+          style: TextStyle(
+            color:isRight?Colors.pink:Colors.black 
+          ),
+        ),
+      ),
+    );
+  }
+```
+
+两个方法当然是一个合并成一个方法的，这样会放到所有代码实现之后，我们进行代码的优化。现在要作的是把build方法写好。代码如下：
+
+```dart
+Widget build(BuildContext context) {
+return Provide<DetailsInfoProvide>(
+  builder: (context,child,val){
+    var isLeft= Provide.value<DetailsInfoProvide>(context).isLeft;
+    var isRight =Provide.value<DetailsInfoProvide>(context).isRight;
+    
+    return Container(
+      margin: EdgeInsets.only(top: 15.0),
+      child: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              _myTabBarLeft(context,isLeft),
+              _myTabBarRight(context,isRight)
+            ],
+          ),
+        ],
+
+
+      ),
+      
+    ) ;
+  },
+  
+); 
+}
+```
+
+为了方便你学习，这里给出所有的`details_tabbar.dart`文件，代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provide/provide.dart';
+import '../../provide/details_info.dart';
+
+class DetailsTabBar extends StatelessWidget {
+  
+    Widget build(BuildContext context) {
+    return Provide<DetailsInfoProvide>(
+      builder: (context,child,val){
+        var isLeft= Provide.value<DetailsInfoProvide>(context).isLeft;
+        var isRight =Provide.value<DetailsInfoProvide>(context).isRight;
+       
+        return Container(
+          margin: EdgeInsets.only(top: 15.0),
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  _myTabBarLeft(context,isLeft),
+                  _myTabBarRight(context,isRight)
+                ],
+              ),
+            ],
+
+
+          ),
+          
+        ) ;
+      },
+      
+    ); 
+  }
+
+  Widget _myTabBarLeft(BuildContext context,bool isLeft){
+    return InkWell(
+      onTap: (){
+      
+        Provide.value<DetailsInfoProvide>(context).changeLeftAndRight('left');
+      },
+      child: Container(
+       
+        padding:EdgeInsets.all(10.0),
+        alignment: Alignment.center,
+        width: ScreenUtil().setWidth(375),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(
+              width: 1.0,
+              color: isLeft?Colors.pink:Colors.black12 
+            )
+          )
+        ),
+        child: Text(
+          '详细',
+          style: TextStyle(
+            color:isLeft?Colors.pink:Colors.black 
+          ),
+        ),
+      ),
+    );
+  }
+  Widget _myTabBarRight(BuildContext context,bool isRight){
+    return InkWell(
+      onTap: (){
+      
+        Provide.value<DetailsInfoProvide>(context).changeLeftAndRight('right');
+      },
+      child: Container(
+         
+        padding:EdgeInsets.all(10.0),
+        alignment: Alignment.center,
+        width: ScreenUtil().setWidth(375),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(
+              width: 1.0,
+              color: isRight?Colors.pink:Colors.black12 
+            )
+          )
+        ),
+        child: Text(
+          '评论',
+          style: TextStyle(
+            color:isRight?Colors.pink:Colors.black 
+          ),
+        ),
+      ),
+    );
+  }
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#把tabbar引入项目) 把TabBar引入项目
+
+打开`details_page.dart`文件，然后把`detals_tabbar.dart`文件进行引入。
+
+```text
+import './details_page/details_tabBar.dart';
+```
+
+然后再coloumn部分加入就可以了
+
+```dart
+child:Column(
+      children: <Widget>[
+          DetailsTopArea(),
+          DetailsExplain(),
+          DetailsTabBar()
+      ],
+)
+```
+
+总结:这节的内容还是比较多的，重点是如何不用Flutter自带UI自己实现页面交互效果。希望小伙伴们多多练习。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第47节：详细页-flutter-html插件的使用) 第47节：详细页_Flutter_html插件的使用
+
+在详细页里的商品详细部分，是由图片和HTML组成的。但是Flutter本身是不支持Html的解析的，所以需要找个轮子，我之前用的是`flutter_webView_plugin`，但是效果不太好。经过大神网友推荐，最终选择了`flutter_html`.
+
