@@ -6632,3 +6632,246 @@ return ListView.builder(
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第54节：购物车-商品列表子项组件编写) 第54节：购物车_商品列表子项组件编写
 
 上节课已经把购物车页面的大体结构编写好，并且也可以获得购物车中的商品列表信息了，但是页面依然丑陋，这节课继续上节课完成子项的UI美化.
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写购物车单项方法) 编写购物车单项方法
+
+为了以后维护方便，我们还是采用单独编写的方式，把购物车里边的每一个子项统一作一个组件出来。
+
+现在`lib\pages`下建立一个新文件夹`cart_page`，然后在新文件夹下面家里一个`cart_item.dart`文件。先引入几个必要的文件.
+
+```text
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../model/cartInfo.dart';
+```
+
+然后声明一个stateLessWidget 类，名字叫`CartItem`并设置接收参数，这里的接收参数就是`cartInfo`对象，也就是每个购物车商品的子项。代码如下:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../model/cartInfo.dart';
+
+class CartItem extends StatelessWidget {
+  final CartInfoMode item;
+  CartItem(this.item);
+
+  @override
+  Widget build(BuildContext context) {
+    print(item);
+    return Container(
+        margin: EdgeInsets.fromLTRB(5.0,2.0,5.0,2.0),
+        padding: EdgeInsets.fromLTRB(5.0,10.0,5.0,10.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(width:1,color:Colors.black12)
+          )
+        ),
+        child: Row(
+          children: <Widget>[
+          
+          ],
+        ),
+      );
+  }
+
+
+
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写多选按钮方法) 编写多选按钮方法
+
+```dart
+//多选按钮
+  Widget _cartCheckBt(item){
+    return Container(
+      child: Checkbox(
+        value: true,
+        activeColor:Colors.pink,
+        onChanged: (bool val){},
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写商品图片方法) 编写商品图片方法
+
+```dart
+//商品图片 
+  Widget _cartImage(item){
+    
+    return Container(
+      width: ScreenUtil().setWidth(150),
+      padding: EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+        border: Border.all(width: 1,color:Colors.black12)
+      ),
+      child: Image.network(item.images),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写商品名称方法) 编写商品名称方法
+
+```dart
+//商品名称
+  Widget _cartGoodsName(item){
+    return Container(
+      width: ScreenUtil().setWidth(300),
+      padding: EdgeInsets.all(10),
+      alignment: Alignment.topLeft,
+      child: Column(
+        children: <Widget>[
+          Text(item.goodsName)
+        ],
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写商品价格方法) 编写商品价格方法
+
+```dart
+//商品价格
+  Widget _cartPrice(item){
+
+    return Container(
+        width:ScreenUtil().setWidth(150) ,
+        alignment: Alignment.centerRight,
+        
+        child: Column(
+          children: <Widget>[
+            Text('￥${item.price}'),
+            Container(
+              child: InkWell(
+                onTap: (){},
+                child: Icon(
+                  Icons.delete_forever,
+                  color: Colors.black26,
+                  size: 30,
+                ),
+              ),
+            )
+          ],
+        ),
+      );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#进行整合) 进行整合
+
+这些组件写好以后，我们可以进行一个整合。
+
+```dart
+child: Row(
+  children: <Widget>[
+    _cartCheckBt(item),
+    _cartImage(item),
+    _cartGoodsName(item),
+    _cartPrice(item)
+  ],
+),
+```
+
+为了方便学习，全部代码如下：
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../model/cartInfo.dart';
+
+class CartItem extends StatelessWidget {
+  final CartInfoMode item;
+  CartItem(this.item);
+
+  @override
+  Widget build(BuildContext context) {
+    print(item);
+    return Container(
+        margin: EdgeInsets.fromLTRB(5.0,2.0,5.0,2.0),
+        padding: EdgeInsets.fromLTRB(5.0,10.0,5.0,10.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(width:1,color:Colors.black12)
+          )
+        ),
+        child: Row(
+          children: <Widget>[
+            _cartCheckBt(item),
+            _cartImage(item),
+            _cartGoodsName(item),
+            _cartPrice(item)
+          ],
+        ),
+      );
+  }
+  //多选按钮
+  Widget _cartCheckBt(item){
+    return Container(
+      child: Checkbox(
+        value: true,
+        activeColor:Colors.pink,
+        onChanged: (bool val){},
+      ),
+    );
+  }
+  //商品图片 
+  Widget _cartImage(item){
+    
+    return Container(
+      width: ScreenUtil().setWidth(150),
+      padding: EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+        border: Border.all(width: 1,color:Colors.black12)
+      ),
+      child: Image.network(item.images),
+    );
+  }
+  //商品名称
+  Widget _cartGoodsName(item){
+    return Container(
+      width: ScreenUtil().setWidth(300),
+      padding: EdgeInsets.all(10),
+      alignment: Alignment.topLeft,
+      child: Column(
+        children: <Widget>[
+          Text(item.goodsName)
+        ],
+      ),
+    );
+  }
+
+  //商品价格
+  Widget _cartPrice(item){
+
+    return Container(
+        width:ScreenUtil().setWidth(150) ,
+        alignment: Alignment.centerRight,
+        
+        child: Column(
+          children: <Widget>[
+            Text('￥${item.price}'),
+            Container(
+              child: InkWell(
+                onTap: (){},
+                child: Icon(
+                  Icons.delete_forever,
+                  color: Colors.black26,
+                  size: 30,
+                ),
+              ),
+            )
+          ],
+        ),
+      );
+  }
+
+}
+```
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第55节-购物车-制作底部结算栏的ui) 第55节:购物车_制作底部结算栏的UI
+
+这节课主要布局一下底部操作栏。这个使用了`Stack Widget`，由于以前视频中学过，所以做起来也就没那么难了，但是还是有很多样式需要我们书写，以保证完成一个美观的购物车页面的。
