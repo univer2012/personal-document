@@ -7530,3 +7530,187 @@ import '../../provide/cart.dart';
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第59节：购物车-计算商品价格和数量) 第59节：购物车_计算商品价格和数量
 
 购物车中都有自动计算商品价格和商品数量的功能，这节课我们就把这两个小功能实现一下。
+
+###  增加Provide变量
+
+在`lib/provide/cart.dart`文件的类头部，增加总价格`allPrice`和总商品数量`allGoodsCount`两个变量.
+
+```diff
+class CartProvide with ChangeNotifier {
+  List<CartInfoMode> cartList = [];
+  String cartString ="[]";
+
++  double allPrice = 0;    //总价格
++  int allGoodsCount = 0;  //商品总数量
++
+  //添加商品到购物车
+//... ...
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改getcartinfo（）方法) 修改`getCartInfo（）`方法
+
+主要是在循环是累计增加数量和价格，这里给出全部增加的代码，并标注了修改部分。
+
+```diff
+  getCartInfo() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    //获得购物车中的商品,这时候是一个字符串
+    cartString = prefs.getString('cartInfo');
+    //把cartList进行初始化，防止数据混乱 
+    cartList = [];
+    //判断得到的字符串是否有值，如果不判断会报错
+    if (cartString == null) {
+      cartList = [];
+    } else {
+      List<Map> tempList = (json.decode(cartString.toString()) as List).cast();
++
++      allPrice = 0;
++      allGoodsCount = 0;
+
+      tempList.forEach((item){
++        if (item['isCheck']) {
++          allPrice += (item['count'] * item['price']);
++          allGoodsCount += item['count'];
++        }
+        
+        cartList.add(new CartInfoMode.fromJson(item));
+      });
+    }
+    notifyListeners();
+  }
+
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改ui界面-显示结果) 修改UI界面 显示结果
+
+有了业务逻辑，就应该可以正常的显示出界面效果了。但是需要把原来我们写死的值，都改成动态的。
+
+打开`lib/pages/cart_page/cart_bottom.dart`文件，先用`import`引入`provide package`
+
+```text
+import 'package:provide/provide.dart';
+import '../../provide/cart.dart';
+```
+
+然后把底部的三个区域方法都加上`context`上下文参数,因为`Provide`的使用，必须有上下文参数。
+
+```diff
+     @override
+   Widget build(BuildContext context) {
+     return Container(
+       margin: EdgeInsets.all(5.0),
+       color: Colors.white,
+       width: ScreenUtil().setWidth(750),
+       child: Row(
+         children: <Widget>[
+           selectAllBtn(),
+-          allPriceArea(),
+-          goButton(),
++          allPriceArea(context),
++          goButton(context),
+         ],
+       ),
+     );
+   }
+
+```
+
+然后在两个方法中都从`Provide`里动态获取变量，就可以实现效果了。
+
+合计区域的方法代码：
+
+```diff
+     //合计区域
+-  Widget allPriceArea() {
++  Widget allPriceArea(context) {
++
++    double allPrice = Provide.value<CartProvide>(context).allPrice;
++
+     return Container(
+       width: ScreenUtil().setWidth(430),
+       alignment: Alignment.centerRight,
+       child: Column(
+         children: <Widget>[
+           Row(
+             children: <Widget>[
+               Container(
+                 alignment: Alignment.centerRight,
+                 width: ScreenUtil().setWidth(280),
+                 child: Text(
+                   '合计：',
+                   style: TextStyle(
+                     fontSize: ScreenUtil().setSp(36)
+                   ),
+                 ),
+               ),
+               Container(
+                 alignment: Alignment.centerLeft,
+                 width: ScreenUtil().setWidth(150),
+                 child: Text(
+-                  '￥1922',
++                  '￥${allPrice}',
+                   style: TextStyle(
+                     fontSize: ScreenUtil().setSp(36),
+                     color: Colors.red,
+                   ),
+                 ),
+               ),
+             ],
+           ),
+           Container(
+             width: ScreenUtil().setWidth(430),
+             alignment: Alignment.centerRight,
+             child: Text(
+               '满10元免配送费，预购免配送费',
+               style: TextStyle(
+                 color: Colors.black38,
+                 fontSize: ScreenUtil().setSp(22),
+               ),
+             ),
+           ),
+         ],
+       ),
+     );
+   }
+
+```
+
+结算按钮区域
+
+```diff
+   //结算按钮
+-  Widget goButton() {
++  Widget goButton(context) {
++
++    int allGoodsCount = Provide.value<CartProvide>(context).allGoodsCount;
++
+     return Container(
+       width: ScreenUtil().setWidth(160),
+       padding: EdgeInsets.only(left: 10),
+       child: InkWell(
+         onTap: (){},
+         child: Container(
+           padding: EdgeInsets.all(10.0),
+           alignment: Alignment.center,
+           decoration: BoxDecoration(
+             color: Colors.red,
+             borderRadius: BorderRadius.circular(3.0)
+           ),
+           child: Text(
+-            '结算(6)',
++            '结算(${allGoodsCount})',
+             style: TextStyle(
+               color: Colors.white,
+             ),
+           ),
+         ),
+       ),
+     );
+   }
+```
+
+这步完成后，就应该可以正常动态显示购物车中的商品数量和商品价格了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第60节：购物车-商品选中功能制作) 第60节：购物车_商品选中功能制作
+
+在购物车里是有选择和取消选择，还有全选的功能按钮的。当我们选择时，价格和数量都是跟着自动计算的，列表也是跟着刷新的。这节课主要完成单选和全选按钮的交互效果。

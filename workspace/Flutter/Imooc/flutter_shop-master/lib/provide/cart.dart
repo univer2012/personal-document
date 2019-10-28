@@ -7,6 +7,9 @@ class CartProvide with ChangeNotifier {
   List<CartInfoMode> cartList = [];
   String cartString ="[]";
 
+  double allPrice = 0;    //总价格
+  int allGoodsCount = 0;  //商品总数量
+
   //添加商品到购物车
   save(goodsId, goodsName, count, price, images) async {
     //初始化SharedPreferences
@@ -72,7 +75,16 @@ class CartProvide with ChangeNotifier {
       cartList = [];
     } else {
       List<Map> tempList = (json.decode(cartString.toString()) as List).cast();
+
+      allPrice = 0;
+      allGoodsCount = 0;
+
       tempList.forEach((item){
+        if (item['isCheck']) {
+          allPrice += (item['count'] * item['price']);
+          allGoodsCount += item['count'];
+        }
+        
         cartList.add(new CartInfoMode.fromJson(item));
       });
     }
