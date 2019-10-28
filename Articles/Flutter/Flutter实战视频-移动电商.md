@@ -6875,3 +6875,401 @@ class CartItem extends StatelessWidget {
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第55节-购物车-制作底部结算栏的ui) 第55节:购物车_制作底部结算栏的UI
 
 这节课主要布局一下底部操作栏。这个使用了`Stack Widget`，由于以前视频中学过，所以做起来也就没那么难了，但是还是有很多样式需要我们书写，以保证完成一个美观的购物车页面的。
+
+###  建立底部结算栏页面
+
+在`lib/pages/cart_page`文件夹下，新建一个`cart_bottom.dart`文件。文件建立好以后，先引入下面的基础`package`。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+```
+
+引入完成后，用快捷的方式建立一个`StatelessWidget`，建立后，我们使用`Row`来进行总体布局，并给`Container`一些必要的修饰.代码如下:
+
+```dart
+class CartBottom extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(5.0),
+      color: Colors.white,
+      width: ScreenUtil().setWidth(750),
+      child: Row(
+        children: <Widget>[
+        
+        ],
+      ),
+    );
+  }
+}
+```
+
+这就完成了一个底部结算栏的大体结构确定，大体结构完成后，我们还是把里边的细节，拆分成不同的方法返回对象的组件。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#全选按钮方法) 全选按钮方法
+
+先来制作全选按钮方法，这个外边采用`Container`，里边使用了一个Row，这样能很好的完成横向布局的需求.
+
+```dart
+  //全选按钮
+  Widget selectAllBtn(){
+    return Container(
+      child: Row(
+        children: <Widget>[
+          Checkbox(
+            value: true,
+            activeColor: Colors.pink,
+            onChanged: (bool val){},
+          ),
+          Text('全选')
+        ],
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#合计区域方法) 合计区域方法
+
+合计区域由于布局对齐方式比较复杂，所以这段代码虽然很简单，但是代码设计的样式比较多，需要你有很好的样式编写能力.代码如下：
+
+```dart
+  // 合计区域
+  Widget allPriceArea(){
+
+    return Container(
+      width: ScreenUtil().setWidth(430),
+      alignment: Alignment.centerRight,
+      child: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.centerRight,
+                width: ScreenUtil().setWidth(280),
+                child: Text(
+                  '合计:',
+                  style:TextStyle(
+                    fontSize: ScreenUtil().setSp(36)
+                  )
+                ), 
+              ),
+              Container(
+                 alignment: Alignment.centerLeft,
+                width: ScreenUtil().setWidth(150),
+                child: Text(
+                  '￥1922',
+                  style:TextStyle(
+                    fontSize: ScreenUtil().setSp(36),
+                    color: Colors.red,
+                  )
+                ),
+                
+              )
+             
+              
+            ],
+          ),
+          Container(
+            width: ScreenUtil().setWidth(430),
+            alignment: Alignment.centerRight,
+            child: Text(
+              '满10元免配送费，预购免配送费',
+              style: TextStyle(
+                color: Colors.black38,
+                fontSize: ScreenUtil().setSp(22)
+              ),
+            ),
+          )
+          
+        ],
+      ),
+    );
+
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#结算按钮方法) 结算按钮方法
+
+这个方法里边的按钮，我们并没有使用`Flutter Button Widget` 而是使用`InkWell`自己制作一个组件。这样作能很好的控制按钮的形状，还可以解决水波纹的问题，一举两得。代码如下:
+
+```dart
+//结算按钮
+  Widget goButton(){
+    
+    return Container(
+      width: ScreenUtil().setWidth(160),
+      padding: EdgeInsets.only(left: 10),
+      child:InkWell(
+        onTap: (){},
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+             color: Colors.red,
+             borderRadius: BorderRadius.circular(3.0)
+          ),
+          child: Text(
+            '结算(6)',
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+        ),
+      ) ,
+    );
+    
+    
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#加入到页面中-2) 加入到页面中
+
+组件样式基本都各自完成后，接下来就是组合和加入到页面中了，我们先把个个方法组合到底部结算区域,也就是放到`build`方法里。
+
+```dart
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(5.0),
+      color: Colors.white,
+      width: ScreenUtil().setWidth(750),
+      child: Row(
+        children: <Widget>[
+          selectAllBtn(),
+          allPriceArea(),
+          goButton()
+        ],
+      ),
+    );
+  }
+```
+
+这步完成后就是到`lib/pages/cart_page.dart`文件中，加入底部结算栏的操作了，这里我们需要使用`Stack Widget`组件。
+
+首先需要引入`cart_bottom.dart`。
+
+```text
+import './cart_page/cart_bottom.dart';
+```
+
+然后改写`FutureBuilder Widget`里边的`builder`方法，这时候返回的是一个`Stack Widget`。代码如下：
+
+```diff
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../provide/cart.dart';
+import './cart_page/cart_item.dart';
+import './cart_page/cart_bottom.dart';
+
+
+
+class CartPage extends StatelessWidget {
+  	 @override
+     Widget build(BuildContext context) {
+     _show();  //每次进入前进行显示
+     return Scaffold(
+       appBar: AppBar(
+         title: Text('购物车'),
+       ),
+       body:FutureBuilder(
+         future: _getCartInfo(context),
+         builder: (context, snapshot) {
+           List cartList = Provide.value<CartProvide>(context).cartList;
+-          if (snapshot.hasData) {
+-            return ListView.builder(
+-              itemCount: cartList.length,
+-              itemBuilder: (context, index) {
+-                return ListTile(
+-                  title: Text(cartList[index].goodsName),
+-                );
+-              },
++          if (snapshot.hasData && cartList != null) {
++            return Stack(
++              children: <Widget>[
++                ListView.builder(
++                  itemCount: cartList.length,
++                  itemBuilder: (context, index) {
++                    return CartItem(cartList[index]);
++                  },
++                ),
++                Positioned(
++                  bottom: 0,
++                  left: 0,
++                  child: CartBottom(),
++                ),
++              ],
+             );
+           } else {
+             return Text('正在加载');
+           }
+         },
+       ),
+     );
+   }
+
+
+  Future<String> _getCartInfo(BuildContext context) async{
+     await Provide.value<CartProvide>(context).getCartInfo();
+     return 'end';
+  }
+
+  
+}
+```
+
+这步做完之后，就可以进行预览了。相信小伙伴们都可以得到满意的效果，其实学到这里，你应该有自己布局任何页面的能力，你可以试着把这个页面布局成自己想要的样子。下节课制作我们的数量加减组件。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第56节：购物车-制作数量加减按钮ui) 第56节：购物车_制作数量加减按钮UI
+
+购物车的UI界面已经基本完成了，只差最后一个数量加载的部分没有进行布局，这节课就用几分钟时间，把这个部分的布局制作完成。
+
+###  建立组件和基本结构
+
+在`lib/pages/cart_page/`文件夹下，建立一个新的文件`cart_count.dart`。先引入两个布局使用的基本文件。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+```
+
+然后开始写基本结构，我们这里使用`Container`和`Row`的形式。
+
+```dart
+  Widget build(BuildContext context) {
+    return Container(
+      width: ScreenUtil().setWidth(165),
+      margin: EdgeInsets.only(top:5.0),
+      decoration: BoxDecoration(
+        border:Border.all(width: 1 , color:Colors.black12)
+      ),
+      child: Row(
+        children: <Widget>[
+        ],
+      ),
+      
+    );
+  }
+```
+
+写完这个，我们再把`Row`里边的每个子元素进行拆分.
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#减少按钮ui编写) 减少按钮UI编写
+
+```dart
+  // 减少按钮
+  Widget _reduceBtn(){
+    return InkWell(
+      onTap: (){},
+      child: Container(
+        width: ScreenUtil().setWidth(45),
+        height: ScreenUtil().setHeight(45),
+        alignment: Alignment.center,
+       
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border:Border(
+            right:BorderSide(width:1,color:Colors.black12)
+          )
+        ),
+        child: Text('-'),
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#添加按钮ui编写) 添加按钮UI编写
+
+```dart
+  //添加按钮
+  Widget _addBtn(){
+    return InkWell(
+      onTap: (){},
+      child: Container(
+        width: ScreenUtil().setWidth(45),
+        height: ScreenUtil().setHeight(45),
+        alignment: Alignment.center,
+       
+         decoration: BoxDecoration(
+          color: Colors.white,
+          border:Border(
+            left:BorderSide(width:1,color:Colors.black12)
+          )
+        ),
+        child: Text('+'),
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#数量区域ui编写) 数量区域UI编写
+
+```dart
+  //中间数量显示区域
+  Widget _countArea(){
+    return Container(
+      width: ScreenUtil().setWidth(70),
+      height: ScreenUtil().setHeight(45),
+      alignment: Alignment.center,
+      color: Colors.white,
+       child: Text('1'),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#进行组合) 进行组合
+
+组件都写好后，要进行组合和加入到页面中的操作。
+
+组合：直接在build区域的`Row`数组中进行组合。
+
+```diff
+  Widget build(BuildContext context) {
+    return Container(
+      width: ScreenUtil().setWidth(165),
+      margin: EdgeInsets.only(top:5.0),
+      decoration: BoxDecoration(
+        border:Border.all(width: 1 , color:Colors.black12)
+      ),
+      children: <Widget>[
+-
++          selectAllBtn(),
++          allPriceArea(),
++          goButton(),
+      ],
+
+      ),
+      
+    );
+  }
+```
+
+这个不完成后，再到同级目录下的`cart_item.dart`，引入和使用。先进行文件的引入.
+
+```text
+import './cart_count.dart';
+```
+
+引入后，再商品名称的方法中直接引入就。
+
+```diff
+ //商品名称
+  Widget _cartGoodsName(item){
+    return Container(
+      width: ScreenUtil().setWidth(300),
+      padding: EdgeInsets.all(10),
+      alignment: Alignment.topLeft,
+      child: Column(
+            children: <Widget>[
+            Text(item.goodsName),
++            CartCount()
+          ],
+      ),
+    );
+  }
+```
+
+完成后就可以进行预览了。通过几节课的制作，终于算是完成了购物车UI界面的编写。下节课开始编写购物车的业务逻辑。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第57节：购物车-在model中增加选中字段) 第57节：购物车_在Model中增加选中字段
+
+通过布局，我们可以看到是有选中和多选操作的，但是在设计购物车模型时并没有涉及这个操作，所以这节课利用几分钟时间，把坑填补一下。

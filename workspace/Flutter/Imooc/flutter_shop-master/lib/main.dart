@@ -23,8 +23,8 @@ void main(){
   var detailsInfoProvide= DetailsInfoProvide();
   var cartProvide = CartProvide();
 
-  var counter =Counter();
-  var providers  =Providers();
+  var counter = Counter();
+  var providers  = Providers();
  
   providers
     ..provide(Provider<ChildCategory>.value(childCategory))
