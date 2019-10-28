@@ -4,8 +4,9 @@ class CartInfoMode {
   int count;
   double price;
   String images;
+  bool isCheck;
 
-  CartInfoMode({this.goodsId, this.goodsName, this.count, this.price, this.images});
+  CartInfoMode({this.goodsId, this.goodsName, this.count, this.price, this.images, this.isCheck});
 
   CartInfoMode.fromJson(Map<String, dynamic> json) {
     goodsId = json['goodsId'];
@@ -13,6 +14,7 @@ class CartInfoMode {
     count = json['count'];
     price = json['price'];
     images = json['images'];
+    isCheck = json['isCheck'];
   }
 
   Map<String, dynamic> toJson() {
@@ -22,6 +24,7 @@ class CartInfoMode {
     data['count'] = this.count;
     data['price'] = this.price;
     data['images'] = this.images;
+    data['isCheck'] = this.isCheck;
     return data;
   }
 }

@@ -37,6 +37,7 @@ class CartProvide with ChangeNotifier {
         'count': count,
         'price': price,
         'images': images,
+        'isCheck': true   ///是否已经选择
       };
       tempList.add(newGoods);
       cartList.add(new CartInfoMode.fromJson(newGoods));

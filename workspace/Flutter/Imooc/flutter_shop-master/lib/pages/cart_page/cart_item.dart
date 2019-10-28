@@ -19,7 +19,7 @@ class CartItem extends StatelessWidget {
         ),
         child: Row(
           children: <Widget>[
-            _cartCheckBt(item),
+            _cartCheckBt(context, item),
             _cartImage(item),
             _cartGoodsName(item),
             _cartPrice(item),
@@ -29,10 +29,10 @@ class CartItem extends StatelessWidget {
   }
 
   //多选按钮
-  Widget _cartCheckBt(item) {
+  Widget _cartCheckBt(context, item) {
     return Container(
       child: Checkbox(
-        value: true,
+        value: item.isCheck,
         activeColor: Colors.pink,
         onChanged: (bool val){ 
 
