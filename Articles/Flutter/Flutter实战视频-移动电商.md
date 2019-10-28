@@ -7273,3 +7273,260 @@ import './cart_count.dart';
 ## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第57节：购物车-在model中增加选中字段) 第57节：购物车_在Model中增加选中字段
 
 通过布局，我们可以看到是有选中和多选操作的，但是在设计购物车模型时并没有涉及这个操作，所以这节课利用几分钟时间，把坑填补一下。
+
+
+
+###  修改Model文件
+
+首先我们打开`lib/model/cartInfo.dart`文件，增加一个新的变量`isCheck`。
+
+```diff
+ class CartInfoMode {
+   String goodsId;
+   String goodsName;
+   int count;
+   double price;
+   String images;
++  bool isCheck;
+ 
+-  CartInfoMode({this.goodsId, this.goodsName, this.count, this.price, this.images});
++  CartInfoMode({this.goodsId, this.goodsName, this.count, this.price, this.images, this.isCheck});
+ 
+   CartInfoMode.fromJson(Map<String, dynamic> json) {
+     goodsId = json['goodsId'];
+     goodsName = json['goodsName'];
+     count = json['count'];
+     price = json['price'];
+     images = json['images'];
++    isCheck = json['isCheck'];
+   }
+ 
+   Map<String, dynamic> toJson() {
+     final Map<String, dynamic> data = new Map<String, dynamic>();
+     data['goodsId'] = this.goodsId;
+     data['goodsName'] = this.goodsName;
+     data['count'] = this.count;
+     data['price'] = this.price;
+     data['images'] = this.images;
++    data['isCheck'] = this.isCheck;
+     return data;
+   }
+ }
+
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#在增加时加入ischeck) 在增加时加入isCheck
+
+打开`lib/provide/cart.dart`文件，找到添加购物车商品的方法`save`,修改增加的部分代码。
+
+```diff
+      Map<String, dynamic> newGoods = {
+        'goodsId': goodsId,
+        'goodsName': goodsName,
+        'count': count,
+        'price': price,
+        'images': images,
++        'isCheck': true   ///是否已经选择
+      };
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改ui的值) 修改UI的值
+
+之前UI中多选按钮的值，我们是写死的，现在就可以使用这个动态的值了。打开`lib/pages/cart_page/cart_item.dart`文件，找到多选按钮的部分，修改val的值.
+
+```diff
+   @override
+   Widget build(BuildContext context) {
+     return Container(
+         margin: EdgeInsets.fromLTRB(5.0, 2.0, 5.0, 2.0),
+         padding: EdgeInsets.fromLTRB(5.0, 10.0, 5.0, 10.0),
+         decoration: BoxDecoration(
+           color: Colors.white,
+           border: Border(
+             bottom: BorderSide(width: 1, color: Colors.black12)
+           )
+         ),
+         child: Row(
+           children: <Widget>[
+-            _cartCheckBt(item),
++            _cartCheckBt(context, item),
+             _cartImage(item),
+             _cartGoodsName(item),
+             _cartPrice(item),
+           ],
+         ),
+     );
+   }
+ 
+   //多选按钮
+-  Widget _cartCheckBt(item) {
++  Widget _cartCheckBt(context, item) {
+     return Container(
+       child: Checkbox(
+-        value: true,
++        value: item.isCheck,
+         activeColor: Colors.pink,
+         onChanged: (bool val){ 
+ 
+         },
+       ),
+     );
+   }
+
+```
+
+记得修改完成后，要把原来的持久化字符串删除掉，删除掉后再次填入新的商品到购物车，就可以正常显示了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第58节：购物车-删除单个商品功能制作) 第58节：购物车_删除单个商品功能制作
+
+页面终于制作完成了，剩下来就是逐步完善购物车中的各项功能，这部分的视频可能拆分的比较细致。这节课主要讲一下如何实现购物车中的删除功能。
+
+###  编写删除方法
+
+直接在`provide`中的`cart.dart`文件里，增加一个`deleteOneGoods`方法。编写思路是这样的，先从持久化数据里得到数据，然后把纯字符串转换成字List，转换之后进行循环，如果goodsId，相同，说明就是要删除的项，把索引进行记录，记录之后用`removeAt`方法进行删除，删除后再次进行持久化，并重新获得数据。 主要代码如下：
+
+```dart
+  //删除单个购物车商品
+  deleteOneGoods(String goodsId) async{
+     SharedPreferences prefs = await SharedPreferences.getInstance();
+     cartString=prefs.getString('cartInfo'); 
+     List<Map> tempList= (json.decode(cartString.toString()) as List).cast();
+   
+     int tempIndex =0;
+     int delIndex=0;
+     tempList.forEach((item){
+         
+         if(item['goodsId']==goodsId){
+          delIndex=tempIndex;
+        
+         }
+         tempIndex++;
+     });
+      tempList.removeAt(delIndex);
+      cartString= json.encode(tempList).toString();
+      prefs.setString('cartInfo', cartString);//
+      await getCartInfo();
+     
+
+  }
+```
+
+这个部分需要注意的是，为什么循环时不进行删除，因为dart语言不支持迭代时进行修改，这样可以保证在循环时不出错。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#修改ui界面，实现效果) 修改UI界面，实现效果
+
+UI界面主要时增加Proivde组件，就是当值法伤变化时，界面也随着变化。打开`cart_page.dart`文件，主要修改build里的ListView区域，代码如下：
+
+```diff
+import 'package:flutter/material.dart';
+import 'package:provide/provide.dart';
+import '../provide/cart.dart';
+import './cart_page/cart_item.dart';
+import './cart_page/cart_bottom.dart';
+
+
+
+
+class CartPage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('购物车'),
+      ),
+      body: FutureBuilder(
+        future:_getCartInfo(context),
+        builder: (context,snapshot){
+          List cartList=Provide.value<CartProvide>(context).cartList;
+          if(snapshot.hasData && cartList!=null){
+             return Stack(
+               children: <Widget>[
+-                ListView.builder(
+-                  itemCount: cartList.length,
+-                  itemBuilder: (context, index) {
+-                    return CartItem(cartList[index]);
++                Provide<CartProvide>(
++                  builder: (context, child, childCategory){
++                    cartList = Provide.value<CartProvide>(context).cartList;
++                    print(cartList);
++                    return ListView.builder(
++                      itemCount: cartList.length,
++                      itemBuilder: (context, index) {
++                        return CartItem(cartList[index]);
++                      },
++                    );
+                   },
+                 ),
+                 Positioned(
+                   bottom: 0,
+                   left: 0,
+                   child: CartBottom(),
+                 ),
+               ],
+             );
+
+          }else{
+            return Text('正在加载');
+          }
+        },
+      ),
+    );
+  }
+
+  Future<String> _getCartInfo(BuildContext context) async{
+     await Provide.value<CartProvide>(context).getCartInfo();
+     return 'end';
+  }
+
+  
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#增加删除响应事件) 增加删除响应事件
+
+在`cart_item.dart`文件中，增加删除响应事件，由于所有业务逻辑都在Provide中，所以需要引入下面两个文件。
+
+```text
+import 'package:provide/provide.dart';
+import '../../provide/cart.dart';
+```
+
+有了这两个文件后，可以修改对应的方法`_cartPrice`。首先要加入context选项，然后修改里边的`onTap`方法。具体代码如下:
+
+```diff
+     //商品价格
+-  Widget _cartPrice(item) {
++  Widget _cartPrice(context, item) {
+     return Container(
+       width: ScreenUtil().setWidth(150),
+       alignment: Alignment.centerRight,
+ 
+       child: Column(
+         children: <Widget>[
+           Text('￥${item.price}'),
+           Container(
+             child: InkWell(
+-              onTap: (){},
++              onTap: (){
++                Provide.value<CartProvide>(context).deleteOneGoods(item.goodsId);
++              },
+               child: Icon(
+                 Icons.delete_forever,
+                 color: Colors.black26,
+                 size: 30,
+               ),
+             ),
+           )
+         ],
+       ),
+     );
+   }
+
+```
+
+这步做完，已经有了删除功能，可以进行测试了.
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第59节：购物车-计算商品价格和数量) 第59节：购物车_计算商品价格和数量
+
+购物车中都有自动计算商品价格和商品数量的功能，这节课我们就把这两个小功能实现一下。

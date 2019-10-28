@@ -17,6 +17,7 @@ class CartProvide with ChangeNotifier {
     var temp = cartString == null ? [] : json.decode(cartString.toString());
     //把获得值转变成List
     List<Map> tempList = (temp as List).cast();
+
     //声明变量，用于判断购物车中是否已经存在此商品ID
     var isHave = false; //默认为没有
     int ival = 0;       //用于进行循环的索引使用
@@ -77,4 +78,27 @@ class CartProvide with ChangeNotifier {
     }
     notifyListeners();
   }
+
+  //删除单个购物车商品
+  deleteOneGoods(String goodsId) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    cartString = prefs.getString('cartInfo');
+    List<Map> tempList = (json.decode(cartString.toString()) as List).cast();
+
+    int tempIndex = 0;
+    int delIndex = 0; //要删除的item的下标
+    tempList.forEach((item) {
+      if (item['goodsId'] == goodsId) {
+        delIndex = tempIndex;
+      }
+      tempIndex++;
+    });
+    tempList.removeAt(delIndex);  //移除要删除的item
+
+    cartString = json.encode(tempList).toString();
+    prefs.setString('cartInfo', cartString);// 
+    await getCartInfo();
+
+  }
+
 }
