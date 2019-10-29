@@ -4,6 +4,7 @@ import 'package:provide/provide.dart';
 
 import '../../provide/cart.dart';
 import '../../provide/details_info.dart';
+import '../../provide/currentIndex.dart';
 
 class DetailsBottom extends StatelessWidget {
   
@@ -23,7 +24,7 @@ class DetailsBottom extends StatelessWidget {
         children: <Widget>[
           InkWell( //左边的
             onTap: () {
-
+              Provide.value<CurrentIndexProvide>(context).changeIndex(2);
             },
             child: Container(
               width: ScreenUtil().setWidth(110),
