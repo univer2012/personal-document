@@ -23,7 +23,7 @@ import UIKit
 //print(coder.getDesc())
 
 ///===========================
-#if false//true
+#if true
 protocol DescriptionProtocol {
     func printSomething()
 }
