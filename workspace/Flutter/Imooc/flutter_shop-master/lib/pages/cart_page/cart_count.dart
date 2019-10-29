@@ -37,7 +37,7 @@ class CartCount extends StatelessWidget {
         alignment: Alignment.center,
 
         decoration: BoxDecoration(
-          color: item.count ? Colors.white : Colors.black12,
+          color: item.count > 1 ? Colors.white : Colors.black12,
           border: Border(
             right: BorderSide(width: 1,color: Colors.black12)
           )
