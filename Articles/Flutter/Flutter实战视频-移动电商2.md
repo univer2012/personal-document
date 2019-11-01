@@ -775,5 +775,633 @@ class MemberPage extends StatelessWidget {
 
 直接上代码了。
 
+```dart
+//我的订单顶部
+  Widget _orderTitle(){
+
+    return Container(
+      margin: EdgeInsets.only(top:10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          bottom:BorderSide(width: 1,color:Colors.black12)
+        )
+      ),
+      child: ListTile(
+        leading: Icon(Icons.list),
+        title:Text('我的订单'),
+        trailing: Icon(Icons.arrow_right),
+      ),
+    );
+
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#订单列表区域) 订单列表区域
+
+直接上代码
+
+```dart
+  Widget _orderType(){
+
+    return Container(
+      margin: EdgeInsets.only(top:5),
+      width: ScreenUtil().setWidth(750),
+      height: ScreenUtil().setHeight(150),
+      padding: EdgeInsets.only(top:20),
+      color: Colors.white,
+      child: Row(
+        children: <Widget>[
+          Container(
+            width: ScreenUtil().setWidth(187),
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  Icons.party_mode,
+                  size: 30,
+                ),
+                Text('待付款'),
+              ],
+            ),
+          ),
+          //-----------------
+          Container(
+            width: ScreenUtil().setWidth(187),
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  Icons.query_builder,
+                  size: 30,
+                ),
+                Text('待发货'),
+              ],
+            ),
+          ),
+           //-----------------
+          Container(
+            width: ScreenUtil().setWidth(187),
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  Icons.directions_car,
+                   size: 30,
+                ),
+                Text('待收货'),
+              ],
+            ),
+          ),
+          Container(
+            width: ScreenUtil().setWidth(187),
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  Icons.content_paste,
+                   size: 30,
+                ),
+                Text('待评价'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+
+  }
+```
+
+这两个方法写完后，直接加到`Build`里就可以了。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第66节-会员中心-编写listtile的通用方法) 第66节:会员中心_编写ListTile的通用方法
+
+这节课我们就把会员中心的剩下UI做完，可以看到，订单下面就全部都是类似List的形式了。那我们可以编写一个通用的方法，然后传递不同的值，来快速布局出下面的部分。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#listtile通用方法) ListTile通用方法
+
+我们利用方法传递参数的形式，创建一个可以通用的方法，只要传递不同的参数，就可以形成不同的组件。代码如下
+
+```dart
+ Widget _myListTile(String title){
+
+    return Container(
+       decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          bottom:BorderSide(width: 1,color:Colors.black12)
+        )
+      ),
+      child: ListTile(
+        leading: Icon(Icons.blur_circular),
+        title: Text(title),
+        trailing: Icon(Icons.arrow_right),
+      ),
+    );
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#组合list布局) 组合List布局
+
+有了通用的方法后，我们就可以进行组合List布局，代码如下：
+
+```dart
+  Widget _actionList(){
+    return Container(
+      margin: EdgeInsets.only(top: 10),
+      child: Column(
+        children: <Widget>[
+            _myListTile('领取优惠券'),
+            _myListTile('已领取优惠券'),
+            _myListTile('地址管理'),
+            _myListTile('客服电话'),
+            _myListTile('关于我们'),
+        ],
+      ),
+    );
+  }
+```
+
+这个组件编写完成后，可以组合到Build方法里面。这步完成后，就形成了一个完成的会员中心页面。
+
+总结:这节课结束后，我原计划的所有知识点就已经讲完了。但是课程并没有结束，我后边还会不断的更新课程，我管这个叫做加餐。
+
+- 优化现有程序：我会不断优化现有程序和存在的Bug，有重大优化时，就会更新课程。
+- 对小伙伴期望的知识点作补充讲解：这个要10人以上提出的共性知识点作补充讲解。
+- 后续功能升级：如果后期后台API有重点变化，影响学习，我会录课补充修改。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第67课：加餐-高德地图插件的使用) 第67课：加餐_高德地图插件的使用
+
+这是一个加餐课，很多小伙伴都给我留言说，需要这个功能，经过两天的摸索，总算是可以使用了，当然这个插件的坑也是巨多的。使用的插件叫`amap_base_flutter`,也是国内用的最多的地图一个插件。此节课收到了很多小伙伴的帮助，**特别感谢"鲁隽彧(网名)"**。
+
+
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#_1-注册和建立高德api应用) 1.注册和建立高德API应用
+
+这个需要到高德的网站进行，网站地址为：https://lbs.amap.com/
+
+[ ](https://lbs.amap.com/)
+
+。
+
+> 你需要先注册一个账号，这个过程我就不演示了。这个你自己再弄不明白，那么接下来我就不带你去找小姐姐了。
+
+有了账号之后到控制台-应用管理-创建应用（这个我就再视频中演示了）
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#_2-获得sha1) 2.获得SHA1
+
+在创建应用的时候，需要填入SHA1，这个必须需要在`Android Studio`里进行，`VS Code`里还没有摸清如何获得，如果你知道如何获得，可以文章下方给技术胖留言。（获得方式，在视频中进行演示）
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#_3-获得packagename) 3.获得PackageName
+
+这个的获得比较简单，打开`/android/app/build.gradle`文件，然后找到`applicationId`，这个就是`packageName`，比如我的项目的`packageName`就是`com.example.amap_test`。
+
+把这两项填写好后，我们就可以开心的编写程序了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#_4-配置andoridmanifest-xml文件) 4.配置`AndoridManifest.xml`文件
+
+这个文件在`/android/app/src/main/AndroidManifest.xml`，然后在``标签里，加入下面的代码:
+
+```text
+<meta-data
+  android:name="com.amap.api.v2.apikey"
+  android:value="自己的key" />
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#_5-编写代码) 5.编写代码
+
+需要先进入根目录的`pubspec.yaml`文件，进行依赖注册，这个`package`下载还是需要挺长时间的，我反正用了将近15分钟。
+
+```text
+amap_base: ^0.3.5
+```
+
+写完后点击右上角的`packages get`，剩下的就是耐心等待。
+
+进入`lib/main.dart`文件，写入下面代码。
+
+进的要用`import`引入`amap_base.dart`文件。
+
+```text
+import 'package:flutter/material.dart';
+import 'package:amap_base/amap_base.dart';
+
+
+
+void main()async{
+  runApp(MyApp());
+
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: '高德地图测试'),
+    );
+  }
+}
+
+
+
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  AMapController _controller;
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+
+        title: Text(widget.title),
+      ),
+      body:AMapView(
+              onAMapViewCreated: (controller) {
+                _controller = controller;
+              },
+              amapOptions: AMapOptions(
+                compassEnabled: false,
+                zoomControlsEnabled: true,
+                logoPosition: LOGO_POSITION_BOTTOM_CENTER,
+                camera: CameraPosition(
+                  target: LatLng(41.851827, 112.801637),
+                  zoom: 4,
+                ),
+              ),
+          
+     );
+  }
+
+}
+```
+
+写完代码后，你要记得不要使用虚拟机进行测试，我在学习的时候，就是使用虚拟机测试，一直是黑屏，后来采用了真机测试，才能出现效果。
+
+这就是我在集成高德地图插件时遇到的几个坑，希望小伙伴们都能别走弯路。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第68节：加餐-极光推送插件使用-1) 第68节：加餐_极光推送插件使用-1
+
+现在每个app都需要有推送功能，这也是一个app的价值所在，和你的顾客产生联系。极光推送是中国很出色的推送服务提供商，有着很好的口碑和稳定性，送达率也是国内领先的。Flutter1.0版本发布后，极光也很及时的退出了Flutter插件。这节课就带着小伙伴了解一下极光推送的使用。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#申请极光账号和建立应用) 申请极光账号和建立应用
+
+极光推送的官方网址为：`https://www.jiguang.cn/`
+
+注册的过程这里我依然省略了，有劳小伙伴们自己辛苦一下。
+
+注册好后，进入'服务中心',然后再进入'开发者平台'，点击创建应用。这时候会出现新页面，让你填写“应用名称”和上传“应用图标”。 创建完成，极光平台就会给我们两个key。
+
+- appKey : 移动客户端使用的key
+- Master Secret ： 服务端使用的key
+
+我们这里只做移动端不做服务端，所以只需要`appKey`。得到这个Key也算是极光平台操作完了。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#加入dependencies依赖) 加入dependencies依赖
+
+> github网址:https://github.com/jpush/jpush-flutter-plugin
+
+要使用极光推送插件必须先下载包，要下载包就需要先添加依赖，直接把下面的代码加入`pubspec.yaml`文件中。
+
+```text
+jpush_flutter: 0.0.11
+```
+
+需要注意的是，使用最新版本，这里使用的只是我录课时的最新版本。
+
+写完代码后，选择`Android Studio`右上角的`Packages get`进行下载，下载完成后进行操作。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#build-gradle添加可以和cpu型号代码) build.gradle添加可以和cpu型号代码
+
+打开`android/app/src/build.gradle`文件，加入如下代码：
+
+```javascript
+    defaultConfig {
+       ...
+
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'mips', 'mips64'// 'arm64-v8a',
+            // 还可以添加
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "这里写入你自己申请的Key哦", // NOTE: JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+
+    }
+```
+
+到这里你的第一步工作算是完成了，你已经可以开发推送功能了。这部分如果对于移动开发者来说，可能很容易。所以单独拿出一课来，这样有移动开发经验的可以跳过这节。
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#第69节：加餐-极光推送插件使用-2) 第69节：加餐_极光推送插件使用-2
+
+这节课继续讲解一下极光推送的使用，由于技术胖也是作前端的，PHP也有3年没有碰过了，所以这里讲一下极光推送的本地推送，服务器端代码就不在编写了。工作中应该也不用你编写，这是后端的事情。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#先引入主要文件) 先引入主要文件
+
+打开代码`lib/main.dart`文件，先引入需要使用的主要文件
+
+```text
+import 'package:flutter/material.dart';
+import 'dart:async';
+
+import 'package:flutter/services.dart';
+import 'package:jpush_flutter/jpush_flutter.dart';
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#主要方法编写) 主要方法编写
+
+```dart
+void main() => runApp(new MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => new _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+ 
+  @override
+  void initState() {
+    super.initState();
+  }
+// 编写视图
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('极光推送'),
+        ),
+        body: new Center(
+          child:Text('临时的.........') 
+        ),
+      ),
+    );
+  }
+}
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写initplatformstate方法) 编写initPlatformState方法
+
+在使用极光推送之前，我们需要初始化一下，初始化时的主要任务就是写一下监听响应方法。在写主要方法之前，需要声明两个变量。
+
+```text
+ String debugLable = 'Unknown';   //错误信息
+  final JPush jpush = new JPush();  //初始化极光插件
+```
+
+然后编写initPlatformState方法
+
+```text
+  Future<void> initPlatformState() async {
+    String platformVersion;
+
+    try {
+      //监听响应方法的编写
+      jpush.addEventHandler(
+        onReceiveNotification: (Map<String, dynamic> message) async {
+          print(">>>>>>>>>>>>>>>>>flutter 接收到推送: $message");
+          setState(() {
+            debugLable = "接收到推送: $message";
+          });
+        }
+      );
+
+    } on PlatformException {
+      platformVersion = '平台版本获取失败，请检查！';
+    }
+
+
+    if (!mounted) return;
+
+    setState(() {
+      debugLable = platformVersion;
+    });
+  }
+```
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#编写build的视图) 编写build的视图
+
+```text
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('极光推送'),
+        ),
+        body: new Center(
+            child: new Column(
+                children:[
+                  new Text('结果: $debugLable\n'),
+                  new FlatButton(
+                      child: new Text('发送推送消息\n'),
+                      onPressed: () {
+                        // 三秒后出发本地推送
+                        var fireDate = DateTime.fromMillisecondsSinceEpoch(DateTime.now().millisecondsSinceEpoch + 3000);
+                        var localNotification = LocalNotification(
+                            id: 234,
+                            title: '技术胖的飞鸽传说',
+                            buildId: 1,
+                            content: '看到了说明已经成功了',
+                            fireTime: fireDate,
+                            subtitle: '一个测试',
+                        );
+                        jpush.sendLocalNotification(localNotification).then((res) {
+                          setState(() {
+                            debugLable = res;
+                          });
+                        });
+
+                      }),
+
+                ]
+            )
+
+        ),
+      ),
+    );
+```
+
+这里的详细意思，在视频中解释吧，写注释还是挺累的。为了你能达到很好的学习效果，这里给出全部代码。
+
+```dart
+import 'package:flutter/material.dart';
+import 'dart:async';
+
+import 'package:flutter/services.dart';
+import 'package:jpush_flutter/jpush_flutter.dart';
+
+void main() => runApp(new MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => new _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String debugLable = 'Unknown';   //错误信息
+  final JPush jpush = new JPush();  //初始化极光插件
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();  //极光插件平台初始化
+  }
+
+
+  Future<void> initPlatformState() async {
+    String platformVersion;
+
+    try {
+      //监听响应方法的编写
+      jpush.addEventHandler(
+        onReceiveNotification: (Map<String, dynamic> message) async {
+          print(">>>>>>>>>>>>>>>>>flutter 接收到推送: $message");
+          setState(() {
+            debugLable = "接收到推送: $message";
+          });
+        }
+      );
+
+    } on PlatformException {
+      platformVersion = '平台版本获取失败，请检查！';
+    }
+
+
+    if (!mounted) return;
+
+    setState(() {
+      debugLable = platformVersion;
+    });
+  }
+
+
+
+// 编写视图
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('极光推送'),
+        ),
+        body: new Center(
+            child: new Column(
+                children:[
+                  new Text('结果: $debugLable\n'),
+                  new FlatButton(
+                      child: new Text('发送推送消息\n'),
+                      onPressed: () {
+                        // 三秒后出发本地推送
+                        var fireDate = DateTime.fromMillisecondsSinceEpoch(DateTime.now().millisecondsSinceEpoch + 3000);
+                        var localNotification = LocalNotification(
+                            id: 234,
+                            title: '技术胖的飞鸽传说',
+                            buildId: 1,
+                            content: '看到了说明已经成功了',
+                            fireTime: fireDate,
+                            subtitle: '一个测试',
+                        );
+                        jpush.sendLocalNotification(localNotification).then((res) {
+                          setState(() {
+                            debugLable = res;
+                          });
+                        });
+
+                      }),
+
+                ]
+            )
+
+        ),
+      ),
+    );
+  }
+}
+```
+
+这里就完成了，现在可以打开虚拟机来测试一下效果了，看看推送是不是可以成功实现。
+
+后期更多免费Flutter视频，到https://jspang.com进行观看。
+
+------
+
+## [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#后端接口api文档) 后端接口API文档
+
+URL地址是不断变化的，所以不会提供准确的地址给你们。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商城首页基本信息) 商城首页基本信息
+
+说明：调用此接口，可获取首页所有的基本信息，包括导航，推荐商品，楼层商品。
+
+参数：lon，lat 接口地址：`wxmini/homePageContent`
+
+返回参数：
+
+- advertesPicture:首页中部广告条。
+- category：首页UI分类信息
+- floor1:楼层1的商品信息和图片
+- floor2:楼层2的商品详细和图片
+- floor3:楼层3的商品详细和图片
+- recommend:商品推荐的信息
+- slides:滑动图片和对应的商品编号
+- shopInfo：根据定位获得的门店图片和店长电话
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#火爆专区商品列表) 火爆专区商品列表
+
+参数：page
+
+接口地址：`wxmini/homePageBelowConten`
+
+返回参数：
+
+- image ：商品图片地址，可以直接使用。
+- name: 商品名称
+- mallPrice：商品商城价格
+- price: 商品价格，指市场价格
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品类别信息) 商品类别信息
+
+接口地址：`wxmini/getCategory`
+
+返回参数：
+
+- mallCategoryId ： 类别ID，用于控制子类别和商品列表。
+- mallCategoryName : 类别名称，例如“白酒”
+- bxMallSubDto：二级类别，是个数组
+- comments：类别描述，目前全是null
+- image：类别图片，可能是以后扩展使用的。
+
+### [#](https://jspang.com/posts/2019/03/01/flutter-shop.html#商品分类页中的商品列表) 商品分类页中的商品列表
+
+接口地址：`wxmini/getMallGoods`
+
+参数：
+
+- categoryId:大类ID，字符串类型
+- categorySubId : 子类ID，字符串类型，如果没有可以填写空字符串，例如''
+- page: 分页的页数，int类型
+
+返回参数 - goodsId:商品的Id，用于进入商品页时，查询商品详情。 - goodsName: 商品名称 - image： 商品的图片 - oriPrice： 市场价格（贵的价格） - presentPrice：商城价格(便宜的价格)
+
 
 
