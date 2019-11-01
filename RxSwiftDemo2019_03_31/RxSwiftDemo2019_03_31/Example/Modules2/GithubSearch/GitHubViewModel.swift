@@ -32,7 +32,8 @@ class GitHubViewModel {
         self.searchResult = searchAction
             .filter { $0.isEmpty }   //如果输入为空则不发送请求了
             .flatMapLatest {
-                GitHubProvider.rx.request(.repositories($0))
+                GitHubProvider
+                    .rx.request(.repositories($0))
                 .filterSuccessfulStatusCodes()
                 .mapObject(GitHubRepositories.self)
                 .asObservable()
