@@ -41,19 +41,19 @@
 
 分别选中模拟器和`Generic iOS Device`，点击箭头运行一遍，然后对`Products`--> `libEOCLib.a`右键，选择`Show in Finder`，会发现目录如下：
 
-![图1]()
+![图1](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging1.png)
 
 
 
 如果要把路径中的`\EOCLib\`去掉，则需要在`BUild Phases` --> `Copy Files(1 item)`的 `Subpath`由原来的`include/$(PRODUCT_NAME)`改为`include`，删除`Debug-iphoneos` 和`Debug-iphonesimulator`，且按`command` + `shift`+`J`清理工程。再分别选中模拟器和`Generic iOS Device`，点击箭头运行一遍，然后对`Products`--> `libEOCLib.a`右键，选择`Show in Finder`，就会得到如图：
 
-![图2]()
+![图2](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging2.png)
 
 
 
 如果要在这个文件中添加其他文件，则添加后，需要在`BUild Phases` --> `Copy Files(1 item)`中点`+`把对应的`.h`文件添加进去，编译后才会在`include`文件中查看到。
 
-![图3]()
+![图3](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging3.png)
 
 
 
@@ -76,7 +76,7 @@ Non-fat file: libEOCLib.a is architecture: arm64
 
 如果我们把`Debug-iphoneos`中的文件导入到应用项目中，则会出现如下的错误：
 
-![图4]()
+![图4](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging4.png)
 
 所以，`Debug-iphonesimulator`中的文件只支持模拟器，`Debug-iphoneos`中的文件支持真机。
 
@@ -147,16 +147,16 @@ Architectures in the fat file: test.a are: x86_64 arm64
 
    5. 分别选中模拟器和 真机，点击向右箭头运行，右键`Projects`-->`EOCFrame.framework` ，选中`Show in Finder`，在`EOCFrame.framework`中的`EOCFrame`才是真正的执行文件。如图：
    
-   ![图5]()
+   ![图5](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging5.png)
 
 
 
 使用时，直接把`EOCFrame.framework`拖进工程，即可使用。如图：
 
-![图6]()
+![图6](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging6.png)
 
 运行起来会发现报错：
-![图7]()
+![图7](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging7.png)
 
 报错没有被映射。动态库使它失去了动态性，这是由于苹果的审核机制导致的。所以要执行：`TARGETS` --> `EOCClass` --> `Build Phases` --> 点击`+`号，选中`New Copy Files Phase`,在出现的`Copy Files`中，`Destination`选择`Frameworks`，然后点`+`号，把`EOCFrame.framework`添加进来。这样就没问题了。
 
@@ -197,7 +197,7 @@ Architectures in the fat file: test.a are: x86_64 arm64
 
 我们先把选中`EOCFrame`-->`Generic iOS Device`，运行，生成真机文件夹`Debug-iphoneos`。然后再选中模拟器，运行上面的脚本，发现打开的`Product`文件夹下的`EOCFrame.framework`不再是空文件。如图：
 
-![图8]()
+![图8](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging8.png)
 
 
 
@@ -260,7 +260,7 @@ NS_ASSUME_NONNULL_END
 
 并执行：`TARGETS`-->`EOCLib`-->`Build Phases`-->`Copy Files`中把`NSObject+EOC.h`加入其中，点击向右箭头运行，并把运行出来的`libEOCLib.a`和`include`文件夹拖入到应用工程中，然后调用`[NSObject eocMethod]; `，结果如图：
 
-![图9]()
+![图9](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging9.png)
 
 这是什么原因导致的呢？这个跟静态库有关系，静态库做分类，因为分类不是新的链接符号，并不会给这个方法生成一个链接符号到执行文件中，所以执行时找不到这个方法。
 
@@ -272,7 +272,7 @@ NS_ASSUME_NONNULL_END
 
 我们需要在应用工程`EOCClass`中配置下：`TARGETS`-->`EOCClass`-->`Build Settings`-->输入`Other Linker`，找到`Other Linker Flags`，点击`+`号输入`-ObjC`，如图：
 
-![图10]()
+![图10](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2019/6_App_security_strategy%3Dframework%2Cstatic%20library%20packaging10.png)
 
 
 

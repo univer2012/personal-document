@@ -160,6 +160,9 @@
 		8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0EE222821FF005152B4 /* SHProxy.m */; };
 		8FAFB0F32228B7AA005152B4 /* SHLeaks0301Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */; };
 		8FAFB0F72228FD56005152B4 /* UIViewController+SHLeaksTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */; };
+		8FB0438C236E9C0B005C0524 /* SHKVOExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0438B236E9C0B005C0524 /* SHKVOExploreViewController.m */; };
+		8FB0438F236E9C45005C0524 /* EOCFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0438E236E9C45005C0524 /* EOCFamily.m */; };
+		8FB04392236E9FB2005C0524 /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB04391236E9FB2005C0524 /* EOCPerson.m */; };
 		8FB5B549226D467400E34EC9 /* SHSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB5B548226D467400E34EC9 /* SHSortManager.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
@@ -472,6 +475,12 @@
 		8FAFB0F22228B7AA005152B4 /* SHLeaks0301Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLeaks0301Object.m; sourceTree = "<group>"; };
 		8FAFB0F52228FD56005152B4 /* UIViewController+SHLeaksTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SHLeaksTest.h"; sourceTree = "<group>"; };
 		8FAFB0F62228FD56005152B4 /* UIViewController+SHLeaksTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SHLeaksTest.m"; sourceTree = "<group>"; };
+		8FB0438A236E9C0B005C0524 /* SHKVOExploreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHKVOExploreViewController.h; sourceTree = "<group>"; };
+		8FB0438B236E9C0B005C0524 /* SHKVOExploreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHKVOExploreViewController.m; sourceTree = "<group>"; };
+		8FB0438D236E9C45005C0524 /* EOCFamily.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCFamily.h; sourceTree = "<group>"; };
+		8FB0438E236E9C45005C0524 /* EOCFamily.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCFamily.m; sourceTree = "<group>"; };
+		8FB04390236E9FB2005C0524 /* EOCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCPerson.h; sourceTree = "<group>"; };
+		8FB04391236E9FB2005C0524 /* EOCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCPerson.m; sourceTree = "<group>"; };
 		8FB5B547226D467400E34EC9 /* SHSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSortManager.h; sourceTree = "<group>"; };
 		8FB5B548226D467400E34EC9 /* SHSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSortManager.m; sourceTree = "<group>"; };
 		8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH0227SeniorCampViewController.h; sourceTree = "<group>"; };
@@ -1569,6 +1578,7 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FB04389236E9BDF005C0524 /* 24KVO原理探究 */,
 				0B16BA232215827D0071C0A7 /* 23文字图片上下左右 */,
 				8F9267052201CE19009B3FC1 /* 22TTAttributedLabel  */,
 				67C0D4631F42D8C500762BFF /* 21生成动态验证码及验证 */,
@@ -2253,6 +2263,19 @@
 			path = "8iOS开发之内存检测工具";
 			sourceTree = "<group>";
 		};
+		8FB04389236E9BDF005C0524 /* 24KVO原理探究 */ = {
+			isa = PBXGroup;
+			children = (
+				8FB0438A236E9C0B005C0524 /* SHKVOExploreViewController.h */,
+				8FB0438B236E9C0B005C0524 /* SHKVOExploreViewController.m */,
+				8FB0438D236E9C45005C0524 /* EOCFamily.h */,
+				8FB0438E236E9C45005C0524 /* EOCFamily.m */,
+				8FB04390236E9FB2005C0524 /* EOCPerson.h */,
+				8FB04391236E9FB2005C0524 /* EOCPerson.m */,
+			);
+			path = "24KVO原理探究";
+			sourceTree = "<group>";
+		};
 		8FD1465F22264F66001E25F8 /* 25高级特训营 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2494,11 +2517,13 @@
 				67D2A6B01E0CEC9B000B30EE /* SGH161223ComponentsDemoViewController.m in Sources */,
 				677177D21DEBD081009AB627 /* SGH0729TransitionGroupViewController.m in Sources */,
 				67ED58071F0F6C1700A525E9 /* Person.m in Sources */,
+				8FB0438F236E9C45005C0524 /* EOCFamily.m in Sources */,
 				8F926725221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m in Sources */,
 				677177C61DEBD081009AB627 /* SGH1108AppStoreViewController.m in Sources */,
 				677177BD1DEBD081009AB627 /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
 				6702E3681FCF9A5D00F036EB /* UIView+Frame.m in Sources */,
 				677BB9CD1ED5B327005A1CA8 /* SGH0524PresentCViewController.m in Sources */,
+				8FB04392236E9FB2005C0524 /* EOCPerson.m in Sources */,
 				8F9267082201CE42009B3FC1 /* SGH_TTAttriLabelViewController.m in Sources */,
 				0B08F06D2202B8ED00D03708 /* SHAlertViewSetModel.m in Sources */,
 				677177C11DEBD081009AB627 /* SGH1103AESViewController.m in Sources */,
@@ -2584,6 +2609,7 @@
 				67B5F3861EC367F10035A9C0 /* SGH0510MyObject.m in Sources */,
 				67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */,
 				677177E61DEBD081009AB627 /* SXDetailImgEntity.m in Sources */,
+				8FB0438C236E9C0B005C0524 /* SHKVOExploreViewController.m in Sources */,
 				8F92670422009B07009B3FC1 /* WBButtonLink.m in Sources */,
 				6702E3671FCF9A5D00F036EB /* CAAnimation+WAnimation.m in Sources */,
 				67B5F7BE1EC489FD0035A9C0 /* SGH0511RuntimeMethod.m in Sources */,
