@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */; };
+		0400F425237012DF003E26EC /* SHRxswift_44ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */; };
+		0400F42823703B33003E26EC /* SHRxswift_45ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */; };
 		0430C81322E591AD003390A5 /* SHRxswift_19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430C81222E591AD003390A5 /* SHRxswift_19ViewController.swift */; };
 		0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */; };
 		0430CA3A22E5D303003390A5 /* DouBanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430CA3922E5D303003390A5 /* DouBanAPI.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_43ViewController.swift; sourceTree = "<group>"; };
+		0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_44ViewController.swift; sourceTree = "<group>"; };
+		0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_45ViewController.swift; sourceTree = "<group>"; };
 		0430C81222E591AD003390A5 /* SHRxswift_19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_19ViewController.swift; sourceTree = "<group>"; };
 		0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_20ViewController.swift; sourceTree = "<group>"; };
 		0430CA3922E5D303003390A5 /* DouBanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanAPI.swift; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 				0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */,
 				0430DD3022E6EFEB003390A5 /* DouBanNetworkService.swift */,
 				0430CA3922E5D303003390A5 /* DouBanAPI.swift */,
+				0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */,
+				0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */,
+				0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -365,12 +374,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
+				0400F42823703B33003E26EC /* SHRxswift_45ViewController.swift in Sources */,
 				0430DD2D22E6E833003390A5 /* Single+ObjectMapper.swift in Sources */,
 				3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */,
 				3FB94F2E22C36E84009EB6D7 /* UIImageCategory.swift in Sources */,
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
 				0430C81322E591AD003390A5 /* SHRxswift_19ViewController.swift in Sources */,
+				0400F425237012DF003E26EC /* SHRxswift_44ViewController.swift in Sources */,
 				3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */,
+				0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
 				3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */,
 				0430DD3322E6F6B3003390A5 /* SHRxswift_GithubViewController.swift in Sources */,
@@ -540,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftDemo2019_03_31/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftDemo2019_03_31/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

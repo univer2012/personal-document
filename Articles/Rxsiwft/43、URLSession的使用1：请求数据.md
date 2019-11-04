@@ -4,12 +4,12 @@
 ### 1，通过 `rx.response` 请求数据
 （1）下面代码我们通过豆瓣提供的音乐频道列表接口获取数据，并将返回结果输出到控制台中。
 
-```
+```swift
 返回的数据是： {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""},{"name":"七零","seq_id":2,"abbr_en":"","channel_id":"3","name_en":""},{"name":"八零","seq_id":3,"abbr_en":"","channel_id":"4","name_en":""},{"name":"九零","seq_id":4,"abbr_en":"","channel_id":"5","name_en":""},
 //... ...
 ```
 
-```
+```swift
 let disposeBag = DisposeBag()
 
 let urlString = "https://www.douban.com/j/app/radio/channels"
@@ -30,31 +30,30 @@ URLSession.shared.rx.response(request: request).subscribe(onNext: { (response: H
 
 这个借助 `response` 参数进行判断即可。我们把 `url` 改成一个错误的地址，运行结果如下：
 
-```
- Task <8DAD7E98-E4F0-4007-9665-504E32638092>.<1> finished with error - code: -999
+```swift
 curl -X GET 
-"https://www.douban.com/xxxxxxx/app/radio/channels" -i -v
-Canceled (145ms)
+"https://www.douban.com/xxxxxxxx/app/radio/channels" -i -v
+Failure (306ms): Status 404
+请求失败！
 ```
 
-```
+```swift
 let disposeBag = DisposeBag()
 
-let urlString = "https://www.douban.com/xxxxxxx/app/radio/channels"
+let urlString = "https://www.douban.com/xxxxxxxx/app/radio/channels"
 let url = URL(string: urlString)
+//创建请求对象
 let request = URLRequest(url: url!)
 
-URLSession.shared.rx.response(request: request).subscribe(onNext: { (response: HTTPURLResponse, data: Data) in
+URLSession.shared.rx.response(request: request).subscribe(onNext: { (response, data) in
     //判断响应结果状态码
     if 200 ..< 300 ~= response.statusCode {
         let str = String(data: data, encoding: String.Encoding.utf8)
-        print("请求成功！返回的数据是：",str ?? "")
+        print("返回的数据时：",str ?? "")
     } else {
         print("请求失败！")
     }
-    
-})
-    .disposed(by: disposeBag)
+}).disposed(by: disposeBag)
 ```
 
 ### 2，通过` rx.data` 请求数据
@@ -68,7 +67,7 @@ URLSession.shared.rx.response(request: request).subscribe(onNext: { (response: H
 ```
 请求成功！返回的数据是： {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""},{"name":"七零","seq_id":2,"abbr_en":"","channel_id":"3","name_en":""},{"name":"八零","seq_id":3,"abbr_en":"","channel_id":"4","name_en":""}
 ```
-```
+```swift
 let urlString = "https://www.douban.com/j/app/radio/channels"
 let url = URL(string: urlString)
 let request = URLRequest(url: url!)
@@ -76,18 +75,17 @@ let request = URLRequest(url: url!)
 URLSession.shared.rx.data(request: request).subscribe(onNext: { (data) in
     let str = String(data: data, encoding: String.Encoding.utf8)
     print("请求成功！返回的数据是：",str ?? "")
-})
-    .disposed(by: disposeBag)
+}).disposed(by: disposeBag)
 ```
 
 （2）如果还要处理失败的情况，可以在 `onError` 回调中操作。
-```
+```swift
 curl -X GET 
 "https://www.douban.com/xxxxxx/app/radio/channels" -i -v
 Failure (1818ms): Status 404
 请求失败！错误原因： HTTP request failed with `404`.
 ```
-```
+```swift
 let urlString = "https://www.douban.com/xxxxxx/app/radio/channels"
 let url = URL(string: urlString)
 let request = URLRequest(url: url!)
@@ -112,36 +110,44 @@ URLSession.shared.rx.data(request: request).subscribe(onNext: { (data) in
 
 ### 2，样例代码
 
-```
+```swift
 import UIKit
 
 import RxSwift
 import RxCocoa
 import RxDataSources
 
-class SHRxswift_17ViewController: UIViewController {
-    let disposeBag = DisposeBag()
-    @IBOutlet weak var startBtn: UIButton!
+
+
+class SHRxswift_43ViewController: UIViewController {
     
+    let disposeBag = DisposeBag()
+    //"发起请求"按钮
+    @IBOutlet weak var startBtn: UIButton!
+    //“取消请求”按钮
     @IBOutlet weak var cancelBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //创建URL对象
         let urlString = "https://www.douban.com/j/app/radio/channels"
         let url = URL(string: urlString)
+        //创建请求对象
         let request = URLRequest(url: url!)
+
+        startBtn.rx.tap.asObservable().flatMap{
+            URLSession.shared.rx.data(request: request).takeUntil(self.cancelBtn.rx.tap)
+        }
+        .subscribe(onNext: { (data) in
+            let str = String(data: data, encoding: String.Encoding.utf8)
+            print("请求成功！，返回的数据时：",str ?? "")
+            
+        }, onError: { (error) in
+            print("请求失败！错误原因：",error)
+            
+        }).disposed(by: disposeBag)
         
-        startBtn.rx.tap.asObservable()
-            .flatMap {
-                URLSession.shared.rx.data(request: request)
-                .takeUntil(self.cancelBtn.rx.tap)
-            }
-            .subscribe(onNext: { (data) in
-                let str = String(data: data, encoding: String.Encoding.utf8)
-                print("请求成功！返回的数据是：",str ?? "")
-            }, onError: { (error) in
-                print("请求失败！错误原因：",error)
-            }).disposed(by: disposeBag)
     }
 }
 ```
