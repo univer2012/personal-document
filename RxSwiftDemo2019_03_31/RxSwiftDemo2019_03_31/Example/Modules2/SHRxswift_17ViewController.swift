@@ -59,15 +59,15 @@ class SHRxswift_17ViewController: UIViewController {
                 }
             }).disposed(by: disposeBag)
         
-//需要上传的文件路径
-let fileURL = Bundle.main.url(forResource: "hangge", withExtension: "zip")
-//服务器路径
-let uploadURL = URL(string: "http://www.hangge.com/upload.php")!
-//将文件上传到服务器
-upload(fileURL!, urlRequest: try! urlRequest(.post, uploadURL))
-    .subscribe(onCompleted: {
-        print("上传完毕！")
-    }).disposed(by: disposeBag)
+        //需要上传的文件路径
+        let fileURL = Bundle.main.url(forResource: "hangge", withExtension: "zip")
+        //服务器路径
+        let uploadURL = URL(string: "http://www.hangge.com/upload.php")!
+        //将文件上传到服务器
+        upload(fileURL!, urlRequest: try! urlRequest(.post, uploadURL))
+            .subscribe(onCompleted: {
+                print("上传完毕！")
+            }).disposed(by: disposeBag)
         
         
 //        startBtn.rx.tap.asObservable()

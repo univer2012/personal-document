@@ -61,6 +61,7 @@ class Channel: Mappable {
     init() { }
     required init(map:Map) {}
     
+    //Mappable
     func mapping(map: Map) {
         name <- map["name"]
         nameEn <- map["name_en"]
