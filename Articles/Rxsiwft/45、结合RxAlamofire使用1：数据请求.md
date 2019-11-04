@@ -110,9 +110,14 @@ requestData(.get, url).subscribe(onNext: {
 
 （1）如果请求的数据是字符串类型的，**我们可以在 `request` 请求时直接通过 `responseString()`方法实现自动转换，省的在回调中还要手动将 `data` 转为 `string`。**
 
-![img](https:////upload-images.jianshu.io/upload_images/3788243-82c386d96d1fa6c6.png?imageMogr2/auto-orient/strip|imageView2/2/w/541)
+```
+返回的数据是： {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""},{"name":"七零","seq_id":2,"abbr_en":"","channel_id":"3","name_en":""},{"name":"八零","seq_id":3,"abbr_en":"","channel_id":"4","name_en":""},{"name":"九零","seq_id":4,"abbr_en":"","channel_id":"5","name_en":""},{"name":"粤语","seq_id":5,"abbr_en":"","channel_id":"6","name_en":""},{"name":"摇滚","seq_id":6,"abbr_en":"","channel_id":"7","name_en":""}
+//... ...
+```
 
-```csharp
+
+
+```swift
 //创建URL对象
 let urlString = "https://www.douban.com/j/app/radio/channels"
 let url = URL(string:urlString)!
@@ -125,4 +130,72 @@ request(.get, url)
         //数据处理
         print("返回的数据是：", data)
     }).disposed(by: disposeBag)
+```
+
+（2）当然更简单的方法就是**直接使用 `requestString` 去获取数据。**
+
+```swift
+//创建URL对象
+let urlString = "https://www.douban.com/j/app/radio/channels"
+let url = URL(string: urlString)!
+
+//创建并发起请求
+requestString(.get, url).subscribe(onNext: { (response, data) in
+    //数据处理
+    print("返回的数据是：",data)
+}).disposed(by: disposeBag)
+```
+
+## 三、手动发起请求、取消请求
+
+​    在很多情况下，网络请求并不是由程序自动发起的。可能需要我们点击个按钮，或者切换个标签时才去请求数据。而且除了可以手动发起请求外，同样可能还需要能手动取消上一次的网络请求（如果未完成）。下面通过样例演示这个功能如何实现。
+
+### 1，效果图
+
+（1）每次点击“发起请求”按钮则去请求一次数据。
+
+（2）如果请求没返回时，点击“取消请求”则可将其取消（取消后即使返回数据也不处理了）。
+
+![img](https:////upload-images.jianshu.io/upload_images/3788243-dac78eb79d8817c9.png?imageMogr2/auto-orient/strip|imageView2/2/w/320)
+
+### 2，样例代码
+
+```swift
+import UIKit
+import RxSwift
+import RxCocoa
+import Alamofire
+ 
+ 
+class ViewController: UIViewController {
+     
+    //“发起请求”按钮
+    @IBOutlet weak var startBtn: UIButton!
+     
+    //“取消请求”按钮
+    @IBOutlet weak var cancelBtn: UIButton!
+     
+    let disposeBag = DisposeBag()
+     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         
+        //创建URL对象
+        let urlString = "https://www.douban.com/j/app/radio/channels"
+        let url = URL(string:urlString)!
+         
+        //发起请求按钮点击
+        startBtn.rx.tap.asObservable()
+            .flatMap {
+                request(.get, url).responseString()
+                    .takeUntil(self.cancelBtn.rx.tap) //如果“取消按钮”点击则停止请求
+            }
+            .subscribe(onNext: {
+                response, data in
+                print("请求成功！返回的数据是：", data)
+            }, onError: { error in
+                print("请求失败！错误原因：", error)
+            }).disposed(by: disposeBag)
+    }
+}
 ```

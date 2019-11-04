@@ -65,38 +65,6 @@
             endingLineNumber = "56"
             landmarkName = "init(searchAction:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
-                  moduleName = "RxSwiftDemo2019_03_31"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuanping/Desktop/HuangSengoln/personal_document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
-                  timestampString = "587439429.203555"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "1566">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 (RxSwiftDemo2019_03_31.GitHubRepositories) -&gt; Swift.String in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
-                  moduleName = "RxSwiftDemo2019_03_31"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuanping/Desktop/HuangSengoln/personal_document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
-                  timestampString = "587439429.20812"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "211">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,6 +113,53 @@
             endingLineNumber = "53"
             landmarkName = "init(searchAction:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
+                  moduleName = "RxSwiftDemo2019_03_31"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuanping/Desktop/HuangSengoln/personal_document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
+                  timestampString = "594572544.236676"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (RxSwiftDemo2019_03_31.GitHubRepositories) -&gt; Swift.Array&lt;RxSwiftDemo2019_03_31.GitHubRepository&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
+                  moduleName = "RxSwiftDemo2019_03_31"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuanping/Desktop/HuangSengoln/personal_document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
+                  timestampString = "594572544.240947"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #6 () -&gt; Swift.Array&lt;RxSwiftDemo2019_03_31.GitHubRepository&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
+                  moduleName = "RxSwiftDemo2019_03_31"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuanping/Desktop/HuangSengoln/personal_document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
+                  timestampString = "594572544.250276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
