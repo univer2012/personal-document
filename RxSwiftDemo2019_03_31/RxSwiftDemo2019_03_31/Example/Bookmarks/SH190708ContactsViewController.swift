@@ -28,6 +28,7 @@ struct SH190708ContactsViewModel {
         "使用详解44（URLSession的使用2：结果处理、模型转换）",
         "使用详解45（结合RxAlamofire使用1：数据请求）",
         "使用详解46（结合RxAlamofire使用2：结果处理、模型转换）",
+        "使用详解47（结合RxAlamofire使用3：文件上传）",
         ]
     let controllers = [
         SHRxswift_14ViewController(),
@@ -42,6 +43,7 @@ struct SH190708ContactsViewModel {
         SHRxswift_44ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_45ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_45ViewController"),
         SHRxswift_46ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_47ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_47ViewController"),
     ]
 }
 

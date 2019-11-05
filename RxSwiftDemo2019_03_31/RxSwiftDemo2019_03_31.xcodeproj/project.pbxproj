@@ -48,6 +48,8 @@
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
 		8FB04394237078A3005C0524 /* SHRxswift_46ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB04393237078A3005C0524 /* SHRxswift_46ViewController.swift */; };
+		8FB0439823709577005C0524 /* SHRxswift_47ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0439723709577005C0524 /* SHRxswift_47ViewController.swift */; };
+		8FB043A223709DEA005C0524 /* hangge.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8FB043A123709DE9005C0524 /* hangge.zip */; };
 		8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0DA8822DF637A00625889 /* DoubanObject.swift */; };
 		8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */; };
 		C7CBEC23B288FF6EFAD0E7F3 /* Pods_RxSwiftDemo2019_03_31.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */; };
@@ -100,6 +102,8 @@
 		8F95FA0522510EA2000407A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F95FA0722510EA2000407A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FB04393237078A3005C0524 /* SHRxswift_46ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_46ViewController.swift; sourceTree = "<group>"; };
+		8FB0439723709577005C0524 /* SHRxswift_47ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_47ViewController.swift; sourceTree = "<group>"; };
+		8FB043A123709DE9005C0524 /* hangge.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = hangge.zip; sourceTree = "<group>"; };
 		8FB0DA8822DF637A00625889 /* DoubanObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanObject.swift; sourceTree = "<group>"; };
 		8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewController.swift; sourceTree = "<group>"; };
 		E1A8CAF78AE0F7F26D1BF5FC /* Pods-RxSwiftDemo2019_03_31.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */,
 				0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */,
 				8FB04393237078A3005C0524 /* SHRxswift_46ViewController.swift */,
+				8FB0439723709577005C0524 /* SHRxswift_47ViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		8F95F9FA22510E98000407A6 /* RxSwiftDemo2019_03_31 */ = {
 			isa = PBXGroup;
 			children = (
+				8FB043A123709DE9005C0524 /* hangge.zip */,
 				0430DD2522E6E830003390A5 /* Source */,
 				3FB91A5B22B786C6006F7104 /* Example */,
 				8F95F9FB22510E98000407A6 /* AppDelegate.swift */,
@@ -322,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */,
+				8FB043A223709DEA005C0524 /* hangge.zip in Resources */,
 				3FB94F2522C0E858009EB6D7 /* Bookmark.storyboard in Resources */,
 				8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */,
 			);
@@ -388,6 +395,7 @@
 				0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
 				3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */,
+				8FB0439823709577005C0524 /* SHRxswift_47ViewController.swift in Sources */,
 				0430DD3322E6F6B3003390A5 /* SHRxswift_GithubViewController.swift in Sources */,
 				0430DD3122E6EFEB003390A5 /* DouBanNetworkService.swift in Sources */,
 				0430DD3822E6F900003390A5 /* GitHubModel.swift in Sources */,

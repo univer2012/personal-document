@@ -779,11 +779,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLO-b9-a98">
-                                <rect key="frame" x="91" y="154" width="62" height="30"/>
+                                <rect key="frame" x="91" y="198" width="62" height="30"/>
                                 <state key="normal" title="发起请求"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5p-Hx-KJm">
-                                <rect key="frame" x="254" y="153" width="62" height="30"/>
+                                <rect key="frame" x="254" y="197" width="62" height="30"/>
                                 <state key="normal" title="取消请求"/>
                             </button>
                         </subviews>
@@ -796,6 +796,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="06s-fK-JHb"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="cancelBtn" destination="K5p-Hx-KJm" id="QNm-XC-oAj"/>
                         <outlet property="startBtn" destination="MLO-b9-a98" id="kej-8o-Pc2"/>
@@ -804,6 +805,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxY-nW-1Ah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10012" y="-28"/>
+        </scene>
+        <!--Rxswift47 View Controller-->
+        <scene sceneID="xF2-pl-ykM">
+            <objects>
+                <viewController storyboardIdentifier="SHRxswift_47ViewController" id="HkN-UR-nxO" customClass="SHRxswift_47ViewController" customModule="RxSwiftDemo2019_03_31" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LID-RB-cIn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="URC-Xs-Rsk">
+                                <rect key="frame" x="60" y="164" width="301" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="URC-Xs-Rsk" firstAttribute="top" secondItem="1Ol-b1-hM5" secondAttribute="top" constant="100" id="47N-cm-dct"/>
+                            <constraint firstItem="URC-Xs-Rsk" firstAttribute="leading" secondItem="1Ol-b1-hM5" secondAttribute="leading" constant="60" id="muU-uB-fep"/>
+                            <constraint firstItem="1Ol-b1-hM5" firstAttribute="trailing" secondItem="URC-Xs-Rsk" secondAttribute="trailing" constant="53" id="rTV-m4-CN9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Ol-b1-hM5"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="progressView" destination="URC-Xs-Rsk" id="MKt-wf-KTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMY-UL-pax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10689.85507246377" y="-27.717391304347828"/>
         </scene>
     </scenes>
     <resources>
