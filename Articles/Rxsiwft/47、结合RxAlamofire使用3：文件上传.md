@@ -131,3 +131,93 @@ class SHRxswift_47ViewController: UIViewController {
 }
 ```
 
+
+
+### 4，上传 MultipartFormData 类型的文件数据（类似于网页上 Form 表单里的文件提交）
+
+（1）上传两个文件
+
+```swift
+//需要上传的文件
+let fileURL1 = Bundle.main.url(forResource: "0", withExtension: "png")
+let fileURL2 = Bundle.main.url(forResource: "1", withExtension: "png")
+
+//服务器路径
+let uploadURL = URL(string: "http://www.hangge.com/upload2.php")!
+
+//将文件上传到服务器
+upload(multipartFormData: { (multipartFormData) in
+    multipartFormData.append(fileURL1!, withName: "file1")
+    multipartFormData.append(fileURL2!, withName: "file2")
+}, to: uploadURL) { (encodingResult) in
+    switch encodingResult {
+    case .success(request: let upload, _, _):
+        upload.responseJSON(completionHandler: { (response) in
+            debugPrint(response)
+        })
+    case .failure(let encodingError):
+        print(encodingError)
+    }
+}
+```
+
+附：服务端代码（`upload2.php`）
+
+```php
+<? 
+move_uploaded_file($_FILES["file1"]["tmp_name"],
+    $_SERVER["DOCUMENT_ROOT"]."/uploadFiles/" . $_FILES["file1"]["name"]);
+ 
+move_uploaded_file($_FILES["file2"]["tmp_name"],
+    $_SERVER["DOCUMENT_ROOT"]."/uploadFiles/" . $_FILES["file2"]["name"]);
+?>
+```
+
+（2）文本参数与文件一起提交（文件除了可以使用 `fileURL`，还可以上传 `Data` 类型的文件数据）
+
+```tsx
+//字符串
+let strData = "hangge.com".data(using: String.Encoding.utf8)
+//数字
+let intData = String(10).data(using: String.Encoding.utf8)
+//文件1
+let path = Bundle.main.url(forResource: "0", withExtension: "png")!
+let file1Data = try! Data(contentsOf: path)
+//文件2
+let file2URL = Bundle.main.url(forResource: "1", withExtension: "png")
+
+//服务器路径
+let uploadURL = URL(string: "http://www.hangge.com/upload2.php")!
+
+//将文件上传到服务器
+upload(multipartFormData: { (multipartFormData) in
+    multipartFormData.append(strData!, withName: "value1")
+    multipartFormData.append(intData!, withName: "value2")
+    multipartFormData.append(file1Data, withName: "file1",fileName: "php.png", mimeType: "image/png")
+    multipartFormData.append(file2URL!, withName: "file2")
+}, to: uploadURL) { (encodingResult) in
+    switch encodingResult {
+    case .success(request: let upload, _, _):
+        upload.responseJSON(completionHandler: { (response) in
+            debugPrint(response)
+        })
+    case .failure(let encodingError):
+        print(encodingError)
+    }
+}
+```
+
+附：服务端代码（`upload2.php`）
+
+```php
+<?
+$value1 = $_POST["value1"];
+$value2 = $_POST["value2"];
+ 
+move_uploaded_file($_FILES["file1"]["tmp_name"],
+    $_SERVER["DOCUMENT_ROOT"]."/uploadFiles/" . $_FILES["file1"]["name"]);
+  
+move_uploaded_file($_FILES["file2"]["tmp_name"],
+    $_SERVER["DOCUMENT_ROOT"]."/uploadFiles/" . $_FILES["file2"]["name"]);
+?>
+```
