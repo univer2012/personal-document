@@ -7,39 +7,25 @@
 下载完毕！
 ```
 ```swift
-import UIKit
-
-import RxSwift
-import RxCocoa
-import RxDataSources
-
-import RxAlamofire
-import Alamofire
-
-class SHRxswift_19ViewController: UIViewController {
-    let disposeBag = DisposeBag()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let destination: DownloadRequest.DownloadFileDestination = { _, response in
-            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
-            print("fileURL:", fileURL)
-            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-        }
-        
-        let fileURL = URL(string: "http://www.hangge.com/blog/images/logo.png")!
-        
-        download(URLRequest(url: fileURL), to: destination)
-            .subscribe(onNext: { (element) in
-                print("开始下载。")
-            }, onError: { (error) in
-                print("下载失败！失败原因：\(error)")
-            }, onCompleted: {
-                print("下载完毕！")
-            })
-        .disposed(by: disposeBag)
-    }
+//指定下载路径（文件名不变）
+let destination: DownloadRequest.DownloadFileDestination = {_, response in
+    let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    let fileURL = documentsURL.appendingPathComponent(response.suggestedFilename!)
+    //两个参数表示如果有同名文件则会覆盖，如果路径中文件夹不存在则会自动创建
+    return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
 }
+
+//需要下载的文件
+let fileURL = URL(string: "http://www.hangge.com/blog/images/logo.png")!
+
+//开始下载
+download(URLRequest(url: fileURL), to: destination).subscribe(onNext: { (element) in
+    print("开始下载。")
+}, onError: { (error) in
+    print("下载失败！失败原因：\(error)")
+}, onCompleted: {
+    print("下载完毕")
+}).disposed(by: disposeBag)
 ```
 （2）将 `logo` 图片下载下来，并保存到用户文档目录下的 `file1` 子目录（ `Documnets/file1` 目录），文件名改成 `myLogo.png`。
 ```swift

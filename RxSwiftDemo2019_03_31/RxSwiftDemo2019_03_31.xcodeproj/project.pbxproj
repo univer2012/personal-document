@@ -52,6 +52,7 @@
 		8FB043A223709DEA005C0524 /* hangge.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8FB043A123709DE9005C0524 /* hangge.zip */; };
 		8FB043A5237252A7005C0524 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB043A3237252A5005C0524 /* 0.png */; };
 		8FB043A6237252A7005C0524 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB043A4237252A6005C0524 /* 1.png */; };
+		8FB043A823725726005C0524 /* SHRxswift_48ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */; };
 		8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0DA8822DF637A00625889 /* DoubanObject.swift */; };
 		8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */; };
 		C7CBEC23B288FF6EFAD0E7F3 /* Pods_RxSwiftDemo2019_03_31.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */; };
@@ -108,6 +109,7 @@
 		8FB043A123709DE9005C0524 /* hangge.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = hangge.zip; sourceTree = "<group>"; };
 		8FB043A3237252A5005C0524 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		8FB043A4237252A6005C0524 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_48ViewController.swift; sourceTree = "<group>"; };
 		8FB0DA8822DF637A00625889 /* DoubanObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanObject.swift; sourceTree = "<group>"; };
 		8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewController.swift; sourceTree = "<group>"; };
 		E1A8CAF78AE0F7F26D1BF5FC /* Pods-RxSwiftDemo2019_03_31.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */,
 				8FB04393237078A3005C0524 /* SHRxswift_46ViewController.swift */,
 				8FB0439723709577005C0524 /* SHRxswift_47ViewController.swift */,
+				8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
 				0430C81322E591AD003390A5 /* SHRxswift_19ViewController.swift in Sources */,
 				0400F425237012DF003E26EC /* SHRxswift_44ViewController.swift in Sources */,
+				8FB043A823725726005C0524 /* SHRxswift_48ViewController.swift in Sources */,
 				3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */,
 				0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
