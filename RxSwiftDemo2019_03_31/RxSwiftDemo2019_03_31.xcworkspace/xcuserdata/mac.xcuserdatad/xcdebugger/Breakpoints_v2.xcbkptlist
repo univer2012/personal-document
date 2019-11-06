@@ -47,6 +47,38 @@
             endingLineNumber = "40"
             landmarkName = "init(searchAction:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "426FCA03-AA9C-4BC7-ADF7-F79C4F9FC77B - f301065365ce30a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
+                  moduleName = "RxSwiftDemo2019_03_31"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Personal%20Documents/personal-document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "567">
+               </Location>
+               <Location
+                  uuid = "426FCA03-AA9C-4BC7-ADF7-F79C4F9FC77B - 66012226b527d3fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Error) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in closure #2 (Swift.String) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
+                  moduleName = "RxSwiftDemo2019_03_31"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/Personal%20Documents/personal-document/RxSwiftDemo2019_03_31/RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
