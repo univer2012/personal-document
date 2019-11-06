@@ -17,13 +17,20 @@
 ### 1，效果图
 我们使用 `Moya` 调用豆瓣 FM 的 `API` 接口，获取所有的频道列表并输出到控制台中。
 
+```swift
+返回的数据时： {"channels":[{"name_en":"Personal Radio","seq_id":0,"abbr_en":"My","name":"私人兆赫","channel_id":0},{"name":"华语","seq_id":0,"abbr_en":"","channel_id":"1","name_en":""},{"name":"欧美","seq_id":1,"abbr_en":"","channel_id":"2","name_en":""},{"name":"七零","seq_id":2,"abbr_en":"","channel_id":"3","name_en":""},{"name":"八零","seq_id":3,"abbr_en":"","channel_id":"4","name_en":""},{"name":"九零","seq_id":4,"abbr_en":"","channel_id":"5","name_en":""},{"name":"粤语","seq_id":5,"abbr_en":"","channel_id":"6","name_en":""},{"name":"摇滚","seq_id":6,"abbr_en":"","channel_id":"7","name_en":""},{"name":"民谣","seq_id":7,"abbr_en":"","channel_id":"8","name_en":""},{"name":"轻音乐","seq_id":8,"abbr_en":"","channel_id":"9","name_en":""},
+//... ...
+```
+
+
+
 ### 2，网络请求层
 我们先创建一个 `DouBanAPI.swift` 文件作为网络请求层，里面的内容如下：
 
 1. 首先定义一个 `provider`，即请求发起对象。往后我们如果要发起网络请求就使用这个 `provider`。
 2. 接着声明一个 `enum` 来对请求进行明确分类，这里我们定义两个枚举值分别表示获取频道列表、获取歌曲信息。
 3. 最后让这个 `enum` 实现 `TargetType` 协议，在这里面定义我们各个请求的 `url`、参数、`header` 等信息。
-```
+```swift
 import Foundation
 import Moya
 
@@ -90,63 +97,61 @@ extension DouBanAPI: TargetType {
 ```
 ### 3，使用样例
 （1）我们在视图控制器中通过上面的定义的 `provider` 即可发起请求，获取数据。具体代码如下：
-```
+```swift
 import UIKit
-
 import RxSwift
 import RxCocoa
 
-import RxAlamofire
-import Alamofire
-import Moya
+class SHRxswift_49ViewController: UIViewController {
 
-
-class SHRxswift_20ViewController: UIViewController {
     let disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //获取数据
-        DouBanProvider.rx.request(.channels)
-            .subscribe { event in
-                switch event {
-                case let .success(response):
-                    //数据处理
-                    let str = String(data: response.data, encoding: String.Encoding.utf8)
-                    print("返回的数据是：", str ?? "")
-                case let .error(error):
-                    print("数据请求失败!错误原因：", error)
-                }
-            }.disposed(by: disposeBag)
+        DouBanProvider.rx.request(.channels).subscribe { (event) in
+            switch event {
+            case let .success(response):
+                //数据处理
+                let str = String(data: response.data, encoding: String.Encoding.utf8)
+                print("返回的数据时：",str ?? "")
+            case let .error(error):
+                print("数据请求失败！错误原因：",error)
+            }
+        }.disposed(by: disposeBag)
         
     }
+    
 }
 ```
 
 （2）订阅相关的代码还可以换种方式写：
-```
+```swift
 import UIKit
-
 import RxSwift
 import RxCocoa
 
-import Moya
+class SHRxswift_49ViewController: UIViewController {
 
-class SHRxswift_20ViewController: UIViewController {
     let disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //获取数据
-        DouBanProvider.rx.request(.channels)
-            .subscribe(onSuccess: { (response) in
-                let str = String(data: response.data, encoding: String.Encoding.utf8)
-                print("返回的数据是：", str ?? "")
-            }) { (error) in
-                print("数据请求失败!错误原因：", error)
-            }
-            .disposed(by: disposeBag)
+        DouBanProvider.rx.request(.channels).subscribe(onSuccess: { (response) in
+            //数据处理
+            let str = String(data: response.data, encoding: String.Encoding.utf8)
+            print("返回的数据时：",str ?? "")
+        }) { (error) in
+            print("数据请求失败！错误原因：",error)
+        }.disposed(by: disposeBag)
+        
     }
+    
 }
 ```
 ---
