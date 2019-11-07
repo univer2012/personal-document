@@ -29,7 +29,7 @@ class GitHubSignupService {
         
         //判断用户名是否只有数字和字母
         if username.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) != nil {
-            return .just(.failed(message: "用户名智能包含数字和字母"))
+            return .just(.failed(message: "用户名只能包含数字和字母"))
         }
         
         //发起网络请求检查用户名是否已存在

@@ -54,7 +54,7 @@ struct SH190708ContactsViewModel {
         SHRxswift_50ViewController(),
         SHRxswift_52GithubViewController(),
         SHRxswift_53GithubViewController(),
-        SHRxswift_54ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_54ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_54ViewController"),
     ]
 }
 
