@@ -41,6 +41,7 @@ struct GitHubRepository: Mappable {
     
     init?(map: Map) { }
     
+    //Mappable
     mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
