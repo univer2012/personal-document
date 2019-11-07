@@ -36,21 +36,21 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "426FCA03-AA9C-4BC7-ADF7-F79C4F9FC77B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GitHubViewModel.swift"
             timestampString = "585569203.3086129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "init(searchAction:)"
             landmarkType = "7">
             <Locations>
                <Location
                   uuid = "426FCA03-AA9C-4BC7-ADF7-F79C4F9FC77B - f301065365ce30a4"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Swift.String) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
@@ -65,7 +65,7 @@
                </Location>
                <Location
                   uuid = "426FCA03-AA9C-4BC7-ADF7-F79C4F9FC77B - 66012226b527d3fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Error) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in closure #2 (Swift.String) -&gt; RxSwift.Observable&lt;RxSwiftDemo2019_03_31.GitHubRepositories&gt; in RxSwiftDemo2019_03_31.GitHubViewModel.init(searchAction: RxSwift.Observable&lt;Swift.String&gt;) -&gt; RxSwiftDemo2019_03_31.GitHubViewModel"
@@ -85,15 +85,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3191D216-A181-4F16-86D4-75FF0628E706"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/SHRxswift_GithubViewController.swift"
             timestampString = "585569281.3951809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -272,6 +272,22 @@
                   offsetFromSymbolStart = "36">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B649400-14FA-47DB-86DC-3E6007FE021A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxSwiftDemo2019_03_31/Example/Modules2/GithubSearch/GithubAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "task"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

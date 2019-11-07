@@ -42,10 +42,11 @@ extension GitHubAPI: TargetType {
         switch self {
         case .repositories(let query):
             var params: [String: Any] = [:]
-            params["q"] = query
+            //FIXME:注意：这里写死了
+            params["q"] = query //"al"
             params["sort"] = "stars"
             params["order"] = "desc"
-            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         default:
             return .requestPlain
         }

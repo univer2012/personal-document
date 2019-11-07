@@ -23,7 +23,6 @@ struct SH190708ContactsViewModel {
         "5URLSession结果处理、模型转换",
         "6结合RxAlamofire使用",
         "7结合Moya使用",
-        "8Github搜索",
         "使用详解43（URLSession的使用1：请求数据）",
         "使用详解44（URLSession的使用2：结果处理、模型转换）",
         "使用详解45（结合RxAlamofire使用1：数据请求）",
@@ -31,8 +30,10 @@ struct SH190708ContactsViewModel {
         "使用详解47（结合RxAlamofire使用3：文件上传）",
         "使用详解48（结合RxAlamofire使用4：文件下载）",
         "使用详解49（结合Moya使用1：数据请求）",
-        "使用详解50（结合Moya使用2：结果处理、模型转换）"
+        "使用详解50（结合Moya使用2：结果处理、模型转换）",
+        "使用详解52（MVVM架构演示2：使用Observable样例）",
         ]
+    
     let controllers = [
         SHRxswift_14ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_15ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_15ViewController"),
@@ -41,7 +42,6 @@ struct SH190708ContactsViewModel {
         SHRxswift_18ViewController(),
         SHRxswift_19ViewController(),
         SHRxswift_20ViewController(),
-        SHRxswift_GithubViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_43ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_43ViewController"),
         SHRxswift_44ViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_45ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_45ViewController"),
@@ -50,6 +50,7 @@ struct SH190708ContactsViewModel {
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_48ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_48ViewController"),
         SHRxswift_49ViewController(),
         SHRxswift_50ViewController(),
+        SHRxswift_52GithubViewController(),
     ]
 }
 

@@ -1,17 +1,16 @@
 //
-//  SHRxswift_GithubViewController.swift
+//  SHRxswift_52GithubViewController.swift
 //  RxSwiftDemo2019_03_31
 //
-//  Created by Mac on 2019/7/23.
+//  Created by Mac on 2019/11/7.
 //  Copyright © 2019 远平. All rights reserved.
 //
 
 import UIKit
-
 import RxSwift
 import RxCocoa
 
-class SHRxswift_GithubViewController: UIViewController {
+class SHRxswift_52GithubViewController: UIViewController {
     
     //显示资源列表的tableView
     var tableView: UITableView!
@@ -23,11 +22,14 @@ class SHRxswift_GithubViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //创建表视图
         self.tableView = UITableView(frame: self.view.frame, style: .plain)
+        
         //创建一个重用的单元格
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.view.addSubview(self.tableView)
+        
         //创建表头的搜索栏
         self.searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 56))
         self.tableView.tableHeaderView = self.searchBar
@@ -58,6 +60,7 @@ class SHRxswift_GithubViewController: UIViewController {
                 self?.showAlert(title: item.fullName, message: item.description)
             }).disposed(by: disposeBag)
     }
+    
     //显示消息
     func showAlert(title:String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -69,4 +72,5 @@ class SHRxswift_GithubViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
 }
