@@ -1,5 +1,5 @@
 //
-//  SHRxswift_52GithubViewController.swift
+//  SHRxswift_53GithubViewController.swift
 //  RxSwiftDemo2019_03_31
 //
 //  Created by Mac on 2019/11/7.
@@ -7,12 +7,12 @@
 //
 
 import UIKit
+
 import RxSwift
 import RxCocoa
 
-
-//MARK: 使用Observer
-class SHRxswift_52GithubViewController: UIViewController {
+//MARK:使用Driver
+class SHRxswift_53GithubViewController: UIViewController {
     
     //显示资源列表的tableView
     var tableView: UITableView!
@@ -37,18 +37,18 @@ class SHRxswift_52GithubViewController: UIViewController {
         self.tableView.tableHeaderView = self.searchBar
         
         //查询条件输入
-        let searchAction = searchBar.rx.text.orEmpty.throttle(0.5, scheduler: MainScheduler.instance) //只有间隔超过0.5k秒才发送
+        let searchAction = searchBar.rx.text.orEmpty.asDriver()
+            .throttle(0.5) //只有间隔超过0.5k秒才发送
             .distinctUntilChanged()
-            .asObservable()
         
         //初始化ViewModel
-        let viewModel = GitHubViewModel(searchAction: searchAction)
+        let viewModel = ViewModel(searchAction: searchAction)
         
         //绑定导航栏标题数据
-        viewModel.navigationTitle.bind(to: self.navigationItem.rx.title).disposed(by: disposeBag)
+        viewModel.navigationTitle.drive(self.navigationItem.rx.title).disposed(by: disposeBag)
         
         //将数据绑定到表格
-        viewModel.repositories.bind(to: tableView.rx.items) { (tableView, row, element) in
+        viewModel.repositories.drive(tableView.rx.items) { (tableView, row, element) in
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
             cell.textLabel?.text = element.name
             cell.detailTextLabel?.text = element.htmlUrl

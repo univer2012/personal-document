@@ -32,6 +32,7 @@ struct SH190708ContactsViewModel {
         "使用详解49（结合Moya使用1：数据请求）",
         "使用详解50（结合Moya使用2：结果处理、模型转换）",
         "使用详解52（MVVM架构演示2：使用Observable样例）",
+        "使用详解53（MVVM架构演示3：使用Driver样例）",
         ]
     
     let controllers = [
@@ -51,6 +52,8 @@ struct SH190708ContactsViewModel {
         SHRxswift_49ViewController(),
         SHRxswift_50ViewController(),
         SHRxswift_52GithubViewController(),
+        SHRxswift_53GithubViewController(),
+        
     ]
 }
 

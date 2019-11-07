@@ -12,8 +12,26 @@ import RxSwift
 import RxCocoa
 import ObjectMapper
 
+//MARK: Driver
 class GitHubNetworkService {
     
+    //搜索资源数据
+    func searchRepositories(query: String) -> Driver<GitHubRepositories> {
+        
+        return GitHubProvider.rx.request(.repositories(query))
+            .filterSuccessfulStatusCodes()
+            .mapObject(GitHubRepositories.self)
+            .asDriver(onErrorDriveWith: Driver.empty())
+        
+    }
+}
+
+
+
+
+#if false
+//MARK: Observer
+class GitHubNetworkService {
     //搜索资源数据
     func searchRepositories(query: String) -> Observable<GitHubRepositories> {
         return GitHubProvider.rx.request(.repositories(query))
@@ -24,6 +42,8 @@ class GitHubNetworkService {
                 print("发生错误：",error.localizedDescription)
                 return Observable<GitHubRepositories>.empty()
         }
-        
+
     }
+
 }
+#endif
