@@ -31,6 +31,7 @@ struct SH190708ContactsViewModel {
         "使用详解47（结合RxAlamofire使用3：文件上传）",
         "使用详解48（结合RxAlamofire使用4：文件下载）",
         "使用详解49（结合Moya使用1：数据请求）",
+        "使用详解50（结合Moya使用2：结果处理、模型转换）"
         ]
     let controllers = [
         SHRxswift_14ViewController(),
@@ -48,6 +49,7 @@ struct SH190708ContactsViewModel {
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_47ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_47ViewController"),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_48ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_48ViewController"),
         SHRxswift_49ViewController(),
+        SHRxswift_50ViewController(),
     ]
 }
 

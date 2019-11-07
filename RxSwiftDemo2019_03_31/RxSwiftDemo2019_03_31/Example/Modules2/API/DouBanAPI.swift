@@ -17,7 +17,7 @@ let DouBanProvider = MoyaProvider<DouBanAPI>()
 //请求分类
 public enum DouBanAPI {
     case channels   //获取频道列表
-    //接口需要在vpn翻墙才能访问，接口数据也变了。
+    //接口需要在vpn翻墙才能访问
     case playlist(String)   //获取歌曲
 }
 //请求配置

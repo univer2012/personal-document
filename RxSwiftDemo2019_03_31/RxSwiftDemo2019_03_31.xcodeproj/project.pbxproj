@@ -22,6 +22,9 @@
 		0430DD3822E6F900003390A5 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430DD3722E6F900003390A5 /* GitHubModel.swift */; };
 		0430DD3A22E6FC3A003390A5 /* GitHubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430DD3922E6FC3A003390A5 /* GitHubViewModel.swift */; };
 		044A775623729E7400611F0C /* SHRxswift_49ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A775523729E7400611F0C /* SHRxswift_49ViewController.swift */; };
+		044A77582372AA7500611F0C /* SHRxswift_50ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A77572372AA7500611F0C /* SHRxswift_50ViewController.swift */; };
+		044A775A2372B61F00611F0C /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A77592372B61F00611F0C /* ObservableExtension.swift */; };
+		044A77602372B75E00611F0C /* DoubanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A775F2372B75E00611F0C /* DoubanModel.swift */; };
 		04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */; };
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
@@ -75,6 +78,9 @@
 		0430DD3722E6F900003390A5 /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
 		0430DD3922E6FC3A003390A5 /* GitHubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewModel.swift; sourceTree = "<group>"; };
 		044A775523729E7400611F0C /* SHRxswift_49ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_49ViewController.swift; sourceTree = "<group>"; };
+		044A77572372AA7500611F0C /* SHRxswift_50ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_50ViewController.swift; sourceTree = "<group>"; };
+		044A77592372B61F00611F0C /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
+		044A775F2372B75E00611F0C /* DoubanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanModel.swift; sourceTree = "<group>"; };
 		04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_18ViewController.swift; sourceTree = "<group>"; };
 		04CB437622DF36750042A456 /* testPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,9 +164,46 @@
 			path = GithubSearch;
 			sourceTree = "<group>";
 		};
+		044A775C2372B65A00611F0C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0430CA3922E5D303003390A5 /* DouBanAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		044A775D2372B65F00611F0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FB0DA8822DF637A00625889 /* DoubanObject.swift */,
+				044A775F2372B75E00611F0C /* DoubanModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044A775E2372B69900611F0C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				044A77592372B61F00611F0C /* ObservableExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		044A77612372E0DB00611F0C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0430DD3022E6EFEB003390A5 /* DouBanNetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		3F8CFF7D22D368D10067194E /* Modules2 */ = {
 			isa = PBXGroup;
 			children = (
+				044A77612372E0DB00611F0C /* Service */,
+				044A775E2372B69900611F0C /* Extension */,
+				044A775D2372B65F00611F0C /* Model */,
+				044A775C2372B65A00611F0C /* API */,
 				0430DD3422E6F6D9003390A5 /* GithubSearch */,
 				3F8CFF8022D36A440067194E /* SHRxswift_14ViewController.swift */,
 				3F8CFF8222D469BF0067194E /* SHRxswift_15ViewController.swift */,
@@ -168,11 +211,8 @@
 				3F8CFF8622D49D2E0067194E /* SHRxswift_17ViewController.swift */,
 				3F8CFF8822D49F540067194E /* SHRxswift_17DetailViewController.swift */,
 				04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */,
-				8FB0DA8822DF637A00625889 /* DoubanObject.swift */,
 				0430C81222E591AD003390A5 /* SHRxswift_19ViewController.swift */,
 				0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */,
-				0430DD3022E6EFEB003390A5 /* DouBanNetworkService.swift */,
-				0430CA3922E5D303003390A5 /* DouBanAPI.swift */,
 				0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */,
 				0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */,
 				0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */,
@@ -180,6 +220,7 @@
 				8FB0439723709577005C0524 /* SHRxswift_47ViewController.swift */,
 				8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */,
 				044A775523729E7400611F0C /* SHRxswift_49ViewController.swift */,
+				044A77572372AA7500611F0C /* SHRxswift_50ViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -413,10 +454,13 @@
 				8FB0439823709577005C0524 /* SHRxswift_47ViewController.swift in Sources */,
 				0430DD3322E6F6B3003390A5 /* SHRxswift_GithubViewController.swift in Sources */,
 				0430DD3122E6EFEB003390A5 /* DouBanNetworkService.swift in Sources */,
+				044A775A2372B61F00611F0C /* ObservableExtension.swift in Sources */,
+				044A77582372AA7500611F0C /* SHRxswift_50ViewController.swift in Sources */,
 				0430DD3822E6F900003390A5 /* GitHubModel.swift in Sources */,
 				8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */,
 				3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */,
 				044A775623729E7400611F0C /* SHRxswift_49ViewController.swift in Sources */,
+				044A77602372B75E00611F0C /* DoubanModel.swift in Sources */,
 				0430DD2F22E6E833003390A5 /* Response+ObjectMapper.swift in Sources */,
 				0430DD3A22E6FC3A003390A5 /* GitHubViewModel.swift in Sources */,
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
