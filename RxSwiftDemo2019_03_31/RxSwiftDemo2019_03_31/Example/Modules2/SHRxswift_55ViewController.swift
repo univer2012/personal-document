@@ -28,6 +28,9 @@ class SHRxswift_55ViewController: UIViewController {
     //注册按钮
     @IBOutlet weak var signupOutlet: UIButton!
     
+    //注册时的活动指示器
+    @IBOutlet weak var signInActivityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +56,7 @@ class SHRxswift_55ViewController: UIViewController {
             .drive(passwordValidationOutlet.rx.validateionResult)
             .disposed(by: disposeBag)
         
-        //再次y输入密码验证结果绑定
+        //再次输入密码验证结果绑定
         viewModel.validatedPasswordRepeated
             .drive(repeatedPasswordValidationOutlet.rx.validateionResult)
             .disposed(by: disposeBag)
@@ -64,6 +67,17 @@ class SHRxswift_55ViewController: UIViewController {
                 self?.signupOutlet.isEnabled = valid
                 self?.signupOutlet.alpha = valid ? 1.0 : 0.3
             }).disposed(by: disposeBag)
+        
+        /*MARK: 添加 - start*/
+        //创建一个指示器
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        //当前是否正在注册，觉得指示器是否显示
+        viewModel.signingIn
+            .map{ !$0 }
+            .drive(hud.rx.isHidden)
+            .disposed(by: disposeBag)
+        /*end*/
         
         //注册结果绑定
         viewModel.signupResult
@@ -82,3 +96,24 @@ class SHRxswift_55ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 }
+
+
+///*MARK: 添加 - start*/
+////当前是否正在注册
+//viewModel.signingIn
+//    .drive(signInActivityIndicator.rx.isAnimating)
+//    .disposed(by: disposeBag)
+///*end*/
+
+
+
+
+
+///*MARK: 添加 - start*/
+////当前是否正在注册
+//viewModel.signingIn
+//    .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+//    .disposed(by: disposeBag)
+///*end*/
+
+

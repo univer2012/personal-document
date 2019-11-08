@@ -7,8 +7,8 @@ pod 'ObjectMapper'
 
 target 'RxSwiftDemo2019_03_31' do
     # Rx
-    pod 'RxSwift',    '~> 5.0'
-    pod 'RxCocoa',    '~> 5.0'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
     pod 'RxDataSources'
 
     pod 'NSObject+Rx'
