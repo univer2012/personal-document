@@ -56,6 +56,9 @@
 		3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB94F2F22C37F0C009EB6D7 /* SHRxswift_7ViewController.swift */; };
 		3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4C62522C60FA6007E539C /* SHRxswift_9ViewController.swift */; };
 		8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D422E22D0839D004C1E53 /* SHRxswift_11ViewController.swift */; };
+		8F20A4272374F7500040BE9A /* SHRxswift_55ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */; };
+		8F20A42B2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A42A2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift */; };
+		8F20A42D2374FA500040BE9A /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A42C2374FA500040BE9A /* ActivityIndicator.swift */; };
 		8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
@@ -124,6 +127,9 @@
 		3FE4C62522C60FA6007E539C /* SHRxswift_9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_9ViewController.swift; sourceTree = "<group>"; };
 		4B38310B1FB54A94391172DA /* Pods-RxSwiftDemo2019_03_31.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.release.xcconfig"; sourceTree = "<group>"; };
 		8F0D422E22D0839D004C1E53 /* SHRxswift_11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_11ViewController.swift; sourceTree = "<group>"; };
+		8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_55ViewController.swift; sourceTree = "<group>"; };
+		8F20A42A2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSignup55ViewModel.swift; sourceTree = "<group>"; };
+		8F20A42C2374FA500040BE9A /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_10ViewController.swift; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95F9FB22510E98000407A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 				0430DD3922E6FC3A003390A5 /* GitHubViewModel.swift */,
 				044A776723740EA900611F0C /* ViewModel.swift */,
 				044A7774237423CC00611F0C /* GitHubSignupViewModel.swift */,
+				8F20A42A2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 		044A776F23741D8700611F0C /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8F20A42C2374FA500040BE9A /* ActivityIndicator.swift */,
 				044A777023741D9A00611F0C /* ValidationResult.swift */,
 				044A7776237428C900611F0C /* UILabelExtension.swift */,
 			);
@@ -256,6 +264,7 @@
 				044A77622373EDEA00611F0C /* SHRxswift_52GithubViewController.swift */,
 				044A77692374111F00611F0C /* SHRxswift_53GithubViewController.swift */,
 				044A776B237414C200611F0C /* SHRxswift_54ViewController.swift */,
+				8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -475,6 +484,7 @@
 			files = (
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
 				044A77632373EDEA00611F0C /* SHRxswift_52GithubViewController.swift in Sources */,
+				8F20A4272374F7500040BE9A /* SHRxswift_55ViewController.swift in Sources */,
 				0400F42823703B33003E26EC /* SHRxswift_45ViewController.swift in Sources */,
 				0430DD2D22E6E833003390A5 /* Single+ObjectMapper.swift in Sources */,
 				044A777323741FB600611F0C /* GitHubSignupService.swift in Sources */,
@@ -498,10 +508,12 @@
 				3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */,
 				044A775623729E7400611F0C /* SHRxswift_49ViewController.swift in Sources */,
 				044A776823740EAA00611F0C /* ViewModel.swift in Sources */,
+				8F20A42D2374FA500040BE9A /* ActivityIndicator.swift in Sources */,
 				044A77602372B75E00611F0C /* DoubanModel.swift in Sources */,
 				0430DD2F22E6E833003390A5 /* Response+ObjectMapper.swift in Sources */,
 				0430DD3A22E6FC3A003390A5 /* GitHubViewModel.swift in Sources */,
 				044A777123741D9A00611F0C /* ValidationResult.swift in Sources */,
+				8F20A42B2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift in Sources */,
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
 				044A776A2374111F00611F0C /* SHRxswift_53GithubViewController.swift in Sources */,
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
