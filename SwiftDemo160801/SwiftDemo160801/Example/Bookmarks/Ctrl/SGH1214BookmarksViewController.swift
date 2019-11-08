@@ -12,38 +12,42 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
 
     var tableView : UITableView?
     lazy var titlesArray: Array<String> = {
-        var array = ["1、iOS 界面动画教程之 Layer 动画进阶",
-                           "2、iOS 界面动画教程之与视图相关的动画",
-                           "3、iOS 界面动画教程之 Layer 动画基础",
-                           "4、iOS 界面动画教程之自动布局",
-                           "5、自定义PageControl",
-                           "6、尝试面向轨道编程",
-                           "7、Auto Layout 使用心得",
-                           "8、面向协议编程与 Cocoa 的邂逅 (下)",
-                           "9、架构师之泛型应用分析介绍",
-                           "10、UICollectionViewCell Auto Sizing(自适应高度)",
-                    ]
+        var array = [
+        "1、iOS 界面动画教程之 Layer 动画进阶",
+           "2、iOS 界面动画教程之与视图相关的动画",
+           "3、iOS 界面动画教程之 Layer 动画基础",
+           "4、iOS 界面动画教程之自动布局",
+           "5、自定义PageControl",
+           "6、尝试面向轨道编程",
+           "7、Auto Layout 使用心得",
+           "8、面向协议编程与 Cocoa 的邂逅 (下)",
+           "9、架构师之泛型应用分析介绍",
+           "10、UICollectionViewCell Auto Sizing(自适应高度)",
+        ]
         if #available(iOS 13.0, *) {
             array.append("11、NFC_passport")
         }
+        array.append("12、TableView的字母索引")
         return array
     }()
     
     lazy var controllersArray: Array<UIViewController> = {
-        var array = [SGH160802ViewController(),
-                                SGH0804ViewController(),
-                                SGH160811ViewController(),
-                                SGH160818AutoLayoutViewController(),
-                                SGH1208CustomPageControlViewController(),
-                                SGH1213TrackProgramViewController(),
-                                SGH1214AutolayoutViewController(),
-                                SGH1222POPAndCocoaViewController(),
-                                DreamGenericViewController(),
-                                SGH1901AutoSizingViewController(),
-                    ]
+        var array = [
+            SGH160802ViewController(),
+            SGH0804ViewController(),
+            SGH160811ViewController(),
+            SGH160818AutoLayoutViewController(),
+            SGH1208CustomPageControlViewController(),
+            SGH1213TrackProgramViewController(),
+            SGH1214AutolayoutViewController(),
+            SGH1222POPAndCocoaViewController(),
+            DreamGenericViewController(),
+            SGH1901AutoSizingViewController(),
+        ]
         if #available(iOS 13.0, *) {
             array.append(SHNFCPassportViewController())
         }
+        array.append(SHWordIndexViewController())
         return array
     }()
     

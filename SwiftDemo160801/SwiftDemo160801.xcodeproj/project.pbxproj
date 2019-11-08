@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04458AA62356D785009A2A36 /* SHNFCPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04458AA52356D785009A2A36 /* SHNFCPassportViewController.swift */; };
+		04E2644D23757C1D0059FDFB /* SHWordIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2644C23757C1D0059FDFB /* SHWordIndexViewController.swift */; };
 		0B2437D621ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */; };
 		0B2437D821ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */; };
 		3F8CFF9022D605370067194E /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8CFF8F22D605370067194E /* Favorites.storyboard */; };
@@ -117,6 +118,7 @@
 /* Begin PBXFileReference section */
 		04458AA52356D785009A2A36 /* SHNFCPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHNFCPassportViewController.swift; sourceTree = "<group>"; };
 		04458AA72356D93A009A2A36 /* SwiftDemo160801.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SwiftDemo160801.entitlements; sourceTree = "<group>"; };
+		04E2644C23757C1D0059FDFB /* SHWordIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHWordIndexViewController.swift; sourceTree = "<group>"; };
 		0B2437D521ECA3E2005BFBF9 /* SGH1901AutoSizingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B2437D721ECA64C005BFBF9 /* SGH1901AutoSizingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGH1901AutoSizingViewController.swift; sourceTree = "<group>"; };
 		3F8CFF8F22D605370067194E /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 			path = 11NFC_passport;
 			sourceTree = "<group>";
 		};
+		04E2644B23757BA60059FDFB /* 12TableView的字母索引 */ = {
+			isa = PBXGroup;
+			children = (
+				04E2644C23757C1D0059FDFB /* SHWordIndexViewController.swift */,
+			);
+			path = "12TableView的字母索引";
+			sourceTree = "<group>";
+		};
 		0B2437D421ECA38E005BFBF9 /* 10UICollectionViewCellAutoSizing */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +346,7 @@
 		6739F4C01E00E93C009C5073 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				04E2644B23757BA60059FDFB /* 12TableView的字母索引 */,
 				04458AA42356D75E009A2A36 /* 11NFC_passport */,
 				0B2437D421ECA38E005BFBF9 /* 10UICollectionViewCellAutoSizing */,
 				67FC93541EADD87D00F67956 /* 9架构师之泛型应用分析介绍 */,
@@ -1254,6 +1265,7 @@
 				67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */,
 				6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */,
 				3F8CFF9A22D6E1A30067194E /* SHCoreSpot1907TableViewController.swift in Sources */,
+				04E2644D23757C1D0059FDFB /* SHWordIndexViewController.swift in Sources */,
 				6739F5871E00F50C009C5073 /* SGH1214AutolayoutViewController.swift in Sources */,
 				6739F5561E00E93C009C5073 /* SGH0808FlightData.swift in Sources */,
 				6739F5681E00E93C009C5073 /* SGH160818AutoLayoutViewController.swift in Sources */,

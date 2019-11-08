@@ -35,6 +35,7 @@ struct SH190708ContactsViewModel {
         "使用详解53（MVVM架构演示3：使用Driver样例）",
         "使用详解54（一个用户注册样例1：基本功能实现）",
         "使用详解55（一个用户注册样例2：显示网络请求活动指示器）",
+        "使用详解56（结合MJRefresh使用1：下拉刷新）",
         ]
     
     let controllers = [
@@ -57,6 +58,7 @@ struct SH190708ContactsViewModel {
         SHRxswift_53GithubViewController(),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_54ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_54ViewController"),
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_55ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_55ViewController"),
+        SHRxswift_56ViewController(),
     ]
 }
 
