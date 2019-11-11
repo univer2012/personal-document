@@ -41,8 +41,7 @@ class SHRxswift_57ViewController: UIViewController {
                          networkService: Network57Service()))
         
         //单元格数据的绑定
-        viewModel.tableData.asDriver()
-            .drive(tableView.rx.items) { (tableView, row, element) in
+        viewModel.tableData.bind(to: tableView.rx.items) { (tableView, row, element) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
                 cell.textLabel?.text = "\(row + 1)、\(element)"
                 return cell

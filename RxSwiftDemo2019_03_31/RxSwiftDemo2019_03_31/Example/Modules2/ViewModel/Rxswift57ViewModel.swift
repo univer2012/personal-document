@@ -48,13 +48,15 @@ class Rxswift57ViewModel {
                 .takeUntil(input.headerRefresh)
         }.share(replay: 1)//让HTTP请求是被共享的
         
-        //生成停止头部刷新状态z序列
+        //生成停止头部刷新状态序列
+        //self.endHeaderRefreshing = headerRefreshData.map{ _ in true }
         self.endHeaderRefreshing = Observable.merge(
             headerRefreshData.map{ _ in true },
             input.footerRefresh.map{ _ in true }
         )
         
         //生成停止尾部加载刷新状态序列
+        //self.endFooterRefreshing = footerRefreshData.map{ _ in true }
         self.endFooterRefreshing = Observable.merge(
             footerRefreshData.map{ _ in true },
             input.headerRefresh.map{ _ in true }
