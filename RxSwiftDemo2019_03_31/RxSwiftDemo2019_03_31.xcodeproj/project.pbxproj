@@ -70,6 +70,9 @@
 		8F20A43223772BC20040BE9A /* Rxswift57ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A43123772BC20040BE9A /* Rxswift57ViewModel.swift */; };
 		8F20A4342377A0F60040BE9A /* Network57Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A4332377A0F60040BE9A /* Network57Service.swift */; };
 		8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */; };
+		8F2DC69D237A416000CB8CB6 /* SHRxswift_58ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */; };
+		8F2DC69F237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */; };
+		8F2DC6A1237A43AD00CB8CB6 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
@@ -153,6 +156,9 @@
 		8F20A43123772BC20040BE9A /* Rxswift57ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rxswift57ViewModel.swift; sourceTree = "<group>"; };
 		8F20A4332377A0F60040BE9A /* Network57Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network57Service.swift; sourceTree = "<group>"; };
 		8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_10ViewController.swift; sourceTree = "<group>"; };
+		8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_58ViewController.swift; sourceTree = "<group>"; };
+		8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95F9FB22510E98000407A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F95FA0222510EA2000407A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -306,6 +312,7 @@
 				8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */,
 				044A77822375382B00611F0C /* SHRxswift_56ViewController.swift */,
 				8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */,
+				8F20AAB0237A40ED00641B8B /* SHRxswift_58 */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -347,6 +354,16 @@
 				3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		8F20AAB0237A40ED00641B8B /* SHRxswift_58 */ = {
+			isa = PBXGroup;
+			children = (
+				8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */,
+				8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */,
+				8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */,
+			);
+			path = SHRxswift_58;
 			sourceTree = "<group>";
 		};
 		8F95F9EF22510E98000407A6 = {
@@ -529,6 +546,7 @@
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
 				044A77632373EDEA00611F0C /* SHRxswift_52GithubViewController.swift in Sources */,
 				8F20A4272374F7500040BE9A /* SHRxswift_55ViewController.swift in Sources */,
+				8F2DC69F237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				0400F42823703B33003E26EC /* SHRxswift_45ViewController.swift in Sources */,
 				0430DD2D22E6E833003390A5 /* Single+ObjectMapper.swift in Sources */,
 				044A777323741FB600611F0C /* GitHubSignupService.swift in Sources */,
@@ -564,6 +582,7 @@
 				8F20A42B2374F7AB0040BE9A /* GitHubSignup55ViewModel.swift in Sources */,
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
 				044A776A2374111F00611F0C /* SHRxswift_53GithubViewController.swift in Sources */,
+				8F2DC6A1237A43AD00CB8CB6 /* CLLocationManager+Rx.swift in Sources */,
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
 				0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */,
 				0430DD2C22E6E832003390A5 /* ObservableType+ObjectMapper.swift in Sources */,
@@ -586,6 +605,7 @@
 				0430DD3622E6F707003390A5 /* GithubAPI.swift in Sources */,
 				3F8CFF8322D469BF0067194E /* SHRxswift_15ViewController.swift in Sources */,
 				8FB04394237078A3005C0524 /* SHRxswift_46ViewController.swift in Sources */,
+				8F2DC69D237A416000CB8CB6 /* SHRxswift_58ViewController.swift in Sources */,
 				3F8CFF7F22D369710067194E /* SH190708ContactsViewController.swift in Sources */,
 				3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */,
 				044A777E23751F4800611F0C /* MBProgressHUD.m in Sources */,
