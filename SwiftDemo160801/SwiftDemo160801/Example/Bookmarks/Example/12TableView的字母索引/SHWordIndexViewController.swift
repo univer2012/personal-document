@@ -114,12 +114,12 @@ extension SHWordIndexViewController: UITableViewDelegate, UITableViewDataSource 
                 
                 return text
     }
-        
+    
     // 索引值数组
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return self.sortArray
     }
-        
+    
     // 索引值与列表关联点击事件
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         for i in 0 ..< self.mainArray.count {
