@@ -46,11 +46,11 @@ default: print("区间外")
 
 // “首先我们要做的是重载 ~= 操作符，让它接受一个 NSRegularExpression 作为模式，去匹配输入的 String：
 func ~= (pattern: NSRegularExpression, input: String) ->Bool {
-    return pattern.numberOfMatchesInString(input, options: [], range: NSRange(location: 0, length: input.characters.count)) > 0
+    return pattern.numberOfMatches(in: input, options: [], range: NSRange(location: 0, length: input.count)) > 0
 }
 
 //“然后为了简便起见，我们再添加一个将字符串转换为 NSRegularExpression 的操作符 (当然也可以使用 StringLiteralConvertible，但是它不是这个 tip 的主题，在此就先不使用它了)：
-prefix operator ~/ {}
+prefix operator ~/
 prefix func ~/ (pattern: String) ->NSRegularExpression {
     return try! NSRegularExpression(pattern: pattern, options: [])
 //    return NSRegularExpression(pattern: pattern, options: nil, error: nil)
