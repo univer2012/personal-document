@@ -58,3 +58,4 @@ public func someFunc1()  {
 
 
 以上就是在swift中经常使用的在类视图添加
+

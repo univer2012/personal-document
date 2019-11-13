@@ -10,17 +10,21 @@ import UIKit
 
 // “举个例子，我们在写一个网络请求的类 Request 时，可能面临着将请求的参数编码到 url 里的任务。因为输入的参数可能包括单个的值，字典，或者是数组，因此为了结构漂亮和保持方法短小，我们可能将情况分开，写出这样的代码：
 
+#if false
 func appendQuery(url: String, key: String, value: AnyObject) ->String {
     if let dictionary = value as? [String: AnyObject] {
-        return appendQueryDictionary(url, key: key, value: dictionary)
+        return appendQueryDictionary(url: url, key: key, value: dictionary)
     }
     else if let array = value as? [AnyObject] {
-        return appendQueryArray(url, key: key, value: array)
+        return appendQueryArray(url: url, key: key, value: array)
     }
     else {
-        return appendQuerySingle(url, key: key, value: value)
+        return appendQuerySingle(url: url, key: key, value: value)
     }
 }
+
+
+
 func appendQueryDictionary(url: String, key: String, value: [String: AnyObject]) -> String {
     //...
     return key//result
@@ -36,20 +40,23 @@ func appendQuerySingle(url: String, key: String, value: AnyObject) -> String {
     return key//result
 }
 
+#endif
+
+
 
 // “事实上后三个方法都只会在第一个方法中被调用，它们其实和 Request 没有直接的关系，所以将它们放到 appendQuery 中去会是一个更好的组织形式：
-func appendQuery(var url: String, key: String, value: AnyObject) ->String {
-    func appendQueryDictionary(var url: String, _ key: String, _ value: [String: AnyObject]) ->String {
+func appendQuery( url: String, key: String, value: AnyObject) ->String {
+    func appendQueryDictionary(_ url: String, _ key: String, _ value: [String: AnyObject]) ->String {
         //...
         return key  //result
     }
     
-    func appendQueryArray(var url: String, _ key: String, _ value: [AnyObject]) ->String {
+    func appendQueryArray(_ url: String, _ key: String, _ value: [AnyObject]) ->String {
         //...
         return key  //result
     }
     
-    func appendQuerySingle(var url: String, _ key: String, _ value: AnyObject) ->String {
+    func appendQuerySingle(_ url: String, _ key: String, _ value: AnyObject) ->String {
         //...
         return key  //result
     }
@@ -68,7 +75,7 @@ func appendQuery(var url: String, key: String, value: AnyObject) ->String {
 
 //“另一个重要的考虑是虽然 Swift 提供了 public，internal 和 private 三种访问权限，但是有些方法我们完全不希望在其他地方被直接使用。最常见的例子就是在方法的模板中：我们一方面希望灵活地提供一个模板来让使用者可以通过模板定制他们想要的方法，但另一方面又不希望暴露太多实现细节，或者甚至是让使用者可以直接调用到模板。一个最简单的例子就是在[参数修饰]一节中提到过的类似这样的代码：
 func makeIncrementor(addNumber: Int) ->((inout Int) ->Void) {
-    func incrementor(inout variable: Int) ->Void {
+    func incrementor( variable: inout Int) ->Void {
         variable += addNumber
     }
     return incrementor

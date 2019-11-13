@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='swift_map_flatMap_filter_reduce'/>
+        <page name='map_flatMap_filter_reduce的用法'/>
+        <page name='Swift5_features3_Dictionary_compactMapValues'/>
+        <page name='do_try_catch_try'/>
+    </pages>
+</playground>
