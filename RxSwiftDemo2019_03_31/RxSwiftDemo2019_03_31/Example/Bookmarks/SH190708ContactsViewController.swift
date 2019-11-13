@@ -37,6 +37,7 @@ struct SH190708ContactsViewModel {
         "使用详解55（一个用户注册样例2：显示网络请求活动指示器）",
         "使用详解56（结合MJRefresh使用1：下拉刷新）",
         "使用详解57（结合MJRefresh使用2：上拉加载、以及上下拉组合）",
+        "使用详解58（*DelegateProxy样例1：获取地理定位信息 ）",
         ]
     
     let controllers = [
@@ -61,6 +62,8 @@ struct SH190708ContactsViewModel {
         UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_55ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_55ViewController"),
         SHRxswift_56ViewController(),
         SHRxswift_57ViewController(),
+        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_58ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_58ViewController"),
+        
     ]
 }
 

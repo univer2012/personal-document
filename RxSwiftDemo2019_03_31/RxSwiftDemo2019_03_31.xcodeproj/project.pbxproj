@@ -73,6 +73,7 @@
 		8F2DC69D237A416000CB8CB6 /* SHRxswift_58ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */; };
 		8F2DC69F237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */; };
 		8F2DC6A1237A43AD00CB8CB6 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */; };
+		8F2DC6A3237B0D1600CB8CB6 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
@@ -159,6 +160,7 @@
 		8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_58ViewController.swift; sourceTree = "<group>"; };
 		8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95F9FB22510E98000407A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F95FA0222510EA2000407A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */,
 				8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */,
 				8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */,
+				8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */,
 			);
 			path = SHRxswift_58;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2DC6A3237B0D1600CB8CB6 /* GeolocationService.swift in Sources */,
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
 				044A77632373EDEA00611F0C /* SHRxswift_52GithubViewController.swift in Sources */,
 				8F20A4272374F7500040BE9A /* SHRxswift_55ViewController.swift in Sources */,

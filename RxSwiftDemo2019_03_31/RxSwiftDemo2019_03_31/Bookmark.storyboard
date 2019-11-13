@@ -1052,6 +1052,52 @@
             </objects>
             <point key="canvasLocation" x="12946" y="-29"/>
         </scene>
+        <!--Rxswift58 View Controller-->
+        <scene sceneID="WgP-rL-TBz">
+            <objects>
+                <viewController storyboardIdentifier="SHRxswift_58ViewController" id="hRs-6C-Cq6" customClass="SHRxswift_58ViewController" customModule="RxSwiftDemo2019_03_31" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tW4-Fp-Qn1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUk-At-Mq2">
+                                <rect key="frame" x="91" y="113" width="237" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pPH-dI-GCe"/>
+                                </constraints>
+                                <state key="normal" title="定位服务未开启，点击开启">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-u7-rWw">
+                                <rect key="frame" x="53" y="220" width="311" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fnD-u7-rWw" firstAttribute="leading" secondItem="TKX-ef-ctm" secondAttribute="leading" constant="53" id="BPJ-PO-JdD"/>
+                            <constraint firstItem="TKX-ef-ctm" firstAttribute="trailing" secondItem="HUk-At-Mq2" secondAttribute="trailing" constant="86" id="LBI-wa-GXd"/>
+                            <constraint firstItem="HUk-At-Mq2" firstAttribute="leading" secondItem="TKX-ef-ctm" secondAttribute="leading" constant="91" id="X5r-h7-T3t"/>
+                            <constraint firstItem="fnD-u7-rWw" firstAttribute="top" secondItem="HUk-At-Mq2" secondAttribute="bottom" constant="57" id="XUc-bb-okl"/>
+                            <constraint firstItem="TKX-ef-ctm" firstAttribute="trailing" secondItem="fnD-u7-rWw" secondAttribute="trailing" constant="50" id="xCP-Tq-AQE"/>
+                            <constraint firstItem="HUk-At-Mq2" firstAttribute="top" secondItem="TKX-ef-ctm" secondAttribute="top" constant="49" id="zhK-BD-iF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TKX-ef-ctm"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="button" destination="HUk-At-Mq2" id="2Ty-GD-C2z"/>
+                        <outlet property="label" destination="fnD-u7-rWw" id="H25-cC-OQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LR6-43-Zya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13707.246376811596" y="-35.054347826086961"/>
+        </scene>
     </scenes>
     <resources>
         <image name="angle-mask.png" width="100" height="100"/>
