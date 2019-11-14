@@ -73,3 +73,91 @@ class VendingMachine {
 
 
 
+#### 通过函数的方式传递下去
+
+比如添加了一个购买者姓名的属性，通过`try + 方法`调用的方式可以将异常传递下去。
+
+```swift
+func vend(itemNamed name: String, buyerName:String) throws {
+    self.buyerName = buyerName
+    try vend(itemNamed: name)
+}
+```
+
+#### do-try-catch方式捕获
+
+```swift
+var test = VendingMachine()
+do {
+    try test.vend(itemNamed: "Chips")
+} catch VendingMachineError.invalidSelection {
+    print("invalidSelection")
+} catch VendingMachineError.outOfStock {
+    print("outOfStock")
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
+    print("insufficientFunds \(coinsNeeded)")
+}
+```
+
+
+
+通过do可以捕获捕获方法作用于内抛出的异常，catch可以以枚举的方式处理。
+
+#### try？将错误作为可选性处理，错误时返回nil。
+
+```swift
+let x = try? test.vend(itemNamed: "Chips")
+print(x)
+///打印：
+///nil
+```
+
+通过try?的方式，当排出异常的时候x值为nil，正常可以返回一个可选型返回值。
+
+#### try！ 断言错误不会发生，但是如果发生了会有运行时错误。
+
+```swift
+let x = try! test.vend(itemNamed: "Chips")
+print(x)
+///崩溃，信息如下：
+///Fatal error: 'try!' expression unexpectedly raised an error: __lldb_expr_5.VendingMachineError.insufficientFunds(coinsNeeded: 8): file Swift_do_try_catch_try_throw(s).playground, line 69
+```
+
+当我们断言方法不会抛出异常的时候可以用try！抛出异常的时候会有运行时错误，比较危险。
+
+
+
+
+
+#### 结构体表示Error
+
+有些时候我们要描述的错误比较复杂，我们也可以用结构体遵循Error协议去实现异常处理。
+ 官方给出的例子,xml解析错误
+
+```swift
+struct XMLParsingError: Error {
+    enum ErrorKind {
+        case invalidCharacter
+        case mismatchedTag
+        case internalError
+    }
+    
+    let line: Int
+    let column: Int
+    let kind: ErrorKind
+}
+```
+
+捕获错误
+
+```swift
+do {
+    let xmlDoc = try parse(myXMLData)
+} catch let e as XMLParsingError {
+    print("Parsing error: \(e.kind) [\(e.line):\(e.column)]")
+} catch {
+    print("Other error: \(error)")
+}
+```
+
+综上swift中的错误处理是非常灵活的，可以用多种数据结构描述错误。

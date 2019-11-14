@@ -22,6 +22,9 @@ class VendingMachine {
     ]
     
     var coinsDesposited = 2
+    
+    var buyerName: String = ""
+    
     func vend(itemNamed name: String) throws {
         guard let item = inventory[name] else {
             throw VendingMachineError.invalidSelection
@@ -41,7 +44,58 @@ class VendingMachine {
         
         print("dispensing\(name)")
     }
+    
+    
+    func vend(itemNamed name: String, buyerName:String) throws {
+        self.buyerName = buyerName
+        try vend(itemNamed: name)
+    }
+}
+
+
+var test = VendingMachine()
+do {
+    try test.vend(itemNamed: "Chips")
+} catch VendingMachineError.invalidSelection {
+    print("invalidSelection")
+} catch VendingMachineError.outOfStock {
+    print("outOfStock")
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
+    print("insufficientFunds \(coinsNeeded)")
 }
 
 
 
+//let x = try! test.vend(itemNamed: "Chips")
+//print(x)
+/////崩溃，信息如下：
+/////Fatal error: 'try!' expression unexpectedly raised an error: __lldb_expr_5.VendingMachineError.insufficientFunds(coinsNeeded: 8): file Swift_do_try_catch_try_throw(s).playground, line 69
+
+
+//let x = try? test.vend(itemNamed: "Chips")
+//print(x)
+/////打印：
+/////nil
+
+
+
+struct XMLParsingError: Error {
+    enum ErrorKind {
+        case invalidCharacter
+        case mismatchedTag
+        case internalError
+    }
+    
+    let line: Int
+    let column: Int
+    let kind: ErrorKind
+}
+
+
+//do {
+//    let xmlDoc = try parse(myXMLData)
+//} catch let e as XMLParsingError {
+//    print("Parsing error: \(e.kind) [\(e.line):\(e.column)]")
+//} catch {
+//    print("Other error: \(error)")
+//}
