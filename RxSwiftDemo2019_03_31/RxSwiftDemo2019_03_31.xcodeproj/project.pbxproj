@@ -85,6 +85,9 @@
 		8FB043A823725726005C0524 /* SHRxswift_48ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */; };
 		8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0DA8822DF637A00625889 /* DoubanObject.swift */; };
 		8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */; };
+		8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D75237CE291007BB516 /* SHRxswift_59ViewController.swift */; };
+		8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D77237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift */; };
+		8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D79237CE541007BB516 /* UIImagePickerController+Rx.swift */; };
 		C7CBEC23B288FF6EFAD0E7F3 /* Pods_RxSwiftDemo2019_03_31.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +177,9 @@
 		8FB043A723725726005C0524 /* SHRxswift_48ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_48ViewController.swift; sourceTree = "<group>"; };
 		8FB0DA8822DF637A00625889 /* DoubanObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanObject.swift; sourceTree = "<group>"; };
 		8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewController.swift; sourceTree = "<group>"; };
+		8FF81D75237CE291007BB516 /* SHRxswift_59ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_59ViewController.swift; sourceTree = "<group>"; };
+		8FF81D77237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
+		8FF81D79237CE541007BB516 /* UIImagePickerController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Rx.swift"; sourceTree = "<group>"; };
 		E1A8CAF78AE0F7F26D1BF5FC /* Pods-RxSwiftDemo2019_03_31.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo2019_03_31/Pods-RxSwiftDemo2019_03_31.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,6 +320,7 @@
 				8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */,
 				044A77822375382B00611F0C /* SHRxswift_56ViewController.swift */,
 				8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */,
+				8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */,
 				8F20AAB0237A40ED00641B8B /* SHRxswift_58 */,
 			);
 			path = Modules2;
@@ -406,6 +413,16 @@
 				04CB437622DF36750042A456 /* testPlayground.playground */,
 			);
 			path = RxSwiftDemo2019_03_31;
+			sourceTree = "<group>";
+		};
+		8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */ = {
+			isa = PBXGroup;
+			children = (
+				8FF81D75237CE291007BB516 /* SHRxswift_59ViewController.swift */,
+				8FF81D77237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift */,
+				8FF81D79237CE541007BB516 /* UIImagePickerController+Rx.swift */,
+			);
+			path = SHRxswift_59;
 			sourceTree = "<group>";
 		};
 		969784DF8790ACCA3D4D6F29 /* Frameworks */ = {
@@ -600,6 +617,8 @@
 				8F20A43023772B260040BE9A /* SHRxswift_57ViewController.swift in Sources */,
 				8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */,
 				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
+				8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */,
+				8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
 				044A7777237428C900611F0C /* UILabel+Rx.swift in Sources */,
 				044A77662373EEF400611F0C /* GitHubNetworkService.swift in Sources */,
@@ -614,6 +633,7 @@
 				3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */,
 				044A777E23751F4800611F0C /* MBProgressHUD.m in Sources */,
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
+				8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift in Sources */,
 				8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */,
 			);

@@ -530,3 +530,10 @@ class SHRxswift_58ViewController: UIViewController {
 }
 ```
 
+> 注意：
+>
+> 如果用模拟器运行，定位的经纬度没有显示出来，需要选中模拟器 -->Debug --> Location --> 选择一个选项进行设置。默认是`none`。
+
+---
+
+【完】
