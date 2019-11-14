@@ -38,8 +38,11 @@
 #import "SHMemManageViewController.h"
 #import "SHSandboxReadWriteVC.h"
 #import "SHQRCodeViewController.h"
-
-
+#import "SHFetchFutureDateViewController.h"
+#import "SHCommonToolVC.h"
+#import "SHUpdateJumpAppStoreVC.h"
+#import "SHDispatchMethodsViewController.h"
+#import "SHUnfixedHeightTableViewController.h"
 
 @interface SGH170208ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -113,6 +116,11 @@
                           [SHMemManageViewController new],
                           [SHSandboxReadWriteVC new],
                           [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:SHQRCodeViewController.class]] instantiateViewControllerWithIdentifier:@"SHQRCodeViewController"],
+                          [SHFetchFutureDateViewController new],
+                          [SHCommonToolVC new],
+                          [SHUpdateJumpAppStoreVC new],
+                          [SHDispatchMethodsViewController new],
+                          SHUnfixedHeightTableViewController.new,
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -142,6 +150,11 @@
                         @"25、内存管理",
                         @"26、沙盒存取",
                         @"27、QRCode扫描读取生成",
+                        @"28、获取未来时间点、比较时间前后",
+                        @"29、常用工具_打电话_发短信_发邮件",
+                        @"30、弹出更新app跳到AppStore界面",
+                        @"31、系统提供的dispatch方法",
+                        @"32、cell高度不固定的UITableView"
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回
@@ -177,10 +190,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    Class cls = NSClassFromString(_controllersArray[indexPath.row]);
-//    if (cls) {
-//        [self.navigationController pushViewController:[cls new] animated:YES];
-//    }
+
     [self.navigationController pushViewController:_controllersArray[indexPath.row] animated:YES];
 }
 
@@ -189,14 +199,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

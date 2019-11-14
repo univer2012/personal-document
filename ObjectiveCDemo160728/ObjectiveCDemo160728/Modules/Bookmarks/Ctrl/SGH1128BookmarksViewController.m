@@ -12,6 +12,8 @@
 #import "SGH160911CoreLocationViewController.h"
 #import "SGH161223ComponentsDemoViewController.h"
 #import "SGH170208ViewController.h"
+#import "SGH190129YYKitViewController.h"
+#import "SHReactiveCocoaViewController.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
 @interface SGH1128BookmarksViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -40,7 +42,9 @@
     _controllersArray = [@[SGH160728ViewController.new,
                           SGH160911CoreLocationViewController.new,
                            SGH161223ComponentsDemoViewController.new,
-                           SGH170208ViewController.new
+                           SGH170208ViewController.new,
+                           SGH190129YYKitViewController.new,
+                           SHReactiveCocoaViewController.new,
                            ] mutableCopy];
     
     
@@ -48,7 +52,8 @@
                         @"2、Core Location 框架详解",
                         @"3、第三方组件",
                         @"4、2017-02-08",
-                        @"5、YYKit"
+                        @"5、YYKit",
+                        @"6、ReactiveCocoa",
                         ] mutableCopy];
     
     

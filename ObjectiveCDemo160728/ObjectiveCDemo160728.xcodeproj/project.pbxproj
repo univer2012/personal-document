@@ -137,6 +137,8 @@
 		67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */; };
 		67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */; };
 		8E60E0114CE177A1FDBFCCD2 /* libPods-ObjectiveCDemo160728.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */; };
+		8F8F0273237DBB6700BA302F /* SHFetchFutureDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */; };
+		8F8F0276237DBB9200BA302F /* TKUpdateHelperCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */; };
 		8F9265DD2200929D009B3FC1 /* SGH190129YYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9265DC2200929D009B3FC1 /* SGH190129YYKitViewController.m */; };
 		8F9265E422009339009B3FC1 /* WBStatusTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9265E322009339009B3FC1 /* WBStatusTimelineViewController.m */; };
 		8F9266ED22009491009B3FC1 /* WBTimelineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9266EC22009491009B3FC1 /* WBTimelineItem.m */; };
@@ -163,7 +165,15 @@
 		8FB0438C236E9C0B005C0524 /* SHKVOExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0438B236E9C0B005C0524 /* SHKVOExploreViewController.m */; };
 		8FB0438F236E9C45005C0524 /* EOCFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0438E236E9C45005C0524 /* EOCFamily.m */; };
 		8FB04392236E9FB2005C0524 /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB04391236E9FB2005C0524 /* EOCPerson.m */; };
+		8FB1258C237DBCEC006E7D1E /* SHCommonToolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1258B237DBCEC006E7D1E /* SHCommonToolVC.m */; };
+		8FB12590237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1258F237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m */; };
+		8FB12595237DC567006E7D1E /* SHDispatchMethodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB12594237DC567006E7D1E /* SHDispatchMethodsViewController.m */; };
 		8FB5B549226D467400E34EC9 /* SHSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB5B548226D467400E34EC9 /* SHSortManager.m */; };
+		8FBDAB7C237DC98300C6857B /* SHReactiveCocoaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB7B237DC98300C6857B /* SHReactiveCocoaViewController.m */; };
+		8FBDAB80237DCA5400C6857B /* SHAnimationMasonryLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB7F237DCA5400C6857B /* SHAnimationMasonryLoginVC.m */; };
+		8FBDAB83237DCAB200C6857B /* HomePageAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB82237DCAB200C6857B /* HomePageAnimationUtil.m */; };
+		8FBDAB88237DD04500C6857B /* SHUnfixedHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB87237DD04500C6857B /* SHUnfixedHeightTableViewController.m */; };
+		8FBDAB8B237DD06100C6857B /* GJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB8A237DD06100C6857B /* GJCell.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
 		8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */; };
@@ -433,6 +443,10 @@
 		67FC936A1EAE00DE00F67956 /* SGH0424MapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapFactory.h; sourceTree = "<group>"; };
 		67FC937A1EAF07B800F67956 /* SGH0425RunloopImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0425RunloopImageViewController.h; sourceTree = "<group>"; };
 		67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
+		8F8F0271237DBB6700BA302F /* SHFetchFutureDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHFetchFutureDateViewController.h; sourceTree = "<group>"; };
+		8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHFetchFutureDateViewController.m; sourceTree = "<group>"; };
+		8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUpdateHelperCache.m; sourceTree = "<group>"; };
+		8F8F0275237DBB9200BA302F /* TKUpdateHelperCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUpdateHelperCache.h; sourceTree = "<group>"; };
 		8F9265DB2200929D009B3FC1 /* SGH190129YYKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH190129YYKitViewController.h; sourceTree = "<group>"; };
 		8F9265DC2200929D009B3FC1 /* SGH190129YYKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH190129YYKitViewController.m; sourceTree = "<group>"; };
 		8F9265E222009339009B3FC1 /* WBStatusTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBStatusTimelineViewController.h; sourceTree = "<group>"; };
@@ -487,8 +501,25 @@
 		8FB0438E236E9C45005C0524 /* EOCFamily.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCFamily.m; sourceTree = "<group>"; };
 		8FB04390236E9FB2005C0524 /* EOCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCPerson.h; sourceTree = "<group>"; };
 		8FB04391236E9FB2005C0524 /* EOCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCPerson.m; sourceTree = "<group>"; };
+		8FB1258A237DBCEC006E7D1E /* SHCommonToolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCommonToolVC.h; sourceTree = "<group>"; };
+		8FB1258B237DBCEC006E7D1E /* SHCommonToolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCommonToolVC.m; sourceTree = "<group>"; };
+		8FB1258E237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUpdateJumpAppStoreVC.h; sourceTree = "<group>"; };
+		8FB1258F237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUpdateJumpAppStoreVC.m; sourceTree = "<group>"; };
+		8FB12593237DC567006E7D1E /* SHDispatchMethodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHDispatchMethodsViewController.h; sourceTree = "<group>"; };
+		8FB12594237DC567006E7D1E /* SHDispatchMethodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHDispatchMethodsViewController.m; sourceTree = "<group>"; };
 		8FB5B547226D467400E34EC9 /* SHSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSortManager.h; sourceTree = "<group>"; };
 		8FB5B548226D467400E34EC9 /* SHSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSortManager.m; sourceTree = "<group>"; };
+		8FBDAB7A237DC98300C6857B /* SHReactiveCocoaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHReactiveCocoaViewController.h; sourceTree = "<group>"; };
+		8FBDAB7B237DC98300C6857B /* SHReactiveCocoaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHReactiveCocoaViewController.m; sourceTree = "<group>"; };
+		8FBDAB7E237DCA5400C6857B /* SHAnimationMasonryLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAnimationMasonryLoginVC.h; sourceTree = "<group>"; };
+		8FBDAB7F237DCA5400C6857B /* SHAnimationMasonryLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAnimationMasonryLoginVC.m; sourceTree = "<group>"; };
+		8FBDAB81237DCAB200C6857B /* HomePageAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageAnimationUtil.h; sourceTree = "<group>"; };
+		8FBDAB82237DCAB200C6857B /* HomePageAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageAnimationUtil.m; sourceTree = "<group>"; };
+		8FBDAB84237DCBE700C6857B /* ObjectiveCDemo160728Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCDemo160728Bridging-Header.h"; sourceTree = "<group>"; };
+		8FBDAB86237DD04500C6857B /* SHUnfixedHeightTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUnfixedHeightTableViewController.h; sourceTree = "<group>"; };
+		8FBDAB87237DD04500C6857B /* SHUnfixedHeightTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUnfixedHeightTableViewController.m; sourceTree = "<group>"; };
+		8FBDAB89237DD06100C6857B /* GJCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJCell.h; sourceTree = "<group>"; };
+		8FBDAB8A237DD06100C6857B /* GJCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJCell.m; sourceTree = "<group>"; };
 		8FD1466322265028001E25F8 /* SH0227SeniorCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH0227SeniorCampViewController.h; sourceTree = "<group>"; };
 		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
 		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
@@ -971,6 +1002,7 @@
 		6771772E1DEBD081009AB627 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				8FB12596237DC8D1006E7D1E /* 6ReactiveCocoa */,
 				8F9265D8220091FA009B3FC1 /* 5YYKit */,
 				678594531E4AF218006BA5CB /* 4_2017-02-08 */,
 				67D2A6A81E0CEC6F000B30EE /* 3第三方组件 */,
@@ -1596,6 +1628,11 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FBDAB85237DD00900C6857B /* 32cell高度不固定的UITableView */,
+				8FB12592237DC53D006E7D1E /* 31系统提供的dispatch方法 */,
+				8FB1258D237DC261006E7D1E /* 30弹出更新app跳到AppStore界面 */,
+				8FB12589237DBC8C006E7D1E /* 29常用工具_打电话_发短信_发邮件 */,
+				8FF81D99237DBAB1007BB516 /* 28获取未来时间点_比较时间前后 */,
 				8FF81D83237DB2A8007BB516 /* 27QRCode扫描读取生成 */,
 				8FF81D7F237DB198007BB516 /* 26沙盒存取 */,
 				8FF81D7B237DAF1A007BB516 /* 25内存管理 */,
@@ -1943,6 +1980,7 @@
 				67EDCF531D4A07E300058E8D /* Assets.xcassets */,
 				67EDCF551D4A07E300058E8D /* LaunchScreen.storyboard */,
 				67EDCF581D4A07E300058E8D /* Info.plist */,
+				8FBDAB84237DCBE700C6857B /* ObjectiveCDemo160728Bridging-Header.h */,
 				67EDCF471D4A07E300058E8D /* Supporting Files */,
 			);
 			path = ObjectiveCDemo160728;
@@ -2297,6 +2335,89 @@
 			path = "24KVO原理探究";
 			sourceTree = "<group>";
 		};
+		8FB12589237DBC8C006E7D1E /* 29常用工具_打电话_发短信_发邮件 */ = {
+			isa = PBXGroup;
+			children = (
+				8FB1258A237DBCEC006E7D1E /* SHCommonToolVC.h */,
+				8FB1258B237DBCEC006E7D1E /* SHCommonToolVC.m */,
+			);
+			path = "29常用工具_打电话_发短信_发邮件";
+			sourceTree = "<group>";
+		};
+		8FB1258D237DC261006E7D1E /* 30弹出更新app跳到AppStore界面 */ = {
+			isa = PBXGroup;
+			children = (
+				8FB1258E237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.h */,
+				8FB1258F237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m */,
+			);
+			path = "30弹出更新app跳到AppStore界面";
+			sourceTree = "<group>";
+		};
+		8FB12592237DC53D006E7D1E /* 31系统提供的dispatch方法 */ = {
+			isa = PBXGroup;
+			children = (
+				8FB12593237DC567006E7D1E /* SHDispatchMethodsViewController.h */,
+				8FB12594237DC567006E7D1E /* SHDispatchMethodsViewController.m */,
+			);
+			path = "31系统提供的dispatch方法";
+			sourceTree = "<group>";
+		};
+		8FB12596237DC8D1006E7D1E /* 6ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB79237DC96E00C6857B /* Libs */,
+				8FBDAB78237DC96600C6857B /* Modules */,
+				8FBDAB77237DC95B00C6857B /* Controller */,
+			);
+			path = 6ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		8FBDAB77237DC95B00C6857B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB7A237DC98300C6857B /* SHReactiveCocoaViewController.h */,
+				8FBDAB7B237DC98300C6857B /* SHReactiveCocoaViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8FBDAB78237DC96600C6857B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB7D237DCA0E00C6857B /* 1Autolayout_masonry登录动画 */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8FBDAB79237DC96E00C6857B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		8FBDAB7D237DCA0E00C6857B /* 1Autolayout_masonry登录动画 */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB81237DCAB200C6857B /* HomePageAnimationUtil.h */,
+				8FBDAB82237DCAB200C6857B /* HomePageAnimationUtil.m */,
+				8FBDAB7E237DCA5400C6857B /* SHAnimationMasonryLoginVC.h */,
+				8FBDAB7F237DCA5400C6857B /* SHAnimationMasonryLoginVC.m */,
+			);
+			path = "1Autolayout_masonry登录动画";
+			sourceTree = "<group>";
+		};
+		8FBDAB85237DD00900C6857B /* 32cell高度不固定的UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB89237DD06100C6857B /* GJCell.h */,
+				8FBDAB8A237DD06100C6857B /* GJCell.m */,
+				8FBDAB86237DD04500C6857B /* SHUnfixedHeightTableViewController.h */,
+				8FBDAB87237DD04500C6857B /* SHUnfixedHeightTableViewController.m */,
+			);
+			path = "32cell高度不固定的UITableView";
+			sourceTree = "<group>";
+		};
 		8FD1465F22264F66001E25F8 /* 25高级特训营 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2372,6 +2493,17 @@
 				8FF81D85237DB2D1007BB516 /* SHQRCodeViewController.m */,
 			);
 			path = "27QRCode扫描读取生成";
+			sourceTree = "<group>";
+		};
+		8FF81D99237DBAB1007BB516 /* 28获取未来时间点_比较时间前后 */ = {
+			isa = PBXGroup;
+			children = (
+				8F8F0275237DBB9200BA302F /* TKUpdateHelperCache.h */,
+				8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */,
+				8F8F0271237DBB6700BA302F /* SHFetchFutureDateViewController.h */,
+				8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */,
+			);
+			path = "28获取未来时间点_比较时间前后";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2576,6 +2708,7 @@
 				8F926725221AFEB1009B3FC1 /* SHSocketStruc0218ViewController.m in Sources */,
 				677177C61DEBD081009AB627 /* SGH1108AppStoreViewController.m in Sources */,
 				677177BD1DEBD081009AB627 /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
+				8FB12595237DC567006E7D1E /* SHDispatchMethodsViewController.m in Sources */,
 				6702E3681FCF9A5D00F036EB /* UIView+Frame.m in Sources */,
 				677BB9CD1ED5B327005A1CA8 /* SGH0524PresentCViewController.m in Sources */,
 				8FB04392236E9FB2005C0524 /* EOCPerson.m in Sources */,
@@ -2587,6 +2720,7 @@
 				677177DA1DEBD081009AB627 /* SGH0802ExpressionViewController.m in Sources */,
 				8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */,
 				677177D11DEBD081009AB627 /* SGH0729TransitionGroupSecondViewController.m in Sources */,
+				8FB1258C237DBCEC006E7D1E /* SHCommonToolVC.m in Sources */,
 				0B08F06A2202B8C300D03708 /* SHAlertViewManager.m in Sources */,
 				8F9267212201ED25009B3FC1 /* NSDictionary+NilSafe.m in Sources */,
 				6748E0671ECD971300CF62DA /* SGHXMPPFrameworkViewController.m in Sources */,
@@ -2596,6 +2730,7 @@
 				67EDCF4C1D4A07E300058E8D /* AppDelegate.m in Sources */,
 				677177F41DEBF935009AB627 /* readme.md in Sources */,
 				67B5F87B1EC5DB120035A9C0 /* SGH0512Runtime5ViewController.m in Sources */,
+				8FB12590237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m in Sources */,
 				67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */,
 				677177EA1DEBD081009AB627 /* SGH160911CoreLocationViewController.m in Sources */,
 				8F9267152201EB63009B3FC1 /* BDTConstManager.m in Sources */,
@@ -2610,6 +2745,7 @@
 				677177E51DEBD081009AB627 /* SGH1012BecomeHtmlStringViewController.m in Sources */,
 				677177E11DEBD081009AB627 /* SGH0824PresentAndPushTwoViewController.m in Sources */,
 				677177BC1DEBD081009AB627 /* SGH160728ViewController.m in Sources */,
+				8FBDAB8B237DD06100C6857B /* GJCell.m in Sources */,
 				67FBA0211FD66C79000DB901 /* SGHAFNetworkingViewController.m in Sources */,
 				6735C18D1EB0906A00F51BA9 /* SGH0424GaodeFactory.m in Sources */,
 				8FAFB0E52226AB55005152B4 /* SHRuntime3Person.m in Sources */,
@@ -2651,9 +2787,12 @@
 				8F9266FD22009A33009B3FC1 /* WBTopic.m in Sources */,
 				67548AA61EBD580600AE8899 /* SGH0506Test.m in Sources */,
 				677179021DEC3B4E009AB627 /* SGH1128InterceptPopViewController.m in Sources */,
+				8FBDAB88237DD04500C6857B /* SHUnfixedHeightTableViewController.m in Sources */,
 				0B16BA2D221582FD0071C0A7 /* XGImageTitleView.m in Sources */,
+				8FBDAB83237DCAB200C6857B /* HomePageAnimationUtil.m in Sources */,
 				67A5552E1EC35A0D0052DCC3 /* UIView+SGHTapGesture.m in Sources */,
 				8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */,
+				8FBDAB80237DCA5400C6857B /* SHAnimationMasonryLoginVC.m in Sources */,
 				8FF81D96237DB94C007BB516 /* Example1Controller.m in Sources */,
 				8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */,
 				677177E71DEBD081009AB627 /* SXNewsDetailEntity.m in Sources */,
@@ -2662,6 +2801,7 @@
 				677177CD1DEBD081009AB627 /* SGH0728CALayerViewController.m in Sources */,
 				67C0D4681F42D92300762BFF /* SGH170815IdentCodeAuthView.m in Sources */,
 				6700C67E1E30BF90006AC47B /* SGH170119CrashRankViewController.m in Sources */,
+				8FBDAB7C237DC98300C6857B /* SHReactiveCocoaViewController.m in Sources */,
 				6735C2091EB416AB00F51BA9 /* SGH0429CryptographyViewController.m in Sources */,
 				677177E91DEBD081009AB627 /* SGH1012PlaceholderColorViewController.m in Sources */,
 				6735C20D1EB4684300F51BA9 /* NSString+Hash.m in Sources */,
@@ -2672,6 +2812,7 @@
 				8FF81D97237DB94C007BB516 /* Example3Controller.m in Sources */,
 				8F92670422009B07009B3FC1 /* WBButtonLink.m in Sources */,
 				6702E3671FCF9A5D00F036EB /* CAAnimation+WAnimation.m in Sources */,
+				8F8F0273237DBB6700BA302F /* SHFetchFutureDateViewController.m in Sources */,
 				67B5F7BE1EC489FD0035A9C0 /* SGH0511RuntimeMethod.m in Sources */,
 				6735C1901EB0906A00F51BA9 /* SGH0424BaiduMapView.m in Sources */,
 				677177E31DEBD081009AB627 /* SGH0824AlertViewViewController.m in Sources */,
@@ -2684,6 +2825,7 @@
 				6735C20F1EB46C2A00F51BA9 /* readme.md in Sources */,
 				677177C21DEBD081009AB627 /* GTMBase64.m in Sources */,
 				8FAFB0F72228FD56005152B4 /* UIViewController+SHLeaksTest.m in Sources */,
+				8F8F0276237DBB9200BA302F /* TKUpdateHelperCache.m in Sources */,
 				677BB9CA1ED5B31A005A1CA8 /* SGH0524PresentBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

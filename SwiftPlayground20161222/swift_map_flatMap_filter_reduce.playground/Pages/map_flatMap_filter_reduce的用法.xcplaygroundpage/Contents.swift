@@ -4,17 +4,40 @@ import Foundation
 
 
 
-let arrs = [2,4,5,1,7,1,8,9]
+//map
+let intArray=[1,111,1111]
+let stringArray=intArray.map({(intValue) -> String in
+    return "\(intValue)"
+})
 
-let temparr2 = arrs.map{$0 + 2}
+//Filter
+let filterArray=intArray.filter({(intValue)-> Bool in
+    return intValue > 30
+})
 
-let temparr = arrs.filter{$0 != 1}
+// Reduce
+let sum=intArray.reduce(0, +)
+let sum2=intArray.reduce(0) {(int,int2) -> Int in
+    return int + int2
+}
+print("intArray : \(intArray),\nstringArray : \(stringArray),\nfilterArray : \(filterArray),\nsum : \(sum),\nsum2 : \(sum2)")
 
-let temp3 = arrs.reduce(1) { $0 * $1 }
 
-print(temp3)
-///打印：
-///20160
+
+
+
+
+//let arrs = [2,4,5,1,7,1,8,9]
+//
+//let temparr2 = arrs.map{$0 + 2}
+//
+//let temparr = arrs.filter{$0 != 1}
+//
+//let temp3 = arrs.reduce(1) { $0 * $1 }
+//
+//print(temp3)
+/////打印：
+/////20160
 
 
 //let arrs = [2,4,5,1,7,1,8,9]
