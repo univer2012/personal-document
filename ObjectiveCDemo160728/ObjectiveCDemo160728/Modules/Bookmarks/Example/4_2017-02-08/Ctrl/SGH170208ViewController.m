@@ -11,6 +11,36 @@
 
 #import "SHSortManager.h"
 
+#import "SGH0208UncaughtExceptionViewController.h"
+#import "SGHReusableHeaderFooterTableViewController.h"
+#import "SGH0424DreamLBSViewController.h"
+#import "SGH0425RunloopImageViewController.h"
+#import "SGH0429CryptographyViewController.h"
+#import "SGH0506OCRuntime1ViewController.h"
+#import "SGH0509AboutRunLoopViewController.h"
+#import "SGH0510Runtime2ViewController.h"
+#import "SGH0511Runtime3ViewController.h"
+#import "SGH0512Runtime4ViewController.h"
+#import "SGH0512Runtime5ViewController.h"
+#import "SGH0515Runtime6ViewController.h"
+#import "SGH0515AttibuteStringInitViewController.h"
+#import "SGH0515ClassViewController.h"
+#import "SGH170518ResuableCellViewController.h"
+#import "SGHXMPPFrameworkViewController.h"
+#import "SGH0522CrashAnalisisViewController.h"
+#import "SGH0524PresentAViewController.h"
+#import "SGH0601SystemVersionViewController.h"
+#import "SGH0607FetchStringExpressionViewController.h"
+#import "SGH170815IdentCodeViewController.h"
+#import "SGH_TTAttriLabelViewController.h"
+#import "SHImageText0214ViewController.h"
+#import "SHKVOExploreViewController.h"
+#import "SHMemManageViewController.h"
+#import "SHSandboxReadWriteVC.h"
+#import "SHQRCodeViewController.h"
+
+
+
 @interface SGH170208ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
@@ -56,30 +86,33 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray= [@[@"SGH0208UncaughtExceptionViewController",
-                          @"SGHReusableHeaderFooterTableViewController",
-                          @"SGH0424DreamLBSViewController",
-                          @"SGH0425RunloopImageViewController",
-                          @"SGH0429CryptographyViewController",
-                          @"SGH0506OCRuntime1ViewController",
-                          @"SGH0509AboutRunLoopViewController",
-                          @"SGH0510Runtime2ViewController",
-                          @"SGH0511Runtime3ViewController",
-                          @"SGH0512Runtime4ViewController",
-                          @"SGH0512Runtime5ViewController",
-                          @"SGH0515Runtime6ViewController",
-                          @"SGH0515AttibuteStringInitViewController",
-                          @"SGH0515ClassViewController",
-                          @"SGH170518ResuableCellViewController",
-                          @"SGHXMPPFrameworkViewController",
-                          @"SGH0522CrashAnalisisViewController",
-                          @"SGH0524PresentAViewController",
-                          @"SGH0601SystemVersionViewController",
-                          @"SGH0607FetchStringExpressionViewController",
-                          @"SGH170815IdentCodeViewController",
-                          @"SGH_TTAttriLabelViewController",
-                          @"SHImageText0214ViewController",
-                          @"SHKVOExploreViewController"
+    _controllersArray= [@[[SGH0208UncaughtExceptionViewController new],
+                          [SGHReusableHeaderFooterTableViewController new],
+                          [SGH0424DreamLBSViewController new],
+                          [SGH0425RunloopImageViewController new],
+                          [SGH0429CryptographyViewController new],
+                          [SGH0506OCRuntime1ViewController new],
+                          [SGH0509AboutRunLoopViewController new],
+                          [SGH0510Runtime2ViewController new],
+                          [SGH0511Runtime3ViewController new],
+                          [SGH0512Runtime4ViewController new],
+                          [SGH0512Runtime5ViewController new],
+                          [SGH0515Runtime6ViewController new],
+                          [SGH0515AttibuteStringInitViewController new],
+                          [SGH0515ClassViewController new],
+                          [SGH170518ResuableCellViewController new],
+                          [SGHXMPPFrameworkViewController new],
+                          [SGH0522CrashAnalisisViewController new],
+                          [SGH0524PresentAViewController new],
+                          [SGH0601SystemVersionViewController new],
+                          [SGH0607FetchStringExpressionViewController new],
+                          [SGH170815IdentCodeViewController new],
+                          [SGH_TTAttriLabelViewController new],
+                          [SHImageText0214ViewController new],
+                          [SHKVOExploreViewController new],
+                          [SHMemManageViewController new],
+                          [SHSandboxReadWriteVC new],
+                          [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:SHQRCodeViewController.class]] instantiateViewControllerWithIdentifier:@"SHQRCodeViewController"],
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -105,7 +138,10 @@
                         @"21、生成动态验证码及验证",
                         @"22、TTAttributedLabel 的使用",
                         @"23、文字图片上下左右",
-                        @"24、KVO原理探究"
+                        @"24、KVO原理探究",
+                        @"25、内存管理",
+                        @"26、沙盒存取",
+                        @"27、QRCode扫描读取生成",
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回
@@ -141,10 +177,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class cls = NSClassFromString(_controllersArray[indexPath.row]);
-    if (cls) {
-        [self.navigationController pushViewController:[cls new] animated:YES];
-    }
+//    Class cls = NSClassFromString(_controllersArray[indexPath.row]);
+//    if (cls) {
+//        [self.navigationController pushViewController:[cls new] animated:YES];
+//    }
+    [self.navigationController pushViewController:_controllersArray[indexPath.row] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -166,6 +166,12 @@
 		8FB5B549226D467400E34EC9 /* SHSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB5B548226D467400E34EC9 /* SHSortManager.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
+		8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */; };
+		8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */; };
+		8FF81D86237DB2D1007BB516 /* SHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D85237DB2D1007BB516 /* SHQRCodeViewController.m */; };
+		8FF81D96237DB94C007BB516 /* Example1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D90237DB94B007BB516 /* Example1Controller.m */; };
+		8FF81D97237DB94C007BB516 /* Example3Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D92237DB94C007BB516 /* Example3Controller.m */; };
+		8FF81D98237DB94C007BB516 /* Example2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D94237DB94C007BB516 /* Example2Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -487,6 +493,18 @@
 		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
 		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
 		8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SHDefaultDisplay.m"; sourceTree = "<group>"; };
+		8FF81D7C237DAF95007BB516 /* SHMemManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHMemManageViewController.h; sourceTree = "<group>"; };
+		8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHMemManageViewController.m; sourceTree = "<group>"; };
+		8FF81D80237DB1D9007BB516 /* SHSandboxReadWriteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSandboxReadWriteVC.h; sourceTree = "<group>"; };
+		8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSandboxReadWriteVC.m; sourceTree = "<group>"; };
+		8FF81D84237DB2D1007BB516 /* SHQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHQRCodeViewController.h; sourceTree = "<group>"; };
+		8FF81D85237DB2D1007BB516 /* SHQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHQRCodeViewController.m; sourceTree = "<group>"; };
+		8FF81D90237DB94B007BB516 /* Example1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1Controller.m; sourceTree = "<group>"; };
+		8FF81D91237DB94C007BB516 /* Example3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3Controller.h; sourceTree = "<group>"; };
+		8FF81D92237DB94C007BB516 /* Example3Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3Controller.m; sourceTree = "<group>"; };
+		8FF81D93237DB94C007BB516 /* Example1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1Controller.h; sourceTree = "<group>"; };
+		8FF81D94237DB94C007BB516 /* Example2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2Controller.m; sourceTree = "<group>"; };
+		8FF81D95237DB94C007BB516 /* Example2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2Controller.h; sourceTree = "<group>"; };
 		A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.debug.xcconfig"; sourceTree = "<group>"; };
 		B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCDemo160728.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCDemo160728/Pods-ObjectiveCDemo160728.release.xcconfig"; sourceTree = "<group>"; };
 		CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCDemo160728.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1578,6 +1596,9 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FF81D83237DB2A8007BB516 /* 27QRCode扫描读取生成 */,
+				8FF81D7F237DB198007BB516 /* 26沙盒存取 */,
+				8FF81D7B237DAF1A007BB516 /* 25内存管理 */,
 				8FB04389236E9BDF005C0524 /* 24KVO原理探究 */,
 				0B16BA232215827D0071C0A7 /* 23文字图片上下左右 */,
 				8F9267052201CE19009B3FC1 /* 22TTAttributedLabel  */,
@@ -2320,6 +2341,39 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8FF81D7B237DAF1A007BB516 /* 25内存管理 */ = {
+			isa = PBXGroup;
+			children = (
+				8FF81D7C237DAF95007BB516 /* SHMemManageViewController.h */,
+				8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */,
+			);
+			path = "25内存管理";
+			sourceTree = "<group>";
+		};
+		8FF81D7F237DB198007BB516 /* 26沙盒存取 */ = {
+			isa = PBXGroup;
+			children = (
+				8FF81D80237DB1D9007BB516 /* SHSandboxReadWriteVC.h */,
+				8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */,
+			);
+			path = "26沙盒存取";
+			sourceTree = "<group>";
+		};
+		8FF81D83237DB2A8007BB516 /* 27QRCode扫描读取生成 */ = {
+			isa = PBXGroup;
+			children = (
+				8FF81D93237DB94C007BB516 /* Example1Controller.h */,
+				8FF81D90237DB94B007BB516 /* Example1Controller.m */,
+				8FF81D95237DB94C007BB516 /* Example2Controller.h */,
+				8FF81D94237DB94C007BB516 /* Example2Controller.m */,
+				8FF81D91237DB94C007BB516 /* Example3Controller.h */,
+				8FF81D92237DB94C007BB516 /* Example3Controller.m */,
+				8FF81D84237DB2D1007BB516 /* SHQRCodeViewController.h */,
+				8FF81D85237DB2D1007BB516 /* SHQRCodeViewController.m */,
+			);
+			path = "27QRCode扫描读取生成";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2492,6 +2546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F9265E422009339009B3FC1 /* WBStatusTimelineViewController.m in Sources */,
+				8FF81D98237DB94C007BB516 /* Example2Controller.m in Sources */,
 				6702E3691FCF9A5D00F036EB /* UIView+WZLBadge.m in Sources */,
 				677177BB1DEBD081009AB627 /* SGH1128BookmarksViewController.m in Sources */,
 				677177281DEBCFE7009AB627 /* SGH161128TabBarViewController.m in Sources */,
@@ -2536,6 +2591,7 @@
 				8F9267212201ED25009B3FC1 /* NSDictionary+NilSafe.m in Sources */,
 				6748E0671ECD971300CF62DA /* SGHXMPPFrameworkViewController.m in Sources */,
 				677177C41DEBD081009AB627 /* SGH16110701ViewController.m in Sources */,
+				8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */,
 				677177D41DEBD081009AB627 /* SGH0729WheelViewController.m in Sources */,
 				67EDCF4C1D4A07E300058E8D /* AppDelegate.m in Sources */,
 				677177F41DEBF935009AB627 /* readme.md in Sources */,
@@ -2564,6 +2620,7 @@
 				67EDCF491D4A07E300058E8D /* main.m in Sources */,
 				677177C81DEBD081009AB627 /* SGH1108ShareItem.m in Sources */,
 				674092A81EC9749E002334AD /* SGH0515Runtime6ViewController.m in Sources */,
+				8FF81D86237DB2D1007BB516 /* SHQRCodeViewController.m in Sources */,
 				677177BF1DEBD081009AB627 /* SGH1013TextViewViewController.m in Sources */,
 				8F92672D222039A7009B3FC1 /* SH1902SpareWheel.m in Sources */,
 				8F92671C2201EBC2009B3FC1 /* UIView+LCAdd.m in Sources */,
@@ -2597,6 +2654,8 @@
 				0B16BA2D221582FD0071C0A7 /* XGImageTitleView.m in Sources */,
 				67A5552E1EC35A0D0052DCC3 /* UIView+SGHTapGesture.m in Sources */,
 				8FAFB0EF222821FF005152B4 /* SHProxy.m in Sources */,
+				8FF81D96237DB94C007BB516 /* Example1Controller.m in Sources */,
+				8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */,
 				677177E71DEBD081009AB627 /* SXNewsDetailEntity.m in Sources */,
 				677177F21DEBDAA7009AB627 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				67C0D46B1F42DD7F00762BFF /* SGH170815IdentCodeViewController.m in Sources */,
@@ -2610,6 +2669,7 @@
 				67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */,
 				677177E61DEBD081009AB627 /* SXDetailImgEntity.m in Sources */,
 				8FB0438C236E9C0B005C0524 /* SHKVOExploreViewController.m in Sources */,
+				8FF81D97237DB94C007BB516 /* Example3Controller.m in Sources */,
 				8F92670422009B07009B3FC1 /* WBButtonLink.m in Sources */,
 				6702E3671FCF9A5D00F036EB /* CAAnimation+WAnimation.m in Sources */,
 				67B5F7BE1EC489FD0035A9C0 /* SGH0511RuntimeMethod.m in Sources */,
