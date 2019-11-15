@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='5.0' target-platform='ios'>
-    <timeline fileName='timeline.xctimeline'/>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='four_error_methods'/>
+        <page name='Untitled Page'/>
+        <page name='inout_defer_rethrows'/>
+    </pages>
 </playground>
