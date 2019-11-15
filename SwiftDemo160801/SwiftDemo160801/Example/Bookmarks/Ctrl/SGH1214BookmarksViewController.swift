@@ -28,6 +28,8 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
             array.append("11、NFC_passport")
         }
         array.append("12、TableView的字母索引")
+        array.append("13、FileManager实例")
+        
         return array
     }()
     
@@ -43,6 +45,7 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
             SGH1222POPAndCocoaViewController(),
             DreamGenericViewController(),
             SGH1901AutoSizingViewController(),
+            SHFileManagerDemoVC(),
         ]
         if #available(iOS 13.0, *) {
             array.append(SHNFCPassportViewController())

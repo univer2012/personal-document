@@ -96,6 +96,7 @@
 		67F1E74F1D4F4DF20094520D /* SwiftDemo160801UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F1E74E1D4F4DF20094520D /* SwiftDemo160801UITests.swift */; };
 		67FC93571EADD8BF00F67956 /* DreamGenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */; };
 		67FC93591EADDAD600F67956 /* DreamUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93581EADDAD600F67956 /* DreamUser.swift */; };
+		8FBDAB8E237E2A0E00C6857B /* SHFileManagerDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB8D237E2A0E00C6857B /* SHFileManagerDemoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		67F1E7501D4F4DF20094520D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamGenericViewController.swift; sourceTree = "<group>"; };
 		67FC93581EADDAD600F67956 /* DreamUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamUser.swift; sourceTree = "<group>"; };
+		8FBDAB8D237E2A0E00C6857B /* SHFileManagerDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFileManagerDemoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +348,7 @@
 		6739F4C01E00E93C009C5073 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				8FBDAB8C237E29DC00C6857B /* 13FileManager实例 */,
 				04E2644B23757BA60059FDFB /* 12TableView的字母索引 */,
 				04458AA42356D75E009A2A36 /* 11NFC_passport */,
 				0B2437D421ECA38E005BFBF9 /* 10UICollectionViewCellAutoSizing */,
@@ -1054,6 +1057,14 @@
 			path = Ctrl;
 			sourceTree = "<group>";
 		};
+		8FBDAB8C237E29DC00C6857B /* 13FileManager实例 */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDAB8D237E2A0E00C6857B /* SHFileManagerDemoVC.swift */,
+			);
+			path = "13FileManager实例";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1261,6 +1272,7 @@
 				6739F55C1E00E93C009C5073 /* SGH160811ViewController.swift in Sources */,
 				6739F5521E00E93C009C5073 /* SGHUsingSpringViewController.swift in Sources */,
 				6739F56D1E00E93C009C5073 /* SGH0819HorizonalItemList.swift in Sources */,
+				8FBDAB8E237E2A0E00C6857B /* SHFileManagerDemoVC.swift in Sources */,
 				6739F5581E00E93C009C5073 /* SGHFadeCubeTransitionViewController.swift in Sources */,
 				67F1E72F1D4F4DF20094520D /* AppDelegate.swift in Sources */,
 				6739F5451E00E93C009C5073 /* SGHAnimatedMaskLabel.swift in Sources */,
