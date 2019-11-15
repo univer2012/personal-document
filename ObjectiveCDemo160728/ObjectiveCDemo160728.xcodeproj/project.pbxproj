@@ -137,6 +137,9 @@
 		67FC935E1EADEE0700F67956 /* SGH0424DreamLBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC935D1EADEE0700F67956 /* SGH0424DreamLBSViewController.m */; };
 		67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */; };
 		8E60E0114CE177A1FDBFCCD2 /* libPods-ObjectiveCDemo160728.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB464369E359FB74BE3F5C76 /* libPods-ObjectiveCDemo160728.a */; };
+		8F3852BC237E32F300F182B7 /* SHCoreDataDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3852BB237E32F300F182B7 /* SHCoreDataDemoVC.m */; };
+		8F3852C2237E34EE00F182B7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F3852C0237E34EE00F182B7 /* Model.xcdatamodeld */; };
+		8F3852C4237E395200F182B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3852C3237E395100F182B7 /* CoreData.framework */; };
 		8F8F0273237DBB6700BA302F /* SHFetchFutureDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */; };
 		8F8F0276237DBB9200BA302F /* TKUpdateHelperCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */; };
 		8F9265DD2200929D009B3FC1 /* SGH190129YYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9265DC2200929D009B3FC1 /* SGH190129YYKitViewController.m */; };
@@ -443,6 +446,10 @@
 		67FC936A1EAE00DE00F67956 /* SGH0424MapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0424MapFactory.h; sourceTree = "<group>"; };
 		67FC937A1EAF07B800F67956 /* SGH0425RunloopImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0425RunloopImageViewController.h; sourceTree = "<group>"; };
 		67FC937B1EAF07B800F67956 /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
+		8F3852BA237E32F300F182B7 /* SHCoreDataDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCoreDataDemoVC.h; sourceTree = "<group>"; };
+		8F3852BB237E32F300F182B7 /* SHCoreDataDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCoreDataDemoVC.m; sourceTree = "<group>"; };
+		8F3852C1237E34EE00F182B7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8F3852C3237E395100F182B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8F8F0271237DBB6700BA302F /* SHFetchFutureDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHFetchFutureDateViewController.h; sourceTree = "<group>"; };
 		8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHFetchFutureDateViewController.m; sourceTree = "<group>"; };
 		8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUpdateHelperCache.m; sourceTree = "<group>"; };
@@ -546,6 +553,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3852C4237E395200F182B7 /* CoreData.framework in Frameworks */,
 				6747F7B11EE7ABA0006BCBB0 /* libicucore.tbd in Frameworks */,
 				67FA0D211DE81FC00012EDFF /* libz.tbd in Frameworks */,
 				67D3D59A1DD086B70049B021 /* MobileCoreServices.framework in Frameworks */,
@@ -1628,6 +1636,7 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F3852B9237E32D700F182B7 /* 33CoreData实例 */,
 				8FBDAB85237DD00900C6857B /* 32cell高度不固定的UITableView */,
 				8FB12592237DC53D006E7D1E /* 31系统提供的dispatch方法 */,
 				8FB1258D237DC261006E7D1E /* 30弹出更新app跳到AppStore界面 */,
@@ -1916,6 +1925,7 @@
 		67D3D5981DD086B70049B021 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F3852C3237E395100F182B7 /* CoreData.framework */,
 				6747F7B01EE7ABA0006BCBB0 /* libicucore.tbd */,
 				67FA0D201DE81FC00012EDFF /* libz.tbd */,
 				67D3D5991DD086B70049B021 /* MobileCoreServices.framework */,
@@ -2109,6 +2119,16 @@
 				B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F3852B9237E32D700F182B7 /* 33CoreData实例 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3852C0237E34EE00F182B7 /* Model.xcdatamodeld */,
+				8F3852BA237E32F300F182B7 /* SHCoreDataDemoVC.h */,
+				8F3852BB237E32F300F182B7 /* SHCoreDataDemoVC.m */,
+			);
+			path = "33CoreData实例";
 			sourceTree = "<group>";
 		};
 		8F9265D8220091FA009B3FC1 /* 5YYKit */ = {
@@ -2808,8 +2828,10 @@
 				67B5F3861EC367F10035A9C0 /* SGH0510MyObject.m in Sources */,
 				67548AA21EBD560B00AE8899 /* SGH0506OCRuntime1ViewController.m in Sources */,
 				677177E61DEBD081009AB627 /* SXDetailImgEntity.m in Sources */,
+				8F3852C2237E34EE00F182B7 /* Model.xcdatamodeld in Sources */,
 				8FB0438C236E9C0B005C0524 /* SHKVOExploreViewController.m in Sources */,
 				8FF81D97237DB94C007BB516 /* Example3Controller.m in Sources */,
+				8F3852BC237E32F300F182B7 /* SHCoreDataDemoVC.m in Sources */,
 				8F92670422009B07009B3FC1 /* WBButtonLink.m in Sources */,
 				6702E3671FCF9A5D00F036EB /* CAAnimation+WAnimation.m in Sources */,
 				8F8F0273237DBB6700BA302F /* SHFetchFutureDateViewController.m in Sources */,
@@ -2969,6 +2991,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9FF89E9DBFB4557262562BA /* Pods-ObjectiveCDemo160728.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3033,6 +3056,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B057BF1ADC501D7025B8CB05 /* Pods-ObjectiveCDemo160728.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -3178,6 +3202,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8F3852C0237E34EE00F182B7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8F3852C1237E34EE00F182B7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 8F3852C1237E34EE00F182B7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 67EDCF3C1D4A07E300058E8D /* Project object */;
 }
