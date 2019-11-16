@@ -88,5 +88,44 @@
             </objects>
             <point key="canvasLocation" x="794.20289855072474" y="53.571428571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sdr-wJ-x3q">
+            <objects>
+                <viewController storyboardIdentifier="SHRAC1ViewController" id="xUg-gR-4E6" customClass="SHRAC1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2je-Jd-uqU"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdo-bg-rSo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DqU-bC-tGv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw4-h6-YJh">
+                                <rect key="frame" x="126" y="155" width="162" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3y4-GV-QBX"/>
+                                    <constraint firstAttribute="width" constant="162" id="DDF-hF-KzP"/>
+                                </constraints>
+                                <state key="normal" title="按钮">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dw4-h6-YJh" firstAttribute="centerX" secondItem="DqU-bC-tGv" secondAttribute="centerX" id="0my-4E-rUG"/>
+                            <constraint firstItem="Dw4-h6-YJh" firstAttribute="top" secondItem="2je-Jd-uqU" secondAttribute="bottom" constant="67" id="RKM-F8-Nwd"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="testButton" destination="Dw4-h6-YJh" id="g13-Bu-sVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vs-0Q-ZV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513.0434782608697" y="58.928571428571423"/>
+        </scene>
     </scenes>
 </document>
