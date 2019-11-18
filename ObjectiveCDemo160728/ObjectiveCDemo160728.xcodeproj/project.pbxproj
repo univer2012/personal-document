@@ -140,6 +140,7 @@
 		8F3852BC237E32F300F182B7 /* SHCoreDataDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3852BB237E32F300F182B7 /* SHCoreDataDemoVC.m */; };
 		8F3852C2237E34EE00F182B7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F3852C0237E34EE00F182B7 /* Model.xcdatamodeld */; };
 		8F3852C4237E395200F182B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3852C3237E395100F182B7 /* CoreData.framework */; };
+		8F63EB702380329F00CCBD3E /* SHRAC1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F63EB6F2380329F00CCBD3E /* SHRAC1ViewController.m */; };
 		8F8F0273237DBB6700BA302F /* SHFetchFutureDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */; };
 		8F8F0276237DBB9200BA302F /* TKUpdateHelperCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */; };
 		8F9265DD2200929D009B3FC1 /* SGH190129YYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9265DC2200929D009B3FC1 /* SGH190129YYKitViewController.m */; };
@@ -179,6 +180,7 @@
 		8FBDAB8B237DD06100C6857B /* GJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB8A237DD06100C6857B /* GJCell.m */; };
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
+		8FE8C02F237EF806000C5C03 /* SH3DTouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */; };
 		8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */; };
 		8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */; };
 		8FF81D86237DB2D1007BB516 /* SHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D85237DB2D1007BB516 /* SHQRCodeViewController.m */; };
@@ -450,6 +452,8 @@
 		8F3852BB237E32F300F182B7 /* SHCoreDataDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCoreDataDemoVC.m; sourceTree = "<group>"; };
 		8F3852C1237E34EE00F182B7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8F3852C3237E395100F182B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8F63EB6E2380329F00CCBD3E /* SHRAC1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC1ViewController.h; sourceTree = "<group>"; };
+		8F63EB6F2380329F00CCBD3E /* SHRAC1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC1ViewController.m; sourceTree = "<group>"; };
 		8F8F0271237DBB6700BA302F /* SHFetchFutureDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHFetchFutureDateViewController.h; sourceTree = "<group>"; };
 		8F8F0272237DBB6700BA302F /* SHFetchFutureDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHFetchFutureDateViewController.m; sourceTree = "<group>"; };
 		8F8F0274237DBB9200BA302F /* TKUpdateHelperCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUpdateHelperCache.m; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 		8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH0227SeniorCampViewController.m; sourceTree = "<group>"; };
 		8FD1466622265081001E25F8 /* UITableView+SHDefaultDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+SHDefaultDisplay.h"; sourceTree = "<group>"; };
 		8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SHDefaultDisplay.m"; sourceTree = "<group>"; };
+		8FE8C02D237EF806000C5C03 /* SH3DTouchDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH3DTouchDemoViewController.h; sourceTree = "<group>"; };
+		8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH3DTouchDemoViewController.m; sourceTree = "<group>"; };
 		8FF81D7C237DAF95007BB516 /* SHMemManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHMemManageViewController.h; sourceTree = "<group>"; };
 		8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHMemManageViewController.m; sourceTree = "<group>"; };
 		8FF81D80237DB1D9007BB516 /* SHSandboxReadWriteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSandboxReadWriteVC.h; sourceTree = "<group>"; };
@@ -1636,6 +1642,7 @@
 		678594551E4AF218006BA5CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F3852C5237EF79300F182B7 /* 34_3DTouch实现 */,
 				8F3852B9237E32D700F182B7 /* 33CoreData实例 */,
 				8FBDAB85237DD00900C6857B /* 32cell高度不固定的UITableView */,
 				8FB12592237DC53D006E7D1E /* 31系统提供的dispatch方法 */,
@@ -2131,6 +2138,15 @@
 			path = "33CoreData实例";
 			sourceTree = "<group>";
 		};
+		8F3852C5237EF79300F182B7 /* 34_3DTouch实现 */ = {
+			isa = PBXGroup;
+			children = (
+				8FE8C02D237EF806000C5C03 /* SH3DTouchDemoViewController.h */,
+				8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */,
+			);
+			path = "34_3DTouch实现";
+			sourceTree = "<group>";
+		};
 		8F9265D8220091FA009B3FC1 /* 5YYKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -2404,6 +2420,7 @@
 		8FBDAB78237DC96600C6857B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FE8C0302380320A000C5C03 /* 2一基本介绍 */,
 				8FBDAB7D237DCA0E00C6857B /* 1Autolayout_masonry登录动画 */,
 			);
 			path = Modules;
@@ -2480,6 +2497,15 @@
 				8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8FE8C0302380320A000C5C03 /* 2一基本介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				8F63EB6E2380329F00CCBD3E /* SHRAC1ViewController.h */,
+				8F63EB6F2380329F00CCBD3E /* SHRAC1ViewController.m */,
+			);
+			path = "2一基本介绍";
 			sourceTree = "<group>";
 		};
 		8FF81D7B237DAF1A007BB516 /* 25内存管理 */ = {
@@ -2715,6 +2741,7 @@
 				8FAFB0E92226C310005152B4 /* SHRuntime4Person.m in Sources */,
 				677177C51DEBD081009AB627 /* SGH1108UpdateAppViewController.m in Sources */,
 				6785945E1E4AF2FA006BA5CB /* SGH0208UncaughtExceptionViewController.m in Sources */,
+				8F63EB702380329F00CCBD3E /* SHRAC1ViewController.m in Sources */,
 				677177CB1DEBD081009AB627 /* SGH1125XMLParserViewController.m in Sources */,
 				67FA0D1F1DE817710012EDFF /* TBXML.m in Sources */,
 				0B16BA302215840F0071C0A7 /* UIColor+Hex.m in Sources */,
@@ -2752,6 +2779,7 @@
 				67B5F87B1EC5DB120035A9C0 /* SGH0512Runtime5ViewController.m in Sources */,
 				8FB12590237DC2A5006E7D1E /* SHUpdateJumpAppStoreVC.m in Sources */,
 				67FC937C1EAF07B800F67956 /* SGH0425RunloopImageViewController.m in Sources */,
+				8FE8C02F237EF806000C5C03 /* SH3DTouchDemoViewController.m in Sources */,
 				677177EA1DEBD081009AB627 /* SGH160911CoreLocationViewController.m in Sources */,
 				8F9267152201EB63009B3FC1 /* BDTConstManager.m in Sources */,
 				677177D61DEBD081009AB627 /* SGH0729Button.m in Sources */,

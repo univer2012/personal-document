@@ -32,6 +32,25 @@
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor whiteColor];
     NSLog(@"%s",__func__);
+    
+    
+    if (@available(iOS 9.0, *)) {
+        UIApplicationShortcutIcon *searchIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
+        
+        UIApplicationShortcutItem *search = [[UIApplicationShortcutItem alloc] initWithType:@"search" localizedTitle:@"搜索" localizedSubtitle:nil icon:searchIcon userInfo:nil];
+        
+        UIApplicationShortcutIcon *publicIcon = [UIApplicationShortcutIcon iconWithTemplateImageName:@"upload"];
+        
+        UIApplicationShortcutItem *public = [[UIApplicationShortcutItem alloc] initWithType:@"public" localizedTitle:@"一键发布" localizedSubtitle:nil icon:publicIcon userInfo:nil];
+        
+        UIApplicationShortcutItem *list = [[UIApplicationShortcutItem alloc] initWithType:@"list" localizedTitle:@"榜单" localizedSubtitle:@"全区排行" icon:nil userInfo:nil];
+        
+        application.shortcutItems = @[list, public, search];
+        
+    }
+    
+    
+    
     return YES;
 }
 
@@ -63,6 +82,21 @@
 }
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     NSLog(@"%s",__func__);
+}
+
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
+    NSLog(@"%s", __FUNCTION__);
+    
+    if ([shortcutItem.type isEqualToString:@"search"]) {
+        NSLog(@"用户从快捷方式“搜索”进来的");
+    } else if ([shortcutItem.type isEqualToString:@"list"]) {
+        NSLog(@"用户从快捷方式“榜单”进来的");
+    } else if ([shortcutItem.type isEqualToString:@"public"]) {
+        NSLog(@"用户从快捷方式“一键发布”进来的");
+    }
+    
 }
 
 #pragma mark - Core Data stack

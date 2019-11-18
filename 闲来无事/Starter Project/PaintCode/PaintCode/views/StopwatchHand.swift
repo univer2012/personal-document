@@ -9,7 +9,7 @@
 import UIKit
 @IBDesignable
 class StopwatchHand: UIView {
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         PaintCodeTutorial.drawStopwatch_Hand()
     }
     /*
