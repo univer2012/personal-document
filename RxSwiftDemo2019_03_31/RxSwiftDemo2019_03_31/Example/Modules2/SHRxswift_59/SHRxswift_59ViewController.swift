@@ -38,7 +38,41 @@ class SHRxswift_59ViewController: UIViewController {
         //“拍照”按钮点击
         cameraButton.rx.tap.bind { [weak self] (_) -> Void in
             imagePicker.sourceType = .camera    //来源为相机
-            
-        }
+            imagePicker.allowsEditing = false   //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //“选择照片”按钮点击
+        galleryButton.rx.tap.bind { [weak self] (_) -> Void in
+            imagePicker.sourceType = .photoLibrary  //来源为相册
+            imagePicker.allowsEditing = false       //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //“选择照片并裁剪”按钮点击
+        cropButton.rx.tap.bind { [weak self] (_) -> Void in
+            imagePicker.sourceType = .photoLibrary  //来源为相册
+            imagePicker.allowsEditing = true        //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //图片选择完毕后，将其绑定到imageView上显示
+        imagePicker.rx.didFinishPickingMediaWithInfo
+            .map { info in
+                if imagePicker.allowsEditing {
+                    return info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+                    
+                } else {
+                    return info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+                }
+        }.bind(to: imageView.rx.image)
+        .disposed(by: disposeBag)
+        
+        
+        //
+        
     }
 }

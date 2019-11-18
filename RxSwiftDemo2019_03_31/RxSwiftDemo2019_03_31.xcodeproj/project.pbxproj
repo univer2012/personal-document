@@ -320,8 +320,8 @@
 				8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */,
 				044A77822375382B00611F0C /* SHRxswift_56ViewController.swift */,
 				8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */,
-				8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */,
 				8F20AAB0237A40ED00641B8B /* SHRxswift_58 */,
+				8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
