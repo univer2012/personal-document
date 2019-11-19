@@ -105,22 +105,45 @@
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3y4-GV-QBX"/>
-                                    <constraint firstAttribute="width" constant="162" id="DDF-hF-KzP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="DDF-hF-KzP"/>
                                 </constraints>
                                 <state key="normal" title="按钮">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om6-fm-TmI">
+                                <rect key="frame" x="64.5" y="228" width="285" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hhc-UQ-bAW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="r9X-pw-aej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Crs-wH-OwW">
+                                <rect key="frame" x="64" y="321" width="286" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Dw4-h6-YJh" firstAttribute="centerX" secondItem="DqU-bC-tGv" secondAttribute="centerX" id="0my-4E-rUG"/>
+                            <constraint firstAttribute="trailing" secondItem="Crs-wH-OwW" secondAttribute="trailing" constant="64" id="6Hx-Pl-fV1"/>
+                            <constraint firstItem="Om6-fm-TmI" firstAttribute="top" secondItem="Dw4-h6-YJh" secondAttribute="bottom" constant="29" id="DQm-2W-0dg"/>
                             <constraint firstItem="Dw4-h6-YJh" firstAttribute="top" secondItem="2je-Jd-uqU" secondAttribute="bottom" constant="67" id="RKM-F8-Nwd"/>
+                            <constraint firstItem="Crs-wH-OwW" firstAttribute="leading" secondItem="DqU-bC-tGv" secondAttribute="leading" constant="64" id="mDk-0X-lOb"/>
+                            <constraint firstItem="Crs-wH-OwW" firstAttribute="top" secondItem="Om6-fm-TmI" secondAttribute="bottom" constant="43" id="sYX-BP-CqQ"/>
+                            <constraint firstItem="Om6-fm-TmI" firstAttribute="centerX" secondItem="DqU-bC-tGv" secondAttribute="centerX" id="zxu-Y2-6mQ"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="testButton" destination="Dw4-h6-YJh" id="g13-Bu-sVP"/>
+                        <outlet property="testLabel" destination="Om6-fm-TmI" id="VdA-Zh-WcR"/>
+                        <outlet property="testTextField" destination="Crs-wH-OwW" id="qvw-WW-WlJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vs-0Q-ZV6" userLabel="First Responder" sceneMemberID="firstResponder"/>

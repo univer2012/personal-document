@@ -2621,7 +2621,7 @@
 				TargetAttributes = {
 					67EDCF431D4A07E300058E8D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = K4A67L5PAT;
+						DevelopmentTeam = U5ZV6BBJ6N;
 						ProvisioningStyle = Automatic;
 					};
 					67EDCF5C1D4A07E300058E8D = {
@@ -3023,10 +3023,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mengshi Li (QCNF96K99P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K4A67L5PAT;
+				DEVELOPMENT_TEAM = U5ZV6BBJ6N;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCDemo160728/ObjectiveCDemo160728.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3074,7 +3075,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.ObjectiveCDemo160728;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8350c84-ea83-4a29-a9d8-5d21110fdfb7";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 			};
@@ -3088,9 +3089,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K4A67L5PAT;
+				DEVELOPMENT_TEAM = U5ZV6BBJ6N;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCDemo160728/ObjectiveCDemo160728.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3138,7 +3140,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thinkive.invest.ObjectiveCDemo160728;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c5650571-8630-4bf5-8bb0-5f612108c67b";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 			};

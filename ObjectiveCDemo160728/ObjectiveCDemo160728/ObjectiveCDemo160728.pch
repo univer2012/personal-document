@@ -17,6 +17,9 @@
 #import "UIColor+Hex.h"
 #import "UIView+LCAdd.h"
 
+#import <ReactiveObjC.h>
+//#import <ReactiveCocoa/ReactiveCocoa.h>
+
 /** blockSelf和weakSelf 宏定义  */
 #define kWeakSelf __weak typeof(self) weakSelf = self;
 #define kBlockSelf __block typeof(self) blockSelf = self;

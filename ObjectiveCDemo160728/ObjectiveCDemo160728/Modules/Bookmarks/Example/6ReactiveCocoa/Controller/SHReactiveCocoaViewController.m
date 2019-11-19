@@ -9,6 +9,7 @@
 #import "SHReactiveCocoaViewController.h"
 
 #import "SHAnimationMasonryLoginVC.h"
+#import "SHRAC1ViewController.h"
 
 @interface SHReactiveCocoaViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -31,9 +32,11 @@
         tableView;
     });
     _controllersArray= [@[SHAnimationMasonryLoginVC.new,
+                          [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:SHRAC1ViewController.class]] instantiateViewControllerWithIdentifier:@"SHRAC1ViewController"],
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、Autolayout_masonry登录动画",
+                        @"2、介绍（一）——基本介绍",
                         ] mutableCopy];
     
     
