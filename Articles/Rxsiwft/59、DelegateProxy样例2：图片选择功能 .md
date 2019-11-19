@@ -133,3 +133,229 @@ fileprivate func castOrThrow<T>(_ resultType: T.Type, _  object: Any) throws -> 
 （3）`ViewController.swift`
 
 主视图控制器代码如下，可以看到原来图片选择完毕这个代理方法现在已经变成响应式的了。
+
+```swift
+import UIKit
+import RxSwift
+import RxCocoa
+
+class SHRxswift_59ViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    //拍照按钮
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    //选择照片按钮
+    @IBOutlet weak var galleryButton: UIButton!
+    
+    //选择照片并裁减按钮
+    @IBOutlet weak var cropButton: UIButton!
+    
+    //显示照片的imageView
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //初始化图片控制器
+        let imagePicker = UIImagePickerController()
+        
+        //判断并决定“z拍照”按钮是否可用
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        //“拍照”按钮点击
+        cameraButton.rx.tap.bind { [weak self] (_) -> Void in
+            imagePicker.sourceType = .camera    //来源为相机
+            imagePicker.allowsEditing = false   //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //“选择照片”按钮点击
+        galleryButton.rx.tap.bind { [weak self] (_) -> Void in
+            imagePicker.sourceType = .photoLibrary  //来源为相册
+            imagePicker.allowsEditing = false       //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //“选择照片并裁剪”按钮点击
+        cropButton.rx.tap.bind { [weak self] (_) -> Void in
+            imagePicker.sourceType = .photoLibrary  //来源为相册
+            imagePicker.allowsEditing = true        //不可编辑
+            //弹出控制器，显示界面
+            self?.present(imagePicker, animated: true)
+        }.disposed(by: disposeBag)
+        
+        //图片选择完毕后，将其绑定到imageView上显示
+        imagePicker.rx.didFinishPickingMediaWithInfo
+            .map { info in
+                if imagePicker.allowsEditing {
+                    return info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+                    
+                } else {
+                    return info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+                }
+        }.bind(to: imageView.rx.image)
+        .disposed(by: disposeBag)
+        
+        
+        //图片选择完毕后，退出图片控制器
+        imagePicker.rx.didFinishPickingMediaWithInfo
+            .subscribe(onNext: { (_) in
+                imagePicker.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+    }
+}
+```
+
+
+
+## 附：功能改进
+
+虽然前面我们对 `UIImagePickerController` 进行了 `Rx` 扩展，但使用起来还是有些不便，比如图片选择完毕后还需要在代码中手动退出选择器。下面对它做个功能改进，让其可以自动关闭退出。
+
+### 1，UIImagePickerController+RxCreate.swift
+
+这里再一次对 `UIImagePickerController` 进行 `Rx` 扩展，增加一个创建图片选择控制器的静态方法，后面当我们使用该方法初始化 `ImagePickerController` 时会自动将其弹出显示，并且在选择完毕后会自动关闭。
+
+```swift
+import UIKit
+import RxSwift
+import RxCocoa
+
+//取消置顶视图控制器函数
+func dismissViewController(_ viewController: UIViewController,animated: Bool) {
+    if viewController.isBeingDismissed || viewController.isBeingPresented {
+        DispatchQueue.main.async {
+            dismissViewController(viewController, animated: animated)
+        }
+        return
+    }
+    
+    if viewController.presentingViewController != nil {
+        viewController.dismiss(animated: animated, completion: nil)
+    }
+}
+
+
+//对UIImagePickerController进行Rx扩展
+extension Reactive where Base: UIImagePickerController {
+    static func createWithParent(_ parent: UIViewController?, animated: Bool = true, configureImagePicker: @escaping (UIImagePickerController) throws -> () = {x in}) -> Observable<UIImagePickerController> {
+        
+        //返回可观察序列
+        return Observable.create { [weak parent] (observer) -> Disposable in
+            
+            //初始化一个图片选择控制器
+            let imagePicker = UIImagePickerController()
+            
+            //不管图片选择完毕还是取消选择，都会发出.complete事件
+            let dismissDisposable = Observable.merge(
+                imagePicker.rx.didFinishPickingMediaWithInfo.map{_ in ()},
+                imagePicker.rx.didCancel
+            ).subscribe(onNext: { (_) in
+                observer.on(.completed)
+            })
+            
+            //设置图片选择控制器初始参数参数不准确则发出.error事件
+            do {
+                try configureImagePicker(imagePicker)
+            } catch let error {
+                observer.on(.error(error))
+                return Disposables.create()
+            }
+            
+            //判断parent是否存在，不存在则发出.completed事件
+            guard let parent = parent else {
+                observer.on(.completed)
+                return Disposables.create()
+            }
+            
+            //弹出控制器，显示界面
+            parent.present(imagePicker, animated: animated, completion: nil)
+            //发出.next事件（携带的是控制器对象）
+            observer.on(.next(imagePicker))
+            
+            //销毁时自动退出图片控制器
+            return Disposables.create(dismissDisposable, Disposables.create {
+                dismissViewController(imagePicker, animated: animated)
+            })
+        }
+    }
+}
+```
+
+### 2，ViewController.swift
+
+主视图控制器代码如下，可以看到我们现在不需要去关心图片选择界面如何关闭了。
+
+```swift
+import UIKit
+import RxSwift
+import RxCocoa
+
+class SHRxswift_59ViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    //拍照按钮
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    //选择照片按钮
+    @IBOutlet weak var galleryButton: UIButton!
+    
+    //选择照片并裁减按钮
+    @IBOutlet weak var cropButton: UIButton!
+    
+    //显示照片的imageView
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //判断并决定“拍照”按钮是否可用
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        //"拍照"按钮点击
+        cameraButton.rx.tap.flatMapLatest { [weak self] (_) in
+            return UIImagePickerController.rx.createWithParent(self) { (picker: UIImagePickerController) in
+                picker.sourceType = .camera
+                picker.allowsEditing = false
+            }.flatMap{ $0.rx.didFinishPickingMediaWithInfo }
+        }.map { (info) in
+            return info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        }.bind(to: imageView.rx.image)
+        .disposed(by: disposeBag)
+        
+        
+        //"选择"按钮点击
+        galleryButton.rx.tap.flatMapLatest { [weak self] (_) in
+            return UIImagePickerController.rx.createWithParent(self) { (picker: UIImagePickerController) in
+                picker.sourceType = .photoLibrary
+                picker.allowsEditing = false
+            }.flatMap{ $0.rx.didFinishPickingMediaWithInfo }
+        }.map { (info) in
+            return info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        }.bind(to: imageView.rx.image)
+        .disposed(by: disposeBag)
+        
+        
+        //“选择照片并裁剪”按钮点击
+        cropButton.rx.tap.flatMapLatest { [weak self] (_) in
+            return UIImagePickerController.rx.createWithParent(self) { (picker: UIImagePickerController) in
+                picker.sourceType = .photoLibrary
+                picker.allowsEditing = true
+            }.flatMap{ $0.rx.didFinishPickingMediaWithInfo }
+        }.map { (info) in
+            return info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        }.bind(to: imageView.rx.image)
+        .disposed(by: disposeBag)
+    }
+}
+```
+
+---
+
+【完】
