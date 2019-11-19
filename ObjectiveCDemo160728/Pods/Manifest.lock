@@ -18,13 +18,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
+  - ReactiveObjC (3.1.1)
   - TTTAttributedLabel (1.13.4)
   - TYAttributedLabel (2.6.6)
   - YBAttributeTextTapAction (3.0.3)
@@ -33,7 +27,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - FMDB
   - Masonry
-  - ReactiveCocoa (~> 2.5)
+  - ReactiveObjC (~> 3.1.0)
   - TTTAttributedLabel
   - TYAttributedLabel
   - YBAttributeTextTapAction
@@ -43,7 +37,7 @@ SPEC REPOS:
     - AFNetworking
     - FMDB
     - Masonry
-    - ReactiveCocoa
+    - ReactiveObjC
     - TTTAttributedLabel
     - TYAttributedLabel
     - YBAttributeTextTapAction
@@ -52,11 +46,11 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
   TYAttributedLabel: cb8fc910d97eb5224936d4f692a78e042af691b2
   YBAttributeTextTapAction: b7e61f0265b5673e7ce7bad7319e8eff9e209a2b
 
-PODFILE CHECKSUM: 15051c284272bf15e044b7ca76b02ab92bd9fb22
+PODFILE CHECKSUM: 261f1b6499b6714fd5e0cd3ed6ad694764ea858b
 
 COCOAPODS: 1.7.5
