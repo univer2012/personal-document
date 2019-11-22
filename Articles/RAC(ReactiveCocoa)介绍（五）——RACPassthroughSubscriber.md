@@ -1,3 +1,7 @@
+来自：[RAC(ReactiveCocoa)介绍（五）——RACPassthroughSubscriber](https://www.jianshu.com/p/4e4ebee7a782)
+
+
+
 上一篇整体分析了RAC的信号流程，这样对RAC的工作原理有了整体的认识。
  接下来将逐步深入了解RAC实现的底层。
 
@@ -44,7 +48,7 @@
 
 
 
-首先，此处的成员变量`signal`声明为`RACSignal`类，是`RACPassthroughSubscriber`类实例化方法执行时传入的。而该信号又是从`RACDynamicSignal`传来的，`RACDynamicSignal`持有了当前的`subscribe`；`subscribe`继续向上溯源，找到了在`RACSignal`类中的`[self subscribe:o]`方法。那么答案已经显而易见了，`unsafe_unretained`属性的声明，就是为了防止在此过程中的循环引用。
+首先，此处的成员变量`signal`声明为`RACSignal`类，是`RACPassthroughSubscriber`类实例化方法执行时传入的。而该信号又是从`RACDynamicSignal`传来的，`RACDynamicSignal`持有了当前的`subscribe`；`subscribe`继续向上溯源，找到了在`RACSignal`类中的`[self subscribe:o]`方法。那么答案已经显而易见了，**`unsafe_unretained`属性的声明，就是为了防止在此过程中的循环引用。**
 
 
 
@@ -60,7 +64,41 @@
 
 
 
-首先`RACDynamicSignal`类是RACSignal类的子类，此处进行了RACSignal类的分类扩展在分类中实现了subscribeNext方法。在创建信号时，信号类为RACDynamicSignal类。
+首先`RACDynamicSignal`类是`RACSignal`类的子类，此处进行了`RACSignal`类的分类扩展在分类中实现了`subscribeNext`方法。在创建信号时，信号类为`RACDynamicSignal`类。
+
+![RACSignal分类](https:////upload-images.jianshu.io/upload_images/1243805-be9bdf33bad7f512.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+
+
+在发送信号时，打印`subscriber`会发现其所属类为`RACPassthroughSubscriber`。
+
+打印结果：
+
+![img](https:////upload-images.jianshu.io/upload_images/1243805-907eed11ac10b061.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+
+
+`self.innerSubscriber`对象为`RACSubscriber`类创建的，最终是执行`RACSubscriber`类下的`sendNext`方法，执行`nextBlock`。在执行时，`@synchronized (self)`用于保证线程安全
+
+![RACPassthroughSubscriber发送信号实现](https:////upload-images.jianshu.io/upload_images/1243805-cc2cd813e2b181b3.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)
+
+
+
+```objc
+///RACSubscriber.m
+- (void)sendNext:(id)value {
+	@synchronized (self) {
+		void (^nextBlock)(id) = [self.next copy];
+		if (nextBlock == nil) return;
+
+		nextBlock(value);
+	}
+}
+```
+
+
+
+以上就是针对`RACPassthroughSubscriber`类的实现进行了一个简单的分析，后续会不断补充、修改。
 
 
 

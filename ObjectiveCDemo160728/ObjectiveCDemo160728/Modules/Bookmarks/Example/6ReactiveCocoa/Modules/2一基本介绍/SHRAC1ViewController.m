@@ -32,8 +32,18 @@
 //    [self RAC_flattenMap];
 //    [self RAC_filter];
 //    [self RAC_ignoreValue_ignore];
-    [self RAC_distinctUntilChanged];
+//    [self RAC_distinctUntilChanged];
+    
+    [self p_observe];
 }
+
+//MARK: RAC(ReactiveCocoa)介绍（八）——KVO销毁
+- (void)p_observe {
+    [RACObserve(self.testLabel, text) subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
 //MARK: RAC(ReactiveCocoa)介绍（三）——信号过滤
 
 

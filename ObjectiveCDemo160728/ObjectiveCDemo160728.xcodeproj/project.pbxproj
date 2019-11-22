@@ -181,6 +181,7 @@
 		8FD1466522265028001E25F8 /* SH0227SeniorCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466422265028001E25F8 /* SH0227SeniorCampViewController.m */; };
 		8FD1466822265081001E25F8 /* UITableView+SHDefaultDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */; };
 		8FD8211D2384C005005A8A74 /* SHRAC4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8211C2384C005005A8A74 /* SHRAC4ViewController.m */; };
+		8FD8212123883631005A8A74 /* SHRAC9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8212023883631005A8A74 /* SHRAC9ViewController.m */; };
 		8FE8C02F237EF806000C5C03 /* SH3DTouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */; };
 		8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */; };
 		8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */; };
@@ -538,6 +539,8 @@
 		8FD1466722265081001E25F8 /* UITableView+SHDefaultDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SHDefaultDisplay.m"; sourceTree = "<group>"; };
 		8FD8211B2384C005005A8A74 /* SHRAC4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC4ViewController.h; sourceTree = "<group>"; };
 		8FD8211C2384C005005A8A74 /* SHRAC4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC4ViewController.m; sourceTree = "<group>"; };
+		8FD8211F23883631005A8A74 /* SHRAC9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC9ViewController.h; sourceTree = "<group>"; };
+		8FD8212023883631005A8A74 /* SHRAC9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC9ViewController.m; sourceTree = "<group>"; };
 		8FE8C02D237EF806000C5C03 /* SH3DTouchDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH3DTouchDemoViewController.h; sourceTree = "<group>"; };
 		8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH3DTouchDemoViewController.m; sourceTree = "<group>"; };
 		8FF81D7C237DAF95007BB516 /* SHMemManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHMemManageViewController.h; sourceTree = "<group>"; };
@@ -2423,6 +2426,7 @@
 		8FBDAB78237DC96600C6857B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FD8211E238835FE005A8A74 /* 4介绍九_RACSubject流程分析 */,
 				8FD8211A2384BFCE005A8A74 /* 3介绍四_流程分析 */,
 				8FE8C0302380320A000C5C03 /* 2一基本介绍 */,
 				8FBDAB7D237DCA0E00C6857B /* 1Autolayout_masonry登录动画 */,
@@ -2510,6 +2514,15 @@
 				8FD8211C2384C005005A8A74 /* SHRAC4ViewController.m */,
 			);
 			path = "3介绍四_流程分析";
+			sourceTree = "<group>";
+		};
+		8FD8211E238835FE005A8A74 /* 4介绍九_RACSubject流程分析 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD8211F23883631005A8A74 /* SHRAC9ViewController.h */,
+				8FD8212023883631005A8A74 /* SHRAC9ViewController.m */,
+			);
+			path = "4介绍九_RACSubject流程分析";
 			sourceTree = "<group>";
 		};
 		8FE8C0302380320A000C5C03 /* 2一基本介绍 */ = {
@@ -2826,6 +2839,7 @@
 				6747F7AB1EE7AB3A006BCBB0 /* SGH0607FetchStringExpressionViewController.m in Sources */,
 				67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */,
 				67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */,
+				8FD8212123883631005A8A74 /* SHRAC9ViewController.m in Sources */,
 				67B5F38B1EC3F93F0035A9C0 /* SGH0511Runtime3ViewController.m in Sources */,
 				0B08F0712202BE3600D03708 /* SGHDeviceManager.m in Sources */,
 				0B16BA33221587190071C0A7 /* UIButton+SHDistribute.m in Sources */,
