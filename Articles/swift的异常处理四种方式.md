@@ -73,7 +73,7 @@ class VendingMachine {
 
 
 
-#### 通过函数的方式传递下去
+#### 1、通过函数的方式传递下去
 
 比如添加了一个购买者姓名的属性，通过`try + 方法`调用的方式可以将异常传递下去。
 
@@ -84,7 +84,7 @@ func vend(itemNamed name: String, buyerName:String) throws {
 }
 ```
 
-#### do-try-catch方式捕获
+#### 2、do-try-catch方式捕获
 
 ```swift
 var test = VendingMachine()
@@ -103,7 +103,7 @@ do {
 
 通过do可以捕获捕获方法作用于内抛出的异常，catch可以以枚举的方式处理。
 
-#### try？将错误作为可选性处理，错误时返回nil。
+#### 3、try？将错误作为可选性处理，错误时返回nil。
 
 ```swift
 let x = try? test.vend(itemNamed: "Chips")
@@ -114,7 +114,7 @@ print(x)
 
 通过try?的方式，当排出异常的时候x值为nil，正常可以返回一个可选型返回值。
 
-#### try！ 断言错误不会发生，但是如果发生了会有运行时错误。
+#### 4、try！ 断言错误不会发生，但是如果发生了会有运行时错误。
 
 ```swift
 let x = try! test.vend(itemNamed: "Chips")
@@ -161,3 +161,69 @@ do {
 ```
 
 综上swift中的错误处理是非常灵活的，可以用多种数据结构描述错误。
+
+
+
+1. `throws`：是用在可能会抛出异常的方法的后面，在`-> 返回参数`的前面。
+
+2. `throw`：用于抛出异常时，结构为：
+
+   ```swift
+   throw 错误枚举值;
+   ```
+
+   例如：
+
+   ```swift
+   func vend(itemNamed name: String) throws {
+       guard let item = inventory[name] else {
+           throw VendingMachineError.invalidSelection
+       }
+       //...
+   }
+   ```
+
+3. `try`、`try?`、`try!`：用于调用会可能会抛出异常的方法（方法后有`throws`修饰）时，在方法前加这3个关键字中的一个。结构如下：
+
+   ```swift
+   try 调用的方法
+   ```
+
+   例1：
+
+   ```swift
+   class VendingMachine {
+       //... ...
+       func vend(itemNamed name: String) throws {
+       //... ...
+       }
+   }
+   
+   func vend(itemNamed name: String, buyerName:String) throws {
+       self.buyerName = buyerName
+       try vend(itemNamed: name)		//调用后面有`throws`修饰的`vend(itemNamed:)`方法
+   }
+   ```
+
+   例2：
+
+   ```swift
+   let x = try? test.vend(itemNamed: "Chips")
+   print(x)
+   ///打印：
+   ///nil
+   ```
+
+   例3：
+
+   ```swift
+   let x = try! test.vend(itemNamed: "Chips")
+   print(x)
+   ///崩溃，信息如下：
+   ///Fatal error: 'try!' expression unexpectedly raised an error: __lldb_expr_5.VendingMachineError.insufficientFunds(coinsNeeded: 8): file Swift_do_try_catch_try_throw(s).playground, line 69
+   ```
+
+   
+
+   另外，`try`可以和`do - try - catch`一起使用。
+

@@ -10,6 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
+
+
 //图片选择控制器（UIImagePcikerController）的Rx扩展
 extension Reactive where Base: UIImagePickerController {
     
@@ -19,11 +22,11 @@ extension Reactive where Base: UIImagePickerController {
     }
     
     //图片选择完毕代理方法的封装
-    public var didFinishPickingMediaWithInfo: Observable<[String: AnyObject]> {
+    public var didFinishPickingMediaWithInfo: Observable<[UIImagePickerController.InfoKey: Any]> {
         return pickerDelegate.methodInvoked(#selector(UIImagePickerControllerDelegate
             .imagePickerController(_:didFinishPickingMediaWithInfo:)))
-            .map{ a in
-                return try castOrThrow(Dictionary<String, AnyObject>.self, a[1])
+            .map{ a in //[UIImagePickerController.InfoKey : Any]
+                return try castOrThrow(Dictionary<UIImagePickerController.InfoKey, Any>.self, a[1])
         }
     }
     
@@ -43,5 +46,6 @@ fileprivate func castOrThrow<T>(_ resultType: T.Type, _  object: Any) throws -> 
     }
     return returnValue
 }
+
 
 
