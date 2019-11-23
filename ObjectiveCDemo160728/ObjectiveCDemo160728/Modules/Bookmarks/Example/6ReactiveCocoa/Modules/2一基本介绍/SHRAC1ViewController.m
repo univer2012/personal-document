@@ -34,8 +34,32 @@
 //    [self RAC_ignoreValue_ignore];
 //    [self RAC_distinctUntilChanged];
     
-    [self p_observe];
+//    [self p_observe];
+    
+    [self p_define];
 }
+
+
+//MARK: RAC(ReactiveCocoa)介绍（十一）——RAC宏定义
+- (void)p_define {
+    @weakify(self);         //备注：
+    [[self.testTextField.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+        //过滤判断条件
+        @strongify(self)    //备注：
+        if (self.testTextField.text.length >= 6) {
+            self.testTextField.text = [self.testTextField.text substringToIndex:6];
+            self.testLabel.text = @"已经到6位了";
+            self.testLabel.textColor = UIColor.redColor;
+        }
+        return value.length <= 6;
+        
+    }] subscribeNext:^(NSString * _Nullable x) {
+        //订阅逻辑区域
+        NSLog(@"filter过滤后的订阅内容：%@",x);
+    }];
+}
+
+
 
 //MARK: RAC(ReactiveCocoa)介绍（八）——KVO销毁
 - (void)p_observe {

@@ -12,6 +12,7 @@
 #import "SHRAC1ViewController.h"
 #import "SHRAC4ViewController.h"
 #import "SHRAC9ViewController.h"
+#import "SHRAC10ViewController.h"
 
 @interface SHReactiveCocoaViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -37,12 +38,14 @@
                           [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:SHRAC1ViewController.class]] instantiateViewControllerWithIdentifier:@"SHRAC1ViewController"],
                           SHRAC4ViewController.new,
                           SHRAC9ViewController.new,
+                          SHRAC10ViewController.new,
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、Autolayout_masonry登录动画",
                         @"2、介绍（一）——基本介绍",
                         @"3、介绍四_流程分析",
                         @"4、介绍九_RACSubject流程分析",
+                        @"5、介绍十_RACMulticastConnection",
                         ] mutableCopy];
     
     
