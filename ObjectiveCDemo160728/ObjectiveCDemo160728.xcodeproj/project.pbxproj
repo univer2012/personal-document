@@ -183,6 +183,7 @@
 		8FD8211D2384C005005A8A74 /* SHRAC4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8211C2384C005005A8A74 /* SHRAC4ViewController.m */; };
 		8FD8212123883631005A8A74 /* SHRAC9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8212023883631005A8A74 /* SHRAC9ViewController.m */; };
 		8FD821252389655B005A8A74 /* SHRAC10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD821242389655B005A8A74 /* SHRAC10ViewController.m */; };
+		8FD8212A23898A5B005A8A74 /* SHRAC12ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8212923898A5B005A8A74 /* SHRAC12ViewController.m */; };
 		8FE8C02F237EF806000C5C03 /* SH3DTouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */; };
 		8FF81D7E237DAF95007BB516 /* SHMemManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D7D237DAF95007BB516 /* SHMemManageViewController.m */; };
 		8FF81D82237DB1D9007BB516 /* SHSandboxReadWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D81237DB1D9007BB516 /* SHSandboxReadWriteVC.m */; };
@@ -544,6 +545,8 @@
 		8FD8212023883631005A8A74 /* SHRAC9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC9ViewController.m; sourceTree = "<group>"; };
 		8FD821232389655B005A8A74 /* SHRAC10ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC10ViewController.h; sourceTree = "<group>"; };
 		8FD821242389655B005A8A74 /* SHRAC10ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC10ViewController.m; sourceTree = "<group>"; };
+		8FD8212823898A5B005A8A74 /* SHRAC12ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC12ViewController.h; sourceTree = "<group>"; };
+		8FD8212923898A5B005A8A74 /* SHRAC12ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC12ViewController.m; sourceTree = "<group>"; };
 		8FE8C02D237EF806000C5C03 /* SH3DTouchDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SH3DTouchDemoViewController.h; sourceTree = "<group>"; };
 		8FE8C02E237EF806000C5C03 /* SH3DTouchDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH3DTouchDemoViewController.m; sourceTree = "<group>"; };
 		8FF81D7C237DAF95007BB516 /* SHMemManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHMemManageViewController.h; sourceTree = "<group>"; };
@@ -2429,6 +2432,7 @@
 		8FBDAB78237DC96600C6857B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FD8212723898A35005A8A74 /* 6介绍十二_RACCommand */,
 				8FD8212223896526005A8A74 /* 5介绍十_RACMulticastConnection */,
 				8FD8211E238835FE005A8A74 /* 4介绍九_RACSubject流程分析 */,
 				8FD8211A2384BFCE005A8A74 /* 3介绍四_流程分析 */,
@@ -2536,6 +2540,15 @@
 				8FD821242389655B005A8A74 /* SHRAC10ViewController.m */,
 			);
 			path = "5介绍十_RACMulticastConnection";
+			sourceTree = "<group>";
+		};
+		8FD8212723898A35005A8A74 /* 6介绍十二_RACCommand */ = {
+			isa = PBXGroup;
+			children = (
+				8FD8212823898A5B005A8A74 /* SHRAC12ViewController.h */,
+				8FD8212923898A5B005A8A74 /* SHRAC12ViewController.m */,
+			);
+			path = "6介绍十二_RACCommand";
 			sourceTree = "<group>";
 		};
 		8FE8C0302380320A000C5C03 /* 2一基本介绍 */ = {
@@ -2853,6 +2866,7 @@
 				67FA0D1E1DE817710012EDFF /* TBXML+HTTP.m in Sources */,
 				67548AA91EBD6A2000AE8899 /* SGH170506MyClass.m in Sources */,
 				8FD8212123883631005A8A74 /* SHRAC9ViewController.m in Sources */,
+				8FD8212A23898A5B005A8A74 /* SHRAC12ViewController.m in Sources */,
 				67B5F38B1EC3F93F0035A9C0 /* SGH0511Runtime3ViewController.m in Sources */,
 				0B08F0712202BE3600D03708 /* SGHDeviceManager.m in Sources */,
 				0B16BA33221587190071C0A7 /* UIButton+SHDistribute.m in Sources */,

@@ -13,6 +13,7 @@
 #import "SHRAC4ViewController.h"
 #import "SHRAC9ViewController.h"
 #import "SHRAC10ViewController.h"
+#import "SHRAC12ViewController.h"
 
 @interface SHReactiveCocoaViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -39,6 +40,7 @@
                           SHRAC4ViewController.new,
                           SHRAC9ViewController.new,
                           SHRAC10ViewController.new,
+                          SHRAC12ViewController.new,
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、Autolayout_masonry登录动画",
@@ -46,6 +48,7 @@
                         @"3、介绍四_流程分析",
                         @"4、介绍九_RACSubject流程分析",
                         @"5、介绍十_RACMulticastConnection",
+                        @"6、介绍十二_RACCommand",
                         ] mutableCopy];
     
     
