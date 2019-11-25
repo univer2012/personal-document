@@ -70,6 +70,7 @@
 		8F20A43023772B260040BE9A /* SHRxswift_57ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */; };
 		8F20A43223772BC20040BE9A /* Rxswift57ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A43123772BC20040BE9A /* Rxswift57ViewModel.swift */; };
 		8F20A4342377A0F60040BE9A /* Network57Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F20A4332377A0F60040BE9A /* Network57Service.swift */; };
+		8F210FDD238B5FB5008555F0 /* SHRxswift_64ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F210FDC238B5FB4008555F0 /* SHRxswift_64ViewController.swift */; };
 		8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */; };
 		8F2DC69D237A416000CB8CB6 /* SHRxswift_58ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */; };
 		8F2DC69F237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */; };
@@ -87,6 +88,13 @@
 		8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0DA8822DF637A00625889 /* DoubanObject.swift */; };
 		8FBADFAF22BA65FF00150BAF /* SHRxswift_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */; };
 		8FD8212D23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8212C23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift */; };
+		8FD8212F23899E2E005A8A74 /* UIapplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8212E23899E2E005A8A74 /* UIapplication+Rx.swift */; };
+		8FD821312389A12F005A8A74 /* SHRxswift_60ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD821302389A12F005A8A74 /* SHRxswift_60ViewController.swift */; };
+		8FD82134238A55E8005A8A74 /* SHRxswift_61ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD82133238A55E8005A8A74 /* SHRxswift_61ViewController.swift */; };
+		8FD82137238A5DC2005A8A74 /* SHRxswift_62ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD82136238A5DC2005A8A74 /* SHRxswift_62ViewController.swift */; };
+		8FD82139238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD82138238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift */; };
+		8FD8213D238A63C4005A8A74 /* SHRxswift_63ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8213C238A63C4005A8A74 /* SHRxswift_63ViewController.swift */; };
+		8FD82140238A6786005A8A74 /* SHRxswift_63MyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8213F238A6786005A8A74 /* SHRxswift_63MyObserver.swift */; };
 		8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D75237CE291007BB516 /* SHRxswift_59ViewController.swift */; };
 		8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D77237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift */; };
 		8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF81D79237CE541007BB516 /* UIImagePickerController+Rx.swift */; };
@@ -162,6 +170,7 @@
 		8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_57ViewController.swift; sourceTree = "<group>"; };
 		8F20A43123772BC20040BE9A /* Rxswift57ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rxswift57ViewModel.swift; sourceTree = "<group>"; };
 		8F20A4332377A0F60040BE9A /* Network57Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network57Service.swift; sourceTree = "<group>"; };
+		8F210FDC238B5FB4008555F0 /* SHRxswift_64ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_64ViewController.swift; sourceTree = "<group>"; };
 		8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_10ViewController.swift; sourceTree = "<group>"; };
 		8F2DC69C237A416000CB8CB6 /* SHRxswift_58ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_58ViewController.swift; sourceTree = "<group>"; };
 		8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
@@ -181,6 +190,13 @@
 		8FB0DA8822DF637A00625889 /* DoubanObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanObject.swift; sourceTree = "<group>"; };
 		8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewController.swift; sourceTree = "<group>"; };
 		8FD8212C23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIApplicationDelegateProxy.swift; sourceTree = "<group>"; };
+		8FD8212E23899E2E005A8A74 /* UIapplication+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIapplication+Rx.swift"; sourceTree = "<group>"; };
+		8FD821302389A12F005A8A74 /* SHRxswift_60ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_60ViewController.swift; sourceTree = "<group>"; };
+		8FD82133238A55E8005A8A74 /* SHRxswift_61ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_61ViewController.swift; sourceTree = "<group>"; };
+		8FD82136238A5DC2005A8A74 /* SHRxswift_62ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_62ViewController.swift; sourceTree = "<group>"; };
+		8FD82138238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_62MyTableViewCell.swift; sourceTree = "<group>"; };
+		8FD8213C238A63C4005A8A74 /* SHRxswift_63ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_63ViewController.swift; sourceTree = "<group>"; };
+		8FD8213F238A6786005A8A74 /* SHRxswift_63MyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_63MyObserver.swift; sourceTree = "<group>"; };
 		8FF81D75237CE291007BB516 /* SHRxswift_59ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_59ViewController.swift; sourceTree = "<group>"; };
 		8FF81D77237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
 		8FF81D79237CE541007BB516 /* UIImagePickerController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Rx.swift"; sourceTree = "<group>"; };
@@ -324,9 +340,13 @@
 				8F20A4262374F74F0040BE9A /* SHRxswift_55ViewController.swift */,
 				044A77822375382B00611F0C /* SHRxswift_56ViewController.swift */,
 				8F20A42F23772B260040BE9A /* SHRxswift_57ViewController.swift */,
-				8FD8212B23899B91005A8A74 /* SHRxswift_60 */,
+				8F210FDC238B5FB4008555F0 /* SHRxswift_64ViewController.swift */,
+				8FD8213E238A6767005A8A74 /* SHRxswift_63 */,
 				8F20AAB0237A40ED00641B8B /* SHRxswift_58 */,
 				8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */,
+				8FD8212B23899B91005A8A74 /* SHRxswift_60 */,
+				8FD82132238A55C6005A8A74 /* SHRxswift_61 */,
+				8FD82135238A5D33005A8A74 /* SHRxswift_62 */,
 			);
 			path = Modules2;
 			sourceTree = "<group>";
@@ -424,8 +444,36 @@
 			isa = PBXGroup;
 			children = (
 				8FD8212C23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift */,
+				8FD8212E23899E2E005A8A74 /* UIapplication+Rx.swift */,
+				8FD821302389A12F005A8A74 /* SHRxswift_60ViewController.swift */,
 			);
 			path = SHRxswift_60;
+			sourceTree = "<group>";
+		};
+		8FD82132238A55C6005A8A74 /* SHRxswift_61 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD82133238A55E8005A8A74 /* SHRxswift_61ViewController.swift */,
+			);
+			path = SHRxswift_61;
+			sourceTree = "<group>";
+		};
+		8FD82135238A5D33005A8A74 /* SHRxswift_62 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD82136238A5DC2005A8A74 /* SHRxswift_62ViewController.swift */,
+				8FD82138238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift */,
+			);
+			path = SHRxswift_62;
+			sourceTree = "<group>";
+		};
+		8FD8213E238A6767005A8A74 /* SHRxswift_63 */ = {
+			isa = PBXGroup;
+			children = (
+				8FD8213C238A63C4005A8A74 /* SHRxswift_63ViewController.swift */,
+				8FD8213F238A6786005A8A74 /* SHRxswift_63MyObserver.swift */,
+			);
+			path = SHRxswift_63;
 			sourceTree = "<group>";
 		};
 		8FFC6608237CE1F7000BBBE5 /* SHRxswift_59 */ = {
@@ -586,6 +634,8 @@
 				0430DD2D22E6E833003390A5 /* Single+ObjectMapper.swift in Sources */,
 				044A777323741FB600611F0C /* GitHubSignupService.swift in Sources */,
 				3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */,
+				8FD821312389A12F005A8A74 /* SHRxswift_60ViewController.swift in Sources */,
+				8FD82139238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift in Sources */,
 				3FB94F2E22C36E84009EB6D7 /* UIImageCategory.swift in Sources */,
 				044A77852375397700611F0C /* MJRefreshComponent+Rx.swift in Sources */,
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
@@ -595,8 +645,10 @@
 				044A778723753BD500611F0C /* Network56Service.swift in Sources */,
 				3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */,
 				0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */,
+				8FD82137238A5DC2005A8A74 /* SHRxswift_62ViewController.swift in Sources */,
 				3FB91A5E22B78715006F7104 /* SH190617BookmarksViewController.swift in Sources */,
 				3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */,
+				8FD8212F23899E2E005A8A74 /* UIapplication+Rx.swift in Sources */,
 				8FB0439823709577005C0524 /* SHRxswift_47ViewController.swift in Sources */,
 				0430DD3122E6EFEB003390A5 /* DouBanNetworkService.swift in Sources */,
 				044A775A2372B61F00611F0C /* ObservableExtension.swift in Sources */,
@@ -619,6 +671,7 @@
 				3FE4C62622C60FA6007E539C /* SHRxswift_9ViewController.swift in Sources */,
 				044A776A2374111F00611F0C /* SHRxswift_53GithubViewController.swift in Sources */,
 				8F2DC6A1237A43AD00CB8CB6 /* CLLocationManager+Rx.swift in Sources */,
+				8FD82134238A55E8005A8A74 /* SHRxswift_61ViewController.swift in Sources */,
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
 				0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */,
 				0430DD2C22E6E832003390A5 /* ObservableType+ObjectMapper.swift in Sources */,
@@ -636,6 +689,7 @@
 				8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */,
 				8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
+				8FD8213D238A63C4005A8A74 /* SHRxswift_63ViewController.swift in Sources */,
 				044A7777237428C900611F0C /* UILabel+Rx.swift in Sources */,
 				044A77662373EEF400611F0C /* GitHubNetworkService.swift in Sources */,
 				044A7775237423CC00611F0C /* GitHubSignupViewModel.swift in Sources */,
@@ -645,11 +699,13 @@
 				3F8CFF8322D469BF0067194E /* SHRxswift_15ViewController.swift in Sources */,
 				8FB04394237078A3005C0524 /* SHRxswift_46ViewController.swift in Sources */,
 				8F2DC69D237A416000CB8CB6 /* SHRxswift_58ViewController.swift in Sources */,
+				8F210FDD238B5FB5008555F0 /* SHRxswift_64ViewController.swift in Sources */,
 				3F8CFF7F22D369710067194E /* SH190708ContactsViewController.swift in Sources */,
 				3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */,
 				044A777E23751F4800611F0C /* MBProgressHUD.m in Sources */,
 				3FB91A6322B78856006F7104 /* SHRxswift_2ViewController.swift in Sources */,
 				8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */,
+				8FD82140238A6786005A8A74 /* SHRxswift_63MyObserver.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift in Sources */,
 				8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */,
 			);

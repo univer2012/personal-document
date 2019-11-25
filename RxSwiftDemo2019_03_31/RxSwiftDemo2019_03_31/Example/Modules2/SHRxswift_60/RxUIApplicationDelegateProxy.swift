@@ -35,6 +35,11 @@ public class RxUIApplicationDelegateProxy:
         object.delegate = delegate
     }
     
+    public override func setForwardToDelegate(_ delegate: UIApplicationDelegate?, retainDelegate: Bool) {
+        
+        super.setForwardToDelegate(delegate, retainDelegate: true)
+    }
+    
 }
 
 
