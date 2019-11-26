@@ -218,6 +218,7 @@
 		0430DD2522E6E830003390A5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				04CB959F238CFE3300F9507F /* Images */,
 				044A777923751F4800611F0C /* MBProgressHUD */,
 				0430DD2622E6E831003390A5 /* RxSwift */,
 				0430DD2B22E6E831003390A5 /* Response+ObjectMapper.swift */,
@@ -307,6 +308,13 @@
 				044A777D23751F4800611F0C /* README.mdown */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		04CB959F238CFE3300F9507F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		3F8CFF7D22D368D10067194E /* Modules2 */ = {
