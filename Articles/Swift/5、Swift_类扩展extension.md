@@ -74,7 +74,110 @@ extension Calcuator {
 
 **示例1：给字符串String类添加下标脚本，支持索引访问**
 
+```swift
+extension String {
+    public subscript(start: Int, length: Int) -> String {
+        get {
+            let index1 = self.index(self.startIndex, offsetBy: start)
+            let index2 = self.index(index1, offsetBy: length)
+            return String(self[index1 ..< index2])
+        }
+        set {
+            let tmp = self
+            var s = ""
+            var e = ""
+            for (idx, item) in tmp.enumerated() {
+                if idx < start {
+                    s += "\(item)"
+                }
+                if idx >= start + length {
+                    e += "\(item)"
+                }
+            }
+            self = s + newValue + e
+        }
+    }
+    
+    public subscript(index: Int) -> String {
+        get {
+            return String(self[self.index(self.startIndex,offsetBy: index)])
+        }
+        
+        set {
+            let tmp = self
+            self = ""
+            for (idx, item) in tmp.enumerated() {
+                if idx == index {
+                    self += "\(newValue)"
+                } else {
+                    self += "\(item)"
+                }
+            }
+        }
+    }
+}
+
+var str = "univer2012.com"
+print(str[11,3])
+print(str[1])
+
+str[11,3] = "COM"
+str[0] = "U"
+
+print(str[0,14])
 ```
 
+运行结果如下：
+
+```
+com
+c
+Univer2012.COM
 ```
 
+
+
+
+
+**示例2：给Double增加mm，cm等方法，进行进制转换** 
+
+```swift
+extension Double {
+    func mm() -> String {
+        return "\(self/1)mm"
+    }
+    func cm() -> String {
+        return "\(self/10)cm"
+    }
+    func dm() -> String {
+        return "\(self/100)dm"
+    }
+    func m() -> String {
+        return "\(self/1000)m"
+    }
+    func km() -> String {
+        return "\(self/(1000 * 1000))km"
+    }
+}
+
+let value = 2000000000.0
+print(value.mm())
+print(value.cm())
+print(value.dm())
+print(value.m())
+print(value.km())
+```
+
+运行结果如下：
+
+```
+2000000000.0mm
+200000000.0cm
+20000000.0dm
+2000000.0m
+2000.0km
+```
+
+---
+
+【完】

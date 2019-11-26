@@ -25,6 +25,8 @@ extension UIImage {
     }
 }
 
+
+//MARK: 给字符串String类添加下标脚本，支持索引访问
 extension String {
     public subscript(start: Int, length: Int) -> String {
         get {
@@ -36,7 +38,7 @@ extension String {
             let tmp = self
             var s = ""
             var e = ""
-            for (idx, item) in tmp.characters.enumerated() {
+            for (idx, item) in tmp.enumerated() {
                 if idx < start {
                     s += "\(item)"
                 }
@@ -44,8 +46,30 @@ extension String {
                     e += "\(item)"
                 }
             }
+            self = s + newValue + e
+        }
+    }
+    
+    public subscript(index: Int) -> String {
+        get {
+            return String(self[self.index(self.startIndex,offsetBy: index)])
+        }
+        
+        set {
+            let tmp = self
+            self = ""
+            for (idx, item) in tmp.enumerated() {
+                if idx == index {
+                    self += "\(newValue)"
+                } else {
+                    self += "\(item)"
+                }
+            }
         }
     }
 }
+
+
+
 
 

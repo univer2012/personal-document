@@ -76,6 +76,7 @@
 		8F2DC69F237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */; };
 		8F2DC6A1237A43AD00CB8CB6 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */; };
 		8F2DC6A3237B0D1600CB8CB6 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */; };
+		8F78F3FE238D81870086A6AA /* SHCoreMotionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78F3FD238D81870086A6AA /* SHCoreMotionDemoViewController.swift */; };
 		8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95F9FB22510E98000407A6 /* AppDelegate.swift */; };
 		8F95FA0322510EA2000407A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0222510EA2000407A6 /* Assets.xcassets */; };
 		8F95FA0622510EA2000407A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */; };
@@ -176,6 +177,7 @@
 		8F2DC69E237A418C00CB8CB6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		8F2DC6A0237A43AD00CB8CB6 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		8F78F3FD238D81870086A6AA /* SHCoreMotionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCoreMotionDemoViewController.swift; sourceTree = "<group>"; };
 		8F95F9F822510E98000407A6 /* RxSwiftDemo2019_03_31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo2019_03_31.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95F9FB22510E98000407A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F95FA0222510EA2000407A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,6 +322,19 @@
 		3F8CFF7D22D368D10067194E /* Modules2 */ = {
 			isa = PBXGroup;
 			children = (
+				8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */,
+				3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */,
+				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
+				3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */,
+				3FB94F2622C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift */,
+				3FB94F2A22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift */,
+				3FB94F2F22C37F0C009EB6D7 /* SHRxswift_7ViewController.swift */,
+				3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */,
+				3FE4C62522C60FA6007E539C /* SHRxswift_9ViewController.swift */,
+				8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */,
+				8F0D422E22D0839D004C1E53 /* SHRxswift_11ViewController.swift */,
+				3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */,
+				3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */,
 				044A776F23741D8700611F0C /* Others */,
 				044A77642373EECA00611F0C /* ViewModel */,
 				044A77612372E0DB00611F0C /* Service */,
@@ -372,8 +387,8 @@
 		3FB91A5C22B786D3006F7104 /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
-				3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */,
 				3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */,
+				3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -381,19 +396,7 @@
 		3FB91A5F22B787E3006F7104 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */,
-				3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */,
-				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
-				3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */,
-				3FB94F2622C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift */,
-				3FB94F2A22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift */,
-				3FB94F2F22C37F0C009EB6D7 /* SHRxswift_7ViewController.swift */,
-				3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */,
-				3FE4C62522C60FA6007E539C /* SHRxswift_9ViewController.swift */,
-				8F24DA0022C9977800B8E08E /* SHRxswift_10ViewController.swift */,
-				8F0D422E22D0839D004C1E53 /* SHRxswift_11ViewController.swift */,
-				3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */,
-				3F8CFF7B22D356180067194E /* SHRxswift_13ViewController.swift */,
+				8F78F3FC238D81690086A6AA /* 1CoreMotion_Demo */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -407,6 +410,14 @@
 				8F2DC6A2237B0D1600CB8CB6 /* GeolocationService.swift */,
 			);
 			path = SHRxswift_58;
+			sourceTree = "<group>";
+		};
+		8F78F3FC238D81690086A6AA /* 1CoreMotion_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8F78F3FD238D81870086A6AA /* SHCoreMotionDemoViewController.swift */,
+			);
+			path = 1CoreMotion_Demo;
 			sourceTree = "<group>";
 		};
 		8F95F9EF22510E98000407A6 = {
@@ -686,6 +697,7 @@
 				8F20A43223772BC20040BE9A /* Rxswift57ViewModel.swift in Sources */,
 				0430CA3A22E5D303003390A5 /* DouBanAPI.swift in Sources */,
 				3F8CFF8122D36A440067194E /* SHRxswift_14ViewController.swift in Sources */,
+				8F78F3FE238D81870086A6AA /* SHCoreMotionDemoViewController.swift in Sources */,
 				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
 				044A778923753CCE00611F0C /* Rxswift56ViewModel.swift in Sources */,
 				8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */,

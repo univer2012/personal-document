@@ -13,34 +13,10 @@ import SnapKit
 
 struct SH190617BookmarksViewModel {
     let titles = [
-        "1基本介绍、安装配置",
-        "2响应式编程与传统式编程的比较样例",
-        "3Observable介绍、创建可观察序列",
-        "4Observable订阅、事件监听、订阅销毁",
-        "5UITextView",
-        "6UIButton",
-        "7UISwitch 与 UISegmentedControl",
-        "8双向绑定<->",
-        "9UIGestureRecognizer",
-        "10UITableView",
-        "11可编辑表格",
-        "12不同单元格混用",
-    "13tableView 样式修改"]
+        "1、加速传感器（CoreMotion）的用法（要用真机）",
+    ]
     let controllers = [
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_1ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_1ViewController"),
-        SHRxswift_2ViewController(),
-        SHRxswift_3ViewController(),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_4ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_4ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_5ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_5ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_6ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_6ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_7ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_7ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_8ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_8ViewController"),
-        //UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_9ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_9ViewController"),
-        SHRxswift_9ViewController(),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_10ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_10ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_11ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_11ViewController"),
-        UIStoryboard(name: "Bookmark", bundle: Bundle(for: SHRxswift_12ViewController.self)).instantiateViewController(withIdentifier: "SHRxswift_12ViewController"),
-        SHRxswift_13ViewController(),
+        SHCoreMotionDemoViewController(),
     ]
 }
 
