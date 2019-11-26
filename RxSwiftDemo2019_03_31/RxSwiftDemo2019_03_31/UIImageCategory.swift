@@ -24,3 +24,28 @@ extension UIImage {
         
     }
 }
+
+extension String {
+    public subscript(start: Int, length: Int) -> String {
+        get {
+            let index1 = self.index(self.startIndex, offsetBy: start)
+            let index2 = self.index(index1, offsetBy: length)
+            return String(self[index1 ..< index2])
+        }
+        set {
+            let tmp = self
+            var s = ""
+            var e = ""
+            for (idx, item) in tmp.characters.enumerated() {
+                if idx < start {
+                    s += "\(item)"
+                }
+                if idx >= start + length {
+                    e += "\(item)"
+                }
+            }
+        }
+    }
+}
+
+

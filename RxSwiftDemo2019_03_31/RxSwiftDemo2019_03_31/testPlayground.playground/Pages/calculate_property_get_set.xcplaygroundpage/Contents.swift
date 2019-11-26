@@ -2,7 +2,7 @@
 
 import UIKit
 
-//:来自：[Swift - 文件，文件夹操作大全](https://www.hangge.com/blog/cache/detail_527.html)
+//:来自：[Swift - 类的计算属性（使用get和set来间接获取/改变其他属性的值）](https://www.hangge.com/blog/cache/detail_521.html)
 
 
 //class Calcuator {
