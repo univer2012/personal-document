@@ -27,5 +27,8 @@ var imageNames = ["test.png", "aa.png", "icon.png"]
 imageNames.flatMap { UIImage(named: $0) }
 
 
-
+let manager = FileManager.default
+let urlForDocument = manager.urls(for: .documentDirectory, in:.userDomainMask)
+let url = urlForDocument[0] as URL
+print(url)
 

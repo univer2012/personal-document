@@ -1,4 +1,9 @@
+//: [Previous](@previous)
+
 import UIKit
+
+//:来自：[Swift - 文件，文件夹操作大全](https://www.hangge.com/blog/cache/detail_527.html)
+
 
 //class Calcuator {
 //    var a: Int = 1
@@ -17,6 +22,22 @@ import UIKit
 
 
 
+class Calcuator {
+    var a: Int = 1
+    var b: Int = 1
+
+    var sum: Int {
+        get {
+            return a + b
+        }
+        set {
+            b = newValue - a
+        }
+    }
+}
+
+
+
 //class Calcuator {
 //    var a: Int = 1
 //    var b: Int = 1
@@ -25,26 +46,13 @@ import UIKit
 //        get {
 //            return a + b
 //        }
-//        set {
-//            b = newValue - a
-//        }
 //    }
 //}
-
-
-
-class Calcuator {
-    var a: Int = 1
-    var b: Int = 1
-    
-    var sum: Int {
-        get {
-            return a + b
-        }
-    }
-}
 
 let cal = Calcuator();
 print(cal.sum)      //打印：2
 cal.sum = 5
 print(cal.b)        //打印：4
+
+
+//: [Next](@next)
