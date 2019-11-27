@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
 
+#!/usr/bin/python3
 
-word = '字符串'
-sentence = "这是一个句子"
-paragraph = """这是一个段落，
-   可以由多行组成"""
-
-print (word)
-print (sentence)
-print (paragraph)
+# Fibonacci series: 斐波纳契数列
+# 两个元素的总和确定了下一个数
+a, b = 0, 1
+while b < 1000:
+    print(b, end=',')
+    a, b = b, a + b
