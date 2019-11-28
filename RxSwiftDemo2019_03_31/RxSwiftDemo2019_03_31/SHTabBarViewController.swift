@@ -22,7 +22,7 @@ class SHTabBarViewController: UITabBarController {
         
         
         self.viewControllers = [bookmarksNavController, contactsNavController]
-        self.selectedIndex = 1
+        //self.selectedIndex = 1
         
         
     }

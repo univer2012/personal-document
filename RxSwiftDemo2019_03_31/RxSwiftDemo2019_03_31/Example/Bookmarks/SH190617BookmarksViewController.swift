@@ -14,9 +14,11 @@ import SnapKit
 struct SH190617BookmarksViewModel {
     let titles = [
         "1、加速传感器（CoreMotion）的用法（要用真机）",
+        "2、解析JSON数据"
     ]
     let controllers = [
         SHCoreMotionDemoViewController(),
+        SHJSONSerializationViewController(),
     ]
 }
 

@@ -1,4 +1,5 @@
 # Podfile
+# 原来的bundleID是: com.sengoln.RxSwiftDemo2019-03-31
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
@@ -25,6 +26,8 @@ target 'RxSwiftDemo2019_03_31' do
     pod 'Reusable', '~> 4.0.0'
     pod 'MJRefresh'
     pod 'SVProgressHUD'
+    
+    pod 'SwiftyJSON', '~> 4.0'
 
 end
 
