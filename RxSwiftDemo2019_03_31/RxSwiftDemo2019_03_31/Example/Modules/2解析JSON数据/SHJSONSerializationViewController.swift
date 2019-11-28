@@ -26,13 +26,60 @@ class SHJSONSerializationViewController: UIViewController {
         //swiftyJSON()
         
         //networkRequest()
-        requestAlamofire()
+        //requestAlamofire()
+        
+        //jsonDemo()
+        jsonDemo2()
     }
     
 
 }
 
 extension SHJSONSerializationViewController {
+func jsonDemo2() {
+    //DictionaryLiteralConvertible
+    let json: JSON =  ["I":"am", "a":"son"]
+     
+    //ArrayLiteralConvertible
+    let json1: JSON =  ["I", "am", "a", "son"]
+     
+    //Array & Dictionary
+    var json2: JSON =  ["name": "Jack", "age": 25, "list": ["a", "b", "c", ["what": "this"]]]
+    json2["list"][3]["what"] = "that"
+    json2["list",3,"what"] = "that"
+    let path:[JSONSubscriptType] = ["list",3,"what"]
+    json2[path] = "that"
+    
+    print("json=",json)
+    print("json1=",json1)
+    print("json2=",json2)
+}
+    
+    
+    func jsonDemo() {
+        let json: JSON? =  nil
+        
+        //StringLiteralConvertible
+        let json1: JSON = "I'm a son"
+         
+        //IntegerLiteralConvertible
+        let json2: JSON =  12345
+         
+        //BooleanLiteralConvertible
+        let json3: JSON =  true
+         
+        //FloatLiteralConvertible
+        let json4: JSON =  2.8765
+        
+        print(json)
+        print(json1)
+        print(json2)
+        print(json3)
+        print(json4)
+    }
+    
+    
+    
     
     func requestAlamofire() {
         //创建URL对象
@@ -42,12 +89,68 @@ extension SHJSONSerializationViewController {
         Alamofire.request(url).validate().responseJSON { (response) in
             switch response.result.isSuccess {
             case true:
+                //MARK: 1
                 if let value = response.result.value {
                     let json = JSON(value)
                     if let name  = json["channels"][0]["name"].string {
                         //找到频道的名字
                         print("第一个频道的名字：",name)
                     }
+                    
+                    //MARK: 4
+//                    for (index, subJson): (String,JSON) in json["channels"] {
+//                        print("\(index): \(subJson)")
+//                    }
+                    
+                    
+                    //MARK: 5
+                    for (key,subJson):(String,JSON) in json["channels"][0] {
+                        print("\(key): \(subJson)")
+                    }
+                    
+                    
+                    
+                    #if false
+                    //MARK: 3
+                    //If not a Number or nil, return 0
+                    let seq_id = json["channels"][0]["seq_id"].intValue
+                    
+                    //If not a String or nil, return ""
+                    let name_en = json["channels"][0]["name_en"].stringValue
+                    
+                    //If not a Array or nil, return []
+                    let list: Array<JSON> = json["channels"].arrayValue
+                    
+                    //If not a Dictionary or nil, return [:]
+                    let firstDict: Dictionary<String, JSON> = json["channels"][0].dictionaryValue
+                    
+                    print("seq_id=",seq_id,"name_en=",name_en,"list=",list,"firstDict=",firstDict)
+                    #endif
+                    
+                    
+                    
+                    
+                    #if false
+                    //MARK: 2
+                    //int
+                    if let seq_id = json["channels"][0]["seq_id"].int {
+                        print(seq_id)
+                    } else {
+                        print("error1:", json["channels"][0]["seq_id"])
+                    }
+                    
+                    //String
+                    if let name_en = json["channels"][0]["name_en"].string {
+                        print(name_en)
+                    } else {
+                        print("error2:", json["channels"][0]["name_en"])
+                    }
+                    #endif
+                    
+                    
+                    
+                    
+                    
                 }
             case false:
                 print(response.result.error)

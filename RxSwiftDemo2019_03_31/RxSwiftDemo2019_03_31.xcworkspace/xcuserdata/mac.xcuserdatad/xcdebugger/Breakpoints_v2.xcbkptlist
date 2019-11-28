@@ -316,8 +316,8 @@
             filePath = "RxSwiftDemo2019_03_31/Example/Modules/2&#x89e3;&#x6790;JSON&#x6570;&#x636e;/SHJSONSerializationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "networkRequest()"
             landmarkType = "7">
          </BreakpointContent>

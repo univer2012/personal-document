@@ -323,15 +323,248 @@ func requestAlamofire() {
 通过`.number`、`.string`、`.bool`、`.int`、`.uInt`、`.float`、`.double`、`.array`、`.dictionary`、`int8`、`Uint8`、`int16`、`Uint16`、`int32`、`Uint32`、`int64`、`Uint64`等方法获取到的是可选择值，我们需要自行判断是否存在，同时不存在的话可以获取具体的错误信息。
 
 
+```swift
+//int
+if let seq_id = json["channels"][0]["seq_id"].int {
+    print(seq_id)
+} else {
+    print(json["channels"][0]["seq_id"])
+}
+
+//String
+if let name_en = json["channels"][0]["name_en"].string {
+    print(name_en)
+} else {
+    print(json["channels"][0]["name_en"])
+}
 ```
 
+
+
+**（2）不可选值获取（Non-optional getter）**
+ **使用 `xxxValue` 这样的属性获取值，如果没获取到的话会返回一个默认值**。省得我们再判断拆包了。
+
+```swift
+//If not a Number or nil, return 0
+let seq_id = json["channels"][0]["seq_id"].intValue
+
+//If not a String or nil, return ""
+let name_en = json["channels"][0]["name_en"].stringValue
+
+//If not a Array or nil, return []
+let list: Array<JSON> = json["channels"].arrayValue
+
+//If not a Dictionary or nil, return [:]
+let firstDict: Dictionary<String, JSON> = json["channels"][0].dictionaryValue
+
+print("seq_id=",seq_id,"name_en=",name_en,"list=",list,"firstDict=",firstDict)
 ```
 
 
 
+**（3）获取原始数据（Raw object）**
+
+```swift
+let jsonObject = json.object as AnyObject
+ 
+let jsonObject = json.rawValue  as AnyObject
+ 
+//JSON转化为Data
+let data = json.rawData()
+ 
+//JSON转化为String字符串
+if let string = json.rawString() {
+    //Do something you want
+}
+ 
+//JSON转化为Dictionary字典（[String: AnyObject]?）
+if let dic = json.dictionaryObject {
+    //Do something you want
+}
+ 
+//JSON转化为Array数组（[AnyObject]?）
+if let arr = json.arrayObject {
+    //Do something you want
+}
+```
+
+**5，设置值**
+
+```swift
+json[0]["age"].int =  101
+json[0]["name"].string =  "hangge.com"
+json[0]["phones"].arrayObject = [["name":"固话", "number":110],["name":"手机", "number":120]]
+json[0]["phones"][0].dictionaryObject = ["name":"固话", "number":100]
+```
 
 
 
+ **6，下标访问（Subscript）**
+ 可以通过数字、字符串、数组类型的下标访问JSON数据的层级与属性。比如下面三种方式的结果都是一样的：
+
+```swift
+//方式1
+let number = json[0]["phones"][0]["number"].stringValue
+     
+//方式2
+let number = json[0,"phones",0,"number"].stringValue
+     
+//方式3
+let keys:[JSONSubscriptType] = [0,"phones",0,"number"]
+let number = json[keys].stringValue
+```
 
 
+
+ **7，循环遍历JSON对象中的所有数据**
+ **（1）如果JSON数据是数组类型（Array）**
+
+```swift
+for (index, subJson): (String,JSON) in json["channels"] {
+    print("\(index): \(subJson)")
+}
+```
+
+打印：
+
+```
+0: {
+  "abbr_en" : "My",
+  "channel_id" : 0,
+  "name_en" : "Personal Radio",
+  "name" : "私人兆赫",
+  "seq_id" : 0
+}
+1: {
+  "abbr_en" : "",
+  "channel_id" : "1",
+  "name_en" : "",
+  "name" : "华语",
+  "seq_id" : 0
+}
+//... ...
+```
+
+
+
+**（2）如果JSON数据是字典类型（Dictionary）** 
+
+```swift
+for (key,subJson):(String,JSON) in json["channels"][0] {
+    print("\(key): \(subJson)")
+}
+```
+
+打印：
+
+```
+seq_id: 0
+abbr_en: My
+channel_id: 0
+name: 私人兆赫
+name_en: Personal Radio
+```
+
+
+
+ **8，构造创建JSON对象数据**
+ **（1）空的JSON对象** 
+
+```swift
+let json: JSON =  nil
+```
+
+**（2）使用简单的数据类型创建JSON对象** 
+
+```swift
+func jsonDemo() {
+    let json: JSON? =  nil
+    
+    //StringLiteralConvertible
+    let json1: JSON = "I'm a son"
+     
+    //IntegerLiteralConvertible
+    let json2: JSON =  12345
+     
+    //BooleanLiteralConvertible
+    let json3: JSON =  true
+     
+    //FloatLiteralConvertible
+    let json4: JSON =  2.8765
+    
+    print(json)
+    print(json1)
+    print(json2)
+    print(json3)
+    print(json4)
+}
+```
+
+打印：
+
+```
+nil
+I'm a son
+12345
+true
+2.8765
+```
+
+
+
+**（3）使用数组或字典数据创建JSON对象** 
+
+```swift
+func jsonDemo2() {
+    //DictionaryLiteralConvertible
+    let json: JSON =  ["I":"am", "a":"son"]
+     
+    //ArrayLiteralConvertible
+    let json1: JSON =  ["I", "am", "a", "son"]
+     
+    //Array & Dictionary
+    var json2: JSON =  ["name": "Jack", "age": 25, "list": ["a", "b", "c", ["what": "this"]]]
+    json2["list"][3]["what"] = "that"
+    json2["list",3,"what"] = "that"
+    let path:[JSONSubscriptType] = ["list",3,"what"]
+    json2[path] = "that"
+    
+    print("json=",json)
+    print("json1=",json1)
+    print("json2=",json2)
+}
+```
+
+打印：
+
+```
+json= {
+  "I" : "am",
+  "a" : "son"
+}
+json1= [
+  "I",
+  "am",
+  "a",
+  "son"
+]
+json2= {
+  "name" : "Jack",
+  "list" : [
+    "a",
+    "b",
+    "c",
+    {
+      "what" : "that"
+    }
+  ],
+  "age" : 25
+}
+```
+
+
+
+---
+
+【完】
 
