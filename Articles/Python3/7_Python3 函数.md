@@ -452,7 +452,73 @@ lambda [arg1 [,arg2,.....argn]]:expression
 
 如下实例：
 
+```python
+#!/usr/bin/python3
+
+# 可写函数说明
+sum = lambda  arg1, arg2: arg1 + arg2
+
+# 调用sum函数
+print('相加后的值为 : ',sum(10, 20))
+print('相加后的值为 : ',sum(20, 20))
 ```
 
+
+
+## return语句
+
+**return [表达式]** 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返回`None`。之前的例子都没有示范如何返回数值，以下实例演示了 `return` 语句的用法：
+
+```python
+#!/usr/bin/python3
+
+# 可写函数说明
+def sum(arg1, arg2):
+    # 返回2个参数的和
+    total = arg1 + arg2
+    print('函数内 : ',total)
+    return  total
+
+# 调用sum函数
+total = sum(10, 20)
+print('函数外 : ',total)
 ```
 
+以上实例输出结果：
+
+```
+函数内 :  30
+函数外 :  30
+```
+
+
+
+## 强制位置参数
+
+Python3.8 新增了一个函数形参语法 `/` 用来指明函数形参必须使用指定位置参数，不能使用关键字参数的形式。
+
+ 在以下的例子中，<font color=#FF0000>形参 a 和 b **必须使用指定位置参数**，c 或 d **可以是位置形参或关键字形参**，而 e 或 f **要求为关键字形参**: </font>
+
+```python
+def f(a, b, /, c, d, *, e, f):
+    print(a, b, c, d, e, f)
+```
+
+以下使用方法是正确的:
+
+```python
+f(10, 20, 30, d=40, e=50, f=60)
+```
+
+以下使用方法会发生错误:
+
+```python
+f(10, b=20, c=30, d=40, e=50, f=60)   # b 不能使用关键字参数的形式
+f(10, 20, 30, 40, 50, f=60)           # e 必须使用关键字参数的形式
+```
+
+
+
+---
+
+【完】
