@@ -292,3 +292,345 @@ open(filename, mode)
 
 以下实例将字符串写入到文件 foo.txt 中：
 
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','w')
+
+f.write('Python 是一个非常好的语言。 \n是的，的确非常好！！\n')
+
+# 关闭打开的文件
+f.close()
+```
+
+-  第一个参数为要打开的文件名。  
+- 第二个参数描述文件如何使用的字符。 mode 可以是 'r' 如果文件只读, 'w' 只用于写 (如果存在同名文件则将被删除), 和  'a' 用于追加文件内容; 所写的任何数据都会被自动增加到末尾. 'r+' 同时用于读写。 mode 参数是可选的; 'r' 将是默认值。 
+
+> 注意：`/tmp/foo.txt`是放在系统的tmp文件夹，找不到的话需要：前往 --> 前往文件夹 --> 输入`/tmp/`索引到该文件夹。
+
+
+
+ 此时打开文件 foo.txt,显示如下：
+
+```python
+$ cat /tmp/foo.txt 
+Python 是一个非常好的语言。
+是的，的确非常好!!
+```
+
+
+
+## 文件对象的方法
+
+ 本节中剩下的例子假设已经创建了一个称为 f 的文件对象。 
+
+### 1、f.read()
+
+ 为了读取一个文件的内容，调用 f.read(size), 这将读取一定数目的数据, 然后作为字符串或字节对象返回。
+
+size 是一个可选的数字类型的参数。 当 size 被忽略了或者为负, 那么该文件的所有内容都将被读取并且返回。
+
+以下实例假定文件 foo.txt 已存在（上面实例中已创建）：
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','r')
+
+str = f.read()
+print(str)
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，输出结果为：
+
+```
+Python 是一个非常好的语言。 
+是的，的确非常好！！
+```
+
+
+
+### 2、f.readline()
+
+ f.readline() 会从文件中读取单独的一行。换行符为 '\n'。f.readline() 如果返回一个空字符串, 说明已经已经读取到最后一行。
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','r')
+
+str = f.readline()
+print(str)
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，输出结果为：
+
+```
+Python 是一个非常好的语言。
+```
+
+
+
+### 3、f.readlines()
+
+` f.readlines()` 将返回该文件中包含的所有行。 
+
+ 如果设置可选参数 sizehint, 则读取指定长度的字节, 并且将这些字节按行分割。 
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','r')
+
+str = f.readlines()
+print(str)
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，输出结果为：
+
+```
+['Python 是一个非常好的语言。 \n', '是的，的确非常好！！\n']
+```
+
+
+
+另一种方式是迭代一个文件对象然后读取每行: 
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','r')
+
+for line in f:
+    print(line, end='')
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，输出结果为：
+
+```
+Python 是一个非常好的语言。
+是的，的确非常好!!
+```
+
+ 这个方法很简单, 但是并没有提供一个很好的控制。 因为两者的处理机制不同, 最好不要混用。 
+
+
+
+### 4、f.write()
+
+ `f.write(string)` 将 string 写入到文件中, 然后返回写入的字符数。 
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo.txt','w')
+
+num = f.write( 'Python 是一个非常好好的语言。 \n是的，的确非常好!!\n')
+print(num)
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，输出结果为：
+
+```
+31
+```
+
+
+
+如果要写入一些不是字符串的东西, 那么将需要先进行转换: 
+
+```python
+#!/usr/bin/python3
+
+# 打开一个文件
+f = open('/tmp/foo1.txt','w')
+
+value = ('www.univer2012.com',14)
+s = str(value)
+f.write(s)
+
+# 关闭打开的文件
+f.close()
+```
+
+执行以上程序，打开 foo1.txt 文件：
+
+```
+$ cat /tmp/foo1.txt
+('www.univer2012.com', 14)
+```
+
+
+
+### 5、f.tell()
+
+ `f.tell()` 返回文件对象当前所处的位置, 它是从文件开头开始算起的字节数。 
+
+### 6、f.seek()
+
+如果要改变文件当前的位置, 可以使用 `f.seek(offset, from_what)` 函数。
+
+** `from_what` 的值, 如果是 0 表示开头, 如果是 1 表示当前位置, 2 表示文件的结尾**，例如：
+
+
+
+-  seek(x,0) ： 从起始位置即文件首行首字符开始移动 x 个字符
+-  seek(x,1) ： 表示从当前位置往后移动x个字符
+-  seek(-x,2)：表示从文件的结尾往前移动x个字符 
+
+ `from_what` 值为默认为0，即文件开头。下面给出一个完整的例子：（运行这个例子之前要把之前放在`/tmp/`的`foo.txt`文件中的内容清空，数字才是正确的。）
+
+```python
+>>> f = open('/tmp/foo.txt', 'rb+')
+>>> f.write(b'0123456789abcdef')
+16
+>>> f.seek(5)    # 移动到文件的第六个字节
+5
+>>> f.read(1)
+b'5'
+>>> f.seek(-3,2) # 移动到文件的倒数第三字节
+13
+>>> f.read(1)
+b'd'
+>>> 
+```
+
+
+
+### 7、f.close()
+
+ 在文本文件中 (那些打开文件的模式下没有 b 的), 只会相对于文件起始位置进行定位。
+
+ 当你处理完一个文件后, 调用 `f.close()` 来关闭文件并释放系统的资源，如果尝试再调用该文件，则会抛出异常。
+
+```python
+>>> f.close()
+>>> f.read()
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    f.read()
+ValueError: read of closed file
+>>> 
+```
+
+
+
+当处理一个文件对象时, 使用 `with` 关键字是非常好的方式。在结束后, 它会帮你正确的关闭文件。 而且写起来也比 `try - finally` 语句块要简短:
+
+```python
+>>> with open('/tmp/foo.txt', 'r') as f:
+	read_data = f.read()
+
+	
+>>> f.closed
+True
+>>> 
+```
+
+文件对象还有其他方法, 如 `isatty()` 和 `trucate()`, 但这些通常比较少用。
+
+
+
+## 8、pickle 模块 
+
+ python的`pickle`模块实现了基本的数据序列和反序列化。
+
+通过`pickle`模块的序列化操作我们**能够将程序中运行的对象信息保存到文件中去，永久存储。**
+
+通过`pickle`模块的反序列化操作，我们能够从文件中创建上一次程序保存的对象。 
+
+基本接口： 
+
+```python
+pickle.dump(obj, file, [,protocol])
+```
+
+有了 pickle 这个对象, 就能**对 file 以读取的形式打开**： 
+
+```python
+x = pickle.load(file)
+```
+
+
+
+**注解：**从 file 中读取一个字符串，并将它重构为原来的python对象。
+
+**file:** 类文件对象，有`read()`和`readline()`接口。
+
+【实例1】
+
+```python
+#!/usr/bin/python3
+import pickle
+
+# 使用pickle模块将数据对象保存到文件
+data1 = {'a': [1,2.0,3, 4+6j],
+         'b': ('string', u'Unicode string'),
+         'c':None}
+
+selfref_list = [1,2,3]
+selfref_list.append(selfref_list) # 添加的是对象
+
+output = open('data.pkl', 'wb')
+
+# Pickle dictionary using protocol 0.
+pickle.dump(data1, output)
+
+# Pickle the list using the highest protocol available.
+pickle.dump(selfref_list, output, -1)
+
+output.close()
+
+```
+
+【实例2】
+
+```python
+#!/usr/bin/python3
+import pprint, pickle
+
+# 使用pickle模块从文件中重构python对象
+pkl_file = open('data.pkl', 'rb')
+
+data1 = pickle.load(pkl_file)
+pprint.pprint(data1)
+
+data2 = pickle.load(pkl_file)
+pprint.pprint(data2)
+
+pkl_file.close()
+```
+
+打印：
+
+```
+{'a': [1, 2.0, 3, (4+6j)], 'b': ('string', 'Unicode string'), 'c': None}
+[1, 2, 3, <Recursion on list with id=4382894208>]
+```
+
+
+
+---
+
+【完】
