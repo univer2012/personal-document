@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
-from fibo import fib, fib2
-
-fib(500)
-
+str = input('请输入：')
+print("你输入的内容是：",str)
 
 
 
