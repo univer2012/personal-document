@@ -269,3 +269,126 @@ MyError: 'oops!'
 
 当创建一个模块有可能抛出多种不同的异常时，一种通常的做法是为这个包建立一个基础异常类，然后基于这个基础类为不同的错误情况创建不同的子类:
 
+```python
+class Error(Exception):
+    """Base class for exceptions in this module."""
+    pass
+
+class InputError(Error):
+    """Exception raised for errors in the input.
+
+    Attributes:
+        expression -- input expression in which the error occurred
+        message -- explanation of the error
+    """
+
+    def __init__(self, expression, message):
+        self.expression = expression
+        self.message = message
+
+class TransitionError(Error):
+    """Raised when an operation attempts a state transition that's not
+    allowed.
+ 
+    Attributes:
+        previous -- state at beginning of transition
+        next -- attempted new state
+        message -- explanation of why the specific transition is not allowed
+    """
+    def __init__(self,previous, next, message):
+        self.previous = previous
+        self.next = next
+        self.message = message
+
+```
+
+大多数的异常的名字都以"Error"结尾，就跟标准的异常命名一样。
+
+------
+
+
+
+## 定义清理行为
+
+`try` 语句还有另外一个可选的子句，它定义了无论在任何情况下都会执行的清理行为。 例如:
+
+```python
+>>> try:
+	raise KeyboardInterrupt
+finally:
+	print('Goodye, world!')
+
+	
+Goodye, world!
+Traceback (most recent call last):
+  File "<pyshell#140>", line 2, in <module>
+    raise KeyboardInterrupt
+KeyboardInterrupt
+>>> 
+```
+
+以上例子不管 `try` 子句里面有没有发生异常，`finally` 子句都会执行。
+
+如果一个异常在` try` 子句里（或者在 `except` 和 `else` 子句里）被抛出，而又没有任何的 `except` 把它截住，那么这个异常会在 `finally` 子句执行后被抛出。
+
+下面是一个更加复杂的例子（在同一个 `try` 语句里包含 `except` 和 `finally` 子句）:
+
+```python
+>>> def divide(x, y):
+	try:
+		result = x/y
+	except ZeroDivisionError:
+		print('division by zero')
+	else:
+		print('result is',result)
+	finally:
+		print('executing finally clause')
+
+		
+>>> divide(2,1)
+result is 2.0
+executing finally clause
+>>> divide(2,0)
+division by zero
+executing finally clause
+>>> divide('2','1')
+executing finally clause
+Traceback (most recent call last):
+  File "<pyshell#153>", line 1, in <module>
+    divide('2','1')
+  File "<pyshell#150>", line 3, in divide
+    result = x/y
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+>>> 
+```
+
+
+
+## 预定义的清理行为
+
+一些对象定义了标准的清理行为，无论系统是否成功的使用了它，一旦不需要它了，那么这个标准的清理行为就会执行。
+
+这面这个例子展示了尝试打开一个文件，然后把内容打印到屏幕上：
+
+```python
+for line in open('myfile.txt'):
+    print(line,end='')
+```
+
+
+
+以上这段代码的问题是，当执行完毕后，文件会保持打开状态，并没有被关闭。
+
+关键词 `with` 语句就可以保证诸如文件之类的对象在使用完之后一定会正确的执行他的清理方法：
+
+```python
+with open('myfile.txt') as f:
+    for line in f:
+        print(line, end='')
+```
+
+以上这段代码执行完毕后，就算在处理过程中出问题了，文件 `f` 总是会关闭。 
+
+---
+
+【完】
