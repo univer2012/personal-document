@@ -1,12 +1,129 @@
-#!/usr/bin/python3
-class Site:
-    def __init__(self, name, url):
-        self.name = name
-        self.__url = url
 
-    def who(self):
-        print('name :',self.name)
-        print('url :',self.__url)
+
+
+
+
+
+
+
+# #!/usr/bin/python3
+# a = 10
+# def test(a):
+#     a = a + 1
+#     print(a)
+#
+# test(a)
+
+
+
+
+
+
+# #!/usr/bin/python3
+# def outer():
+#     num = 10
+#     def inner():
+#         nonlocal num  # nonlocal关键字声明
+#         num = 100
+#         print(num)
+#     inner()
+#     print(num)
+#
+# outer()
+
+
+
+
+
+# #!/usr/bin/python3
+# num = 1
+# def fun1():
+#     global num # 需要使用 global 关键字声明
+#     print(num)
+#     num = 123
+#     print(num)
+#
+# fun1()
+# print(num)
+
+
+
+
+# #!/usr/bin/python3
+# total = 0  # 这是一个全局变量
+# # 可写函数说明
+# def sum(arg1, arg2):
+#     #返回2个参数的和
+#     total = arg1 + arg2 # total在这里是局部变量
+#     print('函数内是局部变量 : ', total)
+#     return  total
+#
+# # 调用sum函数
+# sum(10, 20)
+# print('函数外是全局变量 : ',total)
+
+
+
+
+
+# # var1 是全局名称
+# var 1 = 5
+# def some_func():
+#
+#     #var2 是局部名称
+#     var2 = 6
+#     def some_inner_func():
+#
+#         # var3 是内嵌的局部名称
+#         var3 = 7
+
+
+
+
+
+
+
+# #!/usr/bin/python3
+# class Vector:
+#     def __init__(self,a,b):
+#         self.a = a
+#         self.b = b
+#
+#     def __str__(self):
+#         return 'Vector (%d,%d)' %(self.a, self.b)
+#
+#     def __add__(self, other):
+#         return Vector(self.a + other.a, self.b + other.b)
+#
+# v1 = Vector(2,10)
+# v2 = Vector(5,-2)
+# print(v1 + v2)
+
+
+
+
+
+# #!/usr/bin/python3
+# class Site:
+#     def __init__(self, name, url):
+#         self.name = name
+#         self.__url = url
+#
+#     def who(self):
+#         print('name :',self.name)
+#         print('url :',self.__url)
+#
+#     def __foo(self):        # 私有方法
+#         print('这是私有方法')
+#
+#     def foo(self):
+#         print('这是公共方法')
+#         self.__foo()
+#
+# x = Site('菜鸟教程', 'www.runoob.com')
+# x.who()         # 正常输出
+# x.foo()         # 正常输出
+# x.__foo()       # 报错
 
 
 # #!/usr/bin/python3
