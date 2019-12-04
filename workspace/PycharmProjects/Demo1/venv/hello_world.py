@@ -1,6 +1,64 @@
 
+###MARK: ======= 14.Python 质数判断
+# Python 程序用于检测用户输入的数字是否为质数
+# 用户输入数字
+num = int(input('请输入一个数字: '))
+
+# 质数大于 1
+if num > 1:
+    # 查看因子
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, '不是质数')
+            print(i , '乘于', num // i, '是', num)
+            break
+    else:
+        print(num, '是质数')
+
+# 如果输入的数字小于或等于1， 不是质数
+else:
+    print(num, '不是质数')
 
 
+
+###MARK: ======= 13.Python 获取最大值函数
+# # 最简单的
+# print(max(1, 2))
+# print(max('a', 'b'))
+#
+# # 也可以对列表和元组使用
+# print(max([1,2]))
+# print(max((1,2)))
+#
+# # 更多实例
+# print("80, 100, 1000 最大值为: ", max(80, 100, 1000))
+# print("-20, 100, 400 最大值为: ", max(-20, 100, 400))
+# print("-80, -20, -10 最大值为: ", max(-80, -20, -10))
+# print("0, 100, -400 最大值为: ", max(0, 100, -400))
+
+
+
+###MARK: ======= 12.Python 判断闰年
+# year = int(input('输入一个年份: '))
+# if (year % 4) == 0:
+#     if (year % 100) == 0:
+#         if (year % 400) == 0:               # 整百年能被400整除的是闰年
+#             print('{0} 是闰年'.format(year))
+#         else:
+#             print('{0} 不是闰年'.format(year))
+#     else:
+#         print('{0} 是闰年'.format(year))       # 非整百年能被4整除的为闰年
+# else:
+#     print('{0} 不是闰年'.format(year))
+
+
+
+###MARK: ======= 11.Python 判断奇数偶数
+# num = int(input('输入一个数字: '))
+# if (num % 2) == 0:
+#     print('{0} 是偶数'.format(num))
+# else:
+#     print('{0} 是奇数'.format(num))
 
 
 
