@@ -24,8 +24,8 @@ public struct Passport {
     public var nationality : String
     public var image : UIImage
     
-    public var passportSigned : Bool = false
-    public var passportDataValid : Bool = false
+    public var passportSigned : Bool = false    //护照是否签名正确
+    public var passportDataValid : Bool = false //护照数据是否有效
     public var errors : [Error] = []
     
     init( fromNFCPassportModel model : NFCPassportModel ) {
@@ -34,11 +34,11 @@ public struct Passport {
         let elements = model.passportDataElements ?? [:]
         print("识别出来的个人信息：")
         print( elements )
-        let type = elements["5F03"] //值为：PO
-        documentType = type?[0] ?? "?"
-        documentSubType = type?[1] ?? "?"
+        let type = elements["5F03"] //值为：PO //类型
+        documentType = type?[0] ?? "?"      //文档类型
+        documentSubType = type?[1] ?? "?"   //文档子类型
         
-        issuingAuthority = elements["5F28"] ?? "?"
+        issuingAuthority = elements["5F28"] ?? "?" //发行机关
         documentNumber = (elements["5A"] ?? "?").replacingOccurrences(of: "<", with: "" ) //护照编号
         nationality = elements["5F2C"] ?? "?"   //国籍
         dateOfBirth = elements["5F57"]  ?? "?"  //出生日期
@@ -61,7 +61,9 @@ public struct Passport {
         
         // Two Parts:
         // Part 1 - Has the SOD (Security Object Document) been signed by a valid country signing certificate authority (CSCA)?
+        // 第1部分—安全对象文档是否由有效的国家签名证书颁发机构(CSCA)签署?
         // Part 2 - has it been tampered with (e.g. hashes of Datagroups match those in the SOD?
+        // 第2部分-它被篡改了吗?(例如，数据组的哈希值与SOD匹配?)
         guard let sod = model.getDataGroup(.SOD) else { return }
         
         guard let dg1 = model.getDataGroup(.DG1),
@@ -70,16 +72,18 @@ public struct Passport {
         
         // Validate passport 验证护照
         let pa =  PassiveAuthentication()
-        //是否签名
+        //是否签名正确
         do {
+            //检查护照是否签名正确
             try pa.checkPassportCorrectlySigned( sodBody : sod.body )
             self.passportSigned = true
         } catch let error {
             self.passportSigned = false
             errors.append( error )
         }
-        //是否有效
+        //护照数据是否有效
         do {
+            //检查数据是否被篡改
             try pa.checkDataNotBeenTamperedWith( sodBody : sod.body, dataGroupsToCheck: [.DG1:dg1, .DG2:dg2] )
             self.passportDataValid = true
         } catch let error {
