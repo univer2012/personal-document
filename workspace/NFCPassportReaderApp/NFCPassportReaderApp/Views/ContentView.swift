@@ -103,6 +103,9 @@ extension ContentView {
         //let dataGroups : [DataGroupId] = [.COM, .DG1, .DG2, .DG3, .DG4, .DG5, .DG6, .DG7, .DG8, .DG9, .DG10, .DG11, .DG12, .DG13, .DG14, .DG15, .DG16 ,.SOD]
         let dataGroups : [DataGroupId] = [.COM, .DG1, .DG2, .SOD]
         print("mrzKey: \(mrzKey)")
+        
+//        let passportReader = PassportReader()
+        
         passportReader.readPassport(mrzKey: mrzKey, tags: dataGroups, completed: { (passport, error) in
             if let passport = passport {
                 // All good, we got a passport 很好，我们有护照了
