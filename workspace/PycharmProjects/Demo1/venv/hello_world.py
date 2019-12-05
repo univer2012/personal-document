@@ -1,23 +1,98 @@
 
+###MARK: ======= 19.Python 阿姆斯特朗数
+
+
+
+
+###MARK: ======= 18.Python 斐波那契数列
+# # Python 斐波那契数列实现
+# # 获取用户输入数据
+# nterms = int(input('你需要几项？'))
+#
+# # 第一和第一项
+# n1 = 0
+# n2 = 1
+# count = 2
+# # 判断输入的值是否合法
+# if nterms <= 0:
+#     print('请输入一个正整数')
+# elif nterms == 1:
+#     print('斐波那契数列：')
+#     print(n1)
+# else:
+#     print('斐波那契数列：')
+#     print(n1, ',', n2, end= ' , ')
+#     while count < nterms:
+#         nth = n1 + n2
+#         print(nth, end= ' , ')
+#         # 更新值
+#         n1 = n2
+#         n2 = nth
+#         count += 1
+
+
+
+###MARK: ======= 17.Python 九九乘法表
+# # 九九乘法表
+# for i in range(1, 10):
+#     for j in range(1, i+1):
+#         print('{}x{}={}\t'.format(j,i, i*j), end='')
+#     print()
+
+
+
+###MARK: ======= 16.Python 阶乘实例
+# # 通过用户输入数字计算阶乘
+# # 获取用户输入的数字
+# num = int(input('请输入一个数字: '))
+# factorial = 1
+#
+# # 查看数字是负数， 0 或 正数
+# if num < 0:
+#     print('抱歉，负数没有阶乘')
+# elif num == 0:
+#     print('0 的阶乘为 1')
+# else:
+#     for i in range(1, num + 1):
+#         factorial = factorial * i
+#     print('%d 的阶乘为 %d' %(num, factorial))
+
+
+
+###MARK: ======= 15.Python 输出指定范围内的素数
+# # 输出指定范围内的素数
+# lower = int(input('输入区间最小值: '))
+# upper = int(input('输入区间最大值: '))
+#
+# for num in range(lower, upper + 1):
+#     # 素数大于 1
+#     if num > 1:
+#         for i in range(2, num):
+#             if (num % i) == 0:
+#                 break
+#         else:
+#             print(num)
+
+
 ###MARK: ======= 14.Python 质数判断
-# Python 程序用于检测用户输入的数字是否为质数
-# 用户输入数字
-num = int(input('请输入一个数字: '))
-
-# 质数大于 1
-if num > 1:
-    # 查看因子
-    for i in range(2, num):
-        if (num % i) == 0:
-            print(num, '不是质数')
-            print(i , '乘于', num // i, '是', num)
-            break
-    else:
-        print(num, '是质数')
-
-# 如果输入的数字小于或等于1， 不是质数
-else:
-    print(num, '不是质数')
+# # Python 程序用于检测用户输入的数字是否为质数
+# # 用户输入数字
+# num = int(input('请输入一个数字: '))
+#
+# # 质数大于 1
+# if num > 1:
+#     # 查看因子
+#     for i in range(2, num):
+#         if (num % i) == 0:
+#             print(num, '不是质数')
+#             print(i , '乘于', num // i, '是', num)
+#             break
+#     else:
+#         print(num, '是质数')
+#
+# # 如果输入的数字小于或等于1， 不是质数
+# else:
+#     print(num, '不是质数')
 
 
 
