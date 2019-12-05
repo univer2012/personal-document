@@ -83,6 +83,9 @@ struct MyRectangle: View {
 
 struct SH4ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        //横屏的方法，解决方案来自：
+        //https://stackoverflow.com/questions/56625931/how-can-i-preview-a-device-in-landscape-mode-in-swiftui
         SH4ContentView()
+            .previewLayout(.fixed(width: 568, height: 320))//iPhone SE landscape
     }
 }
