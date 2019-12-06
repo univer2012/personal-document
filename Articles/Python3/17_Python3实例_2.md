@@ -297,3 +297,238 @@ else:
 
 
 ## 19.Python 阿姆斯特朗数
+
+如果一个n位正整数等于其各位数字的n次方之和,则称该数为阿姆斯特朗数。 例如1^3 + 5^3 + 3^3 = 153。
+
+1000以内的阿姆斯特朗数： 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407。
+
+以下代码用于检测用户输入的数字是否为阿姆斯特朗数：
+
+```python
+# Python 检测用户输入的数字是否为阿姆斯特朗数
+# 获取用户输入的数字
+num = int(input('请输入一个数字: '))
+# 初始化变量 sum
+sum = 0
+# 指数
+n = len(str(num))
+
+# 检测
+temp = num
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** n
+    temp //= 10
+
+# 输出结果
+if num == sum:
+    print(num, '是阿姆斯特朗数')
+else:
+    print(num, '不是阿姆斯特朗数')
+```
+
+执行以上代码输出结果为：
+
+```python
+(venv) yuanpingdeAir:venv yuanping$ python3 hello_world.py 
+请输入一个数字: 345
+345 不是阿姆斯特朗数
+(venv) yuanpingdeAir:venv yuanping$ python3 hello_world.py 
+请输入一个数字: 153
+153 是阿姆斯特朗数
+(venv) yuanpingdeAir:venv yuanping$ python3 hello_world.py 
+请输入一个数字: 1634
+1634 是阿姆斯特朗数
+(venv) yuanpingdeAir:venv yuanping$ 
+```
+
+
+
+### 获取指定期间内的阿姆斯特朗数
+
+```python
+# 获取用户输入数字
+lower = int(input('最小值: '))
+upper = int(input('最大值: '))
+
+for num in range(lower, upper + 1):
+    # 初始化 sum
+    sum = 0
+    # 指数
+    n = len(str(num))
+
+    # 检测
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** n
+        temp //= 10
+
+    if num == sum:
+        print(num)
+```
+
+执行以上代码输出结果为：
+
+```
+最小值: 1
+最大值: 10000
+1
+2
+3
+4
+5
+6
+7
+8
+9
+153
+370
+371
+407
+1634
+8208
+9474
+```
+
+以上实例中我们输出了 1 到 10000 之间的阿姆斯特朗数。
+
+
+
+## 20.Python 十进制转二进制、八进制、十六进制
+
+以下代码用于实现十进制转二进制、八进制、十六进制：
+
+```python
+# 获取用户输入十进制数
+dec = int(input('输入数字: '))
+
+print('十进制数为: ', dec)
+print('转换为二进制为: ',bin(dec))
+print('转换为八进制为: ',oct(dec))
+print('转换为十六进制为: ',hex(dec))
+```
+
+执行以上代码输出结果为：
+
+```
+输入数字: 10
+十进制数为:  10
+转换为二进制为:  0b1010
+转换为八进制为:  0o12
+转换为十六进制为:  0xa
+```
+
+```
+(venv) yuanpingdeAir:venv yuanping$ python3 hello_world.py 
+输入数字: 13
+十进制数为:  13
+转换为二进制为:  0b1101
+转换为八进制为:  0o15
+转换为十六进制为:  0xd
+(venv) yuanpingdeAir:venv yuanping$ 
+```
+
+
+
+## 21.Python ASCII码与字符相互转换
+
+以下代码用于实现ASCII码与字符相互转换：
+
+```python
+# 用户输入字符
+c = input('请输入一个字符: ')
+# 用户输入ASCII码，并将输入的数字转换为整型
+a = int(input('请输入一个ASCII码: '))
+
+print(c + ' 的ASCII 码为',ord(c))
+print(a, ' 对应的字符为', chr(a))
+```
+
+执行以上代码输出结果为：
+
+```python
+(venv) yuanpingdeAir:venv yuanping$ python3 hello_world.py 
+请输入一个字符: a
+请输入一个ASCII码: 101
+a 的ASCII 码为 97
+101  对应的字符为 e
+(venv) yuanpingdeAir:venv yuanping$ 
+```
+
+
+
+## 22. Python 最大公约数算法
+
+以下代码用于实现最大公约数算法：
+
+```python
+# 定义一个函数
+def hcf(x, y):
+    '''该函数返回两个数的最大公约数'''
+    # 获取最小值
+    if x > y:
+        smaller = y
+    else:
+        smaller = x
+
+    for i in range(1, smaller + 1):
+        if ((x % i == 0) and (y % i == 0)):
+            hcf = i
+
+    return  hcf
+
+# 用书输入两个数字
+num1 = int(input('输入第一个数字: '))
+num2 = int(input('输入第二个数字: '))
+print(num1, '和', num2, '的最大公约数为', hcf(num1, num2))
+```
+
+执行以上代码输出结果为：
+
+```
+输入第一个数字: 54
+输入第二个数字: 24
+54 和 24 的最大公约数为 6
+```
+
+
+
+## 23.Python 最小公倍数算法
+
+以下代码用于实现最小公倍数算法：
+
+```python
+# 定义函数
+def lcm(x, y):
+    # 获取最大的数
+    if x > y:
+        greater = x
+    else:
+        greater = y
+
+    while(True):
+        if ((greater % x == 0) and (greater % y == 0)):
+            lcm = greater
+            break
+        greater += 1
+
+    return  lcm
+
+# 获取用户输入
+num1 = int(input('输入第一个数字: '))
+num2 = int(input('输入第二个数字: '))
+print(num1, '和', num2, '的最小公倍数为', lcm(num1, num2))
+```
+
+执行以上代码输出结果为：
+
+```python
+输入第一个数字: 52
+输入第二个数字: 39
+52 和 39 的最小公倍数为 156
+```
+
+
+
+## 24. Python 简单计算器实现
