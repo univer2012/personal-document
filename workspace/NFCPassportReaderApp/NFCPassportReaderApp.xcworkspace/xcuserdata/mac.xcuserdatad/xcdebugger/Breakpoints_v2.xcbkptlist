@@ -136,7 +136,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BF259FFA-67F5-4B54-95BE-98974F2DD313"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/NFCPassportReader/PassportReader.swift"
@@ -209,6 +209,22 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "performBACAndGetSessionKeys(mrzKey:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE165A19-40DD-4D4A-A626-20E9D1CDF19E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/NFCPassportReader/PassportReader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "tagReaderSession(_:didInvalidateWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
