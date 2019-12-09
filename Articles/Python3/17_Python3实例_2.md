@@ -532,3 +532,438 @@ print(num1, '和', num2, '的最小公倍数为', lcm(num1, num2))
 
 
 ## 24. Python 简单计算器实现
+
+以下代码用于实现简单计算器实现，包括两个数基本的加减乘除运输：
+
+```python
+# 定义函数
+def add(x, y):
+    '''相加'''
+    return  x + y
+
+def subtract(x, y):
+    '''相减'''
+    return  x - y
+
+def multiply(x, y):
+    '''相乘'''
+    return  x * y
+
+def divide(x, y):
+    '''相除'''
+    return  x / y
+
+# 用户输入
+print('选择运行: ')
+print('1、相加')
+print('2、相减')
+print('3、相乘')
+print('4、相除')
+
+choice = input('输入你的选择(1/2/3/4):')
+num1 = int(input('输入第一个数字: '))
+num2 = int(input('输入第二个数字: '))
+
+if choice == '1':
+    print(num1, "+", num2, "=", add(num1, num2))
+elif choice == '2':
+    print(num1, "-", num2, "=", subtract(num1, num2))
+elif choice == '3':
+    print(num1, "*", num2, "=", multiply(num1, num2))
+elif choice == '4':
+    print(num1, "/", num2, "=", divide(num1, num2))
+else:
+    print('非法输入')
+```
+
+执行以上代码输出结果为：
+
+```
+选择运行: 
+1、相加
+2、相减
+3、相乘
+4、相除
+输入你的选择(1/2/3/4):3
+输入第一个数字: 2
+输入第二个数字: 4
+2 * 4 = 8
+```
+
+
+
+## 25.Python 生成日历
+
+以下代码用于生成指定日期的日历：
+
+```python
+# 引入日历模块
+import  calendar
+# 输入指定年月
+yy = int(input('输入年份: '))
+mm = int(input('输入月份: '))
+# 显示日历
+print(calendar.month(yy, mm))
+```
+
+执行以上代码输出结果为：
+
+```python
+输入年份: 2019
+输入月份: 12
+   December 2019
+Mo Tu We Th Fr Sa Su
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+```
+
+
+
+## 26.Python 使用递归斐波那契数列
+
+以下代码使用递归的方式来生成斐波那契数列：
+
+```python
+def recur_fibo(n):
+    '''递归函数
+    输出斐波那契数列'''
+    if n <= 1:
+        return n
+    else:
+        return  (recur_fibo(n-1) + recur_fibo(n - 2))
+
+# 获取用户输入
+nterms = int(input('您要输出几项？'))
+# 检查输入的数字是否正确
+if nterms <= 0:
+    print('输入正数')
+else:
+    print('斐波那契数列')
+    for i in range(nterms):
+        print(recur_fibo(i))
+```
+
+执行以上代码输出结果为：
+
+```
+
+您要输出几项？11
+斐波那契数列
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+```
+
+
+
+## 27.Python 文件 IO
+
+以下代码演示了Python基本的文件操作，包括 open，read，write：
+
+```python
+# 写文件
+with open('test.txt', 'wt') as out_file:
+    out_file.write('该文本会写入到文件中\n看到我了吧')
+
+# 读文件
+with open('test.txt', 'rt') as in_file:
+    text = in_file.read()
+
+print(text)
+```
+
+执行以上代码输出结果为：
+
+```
+该文本会写入到文件中
+看到我了吧
+```
+
+ ## 28.Python 字符串判断
+
+以下代码演示了Python字符串的判断：
+
+```python
+# 测试实例一
+str = "runoob.com"
+print(str.isalnum()) # 判断所有字符都是数字或者字母
+print(str.isalpha()) # 判断所有字符都是字母
+print(str.isdigit()) # 判断所有字符都是数字
+print(str.islower()) # 判断所有字符都是小写
+print(str.isupper()) # 判断所有字符都是大写
+print(str.istitle()) # 判断所有字符都是首字母大写，像标题
+print(str.isspace()) # 判断所有字符都是空白字符、\t、\n、\r
+
+print('-----------------------------')
+# 测试实例二
+str = 'runoob'
+print(str.isalnum())
+print(str.isalpha())
+print(str.isdigit())
+print(str.islower())
+print(str.isupper())
+print(str.istitle())
+print(str.isspace())
+```
+
+执行以上代码输出结果为：
+
+```
+False
+False
+False
+True
+False
+False
+False
+-----------------------------
+True
+True
+False
+True
+False
+False
+False
+```
+
+
+
+## 29.Python 字符串大小写转换
+
+以下代码演示了如何将字符串转换为大写字母，或者将字符串转为小写字母等：
+
+```python
+str = 'www.runoob.com'
+print(str.upper())  # 把所有字符中的小写字母转换成大写字母
+print(str.lower())  # 把所有字符中的大写字母转换成小写字母
+print(str.capitalize()) # 把第一个字母转化为大写字母，其余小写
+print(str.title())  # 把每个单词的第一个字母转化为大写，其余小写
+```
+
+执行以上代码输出结果为：
+
+```
+WWW.RUNOOB.COM
+www.runoob.com
+Www.runoob.com
+Www.Runoob.Com
+```
+
+## 30.Python 计算每个月天数
+
+以下代码通过导入 calendar 模块来计算每个月的天数：
+
+```python
+import calendar
+monthRange = calendar.monthrange(2019,12)
+print(monthRange)
+```
+
+执行以上代码输出结果为：
+
+```
+(6, 31)
+```
+
+输出的是一个元组，**第一个元素是所查月份的第一天对应的是星期几（0-6），第二个元素是这个月的天数**。以上实例输出的意思为 2016 年 9 月份的第一天是星期四，该月总共有 30 天。 
+
+
+
+## 31. Python 获取昨天日期
+
+以下代码通过导入 datetime 模块来获取昨天的日期：
+
+```python
+# 引入 datetime 模块
+import datetime
+def getYesteday():
+    today = datetime.date.today()
+    oneday = datetime.timedelta(days=1)
+    yesterday = today - oneday
+    return yesterday
+
+# 输出
+print(getYesteday())
+```
+
+执行以上代码输出结果为：
+
+```
+2019-12-08
+```
+
+以上实例输出的意思为昨天的日期是 2019 年 12 月 8日。 
+
+
+
+## 32.Python list 常用操作
+
+## 1.list 定义
+
+```python
+>>> li = ['a', 'b','mpilgrim', 'z', 'example']
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example']
+>>> li[1]
+'b'
+>>> 
+```
+
+## 2.list 负数索引
+
+```python
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example']
+>>> li[1]
+'b'
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example']
+>>> li[-1]
+'example'
+>>> li[-3]
+'mpilgrim'
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example']
+>>> li[1:3]
+['b', 'mpilgrim']
+>>> li[1:-1]
+['b', 'mpilgrim', 'z']
+>>> li[0:3]
+['a', 'b', 'mpilgrim']
+>>> 
+```
+
+## 3.list 增加元素
+
+```python
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example']
+>>> li.append('new')
+>>> li
+['a', 'b', 'mpilgrim', 'z', 'example', 'new']
+>>> li.insert(2, 'new')
+>>> li
+['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new']
+>>> li.extend(['two', 'elements'])
+>>> li
+['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
+>>> 
+```
+
+## 4.list 搜索 
+
+```python
+>>> li
+['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
+>>> li.index('example')
+5
+>>> li.index('new')
+2
+>>> li.index('c')
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    li.index('c')
+ValueError: 'c' is not in list
+>>> 'c' in li
+False
+>>> 
+```
+
+## 5.list 删除元素
+
+```python
+>>> li
+['a', 'b', 'new', 'mpilgrim', 'z', 'example', 'new', 'two', 'elements']
+>>> li.remove('z')
+>>> li
+['a', 'b', 'new', 'mpilgrim', 'example', 'new', 'two', 'elements']
+>>> li.remove('new')						# 删除首次出现的一个值
+>>> li
+['a', 'b', 'mpilgrim', 'example', 'new', 'two', 'elements']				# 第二个 'new' 未删除
+>>> li.remove('c')							#list 中没有找到值, Python 会引发一个异常
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    li.remove('c')
+ValueError: list.remove(x): x not in list
+>>> li.pop()			# pop 会做两件事: 删除 list 的最后一个元素, 然后返回删除元素的值。
+'elements'
+>>> li
+['a', 'b', 'mpilgrim', 'example', 'new', 'two']
+>>> 
+```
+
+## 6.list 运算符
+
+```python
+>>> li = ['a', 'b', 'mpilgrim']
+>>> li = li + ['example', 'new']
+>>> li
+['a', 'b', 'mpilgrim', 'example', 'new']
+>>> li += ['two']
+>>> li
+['a', 'b', 'mpilgrim', 'example', 'new', 'two']
+>>> li = [1,2] * 3
+>>> li
+[1, 2, 1, 2, 1, 2]
+>>> 
+```
+
+## 7.使用join链接list成为字符串
+
+```python
+>>> params = {'server':'mpilgrim', 'database':'master', 'uid':'sa', 'pwd':'secret'}
+>>> ['%s=%s' %(k, v) for k,v in params.items()]
+['server=mpilgrim', 'database=master', 'uid=sa', 'pwd=secret']
+>>> ';'.join(['%s=%s' %(k, v) for k,v in params.items()])
+'server=mpilgrim;database=master;uid=sa;pwd=secret'
+>>> 
+```
+
+**join 只能用于元素是字符串的 list; 它不进行任何的类型强制转换。**连接一个存在一个或多个非字符串元素的 list 将引发一个异常。 
+
+## 8.list 分割字符串
+
+```python
+>>> li = ['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
+>>> s = ';'.join(li)
+>>> s
+'server=mpilgrim;uid=sa;database=master;pwd=secret'
+>>> s.split(';')
+['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
+>>> s.split(';', 1)
+['server=mpilgrim', 'uid=sa;database=master;pwd=secret']
+>>> 
+```
+
+split 与 join 正好相反, 它将一个字符串分割成多元素 list。 
+
+ 注意, 分隔符 (";") 被完全去掉了, 它没有在返回的 list 中的任意元素中出现。 
+
+ split 接受一个可选的第二个参数, 它是要分割的次数。
+
+## 9.list 的映射解析
+
+```python
+>>> li = [1,9,8,4]
+>>> [elem*2 for elem in li]
+[2, 18, 16, 8]
+>>> li
+[1, 9, 8, 4]
+>>> li = [elem * 2 for elem in li]
+>>> li
+[2, 18, 16, 8]
+>>> 
+```
+
