@@ -1,19 +1,16 @@
 //
 //  ContentView.swift
-//  SwiftUIDemo191203
+//  OfficialTutorial2
 //
-//  Created by Mac on 2019/12/3.
+//  Created by Mac on 2019/12/9.
 //  Copyright © 2019 Mac. All rights reserved.
 //
 
 import SwiftUI
-
-
-
 /*
- 下面的布局来自文章：[【译】WWDC2019之SwiftUI--SwiftUI基础教程](https://juejin.im/post/5cf5f4596fb9a07ede0b2fa1#heading-34)
- */
-struct LandmarkDetail: View {
+下面的布局来自文章：[【译】WWDC2019之SwiftUI--SwiftUI基础教程](https://juejin.im/post/5cf5f4596fb9a07ede0b2fa1#heading-34)
+*/
+struct ContentView: View {
     var body: some View {
         VStack {
             MapView()
@@ -42,11 +39,12 @@ struct LandmarkDetail: View {
             
             Spacer()
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
-struct LandmarkDetail_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        ContentView()
     }
 }
