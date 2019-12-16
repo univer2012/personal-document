@@ -1,21 +1,22 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Andy Qua on 14/06/2019.
 //
 
+import Foundation
 import UIKit
 
 class DataGroupParser {
     
-    let dataGroupNames = ["Common", "DG1", "DG2", "DG3", "DG4", "DG5", "DG6", "DG7", "DG8", "DG9", "DG10", "DG11", "DG12", "DG13", "DG14", "DG15", "DG16", "SecurityData"]
-    let tags : [UInt8] = [0x60, 0x61, 0x75, 0x63, 0x76, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F, 0x70, 0x77]
-    let classes : [DataGroup.Type] = [COM.self, DataGroup1.self, DataGroup2.self,
+    static let dataGroupNames = ["Common", "DG1", "DG2", "DG3", "DG4", "DG5", "DG6", "DG7", "DG8", "DG9", "DG10", "DG11", "DG12", "DG13", "DG14", "DG15", "DG16", "SecurityData"]
+    static let tags : [UInt8] = [0x60, 0x61, 0x75, 0x63, 0x76, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F, 0x70, 0x77]
+    static let classes : [DataGroup.Type] = [COM.self, DataGroup1.self, DataGroup2.self,
                                       NotImplementedDG.self, NotImplementedDG.self, NotImplementedDG.self,
                                       NotImplementedDG.self, DataGroup7.self, NotImplementedDG.self,
-                                      NotImplementedDG.self, NotImplementedDG.self, NotImplementedDG.self,
-                                      NotImplementedDG.self, NotImplementedDG.self, NotImplementedDG.self,
+                                      NotImplementedDG.self, NotImplementedDG.self, DataGroup11.self,
+                                      DataGroup12.self, NotImplementedDG.self, DataGroup14.self,
                                       NotImplementedDG.self, NotImplementedDG.self, SOD.self]
     
     
@@ -30,8 +31,8 @@ class DataGroupParser {
     
     
     func tagToDG( _ tag : UInt8 ) throws -> DataGroup.Type {
-        guard let index = tags.firstIndex(of: tag) else { throw TagError.UnknownTag}
-        return classes[index]
+        guard let index = DataGroupParser.tags.firstIndex(of: tag) else { throw TagError.UnknownTag}
+        return DataGroupParser.classes[index]
     }
 }
 
@@ -41,7 +42,7 @@ public class DataGroup {
     /// Body contains the actual data
     public var body : [UInt8] = []
 
-    /// Data contains the whole DataGroup data (as that is what the has is calculated from
+    /// Data contains the whole DataGroup data (as that is what the hash is calculated from
     private var data : [UInt8] = []
 
     var pos = 0
@@ -50,8 +51,8 @@ public class DataGroup {
         self.data = data
         
         // Skip the first byte which is the header byte
-        _ = try getNextTag()
-        _ = try getNextLength()
+        pos = 1
+        let _ = try getNextLength()
         self.body = [UInt8](data[pos...])
         
         try parse(data)
@@ -109,9 +110,9 @@ class NotImplementedDG : DataGroup {
 }
 
 class COM : DataGroup {
-    public var version : Int = 0
-    public var unicodeVersion : Int = 0
-    public var dataGroupsPresent : [UInt8] = []
+    public var version : String = "Unknown"
+    public var unicodeVersion : String = "Unknown"
+    public var dataGroupsPresent : [String] = []
     
     required init( _ data : [UInt8] ) throws {
         try super.init(data)
@@ -123,19 +124,45 @@ class COM : DataGroup {
         if tag != 0x5F01 {
             throw TagError.InvalidResponse
         }
-        version = try binToInt(getNextValue())
         
+        // Version is 4 bytes (ascii) - AABB
+        // AA is major number, BB is minor number
+        // e.g.  48 49 48 55 -> 01 07 -> 1.7
+        var versionBytes = try getNextValue()
+        if versionBytes.count == 4 {
+            let aa = Int( String(cString: Array(versionBytes[0..<2] + [0]) )) ?? -1
+            let bb = Int( String(cString: Array(versionBytes[2...] + [0])) ) ?? -1
+            if aa != -1 && bb != -1 {
+                version = "\(aa).\(bb)"
+            }
+        }
         tag = try getNextTag()
         if tag != 0x5F36 {
             throw TagError.InvalidResponse
         }
-        unicodeVersion = try binToInt(getNextValue())
+        
+        versionBytes = try getNextValue()
+        if versionBytes.count == 6 {
+            let aa = Int( String(cString: Array(versionBytes[0..<2] + [0])) ) ?? -1
+            let bb = Int( String(cString: Array(versionBytes[2..<4] + [0])) ) ?? -1
+            let cc = Int( String(cString: Array(versionBytes[4...]) + [0]) ) ?? -1
+            if aa != -1 && bb != -1 && cc != -1 {
+                unicodeVersion = "\(aa).\(bb).\(cc)"
+            }
+        }
 
         tag = try getNextTag()
         if tag != 0x5C {
             throw TagError.InvalidResponse
         }
-        dataGroupsPresent = try getNextValue()
+        
+        let vals = try getNextValue()
+        for v in vals {
+            if let index = DataGroupParser.tags.firstIndex(of: v) {
+                dataGroupsPresent.append( DataGroupParser.dataGroupNames[index] )
+            }
+        }
+        print( "DG Found - \(dataGroupsPresent)" )
     }
 }
 
@@ -153,9 +180,9 @@ class SOD : DataGroup {
 }
 
 class DataGroup1 : DataGroup {
-    
+
     var elements : [String:String] = [:]
-    
+
     required init( _ data : [UInt8] ) throws {
         try super.init(data)
         datagroupType = .DG1
@@ -177,6 +204,9 @@ class DataGroup1 : DataGroup {
         default:
             self.parseOther(body)
         }
+        
+        // Store MRZ data
+        elements["5F1F"] = String(bytes: body, encoding:.utf8)
     }
     
     func parseTd1(_ data : [UInt8]) {
@@ -424,6 +454,136 @@ class DataGroup7 : DataGroup {
         imageData = try getNextValue()
     }
 }
+
+
+
+class DataGroup11 : DataGroup {
+    
+    var fullName : String?
+    var personalNumber : String?
+    var dateOfBirth : String?
+    var placeOfBirth : String?
+    var address : String?
+    var telephone : String?
+    var profession : String?
+    var title : String?
+    var personalSummary : String?
+    var proofOfCitizenship : String?
+    var tdNumbers : String?
+    var custodyInfo : String?
+
+    required init( _ data : [UInt8] ) throws {
+        try super.init(data)
+        datagroupType = .DG11
+    }
+        
+    override func parse(_ data: [UInt8]) throws {
+        var tag = try getNextTag()
+        if tag != 0x5C {
+            throw TagError.InvalidResponse
+        }
+        _ = try getNextValue()
+        
+        repeat {
+            tag = try getNextTag()
+            let val = try String( bytes:getNextValue(), encoding:.utf8)
+            if tag == 0x5F0E {
+                fullName = val
+            } else if tag == 0x5F10 {
+                personalNumber = val
+            } else if tag == 0x5F11 {
+                placeOfBirth = val
+            } else if tag == 0x5F2B {
+                dateOfBirth = val
+            } else if tag == 0x5F42 {
+                address = val
+            } else if tag == 0x5F12 {
+                telephone = val
+            } else if tag == 0x5F13 {
+                profession = val
+            } else if tag == 0x5F14 {
+                title = val
+            } else if tag == 0x5F15 {
+                personalSummary = val
+            } else if tag == 0x5F16 {
+                proofOfCitizenship = val
+            } else if tag == 0x5F18 {
+                tdNumbers = val
+            } else if tag == 0x5F18 {
+                custodyInfo = val
+            }
+        } while pos < data.count
+    }
+}
+
+
+class DataGroup12 : DataGroup {
+    
+    var issuingAuthority : String?
+    var dateOfIssue : String?
+    var otherPersonsDetails : String?
+    var endorsementsOrObservations : String?
+    var taxOrExitRequirements : String?
+    var frontImage : [UInt8]?
+    var rearImage : [UInt8]?
+    var personalizationTime : String?
+    var personalizationDeviceSerialNr : String?
+
+    required init( _ data : [UInt8] ) throws {
+        try super.init(data)
+        datagroupType = .DG12
+    }
+        
+    override func parse(_ data: [UInt8]) throws {
+        var tag = try getNextTag()
+        if tag != 0x5C {
+            throw TagError.InvalidResponse
+        }
+        
+        // Skip the taglist - ideally we would check this but...
+        let tagList = try getNextValue()
+
+        repeat {
+            tag = try getNextTag()
+            let val = try getNextValue()
+            
+            if tag == 0x5F19 {
+                issuingAuthority = String( bytes:val, encoding:.utf8)
+            } else if tag == 0x5F26 {
+                dateOfIssue = String( bytes:val, encoding:.utf8)
+            } else if tag == 0xA0 {
+                // Not yet handled
+            } else if tag == 0x5F1B {
+                endorsementsOrObservations = String( bytes:val, encoding:.utf8)
+            } else if tag == 0x5F1C {
+                taxOrExitRequirements = String( bytes:val, encoding:.utf8)
+            } else if tag == 0x5F1D {
+                frontImage = val
+            } else if tag == 0x5F1E {
+                rearImage = val
+            } else if tag == 0x5F55 {
+                personalizationTime = String( bytes:val, encoding:.utf8)
+            } else if tag == 0x5F56 {
+                personalizationDeviceSerialNr = String( bytes:val, encoding:.utf8)
+            }
+        } while pos < data.count
+    }
+}
+
+class DataGroup14 : DataGroup {
+    
+    required init( _ data : [UInt8] ) throws {
+        try super.init(data)
+        datagroupType = .DG14
+    }
+    
+    override func parse(_ data: [UInt8]) throws {
+    }
+}
+
+
+
+
 
 public enum DocTypeEnum: String {
     case TD1
