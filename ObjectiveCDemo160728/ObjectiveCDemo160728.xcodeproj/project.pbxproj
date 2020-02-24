@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0487D56523AF8BB900D54858 /* SHRAC12ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0487D56423AF8BB900D54858 /* SHRAC12ViewModel.m */; };
 		0B08F0672202B7E700D03708 /* SHUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F0662202B7E700D03708 /* SHUtility.m */; };
 		0B08F06A2202B8C300D03708 /* SHAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F0692202B8C300D03708 /* SHAlertViewManager.m */; };
 		0B08F06D2202B8ED00D03708 /* SHAlertViewSetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B08F06C2202B8ED00D03708 /* SHAlertViewSetModel.m */; };
@@ -211,6 +212,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0487D56323AF8BB900D54858 /* SHRAC12ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRAC12ViewModel.h; sourceTree = "<group>"; };
+		0487D56423AF8BB900D54858 /* SHRAC12ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRAC12ViewModel.m; sourceTree = "<group>"; };
 		0B08F0652202B7E700D03708 /* SHUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUtility.h; sourceTree = "<group>"; };
 		0B08F0662202B7E700D03708 /* SHUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUtility.m; sourceTree = "<group>"; };
 		0B08F0682202B8C300D03708 /* SHAlertViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAlertViewManager.h; sourceTree = "<group>"; };
@@ -2547,6 +2550,8 @@
 			children = (
 				8FD8212823898A5B005A8A74 /* SHRAC12ViewController.h */,
 				8FD8212923898A5B005A8A74 /* SHRAC12ViewController.m */,
+				0487D56323AF8BB900D54858 /* SHRAC12ViewModel.h */,
+				0487D56423AF8BB900D54858 /* SHRAC12ViewModel.m */,
 			);
 			path = "6介绍十二_RACCommand";
 			sourceTree = "<group>";
@@ -2839,6 +2844,7 @@
 				67B5F86E1EC598CC0035A9C0 /* UIViewController+SGH0512Tracking.m in Sources */,
 				8F92670022009A9C009B3FC1 /* WBTag.m in Sources */,
 				677177EE1DEBD129009AB627 /* SGH1128ContactsViewController.m in Sources */,
+				0487D56523AF8BB900D54858 /* SHRAC12ViewModel.m in Sources */,
 				67B5F86B1EC598880035A9C0 /* SGH0512Runtime4ViewController.m in Sources */,
 				67AFC2A81F174EDC00F5FEBD /* SGH0713ScreenShotViewController.m in Sources */,
 				6735B1231E0A9B9E0010E6A8 /* SGH1221SelectedCellsViewController.m in Sources */,
