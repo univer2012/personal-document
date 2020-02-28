@@ -13,13 +13,37 @@ class BottomNavigationBarWidget extends StatefulWidget {
 }
 
 class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
-  final _bottomNavigatorColor = Colors.blue;
-  int _currentIndex = 0;
 
-  List<Widget> list = List();
+  final List<BottomNavigationBarItem> bottomNavItems = [
+    BottomNavigationBarItem(
+      backgroundColor: Colors.blue,
+      icon: Icon(Icons.home),
+      title: Text('首页'),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.green,
+      icon: Icon(Icons.message),
+      title: Text('消息'),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.amber,
+      icon: Icon(Icons.shopping_cart),
+      title: Text('购物车'),
+    ),
+    BottomNavigationBarItem(
+      backgroundColor: Colors.red,
+      icon: Icon(Icons.person),
+      title: Text('个人中心'),
+      
+    ),
+  ];
+
+  int currentIndex = 0;
+
+  List<Widget> pages = List();
   @override
   void initState() {
-    list
+    pages
     ..add(MainHomeScreen())
     ..add(MainEmailScreen())
     ..add(MainAlarmScreen())
@@ -32,59 +56,35 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: list[_currentIndex],
+       body: pages[currentIndex],
        bottomNavigationBar: BottomNavigationBar(
-         items: [
-           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: _bottomNavigatorColor,
-              ),
-              title: Text(
-                '首页',
-                style: TextStyle(color: _bottomNavigatorColor),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.email,
-                color: _bottomNavigatorColor,
-              ),
-              title: Text(
-                '邮件',
-                style: TextStyle(color: _bottomNavigatorColor),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.alarm,
-                color: _bottomNavigatorColor,
-              ),
-              title: Text(
-                '相册',
-                style: TextStyle(color: _bottomNavigatorColor),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.airplay,
-                color: _bottomNavigatorColor,
-              ),
-              title: Text(
-                '投屏',
-                style: TextStyle(color: _bottomNavigatorColor),
-              ),
-            ),
-         ],
+         backgroundColor: Colors.lightGreen, //背景色
+         selectedItemColor: Colors.red, //选中颜色
+         unselectedItemColor: Colors.blueGrey,//未选中颜色
+         items: bottomNavItems,
          onTap: (int index){
            setState(() {
-             _currentIndex = index;
+             _changePage(index);
            });
          },
-         currentIndex: _currentIndex,
+         currentIndex: currentIndex,
          type: BottomNavigationBarType.fixed,
+         //type: BottomNavigationBarType.shifting,
+         ///一般情况下，我们底部导航栏不会弄得这么花哨，
+         ///所以一般都是使用fixed模式，此时，导航栏的图标和标题颜色会使用fixedColor指定的颜色，如果没有指定fixedColor，则使用默认的主题色primaryColor
+         //fixedColor: Colors.red,
        ),
     );
+  }
+
+  /*切换页面*/
+  void _changePage(int index) {
+    /*如果点击的导航项不是当前项  切换 */
+    if (index != currentIndex) {
+      setState(() {
+        currentIndex = index;
+      });
+    }
   }
 }
 

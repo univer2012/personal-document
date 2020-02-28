@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../email_page_demos/bottom_navigation_widget.dart';
+import '../email_page_demos/demo1/bottom_navigation_widget.dart';
+import '../email_page_demos/demo2/bottom_appBar_demo.dart';
+import '../email_page_demos/demo3/pages.dart';
 
 
 class MainEmailScreen extends StatefulWidget {
@@ -28,7 +30,21 @@ class _MainEmailScreenState extends State<MainEmailScreen> {
                 onPressed: (){
                   navigateTo(context,BottomNavigationWidget());
                 }
-                ),
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Text('2不规则底部工具栏制作',style: TextStyle(color: Colors.white),),
+                onPressed: (){
+                  navigateTo(context,BottomAppBarDemo());
+                }
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Text('3炫酷的路由动画',style: TextStyle(color: Colors.white),),
+                onPressed: (){
+                  navigateTo(context,FirstPage());
+                }
+              ),
                 
             ],
           ),
