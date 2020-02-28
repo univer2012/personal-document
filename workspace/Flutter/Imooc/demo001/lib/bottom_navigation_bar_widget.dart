@@ -22,18 +22,18 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.green,
-      icon: Icon(Icons.message),
-      title: Text('消息'),
+      icon: Icon(Icons.email),
+      title: Text('邮件'),
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.amber,
-      icon: Icon(Icons.shopping_cart),
-      title: Text('购物车'),
+      icon: Icon(Icons.alarm),
+      title: Text('报警'),
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.red,
-      icon: Icon(Icons.person),
-      title: Text('个人中心'),
+      icon: Icon(Icons.airplay),
+      title: Text('投屏'),
       
     ),
   ];

@@ -7,10 +7,10 @@ class MainAlarmScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('相册'),
+        title: Text('报警'),
       ),
       body: Center(
-        child: Text('相册'),
+        child: Text('报警'),
       ),
     );
   }
