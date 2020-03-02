@@ -7,6 +7,7 @@ import '../email_page_demos/demo3/pages.dart';
 import '../email_page_demos/demo4/frosted_glass_demo.dart';
 import '../email_page_demos/demo5/keep_alive_demo.dart';
 import '../email_page_demos/demo6/keep_alive_demo2.dart';
+import '../email_page_demos/demo7/search_bar_demo.dart';
 
 class MainEmailScreen extends StatefulWidget {
   MainEmailScreen({Key key}) : super(key: key);
@@ -66,6 +67,13 @@ class _MainEmailScreenState extends State<MainEmailScreen> {
                 child: Text('6保持页面状态2',style: TextStyle(color: Colors.white),),
                 onPressed: (){
                   navigateTo(context,KeepAliveDemo2());
+                }
+              ),
+              RaisedButton(
+                color: Colors.blue,
+                child: Text('7一个不简单的搜索条',style: TextStyle(color: Colors.white),),
+                onPressed: (){
+                  navigateTo(context,SearchBarDemo());
                 }
               ),
                 
