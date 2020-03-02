@@ -967,3 +967,134 @@ split 与 join 正好相反, 它将一个字符串分割成多元素 list。
 >>> 
 ```
 
+## 10.dictionary 中的解析
+
+```python
+>>> params = {"server":"mpilgrim", "database":"master", "uid":"sa", "pwd":'secret'}
+>>> params.keys()
+dict_keys(['server', 'database', 'uid', 'pwd'])
+>>> params.values()
+dict_values(['mpilgrim', 'master', 'sa', 'secret'])
+>>> params.items()
+dict_items([('server', 'mpilgrim'), ('database', 'master'), ('uid', 'sa'), ('pwd', 'secret')])
+>>> [k for k,v in params.items()]
+['server', 'database', 'uid', 'pwd']
+>>> [v for k,v in params.items()]
+['mpilgrim', 'master', 'sa', 'secret']
+>>> ["%s=%s" %(k,v) for k,v in params.items()]
+['server=mpilgrim', 'database=master', 'uid=sa', 'pwd=secret']
+>>> 
+```
+
+## 11.list 过滤
+
+```python
+>>> li = ['a', 'mpilgrim', 'foo', 'b', 'c','b', 'd','d']
+>>> [elem for elem in li if len(elem) > 1]
+['mpilgrim', 'foo']
+>>> [elem for elem in li if elem != 'b']
+['a', 'mpilgrim', 'foo', 'c', 'd', 'd']
+>>> [elem for elem in li if li.count(elem) == 1]   # 这个是啥？
+['a', 'mpilgrim', 'foo', 'c']
+>>> 
+```
+
+
+
+## 33.Python 约瑟夫生者死者小游戏
+
+30 个人在一条船上，超载，需要 15 人下船。
+
+于是人们排成一队，排队的位置即为他们的编号。
+
+报数，从 1 开始，数到 9 的人下船。
+
+如此循环，直到船上仅剩 15 人为止，问都有哪些编号的人下船了呢？
+
+```python
+people = {}
+for x in range(1,31):
+    people[x] = 1
+# print(people)
+check = 0
+i = 1
+j = 0
+while i<= 31:
+    if i == 31:
+        i = 1
+    elif j == 15:
+        break
+    else:
+        if people[i] == 0:
+            i+=1
+            continue
+        else:
+            check+=1
+            if check == 9:
+                people[i] = 0
+                check = 0
+                print("{}号下船了".format(i))
+                j+=1
+            else:
+                i+=1
+                continue
+```
+
+执行以上实例，输出结果为：
+
+```
+9号下船了
+18号下船了
+27号下船了
+6号下船了
+16号下船了
+26号下船了
+7号下船了
+19号下船了
+30号下船了
+12号下船了
+24号下船了
+8号下船了
+22号下船了
+5号下船了
+23号下船了
+```
+
+## 34.Python 五人分鱼
+
+A、B、C、D、E 五人在某天夜里合伙去捕鱼，到第二天凌晨时都疲惫不堪，于是各自找地方睡觉。
+
+ 日上三杆，A 第一个醒来，他将鱼分为五份，把多余的一条鱼扔掉，拿走自己的一份。
+
+ B 第二个醒来，也将鱼分为五份，把多余的一条鱼扔掉拿走自己的一份。 。
+
+C、D、E依次醒来，也按同样的方法拿鱼。
+
+问他们台伙至少捕了多少条鱼?
+
+```python
+def main():
+    fish = 1
+    while True:
+        total, enough = fish, True
+        for _ in range(5):
+            if (total - 1) % 5 == 0:
+                total = (total - 1)  // 5 * 4
+            else:
+                enough = False
+                break
+        if enough:
+            print(f'总共有{fish}条鱼')
+            break
+        fish += 1
+
+if __name__ == '__main__':
+    main()
+```
+
+运行结果：
+
+```
+总共有3121条鱼
+```
+
