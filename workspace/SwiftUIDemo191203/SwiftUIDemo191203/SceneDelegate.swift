@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        let contentView = ContentView()
-        //let contentView = SH2ContentView()
+        let contentView = SH2ContentView()
 //        let contentView = SH3QiRootView()
+//        let contentView = LandmarkList()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

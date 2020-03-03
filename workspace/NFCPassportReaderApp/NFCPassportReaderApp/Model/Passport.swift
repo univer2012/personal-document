@@ -28,6 +28,8 @@ public struct Passport {
     public var passportDataValid : Bool = false //护照数据是否有效
     public var errors : [Error] = []
     
+    public var fullName: String
+    
     init( fromNFCPassportModel model : NFCPassportModel ) {
         self.image = model.passportImage ?? UIImage(named:"head")!
         
@@ -55,6 +57,8 @@ public struct Passport {
             name += fn + " "
         }
         firstName = name.strip()    //名
+        
+        self.fullName = model.fullName ?? ""    //"王东海"
         
         
         // Check whether a genuine passport or not
@@ -115,6 +119,8 @@ public struct Passport {
         }
         firstName = name.strip()
         
+        
+        self.fullName = ""
         
         // Line 2
         documentNumber = line2[0..<9].replacingOccurrences(of: "<", with: "" )

@@ -7,8 +7,12 @@
 //
 
 #import "SHRAC12ViewController.h"
+#import "SHRAC12ViewModel.h"
 
 @interface SHRAC12ViewController ()
+
+@property(nonatomic, strong)SHRAC12ViewModel *viewModel;
+@property(nonatomic, strong)UITextField *priceTextFld;
 
 @end
 
@@ -17,7 +21,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self p_command];
+    
+    self.viewModel = [[SHRAC12ViewModel alloc] init];
+    
+    self.priceTextFld = [[UITextField alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 40)];
+    self.priceTextFld.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:self.priceTextFld];
+    
+    @weakify(self)
+    //监听价格输入
+    [[RACObserve(self.priceTextFld, text) merge:self.priceTextFld.rac_textSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        
+        @weakify(self)
+        [[self.viewModel.priceSpreadCommand execute:nil] subscribeNext:^(id  _Nullable x) {
+            @strongify(self)
+            NSLog(@"监听priceTextFld的输入：%@",x);
+        }];
+    }];
+    
+    //更新价差
+    [self.viewModel.priceSpreadCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        NSLog(@"executionSignals 好的");
+    }];
+    
+//    [[self.viewModel.priceSpreadCommand execute:nil] subscribeNext:^(id  _Nullable x) {
+//        @strongify(self)
+//
+//        NSLog(@"before_dljfojsojfl ");
+//        //[self.headerView.priceView refreshUIWithRefreshPrice:NO];
+//    }];
+    
+    
+    //[self p_command];
 }
 
 - (void)p_command {

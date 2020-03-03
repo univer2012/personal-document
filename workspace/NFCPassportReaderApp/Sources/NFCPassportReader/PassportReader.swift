@@ -34,6 +34,13 @@ public struct NFCPassportModel {
         return dg7.getImage()
     }
     
+    public var fullName : String? {
+        guard let dg11 = dataGroupsRead[.DG11] as? DataGroup11 else { return nil }
+        
+        return dg11.fullName
+    }
+    
+    
     public var dataGroupsRead : [DataGroupId:DataGroup] = [:]
     
     public func getDataGroup( _ id : DataGroupId ) -> DataGroup? {

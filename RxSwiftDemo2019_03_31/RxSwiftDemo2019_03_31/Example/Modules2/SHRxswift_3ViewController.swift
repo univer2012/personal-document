@@ -8,11 +8,77 @@
 import UIKit
 
 import RxSwift
+import RxCocoa
 
 class SHRxswift_3ViewController: UIViewController {
+    
+    let viewModel = SHRxswift_3ViewModel()
+    let disposeBag = DisposeBag()
+    
+    let priceTextFld = UITextField()
+    
+    var priceDispose :Disposable?
+    
+    var observer : Observer<String>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+//            print("这是回调，回调成功：%@",text)
+//        }).disposed(by: disposeBag)
+        
+        
+        //let _ = self.viewModel.didClickOpen("不用回调")
+        
+        //监听
+        //self.viewModel.didClickOpen("")
+        
+        #if true
+        
+        priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
+        self.priceTextFld.backgroundColor = UIColor.gray
+        self.view.addSubview(priceTextFld)
+        
+        self.observer = self.viewModel.didClickOpen("").asObservable()
+        
+        observer.subscribe(onNext: { (text) in
+            print("callBack_succeed_observer：%@",text)
+        }).disposed(by: self.disposeBag)
+        
+        self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
+            guard let `self` = self else { return }
+            
+            let _ = self.viewModel.didClickOpen("不用回调")
+//            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+//                print("callBack_succeed：%@",text)
+//            }).disposed(by: self.disposeBag)
+                        
+            //响应
+//            self.priceDispose?.dispose()
+//            self.priceDispose = nil
+//            self.priceDispose = self.viewModel.priceSpreadResponse.takeUntil(self.rx.deallocated).subscribe(onNext: { [weak self] (isOK) in
+//                guard let `self` = self else { return }
+//
+//                print("监听priceTextFld的值2：")
+//            })
+//            self.viewModel.priceSpreadSubject.onNext(true)
+            
+            
+        }).disposed(by: self.disposeBag)
+        
+        
+        
+        //响应
+//        self.viewModel.priceSpreadResponse.subscribe(onNext: { [weak self] (isOK) in
+//            guard let `self` = self else { return }
+//
+//            print("监听priceTextFld的值1：")
+//        }).disposed(by: self.disposeBag)
+        #endif
+        
+        #if false
         //1，just() 方法
         let observable = Observable<Int>.just(5)
         //2，of() 方法
@@ -54,7 +120,7 @@ class SHRxswift_3ViewController: UIViewController {
         observable12.subscribe { (event) in
             print(event)
         }
-        // Do any additional setup after loading the view.
+        #endif
     }
     
 
