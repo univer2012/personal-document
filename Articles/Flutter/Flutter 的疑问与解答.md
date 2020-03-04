@@ -25,6 +25,16 @@ flutter Could not find an option named "track-widget-creation".
 
 
 
+#### 1.1、安卓打包
+
+在项目的顶目录下，运行：
+
+```
+flutter build apk
+```
+
+
+
 
 
 ### 2、Cupertino风格 push时隐藏底部TabBar
@@ -172,4 +182,36 @@ BottomNavigationBar({
 ```
 
 
+
+### 4、出现`Waiting for another flutter command to release the startup lock...`异常的解决办法
+
+来自：[Waiting for another flutter command to release the startup lock... 异常解决](https://blog.csdn.net/qq_26287435/article/details/89537153?fps=1&locationNum=2)
+
+---
+
+
+
+在VS Code中执行`Get packages`、`Run Flutter`等操作时，先在终端执行一下`flutter doctor`，甄别一下flutter是否能正常使用。因为有时会出现下面提示的问题：
+
+```shell
+Waiting for another flutter command to release the startup lock...
+```
+
+一般出现这问题，那不管是`flutter create xxx_flutter`(创建flutter项目)、还是`flutter packages get`(拉取flutter packages)，还是`flutter run`(运行flutter项目)，都会一直在等待，没有下文。
+
+
+
+这时就需要终端运行下`flutter doctor`，看是不是出现了上面的提示。
+
+
+
+出现上面的提示，可以有2种解决办法：
+
+**办法一：**关闭项目，重启IDE，但这些操作都无效，除非你重启电脑。
+
+**办法二：**
+
+- 1. 进入到你的flutter sdk目录中，然后找到`bin/cache/lockfile`文件，删除它即可。
+
+- 2. 删除之后你再运行`flutter doctor`，你会发现错误已经解决了。
 
