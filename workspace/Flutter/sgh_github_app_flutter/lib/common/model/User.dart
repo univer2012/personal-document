@@ -86,5 +86,9 @@ class User extends Object {
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
   Map<String, dynamic> toJson() => _$UserToJson(this);
+
+  // 命名构造函数
+  User.empty();
+  
 }
 

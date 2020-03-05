@@ -1,37 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
+import 'package:sgh_github_app_flutter/common/model/User.dart';
 import 'package:sgh_github_app_flutter/common/style/GSYStyle.dart';
+import 'package:sgh_github_app_flutter/page/HomePage.dart';
+import 'package:sgh_github_app_flutter/page/LoginPage.dart';
 import 'package:sgh_github_app_flutter/page/WelcomePage.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-// One simple action: Increment
-enum Actions { Increment }
-
-// The reducer, which takes the previous count and increments it in response
-// to an Increment action.
-int counterReducer(int state, dynamic action) {
-  if (action == Actions.Increment) {
-    return state + 1;
-  }
-
-  return state;
-}
 
 
 void main() {
-  final store = new Store<int>(counterReducer, initialState: 0);
-
-  runApp(new FlutterReduxApp(
-    title: 'Flutter Redux Demo',
-    store: store,
-  ));
+  runApp(new FlutterReduxApp());
 }
 
 class FlutterReduxApp extends StatelessWidget {
-  final Store<int> store;
-  final String title;
 
-  FlutterReduxApp({Key key, this.store, this.title}): super(key: key);
+  final store = new Store<GSYState>(counterReducer,initialState: new GSYState(userInfo: User.empty()));
+
+  FlutterReduxApp({Key key}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +30,17 @@ class FlutterReduxApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: GSYColors.primarySwatch,
         ),
-        home: new WelcomePage()
+        routes: {
+          "/": (context) {
+            return WelcomePage();
+          },
+          "home": (context) {
+            return HomePage();
+          },
+          "login": (context) {
+            return LoginPage();
+          },
+        },
       ),
     );
   }

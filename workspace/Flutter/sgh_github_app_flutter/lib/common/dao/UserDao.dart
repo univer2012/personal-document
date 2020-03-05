@@ -9,6 +9,8 @@ import 'package:sgh_github_app_flutter/common/local/LocalStorage.dart';
 import 'package:sgh_github_app_flutter/common/model/User.dart';
 import 'package:sgh_github_app_flutter/common/net/Address.dart';
 import 'package:sgh_github_app_flutter/common/net/Api.dart';
+import 'package:redux/redux.dart';
+import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
 
 class UserDao {
   static login(userName, password, callback) async {
@@ -47,11 +49,11 @@ class UserDao {
   }
 
   ///初始化用户信息
-  static initUserInfo() async {
+  static initUserInfo(Store store) async {
     var token = await LocalStorage.get(Config.TOKEN_KEY);
     var res = await getUserInfoLocal();
     if (res != null && res.result && token != null) {
-      //todo dispatch store
+      store.dispatch(UserActions(res.data));
     }
     return new DataResult(res.data, (res.result && (token != null)));
   }
