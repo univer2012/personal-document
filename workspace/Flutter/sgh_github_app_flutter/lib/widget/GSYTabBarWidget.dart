@@ -106,7 +106,8 @@ class _GSYTabBarState extends State<GSYTabBarWidget> with SingleTickerProviderSt
         children: _tabViews
       ),
       bottomNavigationBar: new Material(
-        color: Colors.deepOrange,
+        //为了适配主题风格，包一层Material实现风格套用
+        color: _backgroundColor, //底部导航栏主题颜色
         child: new TabBar(
           controller: _tabController,
           tabs: _tabItems,
