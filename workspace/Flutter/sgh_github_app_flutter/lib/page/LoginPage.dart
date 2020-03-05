@@ -64,6 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                 new GSYInputWidget(
                   hintText: GSYStrings.login_username_hint_text, 
                   iconData: Icons.access_alarm,
+                  obscureText: false,
                   onChanged: (String value) {
                     _userName = value;
                   },
@@ -73,6 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 new GSYInputWidget(
                   hintText: GSYStrings.login_password_hint_text, 
                   iconData: Icons.access_alarm,
+                  obscureText: true,
                   onChanged: (String value) {
                     _password = value;
                   },
