@@ -55,9 +55,8 @@ class HttpManager {
     Response response;
 
     try {
-      //response = await dio.postUri(url, data: params, options: option);
-      //response = await dio.get(url, data: params, options: option);
-      response = await dio.post(url, data: params, options: option);
+      //response = await dio.get(url,data: params, options: option);
+      response = await dio.request(url,data: params, options: option);
     } on DioError catch (e) {
       Response errorResponse;
       if (e.response != null) {
