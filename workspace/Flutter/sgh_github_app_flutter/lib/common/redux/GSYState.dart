@@ -1,19 +1,16 @@
 import 'package:sgh_github_app_flutter/common/model/User.dart';
+import 'package:sgh_github_app_flutter/common/redux/UserRedux.dart';
 
 class GSYState {
+
   User userInfo;
+  
   GSYState({this.userInfo});
 }
 
-// One simple action: Increment
-class UserActions {
-  final User userInfo;
-  UserActions(this.userInfo);
-}
 
-GSYState counterReducer(GSYState state, dynamic action) {
-  if (action is UserActions) {
-    state.userInfo = action.userInfo;
-  }
-  return state;
+GSYState appReducer(GSYState state, dynamic action) {
+  return GSYState(
+    userInfo: UserReducer(state.userInfo, action),
+  );
 }
