@@ -28,6 +28,7 @@ dependencies:
   shared_preferences: ^0.5.1
   fluttertoast: ^2.0.4
   json_annotation: 3.0.1
+  flutter_redux: ^0.6.0
 
 dev_dependencies:
   built_value_generator: 6.8.2

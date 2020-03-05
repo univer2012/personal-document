@@ -31,7 +31,7 @@ class UserDao {
 
     var res = await HttpManager.netFetch(Address.getAuthorization(), json.encode(requestParams), null, new Options(method: 'post'));
     if (res != null && res.result) {
-      await LocalStorage.save(Config.PW_KEY, password);
+      await LocalStorage.save(Config.PW_KEY, password); //保存密码
       var resultData = await getUserInfo(null);
       //todo 登录成功后
       if (Config.DEBUG) {
