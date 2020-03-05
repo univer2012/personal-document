@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sgh_github_app_flutter/widget/gsy_tabbar_widget.dart';
+import 'package:sgh_github_app_flutter/page/WelcomePage.dart';
+import 'package:sgh_github_app_flutter/widget/GSYTabBarWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -21,22 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new GSYTabBarWidget(
-        type: GSYTabBarWidget.BOTTOM_TAB,
-        tabItems: <Widget>[
-          new Tab(icon: new Icon(Icons.directions_car),),
-          new Tab(icon: new Icon(Icons.directions_transit),),
-          new Tab(icon: new Icon(Icons.directions_bike),),
-        ],
-        tabViews: <Widget>[
-          new Icon(Icons.directions_car),
-          Icon(Icons.directions_transit),
-          new Icon(Icons.directions_bike),
-        ],
-        backgroundColor: Colors.deepOrange,
-        indicatorColor: Colors.white,
-        title: 'Title',
-      ),
+      home: new WelcomePage()
     );
   }
 }
