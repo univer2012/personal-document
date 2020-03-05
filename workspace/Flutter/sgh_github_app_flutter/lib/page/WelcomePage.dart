@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:sgh_github_app_flutter/common/dao/UserDao.dart';
 import 'package:sgh_github_app_flutter/page/HomePage.dart';
 import 'package:sgh_github_app_flutter/page/LoginPage.dart';
 
@@ -23,12 +24,13 @@ class WelcomePage extends StatelessWidget {
       }));
     }
 
-    // 一秒以后偶将任务添加至event队列
+    
     new Future.delayed(const Duration(seconds: 2), (){
-      Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (context) {
-        //判断是去登录还是主页
-        return new LoginPage();
-      }));
+      UserDao.initUserInfo().then((res) {
+        print('Fffffffffffff');
+        print(res);
+        toNext(res);
+      });
     });
 
     return Container(
