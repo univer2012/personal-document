@@ -3,12 +3,16 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:sgh_github_app_flutter/common/config/Config.dart';
 import 'package:sgh_github_app_flutter/common/dao/EventDao.dart';
 import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
 import 'package:sgh_github_app_flutter/widget/EventItem.dart';
 import 'package:sgh_github_app_flutter/widget/GSYPullLoadWidget.dart';
 import 'package:redux/redux.dart';
 
+/**
+ * 动态
+ */
 class DynamicPage extends StatefulWidget {
   DynamicPage({Key key}) : super(key: key);
 
@@ -17,29 +21,59 @@ class DynamicPage extends StatefulWidget {
 }
 
 class _DynamicPageState extends State<DynamicPage> {
+  bool isLoading = false;
+
+  int page = 1;
+
+  final List dataList = new List();
+
   final GSYPullLoadWidgetControl pullLoadWidgetControl = new GSYPullLoadWidgetControl();
 
 Future<Null> _handleRefresh() async {
+  if (isLoading) {
+    return null;
+  }
+  isLoading = true;
+  page = 1;
+  var result = await EventDao.getEventReceived(_getStore(), page: page);
   setState(() {
-    pullLoadWidgetControl.count = 5;
+    pullLoadWidgetControl.needLoadMore = (result != null && result.length == Config.PAGE_SIZE);
   });
+  isLoading = false;
   return null;
 }
 
-bool _onNotification<Notification>(Notification notify) {
-  if (notify is! OverscrollNotification) {
-    return true;
+Future<Null> _onLoadMore() async {
+  if (isLoading) {
+    return null;
   }
+  isLoading = true;
+  page ++;
+  var result = await EventDao.getEventReceived(_getStore(), page: page);
   setState(() {
-    pullLoadWidgetControl.count += 5;
+    pullLoadWidgetControl.needLoadMore = (result != null);
   });
-  return true;
+  isLoading = false;
+  return null;
+}
+
+_renderEventItem(EventViewModel e) {
+  return new EventItem(e);
+}
+
+Store<GSYState> _getStore() {
+  return StoreProvider.of(context);
 }
 
 @override
+  void initState() {
+    super.initState();
+  }
+
+@override
   void didChangeDependencies() {
-    Store<GSYState> store = StoreProvider.of(context);
-    EventDao.getEventReceived(store);
+    pullLoadWidgetControl.dataList = _getStore().state.eventList;
+    _handleRefresh();
     super.didChangeDependencies();
   }
 
@@ -50,9 +84,9 @@ bool _onNotification<Notification>(Notification notify) {
         
         return GSYPullLoadWidget(
           pullLoadWidgetControl, 
-          (BuildContext context, int index) => new EventItem(), 
+          (BuildContext context, int index) => _renderEventItem(pullLoadWidgetControl.dataList[index]), 
           _handleRefresh, 
-          _onNotification
+          _onLoadMore
         );
       }, 
       
