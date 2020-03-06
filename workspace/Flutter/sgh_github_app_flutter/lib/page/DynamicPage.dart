@@ -6,9 +6,35 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sgh_github_app_flutter/common/model/User.dart';
 import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
 import 'package:sgh_github_app_flutter/common/redux/UserRedux.dart';
+import 'package:sgh_github_app_flutter/widget/EventItem.dart';
+import 'package:sgh_github_app_flutter/widget/GSYPullLoadWidget.dart';
 
-class DynamicPage extends StatelessWidget {
-  const DynamicPage({Key key}) : super(key: key);
+class DynamicPage extends StatefulWidget {
+  DynamicPage({Key key}) : super(key: key);
+
+  @override
+  _DynamicPageState createState() => _DynamicPageState();
+}
+
+class _DynamicPageState extends State<DynamicPage> {
+  final GSYPullLoadWidgetControl pullLoadWidgetControl = new GSYPullLoadWidgetControl();
+
+Future<Null> _handleRefresh() async {
+  setState(() {
+    pullLoadWidgetControl.count = 5;
+  });
+  return null;
+}
+
+bool _onNotification<Notification>(Notification notify) {
+  if (notify is! OverscrollNotification) {
+    return true;
+  }
+  setState(() {
+    pullLoadWidgetControl.count += 5;
+  });
+  return true;
+}
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +46,11 @@ class DynamicPage extends StatelessWidget {
           user.name = "new name";
           store.dispatch(new UpdateUserAction(user));
         });
-        return new Text(
-          store.state.userInfo.login,
-          style: Theme.of(context).textTheme.display1,
+        return GSYPullLoadWidget(
+          pullLoadWidgetControl, 
+          (BuildContext context, int index) => new EventItem(), 
+          _handleRefresh, 
+          _onNotification
         );
       }, 
       
