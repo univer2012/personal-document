@@ -2,19 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 ///========= demo 文件
-import '../demo/text_demo.dart';
-import '../demo/container_demo.dart';
-import '../demo/image_demo.dart';
-import '../demo/listView_demo.dart';
-import '../demo/dynamic_listview_demo.dart';
-import '../demo/gridview_demo.dart';
+import '../home_page_demos/demo/text_demo.dart';
+import '../home_page_demos/demo/container_demo.dart';
+import '../home_page_demos/demo/image_demo.dart';
+import '../home_page_demos/demo/listView_demo.dart';
+import '../home_page_demos/demo/dynamic_listview_demo.dart';
+import '../home_page_demos/demo/gridview_demo.dart';
 
 //========= 布局 demo
-import '../layout_demo/layout_row_demo.dart';
-import '../layout_demo/layout_column_demo.dart';
-import '../layout_demo/layout_stack_demo.dart';
-import '../layout_demo/layout_stack_positioned_demo.dart';
-import '../layout_demo/layout_card_component_demo.dart';
+import '../home_page_demos/layout_demo/layout_row_demo.dart';
+import '../home_page_demos/layout_demo/layout_column_demo.dart';
+import '../home_page_demos/layout_demo/layout_stack_demo.dart';
+import '../home_page_demos/layout_demo/layout_stack_positioned_demo.dart';
+import '../home_page_demos/layout_demo/layout_card_component_demo.dart';
 
 //========= 导航与其他
 import '../navigator_demo/navi1_common_demo.dart';
