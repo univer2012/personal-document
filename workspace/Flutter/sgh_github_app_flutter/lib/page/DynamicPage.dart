@@ -3,11 +3,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:sgh_github_app_flutter/common/model/User.dart';
+import 'package:sgh_github_app_flutter/common/dao/EventDao.dart';
 import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
-import 'package:sgh_github_app_flutter/common/redux/UserRedux.dart';
 import 'package:sgh_github_app_flutter/widget/EventItem.dart';
 import 'package:sgh_github_app_flutter/widget/GSYPullLoadWidget.dart';
+import 'package:redux/redux.dart';
 
 class DynamicPage extends StatefulWidget {
   DynamicPage({Key key}) : super(key: key);
@@ -36,16 +36,18 @@ bool _onNotification<Notification>(Notification notify) {
   return true;
 }
 
+@override
+  void didChangeDependencies() {
+    Store<GSYState> store = StoreProvider.of(context);
+    EventDao.getEventReceived(store);
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new StoreBuilder<GSYState>(
       builder: (context, store) {
-        new Future.delayed(const Duration(seconds: 2), (){
-          User user = store.state.userInfo;
-          user.login = "new login";
-          user.name = "new name";
-          store.dispatch(new UpdateUserAction(user));
-        });
+        
         return GSYPullLoadWidget(
           pullLoadWidgetControl, 
           (BuildContext context, int index) => new EventItem(), 
