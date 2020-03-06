@@ -4,24 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sgh_github_app_flutter/common/dao/UserDao.dart';
 import 'package:sgh_github_app_flutter/common/redux/GSYState.dart';
-import 'package:sgh_github_app_flutter/main.dart';
-import 'package:sgh_github_app_flutter/page/HomePage.dart';
-import 'package:sgh_github_app_flutter/page/LoginPage.dart';
+import 'package:sgh_github_app_flutter/common/utils/NavigatorUtils.dart';
 
 class WelcomePage extends StatelessWidget {
+  static final String sName = "/";
+
   const WelcomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
     toNext(res) {
-      String widget;
       if (res != null && res.result) {
-        widget = "home";
+        NavigatorUtils.goHome(context);
       } else {
-        widget = "login";
+        NavigatorUtils.goLogin(context);
       }
-      Navigator.pushReplacementNamed(context, widget);
     }
 
 

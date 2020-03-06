@@ -31,13 +31,13 @@ class FlutterReduxApp extends StatelessWidget {
           primarySwatch: GSYColors.primarySwatch,
         ),
         routes: {
-          "/": (context) {
+          WelcomePage.sName: (context) {
             return WelcomePage();
           },
-          "home": (context) {
+          HomePage.sName: (context) {
             return HomePage();
           },
-          "login": (context) {
+          LoginPage.sName: (context) {
             return LoginPage();
           },
         },
