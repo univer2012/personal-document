@@ -21,7 +21,8 @@ import '../navigator_demo/navi1_common_demo.dart';
 import '../navigator_demo/navi2_params_demo.dart';
 import '../navigator_demo/navi4_back_with_params_demo.dart';
 
-
+//========= redux
+import '../home_page_demos/redux/d2003top_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
   final String title;
@@ -147,6 +148,14 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                  child: Text('4页面跳转并返回数据',style: TextStyle(color: Colors.white),),
                  onPressed: (){
                    navigateTo(Navi4BackWithParamsPage());
+                 }
+                ),
+                RaisedButton(
+                 color: Colors.blue,
+                 child: Text('5Redux的简单实用',style: TextStyle(color: Colors.white),),
+                 onPressed: (){
+                   ///(Flutter | 状态管理探索篇——Redux（二）)[https://www.jianshu.com/p/5d7e2dbdaea5]
+                   navigateTo(TopScreen());
                  }
                 ),
              ],

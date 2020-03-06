@@ -1,25 +1,35 @@
+import 'package:demo001/home_page_demos/redux/d2003count_state.dart';
 import 'package:flutter/material.dart';
 
 import 'bottom_navigation_bar_widget.dart';
 
+import 'home_page_demos/redux/d2003count_state.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:redux/redux.dart';
+
 
 void main() => runApp(MyApp());
+
 
 double screenWidth;
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  final Store<CountState> store = new Store<CountState>(reducer,initialState: CountState.initState());
+
+  MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: BottomNavigationBarWidget(),
-      
+    return StoreProvider(
+      store: store, 
+      child: new MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BottomNavigationBarWidget(),
+      )
     );
   }
 }
