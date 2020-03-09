@@ -14,12 +14,7 @@ class EventItem extends StatelessWidget {
       : new Container(
         child: new Text(
           eventViewModel.actionDes,
-          style: new TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-            height: 1.3,
-            color: Colors.black,
-          ),
+          style: GSYConstant.subLightSmallText
         ),
         margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
         alignment: Alignment.topLeft,
@@ -49,19 +44,14 @@ class EventItem extends StatelessWidget {
                       ),
                     ),
                     new Padding(padding: EdgeInsets.all(10.0)),
-                    new Expanded(child: new Text(eventViewModel.actionUser)),
-                    new Text('fffffffffffff'),
+                    new Expanded(child: new Text(eventViewModel.actionUser,style: GSYConstant.smallTextBold,)),
+                    new Text('fffffffffffff',style: GSYConstant.subSmallText,),
                   ],
                 ),
                 new Container(
                   child: new Text(
                     eventViewModel.actionTarget,
-                    style: new TextStyle(
-                      fontWeight: FontWeight.bold, 
-                      fontSize: 16.0, 
-                      height: 1.3,
-                      color: Colors.lightBlue
-                    ),
+                    style: GSYConstant.smallTextBold
                   ),
                   margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
                   alignment: Alignment.topLeft,
