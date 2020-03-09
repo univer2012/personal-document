@@ -9,6 +9,21 @@ class EventItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget des = (eventViewModel.actionDes == null || eventViewModel.actionDes.length == 0)
+      ? new Container() 
+      : new Container(
+        child: new Text(
+          eventViewModel.actionDes,
+          style: new TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+            height: 1.3,
+            color: Colors.black,
+          ),
+        ),
+        margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
+        alignment: Alignment.topLeft,
+      );
     return new Container(
       child: new Card(
         elevation: 5.0,
@@ -27,6 +42,7 @@ class EventItem extends StatelessWidget {
                     new ClipOval(
                       child: new FadeInImage.assetNetwork(
                         placeholder: "static/images/logo.png",
+                        //预览图
                         image: eventViewModel.actionUserPic,
                         width: 30.0,
                         height: 30.0,
@@ -50,19 +66,7 @@ class EventItem extends StatelessWidget {
                   margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
                   alignment: Alignment.topLeft,
                 ),
-                new Container(
-                  child: new Text(
-                    eventViewModel.actionDes,
-                    style: new TextStyle(
-                      fontWeight: FontWeight.bold, 
-                      fontSize: 16.0, 
-                      height: 1.3,
-                      color: Colors.black
-                    ),
-                  ),
-                  margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
-                  alignment: Alignment.topLeft,
-                )
+                des,
               ],
             ),
           ),
