@@ -15,9 +15,9 @@ class HomePage extends StatelessWidget {
     return new GSYTabBarWidget(
       type: GSYTabBarWidget.BOTTOM_TAB,
       tabItems: <Widget>[
-        new Tab(icon: new Icon(Icons.directions_car),),
-        new Tab(icon: new Icon(Icons.directions_transit),),
-        new Tab(icon: new Icon(Icons.directions_bike),),
+        new Tab(icon: new Icon(GSYIcons.MAIN_DT),),
+        new Tab(icon: new Icon(GSYIcons.MAIN_QS),),
+        new Tab(icon: new Icon(GSYIcons.mAIN_MY),),
       ],
       tabViews: <Widget>[
         new DynamicPage(),
