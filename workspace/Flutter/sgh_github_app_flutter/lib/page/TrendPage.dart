@@ -10,8 +10,8 @@ class TrendPage extends StatefulWidget {
   @override
   _TrendPageState createState() => _TrendPageState();
 }
-
-class _TrendPageState extends State<TrendPage> {
+// ignore: mixin_inherits_from_not_object
+class _TrendPageState extends State<TrendPage> with AutomaticKeepAliveClientMixin {
   bool isLoading = false;
 
   int page = 1;
@@ -48,16 +48,19 @@ class _TrendPageState extends State<TrendPage> {
   }
 
   @override
+  bool get wantKeepAlive => true;
+
+  @override
   void initState() {
     super.initState();
   }
 
   @override
   void didChangeDependencies() {
-    super.didChangeDependencies();
     if (pullLoadWidgetControl.dataList.length == 0) {
       _handleRefresh();
     }
+    super.didChangeDependencies();
   }
 
   @override

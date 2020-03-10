@@ -20,7 +20,8 @@ class DynamicPage extends StatefulWidget {
   _DynamicPageState createState() => _DynamicPageState();
 }
 
-class _DynamicPageState extends State<DynamicPage> {
+// ignore: mixin_inherits_from_not_object
+class _DynamicPageState extends State<DynamicPage> with AutomaticKeepAliveClientMixin {
   bool isLoading = false;
 
   int page = 1;
@@ -64,6 +65,9 @@ _renderEventItem(EventViewModel e) {
 Store<GSYState> _getStore() {
   return StoreProvider.of(context);
 }
+
+@override
+  bool get wantKeepAlive => true;
 
 @override
   void initState() {
