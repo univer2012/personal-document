@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sgh_github_app_flutter/common/style/GSYStyle.dart';
+import 'package:sgh_github_app_flutter/common/utils/CommonUtils.dart';
 import 'package:sgh_github_app_flutter/common/utils/EventUtils.dart';
 import 'package:sgh_github_app_flutter/widget/GSYCardItem.dart';
 
@@ -42,7 +43,7 @@ class EventItem extends StatelessWidget {
                     ),
                     new Padding(padding: EdgeInsets.all(10.0)),
                     new Expanded(child: new Text(eventViewModel.actionUser,style: GSYConstant.smallTextBold,)),
-                    new Text('fffffffffffff',style: GSYConstant.subSmallText,),
+                    new Text(eventViewModel.actionTime,style: GSYConstant.subSmallText,),
                   ],
                 ),
                 new Container(
@@ -72,6 +73,7 @@ class EventViewModel {
   String actionTarget;
 
   EventViewModel.fromEventMap(eventMap) {
+    actionTime = CommonUtils.getNewsTimeStr(DateTime.parse(eventMap['created_at']));
     actionUser = eventMap["actor"]["display_login"];
     actionUserPic = eventMap["actor"]["avatar_url"];
     var other = EventUtils.getActionAndDes(eventMap);
