@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       tabItems: <Widget>[
         new Tab(icon: new Icon(GSYIcons.MAIN_DT),),
         new Tab(icon: new Icon(GSYIcons.MAIN_QS),),
-        new Tab(icon: new Icon(GSYIcons.mAIN_MY),),
+        new Tab(icon: new Icon(GSYIcons.MAIN_MY),),
       ],
       tabViews: <Widget>[
         new DynamicPage(),

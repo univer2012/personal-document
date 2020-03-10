@@ -73,7 +73,9 @@ Store<GSYState> _getStore() {
 @override
   void didChangeDependencies() {
     pullLoadWidgetControl.dataList = _getStore().state.eventList;
-    _handleRefresh();
+    if (pullLoadWidgetControl.dataList.length == 0) {
+      _handleRefresh();
+    }
     super.didChangeDependencies();
   }
 

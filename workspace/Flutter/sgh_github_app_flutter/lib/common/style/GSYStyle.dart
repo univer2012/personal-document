@@ -129,6 +129,12 @@ class GSYConstant {
     fontSize: normalTextSize,
   );
 
+  static const normalTextBold = TextStyle(
+    color: Color(GSYColors.mainTextColor),
+    fontSize: normalTextSize,
+    fontWeight: FontWeight.bold,
+  );
+
   static const subNormalText = TextStyle(
     color: Color(GSYColors.subTextColor),
     fontSize: normalTextSize,
@@ -189,8 +195,8 @@ class GSYIcons {
   static String FONT_FAMILY = 'wxcIconFont';
 
   static IconData MAIN_DT = new IconData(0xe684, fontFamily: GSYIcons.FONT_FAMILY);
-
   static IconData MAIN_QS = new IconData(0xe818, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData MAIN_MY = new IconData(0xe6d0, fontFamily: GSYIcons.FONT_FAMILY);
 
-  static IconData mAIN_MY = new IconData(0xe6d0, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData REPOS_ITEM_USER = new IconData(0xe63e, fontFamily: GSYIcons.FONT_FAMILY);
 }
