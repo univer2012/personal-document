@@ -17,11 +17,33 @@ class GSYIconText extends StatelessWidget {
 
   final double iconSize;
 
-  const GSYIconText(this.iconData, this.iconText, this.textStyle, this.iconColor, this.iconSize, {this.padding = 0.0});
+  final VoidCallback onPressed;
+
+  final MainAxisAlignment mainAxisAlignment;
+
+  final MainAxisSize mainAxisSize;
+
+  final CrossAxisAlignment crossAxisAlignment;
+
+  GSYIconText(
+    this.iconData, 
+    this.iconText, 
+    this.textStyle, 
+    this.iconColor, 
+    this.iconSize, {
+      this.padding = 0.0,
+      this.onPressed,
+      this.mainAxisAlignment = MainAxisAlignment.start,
+      this.mainAxisSize = MainAxisSize.max,
+      this.crossAxisAlignment = CrossAxisAlignment.center,
+  });
 
   @override
   Widget build(BuildContext context) {
     return new Row(
+      mainAxisAlignment: mainAxisAlignment,
+      mainAxisSize: mainAxisSize,
+      crossAxisAlignment: crossAxisAlignment,
       children: <Widget>[
         new Icon(
           iconData,

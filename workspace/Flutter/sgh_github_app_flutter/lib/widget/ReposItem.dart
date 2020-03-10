@@ -31,7 +31,7 @@ class ReposItem extends StatelessWidget {
                         placeholder: 'static/images/logo.png', 
                         //预览图
                         fit: BoxFit.fitWidth,
-                        image: "FFFF",
+                        image: reposViewModel.ownerPic,
                         width: 40.0,
                         height: 40.0,
                       ),
@@ -41,10 +41,10 @@ class ReposItem extends StatelessWidget {
                       child: new Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          new Text('FFFF', style: GSYConstant.normalTextBold,),
+                          new Text(reposViewModel.repositoryName, style: GSYConstant.normalTextBold,),
                           new GSYIconText(
                             GSYIcons.REPOS_ITEM_USER,
-                            "FFF",
+                            reposViewModel.ownerName,
                             GSYConstant.subLightSmallText, 
                             Color(GSYColors.subLightTextColor), 
                             10.0, 
@@ -53,10 +53,53 @@ class ReposItem extends StatelessWidget {
                         ],
                       ),
                     ),
-                    new Container(
-                      child: new Text("gggggggggggggggggggggggg", style: GSYConstant.subSmallText,),
-                      margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
-                      alignment: Alignment.topLeft,
+                    new Text(reposViewModel.repositoryType, style: GSYConstant.subSmallText),
+                  ],
+                ),
+                new Container(
+                  child: new Text(reposViewModel.repositoryDes, style: GSYConstant.subSmallText, maxLines: 3, overflow: TextOverflow.ellipsis),
+                  margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
+                  alignment: Alignment.topLeft,
+                ),
+                new Padding(padding: EdgeInsets.all(10.0)),
+                new Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    new Expanded(
+                      child: new Center(
+                        child: new GSYIconText(
+                          GSYIcons.REPOS_ITEM_STAR,
+                          reposViewModel.repositoryStar,
+                          GSYConstant.subLightSmallText,
+                          Color(GSYColors.subTextColor),
+                          15.0,
+                          padding: 5.0,
+                        ),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new GSYIconText(
+                          GSYIcons.REPOS_ITEM_FORK,
+                          reposViewModel.repositoryFork,
+                          GSYConstant.subLightSmallText,
+                          Color(GSYColors.subTextColor),
+                          15.0,
+                          padding: 5.0,
+                        ),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new GSYIconText(
+                          GSYIcons.REPOS_ITEM_ISSUE,
+                          reposViewModel.repositoryWatch,
+                          GSYConstant.subLightSmallText,
+                          Color(GSYColors.subTextColor),
+                          15.0,
+                          padding: 5.0,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -77,6 +120,6 @@ class ReposViewModel {
   String repositoryFork;
   String repositoryWatch;
   String hideWatchIcon;
-  String repositoryTyp;
+  String repositoryType = "";
   String repositoryDes;
 }

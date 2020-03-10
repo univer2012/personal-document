@@ -199,4 +199,7 @@ class GSYIcons {
   static IconData MAIN_MY = new IconData(0xe6d0, fontFamily: GSYIcons.FONT_FAMILY);
 
   static IconData REPOS_ITEM_USER = new IconData(0xe63e, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData REPOS_ITEM_STAR = new IconData(0xe643, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData REPOS_ITEM_FORK = new IconData(0xe67e, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData REPOS_ITEM_ISSUE = new IconData(0xe661, fontFamily: GSYIcons.FONT_FAMILY);
 }
