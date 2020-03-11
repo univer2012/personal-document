@@ -215,3 +215,53 @@ Waiting for another flutter command to release the startup lock...
 
 - 2. 删除之后你再运行`flutter doctor`，你会发现错误已经解决了。
 
+
+
+### 5、flutter之依赖版本冲突:
+
+```
+E:\Flutter_Sdk\flutter\bin\flutter.bat --no-color packages get
+Running "flutter packages get" in LearnFlutter...
+The current Dart SDK version is 2.1.0-dev.4.0.flutter-cd9a42239f.
+
+Because flutterdemo depends on build_runner >=0.1.1 <=0.9.1 which requires SDK version >=1.9.1 <2.0.0-∞, version solving failed.
+pub get failed (1)
+Process finished with exit code 1
+```
+
+
+
+来自：[flutter之依赖版本冲突](https://www.jianshu.com/p/cb9f2af0d3da)
+
+
+
+解决方法：
+
+###### 1.打开pubspec.yaml找到对应的build_runner
+
+```
+dev_dependencies:
+ build_runner: ^0.8.0
+```
+
+可以看到报错时候依赖的是哪一个版本，然后当我们又不知道目前到底要依赖那个版本才算是合适的正确的时候我们可以这样做
+
+```
+dev_dependencies:
+ build_runner: any
+```
+
+any可以自动的调用pub的版本分析器来寻找最合适的能够避免冲突的依赖版本并下载，这个时候就没问题了。
+
+### 6、运行Flutter项目时，`DEBUG CONSOLE`报错：
+
+```
+Launching lib/main.dart on iPhone 11 Pro Max in debug mode...
+ProcessException: No such file or directory
+  Command: /usr/local/bin/pod install --verbose
+Exited (sigterm)
+```
+
+解决办法：
+
+1、

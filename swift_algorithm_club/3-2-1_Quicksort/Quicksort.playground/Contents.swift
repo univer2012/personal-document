@@ -22,7 +22,7 @@ func quicksort<T: Comparable>(_ a: [T]) -> [T] {
     
     return quicksort(less) + equal + quicksort(greater)
 }
-//: > 译注：pivot 中心点，枢轴，基准。本文的pivot都翻译成“基准”。
+//: > 译注：pivot    [ˈpɪvət]    中心点，枢轴，基准。本文的pivot都翻译成“基准”。
 
 let list = [ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
 print( quicksort(list) ) // [-1, 0, 1, 2, 3, 5, 8, 8, 9, 10, 14, 26, 27]
@@ -179,7 +179,15 @@ func partitionDutchFlag<T: Comparable>(_ a: inout [T], low: Int, high: Int, pivo
     
     while equal <= larger {
         if a[equal] < pivot {
-            swa
+            swap(&a, smaller, equal)
+            smaller += 1
+            equal += 1
+        } else if a[equal] == pivot {
+            equal += 1
+        } else {
+            swap(&a, equal, larger)
+            larger -= 1
         }
     }
+    return (smaller, larger)
 }
