@@ -179,7 +179,15 @@ func partitionDutchFlag<T: Comparable>(_ a: inout [T], low: Int, high: Int, pivo
     
     while equal <= larger {
         if a[equal] < pivot {
-            swa
+            swap(&a, smaller, equal)
+            smaller += 1
+            equal += 1
+        } else if a[equal] == pivot {
+            equal += 1
+        } else {
+            swap(&a, equal, larger)
+            larger -= 1
         }
     }
+    return (smaller, larger)
 }

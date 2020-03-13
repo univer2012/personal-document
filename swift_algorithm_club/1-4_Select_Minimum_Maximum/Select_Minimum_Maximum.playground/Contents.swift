@@ -32,6 +32,7 @@ let array1 = [8, 3, 9, 4, 6]
 array1.min()    // 3
 array1.max()    // 9
 
+
 //: ## 最大值和最小值
 func minimunMaximum<T: Comparable>(_ array: [T]) -> (minimum: T, maximum: T)? {
     guard var minimum = array.first else {
