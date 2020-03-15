@@ -51,7 +51,7 @@ class SHLayerD1ViewController: UIViewController {
     }
     
     @objc func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
-        
+        layer.shadowOpacity = layer.shadowOpacity == 0.7 ? 0.0 : 0.7
     }
     @objc func pinchGestureRecognized(_ sender: UIPinchGestureRecognizer) {
         
