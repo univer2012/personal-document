@@ -40,7 +40,6 @@ class SGHBasicAnimationDelegateViewController: UIViewController, CAAnimationDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //setup the UI
         loginButton.layer.cornerRadius = 8.0
         loginButton.layer.masksToBounds = true

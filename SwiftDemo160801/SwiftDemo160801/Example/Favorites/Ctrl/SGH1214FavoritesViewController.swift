@@ -21,29 +21,41 @@ class SGH1214FavoritesViewController: UIViewController,UIGestureRecognizerDelega
 
     
     var tableView : UITableView!
-    let titlesArray = ["1、NSUserActivity",
-                       "2、Core Spotlight",
-                       "3、Web Mark Up",
-                       "4、Universal Links",
-                       "5、Smart App Banners",
-                       "6、Handoff"
+    let titlesArray: [[String: String]] = [
+        ["d1": "1、NSUserActivity"],
+        ["d2": "2、Core Spotlight"],
+        ["d3": "3、Web Mark Up"],
+        ["d4": "4、Universal Links"],
+        ["d5": "5、Smart App Banners"],
+        ["d6": "6、Handoff"],
     ]
     
-    let controllersArray = [
-        UIViewController(),
-        UIStoryboard(name: "Favorites", bundle: Bundle(for: SHCoreSpot1907TableViewController.self)).instantiateViewController(withIdentifier: "SHCoreSpot1907TableViewController"),
-        UIViewController(),
-        UIViewController(),
-        UIViewController(),
-        UIViewController(),
-    ]
+    private func getController(with key:String) -> UIViewController {
+        switch key {
+        case "d1":
+            return UIViewController()
+        case "d2":
+            return UIStoryboard(name: "Favorites", bundle: Bundle(for: SHCoreSpot1907TableViewController.self)).instantiateViewController(withIdentifier: "SHCoreSpot1907TableViewController")
+        case "d3":
+            return UIViewController()
+        case "d4":
+            return UIViewController()
+        case "d5":
+            return UIViewController()
+        case "d6":
+            return UIViewController()
+        default:
+            break
+        }
+        return UIViewController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
         self.title = "Favorites"
         //设置滑动返回
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         
         //初始化tableView的数据
@@ -74,7 +86,7 @@ extension SGH1214FavoritesViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         let row = indexPath.row as Int
-        cell.textLabel?.text = self.titlesArray[row]
+        cell.textLabel?.text = self.titlesArray[row].values.first
         return cell
     }
     
@@ -82,8 +94,11 @@ extension SGH1214FavoritesViewController: UITableViewDelegate, UITableViewDataSo
     ///UITableViewDelegate
     //选择一行
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = self.controllersArray[indexPath.row]
-        viewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(viewController, animated: true)
+        if let key = self.titlesArray[indexPath.row].keys.first {
+            
+            let viewController = getController(with: key)
+            viewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }

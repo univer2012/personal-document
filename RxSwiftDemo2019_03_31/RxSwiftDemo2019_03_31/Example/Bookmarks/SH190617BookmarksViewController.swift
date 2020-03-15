@@ -11,24 +11,30 @@ import RxSwift
 
 import SnapKit
 
-struct SH190617BookmarksViewModel {
-    let titles = [
-        "1、加速传感器（CoreMotion）的用法（要用真机）",
-        "2、解析JSON数据"
-    ]
-    let controllers = [
-        SHCoreMotionDemoViewController(),
-        SHJSONSerializationViewController(),
-    ]
-}
-
 
 
 class SH190617BookmarksViewController: UIViewController,UIGestureRecognizerDelegate {
     var tableView : UITableView?
     
-    let bookmarksViewModel = SH190617BookmarksViewModel()
-    
+    let titlesArray: [[String: String]] = [
+        ["d1": "1、加速传感器（CoreMotion）的用法（要用真机）"],
+        ["d2": "2、解析JSON数据"],
+        ["d3": "3、CALayer Demos"],
+    ]
+    private func getController(with key:String) -> UIViewController {
+        switch key {
+        case "d1":
+            return SHCoreMotionDemoViewController()
+        case "d2":
+            return SHJSONSerializationViewController()
+        case "d3":
+            return SHLayerListDemoViewController()
+        default:
+            break
+        }
+        return UIViewController()
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,25 +54,27 @@ class SH190617BookmarksViewController: UIViewController,UIGestureRecognizerDeleg
             make.edges.equalToSuperview()
         }
 
-        // Do any additional setup after loading the view.
     }
 }
 
 extension SH190617BookmarksViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookmarksViewModel.titles.count
+        return titlesArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksCell", for:indexPath)
-        cell.textLabel?.text = bookmarksViewModel.titles[indexPath.row]
+        cell.textLabel?.text = titlesArray[indexPath.row].values.first
         cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
         return cell
     }
 }
 extension SH190617BookmarksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = bookmarksViewModel.controllers[indexPath.row]
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let key = self.titlesArray[indexPath.row].keys.first {
+            
+            let viewController = getController(with: key)
+            viewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }

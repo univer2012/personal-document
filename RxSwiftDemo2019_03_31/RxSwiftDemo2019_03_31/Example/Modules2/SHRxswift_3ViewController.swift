@@ -18,8 +18,7 @@ class SHRxswift_3ViewController: UIViewController {
     let priceTextFld = UITextField()
     
     var priceDispose :Disposable?
-    
-    var observer : Observer<String>?
+    var observer : Observable<String>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,7 @@ class SHRxswift_3ViewController: UIViewController {
         
         self.observer = self.viewModel.didClickOpen("").asObservable()
         
-        observer.subscribe(onNext: { (text) in
+        observer?.subscribe(onNext: { (text) in
             print("callBack_succeed_observer：%@",text)
         }).disposed(by: self.disposeBag)
         
