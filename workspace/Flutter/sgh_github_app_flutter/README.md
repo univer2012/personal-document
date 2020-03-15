@@ -23,3 +23,8 @@ welcome -> login
 flutter packages pub run build_runner build
 ```
 具体请查看：[JSON和序列化 ](https://flutterchina.club/json/#manual-serialization)
+
+
+
+
+### 配合AutomaticKeepAliveClientMixin可以keep住tab
