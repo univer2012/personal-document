@@ -12,26 +12,6 @@
 
 
 
-//CAScrollLayer
-
-​    //CATextLayer
-
-​    //AVPlayerLayer
-
-​    //CAGradientLayer
-
-​    //CAReplicatorLayer
-
-​    //CATiledLayer
-
-​    //CAShapeLayer
-
-​    //CATransformLayer
-
-​    //CAEmitterLayer
-
-
-
 ### fileprivate 
 
 fileprivate访问级别所修饰的属性或者方法在当前的Swift源文件里可以访问。
