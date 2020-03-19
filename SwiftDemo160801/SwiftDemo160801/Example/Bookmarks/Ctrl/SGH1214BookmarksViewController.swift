@@ -11,48 +11,65 @@ import UIKit
 class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
 
     var tableView : UITableView?
-    lazy var titlesArray: Array<String> = {
+    var titlesArray: [[String:String]] = {
+        
         var array = [
-        "1、iOS 界面动画教程之 Layer 动画进阶",
-           "2、iOS 界面动画教程之与视图相关的动画",
-           "3、iOS 界面动画教程之 Layer 动画基础",
-           "4、iOS 界面动画教程之自动布局",
-           "5、自定义PageControl",
-           "6、尝试面向轨道编程",
-           "7、Auto Layout 使用心得",
-           "8、面向协议编程与 Cocoa 的邂逅 (下)",
-           "9、架构师之泛型应用分析介绍",
-           "10、UICollectionViewCell Auto Sizing(自适应高度)",
+            
+            ["d1": "1、iOS 界面动画教程之 Layer 动画进阶"],
+            ["d2": "2、iOS 界面动画教程之与视图相关的动画"],
+            ["d3": "3、iOS 界面动画教程之 Layer 动画基础"],
+            ["d4": "4、iOS 界面动画教程之自动布局"],
+            ["d5": "5、自定义PageControl"],
+            ["d6": "6、尝试面向轨道编程"],
+            ["d7": "7、Auto Layout 使用心得"],
+            ["d8": "8、面向协议编程与 Cocoa 的邂逅 (下)"],
+            ["d9": "9、架构师之泛型应用分析介绍"],
+            ["d10": "10、UICollectionViewCell Auto Sizing(自适应高度)"],
         ]
         if #available(iOS 13.0, *) {
-            array.append("11、NFC_passport")
+            array.append(["d11": "11、NFC_passport"])
         }
-        array.append("12、TableView的字母索引")
-        array.append("13、FileManager实例")
+        array.append(["d12": "12、TableView的字母索引"])
+        array.append(["d13": "13、FileManager实例"])
         
         return array
     }()
-    
-    lazy var controllersArray: Array<UIViewController> = {
-        var array = [
-            SGH160802ViewController(),
-            SGH0804ViewController(),
-            SGH160811ViewController(),
-            SGH160818AutoLayoutViewController(),
-            SGH1208CustomPageControlViewController(),
-            SGH1213TrackProgramViewController(),
-            SGH1214AutolayoutViewController(),
-            SGH1222POPAndCocoaViewController(),
-            DreamGenericViewController(),
-            SGH1901AutoSizingViewController(),
-            SHFileManagerDemoVC(),
-        ]
-        if #available(iOS 13.0, *) {
-            array.append(SHNFCPassportViewController())
+    private func getController(with key:String) -> UIViewController {
+        switch key {
+        case "d1":
+            return SGH160802ViewController()
+        case "d2":
+            return SGH0804ViewController()
+        case "d3":
+            return SGH160811ViewController()
+        case "d4":
+            return SGH160818AutoLayoutViewController()
+        case "d5":
+            return SGH1208CustomPageControlViewController()
+        case "d6":
+            return SGH1213TrackProgramViewController()
+        case "d7":
+            return SGH1214AutolayoutViewController()
+        case "d8":
+            return SGH1222POPAndCocoaViewController()
+        case "d9":
+            return DreamGenericViewController()
+        case "d10":
+            return SGH1901AutoSizingViewController()
+        case "d11":
+            if #available(iOS 13.0, *) {
+                return SHNFCPassportViewController()
+            }
+            
+        case "d12":
+            return SHWordIndexViewController()
+        case "d13":
+            return SHFileManagerDemoVC()
+        default:
+            break
         }
-        array.append(SHWordIndexViewController())
-        return array
-    }()
+        return UIViewController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +112,7 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         let row = indexPath.row as Int
-        cell.textLabel?.text = self.titlesArray[row]
+        cell.textLabel?.text = self.titlesArray[row].values.first
         return cell
     }
     
@@ -103,8 +120,12 @@ class SGH1214BookmarksViewController: UIViewController, UITableViewDelegate, UIT
     ///UITableViewDelegate
     //选择一行
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = self.controllersArray[indexPath.row]
-        viewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(viewController, animated: true)
+        if let key = self.titlesArray[indexPath.row].keys.first {
+            
+            let viewController = getController(with: key)
+            viewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
     }
 }

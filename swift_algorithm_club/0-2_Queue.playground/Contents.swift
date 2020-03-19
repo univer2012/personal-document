@@ -19,10 +19,11 @@ public struct Queue<T> {
         return array.count
     }
     
+    //入队列
     public mutating func enqueue(_ element: T) {
         array.append(element)
     }
-    
+    //出队列
     public mutating func dequeue() -> T? {
         if isEmpty {
             return nil
@@ -30,7 +31,7 @@ public struct Queue<T> {
             return array.removeFirst()
         }
     }
-    
+    //前面
     public var front: T? {
         return array.first
     }
@@ -69,7 +70,7 @@ public struct Queue<T> {
         array[head] = nil
         head += 1
         let percentage = Double(head) / Double(array.count)
-        if array.count > 2 && percentage > 0.25 {
+        if array.count > 50 && percentage > 0.25 {
         //if head > 2 {//测试时注释上一行，打开这一行
             array.removeFirst(head)
             head = 0

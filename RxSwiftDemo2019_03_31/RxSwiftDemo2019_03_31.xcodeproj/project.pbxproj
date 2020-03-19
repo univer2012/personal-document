@@ -44,6 +44,8 @@
 		045846D0238FCE2B00622D96 /* SHJSONSerializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045846CF238FCE2B00622D96 /* SHJSONSerializationViewController.swift */; };
 		0487D56723AF8EF600D54858 /* SHRxswift_3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */; };
 		048E23FA2383AA5300483FE6 /* UIImagePickerController+RxCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E23F92383AA5200483FE6 /* UIImagePickerController+RxCreate.swift */; };
+		04B656AC241E2143007AB032 /* SHLayerD1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B656AB241E2143007AB032 /* SHLayerD1ViewController.swift */; };
+		04B656AE241E26D2007AB032 /* SHLayerListDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B656AD241E26D2007AB032 /* SHLayerListDemoViewController.swift */; };
 		04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */; };
 		3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C513122C4995D00305FFD /* SHRxswift_8ViewController.swift */; };
 		3F8CFF7A22D34DEE0067194E /* SHRxswift_12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFF7922D34DEE0067194E /* SHRxswift_12ViewController.swift */; };
@@ -144,6 +146,8 @@
 		045846CF238FCE2B00622D96 /* SHJSONSerializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHJSONSerializationViewController.swift; sourceTree = "<group>"; };
 		0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewModel.swift; sourceTree = "<group>"; };
 		048E23F92383AA5200483FE6 /* UIImagePickerController+RxCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxCreate.swift"; sourceTree = "<group>"; };
+		04B656AB241E2143007AB032 /* SHLayerD1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLayerD1ViewController.swift; sourceTree = "<group>"; };
+		04B656AD241E26D2007AB032 /* SHLayerListDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLayerListDemoViewController.swift; sourceTree = "<group>"; };
 		04CB437422DED36F0042A456 /* SHRxswift_18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_18ViewController.swift; sourceTree = "<group>"; };
 		04CB437622DF36750042A456 /* testPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B383DD66BE7E97ED3D97B50 /* Pods_RxSwiftDemo2019_03_31.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDemo2019_03_31.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +328,95 @@
 			path = "2解析JSON数据";
 			sourceTree = "<group>";
 		};
+		04B6569F241E1E2B007AB032 /* 3CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				04B656AD241E26D2007AB032 /* SHLayerListDemoViewController.swift */,
+				04B656AA241E20CB007AB032 /* 10CAEmitterLayer */,
+				04B656A9241E20C3007AB032 /* 9CATransformLayer */,
+				04B656A8241E20BB007AB032 /* 8CAShapeLayer */,
+				04B656A7241E20B4007AB032 /* 7CATiledLayer */,
+				04B656A6241E20AC007AB032 /* 6CAReplicatorLayer */,
+				04B656A5241E20A3007AB032 /* 5CAGradientLayer */,
+				04B656A4241E209A007AB032 /* 4AVPlayerLayer */,
+				04B656A3241E2090007AB032 /* 3CATextLayer */,
+				04B656A2241E2084007AB032 /* 2CAScrollLayer */,
+				04B656A1241E1E55007AB032 /* 1CALayer */,
+			);
+			path = 3CALayer;
+			sourceTree = "<group>";
+		};
+		04B656A1241E1E55007AB032 /* 1CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				04B656AB241E2143007AB032 /* SHLayerD1ViewController.swift */,
+			);
+			path = 1CALayer;
+			sourceTree = "<group>";
+		};
+		04B656A2241E2084007AB032 /* 2CAScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 2CAScrollLayer;
+			sourceTree = "<group>";
+		};
+		04B656A3241E2090007AB032 /* 3CATextLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3CATextLayer;
+			sourceTree = "<group>";
+		};
+		04B656A4241E209A007AB032 /* 4AVPlayerLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 4AVPlayerLayer;
+			sourceTree = "<group>";
+		};
+		04B656A5241E20A3007AB032 /* 5CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 5CAGradientLayer;
+			sourceTree = "<group>";
+		};
+		04B656A6241E20AC007AB032 /* 6CAReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 6CAReplicatorLayer;
+			sourceTree = "<group>";
+		};
+		04B656A7241E20B4007AB032 /* 7CATiledLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 7CATiledLayer;
+			sourceTree = "<group>";
+		};
+		04B656A8241E20BB007AB032 /* 8CAShapeLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 8CAShapeLayer;
+			sourceTree = "<group>";
+		};
+		04B656A9241E20C3007AB032 /* 9CATransformLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 9CATransformLayer;
+			sourceTree = "<group>";
+		};
+		04B656AA241E20CB007AB032 /* 10CAEmitterLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 10CAEmitterLayer;
+			sourceTree = "<group>";
+		};
 		04CB959F238CFE3300F9507F /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +502,7 @@
 		3FB91A5F22B787E3006F7104 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04B6569F241E1E2B007AB032 /* 3CALayer */,
 				045846CE238FCDFA00622D96 /* 2解析JSON数据 */,
 				8F78F3FC238D81690086A6AA /* 1CoreMotion_Demo */,
 			);
@@ -659,6 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2DC6A3237B0D1600CB8CB6 /* GeolocationService.swift in Sources */,
+				04B656AC241E2143007AB032 /* SHLayerD1ViewController.swift in Sources */,
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
 				044A77632373EDEA00611F0C /* SHRxswift_52GithubViewController.swift in Sources */,
 				8F20A4272374F7500040BE9A /* SHRxswift_55ViewController.swift in Sources */,
@@ -743,6 +838,7 @@
 				8FF81D7A237CE541007BB516 /* UIImagePickerController+Rx.swift in Sources */,
 				8FD82140238A6786005A8A74 /* SHRxswift_63MyObserver.swift in Sources */,
 				3FB94F2822C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift in Sources */,
+				04B656AE241E26D2007AB032 /* SHLayerListDemoViewController.swift in Sources */,
 				8F0D422F22D0839D004C1E53 /* SHRxswift_11ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
