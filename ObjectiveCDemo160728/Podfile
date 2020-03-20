@@ -1,5 +1,6 @@
 
 platform:ios, '8.0'
+use_frameworks!
 
 target "ObjectiveCDemo160728" do
 # pod 'BaiduMapKit' #百度地图SDK
