@@ -31,6 +31,7 @@ class EventItem extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 new Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     new ClipOval(
                       child: new FadeInImage.assetNetwork(
@@ -41,7 +42,7 @@ class EventItem extends StatelessWidget {
                         height: 30.0,
                       ),
                     ),
-                    new Padding(padding: EdgeInsets.all(10.0)),
+                    new Padding(padding: EdgeInsets.all(5.0)),
                     new Expanded(child: new Text(eventViewModel.actionUser,style: GSYConstant.smallTextBold,)),
                     new Text(eventViewModel.actionTime,style: GSYConstant.subSmallText,),
                   ],
