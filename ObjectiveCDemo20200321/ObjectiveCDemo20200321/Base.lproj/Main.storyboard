@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,6 +147,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7B-Ni-khY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1996" y="65"/>
+        </scene>
+        <!--AboutNS Operation View Controller-->
+        <scene sceneID="32u-yr-vRe">
+            <objects>
+                <viewController id="wKo-2s-VHf" customClass="SGHAboutNSOperationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kio-Qo-cjO" customClass="FKGeometryView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r0-nH-wJT">
+                                <rect key="frame" x="66" y="387" width="67" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pause:" destination="wKo-2s-VHf" eventType="touchUpInside" id="lyB-S8-xXV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-TD-ZcA">
+                                <rect key="frame" x="212" y="387" width="67" height="30"/>
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="resume:" destination="wKo-2s-VHf" eventType="touchUpInside" id="GEN-Wm-YIg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vw-fS-diF">
+                                <rect key="frame" x="176" y="108" width="62" height="30"/>
+                                <state key="normal" title="依赖关系"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6f-Tw-gqu">
+                                <rect key="frame" x="168.5" y="146" width="77" height="30"/>
+                                <state key="normal" title="最大并发数"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwv-vU-JgM">
+                                <rect key="frame" x="168.5" y="184" width="77" height="30"/>
+                                <state key="normal" title="添加执行块"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6u-iQ-T4G">
+                                <rect key="frame" x="168.5" y="222" width="77" height="30"/>
+                                <state key="normal" title="添加块操作"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-FD-XpT">
+                                <rect key="frame" x="143.5" y="260" width="127" height="30"/>
+                                <state key="normal" title="NSBlockOperation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KW6-bi-e4T">
+                                <rect key="frame" x="127.5" y="298" width="159" height="30"/>
+                                <state key="normal" title="NSInvocationOperation"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9r0-nH-wJT" firstAttribute="top" secondItem="KW6-bi-e4T" secondAttribute="bottom" constant="103" id="2Vc-T5-wyf"/>
+                            <constraint firstItem="n6f-Tw-gqu" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="Bd0-qK-O6G"/>
+                            <constraint firstItem="n6f-Tw-gqu" firstAttribute="top" secondItem="1vw-fS-diF" secondAttribute="bottom" constant="8" id="GRs-bA-Rli"/>
+                            <constraint firstItem="aE7-FD-XpT" firstAttribute="top" secondItem="u6u-iQ-T4G" secondAttribute="bottom" constant="8" id="IKf-aH-dzA"/>
+                            <constraint firstItem="1vw-fS-diF" firstAttribute="top" secondItem="FwF-TD-XaQ" secondAttribute="top" constant="20" id="Jfl-tZ-anH"/>
+                            <constraint firstItem="FwF-TD-XaQ" firstAttribute="trailing" secondItem="kzI-TD-ZcA" secondAttribute="trailing" constant="96" id="K9m-fM-ZOc"/>
+                            <constraint firstItem="iwv-vU-JgM" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="QEu-qo-Bon"/>
+                            <constraint firstItem="KW6-bi-e4T" firstAttribute="top" secondItem="aE7-FD-XpT" secondAttribute="bottom" constant="8" id="SA5-Yw-m9g"/>
+                            <constraint firstItem="iwv-vU-JgM" firstAttribute="top" secondItem="n6f-Tw-gqu" secondAttribute="bottom" constant="8" id="ZfV-mm-bV1"/>
+                            <constraint firstItem="u6u-iQ-T4G" firstAttribute="top" secondItem="iwv-vU-JgM" secondAttribute="bottom" constant="8" id="aBV-78-a4U"/>
+                            <constraint firstItem="u6u-iQ-T4G" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="gWi-g9-lba"/>
+                            <constraint firstItem="1vw-fS-diF" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="hZt-5D-Rwr"/>
+                            <constraint firstItem="KW6-bi-e4T" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="lJQ-XO-eJ5"/>
+                            <constraint firstItem="kzI-TD-ZcA" firstAttribute="top" secondItem="KW6-bi-e4T" secondAttribute="bottom" constant="103" id="rWa-JB-cuc"/>
+                            <constraint firstItem="9r0-nH-wJT" firstAttribute="leading" secondItem="FwF-TD-XaQ" secondAttribute="leading" constant="66" id="y0w-lx-v2B"/>
+                            <constraint firstItem="aE7-FD-XpT" firstAttribute="centerX" secondItem="FwF-TD-XaQ" secondAttribute="centerX" id="zFG-qE-Gm3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FwF-TD-XaQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Dm-Tx-I1V"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="demo1Button" destination="KW6-bi-e4T" id="GV0-4t-g8E"/>
+                        <outlet property="demo2Button" destination="aE7-FD-XpT" id="i2V-ff-6ee"/>
+                        <outlet property="demo3Button" destination="u6u-iQ-T4G" id="bJ7-b0-MKG"/>
+                        <outlet property="demo4Button" destination="iwv-vU-JgM" id="xrV-mU-noS"/>
+                        <outlet property="demo5Button" destination="n6f-Tw-gqu" id="Vrm-pH-zSZ"/>
+                        <outlet property="demo6Button" destination="1vw-fS-diF" id="T0M-xc-H3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snO-N6-Rgd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-761" y="122"/>
         </scene>
     </scenes>
 </document>

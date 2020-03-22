@@ -14,6 +14,7 @@
 
 #import <ReactiveObjC.h>
 //#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
 
 /** blockSelf和weakSelf 宏定义  */
 #define kWeakSelf __weak typeof(self) weakSelf = self;
