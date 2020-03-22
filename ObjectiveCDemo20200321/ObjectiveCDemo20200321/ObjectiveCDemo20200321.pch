@@ -16,6 +16,16 @@
 //#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
 
+#define RGB(A,B,C) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
+
+#ifdef DEBUG
+#define debugLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define debugLog(...)
+#define debugMethod()
+#endif
+
 /** blockSelf和weakSelf 宏定义  */
 #define kWeakSelf __weak typeof(self) weakSelf = self;
 #define kBlockSelf __block typeof(self) blockSelf = self;

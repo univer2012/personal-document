@@ -59,14 +59,19 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray= [@[@"SGH160507ViewController",
-                          @"SGH160519ViewController",
-                          ] mutableCopy];
+    _controllersArray= [@[
+        @"SGH160507ViewController",
+        @"SGH160519ViewController",
+        @"SGHAboutNSOperationViewController",
+        @"SGHCoreTextListViewController",
+    ] mutableCopy];
     
-    self.titlesArray=[@[@"16-05-07替代UDID/PageVC/webView/断点续传后台下载",
-                        @"16-05-19",
-                        @"多线程NSOperation的示例",
-                        ] mutableCopy];
+    self.titlesArray=[@[
+        @"16-05-07替代UDID/PageVC/webView/断点续传后台下载",
+        @"16-05-19",
+        @"3多线程NSOperation的示例",
+        @"4CoreText Demos",
+    ] mutableCopy];
     
     
 }
@@ -92,7 +97,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Class cls=NSClassFromString(_controllersArray[indexPath.row]);
     if (cls) {
-        [self.navigationController pushViewController:[cls new] animated:YES];
+        UIViewController *vc = [cls new];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
