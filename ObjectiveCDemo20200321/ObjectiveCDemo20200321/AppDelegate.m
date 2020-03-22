@@ -16,6 +16,17 @@
 
 @implementation AppDelegate
 
++ (id<UIApplicationDelegate>)sharedDelegate {
+    return [UIApplication sharedApplication].delegate;
+}
+
+/** 后台下载任务完成后，程序被唤醒，该方法将被调用 */
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler {
+    NSLog(@"Application Delegate: Background download task finished");
+    
+    // 设置回调的完成代码块
+    self.backgroundURLSessionCompletionHandler = completionHandler;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

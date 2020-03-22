@@ -187,6 +187,76 @@
 		8F31112B24264FB100421E7A /* SGH160728ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31107D24264FB100421E7A /* SGH160728ViewController.m */; };
 		8F31112C24264FB100421E7A /* SGH1128BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31108024264FB100421E7A /* SGH1128BookmarksViewController.m */; };
 		8F31112D24264FB100421E7A /* SGH161128TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31108124264FB100421E7A /* SGH161128TabBarViewController.m */; };
+		8F3113502426E1D500421E7A /* SGHMethodSwizzlingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113312426E1D500421E7A /* SGHMethodSwizzlingObject.m */; };
+		8F3113512426E1D500421E7A /* NSString+Chinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113342426E1D500421E7A /* NSString+Chinese.m */; };
+		8F3113532426E1D500421E7A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113382426E1D500421E7A /* NSString+MD5.m */; };
+		8F3113552426E4AB00421E7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3113542426E4AB00421E7A /* UIKit.framework */; };
+		8F3113E72426E6EF00421E7A /* SGH160507ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113582426E6EE00421E7A /* SGH160507ViewController.m */; };
+		8F3113E92426E6EF00421E7A /* SGHPresentTransitionSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113602426E6EE00421E7A /* SGHPresentTransitionSecondViewController.m */; };
+		8F3113EA2426E6EF00421E7A /* SGHPresentTransitionStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113612426E6EE00421E7A /* SGHPresentTransitionStyleViewController.m */; };
+		8F3113ED2426E6EF00421E7A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113662426E6EE00421E7A /* Reachability.m */; };
+		8F3113EE2426E6EF00421E7A /* SGHNetworkChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31136A2426E6EE00421E7A /* SGHNetworkChangeViewController.m */; };
+		8F3113EF2426E6EF00421E7A /* SGHTableViewStyleGroupedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31136E2426E6EE00421E7A /* SGHTableViewStyleGroupedViewController.m */; };
+		8F3113F02426E6EF00421E7A /* tableViewStyleGrouped.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113702426E6EE00421E7A /* tableViewStyleGrouped.xcassets */; };
+		8F3113F22426E6EF00421E7A /* TKAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113732426E6EE00421E7A /* TKAccountModel.m */; };
+		8F3113F32426E6EF00421E7A /* AccountTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113772426E6EE00421E7A /* AccountTableHeaderView.m */; };
+		8F3113F42426E6EF00421E7A /* UIImage+SGHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31137B2426E6EE00421E7A /* UIImage+SGHHook.m */; };
+		8F3113F52426E6EF00421E7A /* UIButton+SGHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31137C2426E6EE00421E7A /* UIButton+SGHHook.m */; };
+		8F3113F62426E6EF00421E7A /* SGHMethodSwizzlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31137F2426E6EE00421E7A /* SGHMethodSwizzlingViewController.m */; };
+		8F3113F72426E6EF00421E7A /* new_home_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113802426E6EE00421E7A /* new_home_icon.png */; };
+		8F3113F92426E6EF00421E7A /* SGHUIFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113852426E6EE00421E7A /* SGHUIFontViewController.m */; };
+		8F3113FB2426E6EF00421E7A /* SGHDataPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113892426E6EE00421E7A /* SGHDataPickerViewController.m */; };
+		8F3113FC2426E6EF00421E7A /* SGHShowHTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31138D2426E6EE00421E7A /* SGHShowHTMLViewController.m */; };
+		8F3113FD2426E6EF00421E7A /* ocTojsBlock.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113902426E6EE00421E7A /* ocTojsBlock.html */; };
+		8F3113FE2426E6EF00421E7A /* ocTojs.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113912426E6EE00421E7A /* ocTojs.html */; };
+		8F3113FF2426E6EF00421E7A /* SGHOCJSInteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113932426E6EE00421E7A /* SGHOCJSInteractiveViewController.m */; };
+		8F3114012426E6EF00421E7A /* SGHSesstionDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113982426E6EE00421E7A /* SGHSesstionDownloadViewController.m */; };
+		8F3114022426E6EF00421E7A /* SGHSesstionDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113992426E6EE00421E7A /* SGHSesstionDownloadViewController.xib */; };
+		8F3114042426E6EF00421E7A /* SGHDateCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31139D2426E6EE00421E7A /* SGHDateCalendarViewController.m */; };
+		8F3114052426E6EF00421E7A /* SGHSKStoreProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113A22426E6EE00421E7A /* SGHSKStoreProductViewController.m */; };
+		8F3114072426E6EF00421E7A /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113A62426E6EE00421E7A /* Harpy.m */; };
+		8F3114082426E6EF00421E7A /* DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113A72426E6EE00421E7A /* DS_Store */; };
+		8F3114092426E6EF00421E7A /* SGHPlistDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113AC2426E6EE00421E7A /* SGHPlistDictionaryViewController.m */; };
+		8F31140C2426E6EF00421E7A /* SGHNSArrayNSMutableArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113B02426E6EE00421E7A /* SGHNSArrayNSMutableArrayViewController.m */; };
+		8F31140D2426E6EF00421E7A /* qrcode_screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113B42426E6EE00421E7A /* qrcode_screen@2x.png */; };
+		8F31140E2426E6EF00421E7A /* system_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113B52426E6EE00421E7A /* system_setting@2x.png */; };
+		8F31140F2426E6EF00421E7A /* stock_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113B62426E6EE00421E7A /* stock_search@2x.png */; };
+		8F3114102426E6EF00421E7A /* SGHPopContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113B92426E6EE00421E7A /* SGHPopContentViewController.m */; };
+		8F3114112426E6EF00421E7A /* SGHPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113BA2426E6EE00421E7A /* SGHPopoverPresentationController.m */; };
+		8F3114132426E6EF00421E7A /* YYQKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113C02426E6EE00421E7A /* YYQKeyChain.m */; };
+		8F3114142426E6EF00421E7A /* SGHUDIDKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113C22426E6EE00421E7A /* SGHUDIDKeychainViewController.m */; };
+		8F3114162426E6EF00421E7A /* SGHAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113C62426E6EE00421E7A /* SGHAttributedStringViewController.m */; };
+		8F3114182426E6EF00421E7A /* SGHStringShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113CB2426E6EE00421E7A /* SGHStringShowViewController.m */; };
+		8F3114192426E6EF00421E7A /* SGHWebViewConstrainsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113CE2426E6EE00421E7A /* SGHWebViewConstrainsViewController.m */; };
+		8F31141A2426E6EF00421E7A /* inform_menu_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113CF2426E6EE00421E7A /* inform_menu_selected@2x.png */; };
+		8F31141B2426E6EF00421E7A /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113D02426E6EE00421E7A /* demo.html */; };
+		8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113D22426E6EE00421E7A /* SGHNSURLSessionViewController.m */; };
+		8F31141D2426E6EF00421E7A /* SHGAboutNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113D52426E6EE00421E7A /* SHGAboutNavigationViewController.m */; };
+		8F31141F2426E6EF00421E7A /* SGHUniqueUUID_UDIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113D92426E6EE00421E7A /* SGHUniqueUUID_UDIDViewController.m */; };
+		8F3114202426E6EF00421E7A /* SGHRuntimeAttriMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113DE2426E6EE00421E7A /* SGHRuntimeAttriMethodViewController.m */; };
+		8F3114222426E6EF00421E7A /* SGHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113E12426E6EE00421E7A /* SGHPerson.m */; };
+		8F3114232426E6EF00421E7A /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F3113E52426E6EE00421E7A /* foods.plist */; };
+		8F3114242426E6EF00421E7A /* SGHPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3113E62426E6EE00421E7A /* SGHPickerViewViewController.m */; };
+		8F31147F2426EB4C00421E7A /* SGH160519ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114272426EB4B00421E7A /* SGH160519ViewController.m */; };
+		8F3114812426EB4C00421E7A /* SGH0618AntiEncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31142D2426EB4B00421E7A /* SGH0618AntiEncodeViewController.m */; };
+		8F3114822426EB4C00421E7A /* SGH0618AntiEncodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F31142E2426EB4B00421E7A /* SGH0618AntiEncodeViewController.xib */; };
+		8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114332426EB4B00421E7A /* SGH0629AlertViewController.m */; };
+		8F3114862426EB4C00421E7A /* SGH0618MapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114392426EB4B00421E7A /* SGH0618MapViewViewController.xib */; };
+		8F3114872426EB4C00421E7A /* SGH0618MapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31143A2426EB4C00421E7A /* SGH0618MapViewViewController.m */; };
+		8F3114892426EB4C00421E7A /* SGH0618MapNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F31143E2426EB4C00421E7A /* SGH0618MapNavigationViewController.xib */; };
+		8F31148A2426EB4C00421E7A /* SGH0618MapNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31143F2426EB4C00421E7A /* SGH0618MapNavigationViewController.m */; };
+		8F31148F2426EB4C00421E7A /* SGH160531ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */; };
+		8F3114922426EB4C00421E7A /* SGH0618LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114542426EB4C00421E7A /* SGH0618LocationViewController.m */; };
+		8F3114942426EB4C00421E7A /* SGH0618AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114582426EB4C00421E7A /* SGH0618AnnotationViewController.m */; };
+		8F3114952426EB4C00421E7A /* SGH0618AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114592426EB4C00421E7A /* SGH0618AnnotationViewController.xib */; };
+		8F3114962426EB4C00421E7A /* SGH0618Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31145C2426EB4C00421E7A /* SGH0618Annotation.m */; };
+		8F3114982426EB4C00421E7A /* SGH0618GeocodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114612426EB4C00421E7A /* SGH0618GeocodeViewController.m */; };
+		8F3114992426EB4C00421E7A /* SGH0618GeocodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114622426EB4C00421E7A /* SGH0618GeocodeViewController.xib */; };
+		8F31149B2426EB4C00421E7A /* SGH0727CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114672426EB4C00421E7A /* SGH0727CollectionViewController.m */; };
+		8F31149C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31146B2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m */; };
+		8F31149E2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114702426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib */; };
+		8F31149F2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114722426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m */; };
+		8F3114A42426EB4C00421E7A /* SGH0618DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31147C2426EB4C00421E7A /* SGH0618DistanceViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -557,6 +627,128 @@
 		8F31108024264FB100421E7A /* SGH1128BookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH1128BookmarksViewController.m; sourceTree = "<group>"; };
 		8F31108124264FB100421E7A /* SGH161128TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH161128TabBarViewController.m; sourceTree = "<group>"; };
 		8F3112E42426DD0900421E7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8F3113302426E1D500421E7A /* SGHMethodSwizzlingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHMethodSwizzlingObject.h; sourceTree = "<group>"; };
+		8F3113312426E1D500421E7A /* SGHMethodSwizzlingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHMethodSwizzlingObject.m; sourceTree = "<group>"; };
+		8F3113332426E1D500421E7A /* NSString+Chinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Chinese.h"; sourceTree = "<group>"; };
+		8F3113342426E1D500421E7A /* NSString+Chinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Chinese.m"; sourceTree = "<group>"; };
+		8F3113372426E1D500421E7A /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		8F3113382426E1D500421E7A /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		8F3113542426E4AB00421E7A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F3113582426E6EE00421E7A /* SGH160507ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160507ViewController.m; sourceTree = "<group>"; };
+		8F3113592426E6EE00421E7A /* SGH160507ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160507ViewController.h; sourceTree = "<group>"; };
+		8F31135E2426E6EE00421E7A /* SGHPresentTransitionSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPresentTransitionSecondViewController.h; sourceTree = "<group>"; };
+		8F31135F2426E6EE00421E7A /* SGHPresentTransitionStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPresentTransitionStyleViewController.h; sourceTree = "<group>"; };
+		8F3113602426E6EE00421E7A /* SGHPresentTransitionSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPresentTransitionSecondViewController.m; sourceTree = "<group>"; };
+		8F3113612426E6EE00421E7A /* SGHPresentTransitionStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPresentTransitionStyleViewController.m; sourceTree = "<group>"; };
+		8F3113662426E6EE00421E7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8F3113672426E6EE00421E7A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8F3113692426E6EE00421E7A /* SGHNetworkChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHNetworkChangeViewController.h; sourceTree = "<group>"; };
+		8F31136A2426E6EE00421E7A /* SGHNetworkChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHNetworkChangeViewController.m; sourceTree = "<group>"; };
+		8F31136D2426E6EE00421E7A /* SGHTableViewStyleGroupedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTableViewStyleGroupedViewController.h; sourceTree = "<group>"; };
+		8F31136E2426E6EE00421E7A /* SGHTableViewStyleGroupedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTableViewStyleGroupedViewController.m; sourceTree = "<group>"; };
+		8F3113702426E6EE00421E7A /* tableViewStyleGrouped.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = tableViewStyleGrouped.xcassets; sourceTree = "<group>"; };
+		8F3113732426E6EE00421E7A /* TKAccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAccountModel.m; sourceTree = "<group>"; };
+		8F3113742426E6EE00421E7A /* TKAccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAccountModel.h; sourceTree = "<group>"; };
+		8F3113762426E6EE00421E7A /* AccountTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableHeaderView.h; sourceTree = "<group>"; };
+		8F3113772426E6EE00421E7A /* AccountTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableHeaderView.m; sourceTree = "<group>"; };
+		8F31137A2426E6EE00421E7A /* UIButton+SGHHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGHHook.h"; sourceTree = "<group>"; };
+		8F31137B2426E6EE00421E7A /* UIImage+SGHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SGHHook.m"; sourceTree = "<group>"; };
+		8F31137C2426E6EE00421E7A /* UIButton+SGHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGHHook.m"; sourceTree = "<group>"; };
+		8F31137D2426E6EE00421E7A /* UIImage+SGHHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SGHHook.h"; sourceTree = "<group>"; };
+		8F31137F2426E6EE00421E7A /* SGHMethodSwizzlingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHMethodSwizzlingViewController.m; sourceTree = "<group>"; };
+		8F3113802426E6EE00421E7A /* new_home_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_home_icon.png; sourceTree = "<group>"; };
+		8F3113812426E6EE00421E7A /* SGHMethodSwizzlingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHMethodSwizzlingViewController.h; sourceTree = "<group>"; };
+		8F3113852426E6EE00421E7A /* SGHUIFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHUIFontViewController.m; sourceTree = "<group>"; };
+		8F3113862426E6EE00421E7A /* SGHUIFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHUIFontViewController.h; sourceTree = "<group>"; };
+		8F3113892426E6EE00421E7A /* SGHDataPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDataPickerViewController.m; sourceTree = "<group>"; };
+		8F31138A2426E6EE00421E7A /* SGHDataPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDataPickerViewController.h; sourceTree = "<group>"; };
+		8F31138C2426E6EE00421E7A /* SGHShowHTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHShowHTMLViewController.h; sourceTree = "<group>"; };
+		8F31138D2426E6EE00421E7A /* SGHShowHTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHShowHTMLViewController.m; sourceTree = "<group>"; };
+		8F3113902426E6EE00421E7A /* ocTojsBlock.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ocTojsBlock.html; sourceTree = "<group>"; };
+		8F3113912426E6EE00421E7A /* ocTojs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ocTojs.html; sourceTree = "<group>"; };
+		8F3113932426E6EE00421E7A /* SGHOCJSInteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHOCJSInteractiveViewController.m; sourceTree = "<group>"; };
+		8F3113942426E6EE00421E7A /* SGHOCJSInteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHOCJSInteractiveViewController.h; sourceTree = "<group>"; };
+		8F3113982426E6EE00421E7A /* SGHSesstionDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSesstionDownloadViewController.m; sourceTree = "<group>"; };
+		8F3113992426E6EE00421E7A /* SGHSesstionDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGHSesstionDownloadViewController.xib; sourceTree = "<group>"; };
+		8F31139A2426E6EE00421E7A /* SGHSesstionDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSesstionDownloadViewController.h; sourceTree = "<group>"; };
+		8F31139D2426E6EE00421E7A /* SGHDateCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDateCalendarViewController.m; sourceTree = "<group>"; };
+		8F31139E2426E6EE00421E7A /* SGHDateCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDateCalendarViewController.h; sourceTree = "<group>"; };
+		8F3113A12426E6EE00421E7A /* SGHSKStoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSKStoreProductViewController.h; sourceTree = "<group>"; };
+		8F3113A22426E6EE00421E7A /* SGHSKStoreProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSKStoreProductViewController.m; sourceTree = "<group>"; };
+		8F3113A52426E6EE00421E7A /* HarpyConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarpyConstants.h; sourceTree = "<group>"; };
+		8F3113A62426E6EE00421E7A /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
+		8F3113A72426E6EE00421E7A /* DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = DS_Store; sourceTree = "<group>"; };
+		8F3113A82426E6EE00421E7A /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
+		8F3113AB2426E6EE00421E7A /* SGHPlistDictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPlistDictionaryViewController.h; sourceTree = "<group>"; };
+		8F3113AC2426E6EE00421E7A /* SGHPlistDictionaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPlistDictionaryViewController.m; sourceTree = "<group>"; };
+		8F3113B02426E6EE00421E7A /* SGHNSArrayNSMutableArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHNSArrayNSMutableArrayViewController.m; sourceTree = "<group>"; };
+		8F3113B12426E6EE00421E7A /* SGHNSArrayNSMutableArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHNSArrayNSMutableArrayViewController.h; sourceTree = "<group>"; };
+		8F3113B42426E6EE00421E7A /* qrcode_screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_screen@2x.png"; sourceTree = "<group>"; };
+		8F3113B52426E6EE00421E7A /* system_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "system_setting@2x.png"; sourceTree = "<group>"; };
+		8F3113B62426E6EE00421E7A /* stock_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stock_search@2x.png"; sourceTree = "<group>"; };
+		8F3113B82426E6EE00421E7A /* SGHPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPopoverPresentationController.h; sourceTree = "<group>"; };
+		8F3113B92426E6EE00421E7A /* SGHPopContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPopContentViewController.m; sourceTree = "<group>"; };
+		8F3113BA2426E6EE00421E7A /* SGHPopoverPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPopoverPresentationController.m; sourceTree = "<group>"; };
+		8F3113BB2426E6EE00421E7A /* SGHPopContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPopContentViewController.h; sourceTree = "<group>"; };
+		8F3113BF2426E6EE00421E7A /* YYQKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYQKeyChain.h; sourceTree = "<group>"; };
+		8F3113C02426E6EE00421E7A /* YYQKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYQKeyChain.m; sourceTree = "<group>"; };
+		8F3113C22426E6EE00421E7A /* SGHUDIDKeychainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHUDIDKeychainViewController.m; sourceTree = "<group>"; };
+		8F3113C32426E6EE00421E7A /* SGHUDIDKeychainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHUDIDKeychainViewController.h; sourceTree = "<group>"; };
+		8F3113C62426E6EE00421E7A /* SGHAttributedStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHAttributedStringViewController.m; sourceTree = "<group>"; };
+		8F3113C82426E6EE00421E7A /* SGHAttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHAttributedStringViewController.h; sourceTree = "<group>"; };
+		8F3113CA2426E6EE00421E7A /* SGHStringShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHStringShowViewController.h; sourceTree = "<group>"; };
+		8F3113CB2426E6EE00421E7A /* SGHStringShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHStringShowViewController.m; sourceTree = "<group>"; };
+		8F3113CD2426E6EE00421E7A /* SGHWebViewConstrainsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHWebViewConstrainsViewController.h; sourceTree = "<group>"; };
+		8F3113CE2426E6EE00421E7A /* SGHWebViewConstrainsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHWebViewConstrainsViewController.m; sourceTree = "<group>"; };
+		8F3113CF2426E6EE00421E7A /* inform_menu_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inform_menu_selected@2x.png"; sourceTree = "<group>"; };
+		8F3113D02426E6EE00421E7A /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		8F3113D22426E6EE00421E7A /* SGHNSURLSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHNSURLSessionViewController.m; sourceTree = "<group>"; };
+		8F3113D32426E6EE00421E7A /* SGHNSURLSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHNSURLSessionViewController.h; sourceTree = "<group>"; };
+		8F3113D52426E6EE00421E7A /* SHGAboutNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHGAboutNavigationViewController.m; sourceTree = "<group>"; };
+		8F3113D72426E6EE00421E7A /* SHGAboutNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHGAboutNavigationViewController.h; sourceTree = "<group>"; };
+		8F3113D92426E6EE00421E7A /* SGHUniqueUUID_UDIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHUniqueUUID_UDIDViewController.m; sourceTree = "<group>"; };
+		8F3113DA2426E6EE00421E7A /* SGHUniqueUUID_UDIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHUniqueUUID_UDIDViewController.h; sourceTree = "<group>"; };
+		8F3113DD2426E6EE00421E7A /* SGHRuntimeAttriMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHRuntimeAttriMethodViewController.h; sourceTree = "<group>"; };
+		8F3113DE2426E6EE00421E7A /* SGHRuntimeAttriMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHRuntimeAttriMethodViewController.m; sourceTree = "<group>"; };
+		8F3113E12426E6EE00421E7A /* SGHPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPerson.m; sourceTree = "<group>"; };
+		8F3113E22426E6EE00421E7A /* SGHPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPerson.h; sourceTree = "<group>"; };
+		8F3113E42426E6EE00421E7A /* SGHPickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHPickerViewViewController.h; sourceTree = "<group>"; };
+		8F3113E52426E6EE00421E7A /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
+		8F3113E62426E6EE00421E7A /* SGHPickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHPickerViewViewController.m; sourceTree = "<group>"; };
+		8F3114272426EB4B00421E7A /* SGH160519ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160519ViewController.m; sourceTree = "<group>"; };
+		8F3114282426EB4B00421E7A /* SGH160519ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160519ViewController.h; sourceTree = "<group>"; };
+		8F31142D2426EB4B00421E7A /* SGH0618AntiEncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618AntiEncodeViewController.m; sourceTree = "<group>"; };
+		8F31142E2426EB4B00421E7A /* SGH0618AntiEncodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618AntiEncodeViewController.xib; sourceTree = "<group>"; };
+		8F31142F2426EB4B00421E7A /* SGH0618AntiEncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618AntiEncodeViewController.h; sourceTree = "<group>"; };
+		8F3114332426EB4B00421E7A /* SGH0629AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0629AlertViewController.m; sourceTree = "<group>"; };
+		8F3114342426EB4B00421E7A /* SGH0629AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0629AlertViewController.h; sourceTree = "<group>"; };
+		8F3114382426EB4B00421E7A /* SGH0618MapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618MapViewViewController.h; sourceTree = "<group>"; };
+		8F3114392426EB4B00421E7A /* SGH0618MapViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618MapViewViewController.xib; sourceTree = "<group>"; };
+		8F31143A2426EB4C00421E7A /* SGH0618MapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618MapViewViewController.m; sourceTree = "<group>"; };
+		8F31143E2426EB4C00421E7A /* SGH0618MapNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618MapNavigationViewController.xib; sourceTree = "<group>"; };
+		8F31143F2426EB4C00421E7A /* SGH0618MapNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618MapNavigationViewController.m; sourceTree = "<group>"; };
+		8F3114402426EB4C00421E7A /* SGH0618MapNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618MapNavigationViewController.h; sourceTree = "<group>"; };
+		8F31144D2426EB4C00421E7A /* SGH160531ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160531ViewController.h; sourceTree = "<group>"; };
+		8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160531ViewController.m; sourceTree = "<group>"; };
+		8F3114532426EB4C00421E7A /* SGH0618LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618LocationViewController.h; sourceTree = "<group>"; };
+		8F3114542426EB4C00421E7A /* SGH0618LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618LocationViewController.m; sourceTree = "<group>"; };
+		8F3114582426EB4C00421E7A /* SGH0618AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618AnnotationViewController.m; sourceTree = "<group>"; };
+		8F3114592426EB4C00421E7A /* SGH0618AnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618AnnotationViewController.xib; sourceTree = "<group>"; };
+		8F31145A2426EB4C00421E7A /* SGH0618AnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618AnnotationViewController.h; sourceTree = "<group>"; };
+		8F31145C2426EB4C00421E7A /* SGH0618Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618Annotation.m; sourceTree = "<group>"; };
+		8F31145D2426EB4C00421E7A /* SGH0618Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618Annotation.h; sourceTree = "<group>"; };
+		8F3114612426EB4C00421E7A /* SGH0618GeocodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618GeocodeViewController.m; sourceTree = "<group>"; };
+		8F3114622426EB4C00421E7A /* SGH0618GeocodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618GeocodeViewController.xib; sourceTree = "<group>"; };
+		8F3114632426EB4C00421E7A /* SGH0618GeocodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618GeocodeViewController.h; sourceTree = "<group>"; };
+		8F3114672426EB4C00421E7A /* SGH0727CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0727CollectionViewController.m; sourceTree = "<group>"; };
+		8F3114682426EB4C00421E7A /* SGH0727CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0727CollectionViewController.h; sourceTree = "<group>"; };
+		8F31146B2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHUIKitDynamicsViewController.m; sourceTree = "<group>"; };
+		8F31146C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHUIKitDynamicsViewController.h; sourceTree = "<group>"; };
+		8F3114702426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618DynaAnnotationViewController.xib; sourceTree = "<group>"; };
+		8F3114712426EB4C00421E7A /* SGH0618DynaAnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618DynaAnnotationViewController.h; sourceTree = "<group>"; };
+		8F3114722426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618DynaAnnotationViewController.m; sourceTree = "<group>"; };
+		8F31147C2426EB4C00421E7A /* SGH0618DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618DistanceViewController.m; sourceTree = "<group>"; };
+		8F31147D2426EB4C00421E7A /* SGH0618DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618DistanceViewController.h; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -565,6 +757,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3113552426E4AB00421E7A /* UIKit.framework in Frameworks */,
 				CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +894,7 @@
 		8F310E8524264FAF00421E7A /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				8F31132E2426E1D500421E7A /* 工具类 */,
 				8F310E8624264FAF00421E7A /* DeviceManager */,
 				8F310E8924264FAF00421E7A /* Const */,
 				8F310E8C24264FAF00421E7A /* AlertViewManager */,
@@ -2529,13 +2723,774 @@
 		8F311193242651DD00421E7A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				8F3114252426EB4B00421E7A /* 16-05-19 */,
+				8F3113562426E6EE00421E7A /* 16-05-07 */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		8F31132E2426E1D500421E7A /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31132F2426E1D500421E7A /* Method Swizzling方法封装 */,
+				8F3113322426E1D500421E7A /* iOS 判断字符串是纯汉字还是含有汉字 */,
+				8F3113362426E1D500421E7A /* MD5加解密 */,
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
+		8F31132F2426E1D500421E7A /* Method Swizzling方法封装 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113302426E1D500421E7A /* SGHMethodSwizzlingObject.h */,
+				8F3113312426E1D500421E7A /* SGHMethodSwizzlingObject.m */,
+			);
+			path = "Method Swizzling方法封装";
+			sourceTree = "<group>";
+		};
+		8F3113322426E1D500421E7A /* iOS 判断字符串是纯汉字还是含有汉字 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113332426E1D500421E7A /* NSString+Chinese.h */,
+				8F3113342426E1D500421E7A /* NSString+Chinese.m */,
+			);
+			path = "iOS 判断字符串是纯汉字还是含有汉字";
+			sourceTree = "<group>";
+		};
+		8F3113362426E1D500421E7A /* MD5加解密 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113372426E1D500421E7A /* NSString+MD5.h */,
+				8F3113382426E1D500421E7A /* NSString+MD5.m */,
+			);
+			path = "MD5加解密";
+			sourceTree = "<group>";
+		};
+		8F3113562426E6EE00421E7A /* 16-05-07 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113572426E6EE00421E7A /* ctrl */,
+				8F31135B2426E6EE00421E7A /* modules */,
+			);
+			path = "16-05-07";
+			sourceTree = "<group>";
+		};
+		8F3113572426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113582426E6EE00421E7A /* SGH160507ViewController.m */,
+				8F3113592426E6EE00421E7A /* SGH160507ViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31135B2426E6EE00421E7A /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				8F31135C2426E6EE00421E7A /* presentViewController转场样式 */,
+				8F3113632426E6EE00421E7A /* 监听网路变化(用苹果官网提供的Reachability) */,
+				8F31136B2426E6EE00421E7A /* tableViewStyleGrouped */,
+				8F3113782426E6EE00421E7A /* iOS runtime实战应用：Method Swizzling */,
+				8F3113832426E6EE00421E7A /* 所有苹果字体显示的样式 */,
+				8F3113882426E6EE00421E7A /* DataPicker */,
+				8F31138B2426E6EE00421E7A /* 显示html格式的文字 */,
+				8F31138E2426E6EE00421E7A /* iOS JavaScriptCore实现OC与JS的交互 */,
+				8F3113962426E6EE00421E7A /* 断点续传下载_普通下载_后台下载_取消下载 */,
+				8F31139C2426E6EE00421E7A /* NSDate& NSCalendar */,
+				8F31139F2426E6EE00421E7A /* IOS6.0 应用内直接下载程序 不需跳转AppStore */,
+				8F3113A92426E6EE00421E7A /* 获取iOSplist文件的所有信息 */,
+				8F3113AF2426E6EE00421E7A /* NSArrayNSMutableArray */,
+				8F3113B22426E6EE00421E7A /* popoverPresentationController */,
+				8F3113BD2426E6EE00421E7A /* UDID替代方案--KeyChain */,
+				8F3113C52426E6EE00421E7A /* NSAttributedString和NSMutableAttributedString */,
+				8F3113C92426E6EE00421E7A /* 字符串的显示 */,
+				8F3113CC2426E6EE00421E7A /* webView的约束显示 */,
+				8F3113D12426E6EE00421E7A /* NSURLSession */,
+				8F3113D42426E6EE00421E7A /* aboutNavigationController */,
+				8F3113D82426E6EE00421E7A /* 获取唯一UUID_UDID的方案 */,
+				8F3113DB2426E6EE00421E7A /* runtime获取私有属性强制更改私有属性以及获取私有方法 */,
+				8F3113E32426E6EE00421E7A /* SGHPickerViewViewController */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		8F31135C2426E6EE00421E7A /* presentViewController转场样式 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31135D2426E6EE00421E7A /* ctrl */,
+			);
+			path = "presentViewController转场样式";
+			sourceTree = "<group>";
+		};
+		8F31135D2426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31135E2426E6EE00421E7A /* SGHPresentTransitionSecondViewController.h */,
+				8F31135F2426E6EE00421E7A /* SGHPresentTransitionStyleViewController.h */,
+				8F3113602426E6EE00421E7A /* SGHPresentTransitionSecondViewController.m */,
+				8F3113612426E6EE00421E7A /* SGHPresentTransitionStyleViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113632426E6EE00421E7A /* 监听网路变化(用苹果官网提供的Reachability) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113652426E6EE00421E7A /* Reachability */,
+				8F3113682426E6EE00421E7A /* ViewController */,
+			);
+			path = "监听网路变化(用苹果官网提供的Reachability)";
+			sourceTree = "<group>";
+		};
+		8F3113652426E6EE00421E7A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113662426E6EE00421E7A /* Reachability.m */,
+				8F3113672426E6EE00421E7A /* Reachability.h */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		8F3113682426E6EE00421E7A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113692426E6EE00421E7A /* SGHNetworkChangeViewController.h */,
+				8F31136A2426E6EE00421E7A /* SGHNetworkChangeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8F31136B2426E6EE00421E7A /* tableViewStyleGrouped */ = {
+			isa = PBXGroup;
+			children = (
+				8F31136C2426E6EE00421E7A /* ctrl */,
+				8F31136F2426E6EE00421E7A /* image */,
+				8F3113722426E6EE00421E7A /* model */,
+				8F3113752426E6EE00421E7A /* view */,
+			);
+			path = tableViewStyleGrouped;
+			sourceTree = "<group>";
+		};
+		8F31136C2426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31136D2426E6EE00421E7A /* SGHTableViewStyleGroupedViewController.h */,
+				8F31136E2426E6EE00421E7A /* SGHTableViewStyleGroupedViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31136F2426E6EE00421E7A /* image */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113702426E6EE00421E7A /* tableViewStyleGrouped.xcassets */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		8F3113722426E6EE00421E7A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113732426E6EE00421E7A /* TKAccountModel.m */,
+				8F3113742426E6EE00421E7A /* TKAccountModel.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8F3113752426E6EE00421E7A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113762426E6EE00421E7A /* AccountTableHeaderView.h */,
+				8F3113772426E6EE00421E7A /* AccountTableHeaderView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8F3113782426E6EE00421E7A /* iOS runtime实战应用：Method Swizzling */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113792426E6EE00421E7A /* category */,
+				8F31137E2426E6EE00421E7A /* ctrl */,
+			);
+			path = "iOS runtime实战应用：Method Swizzling";
+			sourceTree = "<group>";
+		};
+		8F3113792426E6EE00421E7A /* category */ = {
+			isa = PBXGroup;
+			children = (
+				8F31137A2426E6EE00421E7A /* UIButton+SGHHook.h */,
+				8F31137B2426E6EE00421E7A /* UIImage+SGHHook.m */,
+				8F31137C2426E6EE00421E7A /* UIButton+SGHHook.m */,
+				8F31137D2426E6EE00421E7A /* UIImage+SGHHook.h */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		8F31137E2426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31137F2426E6EE00421E7A /* SGHMethodSwizzlingViewController.m */,
+				8F3113802426E6EE00421E7A /* new_home_icon.png */,
+				8F3113812426E6EE00421E7A /* SGHMethodSwizzlingViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113832426E6EE00421E7A /* 所有苹果字体显示的样式 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113842426E6EE00421E7A /* ctrl */,
+			);
+			path = "所有苹果字体显示的样式";
+			sourceTree = "<group>";
+		};
+		8F3113842426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113852426E6EE00421E7A /* SGHUIFontViewController.m */,
+				8F3113862426E6EE00421E7A /* SGHUIFontViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113882426E6EE00421E7A /* DataPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113892426E6EE00421E7A /* SGHDataPickerViewController.m */,
+				8F31138A2426E6EE00421E7A /* SGHDataPickerViewController.h */,
+			);
+			path = DataPicker;
+			sourceTree = "<group>";
+		};
+		8F31138B2426E6EE00421E7A /* 显示html格式的文字 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31138C2426E6EE00421E7A /* SGHShowHTMLViewController.h */,
+				8F31138D2426E6EE00421E7A /* SGHShowHTMLViewController.m */,
+			);
+			path = "显示html格式的文字";
+			sourceTree = "<group>";
+		};
+		8F31138E2426E6EE00421E7A /* iOS JavaScriptCore实现OC与JS的交互 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31138F2426E6EE00421E7A /* util */,
+				8F3113922426E6EE00421E7A /* ctrl */,
+			);
+			path = "iOS JavaScriptCore实现OC与JS的交互";
+			sourceTree = "<group>";
+		};
+		8F31138F2426E6EE00421E7A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113902426E6EE00421E7A /* ocTojsBlock.html */,
+				8F3113912426E6EE00421E7A /* ocTojs.html */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		8F3113922426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113932426E6EE00421E7A /* SGHOCJSInteractiveViewController.m */,
+				8F3113942426E6EE00421E7A /* SGHOCJSInteractiveViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113962426E6EE00421E7A /* 断点续传下载_普通下载_后台下载_取消下载 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113972426E6EE00421E7A /* ctrl */,
+			);
+			path = "断点续传下载_普通下载_后台下载_取消下载";
+			sourceTree = "<group>";
+		};
+		8F3113972426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113982426E6EE00421E7A /* SGHSesstionDownloadViewController.m */,
+				8F3113992426E6EE00421E7A /* SGHSesstionDownloadViewController.xib */,
+				8F31139A2426E6EE00421E7A /* SGHSesstionDownloadViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31139C2426E6EE00421E7A /* NSDate& NSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				8F31139D2426E6EE00421E7A /* SGHDateCalendarViewController.m */,
+				8F31139E2426E6EE00421E7A /* SGHDateCalendarViewController.h */,
+			);
+			path = "NSDate& NSCalendar";
+			sourceTree = "<group>";
+		};
+		8F31139F2426E6EE00421E7A /* IOS6.0 应用内直接下载程序 不需跳转AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113A02426E6EE00421E7A /* ctrl */,
+				8F3113A42426E6EE00421E7A /* Harpy */,
+			);
+			path = "IOS6.0 应用内直接下载程序 不需跳转AppStore";
+			sourceTree = "<group>";
+		};
+		8F3113A02426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113A12426E6EE00421E7A /* SGHSKStoreProductViewController.h */,
+				8F3113A22426E6EE00421E7A /* SGHSKStoreProductViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113A42426E6EE00421E7A /* Harpy */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113A52426E6EE00421E7A /* HarpyConstants.h */,
+				8F3113A62426E6EE00421E7A /* Harpy.m */,
+				8F3113A72426E6EE00421E7A /* DS_Store */,
+				8F3113A82426E6EE00421E7A /* Harpy.h */,
+			);
+			path = Harpy;
+			sourceTree = "<group>";
+		};
+		8F3113A92426E6EE00421E7A /* 获取iOSplist文件的所有信息 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113AA2426E6EE00421E7A /* ctrl */,
+			);
+			path = "获取iOSplist文件的所有信息";
+			sourceTree = "<group>";
+		};
+		8F3113AA2426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113AB2426E6EE00421E7A /* SGHPlistDictionaryViewController.h */,
+				8F3113AC2426E6EE00421E7A /* SGHPlistDictionaryViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113AF2426E6EE00421E7A /* NSArrayNSMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113B02426E6EE00421E7A /* SGHNSArrayNSMutableArrayViewController.m */,
+				8F3113B12426E6EE00421E7A /* SGHNSArrayNSMutableArrayViewController.h */,
+			);
+			path = NSArrayNSMutableArray;
+			sourceTree = "<group>";
+		};
+		8F3113B22426E6EE00421E7A /* popoverPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113B32426E6EE00421E7A /* images */,
+				8F3113B72426E6EE00421E7A /* ctrl */,
+			);
+			path = popoverPresentationController;
+			sourceTree = "<group>";
+		};
+		8F3113B32426E6EE00421E7A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113B42426E6EE00421E7A /* qrcode_screen@2x.png */,
+				8F3113B52426E6EE00421E7A /* system_setting@2x.png */,
+				8F3113B62426E6EE00421E7A /* stock_search@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		8F3113B72426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113B82426E6EE00421E7A /* SGHPopoverPresentationController.h */,
+				8F3113B92426E6EE00421E7A /* SGHPopContentViewController.m */,
+				8F3113BA2426E6EE00421E7A /* SGHPopoverPresentationController.m */,
+				8F3113BB2426E6EE00421E7A /* SGHPopContentViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113BD2426E6EE00421E7A /* UDID替代方案--KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113BE2426E6EE00421E7A /* Util */,
+				8F3113C12426E6EE00421E7A /* ctrl */,
+			);
+			path = "UDID替代方案--KeyChain";
+			sourceTree = "<group>";
+		};
+		8F3113BE2426E6EE00421E7A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113BF2426E6EE00421E7A /* YYQKeyChain.h */,
+				8F3113C02426E6EE00421E7A /* YYQKeyChain.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8F3113C12426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113C22426E6EE00421E7A /* SGHUDIDKeychainViewController.m */,
+				8F3113C32426E6EE00421E7A /* SGHUDIDKeychainViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113C52426E6EE00421E7A /* NSAttributedString和NSMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113C62426E6EE00421E7A /* SGHAttributedStringViewController.m */,
+				8F3113C82426E6EE00421E7A /* SGHAttributedStringViewController.h */,
+			);
+			path = "NSAttributedString和NSMutableAttributedString";
+			sourceTree = "<group>";
+		};
+		8F3113C92426E6EE00421E7A /* 字符串的显示 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113CA2426E6EE00421E7A /* SGHStringShowViewController.h */,
+				8F3113CB2426E6EE00421E7A /* SGHStringShowViewController.m */,
+			);
+			path = "字符串的显示";
+			sourceTree = "<group>";
+		};
+		8F3113CC2426E6EE00421E7A /* webView的约束显示 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113CD2426E6EE00421E7A /* SGHWebViewConstrainsViewController.h */,
+				8F3113CE2426E6EE00421E7A /* SGHWebViewConstrainsViewController.m */,
+				8F3113CF2426E6EE00421E7A /* inform_menu_selected@2x.png */,
+				8F3113D02426E6EE00421E7A /* demo.html */,
+			);
+			path = "webView的约束显示";
+			sourceTree = "<group>";
+		};
+		8F3113D12426E6EE00421E7A /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113D22426E6EE00421E7A /* SGHNSURLSessionViewController.m */,
+				8F3113D32426E6EE00421E7A /* SGHNSURLSessionViewController.h */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
+		8F3113D42426E6EE00421E7A /* aboutNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113D52426E6EE00421E7A /* SHGAboutNavigationViewController.m */,
+				8F3113D72426E6EE00421E7A /* SHGAboutNavigationViewController.h */,
+			);
+			path = aboutNavigationController;
+			sourceTree = "<group>";
+		};
+		8F3113D82426E6EE00421E7A /* 获取唯一UUID_UDID的方案 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113D92426E6EE00421E7A /* SGHUniqueUUID_UDIDViewController.m */,
+				8F3113DA2426E6EE00421E7A /* SGHUniqueUUID_UDIDViewController.h */,
+			);
+			path = "获取唯一UUID_UDID的方案";
+			sourceTree = "<group>";
+		};
+		8F3113DB2426E6EE00421E7A /* runtime获取私有属性强制更改私有属性以及获取私有方法 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113DC2426E6EE00421E7A /* ctrl */,
+				8F3113E02426E6EE00421E7A /* model */,
+			);
+			path = "runtime获取私有属性强制更改私有属性以及获取私有方法";
+			sourceTree = "<group>";
+		};
+		8F3113DC2426E6EE00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113DD2426E6EE00421E7A /* SGHRuntimeAttriMethodViewController.h */,
+				8F3113DE2426E6EE00421E7A /* SGHRuntimeAttriMethodViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3113E02426E6EE00421E7A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113E12426E6EE00421E7A /* SGHPerson.m */,
+				8F3113E22426E6EE00421E7A /* SGHPerson.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8F3113E32426E6EE00421E7A /* SGHPickerViewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F3113E42426E6EE00421E7A /* SGHPickerViewViewController.h */,
+				8F3113E52426E6EE00421E7A /* foods.plist */,
+				8F3113E62426E6EE00421E7A /* SGHPickerViewViewController.m */,
+			);
+			path = SGHPickerViewViewController;
+			sourceTree = "<group>";
+		};
+		8F3114252426EB4B00421E7A /* 16-05-19 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114262426EB4B00421E7A /* ctrl */,
+				8F31142A2426EB4B00421E7A /* mudlues */,
+			);
+			path = "16-05-19";
+			sourceTree = "<group>";
+		};
+		8F3114262426EB4B00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114272426EB4B00421E7A /* SGH160519ViewController.m */,
+				8F3114282426EB4B00421E7A /* SGH160519ViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31142A2426EB4B00421E7A /* mudlues */ = {
+			isa = PBXGroup;
+			children = (
+				8F31142B2426EB4B00421E7A /* 6反地理编码 */,
+				8F3114312426EB4B00421E7A /* 11UIAlertController */,
+				8F3114362426EB4B00421E7A /* 7MKMapView的使用 */,
+				8F31143C2426EB4C00421E7A /* 10导航 */,
+				8F31144B2426EB4C00421E7A /* 2理解 Scroll Views */,
+				8F3114512426EB4C00421E7A /* 3获取当前位置(要真机) */,
+				8F3114562426EB4C00421E7A /* 8向mapView上添加大头针 */,
+				8F31145F2426EB4C00421E7A /* 5地理编码 */,
+				8F3114652426EB4C00421E7A /* 12CollectionView设置frame时受导航栏影响的问题 */,
+				8F3114692426EB4C00421E7A /* 1WWDC 2013 Session笔记 - UIKit Dynamics入门 */,
+				8F31146E2426EB4C00421E7A /* 9动态添加大头针到地图 */,
+				8F31147A2426EB4C00421E7A /* 4根据经纬度计算两地的距离(要真机) */,
+			);
+			path = mudlues;
+			sourceTree = "<group>";
+		};
+		8F31142B2426EB4B00421E7A /* 6反地理编码 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31142C2426EB4B00421E7A /* Ctrl */,
+			);
+			path = "6反地理编码";
+			sourceTree = "<group>";
+		};
+		8F31142C2426EB4B00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31142D2426EB4B00421E7A /* SGH0618AntiEncodeViewController.m */,
+				8F31142E2426EB4B00421E7A /* SGH0618AntiEncodeViewController.xib */,
+				8F31142F2426EB4B00421E7A /* SGH0618AntiEncodeViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114312426EB4B00421E7A /* 11UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114322426EB4B00421E7A /* Ctrl */,
+			);
+			path = 11UIAlertController;
+			sourceTree = "<group>";
+		};
+		8F3114322426EB4B00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114332426EB4B00421E7A /* SGH0629AlertViewController.m */,
+				8F3114342426EB4B00421E7A /* SGH0629AlertViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114362426EB4B00421E7A /* 7MKMapView的使用 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114372426EB4B00421E7A /* Ctrl */,
+			);
+			path = "7MKMapView的使用";
+			sourceTree = "<group>";
+		};
+		8F3114372426EB4B00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114382426EB4B00421E7A /* SGH0618MapViewViewController.h */,
+				8F3114392426EB4B00421E7A /* SGH0618MapViewViewController.xib */,
+				8F31143A2426EB4C00421E7A /* SGH0618MapViewViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F31143C2426EB4C00421E7A /* 10导航 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31143D2426EB4C00421E7A /* Ctrl */,
+			);
+			path = "10导航";
+			sourceTree = "<group>";
+		};
+		8F31143D2426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31143E2426EB4C00421E7A /* SGH0618MapNavigationViewController.xib */,
+				8F31143F2426EB4C00421E7A /* SGH0618MapNavigationViewController.m */,
+				8F3114402426EB4C00421E7A /* SGH0618MapNavigationViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F31144B2426EB4C00421E7A /* 2理解 Scroll Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F31144C2426EB4C00421E7A /* ctrl */,
+			);
+			path = "2理解 Scroll Views";
+			sourceTree = "<group>";
+		};
+		8F31144C2426EB4C00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31144D2426EB4C00421E7A /* SGH160531ViewController.h */,
+				8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114512426EB4C00421E7A /* 3获取当前位置(要真机) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114522426EB4C00421E7A /* Ctrl */,
+			);
+			path = "3获取当前位置(要真机)";
+			sourceTree = "<group>";
+		};
+		8F3114522426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114532426EB4C00421E7A /* SGH0618LocationViewController.h */,
+				8F3114542426EB4C00421E7A /* SGH0618LocationViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114562426EB4C00421E7A /* 8向mapView上添加大头针 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114572426EB4C00421E7A /* Ctrl */,
+				8F31145B2426EB4C00421E7A /* Annotation */,
+			);
+			path = "8向mapView上添加大头针";
+			sourceTree = "<group>";
+		};
+		8F3114572426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114582426EB4C00421E7A /* SGH0618AnnotationViewController.m */,
+				8F3114592426EB4C00421E7A /* SGH0618AnnotationViewController.xib */,
+				8F31145A2426EB4C00421E7A /* SGH0618AnnotationViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F31145B2426EB4C00421E7A /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				8F31145C2426EB4C00421E7A /* SGH0618Annotation.m */,
+				8F31145D2426EB4C00421E7A /* SGH0618Annotation.h */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		8F31145F2426EB4C00421E7A /* 5地理编码 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114602426EB4C00421E7A /* Ctrl */,
+			);
+			path = "5地理编码";
+			sourceTree = "<group>";
+		};
+		8F3114602426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114612426EB4C00421E7A /* SGH0618GeocodeViewController.m */,
+				8F3114622426EB4C00421E7A /* SGH0618GeocodeViewController.xib */,
+				8F3114632426EB4C00421E7A /* SGH0618GeocodeViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114652426EB4C00421E7A /* 12CollectionView设置frame时受导航栏影响的问题 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114662426EB4C00421E7A /* Ctrl */,
+			);
+			path = "12CollectionView设置frame时受导航栏影响的问题";
+			sourceTree = "<group>";
+		};
+		8F3114662426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114672426EB4C00421E7A /* SGH0727CollectionViewController.m */,
+				8F3114682426EB4C00421E7A /* SGH0727CollectionViewController.h */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F3114692426EB4C00421E7A /* 1WWDC 2013 Session笔记 - UIKit Dynamics入门 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31146A2426EB4C00421E7A /* ctrl */,
+			);
+			path = "1WWDC 2013 Session笔记 - UIKit Dynamics入门";
+			sourceTree = "<group>";
+		};
+		8F31146A2426EB4C00421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31146B2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m */,
+				8F31146C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.h */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31146E2426EB4C00421E7A /* 9动态添加大头针到地图 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31146F2426EB4C00421E7A /* Ctrl */,
+			);
+			path = "9动态添加大头针到地图";
+			sourceTree = "<group>";
+		};
+		8F31146F2426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F3114702426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib */,
+				8F3114712426EB4C00421E7A /* SGH0618DynaAnnotationViewController.h */,
+				8F3114722426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m */,
+			);
+			path = Ctrl;
+			sourceTree = "<group>";
+		};
+		8F31147A2426EB4C00421E7A /* 4根据经纬度计算两地的距离(要真机) */ = {
+			isa = PBXGroup;
+			children = (
+				8F31147B2426EB4C00421E7A /* Ctrl */,
+			);
+			path = "4根据经纬度计算两地的距离(要真机)";
+			sourceTree = "<group>";
+		};
+		8F31147B2426EB4C00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31147C2426EB4C00421E7A /* SGH0618DistanceViewController.m */,
+				8F31147D2426EB4C00421E7A /* SGH0618DistanceViewController.h */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F3113542426E4AB00421E7A /* UIKit.framework */,
 				8F3112E42426DD0900421E7A /* Foundation.framework */,
 				BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */,
 			);
@@ -2648,15 +3603,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F31110824264FB100421E7A /* books.xml in Resources */,
+				8F31140F2426E6EF00421E7A /* stock_search@2x.png in Resources */,
 				8F3110F424264FB100421E7A /* SGH0824AlertViewViewController.xib in Resources */,
+				8F31149E2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib in Resources */,
 				8F31111024264FB100421E7A /* SGH0824PresentAndPushTwoViewController.xib in Resources */,
+				8F3113FD2426E6EF00421E7A /* ocTojsBlock.html in Resources */,
 				8F310B922425B29300421E7A /* LaunchScreen.storyboard in Resources */,
+				8F3113F02426E6EF00421E7A /* tableViewStyleGrouped.xcassets in Resources */,
+				8F3114082426E6EF00421E7A /* DS_Store in Resources */,
+				8F3114022426E6EF00421E7A /* SGHSesstionDownloadViewController.xib in Resources */,
 				8F310B8F2425B29300421E7A /* Assets.xcassets in Resources */,
+				8F3113F72426E6EF00421E7A /* new_home_icon.png in Resources */,
+				8F3114232426E6EF00421E7A /* foods.plist in Resources */,
 				8F31110D24264FB100421E7A /* SGH0824PresentAndPushOneViewController.xib in Resources */,
+				8F3114992426EB4C00421E7A /* SGH0618GeocodeViewController.xib in Resources */,
 				8F31111124264FB100421E7A /* SGH0824PresentAndPushFourViewController.xib in Resources */,
+				8F31141A2426E6EF00421E7A /* inform_menu_selected@2x.png in Resources */,
 				8F31111924264FB100421E7A /* SGH0729WheelViewController.xib in Resources */,
+				8F3114892426EB4C00421E7A /* SGH0618MapNavigationViewController.xib in Resources */,
 				8F31110C24264FB100421E7A /* SGH0824PresentAndPushThreeViewController.xib in Resources */,
 				8F3110BF24264FB100421E7A /* SGH0429CryptographyViewController.xib in Resources */,
+				8F3114862426EB4C00421E7A /* SGH0618MapViewViewController.xib in Resources */,
 				8F31110724264FB100421E7A /* Server_RTDev.xml in Resources */,
 				8F31111C24264FB100421E7A /* SGHWheelView.xib in Resources */,
 				8F31112224264FB100421E7A /* SGH0728CALayerViewController.xib in Resources */,
@@ -2666,7 +3633,13 @@
 				8F3110C124264FB100421E7A /* readme.md in Resources */,
 				8F310B8A2425B28900421E7A /* Main.storyboard in Resources */,
 				8F31112324264FB100421E7A /* CALayer0728.xcassets in Resources */,
+				8F3114952426EB4C00421E7A /* SGH0618AnnotationViewController.xib in Resources */,
+				8F31141B2426E6EF00421E7A /* demo.html in Resources */,
+				8F31140D2426E6EF00421E7A /* qrcode_screen@2x.png in Resources */,
+				8F3114822426EB4C00421E7A /* SGH0618AntiEncodeViewController.xib in Resources */,
 				8F31111B24264FB100421E7A /* Wheel0829Icon.xcassets in Resources */,
+				8F3113FE2426E6EF00421E7A /* ocTojs.html in Resources */,
+				8F31140E2426E6EF00421E7A /* system_setting@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2746,15 +3719,21 @@
 				8F3110B024264FB100421E7A /* SGH_TTAttriLabelViewController.m in Sources */,
 				8F310B952425B29300421E7A /* main.m in Sources */,
 				8F3110C724264FB100421E7A /* SGH0511RuntimeMethod.m in Sources */,
+				8F3114182426E6EF00421E7A /* SGHStringShowViewController.m in Sources */,
 				8F31112B24264FB100421E7A /* SGH160728ViewController.m in Sources */,
 				8F3110D924264FB100421E7A /* SHKVOExploreViewController.m in Sources */,
 				8F31109B24264FB100421E7A /* UIView+WZLBadge.m in Sources */,
 				8F3110FB24264FB100421E7A /* SH1902Person.m in Sources */,
 				8F31111F24264FB100421E7A /* SGH1108AppStoreViewController.m in Sources */,
+				8F3113502426E1D500421E7A /* SGHMethodSwizzlingObject.m in Sources */,
+				8F3114132426E6EF00421E7A /* YYQKeyChain.m in Sources */,
 				8F3110EE24264FB100421E7A /* SXDetailImgEntity.m in Sources */,
+				8F3114872426EB4C00421E7A /* SGH0618MapViewViewController.m in Sources */,
 				8F3110BE24264FB100421E7A /* SGH0429CryptographyViewController.m in Sources */,
 				8F3110B524264FB100421E7A /* GJCell.m in Sources */,
 				8F31112A24264FB100421E7A /* SGH1012PlaceholderColorViewController.m in Sources */,
+				8F31149F2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m in Sources */,
+				8F3114A42426EB4C00421E7A /* SGH0618DistanceViewController.m in Sources */,
 				8F3110E124264FB100421E7A /* Person.m in Sources */,
 				8F3110E724264FB100421E7A /* TKUpdateHelperCache.m in Sources */,
 				8F3110A124264FB100421E7A /* WBStatusTimelineViewController.m in Sources */,
@@ -2762,6 +3741,7 @@
 				8F3110BB24264FB100421E7A /* SGH0512Runtime5ViewController.m in Sources */,
 				8F31109224264FB100421E7A /* SHRAC9ViewController.m in Sources */,
 				8F3110FD24264FB100421E7A /* SH0227SeniorCampViewController.m in Sources */,
+				8F3114242426E6EF00421E7A /* SGHPickerViewViewController.m in Sources */,
 				8F3110E424264FB100421E7A /* UIColor+Hex.m in Sources */,
 				8F31111824264FB100421E7A /* SGH1013TextViewViewController.m in Sources */,
 				8F31110B24264FB100421E7A /* SGH0824PresentAndPushThreeViewController.m in Sources */,
@@ -2769,27 +3749,39 @@
 				8F31111624264FB100421E7A /* GTMBase64.m in Sources */,
 				8F31111224264FB100421E7A /* SGH0824PresentAndPushFourViewController.m in Sources */,
 				8F3110BC24264FB100421E7A /* UIViewController+SGH0512Tracking.m in Sources */,
+				8F3113E92426E6EF00421E7A /* SGHPresentTransitionSecondViewController.m in Sources */,
 				8F31109D24264FB100421E7A /* SGH161223WZLBadgeViewController.m in Sources */,
 				8F3110E524264FB100421E7A /* XGImageTitleView.m in Sources */,
 				8F3110CE24264FB100421E7A /* SGH0515AttibuteStringInitViewController.m in Sources */,
 				8F3110AF24264FB100421E7A /* SGH0506Test.m in Sources */,
 				8F3110AB24264FB100421E7A /* SHSortManager.m in Sources */,
 				8F3110F024264FB100421E7A /* SGH1012BecomeHtmlStringViewController.m in Sources */,
+				8F3114962426EB4C00421E7A /* SGH0618Annotation.m in Sources */,
+				8F3113F62426E6EF00421E7A /* SGHMethodSwizzlingViewController.m in Sources */,
+				8F3114102426E6EF00421E7A /* SGHPopContentViewController.m in Sources */,
 				8F31110524264FB100421E7A /* SGH0729TransitionGroupViewController.m in Sources */,
 				8F3110A724264FB100421E7A /* WBTopic.m in Sources */,
+				8F3113EA2426E6EF00421E7A /* SGHPresentTransitionStyleViewController.m in Sources */,
+				8F31148A2426EB4C00421E7A /* SGH0618MapNavigationViewController.m in Sources */,
 				8F31109824264FB100421E7A /* SGH161223ComponentsDemoViewController.m in Sources */,
 				8F31109724264FB100421E7A /* HomePageAnimationUtil.m in Sources */,
+				8F31140C2426E6EF00421E7A /* SGHNSArrayNSMutableArrayViewController.m in Sources */,
+				8F31149B2426EB4C00421E7A /* SGH0727CollectionViewController.m in Sources */,
 				8F3110D624264FB100421E7A /* UIView+SGHTapGesture.m in Sources */,
+				8F3113EF2426E6EF00421E7A /* SGHTableViewStyleGroupedViewController.m in Sources */,
 				8F31110F24264FB100421E7A /* SGH0824PresentAndPushTwoViewController.m in Sources */,
 				8F3110F524264FB100421E7A /* SGH0802ExpressionViewController.m in Sources */,
 				8F3110C324264FB100421E7A /* Example2Controller.m in Sources */,
 				8F31110124264FB100421E7A /* SHSocketStruc0218ViewController.m in Sources */,
+				8F3113EE2426E6EF00421E7A /* SGHNetworkChangeViewController.m in Sources */,
+				8F3113F22426E6EF00421E7A /* TKAccountModel.m in Sources */,
 				8F31108524264FB100421E7A /* NSDictionary+NilSafe.m in Sources */,
 				8F31109624264FB100421E7A /* SHAnimationMasonryLoginVC.m in Sources */,
 				8F3110A624264FB100421E7A /* WBButtonLink.m in Sources */,
 				8F3110B624264FB100421E7A /* SGH0425RunloopImageViewController.m in Sources */,
 				8F3110A324264FB100421E7A /* WBStatus.m in Sources */,
 				8F31109024264FB100421E7A /* SHRAC12ViewController.m in Sources */,
+				8F3114942426EB4C00421E7A /* SGH0618AnnotationViewController.m in Sources */,
 				8F31108724264FB100421E7A /* SGHDeviceManager.m in Sources */,
 				8F3110D424264FB100421E7A /* SGH0510Runtime2ViewController.m in Sources */,
 				8F31112424264FB100421E7A /* SGH0729Layer.m in Sources */,
@@ -2797,17 +3789,25 @@
 				8F3110B224264FB100421E7A /* SGH0515ClassViewController.m in Sources */,
 				8F3110E824264FB100421E7A /* SHFetchFutureDateViewController.m in Sources */,
 				8F31109324264FB100421E7A /* SHRAC4ViewController.m in Sources */,
+				8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */,
 				8F3110CC24264FB100421E7A /* SGH0424DreamLBSViewController.m in Sources */,
 				8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */,
+				8F3113FB2426E6EF00421E7A /* SGHDataPickerViewController.m in Sources */,
+				8F3114202426E6EF00421E7A /* SGHRuntimeAttriMethodViewController.m in Sources */,
 				8F3110A924264FB100421E7A /* WBPictureMetadata.m in Sources */,
 				8F3110DB24264FB100421E7A /* SHCoreDataDemoVC.m in Sources */,
 				8F3110C024264FB100421E7A /* NSString+Hash.m in Sources */,
+				8F3113F42426E6EF00421E7A /* UIImage+SGHHook.m in Sources */,
+				8F3114072426E6EF00421E7A /* Harpy.m in Sources */,
 				8F3110AD24264FB100421E7A /* SGH0506OCRuntime1ViewController.m in Sources */,
+				8F3114112426E6EF00421E7A /* SGHPopoverPresentationController.m in Sources */,
 				8F31108A24264FB100421E7A /* SHAlertViewManager.m in Sources */,
 				8F3110DC24264FB100421E7A /* Model.xcdatamodeld in Sources */,
+				8F3114042426E6EF00421E7A /* SGHDateCalendarViewController.m in Sources */,
 				8F3110FF24264FB100421E7A /* SHProxy.m in Sources */,
 				8F3110A424264FB100421E7A /* WBTimelineItem.m in Sources */,
 				8F3110A024264FB100421E7A /* SGH190129YYKitViewController.m in Sources */,
+				8F3113F52426E6EF00421E7A /* UIButton+SGHHook.m in Sources */,
 				8F31108624264FB100421E7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				8F31110024264FB100421E7A /* SHRuntime3Person.m in Sources */,
 				8F3110D024264FB100421E7A /* SHDispatchMethodsViewController.m in Sources */,
@@ -2816,21 +3816,31 @@
 				8F31110624264FB100421E7A /* SGH0729TransitionGroupSecondViewController.m in Sources */,
 				8F31108E24264FB100421E7A /* SGH1128ContactsViewController.m in Sources */,
 				8F3110C824264FB100421E7A /* SGH0424GaodeMapView.m in Sources */,
+				8F3114052426E6EF00421E7A /* SGHSKStoreProductViewController.m in Sources */,
 				8F3110BD24264FB100421E7A /* SGH0512Runtime4ViewController.m in Sources */,
 				8F31109524264FB100421E7A /* SHRAC1ViewController.m in Sources */,
+				8F3114982426EB4C00421E7A /* SGH0618GeocodeViewController.m in Sources */,
+				8F31148F2426EB4C00421E7A /* SGH160531ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
+				8F3113532426E1D500421E7A /* NSString+MD5.m in Sources */,
+				8F3114142426E6EF00421E7A /* SGHUDIDKeychainViewController.m in Sources */,
+				8F3114012426E6EF00421E7A /* SGHSesstionDownloadViewController.m in Sources */,
 				8F31112824264FB100421E7A /* SGH1128InterceptPopViewController.m in Sources */,
 				8F3110D524264FB100421E7A /* SGH0510MyObject.m in Sources */,
 				8F31110A24264FB100421E7A /* SGH0729CAAnimationViewController.m in Sources */,
 				8F3110D124264FB100421E7A /* SGHXMPPFrameworkViewController.m in Sources */,
 				8F3110F224264FB100421E7A /* SGH1101DidScreenshotNotiViewController.m in Sources */,
 				8F31112D24264FB100421E7A /* SGH161128TabBarViewController.m in Sources */,
+				8F3113512426E1D500421E7A /* NSString+Chinese.m in Sources */,
 				8F31109424264FB100421E7A /* SHRAC10ViewController.m in Sources */,
 				8F31108F24264FB100421E7A /* SHReactiveCocoaViewController.m in Sources */,
 				8F3110FC24264FB100421E7A /* SHLeaks0301Object.m in Sources */,
+				8F3114812426EB4C00421E7A /* SGH0618AntiEncodeViewController.m in Sources */,
+				8F31149C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m in Sources */,
 				8F3110E324264FB100421E7A /* SHImageText0214ViewController.m in Sources */,
 				8F31111424264FB100421E7A /* SGH1103AESViewController.m in Sources */,
+				8F3113FC2426E6EF00421E7A /* SGHShowHTMLViewController.m in Sources */,
 				8F3110B424264FB100421E7A /* SHUnfixedHeightTableViewController.m in Sources */,
 				8F3110F824264FB100421E7A /* UIViewController+SHLeaksTest.m in Sources */,
 				8F31110924264FB100421E7A /* SGH1125XMLParserViewController.m in Sources */,
@@ -2839,9 +3849,12 @@
 				8F3110A524264FB100421E7A /* WBPicture.m in Sources */,
 				8F310B8D2425B28900421E7A /* ObjectiveCDemo20200321.xcdatamodeld in Sources */,
 				8F31109E24264FB100421E7A /* SGH160911CoreLocationViewController.m in Sources */,
+				8F3113FF2426E6EF00421E7A /* SGHOCJSInteractiveViewController.m in Sources */,
 				8F3110CA24264FB100421E7A /* SGH0424BaiduMapView.m in Sources */,
+				8F3113E72426E6EF00421E7A /* SGH160507ViewController.m in Sources */,
 				8F3110CB24264FB100421E7A /* SGH0424BaiduFactory.m in Sources */,
 				8F31112524264FB100421E7A /* SGH1013ImageSaveAlbumViewController.m in Sources */,
+				8F3114192426E6EF00421E7A /* SGHWebViewConstrainsViewController.m in Sources */,
 				8F31108224264FB100421E7A /* TBXML+Compression.m in Sources */,
 				8F3110ED24264FB100421E7A /* SGH0524PresentAViewController.m in Sources */,
 				8F3110D224264FB100421E7A /* SGH0601SystemVersionViewController.m in Sources */,
@@ -2850,15 +3863,21 @@
 				8F3110F724264FB100421E7A /* SGH1108ShareItem.m in Sources */,
 				8F31111324264FB100421E7A /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
 				8F31108824264FB100421E7A /* BDTConstManager.m in Sources */,
+				8F3114222426E6EF00421E7A /* SGHPerson.m in Sources */,
 				8F31108B24264FB100421E7A /* SHUtility.m in Sources */,
+				8F3113ED2426E6EF00421E7A /* Reachability.m in Sources */,
+				8F3114162426E6EF00421E7A /* SGHAttributedStringViewController.m in Sources */,
 				8F3110DA24264FB100421E7A /* SGH0509AboutRunLoopViewController.m in Sources */,
+				8F31147F2426EB4C00421E7A /* SGH160519ViewController.m in Sources */,
 				8F31109924264FB100421E7A /* UIView+Frame.m in Sources */,
+				8F31141F2426E6EF00421E7A /* SGHUniqueUUID_UDIDViewController.m in Sources */,
 				8F31110224264FB100421E7A /* SGH1221SelectedCellsViewController.m in Sources */,
 				8F3110EA24264FB100421E7A /* SGH0208UncaughtExceptionViewController.m in Sources */,
 				8F31111A24264FB100421E7A /* SGH0729WheelViewController.m in Sources */,
 				8F31108324264FB100421E7A /* TBXML.m in Sources */,
 				8F3110C424264FB100421E7A /* Example1Controller.m in Sources */,
 				8F3110EC24264FB100421E7A /* SGH0524PresentBViewController.m in Sources */,
+				8F3114922426EB4C00421E7A /* SGH0618LocationViewController.m in Sources */,
 				8F31111724264FB100421E7A /* SGH0713ScreenShotViewController.m in Sources */,
 				8F3110CF24264FB100421E7A /* SHCommonToolVC.m in Sources */,
 				8F3110B124264FB100421E7A /* SGH170518ResuableCellViewController.m in Sources */,
@@ -2867,6 +3886,7 @@
 				8F31112624264FB100421E7A /* SGH170119CrashRankViewController.m in Sources */,
 				8F3110FA24264FB100421E7A /* SH1902SpareWheel.m in Sources */,
 				8F3110D324264FB100421E7A /* SGH0515Runtime6ViewController.m in Sources */,
+				8F3113F32426E6EF00421E7A /* AccountTableHeaderView.m in Sources */,
 				8F31111D24264FB100421E7A /* SGHWheelView.m in Sources */,
 				8F3110A224264FB100421E7A /* WBURL.m in Sources */,
 				8F3110E224264FB100421E7A /* RegexKitLite.m in Sources */,
@@ -2878,6 +3898,9 @@
 				8F3110D824264FB100421E7A /* EOCFamily.m in Sources */,
 				8F31108D24264FB100421E7A /* UIView+LCAdd.m in Sources */,
 				8F31109C24264FB100421E7A /* SGHAFNetworkingViewController.m in Sources */,
+				8F31141D2426E6EF00421E7A /* SHGAboutNavigationViewController.m in Sources */,
+				8F3114092426E6EF00421E7A /* SGHPlistDictionaryViewController.m in Sources */,
+				8F3113F92426E6EF00421E7A /* SGHUIFontViewController.m in Sources */,
 				8F31108424264FB100421E7A /* TBXML+HTTP.m in Sources */,
 				8F31112724264FB100421E7A /* SGH1108UpdateAppViewController.m in Sources */,
 				8F3110C924264FB100421E7A /* SGH0424GaodeFactory.m in Sources */,
@@ -2885,6 +3908,7 @@
 				8F3110DF24264FB100421E7A /* SGH170815IdentCodeAuthView.m in Sources */,
 				8F3110AA24264FB100421E7A /* SGH170208ViewController.m in Sources */,
 				8F3110E924264FB100421E7A /* UIButton+timeCountDown.m in Sources */,
+				8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */,
 				8F3110AE24264FB100421E7A /* SGH170506MyClass.m in Sources */,
 				8F3110B824264FB100421E7A /* SHMemManageViewController.m in Sources */,
 				8F3110AC24264FB100421E7A /* SHSandboxReadWriteVC.m in Sources */,
@@ -3060,6 +4084,7 @@
 			baseConfigurationReference = 58E7D9D9B837FD37D83AC17F /* Pods-ObjectiveCDemo20200321.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5ZV6BBJ6N;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -3114,6 +4139,7 @@
 			baseConfigurationReference = 7B0CCC61ECC47D8190E5CDDD /* Pods-ObjectiveCDemo20200321.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5ZV6BBJ6N;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;

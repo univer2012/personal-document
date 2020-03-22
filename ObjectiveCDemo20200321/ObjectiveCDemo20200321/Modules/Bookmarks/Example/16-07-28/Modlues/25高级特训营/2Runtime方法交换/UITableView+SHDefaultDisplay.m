@@ -36,7 +36,7 @@ const char *LGDefaultView;
     
     NSInteger rows = 0;
     for (NSInteger i = 0; i < section; i++) {
-        rows = [dataSource tableView:self numberOfRowsInSection:section];
+        rows = [dataSource tableView:self numberOfRowsInSection:i];
     }
     if (!rows) {
 //        self.lgDefaultView.hidden = NO;
