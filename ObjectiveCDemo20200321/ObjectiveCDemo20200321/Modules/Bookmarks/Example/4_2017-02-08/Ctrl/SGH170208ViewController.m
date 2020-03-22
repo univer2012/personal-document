@@ -44,6 +44,7 @@
 #import "SHDispatchMethodsViewController.h"
 #import "SHUnfixedHeightTableViewController.h"
 #import "SHCoreDataDemoVC.h"
+#import "SGHVariableParamsViewController.h"
 
 @interface SGH170208ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
@@ -123,6 +124,7 @@
                           [SHDispatchMethodsViewController new],
                           SHUnfixedHeightTableViewController.new,
                           SHCoreDataDemoVC.new,
+                          SGHVariableParamsViewController.new,
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
@@ -158,6 +160,7 @@
                         @"31、系统提供的dispatch方法",
                         @"32、cell高度不固定的UITableView",
                         @"33、CoreData实例",
+                        @"34、定义形参个数可变的方法",
                         ] mutableCopy];
     
     /*用组件隐藏navigationBar，并可以滑动返回

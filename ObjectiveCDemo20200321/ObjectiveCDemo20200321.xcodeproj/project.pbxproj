@@ -257,6 +257,9 @@
 		8F31149E2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114702426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib */; };
 		8F31149F2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114722426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m */; };
 		8F3114A42426EB4C00421E7A /* SGH0618DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31147C2426EB4C00421E7A /* SGH0618DistanceViewController.m */; };
+		8F31150B2426FBCD00421E7A /* SGHVariableParamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31150A2426FBCD00421E7A /* SGHVariableParamsViewController.m */; };
+		8F31150E2426FBEC00421E7A /* VarArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31150D2426FBEC00421E7A /* VarArgs.m */; };
+		8F3115102426FCB900421E7A /* README.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 8F31150F2426FCB800421E7A /* README.rtfd */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -749,6 +752,11 @@
 		8F3114722426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618DynaAnnotationViewController.m; sourceTree = "<group>"; };
 		8F31147C2426EB4C00421E7A /* SGH0618DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618DistanceViewController.m; sourceTree = "<group>"; };
 		8F31147D2426EB4C00421E7A /* SGH0618DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618DistanceViewController.h; sourceTree = "<group>"; };
+		8F3115092426FBCC00421E7A /* SGHVariableParamsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHVariableParamsViewController.h; sourceTree = "<group>"; };
+		8F31150A2426FBCD00421E7A /* SGHVariableParamsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHVariableParamsViewController.m; sourceTree = "<group>"; };
+		8F31150C2426FBEC00421E7A /* VarArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarArgs.h; sourceTree = "<group>"; };
+		8F31150D2426FBEC00421E7A /* VarArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarArgs.m; sourceTree = "<group>"; };
+		8F31150F2426FCB800421E7A /* README.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = README.rtfd; path = "../../../../../../../../DemoAccumulate20170106/程序猿群141607754/程序猿群141607754/README.rtfd"; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1315,6 +1323,7 @@
 		8F310EFB24264FB000421E7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F3115082426FB3B00421E7A /* 34定义形参个数可变的方法 */,
 				8F310EFC24264FB000421E7A /* 26沙盒存取 */,
 				8F310EFF24264FB000421E7A /* 6Objective-C Runtime 运行时之一：类与对象 */,
 				8F310F0824264FB000421E7A /* 22TTAttributedLabel  */,
@@ -3487,6 +3496,18 @@
 			path = Ctrl;
 			sourceTree = "<group>";
 		};
+		8F3115082426FB3B00421E7A /* 34定义形参个数可变的方法 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31150F2426FCB800421E7A /* README.rtfd */,
+				8F31150C2426FBEC00421E7A /* VarArgs.h */,
+				8F31150D2426FBEC00421E7A /* VarArgs.m */,
+				8F3115092426FBCC00421E7A /* SGHVariableParamsViewController.h */,
+				8F31150A2426FBCD00421E7A /* SGHVariableParamsViewController.m */,
+			);
+			path = "34定义形参个数可变的方法";
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3639,6 +3660,7 @@
 				8F3114822426EB4C00421E7A /* SGH0618AntiEncodeViewController.xib in Resources */,
 				8F31111B24264FB100421E7A /* Wheel0829Icon.xcassets in Resources */,
 				8F3113FE2426E6EF00421E7A /* ocTojs.html in Resources */,
+				8F3115102426FCB900421E7A /* README.rtfd in Resources */,
 				8F31140E2426E6EF00421E7A /* system_setting@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3819,6 +3841,7 @@
 				8F3114052426E6EF00421E7A /* SGHSKStoreProductViewController.m in Sources */,
 				8F3110BD24264FB100421E7A /* SGH0512Runtime4ViewController.m in Sources */,
 				8F31109524264FB100421E7A /* SHRAC1ViewController.m in Sources */,
+				8F31150E2426FBEC00421E7A /* VarArgs.m in Sources */,
 				8F3114982426EB4C00421E7A /* SGH0618GeocodeViewController.m in Sources */,
 				8F31148F2426EB4C00421E7A /* SGH160531ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
@@ -3907,6 +3930,7 @@
 				8F3110FE24264FB100421E7A /* SHRuntime4Person.m in Sources */,
 				8F3110DF24264FB100421E7A /* SGH170815IdentCodeAuthView.m in Sources */,
 				8F3110AA24264FB100421E7A /* SGH170208ViewController.m in Sources */,
+				8F31150B2426FBCD00421E7A /* SGHVariableParamsViewController.m in Sources */,
 				8F3110E924264FB100421E7A /* UIButton+timeCountDown.m in Sources */,
 				8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */,
 				8F3110AE24264FB100421E7A /* SGH170506MyClass.m in Sources */,

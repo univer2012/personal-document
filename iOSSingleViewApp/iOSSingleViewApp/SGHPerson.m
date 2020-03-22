@@ -17,7 +17,7 @@
     return self;
 }
 -(void)setLastName:(NSString *)lastName {
-    _lastName = @"";
+    lastName = @"";
 }
 -(NSString *)lastName {
     return @"";

@@ -5,7 +5,10 @@
 //  Created by huangaengoln on 2017/11/19.
 //  Copyright © 2017年 huangaengoln. All rights reserved.
 //
-
+/**
+  * 本demo来自：
+ [iOS多线程NSOperation](https://blog.csdn.net/sevenquan/article/details/50403542)
+ */
 #import "ViewController.h"
 
 #import "SGHPushViewController.h"
