@@ -54,8 +54,13 @@
     CoreTextData *data=[CTFrameParser parseTemplateFile:path config:config];
     self.ctView.data=data;
     self.ctView.height=data.height;
-    self.ctView.backgroundColor=[UIColor whiteColor];
+    self.ctView.backgroundColor = [UIColor whiteColor];
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSLog(@"image:%@",image);
     
+    NSString *tPath = [[NSBundle mainBundle] pathForResource:@"red" ofType:@"png"];
+    UIImage * myImage = [UIImage imageWithContentsOfFile:tPath];
+    NSLog(@"myImage:%@",myImage);
 #endif
     
 }

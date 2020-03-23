@@ -53,7 +53,8 @@
     self.ctView.data=data;
     self.ctView.height=data.height;
     self.ctView.backgroundColor=[UIColor whiteColor];
-    
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSLog(@"image:%@",image);
 #endif
     
 }
