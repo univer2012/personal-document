@@ -46,7 +46,7 @@
         @"3、转场动画和动画组",
         @"4、实例动画按钮布局",
         @"5、CATransition转场效果",
-        @"6、广告3DTransition"
+        @"6、广告3DTransition",
     ] mutableCopy];
 }
 

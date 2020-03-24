@@ -11,6 +11,8 @@
 #import "CTFrameParserConfig.h"
 #import "CTFrameParser.h"
 
+#import "UIViewController+Description.h"
+
 @interface SGHCoreText3ViewController ()
 
 @property (weak, nonatomic) IBOutlet CTDisplayView *ctView;
@@ -68,27 +70,10 @@
     
     
     ///文字说明
-    UILabel *tipLab = [UILabel new];
-    tipLab.backgroundColor = UIColor.systemBlueColor;
-    tipLab.textColor = UIColor.whiteColor;
-    tipLab.numberOfLines = 0;
-    tipLab.text = @"如果图片没有出来，可能是图片没有加载到，这时要去「CTDisplayView」里面检查下加载图片的地方";
-    [self.view addSubview:tipLab];
-    [tipLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view).offset(88);
-    }];
-    
+    [self showDescWith:@"如果图片没有出来，可能是图片没有加载到，这时要去「CTDisplayView」里面检查下加载图片的地方"];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
+
+

@@ -307,6 +307,18 @@
 		8F3115B7242A512900421E7A /* banner_3d_tran_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B1242A512900421E7A /* banner_3d_tran_5.jpg */; };
 		8F3115B8242A512900421E7A /* banner_3d_tran_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B2242A512900421E7A /* banner_3d_tran_2.jpg */; };
 		8F3115B9242A512900421E7A /* banner_3d_tran_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B3242A512900421E7A /* banner_3d_tran_0.jpg */; };
+		8F3115BE242A586500421E7A /* SGH0324Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115BD242A586500421E7A /* SGH0324Person.m */; };
+		8F3115C1242A589600421E7A /* SGH0324Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115C0242A589600421E7A /* SGH0324Observer.m */; };
+		8F3115C4242A58C200421E7A /* SGHAdvance2KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115C3242A58C200421E7A /* SGHAdvance2KVOViewController.m */; };
+		8F3115C7242A5AFD00421E7A /* UIViewController+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115C6242A5AFD00421E7A /* UIViewController+Description.m */; };
+		8F3115CB242A609400421E7A /* SGHModelTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115CA242A609300421E7A /* SGHModelTransformViewController.m */; };
+		8F3115DB242A60F500421E7A /* statuses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115CC242A60F400421E7A /* statuses.plist */; };
+		8F3115DC242A60F500421E7A /* NSObject+EnumDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115CF242A60F400421E7A /* NSObject+EnumDict.m */; };
+		8F3115DD242A60F500421E7A /* NSObject+EnumDictOneLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D0242A60F400421E7A /* NSObject+EnumDictOneLevel.m */; };
+		8F3115DE242A60F500421E7A /* NSObject+EnumArr.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D1242A60F400421E7A /* NSObject+EnumArr.m */; };
+		8F3115DF242A60F500421E7A /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D6242A60F400421E7A /* PersonModel.m */; };
+		8F3115E0242A60F500421E7A /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D7242A60F400421E7A /* CellModel.m */; };
+		8F3115E1242A60F500421E7A /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D8242A60F400421E7A /* Status.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -884,6 +896,29 @@
 		8F3115B1242A512900421E7A /* banner_3d_tran_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_5.jpg; sourceTree = "<group>"; };
 		8F3115B2242A512900421E7A /* banner_3d_tran_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_2.jpg; sourceTree = "<group>"; };
 		8F3115B3242A512900421E7A /* banner_3d_tran_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_0.jpg; sourceTree = "<group>"; };
+		8F3115BC242A586500421E7A /* SGH0324Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0324Person.h; sourceTree = "<group>"; };
+		8F3115BD242A586500421E7A /* SGH0324Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0324Person.m; sourceTree = "<group>"; };
+		8F3115BF242A589600421E7A /* SGH0324Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0324Observer.h; sourceTree = "<group>"; };
+		8F3115C0242A589600421E7A /* SGH0324Observer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0324Observer.m; sourceTree = "<group>"; };
+		8F3115C2242A58C200421E7A /* SGHAdvance2KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHAdvance2KVOViewController.h; sourceTree = "<group>"; };
+		8F3115C3242A58C200421E7A /* SGHAdvance2KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHAdvance2KVOViewController.m; sourceTree = "<group>"; };
+		8F3115C5242A5AFD00421E7A /* UIViewController+Description.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Description.h"; sourceTree = "<group>"; };
+		8F3115C6242A5AFD00421E7A /* UIViewController+Description.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Description.m"; sourceTree = "<group>"; };
+		8F3115C9242A609300421E7A /* SGHModelTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHModelTransformViewController.h; sourceTree = "<group>"; };
+		8F3115CA242A609300421E7A /* SGHModelTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHModelTransformViewController.m; sourceTree = "<group>"; };
+		8F3115CC242A60F400421E7A /* statuses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statuses.plist; sourceTree = "<group>"; };
+		8F3115CE242A60F400421E7A /* NSObject+EnumArr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EnumArr.h"; sourceTree = "<group>"; };
+		8F3115CF242A60F400421E7A /* NSObject+EnumDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EnumDict.m"; sourceTree = "<group>"; };
+		8F3115D0242A60F400421E7A /* NSObject+EnumDictOneLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EnumDictOneLevel.m"; sourceTree = "<group>"; };
+		8F3115D1242A60F400421E7A /* NSObject+EnumArr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EnumArr.m"; sourceTree = "<group>"; };
+		8F3115D2242A60F400421E7A /* NSObject+EnumDictOneLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EnumDictOneLevel.h"; sourceTree = "<group>"; };
+		8F3115D3242A60F400421E7A /* NSObject+EnumDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EnumDict.h"; sourceTree = "<group>"; };
+		8F3115D5242A60F400421E7A /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		8F3115D6242A60F400421E7A /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		8F3115D7242A60F400421E7A /* CellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
+		8F3115D8242A60F400421E7A /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		8F3115D9242A60F400421E7A /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		8F3115DA242A60F400421E7A /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1567,6 +1602,8 @@
 				8F310E9624264FAF00421E7A /* UIView+LCAdd.m */,
 				8F310E9724264FAF00421E7A /* UIColor+Hex.h */,
 				8F310E9824264FAF00421E7A /* UIView+LCAdd.h */,
+				8F3115C5242A5AFD00421E7A /* UIViewController+Description.h */,
+				8F3115C6242A5AFD00421E7A /* UIViewController+Description.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -3575,6 +3612,7 @@
 		8F3115422429941E00421E7A /* 8KVO_KVC */ = {
 			isa = PBXGroup;
 			children = (
+				8F3115BA242A57F700421E7A /* Examples */,
 				8F31154D2429947C00421E7A /* SGHAboutKVOAndKVCViewController.h */,
 				8F31154E2429947C00421E7A /* SGHAboutKVOAndKVCViewController.m */,
 			);
@@ -3593,6 +3631,7 @@
 		8F3115532429953500421E7A /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8F3115C8242A601600421E7A /* runtime+KVC实现多层字典模型转换 */,
 				04F6EC382429ACCB00D7F1CB /* runtime获取私有属性强制更改私有属性以及获取私有方法 */,
 				04F6EC2E2429ACCB00D7F1CB /* iOS runtime实战应用：Method Swizzling */,
 				8F311554242995AD00421E7A /* 6Objective-C Runtime 运行时之一：类与对象 */,
@@ -3867,6 +3906,65 @@
 			path = 3DTransitionView;
 			sourceTree = "<group>";
 		};
+		8F3115BA242A57F700421E7A /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115BB242A580700421E7A /* 1KVO进阶二 */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		8F3115BB242A580700421E7A /* 1KVO进阶二 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115BC242A586500421E7A /* SGH0324Person.h */,
+				8F3115BD242A586500421E7A /* SGH0324Person.m */,
+				8F3115BF242A589600421E7A /* SGH0324Observer.h */,
+				8F3115C0242A589600421E7A /* SGH0324Observer.m */,
+				8F3115C2242A58C200421E7A /* SGHAdvance2KVOViewController.h */,
+				8F3115C3242A58C200421E7A /* SGHAdvance2KVOViewController.m */,
+			);
+			path = "1KVO进阶二";
+			sourceTree = "<group>";
+		};
+		8F3115C8242A601600421E7A /* runtime+KVC实现多层字典模型转换 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115CD242A60F400421E7A /* ConvertKit */,
+				8F3115D4242A60F400421E7A /* Models */,
+				8F3115CC242A60F400421E7A /* statuses.plist */,
+				8F3115C9242A609300421E7A /* SGHModelTransformViewController.h */,
+				8F3115CA242A609300421E7A /* SGHModelTransformViewController.m */,
+			);
+			path = "runtime+KVC实现多层字典模型转换";
+			sourceTree = "<group>";
+		};
+		8F3115CD242A60F400421E7A /* ConvertKit */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115CE242A60F400421E7A /* NSObject+EnumArr.h */,
+				8F3115CF242A60F400421E7A /* NSObject+EnumDict.m */,
+				8F3115D0242A60F400421E7A /* NSObject+EnumDictOneLevel.m */,
+				8F3115D1242A60F400421E7A /* NSObject+EnumArr.m */,
+				8F3115D2242A60F400421E7A /* NSObject+EnumDictOneLevel.h */,
+				8F3115D3242A60F400421E7A /* NSObject+EnumDict.h */,
+			);
+			path = ConvertKit;
+			sourceTree = "<group>";
+		};
+		8F3115D4242A60F400421E7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115D5242A60F400421E7A /* Status.h */,
+				8F3115D6242A60F400421E7A /* PersonModel.m */,
+				8F3115D7242A60F400421E7A /* CellModel.m */,
+				8F3115D8242A60F400421E7A /* Status.m */,
+				8F3115D9242A60F400421E7A /* PersonModel.h */,
+				8F3115DA242A60F400421E7A /* CellModel.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4028,6 +4126,7 @@
 				8F3110F124264FB100421E7A /* SXDetails.css in Resources */,
 				8F3115B6242A512900421E7A /* banner_3d_tran_3.jpg in Resources */,
 				8F31110324264FB100421E7A /* README.docx in Resources */,
+				8F3115DB242A60F500421E7A /* statuses.plist in Resources */,
 				8F3110C124264FB100421E7A /* readme.md in Resources */,
 				8F310B8A2425B28900421E7A /* Main.storyboard in Resources */,
 				8F3114952426EB4C00421E7A /* SGH0618AnnotationViewController.xib in Resources */,
@@ -4120,6 +4219,7 @@
 				0457881C2427BA6300C2DF75 /* CoreTextImageData.m in Sources */,
 				8F3110D924264FB100421E7A /* SHKVOExploreViewController.m in Sources */,
 				8F31109B24264FB100421E7A /* UIView+WZLBadge.m in Sources */,
+				8F3115E1242A60F500421E7A /* Status.m in Sources */,
 				8F3110FB24264FB100421E7A /* SH1902Person.m in Sources */,
 				8F311581242995AE00421E7A /* SGH0512Runtime4ViewController.m in Sources */,
 				045788212427BA6300C2DF75 /* CTDisplayView.m in Sources */,
@@ -4170,6 +4270,7 @@
 				045788272427BAF100C2DF75 /* SGHCoreText1ViewController.m in Sources */,
 				8F31157D242995AE00421E7A /* SGH0506OCRuntime1ViewController.m in Sources */,
 				8F31110F24264FB100421E7A /* SGH0824PresentAndPushTwoViewController.m in Sources */,
+				8F3115E0242A60F500421E7A /* CellModel.m in Sources */,
 				8F3110F524264FB100421E7A /* SGH0802ExpressionViewController.m in Sources */,
 				045787F82427B62500C2DF75 /* CYLBlockExecutor.m in Sources */,
 				8F3110C324264FB100421E7A /* Example2Controller.m in Sources */,
@@ -4201,6 +4302,7 @@
 				8F31157F242995AE00421E7A /* SGH0506Test.m in Sources */,
 				8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */,
 				8F3110CC24264FB100421E7A /* SGH0424DreamLBSViewController.m in Sources */,
+				8F3115C7242A5AFD00421E7A /* UIViewController+Description.m in Sources */,
 				8F311586242995AE00421E7A /* UIView+SGHTapGesture.m in Sources */,
 				8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */,
 				8F3110A924264FB100421E7A /* WBPictureMetadata.m in Sources */,
@@ -4214,10 +4316,12 @@
 				04F6EC432429ACCB00D7F1CB /* SGHRuntimeAttriMethodViewController.m in Sources */,
 				8F3110FF24264FB100421E7A /* SHProxy.m in Sources */,
 				8F3110A424264FB100421E7A /* WBTimelineItem.m in Sources */,
+				8F3115DD242A60F500421E7A /* NSObject+EnumDictOneLevel.m in Sources */,
 				8F3110A024264FB100421E7A /* SGH190129YYKitViewController.m in Sources */,
 				8F31108624264FB100421E7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				8F31110024264FB100421E7A /* SHRuntime3Person.m in Sources */,
 				8F3110D024264FB100421E7A /* SHDispatchMethodsViewController.m in Sources */,
+				8F3115DE242A60F500421E7A /* NSObject+EnumArr.m in Sources */,
 				8F3110DD24264FB100421E7A /* SHUpdateJumpAppStoreVC.m in Sources */,
 				8F31159B242A2D7200421E7A /* SGH0324CATransitionViewController.m in Sources */,
 				8F3110B924264FB100421E7A /* SH3DTouchDemoViewController.m in Sources */,
@@ -4232,6 +4336,7 @@
 				8F3114982426EB4C00421E7A /* SGH0618GeocodeViewController.m in Sources */,
 				049678F92427C56100F2FD83 /* SGHCoreText2ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
+				8F3115DF242A60F500421E7A /* PersonModel.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
 				8F3113532426E1D500421E7A /* NSString+MD5.m in Sources */,
 				8F3114142426E6EF00421E7A /* SGHUDIDKeychainViewController.m in Sources */,
@@ -4253,6 +4358,7 @@
 				04F6EC772429AEA000D7F1CB /* SHGAboutNavigationViewController.m in Sources */,
 				04F6EC442429ACCB00D7F1CB /* SGHPerson.m in Sources */,
 				8F3115922429977800421E7A /* SGH0509AboutRunLoopViewController.m in Sources */,
+				8F3115C4242A58C200421E7A /* SGHAdvance2KVOViewController.m in Sources */,
 				8F3110FC24264FB100421E7A /* SHLeaks0301Object.m in Sources */,
 				8F3114812426EB4C00421E7A /* SGH0618AntiEncodeViewController.m in Sources */,
 				8F31149C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m in Sources */,
@@ -4265,6 +4371,7 @@
 				8F311588242995AE00421E7A /* SGH0511RuntimeMethod.m in Sources */,
 				8F3110E624264FB100421E7A /* UIButton+SHDistribute.m in Sources */,
 				04F6EC872429AEA000D7F1CB /* SGHPresentTransitionStyleViewController.m in Sources */,
+				8F3115DC242A60F500421E7A /* NSObject+EnumDict.m in Sources */,
 				048706322427670A00CCABC9 /* SGHAboutNSOperationViewController.m in Sources */,
 				8F3115932429977800421E7A /* SGH0425RunloopImageViewController.m in Sources */,
 				8F31111524264FB100421E7A /* TKAesHelper.m in Sources */,
@@ -4275,6 +4382,7 @@
 				8F3113E72426E6EF00421E7A /* SGH160507ViewController.m in Sources */,
 				8F3110CB24264FB100421E7A /* SGH0424BaiduFactory.m in Sources */,
 				8F31112524264FB100421E7A /* SGH1013ImageSaveAlbumViewController.m in Sources */,
+				8F3115CB242A609400421E7A /* SGHModelTransformViewController.m in Sources */,
 				8F3114192426E6EF00421E7A /* SGHWebViewConstrainsViewController.m in Sources */,
 				045787E72427B37B00C2DF75 /* CYLUser.m in Sources */,
 				8F31108224264FB100421E7A /* TBXML+Compression.m in Sources */,
@@ -4283,6 +4391,7 @@
 				8F3110E024264FB100421E7A /* SGH0607FetchStringExpressionViewController.m in Sources */,
 				8F3110F324264FB100421E7A /* SGH0824AlertViewViewController.m in Sources */,
 				8F3110F724264FB100421E7A /* SGH1108ShareItem.m in Sources */,
+				8F3115BE242A586500421E7A /* SGH0324Person.m in Sources */,
 				8F31111324264FB100421E7A /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
 				8F3115AD242A511F00421E7A /* SGHBanner3DTransitionView.m in Sources */,
 				8F31108824264FB100421E7A /* BDTConstManager.m in Sources */,
@@ -4338,6 +4447,7 @@
 				8F3110AA24264FB100421E7A /* SGH170208ViewController.m in Sources */,
 				8F31150B2426FBCD00421E7A /* SGHVariableParamsViewController.m in Sources */,
 				8F3110E924264FB100421E7A /* UIButton+timeCountDown.m in Sources */,
+				8F3115C1242A589600421E7A /* SGH0324Observer.m in Sources */,
 				8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */,
 				0457881B2427BA6300C2DF75 /* CTFrameParser.m in Sources */,
 				8F3110B824264FB100421E7A /* SHMemManageViewController.m in Sources */,

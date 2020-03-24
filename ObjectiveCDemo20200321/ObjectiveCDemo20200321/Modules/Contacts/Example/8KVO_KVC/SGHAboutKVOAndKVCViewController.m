@@ -30,11 +30,11 @@
         tableView;
     });
     _controllersArray= [@[
-        
+        @"SGHAdvance2KVOViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
-        
+        @"1KVO进阶二",
     ] mutableCopy];
 }
 

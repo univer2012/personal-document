@@ -39,6 +39,7 @@
         @"SGH0515ClassViewController",
         @"SGHRuntimeAttriMethodViewController",
         @"SGHMethodSwizzlingViewController",
+        @"SGHModelTransformViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -51,6 +52,7 @@
         @"14、Runtime方法的使用—Class篇",
         @"runtime获取私有属性强制更改私有属性以及获取私有方法",
         @"iOS runtime实战应用：Method Swizzling",
+        @"runtime+KVC实现多层字典模型转换",
     ] mutableCopy];
 }
 
