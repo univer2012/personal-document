@@ -54,10 +54,7 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray= [@[@"SGH0728CALayerViewController",
-                          @"SGH0729CAAnimationViewController",
-                          @"SGH0729TransitionGroupViewController",
-                          @"SGH0729WheelViewController",
+    _controllersArray= [@[
                           @"SGH0802ExpressionViewController",
                           @"SGH0824PresentAndPushOneViewController",
                           @"SGH0824AlertViewViewController",
@@ -80,10 +77,7 @@
                           @"SH0227SeniorCampViewController"
                           ] mutableCopy];
     
-    self.titlesArray=[@[@"1、CALayer的介绍",
-                        @"2、CAAnimation动画",
-                        @"3、转场动画和动画组",
-                        @"4、实例动画按钮布局",
+    self.titlesArray=[@[
                         @"5、iOS正则表达式与判断手机号是否有效实例",
                         @"6、PresentAndPush",
                         @"7、对UIAlertView的各种设置",

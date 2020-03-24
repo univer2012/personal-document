@@ -55,13 +55,29 @@
     self.ctView.data=data;
     self.ctView.height=data.height;
     self.ctView.backgroundColor = [UIColor whiteColor];
-    UIImage *image = [UIImage imageNamed:@"red"];
+    UIImage *image = [UIImage imageNamed:@"red@2x.png"]; //@"coretext-image-2.jpg"
     NSLog(@"image:%@",image);
     
-    NSString *tPath = [[NSBundle mainBundle] pathForResource:@"red" ofType:@"png"];
-    UIImage * myImage = [UIImage imageWithContentsOfFile:tPath];
+//    NSString *tPath = [[NSBundle mainBundle] pathForResource:@"red@2x" ofType:@"png"];
+//    UIImage * myImage = [UIImage imageWithContentsOfFile:tPath];
+    
+    UIImage * myImage = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"red@2x.png"]];
+    
     NSLog(@"myImage:%@",myImage);
 #endif
+    
+    
+    ///文字说明
+    UILabel *tipLab = [UILabel new];
+    tipLab.backgroundColor = UIColor.systemBlueColor;
+    tipLab.textColor = UIColor.whiteColor;
+    tipLab.numberOfLines = 0;
+    tipLab.text = @"如果图片没有出来，可能是图片没有加载到，这时要去「CTDisplayView」里面检查下加载图片的地方";
+    [self.view addSubview:tipLab];
+    [tipLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(88);
+    }];
     
 }
 

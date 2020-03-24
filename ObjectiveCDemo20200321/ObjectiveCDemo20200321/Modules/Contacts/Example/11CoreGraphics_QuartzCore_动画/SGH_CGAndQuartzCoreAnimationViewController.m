@@ -1,21 +1,21 @@
 //
-//  SGHTechnologyExplorationViewController.m
+//  SGH_CGAndQuartzCoreAnimationViewController.m
 //  ObjectiveCDemo20200321
 //
-//  Created by 远平 on 2020/3/24.
+//  Created by Mac on 2020/3/24.
 //  Copyright © 2020 远平. All rights reserved.
 //
 
-#import "SGHTechnologyExplorationViewController.h"
+#import "SGH_CGAndQuartzCoreAnimationViewController.h"
 
-@interface SGHTechnologyExplorationViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SGH_CGAndQuartzCoreAnimationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
 @property(nonatomic,strong)NSMutableArray *titlesArray;
 
 @end
 
-@implementation SGHTechnologyExplorationViewController
+@implementation SGH_CGAndQuartzCoreAnimationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,25 +30,17 @@
         tableView;
     });
     _controllersArray= [@[
-        @"SGHNetworkChangeViewController",
-        @"SGHUIFontViewController",
-        @"SHGAboutNavigationViewController",
-        @"SGHDataPickerViewController",
-        @"SGHPopoverPresentationController",
-        @"SGHPresentTransitionStyleViewController",
-        @"SGHPickerViewViewController",
-        @"SGHTableViewStyleGroupedViewController",
+        @"SGH0728CALayerViewController",
+        @"SGH0729CAAnimationViewController",
+        @"SGH0729TransitionGroupViewController",
+        @"SGH0729WheelViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
-        @"用苹果官网提供的Reachability监听网路变化",
-        @"所有苹果字体显示的样式",
-        @"有关NavigationController的设置",
-        @"UIDatePickerDemo",
-        @"UIPopoverPresentationController Demo",
-        @"presentViewController转场样式",
-        @"UIPickerView的使用",
-        @"tableViewStyleGrouped的使用",
+        @"1、CALayer的介绍",
+        @"2、CAAnimation动画",
+        @"3、转场动画和动画组",
+        @"4、实例动画按钮布局",
     ] mutableCopy];
 }
 

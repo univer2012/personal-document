@@ -211,7 +211,9 @@ typedef enum CTDisplayViewState : NSInteger {
     CTFrameDraw(self.data.ctFrame, context);
     
     for (CoreTextImageData * imageData in self.data.imageArray) {
-        UIImage *image = [UIImage imageNamed:imageData.name];
+        //MARK: 加载图片的地方
+        UIImage *image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageData.name]]; //修改后的代码
+        //UIImage *image = [UIImage imageNamed:imageData.name]; //源代码
         if (image) {
             CGContextDrawImage(context, imageData.imagePosition, image.CGImage);
         }

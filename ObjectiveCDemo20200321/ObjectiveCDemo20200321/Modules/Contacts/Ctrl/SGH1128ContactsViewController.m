@@ -70,6 +70,7 @@
         @"SGHAboutKVOAndKVCViewController",
         @"SGHPrincipleOfInquiryViewController",
         @"SGHTechnologyExplorationViewController",
+        @"SGH_CGAndQuartzCoreAnimationViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -83,6 +84,7 @@
         @"8KVO KVC",
         @"9原理探究",
         @"10技术探究与应用",
+        @"11CoreGraphics_QuartzCore_动画",
     ] mutableCopy];
     
     
