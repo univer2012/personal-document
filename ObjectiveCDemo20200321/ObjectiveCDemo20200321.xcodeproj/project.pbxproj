@@ -72,8 +72,6 @@
 		8F31109B24264FB100421E7A /* UIView+WZLBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EC724264FAF00421E7A /* UIView+WZLBadge.m */; };
 		8F31109C24264FB100421E7A /* SGHAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310ECB24264FAF00421E7A /* SGHAFNetworkingViewController.m */; };
 		8F31109D24264FB100421E7A /* SGH161223WZLBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310ED024264FAF00421E7A /* SGH161223WZLBadgeViewController.m */; };
-		8F31109E24264FB100421E7A /* SGH160911CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310ED324264FAF00421E7A /* SGH160911CoreLocationViewController.m */; };
-		8F31109F24264FB100421E7A /* SGH0911CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310ED824264FAF00421E7A /* SGH0911CoreLocationViewController.m */; };
 		8F3110A024264FB100421E7A /* SGH190129YYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EDC24264FAF00421E7A /* SGH190129YYKitViewController.m */; };
 		8F3110A124264FB100421E7A /* WBStatusTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EE224264FAF00421E7A /* WBStatusTimelineViewController.m */; };
 		8F3110A224264FB100421E7A /* WBURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EE524264FAF00421E7A /* WBURL.m */; };
@@ -274,7 +272,6 @@
 		8F3114872426EB4C00421E7A /* SGH0618MapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31143A2426EB4C00421E7A /* SGH0618MapViewViewController.m */; };
 		8F3114892426EB4C00421E7A /* SGH0618MapNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F31143E2426EB4C00421E7A /* SGH0618MapNavigationViewController.xib */; };
 		8F31148A2426EB4C00421E7A /* SGH0618MapNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31143F2426EB4C00421E7A /* SGH0618MapNavigationViewController.m */; };
-		8F31148F2426EB4C00421E7A /* SGH160531ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */; };
 		8F3114922426EB4C00421E7A /* SGH0618LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114542426EB4C00421E7A /* SGH0618LocationViewController.m */; };
 		8F3114942426EB4C00421E7A /* SGH0618AnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3114582426EB4C00421E7A /* SGH0618AnnotationViewController.m */; };
 		8F3114952426EB4C00421E7A /* SGH0618AnnotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3114592426EB4C00421E7A /* SGH0618AnnotationViewController.xib */; };
@@ -292,6 +289,8 @@
 		8F3115302429129100421E7A /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F31152C2429129000421E7A /* coretext-image-2.jpg */; };
 		8F3115312429129100421E7A /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F31152D2429129000421E7A /* coretext-image-1.jpg */; };
 		8F3115322429129100421E7A /* cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F31152E2429129000421E7A /* cursor@2x.png */; };
+		8F31153924298C3100421E7A /* SGH160531ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31153824298C3100421E7A /* SGH160531ViewController.m */; };
+		8F31153E24298CDC00421E7A /* SGH0911CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31153C24298CDC00421E7A /* SGH0911CoreLocationViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -442,10 +441,6 @@
 		8F310ECC24264FAF00421E7A /* SGHAFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHAFNetworkingViewController.h; sourceTree = "<group>"; };
 		8F310ECF24264FAF00421E7A /* SGH161223WZLBadgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH161223WZLBadgeViewController.h; sourceTree = "<group>"; };
 		8F310ED024264FAF00421E7A /* SGH161223WZLBadgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH161223WZLBadgeViewController.m; sourceTree = "<group>"; };
-		8F310ED324264FAF00421E7A /* SGH160911CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160911CoreLocationViewController.m; sourceTree = "<group>"; };
-		8F310ED424264FAF00421E7A /* SGH160911CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160911CoreLocationViewController.h; sourceTree = "<group>"; };
-		8F310ED824264FAF00421E7A /* SGH0911CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0911CoreLocationViewController.m; sourceTree = "<group>"; };
-		8F310ED924264FAF00421E7A /* SGH0911CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0911CoreLocationViewController.h; sourceTree = "<group>"; };
 		8F310EDC24264FAF00421E7A /* SGH190129YYKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH190129YYKitViewController.m; sourceTree = "<group>"; };
 		8F310EDD24264FAF00421E7A /* SGH190129YYKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH190129YYKitViewController.h; sourceTree = "<group>"; };
 		8F310EE124264FAF00421E7A /* WBStatusTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusTimelineViewController.h; sourceTree = "<group>"; };
@@ -817,8 +812,6 @@
 		8F31143E2426EB4C00421E7A /* SGH0618MapNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGH0618MapNavigationViewController.xib; sourceTree = "<group>"; };
 		8F31143F2426EB4C00421E7A /* SGH0618MapNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618MapNavigationViewController.m; sourceTree = "<group>"; };
 		8F3114402426EB4C00421E7A /* SGH0618MapNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618MapNavigationViewController.h; sourceTree = "<group>"; };
-		8F31144D2426EB4C00421E7A /* SGH160531ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160531ViewController.h; sourceTree = "<group>"; };
-		8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160531ViewController.m; sourceTree = "<group>"; };
 		8F3114532426EB4C00421E7A /* SGH0618LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0618LocationViewController.h; sourceTree = "<group>"; };
 		8F3114542426EB4C00421E7A /* SGH0618LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618LocationViewController.m; sourceTree = "<group>"; };
 		8F3114582426EB4C00421E7A /* SGH0618AnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0618AnnotationViewController.m; sourceTree = "<group>"; };
@@ -847,6 +840,10 @@
 		8F31152C2429129000421E7A /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		8F31152D2429129000421E7A /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		8F31152E2429129000421E7A /* cursor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cursor@2x.png"; sourceTree = "<group>"; };
+		8F31153724298C3100421E7A /* SGH160531ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH160531ViewController.h; sourceTree = "<group>"; };
+		8F31153824298C3100421E7A /* SGH160531ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH160531ViewController.m; sourceTree = "<group>"; };
+		8F31153C24298CDC00421E7A /* SGH0911CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0911CoreLocationViewController.m; sourceTree = "<group>"; };
+		8F31153D24298CDC00421E7A /* SGH0911CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0911CoreLocationViewController.h; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1218,7 +1215,6 @@
 			children = (
 				8F310EA024264FAF00421E7A /* 6ReactiveCocoa */,
 				8F310EBB24264FAF00421E7A /* 3第三方组件 */,
-				8F310ED124264FAF00421E7A /* 2Core Location 框架详解 */,
 				8F310EDA24264FAF00421E7A /* 5YYKit */,
 				8F310EF524264FB000421E7A /* 4_2017-02-08 */,
 				8F310FCB24264FB000421E7A /* 16-07-28 */,
@@ -1402,49 +1398,6 @@
 			children = (
 				8F310ECF24264FAF00421E7A /* SGH161223WZLBadgeViewController.h */,
 				8F310ED024264FAF00421E7A /* SGH161223WZLBadgeViewController.m */,
-			);
-			path = Ctrl;
-			sourceTree = "<group>";
-		};
-		8F310ED124264FAF00421E7A /* 2Core Location 框架详解 */ = {
-			isa = PBXGroup;
-			children = (
-				8F310ED224264FAF00421E7A /* Ctrl */,
-				8F310ED524264FAF00421E7A /* Modules */,
-			);
-			path = "2Core Location 框架详解";
-			sourceTree = "<group>";
-		};
-		8F310ED224264FAF00421E7A /* Ctrl */ = {
-			isa = PBXGroup;
-			children = (
-				8F310ED324264FAF00421E7A /* SGH160911CoreLocationViewController.m */,
-				8F310ED424264FAF00421E7A /* SGH160911CoreLocationViewController.h */,
-			);
-			path = Ctrl;
-			sourceTree = "<group>";
-		};
-		8F310ED524264FAF00421E7A /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				8F310ED624264FAF00421E7A /* 2、通过Core Location实现定位功能 */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		8F310ED624264FAF00421E7A /* 2、通过Core Location实现定位功能 */ = {
-			isa = PBXGroup;
-			children = (
-				8F310ED724264FAF00421E7A /* Ctrl */,
-			);
-			path = "2、通过Core Location实现定位功能";
-			sourceTree = "<group>";
-		};
-		8F310ED724264FAF00421E7A /* Ctrl */ = {
-			isa = PBXGroup;
-			children = (
-				8F310ED924264FAF00421E7A /* SGH0911CoreLocationViewController.h */,
-				8F310ED824264FAF00421E7A /* SGH0911CoreLocationViewController.m */,
 			);
 			path = Ctrl;
 			sourceTree = "<group>";
@@ -2951,7 +2904,7 @@
 			children = (
 				045787F92427B85F00C2DF75 /* 4CoreTextDemos */,
 				0487062F242766DC00CCABC9 /* 3AboutNSOperation */,
-				8F3114252426EB4B00421E7A /* 16-05-19 */,
+				8F3114252426EB4B00421E7A /* 2CoreLocation_MKMapView */,
 				8F3113562426E6EE00421E7A /* 16-05-07 */,
 			);
 			path = Example;
@@ -3015,6 +2968,7 @@
 		8F31135B2426E6EE00421E7A /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				8F31153524298C3100421E7A /* 2理解 Scroll Views */,
 				045787C2242769FA00C2DF75 /* 《招聘一个靠谱的iOS》面试题参考答案Demo */,
 				8F31135C2426E6EE00421E7A /* presentViewController转场样式 */,
 				8F3113632426E6EE00421E7A /* 监听网路变化(用苹果官网提供的Reachability) */,
@@ -3459,20 +3413,20 @@
 			path = SGHPickerViewViewController;
 			sourceTree = "<group>";
 		};
-		8F3114252426EB4B00421E7A /* 16-05-19 */ = {
+		8F3114252426EB4B00421E7A /* 2CoreLocation_MKMapView */ = {
 			isa = PBXGroup;
 			children = (
 				8F3114262426EB4B00421E7A /* ctrl */,
 				8F31142A2426EB4B00421E7A /* mudlues */,
 			);
-			path = "16-05-19";
+			path = 2CoreLocation_MKMapView;
 			sourceTree = "<group>";
 		};
 		8F3114262426EB4B00421E7A /* ctrl */ = {
 			isa = PBXGroup;
 			children = (
-				8F3114272426EB4B00421E7A /* SGH160519ViewController.m */,
 				8F3114282426EB4B00421E7A /* SGH160519ViewController.h */,
+				8F3114272426EB4B00421E7A /* SGH160519ViewController.m */,
 			);
 			path = ctrl;
 			sourceTree = "<group>";
@@ -3480,11 +3434,11 @@
 		8F31142A2426EB4B00421E7A /* mudlues */ = {
 			isa = PBXGroup;
 			children = (
+				8F31153A24298CDC00421E7A /* 2、通过Core Location实现定位功能 */,
 				8F31142B2426EB4B00421E7A /* 6反地理编码 */,
 				8F3114312426EB4B00421E7A /* 11UIAlertController */,
 				8F3114362426EB4B00421E7A /* 7MKMapView的使用 */,
 				8F31143C2426EB4C00421E7A /* 10导航 */,
-				8F31144B2426EB4C00421E7A /* 2理解 Scroll Views */,
 				8F3114512426EB4C00421E7A /* 3获取当前位置(要真机) */,
 				8F3114562426EB4C00421E7A /* 8向mapView上添加大头针 */,
 				8F31145F2426EB4C00421E7A /* 5地理编码 */,
@@ -3507,9 +3461,9 @@
 		8F31142C2426EB4B00421E7A /* Ctrl */ = {
 			isa = PBXGroup;
 			children = (
+				8F31142F2426EB4B00421E7A /* SGH0618AntiEncodeViewController.h */,
 				8F31142D2426EB4B00421E7A /* SGH0618AntiEncodeViewController.m */,
 				8F31142E2426EB4B00421E7A /* SGH0618AntiEncodeViewController.xib */,
-				8F31142F2426EB4B00421E7A /* SGH0618AntiEncodeViewController.h */,
 			);
 			path = Ctrl;
 			sourceTree = "<group>";
@@ -3565,23 +3519,6 @@
 				8F3114402426EB4C00421E7A /* SGH0618MapNavigationViewController.h */,
 			);
 			path = Ctrl;
-			sourceTree = "<group>";
-		};
-		8F31144B2426EB4C00421E7A /* 2理解 Scroll Views */ = {
-			isa = PBXGroup;
-			children = (
-				8F31144C2426EB4C00421E7A /* ctrl */,
-			);
-			path = "2理解 Scroll Views";
-			sourceTree = "<group>";
-		};
-		8F31144C2426EB4C00421E7A /* ctrl */ = {
-			isa = PBXGroup;
-			children = (
-				8F31144D2426EB4C00421E7A /* SGH160531ViewController.h */,
-				8F31144E2426EB4C00421E7A /* SGH160531ViewController.m */,
-			);
-			path = ctrl;
 			sourceTree = "<group>";
 		};
 		8F3114512426EB4C00421E7A /* 3获取当前位置(要真机) */ = {
@@ -3726,6 +3663,40 @@
 				8F31150A2426FBCD00421E7A /* SGHVariableParamsViewController.m */,
 			);
 			path = "34定义形参个数可变的方法";
+			sourceTree = "<group>";
+		};
+		8F31153524298C3100421E7A /* 2理解 Scroll Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F31153624298C3100421E7A /* ctrl */,
+			);
+			path = "2理解 Scroll Views";
+			sourceTree = "<group>";
+		};
+		8F31153624298C3100421E7A /* ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31153724298C3100421E7A /* SGH160531ViewController.h */,
+				8F31153824298C3100421E7A /* SGH160531ViewController.m */,
+			);
+			path = ctrl;
+			sourceTree = "<group>";
+		};
+		8F31153A24298CDC00421E7A /* 2、通过Core Location实现定位功能 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31153B24298CDC00421E7A /* Ctrl */,
+			);
+			path = "2、通过Core Location实现定位功能";
+			sourceTree = "<group>";
+		};
+		8F31153B24298CDC00421E7A /* Ctrl */ = {
+			isa = PBXGroup;
+			children = (
+				8F31153C24298CDC00421E7A /* SGH0911CoreLocationViewController.m */,
+				8F31153D24298CDC00421E7A /* SGH0911CoreLocationViewController.h */,
+			);
+			path = Ctrl;
 			sourceTree = "<group>";
 		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
@@ -3960,7 +3931,6 @@
 				8F31109A24264FB100421E7A /* CAAnimation+WAnimation.m in Sources */,
 				8F3110C224264FB100421E7A /* SHQRCodeViewController.m in Sources */,
 				8F3110BA24264FB100421E7A /* SGHReusableHeaderFooterTableViewController.m in Sources */,
-				8F31109F24264FB100421E7A /* SGH0911CoreLocationViewController.m in Sources */,
 				8F3110C524264FB100421E7A /* Example3Controller.m in Sources */,
 				8F31112024264FB100421E7A /* SGH16110701ViewController.m in Sources */,
 				8F3110A824264FB100421E7A /* WBTag.m in Sources */,
@@ -4000,6 +3970,7 @@
 				8F31110B24264FB100421E7A /* SGH0824PresentAndPushThreeViewController.m in Sources */,
 				8F31112924264FB100421E7A /* SGHNavigation1128Controller.m in Sources */,
 				8F31111624264FB100421E7A /* GTMBase64.m in Sources */,
+				8F31153924298C3100421E7A /* SGH160531ViewController.m in Sources */,
 				8F31111224264FB100421E7A /* SGH0824PresentAndPushFourViewController.m in Sources */,
 				8F3110BC24264FB100421E7A /* UIViewController+SGH0512Tracking.m in Sources */,
 				8F3113E92426E6EF00421E7A /* SGHPresentTransitionSecondViewController.m in Sources */,
@@ -4083,7 +4054,6 @@
 				045787CC24279E8200C2DF75 /* SGHDeallocBlockViewController.m in Sources */,
 				8F31150E2426FBEC00421E7A /* VarArgs.m in Sources */,
 				8F3114982426EB4C00421E7A /* SGH0618GeocodeViewController.m in Sources */,
-				8F31148F2426EB4C00421E7A /* SGH160531ViewController.m in Sources */,
 				049678F92427C56100F2FD83 /* SGHCoreText2ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
@@ -4100,6 +4070,7 @@
 				8F31112D24264FB100421E7A /* SGH161128TabBarViewController.m in Sources */,
 				8F3113512426E1D500421E7A /* NSString+Chinese.m in Sources */,
 				045787E42427B37B00C2DF75 /* Girl.m in Sources */,
+				8F31153E24298CDC00421E7A /* SGH0911CoreLocationViewController.m in Sources */,
 				8F31109424264FB100421E7A /* SHRAC10ViewController.m in Sources */,
 				8F31108F24264FB100421E7A /* SHReactiveCocoaViewController.m in Sources */,
 				8F3110FC24264FB100421E7A /* SHLeaks0301Object.m in Sources */,
@@ -4116,7 +4087,6 @@
 				8F31111524264FB100421E7A /* TKAesHelper.m in Sources */,
 				8F3110A524264FB100421E7A /* WBPicture.m in Sources */,
 				8F310B8D2425B28900421E7A /* ObjectiveCDemo20200321.xcdatamodeld in Sources */,
-				8F31109E24264FB100421E7A /* SGH160911CoreLocationViewController.m in Sources */,
 				8F3113FF2426E6EF00421E7A /* SGHOCJSInteractiveViewController.m in Sources */,
 				8F3110CA24264FB100421E7A /* SGH0424BaiduMapView.m in Sources */,
 				8F3113E72426E6EF00421E7A /* SGH160507ViewController.m in Sources */,

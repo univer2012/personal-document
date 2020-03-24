@@ -68,7 +68,7 @@
     
     self.titlesArray=[@[
         @"16-05-07替代UDID/PageVC/webView/断点续传后台下载",
-        @"16-05-19",
+        @"2CoreLocation、MKMapView",
         @"3多线程NSOperation的示例",
         @"4CoreText Demos",
     ] mutableCopy];

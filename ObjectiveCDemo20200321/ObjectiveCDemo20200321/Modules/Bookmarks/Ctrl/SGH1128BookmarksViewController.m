@@ -9,7 +9,6 @@
 #import "SGH1128BookmarksViewController.h"
 
 #import "SGH160728ViewController.h"
-#import "SGH160911CoreLocationViewController.h"
 #import "SGH161223ComponentsDemoViewController.h"
 #import "SGH170208ViewController.h"
 #import "SGH190129YYKitViewController.h"
@@ -40,7 +39,6 @@
         tableView;
     });
     _controllersArray = [@[SGH160728ViewController.new,
-                          SGH160911CoreLocationViewController.new,
                            SGH161223ComponentsDemoViewController.new,
                            SGH170208ViewController.new,
                            SGH190129YYKitViewController.new,
@@ -49,7 +47,6 @@
     
     
     self.titlesArray=[@[@"16-07-28",
-                        @"2、Core Location 框架详解",
                         @"3、第三方组件",
                         @"4、2017-02-08",
                         @"5、YYKit",

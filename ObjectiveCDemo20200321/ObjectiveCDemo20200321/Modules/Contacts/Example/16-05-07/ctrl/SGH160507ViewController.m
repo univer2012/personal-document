@@ -30,6 +30,7 @@
     });
     _controllersArray= [@[
         @"SGHDataPickerViewController",
+        @"SGH160531ViewController",
         @"SGHPickerViewViewController",
         @"SGHNSArrayNSMutableArrayViewController",
         @"SGHPopoverPresentationController",
@@ -57,6 +58,7 @@
     
     self.titlesArray=[@[
         @"UIDatePickerDemo",
+        @"2理解 Scroll Views",
         @"UIPickerView",
         @"NSArray&NSMutableArray常用操作梳理",
         @"UIPopoverPresentationController Demo",
@@ -80,7 +82,7 @@
         @"获取iOSplist文件的所有信息",
         @"UDID替代方案--KeyChain",
         @"监听NSObject是否dealloc成功",
-    
+        
     ] mutableCopy];
     
     

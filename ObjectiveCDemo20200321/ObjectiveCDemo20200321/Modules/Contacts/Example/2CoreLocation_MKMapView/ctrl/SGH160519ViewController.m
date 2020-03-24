@@ -28,7 +28,7 @@
         tableView;
     });
     _controllersArray= [@[@"SGHUIKitDynamicsViewController",
-                          @"SGH160531ViewController",
+                          @"SGH0911CoreLocationViewController",
                           @"SGH0618LocationViewController",
                           @"SGH0618DistanceViewController",
                           @"SGH0618GeocodeViewController",
@@ -44,7 +44,7 @@
                           ] mutableCopy];
     
     self.titlesArray=[@[@"1WWDC 2013 Session笔记 - UIKit Dynamics入门",
-                        @"2理解 Scroll Views",
+                        @"2、通过Core Location实现定位功能",
                         @"3获取当前位置(要真机)",
                         @"4根据经纬度计算两地的距离(要真机)",
                         @"5地理编码",
