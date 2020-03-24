@@ -294,6 +294,7 @@
 		8F311588242995AE00421E7A /* SGH0511RuntimeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31157B242995AE00421E7A /* SGH0511RuntimeMethod.m */; };
 		8F3115922429977800421E7A /* SGH0509AboutRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31158D2429977700421E7A /* SGH0509AboutRunLoopViewController.m */; };
 		8F3115932429977800421E7A /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115912429977700421E7A /* SGH0425RunloopImageViewController.m */; };
+		8F311597242999AE00421E7A /* SGHTechnologyExplorationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311596242999AE00421E7A /* SGHTechnologyExplorationViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -853,6 +854,8 @@
 		8F31158D2429977700421E7A /* SGH0509AboutRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0509AboutRunLoopViewController.m; sourceTree = "<group>"; };
 		8F3115902429977700421E7A /* SGH0425RunloopImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH0425RunloopImageViewController.h; sourceTree = "<group>"; };
 		8F3115912429977700421E7A /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
+		8F311595242999AE00421E7A /* SGHTechnologyExplorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHTechnologyExplorationViewController.h; sourceTree = "<group>"; };
+		8F311596242999AE00421E7A /* SGHTechnologyExplorationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHTechnologyExplorationViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -2687,6 +2690,7 @@
 		8F311193242651DD00421E7A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				8F3115942429991400421E7A /* 10技术探究与应用 */,
 				8F3115432429942800421E7A /* 9原理探究 */,
 				8F3115422429941E00421E7A /* 8KVO_KVC */,
 				8F3115412429941700421E7A /* 7runtime */,
@@ -3746,6 +3750,15 @@
 			path = Ctrl;
 			sourceTree = "<group>";
 		};
+		8F3115942429991400421E7A /* 10技术探究与应用 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311595242999AE00421E7A /* SGHTechnologyExplorationViewController.h */,
+				8F311596242999AE00421E7A /* SGHTechnologyExplorationViewController.m */,
+			);
+			path = "10技术探究与应用";
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4211,6 +4224,7 @@
 				8F3110DE24264FB100421E7A /* SGH170815IdentCodeViewController.m in Sources */,
 				8F31110E24264FB100421E7A /* SGH0824PresentAndPushOneViewController.m in Sources */,
 				8F3110EB24264FB100421E7A /* SGH0524PresentCViewController.m in Sources */,
+				8F311597242999AE00421E7A /* SGHTechnologyExplorationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

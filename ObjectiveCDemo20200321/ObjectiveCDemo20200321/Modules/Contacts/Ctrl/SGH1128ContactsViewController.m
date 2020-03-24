@@ -69,6 +69,7 @@
         @"SGHRuntimeExperimentViewController",
         @"SGHAboutKVOAndKVCViewController",
         @"SGHPrincipleOfInquiryViewController",
+        @"SGHTechnologyExplorationViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -81,6 +82,7 @@
         @"7runtime",
         @"8KVO KVC",
         @"9原理探究",
+        @"10技术探究与应用",
     ] mutableCopy];
     
     
