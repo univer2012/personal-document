@@ -64,6 +64,11 @@
         @"SGH160519ViewController",
         @"SGHAboutNSOperationViewController",
         @"SGHCoreTextListViewController",
+        @"SGHPerformanceAnalysisAndOptimizationVC",
+        @"SGHRunloopExperimentViewController",
+        @"SGHRuntimeExperimentViewController",
+        @"SGHAboutKVOAndKVCViewController",
+        @"SGHPrincipleOfInquiryViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -71,6 +76,11 @@
         @"2CoreLocation、MKMapView",
         @"3多线程NSOperation的示例",
         @"4CoreText Demos",
+        @"5性能优化",
+        @"6runloop",
+        @"7runtime",
+        @"8KVO KVC",
+        @"9原理探究",
     ] mutableCopy];
     
     

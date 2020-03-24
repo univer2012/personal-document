@@ -14,17 +14,8 @@
 #import "SGH0208UncaughtExceptionViewController.h"
 #import "SGHReusableHeaderFooterTableViewController.h"
 #import "SGH0424DreamLBSViewController.h"
-#import "SGH0425RunloopImageViewController.h"
 #import "SGH0429CryptographyViewController.h"
-#import "SGH0506OCRuntime1ViewController.h"
-#import "SGH0509AboutRunLoopViewController.h"
-#import "SGH0510Runtime2ViewController.h"
-#import "SGH0511Runtime3ViewController.h"
-#import "SGH0512Runtime4ViewController.h"
-#import "SGH0512Runtime5ViewController.h"
-#import "SGH0515Runtime6ViewController.h"
 #import "SGH0515AttibuteStringInitViewController.h"
-#import "SGH0515ClassViewController.h"
 #import "SGH170518ResuableCellViewController.h"
 #import "SGHXMPPFrameworkViewController.h"
 #import "SGH0522CrashAnalisisViewController.h"
@@ -94,17 +85,8 @@
     _controllersArray= [@[[SGH0208UncaughtExceptionViewController new],
                           [SGHReusableHeaderFooterTableViewController new],
                           [SGH0424DreamLBSViewController new],
-                          [SGH0425RunloopImageViewController new],
                           [SGH0429CryptographyViewController new],
-                          [SGH0506OCRuntime1ViewController new],
-                          [SGH0509AboutRunLoopViewController new],
-                          [SGH0510Runtime2ViewController new],
-                          [SGH0511Runtime3ViewController new],
-                          [SGH0512Runtime4ViewController new],
-                          [SGH0512Runtime5ViewController new],
-                          [SGH0515Runtime6ViewController new],
                           [SGH0515AttibuteStringInitViewController new],
-                          [SGH0515ClassViewController new],
                           [SGH170518ResuableCellViewController new],
                           [SGHXMPPFrameworkViewController new],
                           [SGH0522CrashAnalisisViewController new],
@@ -130,17 +112,8 @@
     self.titlesArray=[@[@"1、iOS自动捕获程序崩溃日志再发送邮件提示开发者",
                         @"2、dequeueReusableHeaderFooterViewWithIdentifier",
                         @"3、架构师之面向协议编程(OC语言)介绍",
-                        @"4、利用runloop来解决图像卡顿",
                         @"5、浅谈密码学",
-                        @"6、Objective-C Runtime 运行时之一：类与对象",
-                        @"7、使用runloop对象",
-                        @"8、Objective-C Runtime 运行时之二：成员变量与属性",
-                        @"9、Objective-C Runtime 运行时之三：方法与消息",
-                        @"10、Objective-C Runtime 运行时之四：Method Swizzling",
-                        @"11、Objective-C Runtime 运行时之五：协议与分类",
-                        @"12、Objective-C Runtime 运行时之六：拾遗",
                         @"13、NSAttributedString initWithData 阻塞App问题",
-                        @"14、Runtime方法的使用—Class篇",
                         @"15、iOS亲测UITableView重用机制，用事实说话",
                         @"16、iOS 的 XMPPFramework 简介",
                         @"17、奔溃统计和分析",
