@@ -8,6 +8,8 @@
 
 #import "SGH_CGAndQuartzCoreAnimationViewController.h"
 
+
+
 @interface SGH_CGAndQuartzCoreAnimationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *controllersArray;
@@ -34,6 +36,8 @@
         @"SGH0729CAAnimationViewController",
         @"SGH0729TransitionGroupViewController",
         @"SGH0729WheelViewController",
+        @"SGH0324CATransitionViewController",
+        @"SGHBanner3DTransitionViewController",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -41,6 +45,8 @@
         @"2、CAAnimation动画",
         @"3、转场动画和动画组",
         @"4、实例动画按钮布局",
+        @"5、CATransition转场效果",
+        @"6、广告3DTransition"
     ] mutableCopy];
 }
 
@@ -63,12 +69,20 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class cls=NSClassFromString(_controllersArray[indexPath.row]);
-    if (cls) {
-        UIViewController *vc = [cls new];
+    NSString *vcString = _controllersArray[indexPath.row];
+    if ([vcString  isEqualToString: @"SGH0324CATransitionViewController"]) {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:vcString];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        Class cls=NSClassFromString(vcString);
+        if (cls) {
+            UIViewController *vc = [cls new];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
+    
 }
 
 @end

@@ -1,22 +1,20 @@
 //
-//  ViewController.m
-//  CATransition
+//  SGH0324CATransitionViewController.m
+//  ObjectiveCDemo20200321
 //
-//  Created by 李泽鲁 on 14/12/12.
-//  Copyright (c) 2014年 李泽鲁. All rights reserved.
+//  Created by 远平 on 2020/3/24.
+//  Copyright © 2020 远平. All rights reserved.
 //
-
+/*
+ * 本demo来自：
+ * [iOS实现超酷页面切换动画特效](https://www.ctolib.com/topics-34088.html)
+ */
 #define IMAGE1 @"01.jpg"
 #define IMAGE2 @"02.jpg"
 #define DURATION 0.7f
 
-#import "ViewController.h"
 
-@interface ViewController ()
-
-@property (nonatomic, assign) int subtype;
-
-@end
+#import "SGH0324CATransitionViewController.h"
 
 typedef enum : NSUInteger {
     Fade = 1,                   //淡入淡出
@@ -38,15 +36,19 @@ typedef enum : NSUInteger {
     
 } AnimationType;
 
-@implementation ViewController
+@interface SGH0324CATransitionViewController ()
+@property (nonatomic, assign) int subtype;
+
+@end
+
+@implementation SGH0324CATransitionViewController
 
 - (void)viewDidLoad {
     _subtype = 0;
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     [self addBgImageWithImageName:IMAGE2];
 }
-
 - (IBAction)tapButton:(id)sender {
  
     UIButton *button = sender;
@@ -199,12 +201,8 @@ typedef enum : NSUInteger {
 #pragma 给View添加背景图
 -(void)addBgImageWithImageName:(NSString *) imageName
 {
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIImage *image = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageName]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
 @end

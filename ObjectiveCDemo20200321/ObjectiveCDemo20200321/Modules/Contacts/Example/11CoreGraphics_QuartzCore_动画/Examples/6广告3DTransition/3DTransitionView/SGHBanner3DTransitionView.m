@@ -8,6 +8,11 @@
 
 #import "SGHBanner3DTransitionView.h"
 
+/// 获取文件目录中的图片的C语言方法
+UIImage *imageInContentsOfFileWith(NSString *imgName) {
+    return [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imgName]];
+}
+
 @implementation SGHBanner3DTransitionView
 
 - (instancetype)init
@@ -19,15 +24,15 @@
     return self;
 }
 
-- (void)show3DBannerView{
+- (void)show3DBannerView {
     
-    _imageArr = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg"];
     //定义图片控件
-    _imageView=[[UIImageView alloc]init];
+    _imageView = [[UIImageView alloc]init];
     _imageView.frame= CGRectMake(0, 0, MainScreenW, 180);
     _imageView.contentMode=UIViewContentModeScaleAspectFit;
     
-    _imageView.image=[UIImage imageNamed:_imageArr[0]];//默认图片
+    _imageView.image = imageInContentsOfFileWith(_imageArr[0]);//默认图片
+    //[UIImage imageNamed:_imageArr[0]];
     _imageView.userInteractionEnabled = YES;
     self.userInteractionEnabled = YES;
     [self addSubview:_imageView];
@@ -107,7 +112,7 @@
     [_imageView addGestureRecognizer:doubleTap];
     
     
-    return [UIImage imageNamed:imageName];
+    return imageInContentsOfFileWith(imageName); //[UIImage imageNamed:imageName];
 }
 
 - (void)doDoubleTap:(UITapGestureRecognizer*)gesture

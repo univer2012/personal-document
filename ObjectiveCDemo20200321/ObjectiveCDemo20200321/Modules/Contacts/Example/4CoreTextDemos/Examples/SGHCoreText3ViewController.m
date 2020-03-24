@@ -55,7 +55,7 @@
     self.ctView.data=data;
     self.ctView.height=data.height;
     self.ctView.backgroundColor = [UIColor whiteColor];
-    UIImage *image = [UIImage imageNamed:@"red@2x.png"]; //@"coretext-image-2.jpg"
+    UIImage *image = [UIImage imageNamed:@"red@2x.png"];
     NSLog(@"image:%@",image);
     
 //    NSString *tPath = [[NSBundle mainBundle] pathForResource:@"red@2x" ofType:@"png"];

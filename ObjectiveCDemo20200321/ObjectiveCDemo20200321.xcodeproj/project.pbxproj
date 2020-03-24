@@ -296,6 +296,17 @@
 		8F3115922429977800421E7A /* SGH0509AboutRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31158D2429977700421E7A /* SGH0509AboutRunLoopViewController.m */; };
 		8F3115932429977800421E7A /* SGH0425RunloopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115912429977700421E7A /* SGH0425RunloopImageViewController.m */; };
 		8F311597242999AE00421E7A /* SGHTechnologyExplorationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311596242999AE00421E7A /* SGHTechnologyExplorationViewController.m */; };
+		8F31159B242A2D7200421E7A /* SGH0324CATransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31159A242A2D7200421E7A /* SGH0324CATransitionViewController.m */; };
+		8F3115A3242A307600421E7A /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115A1242A307600421E7A /* 02.jpg */; };
+		8F3115A4242A307600421E7A /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115A2242A307600421E7A /* 01.jpg */; };
+		8F3115A8242A509700421E7A /* SGHBanner3DTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115A7242A509700421E7A /* SGHBanner3DTransitionViewController.m */; };
+		8F3115AD242A511F00421E7A /* SGHBanner3DTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115AB242A511F00421E7A /* SGHBanner3DTransitionView.m */; };
+		8F3115B4242A512900421E7A /* banner_3d_tran_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115AE242A512800421E7A /* banner_3d_tran_1.jpg */; };
+		8F3115B5242A512900421E7A /* banner_3d_tran_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115AF242A512800421E7A /* banner_3d_tran_4.jpg */; };
+		8F3115B6242A512900421E7A /* banner_3d_tran_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B0242A512800421E7A /* banner_3d_tran_3.jpg */; };
+		8F3115B7242A512900421E7A /* banner_3d_tran_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B1242A512900421E7A /* banner_3d_tran_5.jpg */; };
+		8F3115B8242A512900421E7A /* banner_3d_tran_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B2242A512900421E7A /* banner_3d_tran_2.jpg */; };
+		8F3115B9242A512900421E7A /* banner_3d_tran_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F3115B3242A512900421E7A /* banner_3d_tran_0.jpg */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -859,6 +870,20 @@
 		8F3115912429977700421E7A /* SGH0425RunloopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH0425RunloopImageViewController.m; sourceTree = "<group>"; };
 		8F311595242999AE00421E7A /* SGHTechnologyExplorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHTechnologyExplorationViewController.h; sourceTree = "<group>"; };
 		8F311596242999AE00421E7A /* SGHTechnologyExplorationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHTechnologyExplorationViewController.m; sourceTree = "<group>"; };
+		8F311599242A2D7200421E7A /* SGH0324CATransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0324CATransitionViewController.h; sourceTree = "<group>"; };
+		8F31159A242A2D7200421E7A /* SGH0324CATransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0324CATransitionViewController.m; sourceTree = "<group>"; };
+		8F3115A1242A307600421E7A /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		8F3115A2242A307600421E7A /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		8F3115A6242A509700421E7A /* SGHBanner3DTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHBanner3DTransitionViewController.h; sourceTree = "<group>"; };
+		8F3115A7242A509700421E7A /* SGHBanner3DTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHBanner3DTransitionViewController.m; sourceTree = "<group>"; };
+		8F3115AB242A511F00421E7A /* SGHBanner3DTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHBanner3DTransitionView.m; sourceTree = "<group>"; };
+		8F3115AC242A511F00421E7A /* SGHBanner3DTransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHBanner3DTransitionView.h; sourceTree = "<group>"; };
+		8F3115AE242A512800421E7A /* banner_3d_tran_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_1.jpg; sourceTree = "<group>"; };
+		8F3115AF242A512800421E7A /* banner_3d_tran_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_4.jpg; sourceTree = "<group>"; };
+		8F3115B0242A512800421E7A /* banner_3d_tran_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_3.jpg; sourceTree = "<group>"; };
+		8F3115B1242A512900421E7A /* banner_3d_tran_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_5.jpg; sourceTree = "<group>"; };
+		8F3115B2242A512900421E7A /* banner_3d_tran_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_2.jpg; sourceTree = "<group>"; };
+		8F3115B3242A512900421E7A /* banner_3d_tran_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner_3d_tran_0.jpg; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1264,6 +1289,8 @@
 		04F6EC922429E81C00D7F1CB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8F3115A5242A504E00421E7A /* 6广告3DTransition */,
+				8F311598242A2D2400421E7A /* 5CATransition切换动画特效 */,
 				04F6EC972429E87D00D7F1CB /* 1CALayer的介绍 */,
 				04F6EC932429E87D00D7F1CB /* 2CAAnimation动画 */,
 				04F6ECA02429E87E00D7F1CB /* 3转场动画和动画组 */,
@@ -1404,10 +1431,7 @@
 		8F310B7E2425B28900421E7A /* ObjectiveCDemo20200321 */ = {
 			isa = PBXGroup;
 			children = (
-				8F31152D2429129000421E7A /* coretext-image-1.jpg */,
-				8F31152C2429129000421E7A /* coretext-image-2.jpg */,
-				8F31152E2429129000421E7A /* cursor@2x.png */,
-				8F31152B2429129000421E7A /* red@2x.png */,
+				8F31159C242A303C00421E7A /* images */,
 				8F310E9424264FAF00421E7A /* Category */,
 				8F310E8524264FAF00421E7A /* Component */,
 				8F310E7624264FAE00421E7A /* Libs */,
@@ -3788,6 +3812,61 @@
 			path = "10技术探究与应用";
 			sourceTree = "<group>";
 		};
+		8F311598242A2D2400421E7A /* 5CATransition切换动画特效 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311599242A2D7200421E7A /* SGH0324CATransitionViewController.h */,
+				8F31159A242A2D7200421E7A /* SGH0324CATransitionViewController.m */,
+			);
+			path = "5CATransition切换动画特效";
+			sourceTree = "<group>";
+		};
+		8F31159C242A303C00421E7A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115A2242A307600421E7A /* 01.jpg */,
+				8F3115A1242A307600421E7A /* 02.jpg */,
+				8F31152D2429129000421E7A /* coretext-image-1.jpg */,
+				8F31152C2429129000421E7A /* coretext-image-2.jpg */,
+				8F31152E2429129000421E7A /* cursor@2x.png */,
+				8F31152B2429129000421E7A /* red@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		8F3115A5242A504E00421E7A /* 6广告3DTransition */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115AA242A50C800421E7A /* 3DTransitionView */,
+				8F3115A9242A50B300421E7A /* Images */,
+				8F3115A6242A509700421E7A /* SGHBanner3DTransitionViewController.h */,
+				8F3115A7242A509700421E7A /* SGHBanner3DTransitionViewController.m */,
+			);
+			path = "6广告3DTransition";
+			sourceTree = "<group>";
+		};
+		8F3115A9242A50B300421E7A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115B3242A512900421E7A /* banner_3d_tran_0.jpg */,
+				8F3115AE242A512800421E7A /* banner_3d_tran_1.jpg */,
+				8F3115B2242A512900421E7A /* banner_3d_tran_2.jpg */,
+				8F3115B0242A512800421E7A /* banner_3d_tran_3.jpg */,
+				8F3115AF242A512800421E7A /* banner_3d_tran_4.jpg */,
+				8F3115B1242A512900421E7A /* banner_3d_tran_5.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8F3115AA242A50C800421E7A /* 3DTransitionView */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115AC242A511F00421E7A /* SGHBanner3DTransitionView.h */,
+				8F3115AB242A511F00421E7A /* SGHBanner3DTransitionView.m */,
+			);
+			path = 3DTransitionView;
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3863,6 +3942,7 @@
 		8F310B742425B28900421E7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SGH;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "远平";
 				TargetAttributes = {
@@ -3909,21 +3989,26 @@
 				04F6ECBE2429E87E00D7F1CB /* SGHWheelView.xib in Resources */,
 				8F31149E2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.xib in Resources */,
 				8F31111024264FB100421E7A /* SGH0824PresentAndPushTwoViewController.xib in Resources */,
+				8F3115A3242A307600421E7A /* 02.jpg in Resources */,
 				8F3113FD2426E6EF00421E7A /* ocTojsBlock.html in Resources */,
 				8F310B922425B29300421E7A /* LaunchScreen.storyboard in Resources */,
+				8F3115B7242A512900421E7A /* banner_3d_tran_5.jpg in Resources */,
 				04F6EC7A2429AEA000D7F1CB /* qrcode_screen@2x.png in Resources */,
 				8F3114082426E6EF00421E7A /* DS_Store in Resources */,
 				8F3114022426E6EF00421E7A /* SGHSesstionDownloadViewController.xib in Resources */,
+				8F3115A4242A307600421E7A /* 01.jpg in Resources */,
 				04F6EC7B2429AEA000D7F1CB /* system_setting@2x.png in Resources */,
 				8F310B8F2425B29300421E7A /* Assets.xcassets in Resources */,
 				8F3115322429129100421E7A /* cursor@2x.png in Resources */,
 				8F31110D24264FB100421E7A /* SGH0824PresentAndPushOneViewController.xib in Resources */,
 				049678FB2427C6E900F2FD83 /* demo2_content.json in Resources */,
 				8F3115312429129100421E7A /* coretext-image-1.jpg in Resources */,
+				8F3115B5242A512900421E7A /* banner_3d_tran_4.jpg in Resources */,
 				8F3114992426EB4C00421E7A /* SGH0618GeocodeViewController.xib in Resources */,
 				049678F62427C37300F2FD83 /* CoreText.storyboard in Resources */,
 				8F31111124264FB100421E7A /* SGH0824PresentAndPushFourViewController.xib in Resources */,
 				04F6ECBB2429E87E00D7F1CB /* SGH0729WheelViewController.xib in Resources */,
+				8F3115B8242A512900421E7A /* banner_3d_tran_2.jpg in Resources */,
 				8F31141A2426E6EF00421E7A /* inform_menu_selected@2x.png in Resources */,
 				8F3114892426EB4C00421E7A /* SGH0618MapNavigationViewController.xib in Resources */,
 				8F31110C24264FB100421E7A /* SGH0824PresentAndPushThreeViewController.xib in Resources */,
@@ -3937,8 +4022,11 @@
 				8F3114862426EB4C00421E7A /* SGH0618MapViewViewController.xib in Resources */,
 				8F31110724264FB100421E7A /* Server_RTDev.xml in Resources */,
 				04F6ECBD2429E87E00D7F1CB /* Wheel0829Icon.xcassets in Resources */,
+				8F3115B4242A512900421E7A /* banner_3d_tran_1.jpg in Resources */,
 				04F6EC7C2429AEA000D7F1CB /* stock_search@2x.png in Resources */,
+				8F3115B9242A512900421E7A /* banner_3d_tran_0.jpg in Resources */,
 				8F3110F124264FB100421E7A /* SXDetails.css in Resources */,
+				8F3115B6242A512900421E7A /* banner_3d_tran_3.jpg in Resources */,
 				8F31110324264FB100421E7A /* README.docx in Resources */,
 				8F3110C124264FB100421E7A /* readme.md in Resources */,
 				8F310B8A2425B28900421E7A /* Main.storyboard in Resources */,
@@ -4066,6 +4154,7 @@
 				8F31111224264FB100421E7A /* SGH0824PresentAndPushFourViewController.m in Sources */,
 				8F31109D24264FB100421E7A /* SGH161223WZLBadgeViewController.m in Sources */,
 				8F3110E524264FB100421E7A /* XGImageTitleView.m in Sources */,
+				8F3115A8242A509700421E7A /* SGHBanner3DTransitionViewController.m in Sources */,
 				8F3110CE24264FB100421E7A /* SGH0515AttibuteStringInitViewController.m in Sources */,
 				8F3110AB24264FB100421E7A /* SHSortManager.m in Sources */,
 				8F3110F024264FB100421E7A /* SGH1012BecomeHtmlStringViewController.m in Sources */,
@@ -4130,6 +4219,7 @@
 				8F31110024264FB100421E7A /* SHRuntime3Person.m in Sources */,
 				8F3110D024264FB100421E7A /* SHDispatchMethodsViewController.m in Sources */,
 				8F3110DD24264FB100421E7A /* SHUpdateJumpAppStoreVC.m in Sources */,
+				8F31159B242A2D7200421E7A /* SGH0324CATransitionViewController.m in Sources */,
 				8F3110B924264FB100421E7A /* SH3DTouchDemoViewController.m in Sources */,
 				8F31108E24264FB100421E7A /* SGH1128ContactsViewController.m in Sources */,
 				8F3110C824264FB100421E7A /* SGH0424GaodeMapView.m in Sources */,
@@ -4194,6 +4284,7 @@
 				8F3110F324264FB100421E7A /* SGH0824AlertViewViewController.m in Sources */,
 				8F3110F724264FB100421E7A /* SGH1108ShareItem.m in Sources */,
 				8F31111324264FB100421E7A /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
+				8F3115AD242A511F00421E7A /* SGHBanner3DTransitionView.m in Sources */,
 				8F31108824264FB100421E7A /* BDTConstManager.m in Sources */,
 				8F31108B24264FB100421E7A /* SHUtility.m in Sources */,
 				8F311584242995AE00421E7A /* SGH0510Runtime2ViewController.m in Sources */,
