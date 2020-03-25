@@ -39,10 +39,10 @@ class UITestDemoUITests: XCTestCase {
         let alertCount = NSPredicate(format: "count == 1")
         let labelExist = NSPredicate(format: "exists == 1")
         
-        expectationForPredicate(alertCount, evaluatedWithObject: alerts, handler: nil)
-        expectationForPredicate(labelExist, evaluatedWithObject: label, handler: nil)
+        expectation(for: alertCount, evaluatedWith: alerts, handler: nil)
+        expectation(for: labelExist, evaluatedWith: label, handler: nil)
         
-        waitForExpectationsWithTimeout(5, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testLoginSuccessfully() {

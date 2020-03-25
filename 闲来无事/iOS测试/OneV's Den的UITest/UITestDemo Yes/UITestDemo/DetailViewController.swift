@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func switchValueChanged(sender: UISwitch) {
-        if sender.on {
+        if sender.isOn {
             count = count + 1
         } else {
             count = count - 1
