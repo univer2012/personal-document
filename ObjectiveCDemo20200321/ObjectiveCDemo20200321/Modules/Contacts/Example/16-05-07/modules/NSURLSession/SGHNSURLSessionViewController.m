@@ -7,9 +7,9 @@
 //
 
 typedef enum {
-    MethodGET,
-    MethodPOST
-}Method;
+    SGHRequestMethodGET,
+    SGHRequestMethodPOST
+}SGHRequestMethod;
 
 #import "SGHNSURLSessionViewController.h"
 
@@ -266,7 +266,7 @@ typedef enum {
     NSURL *url = [NSURL URLWithString:URLString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     // 请求方式，默认为GET
-    if (method == MethodPOST) {
+    if (method == SGHRequestMethodPOST) {
         request.HTTPMethod = @"POST";
     }
     // 根据需要设置

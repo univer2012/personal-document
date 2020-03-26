@@ -319,6 +319,39 @@
 		8F3115DF242A60F500421E7A /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D6242A60F400421E7A /* PersonModel.m */; };
 		8F3115E0242A60F500421E7A /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D7242A60F400421E7A /* CellModel.m */; };
 		8F3115E1242A60F500421E7A /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115D8242A60F400421E7A /* Status.m */; };
+		8F311626242D01FA00421E7A /* SGHConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115E4242D01F900421E7A /* SGHConcatViewController.m */; };
+		8F311627242D01FA00421E7A /* SGHStopwatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115E5242D01F900421E7A /* SGHStopwatchViewController.m */; };
+		8F311628242D01FA00421E7A /* SGHCombineLatestReduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115E9242D01F900421E7A /* SGHCombineLatestReduceViewController.m */; };
+		8F311629242D01FA00421E7A /* SGHDefineRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115EB242D01F900421E7A /* SGHDefineRACViewController.m */; };
+		8F31162A242D01FA00421E7A /* SGHSumupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115EE242D01F900421E7A /* SGHSumupViewController.m */; };
+		8F31162B242D01FA00421E7A /* SGHZipwithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115EF242D01F900421E7A /* SGHZipwithViewController.m */; };
+		8F31162C242D01FA00421E7A /* SGHMergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115F0242D01F900421E7A /* SGHMergeViewController.m */; };
+		8F31162D242D01FA00421E7A /* SGHSkipUntilBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115F3242D01F900421E7A /* SGHSkipUntilBlockViewController.m */; };
+		8F31162E242D01FA00421E7A /* SGHSwitchToLatestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */; };
+		8F31162F242D01FA00421E7A /* SGHTakeWhileBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */; };
+		8F311630242D01FA00421E7A /* SGHTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115FB242D01F900421E7A /* SGHTakeViewController.m */; };
+		8F311631242D01FA00421E7A /* SGHThrottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115FD242D01F900421E7A /* SGHThrottleViewController.m */; };
+		8F311632242D01FA00421E7A /* SGHDistinctUntilChangedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */; };
+		8F311633242D01FA00421E7A /* SGHFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311600242D01F900421E7A /* SGHFilterViewController.m */; };
+		8F311634242D01FA00421E7A /* SGHDelayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311604242D01F900421E7A /* SGHDelayViewController.m */; };
+		8F311635242D01FA00421E7A /* SGHStartWithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311605242D01F900421E7A /* SGHStartWithViewController.m */; };
+		8F311636242D01FA00421E7A /* SGHSkipWhileBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311608242D01F900421E7A /* SGHSkipWhileBlockViewController.m */; };
+		8F311637242D01FA00421E7A /* SGHTakeUntilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311609242D01F900421E7A /* SGHTakeUntilViewController.m */; };
+		8F311638242D01FA00421E7A /* SGHRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31160A242D01F900421E7A /* SGHRepeatViewController.m */; };
+		8F311639242D01FA00421E7A /* SGHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31160B242D01F900421E7A /* SGHMapViewController.m */; };
+		8F31163A242D01FA00421E7A /* SGHIgnoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31160E242D01F900421E7A /* SGHIgnoreViewController.m */; };
+		8F31163B242D01FA00421E7A /* SGHSkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311610242D01F900421E7A /* SGHSkipViewController.m */; };
+		8F31163C242D01FA00421E7A /* SGHSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311612242D01F900421E7A /* SGHSignalViewController.m */; };
+		8F31163D242D01FA00421E7A /* SGHTakeLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311613242D01F900421E7A /* SGHTakeLastViewController.m */; };
+		8F31163E242D01FA00421E7A /* SGHTimeoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311615242D01F900421E7A /* SGHTimeoutViewController.m */; };
+		8F31163F242D01FA00421E7A /* SGHTargetActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311618242D01F900421E7A /* SGHTargetActionViewController.m */; };
+		8F311640242D01FA00421E7A /* SGHNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31161A242D01F900421E7A /* SGHNotificationViewController.m */; };
+		8F311641242D01FA00421E7A /* SGHSwitchDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */; };
+		8F311642242D01FA00421E7A /* LxDBAnythingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311620242D01F900421E7A /* LxDBAnythingViewController.m */; };
+		8F311643242D01FA00421E7A /* SGHGesturerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311622242D01F900421E7A /* SGHGesturerViewController.m */; };
+		8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311623242D01F900421E7A /* SGHSchedulerViewController.m */; };
+		8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311624242D01F900421E7A /* SGHKVOViewController.m */; };
+		8F311649242D031C00421E7A /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311647242D031C00421E7A /* TestModel.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -919,6 +952,72 @@
 		8F3115D8242A60F400421E7A /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		8F3115D9242A60F400421E7A /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
 		8F3115DA242A60F400421E7A /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		8F3115E4242D01F900421E7A /* SGHConcatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHConcatViewController.m; sourceTree = "<group>"; };
+		8F3115E5242D01F900421E7A /* SGHStopwatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHStopwatchViewController.m; sourceTree = "<group>"; };
+		8F3115E6242D01F900421E7A /* SGHDefineRACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDefineRACViewController.h; sourceTree = "<group>"; };
+		8F3115E7242D01F900421E7A /* SGHSumupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSumupViewController.h; sourceTree = "<group>"; };
+		8F3115E8242D01F900421E7A /* SGHMergeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHMergeViewController.h; sourceTree = "<group>"; };
+		8F3115E9242D01F900421E7A /* SGHCombineLatestReduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHCombineLatestReduceViewController.m; sourceTree = "<group>"; };
+		8F3115EA242D01F900421E7A /* SGHZipwithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHZipwithViewController.h; sourceTree = "<group>"; };
+		8F3115EB242D01F900421E7A /* SGHDefineRACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDefineRACViewController.m; sourceTree = "<group>"; };
+		8F3115EC242D01F900421E7A /* SGHStopwatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHStopwatchViewController.h; sourceTree = "<group>"; };
+		8F3115ED242D01F900421E7A /* SGHConcatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHConcatViewController.h; sourceTree = "<group>"; };
+		8F3115EE242D01F900421E7A /* SGHSumupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSumupViewController.m; sourceTree = "<group>"; };
+		8F3115EF242D01F900421E7A /* SGHZipwithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHZipwithViewController.m; sourceTree = "<group>"; };
+		8F3115F0242D01F900421E7A /* SGHMergeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHMergeViewController.m; sourceTree = "<group>"; };
+		8F3115F1242D01F900421E7A /* SGHCombineLatestReduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHCombineLatestReduceViewController.h; sourceTree = "<group>"; };
+		8F3115F3242D01F900421E7A /* SGHSkipUntilBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSkipUntilBlockViewController.m; sourceTree = "<group>"; };
+		8F3115F4242D01F900421E7A /* SGHSkipWhileBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSkipWhileBlockViewController.h; sourceTree = "<group>"; };
+		8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSwitchToLatestViewController.m; sourceTree = "<group>"; };
+		8F3115F6242D01F900421E7A /* SGHStartWithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHStartWithViewController.h; sourceTree = "<group>"; };
+		8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTakeWhileBlockViewController.m; sourceTree = "<group>"; };
+		8F3115F8242D01F900421E7A /* SGHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHMapViewController.h; sourceTree = "<group>"; };
+		8F3115F9242D01F900421E7A /* SGHRepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHRepeatViewController.h; sourceTree = "<group>"; };
+		8F3115FA242D01F900421E7A /* SGHTakeUntilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTakeUntilViewController.h; sourceTree = "<group>"; };
+		8F3115FB242D01F900421E7A /* SGHTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTakeViewController.m; sourceTree = "<group>"; };
+		8F3115FC242D01F900421E7A /* SGHSkipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSkipViewController.h; sourceTree = "<group>"; };
+		8F3115FD242D01F900421E7A /* SGHThrottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHThrottleViewController.m; sourceTree = "<group>"; };
+		8F3115FE242D01F900421E7A /* SGHIgnoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHIgnoreViewController.h; sourceTree = "<group>"; };
+		8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDistinctUntilChangedViewController.m; sourceTree = "<group>"; };
+		8F311600242D01F900421E7A /* SGHFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHFilterViewController.m; sourceTree = "<group>"; };
+		8F311601242D01F900421E7A /* SGHTimeoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTimeoutViewController.h; sourceTree = "<group>"; };
+		8F311602242D01F900421E7A /* SGHSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSignalViewController.h; sourceTree = "<group>"; };
+		8F311603242D01F900421E7A /* SGHTakeLastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTakeLastViewController.h; sourceTree = "<group>"; };
+		8F311604242D01F900421E7A /* SGHDelayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHDelayViewController.m; sourceTree = "<group>"; };
+		8F311605242D01F900421E7A /* SGHStartWithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHStartWithViewController.m; sourceTree = "<group>"; };
+		8F311606242D01F900421E7A /* SGHSwitchToLatestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSwitchToLatestViewController.h; sourceTree = "<group>"; };
+		8F311607242D01F900421E7A /* SGHSkipUntilBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSkipUntilBlockViewController.h; sourceTree = "<group>"; };
+		8F311608242D01F900421E7A /* SGHSkipWhileBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSkipWhileBlockViewController.m; sourceTree = "<group>"; };
+		8F311609242D01F900421E7A /* SGHTakeUntilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTakeUntilViewController.m; sourceTree = "<group>"; };
+		8F31160A242D01F900421E7A /* SGHRepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHRepeatViewController.m; sourceTree = "<group>"; };
+		8F31160B242D01F900421E7A /* SGHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHMapViewController.m; sourceTree = "<group>"; };
+		8F31160C242D01F900421E7A /* SGHTakeWhileBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTakeWhileBlockViewController.h; sourceTree = "<group>"; };
+		8F31160D242D01F900421E7A /* SGHDistinctUntilChangedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDistinctUntilChangedViewController.h; sourceTree = "<group>"; };
+		8F31160E242D01F900421E7A /* SGHIgnoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHIgnoreViewController.m; sourceTree = "<group>"; };
+		8F31160F242D01F900421E7A /* SGHThrottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHThrottleViewController.h; sourceTree = "<group>"; };
+		8F311610242D01F900421E7A /* SGHSkipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSkipViewController.m; sourceTree = "<group>"; };
+		8F311611242D01F900421E7A /* SGHTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTakeViewController.h; sourceTree = "<group>"; };
+		8F311612242D01F900421E7A /* SGHSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSignalViewController.m; sourceTree = "<group>"; };
+		8F311613242D01F900421E7A /* SGHTakeLastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTakeLastViewController.m; sourceTree = "<group>"; };
+		8F311614242D01F900421E7A /* SGHDelayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHDelayViewController.h; sourceTree = "<group>"; };
+		8F311615242D01F900421E7A /* SGHTimeoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTimeoutViewController.m; sourceTree = "<group>"; };
+		8F311616242D01F900421E7A /* SGHFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHFilterViewController.h; sourceTree = "<group>"; };
+		8F311618242D01F900421E7A /* SGHTargetActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHTargetActionViewController.m; sourceTree = "<group>"; };
+		8F311619242D01F900421E7A /* LxDBAnythingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnythingViewController.h; sourceTree = "<group>"; };
+		8F31161A242D01F900421E7A /* SGHNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHNotificationViewController.m; sourceTree = "<group>"; };
+		8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSwitchDelegateViewController.m; sourceTree = "<group>"; };
+		8F31161C242D01F900421E7A /* SGHKVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHKVOViewController.h; sourceTree = "<group>"; };
+		8F31161D242D01F900421E7A /* SGHSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSchedulerViewController.h; sourceTree = "<group>"; };
+		8F31161E242D01F900421E7A /* SGHGesturerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHGesturerViewController.h; sourceTree = "<group>"; };
+		8F31161F242D01F900421E7A /* SGHNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHNotificationViewController.h; sourceTree = "<group>"; };
+		8F311620242D01F900421E7A /* LxDBAnythingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxDBAnythingViewController.m; sourceTree = "<group>"; };
+		8F311621242D01F900421E7A /* SGHTargetActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHTargetActionViewController.h; sourceTree = "<group>"; };
+		8F311622242D01F900421E7A /* SGHGesturerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHGesturerViewController.m; sourceTree = "<group>"; };
+		8F311623242D01F900421E7A /* SGHSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSchedulerViewController.m; sourceTree = "<group>"; };
+		8F311624242D01F900421E7A /* SGHKVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHKVOViewController.m; sourceTree = "<group>"; };
+		8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSwitchDelegateViewController.h; sourceTree = "<group>"; };
+		8F311647242D031C00421E7A /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		8F311648242D031C00421E7A /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1659,22 +1758,17 @@
 		8F310EA024264FAF00421E7A /* 6ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				8F310EA124264FAF00421E7A /* Controller */,
-				8F310EA424264FAF00421E7A /* Modules */,
+				8F310EA224264FAF00421E7A /* SHReactiveCocoaViewController.h */,
+				8F310EA324264FAF00421E7A /* SHReactiveCocoaViewController.m */,
+				8F311617242D01F900421E7A /* sectionOne */,
+				8F3115E3242D01F900421E7A /* sectionThree */,
+				8F3115F2242D01F900421E7A /* sectionTwo */,
+				8F310EA424264FAF00421E7A /* RAC_Introduction */,
 			);
 			path = 6ReactiveCocoa;
 			sourceTree = "<group>";
 		};
-		8F310EA124264FAF00421E7A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8F310EA224264FAF00421E7A /* SHReactiveCocoaViewController.h */,
-				8F310EA324264FAF00421E7A /* SHReactiveCocoaViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		8F310EA424264FAF00421E7A /* Modules */ = {
+		8F310EA424264FAF00421E7A /* RAC_Introduction */ = {
 			isa = PBXGroup;
 			children = (
 				8F310EA524264FAF00421E7A /* 6介绍十二_RACCommand */,
@@ -1684,16 +1778,16 @@
 				8F310EB324264FAF00421E7A /* 2一基本介绍 */,
 				8F310EB624264FAF00421E7A /* 1Autolayout_masonry登录动画 */,
 			);
-			path = Modules;
+			path = RAC_Introduction;
 			sourceTree = "<group>";
 		};
 		8F310EA524264FAF00421E7A /* 6介绍十二_RACCommand */ = {
 			isa = PBXGroup;
 			children = (
 				8F310EA624264FAF00421E7A /* SHRAC12ViewModel.h */,
+				8F310EA924264FAF00421E7A /* SHRAC12ViewModel.m */,
 				8F310EA724264FAF00421E7A /* SHRAC12ViewController.h */,
 				8F310EA824264FAF00421E7A /* SHRAC12ViewController.m */,
-				8F310EA924264FAF00421E7A /* SHRAC12ViewModel.m */,
 			);
 			path = "6介绍十二_RACCommand";
 			sourceTree = "<group>";
@@ -3965,6 +4059,101 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8F3115E3242D01F900421E7A /* sectionThree */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115E4242D01F900421E7A /* SGHConcatViewController.m */,
+				8F3115E5242D01F900421E7A /* SGHStopwatchViewController.m */,
+				8F3115E6242D01F900421E7A /* SGHDefineRACViewController.h */,
+				8F3115E7242D01F900421E7A /* SGHSumupViewController.h */,
+				8F3115E8242D01F900421E7A /* SGHMergeViewController.h */,
+				8F3115E9242D01F900421E7A /* SGHCombineLatestReduceViewController.m */,
+				8F3115EA242D01F900421E7A /* SGHZipwithViewController.h */,
+				8F3115EB242D01F900421E7A /* SGHDefineRACViewController.m */,
+				8F3115EC242D01F900421E7A /* SGHStopwatchViewController.h */,
+				8F3115ED242D01F900421E7A /* SGHConcatViewController.h */,
+				8F3115EE242D01F900421E7A /* SGHSumupViewController.m */,
+				8F3115EF242D01F900421E7A /* SGHZipwithViewController.m */,
+				8F3115F0242D01F900421E7A /* SGHMergeViewController.m */,
+				8F3115F1242D01F900421E7A /* SGHCombineLatestReduceViewController.h */,
+			);
+			path = sectionThree;
+			sourceTree = "<group>";
+		};
+		8F3115F2242D01F900421E7A /* sectionTwo */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F3242D01F900421E7A /* SGHSkipUntilBlockViewController.m */,
+				8F3115F4242D01F900421E7A /* SGHSkipWhileBlockViewController.h */,
+				8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */,
+				8F3115F6242D01F900421E7A /* SGHStartWithViewController.h */,
+				8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */,
+				8F3115F8242D01F900421E7A /* SGHMapViewController.h */,
+				8F3115F9242D01F900421E7A /* SGHRepeatViewController.h */,
+				8F3115FA242D01F900421E7A /* SGHTakeUntilViewController.h */,
+				8F3115FB242D01F900421E7A /* SGHTakeViewController.m */,
+				8F3115FC242D01F900421E7A /* SGHSkipViewController.h */,
+				8F3115FD242D01F900421E7A /* SGHThrottleViewController.m */,
+				8F3115FE242D01F900421E7A /* SGHIgnoreViewController.h */,
+				8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */,
+				8F311600242D01F900421E7A /* SGHFilterViewController.m */,
+				8F311601242D01F900421E7A /* SGHTimeoutViewController.h */,
+				8F311602242D01F900421E7A /* SGHSignalViewController.h */,
+				8F311603242D01F900421E7A /* SGHTakeLastViewController.h */,
+				8F311604242D01F900421E7A /* SGHDelayViewController.m */,
+				8F311605242D01F900421E7A /* SGHStartWithViewController.m */,
+				8F311606242D01F900421E7A /* SGHSwitchToLatestViewController.h */,
+				8F311607242D01F900421E7A /* SGHSkipUntilBlockViewController.h */,
+				8F311608242D01F900421E7A /* SGHSkipWhileBlockViewController.m */,
+				8F311609242D01F900421E7A /* SGHTakeUntilViewController.m */,
+				8F31160A242D01F900421E7A /* SGHRepeatViewController.m */,
+				8F31160B242D01F900421E7A /* SGHMapViewController.m */,
+				8F31160C242D01F900421E7A /* SGHTakeWhileBlockViewController.h */,
+				8F31160D242D01F900421E7A /* SGHDistinctUntilChangedViewController.h */,
+				8F31160E242D01F900421E7A /* SGHIgnoreViewController.m */,
+				8F31160F242D01F900421E7A /* SGHThrottleViewController.h */,
+				8F311610242D01F900421E7A /* SGHSkipViewController.m */,
+				8F311611242D01F900421E7A /* SGHTakeViewController.h */,
+				8F311612242D01F900421E7A /* SGHSignalViewController.m */,
+				8F311613242D01F900421E7A /* SGHTakeLastViewController.m */,
+				8F311614242D01F900421E7A /* SGHDelayViewController.h */,
+				8F311615242D01F900421E7A /* SGHTimeoutViewController.m */,
+				8F311616242D01F900421E7A /* SGHFilterViewController.h */,
+			);
+			path = sectionTwo;
+			sourceTree = "<group>";
+		};
+		8F311617242D01F900421E7A /* sectionOne */ = {
+			isa = PBXGroup;
+			children = (
+				8F311646242D02F800421E7A /* Models */,
+				8F311618242D01F900421E7A /* SGHTargetActionViewController.m */,
+				8F311619242D01F900421E7A /* LxDBAnythingViewController.h */,
+				8F31161A242D01F900421E7A /* SGHNotificationViewController.m */,
+				8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */,
+				8F31161C242D01F900421E7A /* SGHKVOViewController.h */,
+				8F31161D242D01F900421E7A /* SGHSchedulerViewController.h */,
+				8F31161E242D01F900421E7A /* SGHGesturerViewController.h */,
+				8F31161F242D01F900421E7A /* SGHNotificationViewController.h */,
+				8F311620242D01F900421E7A /* LxDBAnythingViewController.m */,
+				8F311621242D01F900421E7A /* SGHTargetActionViewController.h */,
+				8F311622242D01F900421E7A /* SGHGesturerViewController.m */,
+				8F311623242D01F900421E7A /* SGHSchedulerViewController.m */,
+				8F311624242D01F900421E7A /* SGHKVOViewController.m */,
+				8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */,
+			);
+			path = sectionOne;
+			sourceTree = "<group>";
+		};
+		8F311646242D02F800421E7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F311648242D031C00421E7A /* TestModel.h */,
+				8F311647242D031C00421E7A /* TestModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4204,8 +4393,10 @@
 			files = (
 				8F31108924264FB100421E7A /* SHAlertViewSetModel.m in Sources */,
 				8F31109A24264FB100421E7A /* CAAnimation+WAnimation.m in Sources */,
+				8F311638242D01FA00421E7A /* SGHRepeatViewController.m in Sources */,
 				8F3110C224264FB100421E7A /* SHQRCodeViewController.m in Sources */,
 				8F3110BA24264FB100421E7A /* SGHReusableHeaderFooterTableViewController.m in Sources */,
+				8F31163C242D01FA00421E7A /* SGHSignalViewController.m in Sources */,
 				8F3110C524264FB100421E7A /* Example3Controller.m in Sources */,
 				8F31112024264FB100421E7A /* SGH16110701ViewController.m in Sources */,
 				8F3110A824264FB100421E7A /* WBTag.m in Sources */,
@@ -4213,19 +4404,25 @@
 				04F6ECB42429E87E00D7F1CB /* SGH0728CALayerViewController.m in Sources */,
 				8F3110B024264FB100421E7A /* SGH_TTAttriLabelViewController.m in Sources */,
 				04F6EC842429AEA000D7F1CB /* Reachability.m in Sources */,
+				8F311633242D01FA00421E7A /* SGHFilterViewController.m in Sources */,
+				8F31163D242D01FA00421E7A /* SGHTakeLastViewController.m in Sources */,
 				8F310B952425B29300421E7A /* main.m in Sources */,
 				8F3114182426E6EF00421E7A /* SGHStringShowViewController.m in Sources */,
 				8F31112B24264FB100421E7A /* SGH160728ViewController.m in Sources */,
 				0457881C2427BA6300C2DF75 /* CoreTextImageData.m in Sources */,
 				8F3110D924264FB100421E7A /* SHKVOExploreViewController.m in Sources */,
 				8F31109B24264FB100421E7A /* UIView+WZLBadge.m in Sources */,
+				8F311640242D01FA00421E7A /* SGHNotificationViewController.m in Sources */,
 				8F3115E1242A60F500421E7A /* Status.m in Sources */,
 				8F3110FB24264FB100421E7A /* SH1902Person.m in Sources */,
 				8F311581242995AE00421E7A /* SGH0512Runtime4ViewController.m in Sources */,
 				045788212427BA6300C2DF75 /* CTDisplayView.m in Sources */,
+				8F311627242D01FA00421E7A /* SGHStopwatchViewController.m in Sources */,
 				8F31111F24264FB100421E7A /* SGH1108AppStoreViewController.m in Sources */,
+				8F311635242D01FA00421E7A /* SGHStartWithViewController.m in Sources */,
 				8F3113502426E1D500421E7A /* SGHMethodSwizzlingObject.m in Sources */,
 				045787E52427B37B00C2DF75 /* Son.m in Sources */,
+				8F311631242D01FA00421E7A /* SGHThrottleViewController.m in Sources */,
 				8F311587242995AE00421E7A /* SGH0511Runtime3ViewController.m in Sources */,
 				8F3114132426E6EF00421E7A /* YYQKeyChain.m in Sources */,
 				0457881F2427BA6300C2DF75 /* CoreTextLinkData.m in Sources */,
@@ -4233,6 +4430,7 @@
 				8F3114872426EB4C00421E7A /* SGH0618MapViewViewController.m in Sources */,
 				8F3110BE24264FB100421E7A /* SGH0429CryptographyViewController.m in Sources */,
 				8F3110B524264FB100421E7A /* GJCell.m in Sources */,
+				8F311642242D01FA00421E7A /* LxDBAnythingViewController.m in Sources */,
 				8F31112A24264FB100421E7A /* SGH1012PlaceholderColorViewController.m in Sources */,
 				8F31157E242995AE00421E7A /* SGH170506MyClass.m in Sources */,
 				8F31149F2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m in Sources */,
@@ -4248,6 +4446,7 @@
 				8F3110E424264FB100421E7A /* UIColor+Hex.m in Sources */,
 				8F31111824264FB100421E7A /* SGH1013TextViewViewController.m in Sources */,
 				8F31110B24264FB100421E7A /* SGH0824PresentAndPushThreeViewController.m in Sources */,
+				8F311641242D01FA00421E7A /* SGHSwitchDelegateViewController.m in Sources */,
 				8F31112924264FB100421E7A /* SGHNavigation1128Controller.m in Sources */,
 				8F31111624264FB100421E7A /* GTMBase64.m in Sources */,
 				8F31153924298C3100421E7A /* SGH160531ViewController.m in Sources */,
@@ -4288,23 +4487,28 @@
 				045787E82427B37B00C2DF75 /* NSDictionary+print.m in Sources */,
 				8F3110A324264FB100421E7A /* WBStatus.m in Sources */,
 				8F31109024264FB100421E7A /* SHRAC12ViewController.m in Sources */,
+				8F311634242D01FA00421E7A /* SGHDelayViewController.m in Sources */,
 				04F6EC822429AEA000D7F1CB /* TKAccountModel.m in Sources */,
 				8F3114942426EB4C00421E7A /* SGH0618AnnotationViewController.m in Sources */,
 				04F6EC3F2429ACCB00D7F1CB /* UIImage+SGHHook.m in Sources */,
 				04F6EC882429AEA000D7F1CB /* SGHUIFontViewController.m in Sources */,
 				8F31108724264FB100421E7A /* SGHDeviceManager.m in Sources */,
 				04F6EC862429AEA000D7F1CB /* SGHPresentTransitionSecondViewController.m in Sources */,
+				8F31162C242D01FA00421E7A /* SGHMergeViewController.m in Sources */,
 				8F3115462429944C00421E7A /* SGHPerformanceAnalysisAndOptimizationVC.m in Sources */,
 				8F3115522429948900421E7A /* SGHPrincipleOfInquiryViewController.m in Sources */,
 				8F311580242995AE00421E7A /* UIViewController+SGH0512Tracking.m in Sources */,
 				8F3110E824264FB100421E7A /* SHFetchFutureDateViewController.m in Sources */,
 				8F31109324264FB100421E7A /* SHRAC4ViewController.m in Sources */,
+				8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */,
+				8F311649242D031C00421E7A /* TestModel.m in Sources */,
 				8F31157F242995AE00421E7A /* SGH0506Test.m in Sources */,
 				8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */,
 				8F3110CC24264FB100421E7A /* SGH0424DreamLBSViewController.m in Sources */,
 				8F3115C7242A5AFD00421E7A /* UIViewController+Description.m in Sources */,
 				8F311586242995AE00421E7A /* UIView+SGHTapGesture.m in Sources */,
 				8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */,
+				8F31162E242D01FA00421E7A /* SGHSwitchToLatestViewController.m in Sources */,
 				8F3110A924264FB100421E7A /* WBPictureMetadata.m in Sources */,
 				8F3110DB24264FB100421E7A /* SHCoreDataDemoVC.m in Sources */,
 				8F3110C024264FB100421E7A /* NSString+Hash.m in Sources */,
@@ -4313,6 +4517,8 @@
 				04F6EC7D2429AEA000D7F1CB /* SGHPopContentViewController.m in Sources */,
 				8F3110DC24264FB100421E7A /* Model.xcdatamodeld in Sources */,
 				8F3114042426E6EF00421E7A /* SGHDateCalendarViewController.m in Sources */,
+				8F31162D242D01FA00421E7A /* SGHSkipUntilBlockViewController.m in Sources */,
+				8F31163A242D01FA00421E7A /* SGHIgnoreViewController.m in Sources */,
 				04F6EC432429ACCB00D7F1CB /* SGHRuntimeAttriMethodViewController.m in Sources */,
 				8F3110FF24264FB100421E7A /* SHProxy.m in Sources */,
 				8F3110A424264FB100421E7A /* WBTimelineItem.m in Sources */,
@@ -4321,6 +4527,7 @@
 				8F31108624264FB100421E7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				8F31110024264FB100421E7A /* SHRuntime3Person.m in Sources */,
 				8F3110D024264FB100421E7A /* SHDispatchMethodsViewController.m in Sources */,
+				8F311639242D01FA00421E7A /* SGHMapViewController.m in Sources */,
 				8F3115DE242A60F500421E7A /* NSObject+EnumArr.m in Sources */,
 				8F3110DD24264FB100421E7A /* SHUpdateJumpAppStoreVC.m in Sources */,
 				8F31159B242A2D7200421E7A /* SGH0324CATransitionViewController.m in Sources */,
@@ -4338,14 +4545,19 @@
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
 				8F3115DF242A60F500421E7A /* PersonModel.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
+				8F31163E242D01FA00421E7A /* SGHTimeoutViewController.m in Sources */,
+				8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */,
 				8F3113532426E1D500421E7A /* NSString+MD5.m in Sources */,
 				8F3114142426E6EF00421E7A /* SGHUDIDKeychainViewController.m in Sources */,
 				8F3114012426E6EF00421E7A /* SGHSesstionDownloadViewController.m in Sources */,
 				8F31112824264FB100421E7A /* SGH1128InterceptPopViewController.m in Sources */,
 				045787E92427B37B00C2DF75 /* FKUser.m in Sources */,
+				8F311636242D01FA00421E7A /* SGHSkipWhileBlockViewController.m in Sources */,
 				049678FE2427C98D00F2FD83 /* SGHCoreText3ViewController.m in Sources */,
 				8F31154F2429947C00421E7A /* SGHAboutKVOAndKVCViewController.m in Sources */,
 				8F3110D124264FB100421E7A /* SGHXMPPFrameworkViewController.m in Sources */,
+				8F311632242D01FA00421E7A /* SGHDistinctUntilChangedViewController.m in Sources */,
+				8F31162B242D01FA00421E7A /* SGHZipwithViewController.m in Sources */,
 				04F6ECB92429E87E00D7F1CB /* SGH0729TransitionGroupViewController.m in Sources */,
 				8F3110F224264FB100421E7A /* SGH1101DidScreenshotNotiViewController.m in Sources */,
 				8F31112D24264FB100421E7A /* SGH161128TabBarViewController.m in Sources */,
@@ -4362,9 +4574,11 @@
 				8F3110FC24264FB100421E7A /* SHLeaks0301Object.m in Sources */,
 				8F3114812426EB4C00421E7A /* SGH0618AntiEncodeViewController.m in Sources */,
 				8F31149C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m in Sources */,
+				8F311626242D01FA00421E7A /* SGHConcatViewController.m in Sources */,
 				8F3110E324264FB100421E7A /* SHImageText0214ViewController.m in Sources */,
 				8F31111424264FB100421E7A /* SGH1103AESViewController.m in Sources */,
 				8F3113FC2426E6EF00421E7A /* SGHShowHTMLViewController.m in Sources */,
+				8F31163B242D01FA00421E7A /* SGHSkipViewController.m in Sources */,
 				8F3110B424264FB100421E7A /* SHUnfixedHeightTableViewController.m in Sources */,
 				8F3110F824264FB100421E7A /* UIViewController+SHLeaksTest.m in Sources */,
 				8F31110924264FB100421E7A /* SGH1125XMLParserViewController.m in Sources */,
@@ -4375,13 +4589,16 @@
 				048706322427670A00CCABC9 /* SGHAboutNSOperationViewController.m in Sources */,
 				8F3115932429977800421E7A /* SGH0425RunloopImageViewController.m in Sources */,
 				8F31111524264FB100421E7A /* TKAesHelper.m in Sources */,
+				8F311637242D01FA00421E7A /* SGHTakeUntilViewController.m in Sources */,
 				8F3110A524264FB100421E7A /* WBPicture.m in Sources */,
 				8F310B8D2425B28900421E7A /* ObjectiveCDemo20200321.xcdatamodeld in Sources */,
 				8F3113FF2426E6EF00421E7A /* SGHOCJSInteractiveViewController.m in Sources */,
 				8F3110CA24264FB100421E7A /* SGH0424BaiduMapView.m in Sources */,
+				8F311643242D01FA00421E7A /* SGHGesturerViewController.m in Sources */,
 				8F3113E72426E6EF00421E7A /* SGH160507ViewController.m in Sources */,
 				8F3110CB24264FB100421E7A /* SGH0424BaiduFactory.m in Sources */,
 				8F31112524264FB100421E7A /* SGH1013ImageSaveAlbumViewController.m in Sources */,
+				8F31163F242D01FA00421E7A /* SGHTargetActionViewController.m in Sources */,
 				8F3115CB242A609400421E7A /* SGHModelTransformViewController.m in Sources */,
 				8F3114192426E6EF00421E7A /* SGHWebViewConstrainsViewController.m in Sources */,
 				045787E72427B37B00C2DF75 /* CYLUser.m in Sources */,
@@ -4401,10 +4618,12 @@
 				04F6ECBC2429E87E00D7F1CB /* SGH0729WheelViewController.m in Sources */,
 				8F3114162426E6EF00421E7A /* SGHAttributedStringViewController.m in Sources */,
 				04F6EC402429ACCB00D7F1CB /* UIButton+SGHHook.m in Sources */,
+				8F311628242D01FA00421E7A /* SGHCombineLatestReduceViewController.m in Sources */,
 				04F6ECC02429E87E00D7F1CB /* SGH0729Button.m in Sources */,
 				8F31147F2426EB4C00421E7A /* SGH160519ViewController.m in Sources */,
 				04F6ECBA2429E87E00D7F1CB /* SGH0729TransitionGroupSecondViewController.m in Sources */,
 				8F31109924264FB100421E7A /* UIView+Frame.m in Sources */,
+				8F31162F242D01FA00421E7A /* SGHTakeWhileBlockViewController.m in Sources */,
 				8F31141F2426E6EF00421E7A /* SGHUniqueUUID_UDIDViewController.m in Sources */,
 				0457881E2427BA6300C2DF75 /* CoreTextData.m in Sources */,
 				8F31110224264FB100421E7A /* SGH1221SelectedCellsViewController.m in Sources */,
@@ -4429,6 +4648,7 @@
 				8F3115492429946000421E7A /* SGHRunloopExperimentViewController.m in Sources */,
 				8F31108C24264FB100421E7A /* UIColor+Hex.m in Sources */,
 				8F310B812425B28900421E7A /* AppDelegate.m in Sources */,
+				8F31162A242D01FA00421E7A /* SGHSumupViewController.m in Sources */,
 				8F3110D824264FB100421E7A /* EOCFamily.m in Sources */,
 				8F311585242995AE00421E7A /* SGH0510MyObject.m in Sources */,
 				04F6ECBF2429E87E00D7F1CB /* SGHWheelView.m in Sources */,
@@ -4436,6 +4656,7 @@
 				045788222427BA6300C2DF75 /* UIView+frameAdjust.m in Sources */,
 				8F31108D24264FB100421E7A /* UIView+LCAdd.m in Sources */,
 				8F31109C24264FB100421E7A /* SGHAFNetworkingViewController.m in Sources */,
+				8F311629242D01FA00421E7A /* SGHDefineRACViewController.m in Sources */,
 				8F3114092426E6EF00421E7A /* SGHPlistDictionaryViewController.m in Sources */,
 				8F311583242995AE00421E7A /* SGH0512Runtime5ViewController.m in Sources */,
 				8F31108424264FB100421E7A /* TBXML+HTTP.m in Sources */,
@@ -4451,6 +4672,7 @@
 				8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */,
 				0457881B2427BA6300C2DF75 /* CTFrameParser.m in Sources */,
 				8F3110B824264FB100421E7A /* SHMemManageViewController.m in Sources */,
+				8F311630242D01FA00421E7A /* SGHTakeViewController.m in Sources */,
 				8F3110AC24264FB100421E7A /* SHSandboxReadWriteVC.m in Sources */,
 				8F3110DE24264FB100421E7A /* SGH170815IdentCodeViewController.m in Sources */,
 				8F31110E24264FB100421E7A /* SGH0824PresentAndPushOneViewController.m in Sources */,
@@ -4654,8 +4876,6 @@
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
-					"\"ReactiveObjC\"",
-					"-framework",
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
@@ -4708,8 +4928,6 @@
 					"\"MobileCoreServices\"",
 					"-framework",
 					"\"QuartzCore\"",
-					"-framework",
-					"\"ReactiveObjC\"",
 					"-framework",
 					"\"Security\"",
 					"-framework",
