@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sgh_github_app_flutter/common/model/User.dart';
 import 'package:sgh_github_app_flutter/common/style/GSYStyle.dart';
 import 'package:sgh_github_app_flutter/widget/GSYCardItem.dart';
 import 'package:sgh_github_app_flutter/widget/GSYIconText.dart';
@@ -8,7 +9,9 @@ import 'package:sgh_github_app_flutter/widget/GSYIconText.dart';
  * Date:2020-03-11
  */
 class UserHeaderItem extends StatelessWidget {
-  const UserHeaderItem({Key key}) : super(key: key);
+  final User userInfo;
+
+  UserHeaderItem(this.userInfo);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class UserHeaderItem extends StatelessWidget {
                     placeholder: "static/images/logo.png", 
                     //预览图
                     fit: BoxFit.fitWidth,
-                    image: "fffffff",
+                    image: userInfo.avatar_url,
                     width: 80.0,
                     height: 80.0,
                   ),
@@ -38,26 +41,19 @@ class UserHeaderItem extends StatelessWidget {
                   child: new Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      new Text("Login", style: GSYConstant.normalTextBold,),
+                      new Text(userInfo.login, style:GSYConstant.largeTextWhiteBold),
+                      new Text(userInfo.name, style: GSYConstant.subLightSmallText),
                       new GSYIconText(
-                        GSYIcons.REPOS_ITEM_USER,
-                        "Name ",
+                        GSYIcons.USER_ITEM_COMPANY,
+                        userInfo.company == null ? GSYStrings.nothing_now : userInfo.company,
                         GSYConstant.subLightSmallText,
                         Color(GSYColors.subLightTextColor),
                         10.0,
                         padding: 3.0,
                       ),
                       new GSYIconText(
-                        GSYIcons.REPOS_ITEM_USER,
-                        "coompany ",
-                        GSYConstant.subLightSmallText,
-                        Color(GSYColors.subLightTextColor),
-                        10.0,
-                        padding: 3.0,
-                      ),
-                      new GSYIconText(
-                        GSYIcons.REPOS_ITEM_USER,
-                        "location  ",
+                        GSYIcons.USER_ITEM_LOCATION,
+                        userInfo.location == null ? GSYStrings.nothing_now : userInfo.location,
                         GSYConstant.subLightSmallText,
                         Color(GSYColors.subLightTextColor),
                         10.0,
@@ -68,19 +64,21 @@ class UserHeaderItem extends StatelessWidget {
                 ),
 
                 new Container(
-                  child: new Text(
-                    "link",
-                    style: GSYConstant.subSmallText,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
+                  child: new GSYIconText(
+                    GSYIcons.USER_ITEM_LINK,
+                    userInfo.blog == null ? GSYStrings.nothing_now : userInfo.blog,
+                    GSYConstant.subLightSmallText,
+                    Color(GSYColors.subLightTextColor),
+                    10.0,
+                    padding: 3.0,
                   ),
                   margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),
                   alignment: Alignment.topLeft,
                 ),
                 new Container(
                   child: new Text(
-                    "dessssssssssssssssss",
-                    style: GSYConstant.subSmallText,
+                    userInfo.bio == null ? GSYStrings.nothing_now : userInfo.bio,
+                    style: GSYConstant.subLightSmallText,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -93,7 +91,31 @@ class UserHeaderItem extends StatelessWidget {
                   children: <Widget>[
                     new Expanded(
                       child: new Center(
-                        child: new Text("fff/nfff"),
+                        child: new Text("仓库\n" + userInfo.public_repos.toString(), textAlign: TextAlign.center, style: GSYConstant.subSmallText,),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new Text("粉丝\n" + userInfo.followers.toString(), textAlign: TextAlign.center, style: GSYConstant.subSmallText,),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new Text(
+                          "关注\n" + userInfo.following.toString(), 
+                          textAlign: TextAlign.center, 
+                          style: GSYConstant.subSmallText,
+                        ),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new Text("星标\n---", textAlign: TextAlign.center, style: GSYConstant.subSmallText),
+                      ),
+                    ),
+                    new Expanded(
+                      child: new Center(
+                        child: new Text("荣耀\n---", textAlign: TextAlign.center, style: GSYConstant.subSmallText),
                       ),
                     ),
                   ],

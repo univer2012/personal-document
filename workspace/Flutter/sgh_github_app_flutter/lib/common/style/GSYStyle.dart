@@ -169,11 +169,19 @@ class GSYConstant {
     color: Color(GSYColors.TextColorWhite),
     fontSize: bigTextSize,
   );
+
+  static const largeTextWhiteBold = TextStyle(
+    color: Color(GSYColors.TextColorWhite),
+    fontSize: bigTextSize,
+    fontWeight: FontWeight.bold,
+  );
 }
 
 
 class GSYStrings {
   static const String app_name = "GSYGithubAppFlutter";
+
+  static const String nothing_now = "目前什么都没有";
 
   static const String login_text = "登录";
 
@@ -202,4 +210,9 @@ class GSYIcons {
   static IconData REPOS_ITEM_STAR = new IconData(0xe643, fontFamily: GSYIcons.FONT_FAMILY);
   static IconData REPOS_ITEM_FORK = new IconData(0xe67e, fontFamily: GSYIcons.FONT_FAMILY);
   static IconData REPOS_ITEM_ISSUE = new IconData(0xe661, fontFamily: GSYIcons.FONT_FAMILY);
+
+
+  static IconData USER_ITEM_COMPANY = new IconData(0xe63e, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData USER_ITEM_LOCATION = new IconData(0xe7e6, fontFamily: GSYIcons.FONT_FAMILY);
+  static IconData USER_ITEM_LINK = new IconData(0xe670, fontFamily: GSYIcons.FONT_FAMILY);
 }
