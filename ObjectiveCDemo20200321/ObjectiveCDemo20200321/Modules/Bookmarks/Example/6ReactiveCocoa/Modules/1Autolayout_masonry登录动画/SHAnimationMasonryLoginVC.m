@@ -9,8 +9,7 @@
 #import "SHAnimationMasonryLoginVC.h"
 #import "Masonry/Masonry.h"
 #import "HomePageAnimationUtil.h"
-//#import <ReactiveCocoa/ReactiveCocoa.h>
-
+#import <ReactiveObjC.h>
 
 @interface SHAnimationMasonryLoginVC ()
 @property(nonatomic,weak)UILabel *topTitleLabel;

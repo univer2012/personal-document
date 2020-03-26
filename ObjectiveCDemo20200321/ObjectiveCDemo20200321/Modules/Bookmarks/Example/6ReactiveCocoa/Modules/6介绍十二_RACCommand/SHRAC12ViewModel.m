@@ -7,6 +7,7 @@
 //
 
 #import "SHRAC12ViewModel.h"
+#import <ReactiveObjC.h>
 
 @implementation SHRAC12ViewModel
 

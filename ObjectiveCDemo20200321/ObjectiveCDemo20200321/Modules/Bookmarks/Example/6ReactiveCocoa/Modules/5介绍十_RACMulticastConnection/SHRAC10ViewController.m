@@ -7,6 +7,7 @@
 //
 
 #import "SHRAC10ViewController.h"
+#import <ReactiveObjC.h>
 
 @interface SHRAC10ViewController ()
 

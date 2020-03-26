@@ -1710,8 +1710,8 @@
 		8F310EAD24264FAF00421E7A /* 3介绍四_流程分析 */ = {
 			isa = PBXGroup;
 			children = (
-				8F310EAE24264FAF00421E7A /* SHRAC4ViewController.m */,
 				8F310EAF24264FAF00421E7A /* SHRAC4ViewController.h */,
+				8F310EAE24264FAF00421E7A /* SHRAC4ViewController.m */,
 			);
 			path = "3介绍四_流程分析";
 			sourceTree = "<group>";
@@ -1719,8 +1719,8 @@
 		8F310EB024264FAF00421E7A /* 5介绍十_RACMulticastConnection */ = {
 			isa = PBXGroup;
 			children = (
-				8F310EB124264FAF00421E7A /* SHRAC10ViewController.m */,
 				8F310EB224264FAF00421E7A /* SHRAC10ViewController.h */,
+				8F310EB124264FAF00421E7A /* SHRAC10ViewController.m */,
 			);
 			path = "5介绍十_RACMulticastConnection";
 			sourceTree = "<group>";
@@ -1737,9 +1737,9 @@
 		8F310EB624264FAF00421E7A /* 1Autolayout_masonry登录动画 */ = {
 			isa = PBXGroup;
 			children = (
+				8F310EB924264FAF00421E7A /* SHAnimationMasonryLoginVC.h */,
 				8F310EB724264FAF00421E7A /* SHAnimationMasonryLoginVC.m */,
 				8F310EB824264FAF00421E7A /* HomePageAnimationUtil.h */,
-				8F310EB924264FAF00421E7A /* SHAnimationMasonryLoginVC.h */,
 				8F310EBA24264FAF00421E7A /* HomePageAnimationUtil.m */,
 			);
 			path = "1Autolayout_masonry登录动画";

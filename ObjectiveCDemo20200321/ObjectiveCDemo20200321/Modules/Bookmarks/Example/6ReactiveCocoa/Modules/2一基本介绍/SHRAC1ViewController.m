@@ -7,7 +7,7 @@
 //
 
 #import "SHRAC1ViewController.h"
-
+#import <ReactiveObjC.h>
 
 
 @interface SHRAC1ViewController ()<UITextFieldDelegate>

@@ -8,6 +8,7 @@
 
 #import "SHRAC12ViewController.h"
 #import "SHRAC12ViewModel.h"
+#import <ReactiveObjC.h>
 
 @interface SHRAC12ViewController ()
 
