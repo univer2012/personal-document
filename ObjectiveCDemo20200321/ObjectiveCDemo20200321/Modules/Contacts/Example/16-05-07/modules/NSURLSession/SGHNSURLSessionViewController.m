@@ -5,7 +5,12 @@
 //  Created by huangaengoln on 16/4/25.
 //  Copyright © 2016年 huangaengoln. All rights reserved.
 //
-
+/*
+ * 来自：
+ 1、[iOS NSURLConnection使用详解](https://www.cnblogs.com/sunfuyou/p/6838593.html)
+ [iOS网络1——NSURLConnection使用详解](https://www.cnblogs.com/mddblog/p/5134783.html)
+ 2、[iOS网络之NSURLSession使用详解](https://www.cnblogs.com/lxlx1798/articles/9774404.html)
+ */
 typedef enum {
     SGHRequestMethodGET,
     SGHRequestMethodPOST
@@ -260,7 +265,7 @@ typedef enum {
 }
 
 
-+ (void)connectionRequestWithMethod:(Method)method   URLString:(NSString *)URLString parameters:(NSDictionary *)dict success:(void (^)(id JSON))success fail:(void (^)(NSError *error))fail {
++ (void)connectionRequestWithMethod:(SGHRequestMethod)method   URLString:(NSString *)URLString parameters:(NSDictionary *)dict success:(void (^)(id JSON))success fail:(void (^)(NSError *error))fail {
     URLString = [URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // 1.创建请求
     NSURL *url = [NSURL URLWithString:URLString];

@@ -351,7 +351,7 @@
 		8F311643242D01FA00421E7A /* SGHGesturerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311622242D01F900421E7A /* SGHGesturerViewController.m */; };
 		8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311623242D01F900421E7A /* SGHSchedulerViewController.m */; };
 		8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311624242D01F900421E7A /* SGHKVOViewController.m */; };
-		8F311649242D031C00421E7A /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311647242D031C00421E7A /* TestModel.m */; };
+		8F311649242D031C00421E7A /* SGHAnythingTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311647242D031C00421E7A /* SGHAnythingTestModel.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -1016,8 +1016,8 @@
 		8F311623242D01F900421E7A /* SGHSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHSchedulerViewController.m; sourceTree = "<group>"; };
 		8F311624242D01F900421E7A /* SGHKVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHKVOViewController.m; sourceTree = "<group>"; };
 		8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSwitchDelegateViewController.h; sourceTree = "<group>"; };
-		8F311647242D031C00421E7A /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
-		8F311648242D031C00421E7A /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		8F311647242D031C00421E7A /* SGHAnythingTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHAnythingTestModel.m; sourceTree = "<group>"; };
+		8F311648242D031C00421E7A /* SGHAnythingTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHAnythingTestModel.h; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -4083,42 +4083,26 @@
 		8F3115F2242D01F900421E7A /* sectionTwo */ = {
 			isa = PBXGroup;
 			children = (
-				8F3115F3242D01F900421E7A /* SGHSkipUntilBlockViewController.m */,
-				8F3115F4242D01F900421E7A /* SGHSkipWhileBlockViewController.h */,
+				8F311660242D901400421E7A /* 16ignore(即时搜索优化改进2) */,
+				8F31165F242D8FFE00421E7A /* 15distinctUntilChanged(即时搜索优化改进1) */,
+				8F31165E242D8FE500421E7A /* 14throttle(即时搜索优化) */,
+				8F31165D242D8FCC00421E7A /* 13skipUntilBlock */,
+				8F31165C242D8FB500421E7A /* 12skipWhileBlock */,
+				8F31165B242D8F9700421E7A /* 11takeWhileBlock */,
+				8F31165A242D8F7B00421E7A /* 10takeUntil */,
+				8F311659242D8F5D00421E7A /* 9takeLast */,
+				8F311658242D8F4500421E7A /* 8skip */,
+				8F311657242D8F1400421E7A /* 7take */,
+				8F311656242D8EED00421E7A /* 6timeout超时 */,
+				8F311655242D8ECA00421E7A /* 5startWith */,
+				8F311654242D8EB200421E7A /* 4delay延迟 */,
+				8F311653242D8E9000421E7A /* 3filter过滤 */,
+				8F311652242D8E7100421E7A /* 2map映射 */,
+				8F311651242D8E5300421E7A /* 1信号订阅与接收 */,
 				8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */,
-				8F3115F6242D01F900421E7A /* SGHStartWithViewController.h */,
-				8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */,
-				8F3115F8242D01F900421E7A /* SGHMapViewController.h */,
 				8F3115F9242D01F900421E7A /* SGHRepeatViewController.h */,
-				8F3115FA242D01F900421E7A /* SGHTakeUntilViewController.h */,
-				8F3115FB242D01F900421E7A /* SGHTakeViewController.m */,
-				8F3115FC242D01F900421E7A /* SGHSkipViewController.h */,
-				8F3115FD242D01F900421E7A /* SGHThrottleViewController.m */,
-				8F3115FE242D01F900421E7A /* SGHIgnoreViewController.h */,
-				8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */,
-				8F311600242D01F900421E7A /* SGHFilterViewController.m */,
-				8F311601242D01F900421E7A /* SGHTimeoutViewController.h */,
-				8F311602242D01F900421E7A /* SGHSignalViewController.h */,
-				8F311603242D01F900421E7A /* SGHTakeLastViewController.h */,
-				8F311604242D01F900421E7A /* SGHDelayViewController.m */,
-				8F311605242D01F900421E7A /* SGHStartWithViewController.m */,
 				8F311606242D01F900421E7A /* SGHSwitchToLatestViewController.h */,
-				8F311607242D01F900421E7A /* SGHSkipUntilBlockViewController.h */,
-				8F311608242D01F900421E7A /* SGHSkipWhileBlockViewController.m */,
-				8F311609242D01F900421E7A /* SGHTakeUntilViewController.m */,
 				8F31160A242D01F900421E7A /* SGHRepeatViewController.m */,
-				8F31160B242D01F900421E7A /* SGHMapViewController.m */,
-				8F31160C242D01F900421E7A /* SGHTakeWhileBlockViewController.h */,
-				8F31160D242D01F900421E7A /* SGHDistinctUntilChangedViewController.h */,
-				8F31160E242D01F900421E7A /* SGHIgnoreViewController.m */,
-				8F31160F242D01F900421E7A /* SGHThrottleViewController.h */,
-				8F311610242D01F900421E7A /* SGHSkipViewController.m */,
-				8F311611242D01F900421E7A /* SGHTakeViewController.h */,
-				8F311612242D01F900421E7A /* SGHSignalViewController.m */,
-				8F311613242D01F900421E7A /* SGHTakeLastViewController.m */,
-				8F311614242D01F900421E7A /* SGHDelayViewController.h */,
-				8F311615242D01F900421E7A /* SGHTimeoutViewController.m */,
-				8F311616242D01F900421E7A /* SGHFilterViewController.h */,
 			);
 			path = sectionTwo;
 			sourceTree = "<group>";
@@ -4126,21 +4110,13 @@
 		8F311617242D01F900421E7A /* sectionOne */ = {
 			isa = PBXGroup;
 			children = (
-				8F311646242D02F800421E7A /* Models */,
-				8F311618242D01F900421E7A /* SGHTargetActionViewController.m */,
-				8F311619242D01F900421E7A /* LxDBAnythingViewController.h */,
-				8F31161A242D01F900421E7A /* SGHNotificationViewController.m */,
-				8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */,
-				8F31161C242D01F900421E7A /* SGHKVOViewController.h */,
-				8F31161D242D01F900421E7A /* SGHSchedulerViewController.h */,
-				8F31161E242D01F900421E7A /* SGHGesturerViewController.h */,
-				8F31161F242D01F900421E7A /* SGHNotificationViewController.h */,
-				8F311620242D01F900421E7A /* LxDBAnythingViewController.m */,
-				8F311621242D01F900421E7A /* SGHTargetActionViewController.h */,
-				8F311622242D01F900421E7A /* SGHGesturerViewController.m */,
-				8F311623242D01F900421E7A /* SGHSchedulerViewController.m */,
-				8F311624242D01F900421E7A /* SGHKVOViewController.m */,
-				8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */,
+				8F311650242D8E1600421E7A /* 7KVO */,
+				8F31164F242D8E0300421E7A /* 6替换代理(有局限，只能取代没有返回值的代理方法) */,
+				8F31164E242D8DD400421E7A /* 5定时器 */,
+				8F31164D242D8DAA00421E7A /* 4通知(不需要removeObserver) */,
+				8F31164C242D8D9400421E7A /* 3手势 */,
+				8F31164B242D8D7600421E7A /* 2文本框响应事件 */,
+				8F31164A242D8D4F00421E7A /* 1LxDBAnything_Example */,
 			);
 			path = sectionOne;
 			sourceTree = "<group>";
@@ -4148,10 +4124,218 @@
 		8F311646242D02F800421E7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8F311648242D031C00421E7A /* TestModel.h */,
-				8F311647242D031C00421E7A /* TestModel.m */,
+				8F311648242D031C00421E7A /* SGHAnythingTestModel.h */,
+				8F311647242D031C00421E7A /* SGHAnythingTestModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8F31164A242D8D4F00421E7A /* 1LxDBAnything_Example */ = {
+			isa = PBXGroup;
+			children = (
+				8F311646242D02F800421E7A /* Models */,
+				8F311619242D01F900421E7A /* LxDBAnythingViewController.h */,
+				8F311620242D01F900421E7A /* LxDBAnythingViewController.m */,
+			);
+			path = 1LxDBAnything_Example;
+			sourceTree = "<group>";
+		};
+		8F31164B242D8D7600421E7A /* 2文本框响应事件 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311621242D01F900421E7A /* SGHTargetActionViewController.h */,
+				8F311618242D01F900421E7A /* SGHTargetActionViewController.m */,
+			);
+			path = "2文本框响应事件";
+			sourceTree = "<group>";
+		};
+		8F31164C242D8D9400421E7A /* 3手势 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31161E242D01F900421E7A /* SGHGesturerViewController.h */,
+				8F311622242D01F900421E7A /* SGHGesturerViewController.m */,
+			);
+			path = "3手势";
+			sourceTree = "<group>";
+		};
+		8F31164D242D8DAA00421E7A /* 4通知(不需要removeObserver) */ = {
+			isa = PBXGroup;
+			children = (
+				8F31161F242D01F900421E7A /* SGHNotificationViewController.h */,
+				8F31161A242D01F900421E7A /* SGHNotificationViewController.m */,
+			);
+			path = "4通知(不需要removeObserver)";
+			sourceTree = "<group>";
+		};
+		8F31164E242D8DD400421E7A /* 5定时器 */ = {
+			isa = PBXGroup;
+			children = (
+				8F31161D242D01F900421E7A /* SGHSchedulerViewController.h */,
+				8F311623242D01F900421E7A /* SGHSchedulerViewController.m */,
+			);
+			path = "5定时器";
+			sourceTree = "<group>";
+		};
+		8F31164F242D8E0300421E7A /* 6替换代理(有局限，只能取代没有返回值的代理方法) */ = {
+			isa = PBXGroup;
+			children = (
+				8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */,
+				8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */,
+			);
+			path = "6替换代理(有局限，只能取代没有返回值的代理方法)";
+			sourceTree = "<group>";
+		};
+		8F311650242D8E1600421E7A /* 7KVO */ = {
+			isa = PBXGroup;
+			children = (
+				8F31161C242D01F900421E7A /* SGHKVOViewController.h */,
+				8F311624242D01F900421E7A /* SGHKVOViewController.m */,
+			);
+			path = 7KVO;
+			sourceTree = "<group>";
+		};
+		8F311651242D8E5300421E7A /* 1信号订阅与接收 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311602242D01F900421E7A /* SGHSignalViewController.h */,
+				8F311612242D01F900421E7A /* SGHSignalViewController.m */,
+			);
+			path = "1信号订阅与接收";
+			sourceTree = "<group>";
+		};
+		8F311652242D8E7100421E7A /* 2map映射 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F8242D01F900421E7A /* SGHMapViewController.h */,
+				8F31160B242D01F900421E7A /* SGHMapViewController.m */,
+			);
+			path = "2map映射";
+			sourceTree = "<group>";
+		};
+		8F311653242D8E9000421E7A /* 3filter过滤 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311600242D01F900421E7A /* SGHFilterViewController.m */,
+				8F311616242D01F900421E7A /* SGHFilterViewController.h */,
+			);
+			path = "3filter过滤";
+			sourceTree = "<group>";
+		};
+		8F311654242D8EB200421E7A /* 4delay延迟 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311604242D01F900421E7A /* SGHDelayViewController.m */,
+				8F311614242D01F900421E7A /* SGHDelayViewController.h */,
+			);
+			path = "4delay延迟";
+			sourceTree = "<group>";
+		};
+		8F311655242D8ECA00421E7A /* 5startWith */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F6242D01F900421E7A /* SGHStartWithViewController.h */,
+				8F311605242D01F900421E7A /* SGHStartWithViewController.m */,
+			);
+			path = 5startWith;
+			sourceTree = "<group>";
+		};
+		8F311656242D8EED00421E7A /* 6timeout超时 */ = {
+			isa = PBXGroup;
+			children = (
+				8F311601242D01F900421E7A /* SGHTimeoutViewController.h */,
+				8F311615242D01F900421E7A /* SGHTimeoutViewController.m */,
+			);
+			path = "6timeout超时";
+			sourceTree = "<group>";
+		};
+		8F311657242D8F1400421E7A /* 7take */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115FB242D01F900421E7A /* SGHTakeViewController.m */,
+				8F311611242D01F900421E7A /* SGHTakeViewController.h */,
+			);
+			path = 7take;
+			sourceTree = "<group>";
+		};
+		8F311658242D8F4500421E7A /* 8skip */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115FC242D01F900421E7A /* SGHSkipViewController.h */,
+				8F311610242D01F900421E7A /* SGHSkipViewController.m */,
+			);
+			path = 8skip;
+			sourceTree = "<group>";
+		};
+		8F311659242D8F5D00421E7A /* 9takeLast */ = {
+			isa = PBXGroup;
+			children = (
+				8F311603242D01F900421E7A /* SGHTakeLastViewController.h */,
+				8F311613242D01F900421E7A /* SGHTakeLastViewController.m */,
+			);
+			path = 9takeLast;
+			sourceTree = "<group>";
+		};
+		8F31165A242D8F7B00421E7A /* 10takeUntil */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115FA242D01F900421E7A /* SGHTakeUntilViewController.h */,
+				8F311609242D01F900421E7A /* SGHTakeUntilViewController.m */,
+			);
+			path = 10takeUntil;
+			sourceTree = "<group>";
+		};
+		8F31165B242D8F9700421E7A /* 11takeWhileBlock */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */,
+				8F31160C242D01F900421E7A /* SGHTakeWhileBlockViewController.h */,
+			);
+			path = 11takeWhileBlock;
+			sourceTree = "<group>";
+		};
+		8F31165C242D8FB500421E7A /* 12skipWhileBlock */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F4242D01F900421E7A /* SGHSkipWhileBlockViewController.h */,
+				8F311608242D01F900421E7A /* SGHSkipWhileBlockViewController.m */,
+			);
+			path = 12skipWhileBlock;
+			sourceTree = "<group>";
+		};
+		8F31165D242D8FCC00421E7A /* 13skipUntilBlock */ = {
+			isa = PBXGroup;
+			children = (
+				8F311607242D01F900421E7A /* SGHSkipUntilBlockViewController.h */,
+				8F3115F3242D01F900421E7A /* SGHSkipUntilBlockViewController.m */,
+			);
+			path = 13skipUntilBlock;
+			sourceTree = "<group>";
+		};
+		8F31165E242D8FE500421E7A /* 14throttle(即时搜索优化) */ = {
+			isa = PBXGroup;
+			children = (
+				8F31160F242D01F900421E7A /* SGHThrottleViewController.h */,
+				8F3115FD242D01F900421E7A /* SGHThrottleViewController.m */,
+			);
+			path = "14throttle(即时搜索优化)";
+			sourceTree = "<group>";
+		};
+		8F31165F242D8FFE00421E7A /* 15distinctUntilChanged(即时搜索优化改进1) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */,
+				8F31160D242D01F900421E7A /* SGHDistinctUntilChangedViewController.h */,
+			);
+			path = "15distinctUntilChanged(即时搜索优化改进1)";
+			sourceTree = "<group>";
+		};
+		8F311660242D901400421E7A /* 16ignore(即时搜索优化改进2) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115FE242D01F900421E7A /* SGHIgnoreViewController.h */,
+				8F31160E242D01F900421E7A /* SGHIgnoreViewController.m */,
+			);
+			path = "16ignore(即时搜索优化改进2)";
 			sourceTree = "<group>";
 		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
@@ -4501,7 +4685,7 @@
 				8F3110E824264FB100421E7A /* SHFetchFutureDateViewController.m in Sources */,
 				8F31109324264FB100421E7A /* SHRAC4ViewController.m in Sources */,
 				8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */,
-				8F311649242D031C00421E7A /* TestModel.m in Sources */,
+				8F311649242D031C00421E7A /* SGHAnythingTestModel.m in Sources */,
 				8F31157F242995AE00421E7A /* SGH0506Test.m in Sources */,
 				8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */,
 				8F3110CC24264FB100421E7A /* SGH0424DreamLBSViewController.m in Sources */,

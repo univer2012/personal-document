@@ -6,8 +6,8 @@
 //  Copyright © 2015年 DeveloperLx. All rights reserved.
 //
 
-#import "TestModel.h"
+#import "SGHAnythingTestModel.h"
 
-@implementation TestModel
+@implementation SGHAnythingTestModel
 
 @end

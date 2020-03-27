@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestModel : NSObject
+@interface SGHAnythingTestModel : NSObject
 
 @property (nonatomic,retain) id object;
 @property (nonatomic,assign) CGPoint point;

@@ -7,7 +7,7 @@
 //
 
 #import "LxDBAnythingViewController.h"
-#import "TestModel.h"
+#import "SGHAnythingTestModel.h"
 
 
 @interface LxDBAnythingViewController ()
@@ -85,7 +85,7 @@
     
     //  ......
     
-    TestModel * testModel = [[TestModel alloc]init];
+    SGHAnythingTestModel * testModel = [[SGHAnythingTestModel alloc]init];
     testModel.array = @[@1, @"fewfwe", @{@21423.654:@[@"fgewgweg", [UIView new]]}, @YES];
     testModel.dictionary = @{@YES:@[[UITableViewCell new], @"fgewgweg", @-543.64]};
     testModel.set = [NSSet setWithObjects:@NO, @4.325, @{@"fgewgweg":[UIView new]}, nil];
