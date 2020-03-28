@@ -1531,6 +1531,87 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04FA18BE242F1778006E7F0B /* 17switchToLatest(即时搜索优化改进3) */ = {
+			isa = PBXGroup;
+			children = (
+				8F311606242D01F900421E7A /* SGHSwitchToLatestViewController.h */,
+				8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */,
+			);
+			path = "17switchToLatest(即时搜索优化改进3)";
+			sourceTree = "<group>";
+		};
+		04FA18BF242F17D8006E7F0B /* 18repeat重复 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F9242D01F900421E7A /* SGHRepeatViewController.h */,
+				8F31160A242D01F900421E7A /* SGHRepeatViewController.m */,
+			);
+			path = "18repeat重复";
+			sourceTree = "<group>";
+		};
+		04FA18C0242F1800006E7F0B /* 1merge合并 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115E8242D01F900421E7A /* SGHMergeViewController.h */,
+				8F3115F0242D01F900421E7A /* SGHMergeViewController.m */,
+			);
+			path = "1merge合并";
+			sourceTree = "<group>";
+		};
+		04FA18C1242F1825006E7F0B /* 2combineLatest_reduce_(还没写例子) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115F1242D01F900421E7A /* SGHCombineLatestReduceViewController.h */,
+				8F3115E9242D01F900421E7A /* SGHCombineLatestReduceViewController.m */,
+			);
+			path = "2combineLatest_reduce_(还没写例子)";
+			sourceTree = "<group>";
+		};
+		04FA18C2242F1852006E7F0B /* 3concat(一个异步请求完成后，再启动另一个) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115ED242D01F900421E7A /* SGHConcatViewController.h */,
+				8F3115E4242D01F900421E7A /* SGHConcatViewController.m */,
+			);
+			path = "3concat(一个异步请求完成后，再启动另一个)";
+			sourceTree = "<group>";
+		};
+		04FA18C3242F186E006E7F0B /* 4zipWith_(多个异步请求都完成后，再做某件事) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115EA242D01F900421E7A /* SGHZipwithViewController.h */,
+				8F3115EF242D01F900421E7A /* SGHZipwithViewController.m */,
+			);
+			path = "4zipWith_(多个异步请求都完成后，再做某件事)";
+			sourceTree = "<group>";
+		};
+		04FA18C4242F1886006E7F0B /* 5宏RAC(TARGET,...) */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115E6242D01F900421E7A /* SGHDefineRACViewController.h */,
+				8F3115EB242D01F900421E7A /* SGHDefineRACViewController.m */,
+			);
+			path = "5宏RAC(TARGET,...)";
+			sourceTree = "<group>";
+		};
+		04FA18C5242F189F006E7F0B /* 6用最少的代码写一个秒表 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115EC242D01F900421E7A /* SGHStopwatchViewController.h */,
+				8F3115E5242D01F900421E7A /* SGHStopwatchViewController.m */,
+			);
+			path = "6用最少的代码写一个秒表";
+			sourceTree = "<group>";
+		};
+		04FA18C6242F18F1006E7F0B /* 7总结_大量使用RAC的写法 */ = {
+			isa = PBXGroup;
+			children = (
+				8F3115E7242D01F900421E7A /* SGHSumupViewController.h */,
+				8F3115EE242D01F900421E7A /* SGHSumupViewController.m */,
+			);
+			path = "7总结_大量使用RAC的写法";
+			sourceTree = "<group>";
+		};
 		7B2250CDD62BE8E089F37EC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1761,8 +1842,8 @@
 				8F310EA224264FAF00421E7A /* SHReactiveCocoaViewController.h */,
 				8F310EA324264FAF00421E7A /* SHReactiveCocoaViewController.m */,
 				8F311617242D01F900421E7A /* sectionOne */,
-				8F3115E3242D01F900421E7A /* sectionThree */,
 				8F3115F2242D01F900421E7A /* sectionTwo */,
+				8F3115E3242D01F900421E7A /* sectionThree */,
 				8F310EA424264FAF00421E7A /* RAC_Introduction */,
 			);
 			path = 6ReactiveCocoa;
@@ -4062,20 +4143,13 @@
 		8F3115E3242D01F900421E7A /* sectionThree */ = {
 			isa = PBXGroup;
 			children = (
-				8F3115E4242D01F900421E7A /* SGHConcatViewController.m */,
-				8F3115E5242D01F900421E7A /* SGHStopwatchViewController.m */,
-				8F3115E6242D01F900421E7A /* SGHDefineRACViewController.h */,
-				8F3115E7242D01F900421E7A /* SGHSumupViewController.h */,
-				8F3115E8242D01F900421E7A /* SGHMergeViewController.h */,
-				8F3115E9242D01F900421E7A /* SGHCombineLatestReduceViewController.m */,
-				8F3115EA242D01F900421E7A /* SGHZipwithViewController.h */,
-				8F3115EB242D01F900421E7A /* SGHDefineRACViewController.m */,
-				8F3115EC242D01F900421E7A /* SGHStopwatchViewController.h */,
-				8F3115ED242D01F900421E7A /* SGHConcatViewController.h */,
-				8F3115EE242D01F900421E7A /* SGHSumupViewController.m */,
-				8F3115EF242D01F900421E7A /* SGHZipwithViewController.m */,
-				8F3115F0242D01F900421E7A /* SGHMergeViewController.m */,
-				8F3115F1242D01F900421E7A /* SGHCombineLatestReduceViewController.h */,
+				04FA18C6242F18F1006E7F0B /* 7总结_大量使用RAC的写法 */,
+				04FA18C5242F189F006E7F0B /* 6用最少的代码写一个秒表 */,
+				04FA18C4242F1886006E7F0B /* 5宏RAC(TARGET,...) */,
+				04FA18C3242F186E006E7F0B /* 4zipWith_(多个异步请求都完成后，再做某件事) */,
+				04FA18C2242F1852006E7F0B /* 3concat(一个异步请求完成后，再启动另一个) */,
+				04FA18C1242F1825006E7F0B /* 2combineLatest_reduce_(还没写例子) */,
+				04FA18C0242F1800006E7F0B /* 1merge合并 */,
 			);
 			path = sectionThree;
 			sourceTree = "<group>";
@@ -4083,6 +4157,8 @@
 		8F3115F2242D01F900421E7A /* sectionTwo */ = {
 			isa = PBXGroup;
 			children = (
+				04FA18BF242F17D8006E7F0B /* 18repeat重复 */,
+				04FA18BE242F1778006E7F0B /* 17switchToLatest(即时搜索优化改进3) */,
 				8F311660242D901400421E7A /* 16ignore(即时搜索优化改进2) */,
 				8F31165F242D8FFE00421E7A /* 15distinctUntilChanged(即时搜索优化改进1) */,
 				8F31165E242D8FE500421E7A /* 14throttle(即时搜索优化) */,
@@ -4099,10 +4175,6 @@
 				8F311653242D8E9000421E7A /* 3filter过滤 */,
 				8F311652242D8E7100421E7A /* 2map映射 */,
 				8F311651242D8E5300421E7A /* 1信号订阅与接收 */,
-				8F3115F5242D01F900421E7A /* SGHSwitchToLatestViewController.m */,
-				8F3115F9242D01F900421E7A /* SGHRepeatViewController.h */,
-				8F311606242D01F900421E7A /* SGHSwitchToLatestViewController.h */,
-				8F31160A242D01F900421E7A /* SGHRepeatViewController.m */,
 			);
 			path = sectionTwo;
 			sourceTree = "<group>";
