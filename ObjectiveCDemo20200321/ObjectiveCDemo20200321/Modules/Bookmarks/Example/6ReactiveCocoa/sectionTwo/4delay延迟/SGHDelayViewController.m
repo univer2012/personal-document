@@ -17,16 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    RACSignal *signal=[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac"];
         [subscriber sendCompleted];
         return nil;
     }] delay:2];
     
-    LxPrintAnything(qwr);
+    NSLog(@"延时前");
+    LxPrintAnything(qwr);   //先进行任意打印，记录这个打印的时间
     
     [signal subscribeNext:^(id x) {
-        LxDBAnyVar(x);
+        NSLog(@"延时后");
+        LxDBAnyVar(x);  //延时2秒后才发出signal，订阅才接收到
     }];
     
 }

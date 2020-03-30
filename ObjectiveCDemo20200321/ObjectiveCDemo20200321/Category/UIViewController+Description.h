@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showDescWith:(NSString *)text;
 
+- (UIButton *)buildBtnWith:(NSString *)text;
+
 @end
 
 NS_ASSUME_NONNULL_END

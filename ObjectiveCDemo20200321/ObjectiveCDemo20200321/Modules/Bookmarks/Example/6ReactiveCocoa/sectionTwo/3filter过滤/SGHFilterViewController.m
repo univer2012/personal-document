@@ -8,6 +8,8 @@
 
 #import "SGHFilterViewController.h"
 
+#import "UIViewController+Description.h"
+
 @interface SGHFilterViewController ()
 
 @end
@@ -32,14 +34,19 @@
         
         return @(text.length);
         
-    }]filter:^BOOL(NSNumber *value) {
-        return value.integerValue >3;
+    }] filter:^BOOL(NSNumber *value) {
+        return value.integerValue > 3;
         
     }] subscribeNext:^(id x) {
         
         LxDBAnyVar(x);
     }];
     
+    
+    NSString *text =
+    @"先使用「map」返回「text.length」，再使用「filter」返回「value.integerValue > 3」。text.length > 3时，才执行「subscribeNext」，控制台才能收到打印。\n\n" \
+    "RACStream、RACSequence、RACSignal，都有`filter:`方法。";
+    [self showDescWith:text];
     
 }
 

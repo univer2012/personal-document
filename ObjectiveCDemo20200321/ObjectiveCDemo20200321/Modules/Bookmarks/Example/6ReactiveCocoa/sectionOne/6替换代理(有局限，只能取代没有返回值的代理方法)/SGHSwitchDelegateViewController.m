@@ -22,7 +22,7 @@
     //RAC不可以取代  那些 有返回值代理方法的作用
  
     UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"RAC" message:@"ReactiveCocoa" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ensure", nil];
-#if 0
+#if 1
     //第一种写法
     [[self rac_signalForSelector:@selector(alertView:clickedButtonAtIndex:) fromProtocol:@protocol(UIAlertViewDelegate)] subscribeNext:^(RACTuple * tuple) {
         
@@ -33,7 +33,7 @@
         LxDBAnyVar(tuple.third);
     }];
     [alertView show];
-#elif 1
+#elif 0
     //第二种写法
     [[alertView rac_buttonClickedSignal]
     subscribeNext:^(NSNumber * x) {

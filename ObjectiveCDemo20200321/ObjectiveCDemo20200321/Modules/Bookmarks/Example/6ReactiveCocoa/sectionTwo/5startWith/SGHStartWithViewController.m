@@ -7,6 +7,7 @@
 //
 
 #import "SGHStartWithViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHStartWithViewController ()
 
@@ -17,7 +18,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-#if 0
+    
+    UIButton *firstBtn = [self buildBtnWith:@"startWith:@\"wrwer\""];
+    [firstBtn addTarget:self action:@selector(firstAction) forControlEvents:UIControlEventTouchUpInside];
+    [firstBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.view).offset(150);
+        make.leading.equalTo(self.view).offset(20);
+        make.trailing.equalTo(self.view).offset(-20);
+        make.height.mas_equalTo(60);
+    }];
+    
+    UIButton *secondBtn = [self buildBtnWith:@"先执行sendNext:@\"wrwer\""];
+    [secondBtn addTarget:self action:@selector(secondAction) forControlEvents:UIControlEventTouchUpInside];
+    [secondBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(firstBtn.mas_bottom).offset(20);
+        make.leading.equalTo(self.view).offset(20);
+        make.trailing.equalTo(self.view).offset(-20);
+        make.height.mas_equalTo(60);
+    }];
+    NSString *text = @"startWith:@\"wrwer\",相当于先其他`sendNext:`之前，先执行`sendNext:@\"wrwer\"`";
+    [self showDescWith:text];
+}
+
+- (void)firstAction {
     RACSignal *signal=[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac"];
         [subscriber sendCompleted];
@@ -29,16 +54,13 @@
     [signal subscribeNext:^(id x) {
         LxDBAnyVar(x);
     }];
-    
-#elif 1
-    
+}
+- (void)secondAction {
     //上面的写法 相当于下面的 写法
     RACSignal *signal=[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         [subscriber sendNext:@"wrwer"];
-        
-        //request
-        
+                
         [subscriber sendNext:@"rac"];
         [subscriber sendCompleted];
         return nil;
@@ -49,10 +71,7 @@
     [signal subscribeNext:^(id x) {
         LxDBAnyVar(x);
     }];
-#endif
-    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

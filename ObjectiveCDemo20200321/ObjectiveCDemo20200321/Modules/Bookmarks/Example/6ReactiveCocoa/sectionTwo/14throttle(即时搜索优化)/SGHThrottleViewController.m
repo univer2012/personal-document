@@ -7,6 +7,7 @@
 //
 
 #import "SGHThrottleViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHThrottleViewController ()
 
@@ -31,9 +32,11 @@
         make.center.equalTo(self.view);
     }];
     
-    
-    //throttle :节流
-    //当 rac_textSignal 发出信号之后，它会等0.3秒。如果在0.3秒内，rac_textSignal 又发了一条消息，它会从新的信号发出时开始计时，一直到过了0.3秒，这个 rac_textSignal 仍然没发消息，这个订阅者 就收到消息了。
+    NSString *text = @"throttle  [ˈθrɒtl] vt. 节流" \
+    "\n\n当 rac_textSignal 发出信号之后，它会等0.3秒。"\
+    "\n\n如果在0.3秒内，rac_textSignal 又发了一条消息，它会从新的信号发出时开始计时，"\
+    "\n\n一直到过了0.3秒，这个 rac_textSignal 仍然没发消息，这个订阅者 就收到消息了。";
+    [self showDescWith:text];
     
     [[textField.rac_textSignal throttle:0.3] subscribeNext:^(id x) {
         

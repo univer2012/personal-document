@@ -30,6 +30,22 @@
         make.size.mas_equalTo(CGSizeMake(180, 40));
         make.center.equalTo(self.view);
     }];
+//    NSLog(@"%@",[textField iskindof]);
+    ///第2个例子
+    RACSubject *signalOfSignals = [RACSubject subject];
+    RACSubject *signalA = [RACSubject subject];
+    RACSubject *signalB = [RACSubject subject];
+    // 获取信号中信号最近发出信号，订阅最近发出的信号。
+    // 注意switchToLatest：只能用于信号中的信号
+    [signalOfSignals.switchToLatest subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
+    [signalOfSignals sendNext:signalA];
+    [signalOfSignals sendNext:signalB];
+    [signalA sendNext:@"signalA"];
+    [signalB sendNext:@"signalB"];
+    
     
     
 #if 0
@@ -48,13 +64,13 @@
                return [RACDisposable disposableWithBlock:^{
                    
                    //取消请求
-                   AFHTTPRequestOperation *operation = nil;
-                   [operation cancel];
+//                   AFHTTPRequestOperation *operation = nil;
+//                   [operation cancel];
                    
                }];
                
            }];
-       }]switchToLatest]
+       }] switchToLatest]
      subscribeNext:^(id x) {
          LxDBAnyVar(x);
      }];
@@ -93,7 +109,7 @@
         LxDBAnyVar(x);
     }];
     
-#elif  1
+#elif  0
 #pragma mark - map的一个例子
     [[textField.rac_textSignal map:^id(NSString *text) {
         

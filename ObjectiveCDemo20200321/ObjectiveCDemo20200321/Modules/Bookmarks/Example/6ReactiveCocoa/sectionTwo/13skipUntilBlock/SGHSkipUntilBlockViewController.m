@@ -7,6 +7,7 @@
 //
 
 #import "SGHSkipUntilBlockViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHSkipUntilBlockViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ///理解：直到执行块返回NO时，才跳过
+    NSString *text = @"skipUntilBlock: 返回NO时，我就skip；直到返回YES时，我才开始接收消息。" \
+    "\n\n示例中，当`[x isEqualToString:@\"rac1\"]`时，返回NO，否则返回YES";
+    [self showDescWith:text];
     
     [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac1"];
@@ -26,7 +31,7 @@
         [subscriber sendCompleted];
         return nil;
         
-    }]skipUntilBlock:^BOOL(id x) {
+    }] skipUntilBlock:^BOOL(id x) {
         
         //返回NO时，我就skip；直到返回YES时，我才开始接收消息
         
@@ -39,7 +44,6 @@
         
         LxDBAnyVar(x);
     }];
-    
 }
 
 -(void)p_isDisposable {
@@ -56,7 +60,7 @@
             //然后把你 取消订阅的处理 写到这里来
         }];
         
-    }]skipUntilBlock:^BOOL(id x) {
+    }] skipUntilBlock:^BOOL(id x) {
         
         return YES;
         

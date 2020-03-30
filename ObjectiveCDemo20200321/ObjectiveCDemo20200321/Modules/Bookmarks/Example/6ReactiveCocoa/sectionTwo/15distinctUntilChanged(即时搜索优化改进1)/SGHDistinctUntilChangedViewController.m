@@ -7,6 +7,7 @@
 //
 
 #import "SGHDistinctUntilChangedViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHDistinctUntilChangedViewController ()
 
@@ -31,9 +32,14 @@
         make.center.equalTo(self.view);
     }];
 
-    //改进1
-    // distinctUntilChanged  --> 如果新的消息 和 上一个消息 完全一样，新的消息 就不发送
-    [[[textField.rac_textSignal throttle:0.3]distinctUntilChanged] subscribeNext:^(id x) {
+    ///理解：有区别的，直到改变了
+    NSString *text = @"distinct  [dɪˈstɪŋkt] adj. 明显的；独特的；清楚的；有区别的"\
+    "\n\n改进1:" \
+    "\n\ndistinctUntilChanged  --> 如果新的消息 和 上一个消息 完全一样，新的消息 就不发送";
+    [self showDescWith:text];
+    //
+    
+    [[[textField.rac_textSignal throttle:0.3] distinctUntilChanged] subscribeNext:^(id x) {
         
         LxDBAnyVar(x);
         

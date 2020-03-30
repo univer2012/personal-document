@@ -7,6 +7,7 @@
 //
 
 #import "SGHIgnoreViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHIgnoreViewController ()
 
@@ -31,8 +32,12 @@
         make.center.equalTo(self.view);
     }];
     
-    //改进2
-    // 空字符串 实际上 就没有必要发送给服务器
+    ///理解：有区别的，直到改变了
+    NSString *text = @"改进2:" \
+    "\n\n空字符串 实际上 就没有必要发送给服务器";
+    [self showDescWith:text];
+    //
+    
     [[[[textField.rac_textSignal throttle:0.3] distinctUntilChanged] ignore:@""] subscribeNext:^(id x) {
         
         LxDBAnyVar(x);

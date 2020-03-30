@@ -7,6 +7,7 @@
 //
 
 #import "SGHTakeLastViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHTakeLastViewController ()
 
@@ -17,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //takeLast 后面的数字表示，写了多个sendNext: 方法，但是 只 执行 倒数的 3个
+    ///理解：拿最后（或倒数）的xx个
+    [self showDescWith:@"takeLast 后面的数字表示，写了多个sendNext: 方法，但是 只 执行 倒数的 3个"];
     
     [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac1"];

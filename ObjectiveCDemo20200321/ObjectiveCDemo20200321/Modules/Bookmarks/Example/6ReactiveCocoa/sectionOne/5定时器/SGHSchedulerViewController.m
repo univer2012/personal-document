@@ -5,7 +5,9 @@
 //  Created by huangaengoln on 16/1/30.
 //  Copyright © 2016年 huangaengoln. All rights reserved.
 //
-
+/*
+ * 参考：[iOS】【ReactiveCocoa】[RACSignal interval]定时器](https://my.oschina.net/onepieceios/blog/744880)
+ */
 #import "SGHSchedulerViewController.h"
 
 @interface SGHSchedulerViewController ()
@@ -28,11 +30,16 @@
         
         LxPrintAnything(rac);
     }];
-#elif 1
+#elif 0
     //2. 每隔一定长度时间做一件事
     //下面代码 输出，当前时间
-    [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]]subscribeNext:^(NSDate * date) {
-        
+    ///有个致命问题：pop后不会自动停止计时
+//    [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]]subscribeNext:^(NSDate * date) {
+//        LxDBAnyVar(date);
+//    }];
+#elif 1
+    /// 对上面问题的优化：
+    [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSDate * date) {
         LxDBAnyVar(date);
     }];
 #endif

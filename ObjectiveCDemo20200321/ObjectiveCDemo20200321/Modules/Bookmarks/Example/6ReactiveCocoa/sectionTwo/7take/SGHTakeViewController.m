@@ -7,6 +7,7 @@
 //
 
 #import "SGHTakeViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHTakeViewController ()
 
@@ -17,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ///理解：拿前面的 xx个
+    [self showDescWith:@"take 后面的数字表示，写了多个sendNext: 方法，但是只执行前2次"];
     
-    //take 后面的数字表示，写了多个sendNext: 方法，但是只执行前2次
+    //
     [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac1"];
         [subscriber sendNext:@"rac2"];
@@ -27,7 +30,7 @@
         [subscriber sendCompleted];
         
         return nil;
-    }]take:2] subscribeNext:^(id x) {
+    }] take:2] subscribeNext:^(id x) {
        
         LxDBAnyVar(x);
     }];

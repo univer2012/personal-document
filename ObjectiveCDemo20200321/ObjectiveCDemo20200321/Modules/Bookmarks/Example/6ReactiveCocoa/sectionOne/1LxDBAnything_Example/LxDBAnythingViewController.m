@@ -93,7 +93,8 @@
     
     LxDBObjectAsJson(testModel);
     LxDBObjectAsXml(testModel);
-//    LxDBViewHierarchy(self.view.window);
+    //LxDBViewHierarchy(self.view.window);
+    LxDBViewHierarchy(self.view);//入参是UIView及其子类，否则会NSCAssert
 }
 
 - (void)didReceiveMemoryWarning {

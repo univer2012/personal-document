@@ -7,6 +7,7 @@
 //
 
 #import "SGHSkipViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHSkipViewController ()
 
@@ -17,8 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //skip 后面的数字表示，写了多个sendNext: 方法，但是 跳过前2次 再执行
+    ///理解：跳过 前面的xx个
+    [self showDescWith:@"skip 后面的数字表示，写了多个sendNext: 方法，但是 跳过前2次 再执行"];
+    //
     
     [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@"rac1"];

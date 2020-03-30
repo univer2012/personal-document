@@ -1988,8 +1988,8 @@
 		8F310ECA24264FAF00421E7A /* Ctrl */ = {
 			isa = PBXGroup;
 			children = (
-				8F310ECB24264FAF00421E7A /* SGHAFNetworkingViewController.m */,
 				8F310ECC24264FAF00421E7A /* SGHAFNetworkingViewController.h */,
+				8F310ECB24264FAF00421E7A /* SGHAFNetworkingViewController.m */,
 			);
 			path = Ctrl;
 			sourceTree = "<group>";
@@ -4251,8 +4251,8 @@
 		8F31164F242D8E0300421E7A /* 6替换代理(有局限，只能取代没有返回值的代理方法) */ = {
 			isa = PBXGroup;
 			children = (
-				8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */,
 				8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */,
+				8F31161B242D01F900421E7A /* SGHSwitchDelegateViewController.m */,
 			);
 			path = "6替换代理(有局限，只能取代没有返回值的代理方法)";
 			sourceTree = "<group>";
@@ -4287,8 +4287,8 @@
 		8F311653242D8E9000421E7A /* 3filter过滤 */ = {
 			isa = PBXGroup;
 			children = (
-				8F311600242D01F900421E7A /* SGHFilterViewController.m */,
 				8F311616242D01F900421E7A /* SGHFilterViewController.h */,
+				8F311600242D01F900421E7A /* SGHFilterViewController.m */,
 			);
 			path = "3filter过滤";
 			sourceTree = "<group>";
@@ -4296,8 +4296,8 @@
 		8F311654242D8EB200421E7A /* 4delay延迟 */ = {
 			isa = PBXGroup;
 			children = (
-				8F311604242D01F900421E7A /* SGHDelayViewController.m */,
 				8F311614242D01F900421E7A /* SGHDelayViewController.h */,
+				8F311604242D01F900421E7A /* SGHDelayViewController.m */,
 			);
 			path = "4delay延迟";
 			sourceTree = "<group>";
@@ -4323,8 +4323,8 @@
 		8F311657242D8F1400421E7A /* 7take */ = {
 			isa = PBXGroup;
 			children = (
-				8F3115FB242D01F900421E7A /* SGHTakeViewController.m */,
 				8F311611242D01F900421E7A /* SGHTakeViewController.h */,
+				8F3115FB242D01F900421E7A /* SGHTakeViewController.m */,
 			);
 			path = 7take;
 			sourceTree = "<group>";
@@ -4359,8 +4359,8 @@
 		8F31165B242D8F9700421E7A /* 11takeWhileBlock */ = {
 			isa = PBXGroup;
 			children = (
-				8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */,
 				8F31160C242D01F900421E7A /* SGHTakeWhileBlockViewController.h */,
+				8F3115F7242D01F900421E7A /* SGHTakeWhileBlockViewController.m */,
 			);
 			path = 11takeWhileBlock;
 			sourceTree = "<group>";
@@ -4395,8 +4395,8 @@
 		8F31165F242D8FFE00421E7A /* 15distinctUntilChanged(即时搜索优化改进1) */ = {
 			isa = PBXGroup;
 			children = (
-				8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */,
 				8F31160D242D01F900421E7A /* SGHDistinctUntilChangedViewController.h */,
+				8F3115FF242D01F900421E7A /* SGHDistinctUntilChangedViewController.m */,
 			);
 			path = "15distinctUntilChanged(即时搜索优化改进1)";
 			sourceTree = "<group>";

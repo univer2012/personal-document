@@ -24,4 +24,18 @@
         make.top.equalTo(self.view).offset(88);
     }];
 }
+
+- (UIButton *)buildBtnWith:(NSString *)text {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.titleLabel.numberOfLines = 0;
+    [btn setTitle:text forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    btn.layer.cornerRadius = 6;
+    btn.layer.borderWidth =  1;
+    btn.layer.borderColor = [UIColor blueColor].CGColor;
+    btn.layer.masksToBounds = YES;
+    [self.view addSubview:btn];
+    return btn;
+}
+
 @end
