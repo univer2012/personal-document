@@ -31,10 +31,26 @@
     }];
     
     UIButton *btn2 = [self buildBtnWith:@"创建RACCommand，return other"];
-    btn2.tag = 11;
-    [btn2 addTarget:self action:@selector(executingDemo:) forControlEvents:UIControlEventTouchUpInside];
+    btn2.tag = 2;
+    [btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
     [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(10);
+        make.top.equalTo(btn1.mas_bottom).offset(10);
+    }];
+    UIButton *btn3 = [self buildBtnWith:@"创建RACCommand，打印input"];
+    btn3.tag = 3;
+    [btn3 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn3];
+    [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(10);
+        make.top.equalTo(btn1.mas_bottom).offset(10);
+    }];
+    UIButton *btn4 = [self buildBtnWith:@"创建RACCommand，打印input"];
+    btn4.tag = 4;
+    [btn4 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn4];
+    [btn4 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.top.equalTo(btn1.mas_bottom).offset(10);
     }];
@@ -45,105 +61,105 @@
 - (void)btnAction:(UIButton *)btn {
     switch (btn.tag) {
         case 1:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    return nil;
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                return nil;
+            }];
 
-[command execute:@"开始飞起来"];
+            [command execute:@"开始飞起来"];
         }
             break;
         case 2:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    NSLog(@"%@",input);
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        return nil;
-    }];
-}];
-[command execute:@"开始飞起来"];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                NSLog(@"%@",input);
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    return nil;
+                }];
+            }];
+            [command execute:@"开始飞起来"];
         }
             break;
         case 3:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"%@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"大佬大佬放过我"];
-        
-        return nil;
-    }];
-}];
-[command execute:@"开始飞起来"];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"%@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"大佬大佬放过我"];
+                    
+                    return nil;
+                }];
+            }];
+            [command execute:@"开始飞起来"];
         }
             break;
         case 4:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"%@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"大佬大佬放过我"];
-        
-        return nil;
-    }];
-}];
-[command execute:@"开始飞起来"];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"%@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"大佬大佬放过我"];
+                    
+                    return nil;
+                }];
+            }];
+            [command execute:@"开始飞起来"];
 
-RACSignal * signal = [command execute:@"开始飞起来"];
+            RACSignal * signal = [command execute:@"开始飞起来"];
 
-[signal subscribeNext:^(id  _Nullable x) {
-    NSLog(@"接收数据 - %@",x);
-}];
+            [signal subscribeNext:^(id  _Nullable x) {
+                NSLog(@"接收数据 - %@",x);
+            }];
             
 
 
         }
             break;
         case 5:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"%@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"大佬大佬放过我"];
-        
-        return nil;
-    }];
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"%@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"大佬大佬放过我"];
+                    
+                    return nil;
+                }];
+            }];
 
-[command.executionSignals subscribeNext:^(id  _Nullable x) {
-    [x subscribeNext:^(id  _Nullable x) {
-        NSLog(@"这里会是什么呢？ - %@",x);
-    }];
-    NSLog(@"接收数据 - %@",x);
-}];
+            [command.executionSignals subscribeNext:^(id  _Nullable x) {
+                [x subscribeNext:^(id  _Nullable x) {
+                    NSLog(@"这里会是什么呢？ - %@",x);
+                }];
+                NSLog(@"接收数据 - %@",x);
+            }];
 
-[command execute:@"开始飞起来"];
+            [command execute:@"开始飞起来"];
         }
             break;
         case 6:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"%@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"大佬大佬放过我"];
-        
-        return nil;
-    }];
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"%@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"大佬大佬放过我"];
+                    
+                    return nil;
+                }];
+            }];
 
-[command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
-    NSLog(@"接收数据 - %@",x);
-}];
+            [command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
+                NSLog(@"接收数据 - %@",x);
+            }];
 
-[command execute:@"开始飞起来"];
+            [command execute:@"开始飞起来"];
         }
             break;
         case 7:{
@@ -201,93 +217,94 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
         }
             break;
         case 10:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"input - %@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"6666666666"];
-        
-        return nil;
-    }];
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"input - %@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"6666666666"];
+                    
+                    return nil;
+                }];
+            }];
 
-[command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
-    NSLog(@"%@",x);
-}];
+            [command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
+                NSLog(@"%@",x);
+            }];
 
-[command.executing subscribeNext:^(NSNumber * _Nullable x) {
-    if ([x boolValue]) {
-        NSLog(@"还在执行");
-    } else {
-        NSLog(@"执行结束了");
-    }
-}];
+            [command.executing subscribeNext:^(NSNumber * _Nullable x) {
+                if ([x boolValue]) {
+                    NSLog(@"还在执行");
+                } else {
+                    NSLog(@"执行结束了");
+                }
+            }];
 
-[command execute:@"9999999999"];
+            [command execute:@"9999999999"];
         }
             break;
             
             
         case 11:{ //添加sendCompleted
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"input - %@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"6666666666"];
-        [subscriber sendCompleted];
-        
-        return nil;
-    }];
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"input - %@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"6666666666"];
+                    [subscriber sendCompleted];
+                    
+                    return nil;
+                }];
+            }];
 
-[command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
-    NSLog(@"%@",x);
-}];
+            [command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
+                NSLog(@"%@",x);
+            }];
 
-[command.executing subscribeNext:^(NSNumber * _Nullable x) {
-    if ([x boolValue]) {
-        NSLog(@"还在执行");
-    } else {
-        NSLog(@"执行结束了");
-    }
-}];
+            [command.executing subscribeNext:^(NSNumber * _Nullable x) {
+                if ([x boolValue]) {
+                    NSLog(@"还在执行");
+                } else {
+                    NSLog(@"执行结束了");
+                }
+            }];
 
-[command execute:@"9999999999"];
+            [command execute:@"9999999999"];
         }
             break;
             
         case 12:{
-RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-    
-    NSLog(@"input - %@",input);
-    
-    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@"6666666666"];
-        [subscriber sendCompleted];
-        
-        return nil;
-    }];
-}];
+            RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+                
+                NSLog(@"input - %@",input);
+                
+                return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                    
+                    [subscriber sendNext:@"6666666666"];
+                    [subscriber sendCompleted];
+                    
+                    return nil;
+                }];
+            }];
 
-[command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
-    NSLog(@"%@",x);
-}];
+            [command.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
+                NSLog(@"%@",x);
+            }];
 
-[[command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
-    if ([x boolValue]) {
-        NSLog(@"还在执行");
-    } else {
-        NSLog(@"执行结束了");
-    }
-}];
+            [[command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+                if ([x boolValue]) {
+                    NSLog(@"还在执行");
+                } else {
+                    NSLog(@"执行结束了");
+                }
+            }];
 
-[command execute:@"9999999999"];
-            }
+            [command execute:@"9999999999"];
+            
+        }
             break;
         default:
             break;
@@ -306,7 +323,8 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
     RACSignal* textSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:@(1)];
         [subscriber sendNext:@(2)];
-        [subscriber sendError:[NSError new]];
+        [subscriber sendCompleted];
+        //[subscriber sendError:[NSError new]];
         return nil;
     }];
     
@@ -333,14 +351,5 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
