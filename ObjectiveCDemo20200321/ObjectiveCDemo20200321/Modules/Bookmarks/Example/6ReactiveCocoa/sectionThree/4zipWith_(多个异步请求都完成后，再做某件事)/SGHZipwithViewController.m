@@ -7,6 +7,7 @@
 //
 
 #import "SGHZipwithViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHZipwithViewController ()
 
@@ -18,12 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSString *text = @"结论1：可以看出，signalA 和signalB相互不影响 。但是 只有两者都完成了，订阅者才执行。"\
+    "\n\n结论2：signalA 和 signalB 都至少发送一次消息时，zipWith: 才会执行。";
+    [self showDescWith:text];
+    
     RACSignal * signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             //LxPrintAnything(a);
             NSLog(@"a = a");
             [subscriber sendNext:@"a"];
+            [subscriber sendNext:@"a1"];
             [subscriber sendCompleted];
         });
         
@@ -36,6 +42,7 @@
             //LxPrintAnything(b);
             NSLog(@"b = b");
             [subscriber sendNext:@"b"];
+            [subscriber sendNext:@"b1"];
             [subscriber sendCompleted];
         });
         
@@ -96,6 +103,12 @@
         NSLog(@"执行时%@",x);
         
     }];
+    /*zipWith: 与  combineLatest: 的区别：
+     zipWith: 如果signalA 发送了a,a1，signalB 发送了b,b1，那么[signalA zipWith:signalB] 会执行(a,b)、(a1,b1)组合，也就是执行2次。
+     
+     如果signalA 发送了a,a1，signalB 发送了b，那么[signalA zipWith:signalB] 会执行(a,b)组合，也就是执行1次。
+     
+     combineLatest: 如果signalA 发送了a,a1，signalB 发送了b,b1，那么[RACSignal combineLatest:@[signalA,signalB]] 会执行(a1,b)、(a1,b1)组合，也就是执行2次。 */
     
     
 #endif

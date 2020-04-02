@@ -7,6 +7,7 @@
 //
 
 #import "SGHMergeViewController.h"
+#import "UIViewController+Description.h"
 
 @interface SGHMergeViewController ()
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *text = @"merge 其实是把 signalA 和 signaleB 一起订阅了。它们两个相互不影响，只是订阅放在一起了"\
+    "\n\n问：[signalA merge:signalB]，merge时，A，B都是2秒，会怎么样？"\
+    "\n答：\n"\
+    "2016-01-31 12:19:10.743 RAC_test[31906:680415] 执行前 \n"\
+    "2016-01-31 12:19:12.750 RAC_test[31906:680415] 执行时a \n"\
+    "2016-01-31 12:19:12.750 RAC_test[31906:680415] 执行时b \n\n"\
+    "如果是[signalB merge:signalA]，则先打印b，再打印a。\n\n"\
+    "[RACSignal merge:@[signalA, signalB]] 和[RACSignal merge:@[signalB, signalA]]同理";
+    [self showDescWith:text];
     
     RACSignal * signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
@@ -40,7 +50,7 @@
         return nil;
     }];
     
-#if 1
+#if 0
     // merge 其实是把 signalA 和 signaleB 一起订阅了。它们两个相互不影响，只是订阅放在一起了
     NSLog(@"执行前");
     [[signalA merge:signalB] subscribeNext:^(id x) {
@@ -56,9 +66,9 @@
      2016-01-31 12:19:12.750 RAC_test[31906:680415] 执行时b
      */
     
-#elif 0
+#elif 1
     // 另一种写法
-    [[RACSignal merge:@[signalA, signalB]]subscribeNext:^(id x) {
+    [[RACSignal merge:@[signalA, signalB]] subscribeNext:^(id x) {
         
         LxDBAnyVar(x);
     }];

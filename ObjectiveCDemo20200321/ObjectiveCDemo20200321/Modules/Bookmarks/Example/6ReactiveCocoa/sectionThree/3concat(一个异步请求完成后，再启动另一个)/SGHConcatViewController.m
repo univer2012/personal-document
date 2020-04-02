@@ -23,7 +23,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             LxPrintAnything(a);
             [subscriber sendNext:@"a"];
-//            [subscriber sendCompleted];
+            [subscriber sendCompleted];
         });
         
         return nil;
@@ -47,11 +47,12 @@
         LxDBAnyVar(x);
         NSLog(@"执行时%@",x);
     }];
-    // analyse: “执行前” 和 “执行时a” 相差 2秒，
-    //“执行时a” 和 “执行时b” 相差 5秒
-    //signalA 执行完 sendCompleted 之后，才会执行 SignalB.
-    //问：如果A不执行 sendCompleted，是不是B就不会执行？
-    //答：是的。如果 A没有执行 sendCompleted，B就不会被 订阅
+    /// analyse: “执行前” 和 “执行时a” 相差 2秒，
+    ///“执行时a” 和 “执行时b” 相差 5秒
+    ///signalA 执行完 sendCompleted 之后，才会执行 SignalB.
+    ///
+    ///问：如果A不执行 sendCompleted，是不是B就不会执行？
+    ///答：是的。如果 A没有执行 sendCompleted，B就不会被 订阅
     
 }
 

@@ -30,7 +30,7 @@
         make.center.equalTo(self.view);
     }];
     
-    RAC(label,text) = [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]]map:^id(NSDate *value) {
+    RAC(label,text) = [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] map:^id(NSDate *value) {
         
         return value.description;
     }];
