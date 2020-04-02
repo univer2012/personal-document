@@ -136,7 +136,7 @@
         @"2、介绍（一）——基本介绍",
         @"3、介绍四_流程分析",
         @"4、介绍九_RACSubject流程分析",
-        @"5、介绍十_RACMulticastConnection",
+        @"5、介绍十_RACMulticastConnection-多路广播",
         @"6、介绍十二_RACCommand",
         @"7、RACCommand的使用探究"
     ];

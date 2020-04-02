@@ -21,8 +21,10 @@
             @weakify(self)
             return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
                 @strongify(self)
-                NSLog(@"aldjfsjdofje ");
-                [subscriber sendNext:nil];
+                //NSLog(@"aldjfsjdofje ");
+                NSLog(@"进行网络请求");
+                [subscriber sendNext:@"请求处理完成"];
+                //[subscriber sendNext:@(2)];
                 [subscriber sendCompleted];
                 return nil;
             }];

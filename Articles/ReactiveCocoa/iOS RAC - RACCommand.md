@@ -52,8 +52,8 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 [command execute:@"开始飞起来"];
 ```
 
-```
-
+```objc
+2020-04-02 14:48:31.890199+0800 OCDemo20200321[46077:1582794] 开始飞起来
 ```
 
 
@@ -81,7 +81,9 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 
 这个时候我们注意一下`execute`这个方法
 
-![](tu1.png)
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2020/RACCommand_tu1.png)
+
+![](https://upload-images.jianshu.io/upload_images/1940927-3451d8f32c4eddbe.png?imageMogr2/auto-orient/strip|imageView2/2/w/1176)
 
 
 
@@ -110,8 +112,9 @@ RACSignal * signal = [command execute:@"开始飞起来"];
 
 运行查看结果
 
-```
-
+```objc
+2020-04-02 14:53:20.430980+0800 OCDemo20200321[46220:1588261] 开始飞起来
+2020-04-02 14:53:20.433549+0800 OCDemo20200321[46220:1588261] 接收数据 - 大佬大佬放过我
 ```
 
 
@@ -146,8 +149,9 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 [command execute:@"开始飞起来"];
 ```
 
-```
-
+```objc
+2020-04-02 14:54:12.041239+0800 OCDemo20200321[46263:1589640] 开始飞起来
+2020-04-02 14:54:12.043056+0800 OCDemo20200321[46263:1589640] 接收数据 - <RACDynamicSignal: 0x6000012e2180> name: 
 ```
 
 
@@ -174,17 +178,19 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 [command execute:@"开始飞起来"];
 ```
 
-```
-
+```objc
+2020-04-02 14:54:12.041239+0800 OCDemo20200321[46263:1589640] 开始飞起来
+2020-04-02 14:54:12.043056+0800 OCDemo20200321[46263:1589640] 接收数据 - <RACDynamicSignal: 0x6000012e2180> name: 
+2020-04-02 14:54:12.045376+0800 OCDemo20200321[46263:1589640] 这里会是什么呢？ - 大佬大佬放过我
 ```
 
 
 
 好吧，一波三折终于拿到了值，现在我们要去看看`execute`这个方法里面到底做了什么骚操作，不然心有不甘啊……
 
-![](tu2.png)
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2020/RACCommand_tu2.png)
 
-
+![](https://upload-images.jianshu.io/upload_images/1940927-1c84e0a73803440a.png?imageMogr2/auto-orient/strip|imageView2/2/w/1183)
 
 就是这个家伙我们才可以先发送后订阅啊
 
@@ -211,8 +217,9 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 [command execute:@"开始飞起来"];
 ```
 
-```
-
+```objc
+2020-04-02 14:55:39.554049+0800 OCDemo20200321[46306:1591578] 开始飞起来
+2020-04-02 14:55:39.556801+0800 OCDemo20200321[46306:1591578] 接收数据 - 大佬大佬放过我
 ```
 
 
@@ -250,7 +257,9 @@ RACSubject *signal4 = [RACSubject subject];
 
 现在我们查看log吧
 
-![](tu3.png)
+![](https://raw.githubusercontent.com/univer2012/personal-document/master/Pictures/2020/RACCommand_tu3.png)
+
+![](https://upload-images.jianshu.io/upload_images/1940927-afea02c72813f4c3.png?imageMogr2/auto-orient/strip|imageView2/2/w/874)
 
 
 
@@ -272,7 +281,7 @@ RACSubject *signal4 = [RACSubject subject];
 ```
 
 ```objc
-
+2020-04-02 14:57:11.365797+0800 OCDemo20200321[46373:1593551] 1
 ```
 
 
@@ -410,6 +419,22 @@ RACCommand * command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Non
 ```
 
 ```objc
-
+2020-04-02 14:58:11.983964+0800 OCDemo20200321[46420:1595007] input - 9999999999
+2020-04-02 14:58:11.987464+0800 OCDemo20200321[46420:1595007] 还在执行
+2020-04-02 14:58:11.988916+0800 OCDemo20200321[46420:1595007] 6666666666
 ```
+
+既然提到了`skip`那就随便可以提提其它的类似的方法
+ `filter`过滤某些
+ `ignore`忽略某些值
+ `startWith`从哪里开始
+ `skip`跳过（忽略）次数
+ `take`取几次值 正序
+ `takeLast`取几次值 倒序
+
+
+
+---
+
+【完】
 

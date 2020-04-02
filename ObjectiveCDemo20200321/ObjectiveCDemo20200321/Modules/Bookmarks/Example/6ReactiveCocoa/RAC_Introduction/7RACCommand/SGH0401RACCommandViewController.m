@@ -12,6 +12,7 @@
 
 /*
  * 来自：[iOS RAC - RACCommand](https://www.jianshu.com/p/baa5fe76191c)
+ * 2. [RACCommand中的信号](https://www.cnblogs.com/guoxiaoqian/p/4716540.html)
  */
 @interface SGH0401RACCommandViewController ()
 
@@ -31,26 +32,10 @@
     }];
     
     UIButton *btn2 = [self buildBtnWith:@"创建RACCommand，return other"];
-    btn2.tag = 2;
+    btn2.tag = 12;
     [btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
     [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(10);
-        make.top.equalTo(btn1.mas_bottom).offset(10);
-    }];
-    UIButton *btn3 = [self buildBtnWith:@"创建RACCommand，打印input"];
-    btn3.tag = 3;
-    [btn3 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn3];
-    [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(10);
-        make.top.equalTo(btn1.mas_bottom).offset(10);
-    }];
-    UIButton *btn4 = [self buildBtnWith:@"创建RACCommand，打印input"];
-    btn4.tag = 4;
-    [btn4 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn4];
-    [btn4 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(10);
         make.top.equalTo(btn1.mas_bottom).offset(10);
     }];
@@ -107,7 +92,6 @@
                     return nil;
                 }];
             }];
-            [command execute:@"开始飞起来"];
 
             RACSignal * signal = [command execute:@"开始飞起来"];
 
