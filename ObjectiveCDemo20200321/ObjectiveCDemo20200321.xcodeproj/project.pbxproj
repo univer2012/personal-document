@@ -352,6 +352,7 @@
 		8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311623242D01F900421E7A /* SGHSchedulerViewController.m */; };
 		8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311624242D01F900421E7A /* SGHKVOViewController.m */; };
 		8F311649242D031C00421E7A /* SGHAnythingTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311647242D031C00421E7A /* SGHAnythingTestModel.m */; };
+		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
 
@@ -1018,6 +1019,8 @@
 		8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSwitchDelegateViewController.h; sourceTree = "<group>"; };
 		8F311647242D031C00421E7A /* SGHAnythingTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHAnythingTestModel.m; sourceTree = "<group>"; };
 		8F311648242D031C00421E7A /* SGHAnythingTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHAnythingTestModel.h; sourceTree = "<group>"; };
+		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
+		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1852,6 +1855,7 @@
 		8F310EA424264FAF00421E7A /* RAC_Introduction */ = {
 			isa = PBXGroup;
 			children = (
+				8FF847A1243422E4002F18F9 /* 7RACCommand */,
 				8F310EA524264FAF00421E7A /* 6介绍十二_RACCommand */,
 				8F310EAA24264FAF00421E7A /* 4介绍九_RACSubject流程分析 */,
 				8F310EAD24264FAF00421E7A /* 3介绍四_流程分析 */,
@@ -4410,6 +4414,15 @@
 			path = "16ignore(即时搜索优化改进2)";
 			sourceTree = "<group>";
 		};
+		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
+			isa = PBXGroup;
+			children = (
+				8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */,
+				8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */,
+			);
+			path = 7RACCommand;
+			sourceTree = "<group>";
+		};
 		DC1DA7B9E7D364730BFA4B7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -4748,6 +4761,7 @@
 				8F3114942426EB4C00421E7A /* SGH0618AnnotationViewController.m in Sources */,
 				04F6EC3F2429ACCB00D7F1CB /* UIImage+SGHHook.m in Sources */,
 				04F6EC882429AEA000D7F1CB /* SGHUIFontViewController.m in Sources */,
+				8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */,
 				8F31108724264FB100421E7A /* SGHDeviceManager.m in Sources */,
 				04F6EC862429AEA000D7F1CB /* SGHPresentTransitionSecondViewController.m in Sources */,
 				8F31162C242D01FA00421E7A /* SGHMergeViewController.m in Sources */,

@@ -129,6 +129,7 @@
         @"SHRAC9ViewController",
         @"SHRAC10ViewController",
         @"SHRAC12ViewController",
+        @"SGH0401RACCommandViewController",
     ];
     tempTitleArray=@[
         @"1、Autolayout_masonry登录动画",
@@ -137,6 +138,7 @@
         @"4、介绍九_RACSubject流程分析",
         @"5、介绍十_RACMulticastConnection",
         @"6、介绍十二_RACCommand",
+        @"7、RACCommand的使用探究"
     ];
     [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"RAC介绍系列"];
     
