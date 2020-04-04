@@ -99,8 +99,6 @@
 		8F31108F24264FB100421E7A /* SHReactiveCocoaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EA324264FAF00421E7A /* SHReactiveCocoaViewController.m */; };
 		8F31109024264FB100421E7A /* SHRAC12ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EA824264FAF00421E7A /* SHRAC12ViewController.m */; };
 		8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EA924264FAF00421E7A /* SHRAC12ViewModel.m */; };
-		8F31109224264FB100421E7A /* SHRAC9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EAC24264FAF00421E7A /* SHRAC9ViewController.m */; };
-		8F31109324264FB100421E7A /* SHRAC4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EAE24264FAF00421E7A /* SHRAC4ViewController.m */; };
 		8F31109424264FB100421E7A /* SHRAC10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB124264FAF00421E7A /* SHRAC10ViewController.m */; };
 		8F31109524264FB100421E7A /* SHRAC1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB524264FAF00421E7A /* SHRAC1ViewController.m */; };
 		8F31109624264FB100421E7A /* SHAnimationMasonryLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB724264FAF00421E7A /* SHAnimationMasonryLoginVC.m */; };
@@ -352,6 +350,11 @@
 		8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311623242D01F900421E7A /* SGHSchedulerViewController.m */; };
 		8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311624242D01F900421E7A /* SGHKVOViewController.m */; };
 		8F311649242D031C00421E7A /* SGHAnythingTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F311647242D031C00421E7A /* SGHAnythingTestModel.m */; };
+		8FF058B724381790006F74E9 /* SGH0404SequenceMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058B62438178F006F74E9 /* SGH0404SequenceMapViewController.m */; };
+		8FF058BE2438215D006F74E9 /* SGH04LoginSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058BD2438215D006F74E9 /* SGH04LoginSuccessViewController.m */; };
+		8FF058C124382176006F74E9 /* SGH04RACLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C024382176006F74E9 /* SGH04RACLoginViewController.m */; };
+		8FF058C424382407006F74E9 /* SGH04RACViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C324382407006F74E9 /* SGH04RACViewModel.m */; };
+		8FF058C8243873AD006F74E9 /* SGHCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C7243873AD006F74E9 /* SGHCellModel.m */; };
 		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
@@ -545,10 +548,6 @@
 		8F310EA724264FAF00421E7A /* SHRAC12ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC12ViewController.h; sourceTree = "<group>"; };
 		8F310EA824264FAF00421E7A /* SHRAC12ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC12ViewController.m; sourceTree = "<group>"; };
 		8F310EA924264FAF00421E7A /* SHRAC12ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC12ViewModel.m; sourceTree = "<group>"; };
-		8F310EAB24264FAF00421E7A /* SHRAC9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC9ViewController.h; sourceTree = "<group>"; };
-		8F310EAC24264FAF00421E7A /* SHRAC9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC9ViewController.m; sourceTree = "<group>"; };
-		8F310EAE24264FAF00421E7A /* SHRAC4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC4ViewController.m; sourceTree = "<group>"; };
-		8F310EAF24264FAF00421E7A /* SHRAC4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC4ViewController.h; sourceTree = "<group>"; };
 		8F310EB124264FAF00421E7A /* SHRAC10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC10ViewController.m; sourceTree = "<group>"; };
 		8F310EB224264FAF00421E7A /* SHRAC10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC10ViewController.h; sourceTree = "<group>"; };
 		8F310EB424264FAF00421E7A /* SHRAC1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC1ViewController.h; sourceTree = "<group>"; };
@@ -1019,6 +1018,16 @@
 		8F311625242D01F900421E7A /* SGHSwitchDelegateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHSwitchDelegateViewController.h; sourceTree = "<group>"; };
 		8F311647242D031C00421E7A /* SGHAnythingTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHAnythingTestModel.m; sourceTree = "<group>"; };
 		8F311648242D031C00421E7A /* SGHAnythingTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHAnythingTestModel.h; sourceTree = "<group>"; };
+		8FF058B52438178F006F74E9 /* SGH0404SequenceMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0404SequenceMapViewController.h; sourceTree = "<group>"; };
+		8FF058B62438178F006F74E9 /* SGH0404SequenceMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0404SequenceMapViewController.m; sourceTree = "<group>"; };
+		8FF058BC2438215D006F74E9 /* SGH04LoginSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH04LoginSuccessViewController.h; sourceTree = "<group>"; };
+		8FF058BD2438215D006F74E9 /* SGH04LoginSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH04LoginSuccessViewController.m; sourceTree = "<group>"; };
+		8FF058BF24382176006F74E9 /* SGH04RACLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH04RACLoginViewController.h; sourceTree = "<group>"; };
+		8FF058C024382176006F74E9 /* SGH04RACLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH04RACLoginViewController.m; sourceTree = "<group>"; };
+		8FF058C224382407006F74E9 /* SGH04RACViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH04RACViewModel.h; sourceTree = "<group>"; };
+		8FF058C324382407006F74E9 /* SGH04RACViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH04RACViewModel.m; sourceTree = "<group>"; };
+		8FF058C6243873AD006F74E9 /* SGHCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHCellModel.h; sourceTree = "<group>"; };
+		8FF058C7243873AD006F74E9 /* SGHCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHCellModel.m; sourceTree = "<group>"; };
 		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
 		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1842,6 +1851,9 @@
 		8F310EA024264FAF00421E7A /* 6ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058C6243873AD006F74E9 /* SGHCellModel.h */,
+				8FF058C7243873AD006F74E9 /* SGHCellModel.m */,
+				8FF058B824382107006F74E9 /* sectionFive */,
 				8F310EA224264FAF00421E7A /* SHReactiveCocoaViewController.h */,
 				8F310EA324264FAF00421E7A /* SHReactiveCocoaViewController.m */,
 				8F311617242D01F900421E7A /* sectionOne */,
@@ -1857,8 +1869,6 @@
 			children = (
 				8FF847A1243422E4002F18F9 /* 7RACCommand */,
 				8F310EA524264FAF00421E7A /* 6介绍十二_RACCommand */,
-				8F310EAA24264FAF00421E7A /* 4介绍九_RACSubject流程分析 */,
-				8F310EAD24264FAF00421E7A /* 3介绍四_流程分析 */,
 				8F310EB024264FAF00421E7A /* 5介绍十_RACMulticastConnection */,
 				8F310EB324264FAF00421E7A /* 2一基本介绍 */,
 				8F310EB624264FAF00421E7A /* 1Autolayout_masonry登录动画 */,
@@ -1875,24 +1885,6 @@
 				8F310EA824264FAF00421E7A /* SHRAC12ViewController.m */,
 			);
 			path = "6介绍十二_RACCommand";
-			sourceTree = "<group>";
-		};
-		8F310EAA24264FAF00421E7A /* 4介绍九_RACSubject流程分析 */ = {
-			isa = PBXGroup;
-			children = (
-				8F310EAB24264FAF00421E7A /* SHRAC9ViewController.h */,
-				8F310EAC24264FAF00421E7A /* SHRAC9ViewController.m */,
-			);
-			path = "4介绍九_RACSubject流程分析";
-			sourceTree = "<group>";
-		};
-		8F310EAD24264FAF00421E7A /* 3介绍四_流程分析 */ = {
-			isa = PBXGroup;
-			children = (
-				8F310EAF24264FAF00421E7A /* SHRAC4ViewController.h */,
-				8F310EAE24264FAF00421E7A /* SHRAC4ViewController.m */,
-			);
-			path = "3介绍四_流程分析";
 			sourceTree = "<group>";
 		};
 		8F310EB024264FAF00421E7A /* 5介绍十_RACMulticastConnection */ = {
@@ -4414,6 +4406,37 @@
 			path = "16ignore(即时搜索优化改进2)";
 			sourceTree = "<group>";
 		};
+		8FF058B4243816C6006F74E9 /* RAC_MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058B52438178F006F74E9 /* SGH0404SequenceMapViewController.h */,
+				8FF058B62438178F006F74E9 /* SGH0404SequenceMapViewController.m */,
+				8FF058C524382410006F74E9 /* Login */,
+			);
+			path = RAC_MVVM;
+			sourceTree = "<group>";
+		};
+		8FF058B824382107006F74E9 /* sectionFive */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058B4243816C6006F74E9 /* RAC_MVVM */,
+			);
+			path = sectionFive;
+			sourceTree = "<group>";
+		};
+		8FF058C524382410006F74E9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058BF24382176006F74E9 /* SGH04RACLoginViewController.h */,
+				8FF058C024382176006F74E9 /* SGH04RACLoginViewController.m */,
+				8FF058BC2438215D006F74E9 /* SGH04LoginSuccessViewController.h */,
+				8FF058BD2438215D006F74E9 /* SGH04LoginSuccessViewController.m */,
+				8FF058C224382407006F74E9 /* SGH04RACViewModel.h */,
+				8FF058C324382407006F74E9 /* SGH04RACViewModel.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -4686,6 +4709,7 @@
 				8F3110FB24264FB100421E7A /* SH1902Person.m in Sources */,
 				8F311581242995AE00421E7A /* SGH0512Runtime4ViewController.m in Sources */,
 				045788212427BA6300C2DF75 /* CTDisplayView.m in Sources */,
+				8FF058C424382407006F74E9 /* SGH04RACViewModel.m in Sources */,
 				8F311627242D01FA00421E7A /* SGHStopwatchViewController.m in Sources */,
 				8F31111F24264FB100421E7A /* SGH1108AppStoreViewController.m in Sources */,
 				8F311635242D01FA00421E7A /* SGHStartWithViewController.m in Sources */,
@@ -4710,7 +4734,6 @@
 				8F3110A124264FB100421E7A /* WBStatusTimelineViewController.m in Sources */,
 				8F3110CD24264FB100421E7A /* SGH0424MapEngine.m in Sources */,
 				04F6EC7E2429AEA000D7F1CB /* SGHPopoverPresentationController.m in Sources */,
-				8F31109224264FB100421E7A /* SHRAC9ViewController.m in Sources */,
 				8F3110FD24264FB100421E7A /* SH0227SeniorCampViewController.m in Sources */,
 				8F3110E424264FB100421E7A /* UIColor+Hex.m in Sources */,
 				8F31111824264FB100421E7A /* SGH1013TextViewViewController.m in Sources */,
@@ -4769,7 +4792,6 @@
 				8F3115522429948900421E7A /* SGHPrincipleOfInquiryViewController.m in Sources */,
 				8F311580242995AE00421E7A /* UIViewController+SGH0512Tracking.m in Sources */,
 				8F3110E824264FB100421E7A /* SHFetchFutureDateViewController.m in Sources */,
-				8F31109324264FB100421E7A /* SHRAC4ViewController.m in Sources */,
 				8F311644242D01FA00421E7A /* SGHSchedulerViewController.m in Sources */,
 				8F311649242D031C00421E7A /* SGHAnythingTestModel.m in Sources */,
 				8F31157F242995AE00421E7A /* SGH0506Test.m in Sources */,
@@ -4799,6 +4821,7 @@
 				8F3110D024264FB100421E7A /* SHDispatchMethodsViewController.m in Sources */,
 				8F311639242D01FA00421E7A /* SGHMapViewController.m in Sources */,
 				8F3115DE242A60F500421E7A /* NSObject+EnumArr.m in Sources */,
+				8FF058BE2438215D006F74E9 /* SGH04LoginSuccessViewController.m in Sources */,
 				8F3110DD24264FB100421E7A /* SHUpdateJumpAppStoreVC.m in Sources */,
 				8F31159B242A2D7200421E7A /* SGH0324CATransitionViewController.m in Sources */,
 				8F3110B924264FB100421E7A /* SH3DTouchDemoViewController.m in Sources */,
@@ -4834,6 +4857,7 @@
 				8F3113512426E1D500421E7A /* NSString+Chinese.m in Sources */,
 				045787E42427B37B00C2DF75 /* Girl.m in Sources */,
 				8F31153E24298CDC00421E7A /* SGH0911CoreLocationViewController.m in Sources */,
+				8FF058C124382176006F74E9 /* SGH04RACLoginViewController.m in Sources */,
 				04F6EC852429AEA000D7F1CB /* SGHNetworkChangeViewController.m in Sources */,
 				8F31109424264FB100421E7A /* SHRAC10ViewController.m in Sources */,
 				8F31108F24264FB100421E7A /* SHReactiveCocoaViewController.m in Sources */,
@@ -4843,6 +4867,7 @@
 				8F3115C4242A58C200421E7A /* SGHAdvance2KVOViewController.m in Sources */,
 				8F3110FC24264FB100421E7A /* SHLeaks0301Object.m in Sources */,
 				8F3114812426EB4C00421E7A /* SGH0618AntiEncodeViewController.m in Sources */,
+				8FF058C8243873AD006F74E9 /* SGHCellModel.m in Sources */,
 				8F31149C2426EB4C00421E7A /* SGHUIKitDynamicsViewController.m in Sources */,
 				8F311626242D01FA00421E7A /* SGHConcatViewController.m in Sources */,
 				8F3110E324264FB100421E7A /* SHImageText0214ViewController.m in Sources */,
@@ -4878,6 +4903,7 @@
 				8F3110E024264FB100421E7A /* SGH0607FetchStringExpressionViewController.m in Sources */,
 				8F3110F324264FB100421E7A /* SGH0824AlertViewViewController.m in Sources */,
 				8F3110F724264FB100421E7A /* SGH1108ShareItem.m in Sources */,
+				8FF058B724381790006F74E9 /* SGH0404SequenceMapViewController.m in Sources */,
 				8F3115BE242A586500421E7A /* SGH0324Person.m in Sources */,
 				8F31111324264FB100421E7A /* SGH1012GetIvarAndPropertyViewController.m in Sources */,
 				8F3115AD242A511F00421E7A /* SGHBanner3DTransitionView.m in Sources */,

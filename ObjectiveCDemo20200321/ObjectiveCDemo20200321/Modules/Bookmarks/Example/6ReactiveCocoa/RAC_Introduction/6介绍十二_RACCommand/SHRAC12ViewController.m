@@ -5,7 +5,9 @@
 //  Created by 远平 on 2019/11/23.
 //  Copyright © 2019 huangaengoln. All rights reserved.
 //
-
+/*
+ * 来自：[RAC(ReactiveCocoa)介绍（十二）——RACCommand](https://www.jianshu.com/p/75681ea2256e)
+ */
 #import "SHRAC12ViewController.h"
 #import "SHRAC12ViewModel.h"
 #import "UIViewController+Description.h"
@@ -21,11 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-
-    
-    
     
     UIButton *btn1 = [self buildBtnWith:@"原代码"];
     [self.view addSubview:btn1];
