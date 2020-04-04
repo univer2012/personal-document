@@ -67,26 +67,6 @@
         @"exploreDemo12",
         @"executingDemo",
     ];
-//    UIButton *topBtn;
-//
-//    for (NSInteger i = 0; i < self.titlesArray.count; i++) {
-//        UIButton *btn1 = [self buildBtnWith:self.titlesArray[i]];
-//        btn1.titleLabel.numberOfLines = 0;
-//        [btn1 addTarget:self action:NSSelectorFromString(selectors[i]) forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:btn1];
-//        [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(self.view).offset(10);
-//            make.right.equalTo(self.view).offset(-10);
-//            if (topBtn == nil) {
-//                make.top.equalTo(self.view).offset(90);
-//            } else {
-//                make.top.equalTo(topBtn.mas_bottom).offset(10);
-//            }
-//        }];
-//
-//        topBtn = btn1;
-//    }
-    
 }
 //MARK: 13. executing的探索
 ///来自：[RACCommand中的信号](https://www.cnblogs.com/guoxiaoqian/p/4716540.html)
