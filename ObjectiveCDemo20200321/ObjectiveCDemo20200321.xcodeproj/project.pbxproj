@@ -101,8 +101,6 @@
 		8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EA924264FAF00421E7A /* SHRAC12ViewModel.m */; };
 		8F31109424264FB100421E7A /* SHRAC10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB124264FAF00421E7A /* SHRAC10ViewController.m */; };
 		8F31109524264FB100421E7A /* SHRAC1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB524264FAF00421E7A /* SHRAC1ViewController.m */; };
-		8F31109624264FB100421E7A /* SHAnimationMasonryLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EB724264FAF00421E7A /* SHAnimationMasonryLoginVC.m */; };
-		8F31109724264FB100421E7A /* HomePageAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EBA24264FAF00421E7A /* HomePageAnimationUtil.m */; };
 		8F31109824264FB100421E7A /* SGH161223ComponentsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EBE24264FAF00421E7A /* SGH161223ComponentsDemoViewController.m */; };
 		8F31109924264FB100421E7A /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EC324264FAF00421E7A /* UIView+Frame.m */; };
 		8F31109A24264FB100421E7A /* CAAnimation+WAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EC424264FAF00421E7A /* CAAnimation+WAnimation.m */; };
@@ -355,6 +353,8 @@
 		8FF058C124382176006F74E9 /* SGH04RACLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C024382176006F74E9 /* SGH04RACLoginViewController.m */; };
 		8FF058C424382407006F74E9 /* SGH04RACViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C324382407006F74E9 /* SGH04RACViewModel.m */; };
 		8FF058C8243873AD006F74E9 /* SGHCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C7243873AD006F74E9 /* SGHCellModel.m */; };
+		8FF058CE243884C2006F74E9 /* SHAnimationMasonryLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058CA243884C2006F74E9 /* SHAnimationMasonryLoginVC.m */; };
+		8FF058CF243884C2006F74E9 /* HomePageAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058CD243884C2006F74E9 /* HomePageAnimationUtil.m */; };
 		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
@@ -552,10 +552,6 @@
 		8F310EB224264FAF00421E7A /* SHRAC10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC10ViewController.h; sourceTree = "<group>"; };
 		8F310EB424264FAF00421E7A /* SHRAC1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRAC1ViewController.h; sourceTree = "<group>"; };
 		8F310EB524264FAF00421E7A /* SHRAC1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRAC1ViewController.m; sourceTree = "<group>"; };
-		8F310EB724264FAF00421E7A /* SHAnimationMasonryLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAnimationMasonryLoginVC.m; sourceTree = "<group>"; };
-		8F310EB824264FAF00421E7A /* HomePageAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageAnimationUtil.h; sourceTree = "<group>"; };
-		8F310EB924264FAF00421E7A /* SHAnimationMasonryLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAnimationMasonryLoginVC.h; sourceTree = "<group>"; };
-		8F310EBA24264FAF00421E7A /* HomePageAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageAnimationUtil.m; sourceTree = "<group>"; };
 		8F310EBD24264FAF00421E7A /* SGH161223ComponentsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH161223ComponentsDemoViewController.h; sourceTree = "<group>"; };
 		8F310EBE24264FAF00421E7A /* SGH161223ComponentsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH161223ComponentsDemoViewController.m; sourceTree = "<group>"; };
 		8F310EC124264FAF00421E7A /* UIView+WZLBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLBadge.h"; sourceTree = "<group>"; };
@@ -1028,6 +1024,10 @@
 		8FF058C324382407006F74E9 /* SGH04RACViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH04RACViewModel.m; sourceTree = "<group>"; };
 		8FF058C6243873AD006F74E9 /* SGHCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHCellModel.h; sourceTree = "<group>"; };
 		8FF058C7243873AD006F74E9 /* SGHCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHCellModel.m; sourceTree = "<group>"; };
+		8FF058CA243884C2006F74E9 /* SHAnimationMasonryLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAnimationMasonryLoginVC.m; sourceTree = "<group>"; };
+		8FF058CB243884C2006F74E9 /* HomePageAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageAnimationUtil.h; sourceTree = "<group>"; };
+		8FF058CC243884C2006F74E9 /* SHAnimationMasonryLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAnimationMasonryLoginVC.h; sourceTree = "<group>"; };
+		8FF058CD243884C2006F74E9 /* HomePageAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageAnimationUtil.m; sourceTree = "<group>"; };
 		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
 		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1435,6 +1435,7 @@
 		04F6EC922429E81C00D7F1CB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058C9243884C2006F74E9 /* 7Autolayout_masonry登录动画 */,
 				8F3115A5242A504E00421E7A /* 6广告3DTransition */,
 				8F311598242A2D2400421E7A /* 5CATransition切换动画特效 */,
 				04F6EC972429E87D00D7F1CB /* 1CALayer的介绍 */,
@@ -1871,7 +1872,6 @@
 				8F310EA524264FAF00421E7A /* 6介绍十二_RACCommand */,
 				8F310EB024264FAF00421E7A /* 5介绍十_RACMulticastConnection */,
 				8F310EB324264FAF00421E7A /* 2一基本介绍 */,
-				8F310EB624264FAF00421E7A /* 1Autolayout_masonry登录动画 */,
 			);
 			path = RAC_Introduction;
 			sourceTree = "<group>";
@@ -1903,17 +1903,6 @@
 				8F310EB524264FAF00421E7A /* SHRAC1ViewController.m */,
 			);
 			path = "2一基本介绍";
-			sourceTree = "<group>";
-		};
-		8F310EB624264FAF00421E7A /* 1Autolayout_masonry登录动画 */ = {
-			isa = PBXGroup;
-			children = (
-				8F310EB924264FAF00421E7A /* SHAnimationMasonryLoginVC.h */,
-				8F310EB724264FAF00421E7A /* SHAnimationMasonryLoginVC.m */,
-				8F310EB824264FAF00421E7A /* HomePageAnimationUtil.h */,
-				8F310EBA24264FAF00421E7A /* HomePageAnimationUtil.m */,
-			);
-			path = "1Autolayout_masonry登录动画";
 			sourceTree = "<group>";
 		};
 		8F310EBB24264FAF00421E7A /* 3第三方组件 */ = {
@@ -4437,6 +4426,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		8FF058C9243884C2006F74E9 /* 7Autolayout_masonry登录动画 */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058CC243884C2006F74E9 /* SHAnimationMasonryLoginVC.h */,
+				8FF058CA243884C2006F74E9 /* SHAnimationMasonryLoginVC.m */,
+				8FF058CB243884C2006F74E9 /* HomePageAnimationUtil.h */,
+				8FF058CD243884C2006F74E9 /* HomePageAnimationUtil.m */,
+			);
+			path = "7Autolayout_masonry登录动画";
+			sourceTree = "<group>";
+		};
 		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -4749,12 +4749,12 @@
 				8F3110CE24264FB100421E7A /* SGH0515AttibuteStringInitViewController.m in Sources */,
 				8F3110AB24264FB100421E7A /* SHSortManager.m in Sources */,
 				8F3110F024264FB100421E7A /* SGH1012BecomeHtmlStringViewController.m in Sources */,
+				8FF058CE243884C2006F74E9 /* SHAnimationMasonryLoginVC.m in Sources */,
 				8F3114962426EB4C00421E7A /* SGH0618Annotation.m in Sources */,
 				0457881D2427BA6300C2DF75 /* CTFrameParserConfig.m in Sources */,
 				8F3110A724264FB100421E7A /* WBTopic.m in Sources */,
 				8F31148A2426EB4C00421E7A /* SGH0618MapNavigationViewController.m in Sources */,
 				8F31109824264FB100421E7A /* SGH161223ComponentsDemoViewController.m in Sources */,
-				8F31109724264FB100421E7A /* HomePageAnimationUtil.m in Sources */,
 				04F6ECB72429E87E00D7F1CB /* SGH0729Layer.m in Sources */,
 				8F31140C2426E6EF00421E7A /* SGHNSArrayNSMutableArrayViewController.m in Sources */,
 				8F31149B2426EB4C00421E7A /* SGH0727CollectionViewController.m in Sources */,
@@ -4771,7 +4771,6 @@
 				045787EF2427B53300C2DF75 /* ReliableiOSPerson.m in Sources */,
 				8F31108524264FB100421E7A /* NSDictionary+NilSafe.m in Sources */,
 				04F6EC802429AEA000D7F1CB /* SGHTableViewStyleGroupedViewController.m in Sources */,
-				8F31109624264FB100421E7A /* SHAnimationMasonryLoginVC.m in Sources */,
 				8F3110A624264FB100421E7A /* WBButtonLink.m in Sources */,
 				045788232427BA6300C2DF75 /* MagnifiterView.m in Sources */,
 				8F311582242995AE00421E7A /* SGH0515Runtime6ViewController.m in Sources */,
@@ -4938,6 +4937,7 @@
 				8F3110A224264FB100421E7A /* WBURL.m in Sources */,
 				8F3110E224264FB100421E7A /* RegexKitLite.m in Sources */,
 				8F31112C24264FB100421E7A /* SGH1128BookmarksViewController.m in Sources */,
+				8FF058CF243884C2006F74E9 /* HomePageAnimationUtil.m in Sources */,
 				045787F22427B5DA00C2DF75 /* FKGeometryView.m in Sources */,
 				04F6EC412429ACCB00D7F1CB /* SGHMethodSwizzlingViewController.m in Sources */,
 				8F3110EF24264FB100421E7A /* SXNewsDetailEntity.m in Sources */,

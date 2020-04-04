@@ -124,14 +124,12 @@
     
     //section 4
     tempClassNameArray=@[
-        @"SHAnimationMasonryLoginVC",
         @"SHRAC1ViewController",
         @"SHRAC10ViewController",
         @"SHRAC12ViewController",
         @"SGH0401RACCommandViewController",
     ];
     tempTitleArray=@[
-        @"1、Autolayout_masonry登录动画",
         @"2、介绍（一）——基本介绍",
         @"5、介绍十_RACMulticastConnection-多路广播",
         @"6、介绍十二_RACCommand",

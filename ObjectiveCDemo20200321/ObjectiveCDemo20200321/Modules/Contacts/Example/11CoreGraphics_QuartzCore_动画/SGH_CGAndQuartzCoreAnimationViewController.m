@@ -38,6 +38,7 @@
         @"SGH0729WheelViewController",
         @"SGH0324CATransitionViewController",
         @"SGHBanner3DTransitionViewController",
+        @"SHAnimationMasonryLoginVC",
     ] mutableCopy];
     
     self.titlesArray=[@[
@@ -47,6 +48,7 @@
         @"4、实例动画按钮布局",
         @"5、CATransition转场效果",
         @"6、广告3DTransition",
+        @"7、Autolayout_masonry登录动画",
     ] mutableCopy];
 }
 
