@@ -29,7 +29,7 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray= [@[
+    _controllersArray = [@[
         @"SGHNetworkChangeViewController",
         @"SGHUIFontViewController",
         @"SHGAboutNavigationViewController",
@@ -38,9 +38,11 @@
         @"SGHPresentTransitionStyleViewController",
         @"SGHPickerViewViewController",
         @"SGHTableViewStyleGroupedViewController",
+        @"SGHSocketClientViewController",
+        @"SGHSocketSeverViewController",
     ] mutableCopy];
     
-    self.titlesArray=[@[
+    self.titlesArray = [@[
         @"用苹果官网提供的Reachability监听网路变化",
         @"所有苹果字体显示的样式",
         @"有关NavigationController的设置",
@@ -49,6 +51,8 @@
         @"presentViewController转场样式",
         @"UIPickerView的使用",
         @"tableViewStyleGrouped的使用",
+        @"socket通信，客户端",
+        @"socket通信，服务端",
     ] mutableCopy];
 }
 
@@ -71,11 +75,22 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class cls=NSClassFromString(_controllersArray[indexPath.row]);
-    if (cls) {
-        UIViewController *vc = [cls new];
+    
+    NSString *className = _controllersArray[indexPath.row];
+    
+    if ([className  isEqualToString: @"SHRAC1ViewController"] ||
+        [className  isEqualToString: @"SGHSocketClientViewController"] ||
+        [className  isEqualToString: @"SGHSocketSeverViewController"]) {
+        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:className];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        Class cls=NSClassFromString(className);
+        if (cls) {
+            UIViewController *vc = [cls new];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 }
 

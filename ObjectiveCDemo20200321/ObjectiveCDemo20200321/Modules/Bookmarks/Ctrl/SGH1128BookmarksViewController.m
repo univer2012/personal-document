@@ -38,9 +38,10 @@
         tableView.dataSource=self;
         tableView;
     });
-    _controllersArray = [@[SGH160728ViewController.new,
-                           SGH161223ComponentsDemoViewController.new,
-                           SGH170208ViewController.new,
+    _controllersArray = [@[
+        @"SGH160728ViewController",
+        @"SGH161223ComponentsDemoViewController",
+        @"SGH170208ViewController",
                            SGH190129YYKitViewController.new,
                            SHReactiveCocoaViewController.new,
                            ] mutableCopy];
@@ -85,15 +86,16 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-#if 1
+#if 0
     UIViewController *viewController = _controllersArray[indexPath.row];
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
-#elif 0
-    Class cls=NSClassFromString(_controllersArray[indexPath.row]);
+#elif 1
+    Class cls = NSClassFromString(_controllersArray[indexPath.row]);
     if (cls) {
-        
-        [self.navigationController pushViewController:[cls new] animated:YES];
+        UIViewController *vc = [cls new];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 #endif
 }

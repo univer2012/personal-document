@@ -355,6 +355,9 @@
 		8FF058C8243873AD006F74E9 /* SGHCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058C7243873AD006F74E9 /* SGHCellModel.m */; };
 		8FF058CE243884C2006F74E9 /* SHAnimationMasonryLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058CA243884C2006F74E9 /* SHAnimationMasonryLoginVC.m */; };
 		8FF058CF243884C2006F74E9 /* HomePageAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058CD243884C2006F74E9 /* HomePageAnimationUtil.m */; };
+		8FF058D3243D5B46006F74E9 /* SGHSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058D2243D5B45006F74E9 /* SGHSocket.m */; };
+		8FF058D9243EAC76006F74E9 /* SGHSocketSeverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058D8243EAC76006F74E9 /* SGHSocketSeverViewController.m */; };
+		8FF058DC243EAC90006F74E9 /* SGHSocketClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */; };
 		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
@@ -1028,6 +1031,12 @@
 		8FF058CB243884C2006F74E9 /* HomePageAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageAnimationUtil.h; sourceTree = "<group>"; };
 		8FF058CC243884C2006F74E9 /* SHAnimationMasonryLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAnimationMasonryLoginVC.h; sourceTree = "<group>"; };
 		8FF058CD243884C2006F74E9 /* HomePageAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageAnimationUtil.m; sourceTree = "<group>"; };
+		8FF058D1243D5B45006F74E9 /* SGHSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHSocket.h; sourceTree = "<group>"; };
+		8FF058D2243D5B45006F74E9 /* SGHSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHSocket.m; sourceTree = "<group>"; };
+		8FF058D7243EAC76006F74E9 /* SGHSocketSeverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHSocketSeverViewController.h; sourceTree = "<group>"; };
+		8FF058D8243EAC76006F74E9 /* SGHSocketSeverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHSocketSeverViewController.m; sourceTree = "<group>"; };
+		8FF058DA243EAC90006F74E9 /* SGHSocketClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHSocketClientViewController.h; sourceTree = "<group>"; };
+		8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHSocketClientViewController.m; sourceTree = "<group>"; };
 		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
 		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1243,6 +1252,7 @@
 		04F6EC452429AD7C00D7F1CB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058D0243D5AE8006F74E9 /* HTTPs_Socket_TCP_IP_UDP */,
 				04F6EC662429AEA000D7F1CB /* 监听网路变化(用苹果官网提供的Reachability) */,
 				04F6EC732429AEA000D7F1CB /* 所有苹果字体显示的样式 */,
 				04F6EC462429AE9F00D7F1CB /* aboutNavigationController */,
@@ -4437,6 +4447,19 @@
 			path = "7Autolayout_masonry登录动画";
 			sourceTree = "<group>";
 		};
+		8FF058D0243D5AE8006F74E9 /* HTTPs_Socket_TCP_IP_UDP */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058D1243D5B45006F74E9 /* SGHSocket.h */,
+				8FF058D2243D5B45006F74E9 /* SGHSocket.m */,
+				8FF058D7243EAC76006F74E9 /* SGHSocketSeverViewController.h */,
+				8FF058D8243EAC76006F74E9 /* SGHSocketSeverViewController.m */,
+				8FF058DA243EAC90006F74E9 /* SGHSocketClientViewController.h */,
+				8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */,
+			);
+			path = HTTPs_Socket_TCP_IP_UDP;
+			sourceTree = "<group>";
+		};
 		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -4836,6 +4859,7 @@
 				049678F92427C56100F2FD83 /* SGHCoreText2ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
 				8F3115DF242A60F500421E7A /* PersonModel.m in Sources */,
+				8FF058D3243D5B46006F74E9 /* SGHSocket.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
 				8F31163E242D01FA00421E7A /* SGHTimeoutViewController.m in Sources */,
 				8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */,
@@ -4849,6 +4873,7 @@
 				8F31154F2429947C00421E7A /* SGHAboutKVOAndKVCViewController.m in Sources */,
 				8F3110D124264FB100421E7A /* SGHXMPPFrameworkViewController.m in Sources */,
 				8F311632242D01FA00421E7A /* SGHDistinctUntilChangedViewController.m in Sources */,
+				8FF058D9243EAC76006F74E9 /* SGHSocketSeverViewController.m in Sources */,
 				8F31162B242D01FA00421E7A /* SGHZipwithViewController.m in Sources */,
 				04F6ECB92429E87E00D7F1CB /* SGH0729TransitionGroupViewController.m in Sources */,
 				8F3110F224264FB100421E7A /* SGH1101DidScreenshotNotiViewController.m in Sources */,
@@ -4966,6 +4991,7 @@
 				8F3110E924264FB100421E7A /* UIButton+timeCountDown.m in Sources */,
 				8F3115C1242A589600421E7A /* SGH0324Observer.m in Sources */,
 				8F3114842426EB4C00421E7A /* SGH0629AlertViewController.m in Sources */,
+				8FF058DC243EAC90006F74E9 /* SGHSocketClientViewController.m in Sources */,
 				0457881B2427BA6300C2DF75 /* CTFrameParser.m in Sources */,
 				8F3110B824264FB100421E7A /* SHMemManageViewController.m in Sources */,
 				8F311630242D01FA00421E7A /* SGHTakeViewController.m in Sources */,

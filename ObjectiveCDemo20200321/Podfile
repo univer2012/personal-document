@@ -29,6 +29,9 @@ pod 'ReactiveObjC'
 pod 'LxDBAnything' # ,'~>1.1.1'
 pod 'YYModel'
 
+# 有关socket
+pod 'CocoaAsyncSocket'
+
 #use_frameworks!
 #pod 'XMPPFramework', '~> 3.6.4'
 end
