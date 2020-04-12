@@ -20,7 +20,6 @@
 		6735B1281E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */; };
 		6735B12B1E0B70CB0010E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B12A1E0B70CB0010E6A8 /* User.swift */; };
 		6735B1311E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */; };
-		6735B1331E0B81420010E6A8 /* users:onevcat in Resources */ = {isa = PBXBuildFile; fileRef = 6735B1321E0B81420010E6A8 /* users:onevcat */; };
 		6739F4BD1E00E883009C5073 /* SGH161214TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4BC1E00E883009C5073 /* SGH161214TabBarController.swift */; };
 		6739F5391E00E93C009C5073 /* SGH160802ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4C31E00E93C009C5073 /* SGH160802ViewController.swift */; };
 		6739F53A1E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6739F4C71E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift */; };
@@ -97,6 +96,7 @@
 		67FC93571EADD8BF00F67956 /* DreamGenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */; };
 		67FC93591EADDAD600F67956 /* DreamUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC93581EADDAD600F67956 /* DreamUser.swift */; };
 		8FBDAB8E237E2A0E00C6857B /* SHFileManagerDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDAB8D237E2A0E00C6857B /* SHFileManagerDemoVC.swift */; };
+		8FF058E2244368C8006F74E9 /* users_onevcat in Resources */ = {isa = PBXBuildFile; fileRef = 8FF058E1244368C8006F74E9 /* users_onevcat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +131,6 @@
 		6735B1271E0B709B0010E6A8 /* SGH1222POPAndCocoaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH1222POPAndCocoaViewController.swift; sourceTree = "<group>"; };
 		6735B12A1E0B70CB0010E6A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolNetworkTests.swift; sourceTree = "<group>"; };
-		6735B1321E0B81420010E6A8 /* users:onevcat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "users:onevcat"; sourceTree = "<group>"; };
 		6739F4BC1E00E883009C5073 /* SGH161214TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH161214TabBarController.swift; sourceTree = "<group>"; };
 		6739F4C31E00E93C009C5073 /* SGH160802ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH160802ViewController.swift; sourceTree = "<group>"; };
 		6739F4C71E00E93C009C5073 /* SGH0802TableEditDeleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGH0802TableEditDeleteViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +213,7 @@
 		67FC93561EADD8BF00F67956 /* DreamGenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamGenericViewController.swift; sourceTree = "<group>"; };
 		67FC93581EADDAD600F67956 /* DreamUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamUser.swift; sourceTree = "<group>"; };
 		8FBDAB8D237E2A0E00C6857B /* SHFileManagerDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFileManagerDemoVC.swift; sourceTree = "<group>"; };
+		8FF058E1244368C8006F74E9 /* users_onevcat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = users_onevcat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1023,7 +1023,7 @@
 		67F1E7421D4F4DF20094520D /* SwiftDemo160801Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6735B1321E0B81420010E6A8 /* users:onevcat */,
+				8FF058E1244368C8006F74E9 /* users_onevcat */,
 				67F1E7431D4F4DF20094520D /* SwiftDemo160801Tests.swift */,
 				67F1E7451D4F4DF20094520D /* Info.plist */,
 				6735B1301E0B7F8C0010E6A8 /* ProtocolNetworkTests.swift */,
@@ -1212,7 +1212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6735B1331E0B81420010E6A8 /* users:onevcat in Resources */,
+				8FF058E2244368C8006F74E9 /* users_onevcat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,7 @@ class ProtocolNetworkTests: XCTestCase {
         func send<T : Request>(_ r: T, handler: @escaping (T.Response?) -> Void) {
             switch r.path {
             case "/users/onevcat":
-                guard let fileURL = Bundle(for: ProtocolNetworkTests.self).url(forResource:"users:onevcat", withExtension: "txt") else {
+                guard let fileURL = Bundle(for: ProtocolNetworkTests.self).url(forResource:"users_onevcat", withExtension: "txt") else {
                     fatalError()
                 }
                 guard let data = try? Data(contentsOf: fileURL) else {

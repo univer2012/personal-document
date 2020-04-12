@@ -42,19 +42,23 @@
         @"SGH160728ViewController",
         @"SGH161223ComponentsDemoViewController",
         @"SGH170208ViewController",
-                           SGH190129YYKitViewController.new,
-                           SHReactiveCocoaViewController.new,
-                           ] mutableCopy];
+        @"SGH190129YYKitViewController",
+        @"SHReactiveCocoaViewController",
+    ] mutableCopy];
     
     
-    self.titlesArray=[@[@"16-07-28",
-                        @"3、第三方组件",
-                        @"4、2017-02-08",
-                        @"5、YYKit",
-                        @"6、ReactiveCocoa",
-                        ] mutableCopy];
+    self.titlesArray=[@[
+        @"16-07-28",
+        @"3、第三方组件",
+        @"4、2017-02-08",
+        @"5、YYKit",
+        @"6、ReactiveCocoa",
+    ] mutableCopy];
     
     
+    
+}
+- (void)threadRun {
     
 }
 

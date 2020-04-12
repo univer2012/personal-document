@@ -120,7 +120,6 @@
 		8F3110AA24264FB100421E7A /* SGH170208ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EF724264FB000421E7A /* SGH170208ViewController.m */; };
 		8F3110AB24264FB100421E7A /* SHSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EFA24264FB000421E7A /* SHSortManager.m */; };
 		8F3110AC24264FB100421E7A /* SHSandboxReadWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310EFE24264FB000421E7A /* SHSandboxReadWriteVC.m */; };
-		8F3110B024264FB100421E7A /* SGH_TTAttriLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310F0924264FB000421E7A /* SGH_TTAttriLabelViewController.m */; };
 		8F3110B124264FB100421E7A /* SGH170518ResuableCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310F0D24264FB000421E7A /* SGH170518ResuableCellViewController.m */; };
 		8F3110B424264FB100421E7A /* SHUnfixedHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310F1724264FB000421E7A /* SHUnfixedHeightTableViewController.m */; };
 		8F3110B524264FB100421E7A /* GJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F310F1824264FB000421E7A /* GJCell.m */; };
@@ -358,6 +357,8 @@
 		8FF058D3243D5B46006F74E9 /* SGHSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058D2243D5B45006F74E9 /* SGHSocket.m */; };
 		8FF058D9243EAC76006F74E9 /* SGHSocketSeverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058D8243EAC76006F74E9 /* SGHSocketSeverViewController.m */; };
 		8FF058DC243EAC90006F74E9 /* SGHSocketClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */; };
+		8FF058E0243F4B37006F74E9 /* SGH0409ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058DF243F4B37006F74E9 /* SGH0409ThreadViewController.m */; };
+		8FF058E62443698C006F74E9 /* SGH_TTAttriLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058E42443698C006F74E9 /* SGH_TTAttriLabelViewController.m */; };
 		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
@@ -594,8 +595,6 @@
 		8F310EFA24264FB000421E7A /* SHSortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSortManager.m; sourceTree = "<group>"; };
 		8F310EFD24264FB000421E7A /* SHSandboxReadWriteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSandboxReadWriteVC.h; sourceTree = "<group>"; };
 		8F310EFE24264FB000421E7A /* SHSandboxReadWriteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSandboxReadWriteVC.m; sourceTree = "<group>"; };
-		8F310F0924264FB000421E7A /* SGH_TTAttriLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH_TTAttriLabelViewController.m; sourceTree = "<group>"; };
-		8F310F0A24264FB000421E7A /* SGH_TTAttriLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH_TTAttriLabelViewController.h; sourceTree = "<group>"; };
 		8F310F0D24264FB000421E7A /* SGH170518ResuableCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH170518ResuableCellViewController.m; sourceTree = "<group>"; };
 		8F310F0E24264FB000421E7A /* SGH170518ResuableCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH170518ResuableCellViewController.h; sourceTree = "<group>"; };
 		8F310F1724264FB000421E7A /* SHUnfixedHeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUnfixedHeightTableViewController.m; sourceTree = "<group>"; };
@@ -1037,6 +1036,10 @@
 		8FF058D8243EAC76006F74E9 /* SGHSocketSeverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHSocketSeverViewController.m; sourceTree = "<group>"; };
 		8FF058DA243EAC90006F74E9 /* SGHSocketClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHSocketClientViewController.h; sourceTree = "<group>"; };
 		8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHSocketClientViewController.m; sourceTree = "<group>"; };
+		8FF058DE243F4B37006F74E9 /* SGH0409ThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0409ThreadViewController.h; sourceTree = "<group>"; };
+		8FF058DF243F4B37006F74E9 /* SGH0409ThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0409ThreadViewController.m; sourceTree = "<group>"; };
+		8FF058E42443698C006F74E9 /* SGH_TTAttriLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH_TTAttriLabelViewController.m; sourceTree = "<group>"; };
+		8FF058E52443698C006F74E9 /* SGH_TTAttriLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH_TTAttriLabelViewController.h; sourceTree = "<group>"; };
 		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
 		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1252,6 +1255,7 @@
 		04F6EC452429AD7C00D7F1CB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058DD243F4B1B006F74E9 /* Thread */,
 				8FF058D0243D5AE8006F74E9 /* HTTPs_Socket_TCP_IP_UDP */,
 				04F6EC662429AEA000D7F1CB /* 监听网路变化(用苹果官网提供的Reachability) */,
 				04F6EC732429AEA000D7F1CB /* 所有苹果字体显示的样式 */,
@@ -2097,9 +2101,9 @@
 		8F310EFB24264FB000421E7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058E32443698C006F74E9 /* 22TTAttributedLabel */,
 				8F3115082426FB3B00421E7A /* 34定义形参个数可变的方法 */,
 				8F310EFC24264FB000421E7A /* 26沙盒存取 */,
-				8F310F0824264FB000421E7A /* 22TTAttributedLabel  */,
 				8F310F0B24264FB000421E7A /* 15iOS亲测UITableView重用机制，用事实说话 */,
 				8F310F1624264FB000421E7A /* 32cell高度不固定的UITableView */,
 				8F310F1F24264FB000421E7A /* 17奔溃统计和分析 */,
@@ -2134,15 +2138,6 @@
 				8F310EFE24264FB000421E7A /* SHSandboxReadWriteVC.m */,
 			);
 			path = "26沙盒存取";
-			sourceTree = "<group>";
-		};
-		8F310F0824264FB000421E7A /* 22TTAttributedLabel  */ = {
-			isa = PBXGroup;
-			children = (
-				8F310F0924264FB000421E7A /* SGH_TTAttriLabelViewController.m */,
-				8F310F0A24264FB000421E7A /* SGH_TTAttriLabelViewController.h */,
-			);
-			path = "22TTAttributedLabel ";
 			sourceTree = "<group>";
 		};
 		8F310F0B24264FB000421E7A /* 15iOS亲测UITableView重用机制，用事实说话 */ = {
@@ -4460,6 +4455,24 @@
 			path = HTTPs_Socket_TCP_IP_UDP;
 			sourceTree = "<group>";
 		};
+		8FF058DD243F4B1B006F74E9 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058DE243F4B37006F74E9 /* SGH0409ThreadViewController.h */,
+				8FF058DF243F4B37006F74E9 /* SGH0409ThreadViewController.m */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		8FF058E32443698C006F74E9 /* 22TTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058E42443698C006F74E9 /* SGH_TTAttriLabelViewController.m */,
+				8FF058E52443698C006F74E9 /* SGH_TTAttriLabelViewController.h */,
+			);
+			path = 22TTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -4717,7 +4730,6 @@
 				8F3110A824264FB100421E7A /* WBTag.m in Sources */,
 				8F3110B724264FB100421E7A /* SGH0522CrashAnalisisViewController.m in Sources */,
 				04F6ECB42429E87E00D7F1CB /* SGH0728CALayerViewController.m in Sources */,
-				8F3110B024264FB100421E7A /* SGH_TTAttriLabelViewController.m in Sources */,
 				04F6EC842429AEA000D7F1CB /* Reachability.m in Sources */,
 				8F311633242D01FA00421E7A /* SGHFilterViewController.m in Sources */,
 				8F31163D242D01FA00421E7A /* SGHTakeLastViewController.m in Sources */,
@@ -4779,6 +4791,7 @@
 				8F31148A2426EB4C00421E7A /* SGH0618MapNavigationViewController.m in Sources */,
 				8F31109824264FB100421E7A /* SGH161223ComponentsDemoViewController.m in Sources */,
 				04F6ECB72429E87E00D7F1CB /* SGH0729Layer.m in Sources */,
+				8FF058E0243F4B37006F74E9 /* SGH0409ThreadViewController.m in Sources */,
 				8F31140C2426E6EF00421E7A /* SGHNSArrayNSMutableArrayViewController.m in Sources */,
 				8F31149B2426EB4C00421E7A /* SGH0727CollectionViewController.m in Sources */,
 				045788272427BAF100C2DF75 /* SGHCoreText1ViewController.m in Sources */,
@@ -4951,6 +4964,7 @@
 				04F6EC792429AEA000D7F1CB /* SGHPickerViewViewController.m in Sources */,
 				8F31108324264FB100421E7A /* TBXML.m in Sources */,
 				8F3110C424264FB100421E7A /* Example1Controller.m in Sources */,
+				8FF058E62443698C006F74E9 /* SGH_TTAttriLabelViewController.m in Sources */,
 				8F3110EC24264FB100421E7A /* SGH0524PresentBViewController.m in Sources */,
 				8F3114922426EB4C00421E7A /* SGH0618LocationViewController.m in Sources */,
 				8F31111724264FB100421E7A /* SGH0713ScreenShotViewController.m in Sources */,

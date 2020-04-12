@@ -5,7 +5,11 @@
 //  Created by huangaengoln on 2017/5/9.
 //  Copyright © 2017年 huangaengoln. All rights reserved.
 //
-
+/**
+  * 来自：
+ 1.[iOS多线程开发（三）－－Run Loop（一）](https://blog.csdn.net/quanqinyang/article/details/18180883)
+ 2.[Runloop 实现原理及应用](https://blog.csdn.net/littlelittlepeng/article/details/53259066)
+ */
 #import "SGH0509AboutRunLoopViewController.h"
 
 @interface SGH0509AboutRunLoopViewController ()

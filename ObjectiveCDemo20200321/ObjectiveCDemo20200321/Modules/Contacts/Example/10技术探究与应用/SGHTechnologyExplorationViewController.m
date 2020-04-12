@@ -40,6 +40,7 @@
         @"SGHTableViewStyleGroupedViewController",
         @"SGHSocketClientViewController",
         @"SGHSocketSeverViewController",
+        @"SGH0409ThreadViewController",
     ] mutableCopy];
     
     self.titlesArray = [@[
@@ -53,6 +54,7 @@
         @"tableViewStyleGrouped的使用",
         @"socket通信，客户端",
         @"socket通信，服务端",
+        @"多线程篇：NSThread",
     ] mutableCopy];
 }
 
