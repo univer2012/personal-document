@@ -1,5 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
-#source 'https://cdn.cocoapods.org/'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
+
 
 platform:ios, '8.0'
 use_frameworks!
@@ -20,13 +21,16 @@ pod 'TYAttributedLabel'
 
 pod 'FMDB'
 
-pod 'ReactiveCocoa', '~> 2.5'
+#pod 'ReactiveCocoa', '~> 2.5'
 #pod 'ReactiveObjC', '~> 3.1.0'
 #pod 'ReactiveCocoa', '~> 8.0.2'
-#pod 'ReactiveObjC'
+pod 'ReactiveObjC'
 
-pod 'LxDBAnything','~>1.1.1'
+pod 'LxDBAnything' # ,'~>1.1.1'
 pod 'YYModel'
+
+# 有关socket
+pod 'CocoaAsyncSocket'
 
 #use_frameworks!
 #pod 'XMPPFramework', '~> 3.6.4'
