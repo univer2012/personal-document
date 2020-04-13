@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67BD63841CB0F04600719186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD63831CB0F04600719186 /* AppDelegate.swift */; };
+		67BD63861CB0F04600719186 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD63851CB0F04600719186 /* ViewController.swift */; };
+		67BD63891CB0F04600719186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BD63871CB0F04600719186 /* Main.storyboard */; };
+		67BD638B1CB0F04600719186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67BD638A1CB0F04600719186 /* Assets.xcassets */; };
+		67BD638E1CB0F04600719186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BD638C1CB0F04600719186 /* LaunchScreen.storyboard */; };
+		67BD63991CB0F04600719186 /* Tip4___TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BD63981CB0F04600719186 /* Tip4___TupleTests.swift */; };
+		67BD63A81CB0F2B400719186 /* ObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BD63A71CB0F2B400719186 /* ObjectiveC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67BD63951CB0F04600719186 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67BD63781CB0F04600719186 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67BD637F1CB0F04600719186;
+			remoteInfo = "Tip4多元组Tuple";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67BD63801CB0F04600719186 /* Tip4多元组Tuple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip4多元组Tuple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BD63831CB0F04600719186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67BD63851CB0F04600719186 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		67BD63881CB0F04600719186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67BD638A1CB0F04600719186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67BD638D1CB0F04600719186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67BD638F1CB0F04600719186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BD63941CB0F04600719186 /* Tip4多元组TupleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip4多元组TupleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BD63981CB0F04600719186 /* Tip4___TupleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip4___TupleTests.swift"; sourceTree = "<group>"; };
+		67BD639A1CB0F04600719186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BD63A31CB0F26900719186 /* Tip4多元组Tuple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tip4多元组Tuple-Bridging-Header.h"; sourceTree = "<group>"; };
+		67BD63A61CB0F2B400719186 /* ObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveC.h; sourceTree = "<group>"; };
+		67BD63A71CB0F2B400719186 /* ObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67BD637D1CB0F04600719186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD63911CB0F04600719186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67BD63771CB0F04600719186 = {
+			isa = PBXGroup;
+			children = (
+				67BD63821CB0F04600719186 /* Tip4多元组Tuple */,
+				67BD63971CB0F04600719186 /* Tip4多元组TupleTests */,
+				67BD63811CB0F04600719186 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67BD63811CB0F04600719186 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67BD63801CB0F04600719186 /* Tip4多元组Tuple.app */,
+				67BD63941CB0F04600719186 /* Tip4多元组TupleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67BD63821CB0F04600719186 /* Tip4多元组Tuple */ = {
+			isa = PBXGroup;
+			children = (
+				67BD63831CB0F04600719186 /* AppDelegate.swift */,
+				67BD63A61CB0F2B400719186 /* ObjectiveC.h */,
+				67BD63A71CB0F2B400719186 /* ObjectiveC.m */,
+				67BD63851CB0F04600719186 /* ViewController.swift */,
+				67BD63871CB0F04600719186 /* Main.storyboard */,
+				67BD638A1CB0F04600719186 /* Assets.xcassets */,
+				67BD638C1CB0F04600719186 /* LaunchScreen.storyboard */,
+				67BD638F1CB0F04600719186 /* Info.plist */,
+				67BD63A31CB0F26900719186 /* Tip4多元组Tuple-Bridging-Header.h */,
+			);
+			path = "Tip4多元组Tuple";
+			sourceTree = "<group>";
+		};
+		67BD63971CB0F04600719186 /* Tip4多元组TupleTests */ = {
+			isa = PBXGroup;
+			children = (
+				67BD63981CB0F04600719186 /* Tip4___TupleTests.swift */,
+				67BD639A1CB0F04600719186 /* Info.plist */,
+			);
+			path = "Tip4多元组TupleTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67BD637F1CB0F04600719186 /* Tip4多元组Tuple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67BD639D1CB0F04600719186 /* Build configuration list for PBXNativeTarget "Tip4多元组Tuple" */;
+			buildPhases = (
+				67BD637C1CB0F04600719186 /* Sources */,
+				67BD637D1CB0F04600719186 /* Frameworks */,
+				67BD637E1CB0F04600719186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tip4多元组Tuple";
+			productName = "Tip4多元组Tuple";
+			productReference = 67BD63801CB0F04600719186 /* Tip4多元组Tuple.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67BD63931CB0F04600719186 /* Tip4多元组TupleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67BD63A01CB0F04600719186 /* Build configuration list for PBXNativeTarget "Tip4多元组TupleTests" */;
+			buildPhases = (
+				67BD63901CB0F04600719186 /* Sources */,
+				67BD63911CB0F04600719186 /* Frameworks */,
+				67BD63921CB0F04600719186 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67BD63961CB0F04600719186 /* PBXTargetDependency */,
+			);
+			name = "Tip4多元组TupleTests";
+			productName = "Tip4多元组TupleTests";
+			productReference = 67BD63941CB0F04600719186 /* Tip4多元组TupleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67BD63781CB0F04600719186 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = huangaengoln;
+				TargetAttributes = {
+					67BD637F1CB0F04600719186 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					67BD63931CB0F04600719186 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 67BD637F1CB0F04600719186;
+					};
+				};
+			};
+			buildConfigurationList = 67BD637B1CB0F04600719186 /* Build configuration list for PBXProject "Tip4多元组Tuple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67BD63771CB0F04600719186;
+			productRefGroup = 67BD63811CB0F04600719186 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67BD637F1CB0F04600719186 /* Tip4多元组Tuple */,
+				67BD63931CB0F04600719186 /* Tip4多元组TupleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67BD637E1CB0F04600719186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BD638E1CB0F04600719186 /* LaunchScreen.storyboard in Resources */,
+				67BD638B1CB0F04600719186 /* Assets.xcassets in Resources */,
+				67BD63891CB0F04600719186 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD63921CB0F04600719186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67BD637C1CB0F04600719186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BD63861CB0F04600719186 /* ViewController.swift in Sources */,
+				67BD63841CB0F04600719186 /* AppDelegate.swift in Sources */,
+				67BD63A81CB0F2B400719186 /* ObjectiveC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67BD63901CB0F04600719186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BD63991CB0F04600719186 /* Tip4___TupleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67BD63961CB0F04600719186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67BD637F1CB0F04600719186 /* Tip4多元组Tuple */;
+			targetProxy = 67BD63951CB0F04600719186 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67BD63871CB0F04600719186 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67BD63881CB0F04600719186 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67BD638C1CB0F04600719186 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67BD638D1CB0F04600719186 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67BD639B1CB0F04600719186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67BD639C1CB0F04600719186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67BD639E1CB0F04600719186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Tip4多元组Tuple/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.Tip4---Tuple";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tip4多元组Tuple/Tip4多元组Tuple-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67BD639F1CB0F04600719186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Tip4多元组Tuple/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.Tip4---Tuple";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tip4多元组Tuple/Tip4多元组Tuple-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		67BD63A11CB0F04600719186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Tip4多元组TupleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.Tip4---TupleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tip4多元组Tuple.app/Tip4多元组Tuple";
+			};
+			name = Debug;
+		};
+		67BD63A21CB0F04600719186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Tip4多元组TupleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkive.invest.Tip4---TupleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tip4多元组Tuple.app/Tip4多元组Tuple";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67BD637B1CB0F04600719186 /* Build configuration list for PBXProject "Tip4多元组Tuple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD639B1CB0F04600719186 /* Debug */,
+				67BD639C1CB0F04600719186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67BD639D1CB0F04600719186 /* Build configuration list for PBXNativeTarget "Tip4多元组Tuple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD639E1CB0F04600719186 /* Debug */,
+				67BD639F1CB0F04600719186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		67BD63A01CB0F04600719186 /* Build configuration list for PBXNativeTarget "Tip4多元组TupleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67BD63A11CB0F04600719186 /* Debug */,
+				67BD63A21CB0F04600719186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67BD63781CB0F04600719186 /* Project object */;
+}
