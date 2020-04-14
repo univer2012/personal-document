@@ -41,6 +41,7 @@
         @"SGHSocketClientViewController",
         @"SGHSocketSeverViewController",
         @"SGH0409ThreadViewController",
+        @"SGH0413URLCacheViewController",
     ] mutableCopy];
     
     self.titlesArray = [@[
@@ -55,6 +56,7 @@
         @"socket通信，客户端",
         @"socket通信，服务端",
         @"多线程篇：NSThread",
+        @"NSURLCache、缓存机制的理解与实现，数据库离线缓存和多图片缓存；",
     ] mutableCopy];
 }
 

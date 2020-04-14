@@ -359,6 +359,7 @@
 		8FF058DC243EAC90006F74E9 /* SGHSocketClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058DB243EAC90006F74E9 /* SGHSocketClientViewController.m */; };
 		8FF058E0243F4B37006F74E9 /* SGH0409ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058DF243F4B37006F74E9 /* SGH0409ThreadViewController.m */; };
 		8FF058E62443698C006F74E9 /* SGH_TTAttriLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058E42443698C006F74E9 /* SGH_TTAttriLabelViewController.m */; };
+		8FF058EA24448D65006F74E9 /* SGH0413URLCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF058E924448D65006F74E9 /* SGH0413URLCacheViewController.m */; };
 		8FF847A42434230F002F18F9 /* SGH0401RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */; };
 		CDC200DEA842E035ADFAA877 /* Pods_ObjectiveCDemo20200321.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */; };
 /* End PBXBuildFile section */
@@ -1040,6 +1041,8 @@
 		8FF058DF243F4B37006F74E9 /* SGH0409ThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0409ThreadViewController.m; sourceTree = "<group>"; };
 		8FF058E42443698C006F74E9 /* SGH_TTAttriLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGH_TTAttriLabelViewController.m; sourceTree = "<group>"; };
 		8FF058E52443698C006F74E9 /* SGH_TTAttriLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGH_TTAttriLabelViewController.h; sourceTree = "<group>"; };
+		8FF058E824448D65006F74E9 /* SGH0413URLCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0413URLCacheViewController.h; sourceTree = "<group>"; };
+		8FF058E924448D65006F74E9 /* SGH0413URLCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0413URLCacheViewController.m; sourceTree = "<group>"; };
 		8FF847A22434230F002F18F9 /* SGH0401RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0401RACCommandViewController.h; sourceTree = "<group>"; };
 		8FF847A32434230F002F18F9 /* SGH0401RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0401RACCommandViewController.m; sourceTree = "<group>"; };
 		BA5AE66CECF32624C91F7693 /* Pods_ObjectiveCDemo20200321.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCDemo20200321.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1255,6 +1258,7 @@
 		04F6EC452429AD7C00D7F1CB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				8FF058E724448D4A006F74E9 /* URLCache */,
 				8FF058DD243F4B1B006F74E9 /* Thread */,
 				8FF058D0243D5AE8006F74E9 /* HTTPs_Socket_TCP_IP_UDP */,
 				04F6EC662429AEA000D7F1CB /* 监听网路变化(用苹果官网提供的Reachability) */,
@@ -4473,6 +4477,15 @@
 			path = 22TTAttributedLabel;
 			sourceTree = "<group>";
 		};
+		8FF058E724448D4A006F74E9 /* URLCache */ = {
+			isa = PBXGroup;
+			children = (
+				8FF058E824448D65006F74E9 /* SGH0413URLCacheViewController.h */,
+				8FF058E924448D65006F74E9 /* SGH0413URLCacheViewController.m */,
+			);
+			path = URLCache;
+			sourceTree = "<group>";
+		};
 		8FF847A1243422E4002F18F9 /* 7RACCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -4801,6 +4814,7 @@
 				8F3110F524264FB100421E7A /* SGH0802ExpressionViewController.m in Sources */,
 				045787F82427B62500C2DF75 /* CYLBlockExecutor.m in Sources */,
 				8F3110C324264FB100421E7A /* Example2Controller.m in Sources */,
+				8FF058EA24448D65006F74E9 /* SGH0413URLCacheViewController.m in Sources */,
 				8F31110124264FB100421E7A /* SHSocketStruc0218ViewController.m in Sources */,
 				04F6EC912429E7F300D7F1CB /* SGH_CGAndQuartzCoreAnimationViewController.m in Sources */,
 				045787FC2427B88100C2DF75 /* SGHCoreTextListViewController.m in Sources */,
