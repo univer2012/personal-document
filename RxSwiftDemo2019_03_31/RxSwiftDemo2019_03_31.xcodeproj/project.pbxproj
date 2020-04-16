@@ -10,6 +10,7 @@
 		0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */; };
 		0400F425237012DF003E26EC /* SHRxswift_44ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */; };
 		0400F42823703B33003E26EC /* SHRxswift_45ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */; };
+		0426CF1C2448760700C87A87 /* SHBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426CF1B2448760700C87A87 /* SHBaseTableViewController.swift */; };
 		0430C81322E591AD003390A5 /* SHRxswift_19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430C81222E591AD003390A5 /* SHRxswift_19ViewController.swift */; };
 		0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */; };
 		0430CA3A22E5D303003390A5 /* DouBanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430CA3922E5D303003390A5 /* DouBanAPI.swift */; };
@@ -110,6 +111,7 @@
 		0400F421236FF429003E26EC /* SHRxswift_43ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_43ViewController.swift; sourceTree = "<group>"; };
 		0400F424237012DF003E26EC /* SHRxswift_44ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_44ViewController.swift; sourceTree = "<group>"; };
 		0400F42723703B33003E26EC /* SHRxswift_45ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_45ViewController.swift; sourceTree = "<group>"; };
+		0426CF1B2448760700C87A87 /* SHBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBaseTableViewController.swift; sourceTree = "<group>"; };
 		0430C81222E591AD003390A5 /* SHRxswift_19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_19ViewController.swift; sourceTree = "<group>"; };
 		0430CA3722E5CD48003390A5 /* SHRxswift_20ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_20ViewController.swift; sourceTree = "<group>"; };
 		0430CA3922E5D303003390A5 /* DouBanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanAPI.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 				8F95FA0722510EA2000407A6 /* Info.plist */,
 				3FB94F2422C0E858009EB6D7 /* Bookmark.storyboard */,
 				3FB94F2D22C36E84009EB6D7 /* UIImageCategory.swift */,
+				0426CF1B2448760700C87A87 /* SHBaseTableViewController.swift */,
 				044A778123751FA300611F0C /* RxSwiftDemo2019_03_31-Bridging-Header.h */,
 				04CB437622DF36750042A456 /* testPlayground.playground */,
 			);
@@ -824,6 +827,7 @@
 				8FD8212D23899BE3005A8A74 /* RxUIApplicationDelegateProxy.swift in Sources */,
 				8FB0DA8922DF637A00625889 /* DoubanObject.swift in Sources */,
 				3F8CFF7C22D356180067194E /* SHRxswift_13ViewController.swift in Sources */,
+				0426CF1C2448760700C87A87 /* SHBaseTableViewController.swift in Sources */,
 				8FF81D78237CE2EE007BB516 /* RxImagePickerDelegateProxy.swift in Sources */,
 				8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
