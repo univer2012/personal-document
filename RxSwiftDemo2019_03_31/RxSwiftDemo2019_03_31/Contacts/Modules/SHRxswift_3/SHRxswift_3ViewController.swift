@@ -89,7 +89,7 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     }
     
     //MARK: 14.有关输入框的监听
-    func demo14() {
+    @objc func demo14() {
         priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
         self.priceTextFld.backgroundColor = UIColor.gray
         self.view.addSubview(priceTextFld)
@@ -124,17 +124,19 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     
     //MARK: 13.timer() 方法2
     //（2）另一种是创建的 Observable 序列在经过设定的一段时间后，每隔一段时间产生一个元素。
-    func demo13_2() {
+    @objc func demo13_2() {
         //延时5秒种后，每隔1秒钟发出一个元素
         let observable = Observable<Int>.timer(5, period: 1, scheduler: MainScheduler.instance)
         observable.subscribe { event in
             print(event)
         }
+        
+        
     }
     
     //MARK: 13.timer() 方法1
     //（1）一种是创建的 Observable 序列在经过设定的一段时间后，产生唯一的一个元素。
-    func demo13_1() {
+    @objc func demo13_1() {
         //5秒种后发出唯一的一个元素0
         let observable = Observable<Int>.timer(5, scheduler: MainScheduler.instance)
         observable.subscribe { event in
@@ -143,7 +145,7 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     }
     
     //MARK: 12.interval() 方法
-    func demo12() {
+    @objc func demo12() {
         let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         observable.subscribe { event in
             print(event)
@@ -151,7 +153,7 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     }
     
     //MARK: 11.deferred() 方法
-    func demo11() {
+    @objc func demo11() {
         //用于标记是奇数、还是偶数
         var isOdd = true
          
@@ -180,7 +182,7 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         }
     }
     //MARK: 10.create() 方法
-    func demo10() {
+    @objc func demo10() {
         //这个block有一个回调参数observer就是订阅这个Observable对象的订阅者
         //当一个订阅者订阅这个Observable对象的时候，就会将订阅者作为参数传入这个block来执行一些内容
         let observable = Observable<String>.create{observer in
@@ -199,7 +201,7 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     }
     
     //MARK: 9.generate() 方法
-    func demo9() {
+    @objc func demo9() {
         //使用generate()方法
         let observable = Observable.generate(
             initialState: 0,
@@ -208,21 +210,21 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         )
          
         //使用of()方法
-        let observable = Observable.of(0 , 2 ,4 ,6 ,8 ,10)
+        let observable2 = Observable.of(0 , 2 ,4 ,6 ,8 ,10)
     }
     //MARK: 8，repeatElement() 方法
-    func demo8() {
+    @objc func demo8() {
         let observable8 = Observable.repeatElement(1)
     }
     //MARK: 7，range() 方法
-    func demo7() {
+    @objc func demo7() {
         //使用range()
         let observable7_1 = Observable.range(start: 1, count: 5)
         //使用of()
         let observable7_2 = Observable.of(1,2,3,4,5)
     }
     //MARK: 6，error() 方法
-    func demo6() {
+    @objc func demo6() {
         enum MyError: Error {
             case A
             case B
@@ -230,23 +232,23 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         let observable6 = Observable<Int>.error(MyError.A)
     }
     //MARK: 5，never() 方法
-    func demo5() {
+    @objc func demo5() {
         let observable5 = Observable<Int>.never()
     }
     //MARK: 4，empty() 方法
-    func demo4() {
+    @objc func demo4() {
         let observable4 = Observable<Int>.empty()
     }
     //MARK: 3，from() 方法
-    func demo3() {
+    @objc func demo3() {
         let observable3 = Observable.from(["A","B","C"])
     }
     //MARK: 2，of() 方法
-    func demo2() {
+    @objc func demo2() {
         let observable2 = Observable.of("A","B","C")
     }
     //MARK: 1，just() 方法
-    func demo1() {
+    @objc func demo1() {
         let observable = Observable<Int>.just(5)
     }
 

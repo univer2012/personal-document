@@ -146,6 +146,9 @@ extension SHBaseTableViewController: UITableViewDelegate {
             //执行方法
             let sel = NSSelectorFromString(className)
             self.perform(sel)
+//            let sel = NSSelectorFromString(className)
+//            let method = method(for: <#T##Selector!#>)
+//            self.perform(#selector(className))
         }
         
         
