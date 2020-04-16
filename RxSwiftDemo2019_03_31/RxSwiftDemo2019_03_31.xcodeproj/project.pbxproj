@@ -225,6 +225,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0426CF1924486DFC00C87A87 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */,
+				3F8CFF7D22D368D10067194E /* Modules */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		0426CF1A24486E8E00C87A87 /* SHRxswift_3 */ = {
+			isa = PBXGroup;
+			children = (
+				0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */,
+				8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */,
+			);
+			path = SHRxswift_3;
+			sourceTree = "<group>";
+		};
 		0430DD2522E6E830003390A5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,13 +442,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		3F8CFF7D22D368D10067194E /* Modules2 */ = {
+		3F8CFF7D22D368D10067194E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */,
-				8FBADFAE22BA65FF00150BAF /* SHRxswift_3ViewController.swift */,
 				3FB91A6422B7886C006F7104 /* SHRxswift_1ViewController.swift */,
 				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
+				0426CF1A24486E8E00C87A87 /* SHRxswift_3 */,
 				3FB91A6822B78891006F7104 /* SHRxswift_4ViewController.swift */,
 				3FB94F2622C1BD5E009EB6D7 /* SHRxswift_5ViewController.swift */,
 				3FB94F2A22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift */,
@@ -477,24 +494,14 @@
 				8FD82132238A55C6005A8A74 /* SHRxswift_61 */,
 				8FD82135238A5D33005A8A74 /* SHRxswift_62 */,
 			);
-			path = Modules2;
-			sourceTree = "<group>";
-		};
-		3FB91A5B22B786C6006F7104 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				3F8CFF7D22D368D10067194E /* Modules2 */,
-				3FB91A5F22B787E3006F7104 /* Modules */,
-				3FB91A5C22B786D3006F7104 /* Bookmarks */,
-			);
-			path = Example;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3FB91A5C22B786D3006F7104 /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
-				3F8CFF7E22D369710067194E /* SH190708ContactsViewController.swift */,
 				3FB91A5D22B78715006F7104 /* SH190617BookmarksViewController.swift */,
+				3FB91A5F22B787E3006F7104 /* Modules */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -552,13 +559,14 @@
 				8FB043A3237252A5005C0524 /* 0.png */,
 				8FB043A4237252A6005C0524 /* 1.png */,
 				8FB043A123709DE9005C0524 /* hangge.zip */,
+				0426CF1924486DFC00C87A87 /* Contacts */,
+				3FB91A5C22B786D3006F7104 /* Bookmarks */,
 				0430DD2522E6E830003390A5 /* Source */,
-				3FB91A5B22B786C6006F7104 /* Example */,
 				8F95F9FB22510E98000407A6 /* AppDelegate.swift */,
+				3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */,
 				8F95FA0222510EA2000407A6 /* Assets.xcassets */,
 				8F95FA0422510EA2000407A6 /* LaunchScreen.storyboard */,
 				8F95FA0722510EA2000407A6 /* Info.plist */,
-				3FB91A5922B7862D006F7104 /* SHTabBarViewController.swift */,
 				3FB94F2422C0E858009EB6D7 /* Bookmark.storyboard */,
 				3FB94F2D22C36E84009EB6D7 /* UIImageCategory.swift */,
 				044A778123751FA300611F0C /* RxSwiftDemo2019_03_31-Bridging-Header.h */,
