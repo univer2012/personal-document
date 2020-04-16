@@ -73,10 +73,6 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         
         #if true
         
-        
-        
-        
-        
         //响应
 //        self.viewModel.priceSpreadResponse.subscribe(onNext: { [weak self] (isOK) in
 //            guard let `self` = self else { return }
@@ -90,7 +86,8 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     
     //MARK: 14.有关输入框的监听
     @objc func demo14() {
-        priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
+        
+        self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
         self.priceTextFld.backgroundColor = UIColor.gray
         self.view.addSubview(priceTextFld)
         
