@@ -5,7 +5,9 @@
 //  Created by rrd on 2019/6/26.
 //  Copyright © 2019 远平. All rights reserved.
 //
-
+/**
+ * 来自：[Swift - RxSwift的使用详解24（UI控件扩展4：UISwitch、UISegmentedControl）](https://www.jianshu.com/p/81f2d74d8308)
+ */
 import UIKit
 
 import RxSwift

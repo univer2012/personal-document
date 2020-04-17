@@ -5,7 +5,9 @@
 //  Created by Mac on 2019/11/6.
 //  Copyright © 2019 远平. All rights reserved.
 //
-
+/**
+ * 来自：[Swift - RxSwift的使用详解50（结合Moya使用2：结果处理、模型转换）](https://www.jianshu.com/p/173915b943af)
+ */
 import UIKit
 import RxSwift
 import RxCocoa

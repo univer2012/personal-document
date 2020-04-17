@@ -4,7 +4,10 @@
 //
 //  Created by rrd on 2019/6/17.
 //
-
+/*
+ * 来自：
+ * 1.[Swift - RxSwift的使用详解3（Observable介绍、创建可观察序列）](https://www.hangge.com/blog/cache/detail_1922.html)
+ */
 import UIKit
 
 import RxSwift
@@ -68,27 +71,9 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第1部分")
         
-    }
-    
-    //MARK: 17.有关输入框的监听-有回调
-        @objc func demo17() {
-        self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
-        self.priceTextFld.backgroundColor = UIColor.gray
-        self.view.addSubview(priceTextFld)
         
-            
-            
         
-        self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
-            guard let `self` = self else { return }
-            
-            print("callBack_succeed_observer:\(String(describing: text))__OK")
-            self.viewModel.didClickOpen("有回调")
-
-            
-        }).disposed(by: self.disposeBag)
     }
-    
     //MARK: 16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块，改进
     @objc func demo16_code3() {
         self.priceTextFld.rx.text.orEmpty.distinctUntilChanged().asObservable().subscribe(onNext: {[weak self] (text) in

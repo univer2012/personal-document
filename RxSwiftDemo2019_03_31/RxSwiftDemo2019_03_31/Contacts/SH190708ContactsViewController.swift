@@ -24,7 +24,7 @@ class SH190708ContactsViewController: SHBaseTableViewController {
         let tempTitleArray = [
             "1基本介绍、安装配置",
             "2响应式编程与传统式编程的比较样例",
-            "3Observable介绍、创建可观察序列",
+            "3~21",
             "4Observable订阅、事件监听、订阅销毁",
             "5UITextView",
             "6UIButton",
@@ -68,7 +68,7 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "SHRxswift_1ViewController",
             "SHRxswift_2ViewController",
             "SHRxswift_3ViewController",
-            "SHRxswift_4ViewController",
+            "SHRxswift_4NewViewController", //"SHRxswift_4ViewController",
             "SHRxswift_5ViewController",
             "SHRxswift_6ViewController",
             "SHRxswift_7ViewController",

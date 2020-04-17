@@ -5,7 +5,9 @@
 //  Created by rrd on 2019/6/17.
 //  Copyright © 2019 远平. All rights reserved.
 //
-
+/*
+ * 来自：[Swift - RxSwift的使用详解22（UI控件扩展2：UITextField、UITextView）](https://www.jianshu.com/p/7abbff16857e)
+ */
 import UIKit
 
 import RxSwift
