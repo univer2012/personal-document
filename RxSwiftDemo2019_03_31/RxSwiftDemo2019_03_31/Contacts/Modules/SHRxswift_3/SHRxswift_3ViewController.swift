@@ -40,8 +40,8 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
             "12.interval() 方法",
             "13.timer() 方法1",
             "13.timer() 方法2",
-            "14.有关输入框的监听",
-            "15.有关输入框的监听，测试2",
+            "14.有关输入框的监听-没有回调",
+            "15.有关输入框的监听-有回调",
             "16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。初始化代码块",
             "16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块",
         ]
@@ -68,28 +68,25 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第1部分")
         
+    }
+    
+    //MARK: 17.有关输入框的监听-有回调
+        @objc func demo17() {
+        self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
+        self.priceTextFld.backgroundColor = UIColor.gray
+        self.view.addSubview(priceTextFld)
         
-//        self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
-//            print("这是回调，回调成功：%@",text)
-//        }).disposed(by: disposeBag)
+            
+            
         
-        
-        //let _ = self.viewModel.didClickOpen("不用回调")
-        
-        //监听
-        //self.viewModel.didClickOpen("")
-        
-        #if true
-        
-        //响应
-//        self.viewModel.priceSpreadResponse.subscribe(onNext: { [weak self] (isOK) in
-//            guard let `self` = self else { return }
-//
-//            print("监听priceTextFld的值1：")
-//        }).disposed(by: self.disposeBag)
-        #endif
-        
-        
+        self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
+            guard let `self` = self else { return }
+            
+            print("callBack_succeed_observer:\(String(describing: text))__OK")
+            self.viewModel.didClickOpen("有回调")
+
+            
+        }).disposed(by: self.disposeBag)
     }
     
     //MARK: 16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块，改进
@@ -128,22 +125,23 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         self.view.addSubview(priceTextFld)
     }
     
-    //MARK: 15.有关输入框的监听，测试2
+    //MARK: 15.有关输入框的监听-有回调
     @objc func demo15() {
         self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
         self.priceTextFld.backgroundColor = UIColor.gray
         self.view.addSubview(priceTextFld)
         
-        self.observer = self.viewModel.didClickOpen("").asObservable()
-        
-        observer?.subscribe(onNext: { (text) in
-            print("callBack_succeed_observer：\(text)__OK") //返回的text，是singleFunc(.success("OK"))发出来的"OK"
-        }).disposed(by: self.disposeBag)
+//        self.observer = self.viewModel.didClickOpen("").asObservable()
+//
+//        observer?.subscribe(onNext: { (text) in
+//            print("callBack_succeed_observer：\(text)__OK") //返回的text，是singleFunc(.success("OK"))发出来的"OK"
+//        }).disposed(by: self.disposeBag)
         
         self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
             guard let `self` = self else { return }
             
-            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+            print("callBack_succeed_observer:\(String(describing: text))__OK")
+            self.viewModel.didClickOpen("有回调").subscribe(onSuccess: { (text) in
                 print("callBack_succeed：\(text)__haode")
             }).disposed(by: self.disposeBag)
                         
@@ -161,23 +159,24 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         }).disposed(by: self.disposeBag)
     }
     
-    //MARK: 14.有关输入框的监听
+    //MARK: 14.有关输入框的监听-没有回调
     @objc func demo14() {
         
         self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
         self.priceTextFld.backgroundColor = UIColor.gray
         self.view.addSubview(priceTextFld)
         
-        self.observer = self.viewModel.didClickOpen("").asObservable()
-        
-        observer?.subscribe(onNext: { (text) in
-            print("callBack_succeed_observer：\(text)__OK")
-        }).disposed(by: self.disposeBag)
+//        self.observer = self.viewModel.didClickOpen("").asObservable()
+//
+//        observer?.subscribe(onNext: { (text) in
+//            print("callBack_succeed_observer：\(text)__OK")
+//        }).disposed(by: self.disposeBag)
         
         self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
             guard let `self` = self else { return }
             
-            let _ = self.viewModel.didClickOpen("不用回调")
+            print("callBack_succeed_observer:\(String(describing: text))__OK")
+            let _ = self.viewModel.didClickOpen("没有回调")
                         
             //响应
 //            self.priceDispose?.dispose()

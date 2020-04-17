@@ -31,6 +31,7 @@
 		045788232427BA6300C2DF75 /* MagnifiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045788142427BA6300C2DF75 /* MagnifiterView.m */; };
 		045788272427BAF100C2DF75 /* SGHCoreText1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045788262427BAF100C2DF75 /* SGHCoreText1ViewController.m */; };
 		0457882B2427C03B00C2DF75 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457882A2427C03B00C2DF75 /* CoreText.framework */; };
+		04801963244954CF0024FF51 /* SHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04801962244954CF0024FF51 /* SHBaseTableViewController.m */; };
 		048706322427670A00CCABC9 /* SGHAboutNSOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048706312427670A00CCABC9 /* SGHAboutNSOperationViewController.m */; };
 		049678F62427C37300F2FD83 /* CoreText.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049678F52427C37300F2FD83 /* CoreText.storyboard */; };
 		049678F92427C56100F2FD83 /* SGHCoreText2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049678F82427C56100F2FD83 /* SGHCoreText2ViewController.m */; };
@@ -428,6 +429,8 @@
 		045788252427BAF100C2DF75 /* SGHCoreText1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHCoreText1ViewController.h; sourceTree = "<group>"; };
 		045788262427BAF100C2DF75 /* SGHCoreText1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHCoreText1ViewController.m; sourceTree = "<group>"; };
 		0457882A2427C03B00C2DF75 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		04801961244954CF0024FF51 /* SHBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHBaseTableViewController.h; sourceTree = "<group>"; };
+		04801962244954CF0024FF51 /* SHBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHBaseTableViewController.m; sourceTree = "<group>"; };
 		048706302427670A00CCABC9 /* SGHAboutNSOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHAboutNSOperationViewController.h; sourceTree = "<group>"; };
 		048706312427670A00CCABC9 /* SGHAboutNSOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHAboutNSOperationViewController.m; sourceTree = "<group>"; };
 		049678F52427C37300F2FD83 /* CoreText.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CoreText.storyboard; sourceTree = "<group>"; };
@@ -1684,6 +1687,8 @@
 				8F310E9924264FAF00421E7A /* Modules */,
 				8F310E8424264FAF00421E7A /* SGH161128TabBarViewController.h */,
 				8F31108124264FB100421E7A /* SGH161128TabBarViewController.m */,
+				04801961244954CF0024FF51 /* SHBaseTableViewController.h */,
+				04801962244954CF0024FF51 /* SHBaseTableViewController.m */,
 				8F310B7F2425B28900421E7A /* AppDelegate.h */,
 				8F310B802425B28900421E7A /* AppDelegate.m */,
 				8F310B882425B28900421E7A /* Main.storyboard */,
@@ -4733,6 +4738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F31108924264FB100421E7A /* SHAlertViewSetModel.m in Sources */,
+				04801963244954CF0024FF51 /* SHBaseTableViewController.m in Sources */,
 				8F31109A24264FB100421E7A /* CAAnimation+WAnimation.m in Sources */,
 				8F311638242D01FA00421E7A /* SGHRepeatViewController.m in Sources */,
 				8F3110C224264FB100421E7A /* SHQRCodeViewController.m in Sources */,

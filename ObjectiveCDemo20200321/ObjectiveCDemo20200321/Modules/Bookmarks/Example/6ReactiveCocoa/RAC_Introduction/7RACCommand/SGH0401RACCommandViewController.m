@@ -14,10 +14,7 @@
  * 来自：[iOS RAC - RACCommand](https://www.jianshu.com/p/baa5fe76191c)
  * 2. [RACCommand中的信号](https://www.cnblogs.com/guoxiaoqian/p/4716540.html)
  */
-@interface SGH0401RACCommandViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)NSArray *selectors;
-@property(nonatomic,strong)NSArray *titlesArray;
+@interface SGH0401RACCommandViewController ()
 
 @end
 
@@ -26,18 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-    self.tableView=({
-        UITableView *tableView=[UITableView new];
-        [self.view addSubview:tableView];
-        tableView.frame=CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-        tableView.delegate=self;
-        tableView.dataSource=self;
-        tableView;
-    });
-
+    self.type = SHBaseTableTypeMethod;
     
-    self.titlesArray = @[
+    NSArray *tempTitleArray = @[
         @"1.创建RACCommand，return nil(会崩溃)",
         @"2.创建RACCommand，return RACSignal",
         @"3.[subscriber sendNext:]",
@@ -52,7 +40,7 @@
         @"12.探索「command.executing是否执行结束」的改进2:[command.executing skip:1]",
         @"13. executing的探索",
     ];
-    self.selectors = @[
+    NSArray *tempClassNameArray = @[
         @"exploreDemo1",
         @"exploreDemo2",
         @"exploreDemo3",
@@ -67,6 +55,11 @@
         @"exploreDemo12",
         @"executingDemo",
     ];
+    
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:self.title];
+    
+    [self.tableView reloadData];
+    
 }
 //MARK: 13. executing的探索
 ///来自：[RACCommand中的信号](https://www.cnblogs.com/guoxiaoqian/p/4716540.html)
@@ -352,33 +345,5 @@
     [command execute:@"开始飞起来"];
 }
 
-//MARK: tableViewDelegate && tableViewDataSource
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.titlesArray.count;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 55;
-}
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIndentifier = @"CellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
-    }
-    cell.textLabel.text = _titlesArray[indexPath.row];
-    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.font = [UIFont systemFontOfSize:13];
-    return cell;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SEL sel = NSSelectorFromString(self.selectors[indexPath.row]);
-    if (sel) {
-        [self performSelector:sel];
-    }
-}
 
 @end

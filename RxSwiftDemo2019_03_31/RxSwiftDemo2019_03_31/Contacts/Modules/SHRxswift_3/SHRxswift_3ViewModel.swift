@@ -16,10 +16,12 @@ class SHRxswift_3ViewModel: NSObject {
     var priceSpreadSubject = PublishSubject<Bool>()
     var priceSpreadResponse = PublishSubject<Bool>()
     
+    
+    var didClickOpenSingle: Single<String>!
     func didClickOpen(_ text: String) -> Single<String> {
         print("执行操作:\(text)__success")
         
-        
+
         return Single.create { (singleFunc) -> Disposable in
             singleFunc(.success("OK"))
             
@@ -29,6 +31,9 @@ class SHRxswift_3ViewModel: NSObject {
     
     override init() {
         super.init()
+        
+        self.priceSpreadResponse = PublishSubject<Bool>()
+        
         self.priceSpreadSubject.subscribe(onNext: { [weak self] (isOK) in
             guard let `self` = self else { return }
             

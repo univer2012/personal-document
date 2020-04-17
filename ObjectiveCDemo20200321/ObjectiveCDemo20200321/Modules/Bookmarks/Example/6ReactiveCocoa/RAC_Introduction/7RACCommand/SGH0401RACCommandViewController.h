@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHBaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SGH0401RACCommandViewController : UIViewController
+@interface SGH0401RACCommandViewController : SHBaseTableViewController
 
 @end
 

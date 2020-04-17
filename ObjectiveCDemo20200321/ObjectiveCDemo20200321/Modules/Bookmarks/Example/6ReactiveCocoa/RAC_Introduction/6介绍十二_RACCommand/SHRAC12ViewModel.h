@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) RACCommand *priceSpreadCommand;
 
+@property (nonatomic, strong) RACCommand *subscribeCommand; //订阅长链接
+
 @end
 
 NS_ASSUME_NONNULL_END

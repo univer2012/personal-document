@@ -10,10 +10,7 @@
 #import "SGHCellModel.h"
 
 #pragma mark - controller
-@interface SHReactiveCocoaViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)NSMutableArray *dataArray;
-@property(nonatomic,strong)NSMutableArray *sectionTitle;
+@interface SHReactiveCocoaViewController ()
 
 @end
 
@@ -23,18 +20,6 @@
     [super viewDidLoad];
     
     self.title=@"RAC Example";
-    self.dataArray=@[].mutableCopy;
-    self.sectionTitle=@[].mutableCopy;
-    
-    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
-    self.tableView=({
-        UITableView *tableView=[UITableView new];
-        [self.view addSubview:tableView];
-        tableView.frame=CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-        tableView.delegate=self;
-        tableView.dataSource=self;
-        tableView;
-    });
     
     
     //section 1
@@ -56,7 +41,7 @@
         @"6、替换代理(有局限，只能取代没有返回值的代理方法)",
         @"7、KVO"
     ];
-    [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"基础"];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"基础"];
     
     //section 2
     tempClassNameArray=@[
@@ -99,7 +84,7 @@
         @"17、switchToLatest(即时搜索优化改进3)",
         @"18、repeat重复"
     ];
-    [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"进阶(单个信号)"];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"进阶(单个信号)"];
     
     //section 3
     tempClassNameArray=@[
@@ -120,7 +105,7 @@
         @"6、用最少的代码写一个秒表",
         @"7、总结/大量使用RAC的写法"
     ];
-    [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"多个信号"];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"多个信号"];
     
     //section 4
     tempClassNameArray=@[
@@ -135,7 +120,7 @@
         @"6、介绍十二_RACCommand",
         @"7、RACCommand的使用探究"
     ];
-    [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"RAC介绍系列"];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"RAC介绍系列"];
     
     //section 5
     tempClassNameArray=@[
@@ -144,80 +129,14 @@
     tempTitleArray=@[
         @"1、iOS开发之ReactiveCocoa下的MVVM-Demo",
     ];
-    [self p_addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"文章的demo"];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"文章的demo"];
     
+    
+    self.inStoryboardVCArray = [@[
+        @"SHRAC1ViewController",
+    ] mutableCopy];
     
     [self.tableView reloadData];
-}
--(void)p_addSectionDataWithClassNameArray:(NSArray *)classNameArray titleArray:(NSArray *)titleArray title:(NSString *)title {
-    @autoreleasepool {
-        NSMutableArray *firstArray=@[].mutableCopy;
-        
-        [classNameArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            SGHCellModel *cellModel = [SGHCellModel new];
-            cellModel.className=obj;
-            cellModel.title=titleArray[idx];
-            [firstArray addObject:cellModel];
-        }];
-        
-        [self p_addSectionTitle:title dataArray:firstArray];
-        
-        
-    }
-}
-
--(void)p_addSectionTitle:(NSString *)sectionTitle dataArray:(NSMutableArray *)dataArray {
-    [self.dataArray addObject:dataArray];
-    [self.sectionTitle addObject:sectionTitle];
-}
-
-
-#pragma mark - Table view data source
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataArray.count;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.0;
-}
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.sectionTitle[section];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSMutableArray *)self.dataArray[section]).count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YY"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YY"];
-    }
-    SGHCellModel *cellMoel= self.dataArray[indexPath.section][indexPath.row];
-    cell.textLabel.text = cellMoel.title;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    SGHCellModel *cellMoel= self.dataArray[indexPath.section][indexPath.row];
-    NSString *className = cellMoel.className;
-    
-    if ([className  isEqualToString: @"SHRAC1ViewController"]) {
-        UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:className];
-        vc.title = cellMoel.title;
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    } else {
-        Class cls=NSClassFromString(className);
-        if (cls) {
-            UIViewController *vc = [cls new];
-            vc.title = cellMoel.title;
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-    }
-    
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

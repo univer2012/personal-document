@@ -24,44 +24,97 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *btn1 = [self buildBtnWith:@"原代码"];
-    [self.view addSubview:btn1];
-    [btn1 addTarget:self action:@selector(originalCode) forControlEvents:UIControlEventTouchUpInside];
-    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(90);
-        make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(100);
+    self.type = SHBaseTableTypeMethod;
+    
+    NSArray *tempTitleArray = @[
+        @"1.原代码",
+        @"2.改进1",
+        @"3.改进2",
+        @"4.另一个有关priceTextFld的监听的demo",
+        @"5.subscribeDemo的demo-没有回调",
+        @"6.subscribeDemo的demo-有回调",
+        @"7.subscribeDemo-不主动调用，只监听",
+    ];
+    NSArray *tempClassNameArray = @[
+        @"originalCode",
+        @"improved1Code",
+        @"improved2Code",
+        @"aboutTextFieldDemo",
+        @"subscribeDemo",
+        @"subscribeDemoHasSubscribeNext",
+        @"subscribeDemoOnlySubscribeNext",
+    ];
+    
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:self.title];
+    
+    [self.tableView reloadData];
+    
+    
+}
+
+//MARK:7.subscribeDemo-不主动调用，只监听
+- (void)subscribeDemoOnlySubscribeNext {
+    
+    self.viewModel = [[SHRAC12ViewModel alloc] init];
+    
+    self.priceTextFld = [[UITextField alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 40)];
+    self.priceTextFld.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:self.priceTextFld];
+    
+    //不主动调用，只监听
+    [self.viewModel.subscribeCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"监听后执行：%@",x);
+        
     }];
     
-    UIButton *btn2 = [self buildBtnWith:@"改进1"];
-    [self.view addSubview:btn2];
-    [btn2 addTarget:self action:@selector(improved1Code) forControlEvents:UIControlEventTouchUpInside];
-    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(btn1.mas_bottom).offset(10);
-        make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(100);
+    @weakify(self)
+    //监听价格输入
+    [[RACObserve(self.priceTextFld, text) merge:self.priceTextFld.rac_textSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        NSLog(@"callBack_succeed_observer:%@__OK",x);
+        [self.viewModel.subscribeCommand execute:@"不主动调用，只监听"];
     }];
+}
+
+//MARK:6.subscribeDemo的demo-有回调
+- (void)subscribeDemoHasSubscribeNext {
+    self.viewModel = [[SHRAC12ViewModel alloc] init];
     
-    UIButton *btn3 = [self buildBtnWith:@"改进2"];
-    [self.view addSubview:btn3];
-    [btn3 addTarget:self action:@selector(improved2Code) forControlEvents:UIControlEventTouchUpInside];
-    [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(btn2.mas_bottom).offset(10);
-        make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(100);
-    }];
+    self.priceTextFld = [[UITextField alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 40)];
+    self.priceTextFld.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:self.priceTextFld];
     
-    UIButton *btn4 = [self buildBtnWith:@"另一个有关priceTextFld的监听的demo"];
-    [self.view addSubview:btn4];
-    [btn4 addTarget:self action:@selector(aboutTextFieldDemo) forControlEvents:UIControlEventTouchUpInside];
-    [btn4 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(btn3.mas_bottom).offset(10);
-        make.left.equalTo(self.view).offset(10);
-        make.right.equalTo(self.view).offset(-10);
+    @weakify(self)
+    //监听价格输入
+    [[RACObserve(self.priceTextFld, text) merge:self.priceTextFld.rac_textSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        NSLog(@"callBack_succeed_observer:%@__OK",x);
+        [[self.viewModel.subscribeCommand execute:@"有回调"] subscribeNext:^(NSString * _Nullable text) {
+            NSLog(@"callBack_succeed：%@__haode",text);
+        }];
     }];
     
 }
-//MARK:另一个有关priceTextFld的监听的demo
+
+//MARK:5.subscribeDemo的demo-没有回调
+- (void)subscribeDemo {
+    self.viewModel = [[SHRAC12ViewModel alloc] init];
+    
+    self.priceTextFld = [[UITextField alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 40)];
+    self.priceTextFld.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:self.priceTextFld];
+    
+    @weakify(self)
+    //监听价格输入
+    [[RACObserve(self.priceTextFld, text) merge:self.priceTextFld.rac_textSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        NSLog(@"callBack_succeed_observer:%@__OK",x);
+        [self.viewModel.subscribeCommand execute:@"没有回调"];
+    }];
+    
+}
+
+//MARK:4.另一个有关priceTextFld的监听的demo
 - (void)aboutTextFieldDemo {
     
     self.viewModel = [[SHRAC12ViewModel alloc] init];
@@ -97,7 +150,7 @@
     }];
 }
 
-//MARK:改进2
+//MARK:3.改进2
 - (void)improved2Code {
     //创建command信号
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
@@ -133,7 +186,7 @@
     //必须执行命令，否则所有信号都不会订阅到
     [command execute:@"command执行"];
 }
-//MARK:改进1
+//MARK:2.改进1
 - (void)improved1Code {
     //创建command信号
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
@@ -170,7 +223,8 @@
     //必须执行命令，否则所有信号都不会订阅到
     [command execute:@"command执行"];
 }
-//MARK:原代码
+
+//MARK:1.原代码
 - (void)originalCode {
     //创建command信号
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {

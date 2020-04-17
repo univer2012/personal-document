@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHBaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SHRAC12ViewController : UIViewController
+@interface SHRAC12ViewController : SHBaseTableViewController
 
 @end
 

@@ -31,6 +31,20 @@
         }];
         
         
+        self.subscribeCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(NSString * _Nullable input) {
+            @strongify(self)
+            NSLog(@"执行操作:%@__success",input);
+            
+            //return [RACSignal empty];
+            //或者
+            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                [subscriber sendNext:@"OK"];
+                [subscriber sendCompleted];
+                return nil;
+            }];
+        }];
+        
+        
     }
     return self;
 }
