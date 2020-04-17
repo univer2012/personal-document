@@ -100,6 +100,7 @@ extension SHBaseTableViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksCell", for:indexPath)
         let cellModel = self.dataArray[indexPath.section][indexPath.row]
         cell.textLabel?.text = cellModel.title
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 13)
         return cell
     }
@@ -146,9 +147,6 @@ extension SHBaseTableViewController: UITableViewDelegate {
             //执行方法
             let sel = NSSelectorFromString(className)
             self.perform(sel)
-//            let sel = NSSelectorFromString(className)
-//            let method = method(for: <#T##Selector!#>)
-//            self.perform(#selector(className))
         }
         
         

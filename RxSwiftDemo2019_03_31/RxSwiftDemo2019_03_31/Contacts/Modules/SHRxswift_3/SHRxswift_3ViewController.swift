@@ -40,6 +40,10 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
             "12.interval() 方法",
             "13.timer() 方法1",
             "13.timer() 方法2",
+            "14.有关输入框的监听",
+            "15.有关输入框的监听，测试2",
+            "16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。初始化代码块",
+            "16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块",
         ]
         let tempClassNameArray = [
             "demo1",
@@ -56,6 +60,10 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
             "demo12",
             "demo13_1",
             "demo13_2",
+            "demo14",
+            "demo15",
+            "demo16_code1",
+            "demo16_code2",
         ]
         
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第1部分")
@@ -84,6 +92,75 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         
     }
     
+    //MARK: 16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块，改进
+    @objc func demo16_code3() {
+        self.priceTextFld.rx.text.orEmpty.distinctUntilChanged().asObservable().subscribe(onNext: {[weak self] (text) in
+            guard let `self` = self else { return }
+            
+            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+                print("callBack_succeed：\(text)__haode")
+            }).disposed(by: self.disposeBag)
+                                    
+        }).disposed(by: self.disposeBag)
+    }
+    
+    //MARK: 16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。监听代码块
+    /*
+     * 测试结果：
+     * 1. 点击多少次demo16_code2 方法，就会有多少次监听。
+     * 2. 一开始时就会调用`.subscribe(onNext:)`block里面的代码。
+     */
+    @objc func demo16_code2() {
+        self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
+            guard let `self` = self else { return }
+            
+            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+                print("callBack_succeed：\(text)__haode")
+            }).disposed(by: self.disposeBag)
+                                    
+        }).disposed(by: self.disposeBag)
+    }
+    
+    //MARK: 16.测试多次调用.subscribe(onNext:)，看是否会多次被监听。初始化代码块
+    @objc func demo16_code1() {
+        self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
+        self.priceTextFld.backgroundColor = UIColor.gray
+        self.view.addSubview(priceTextFld)
+    }
+    
+    //MARK: 15.有关输入框的监听，测试2
+    @objc func demo15() {
+        self.priceTextFld.frame = CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: 50)
+        self.priceTextFld.backgroundColor = UIColor.gray
+        self.view.addSubview(priceTextFld)
+        
+        self.observer = self.viewModel.didClickOpen("").asObservable()
+        
+        observer?.subscribe(onNext: { (text) in
+            print("callBack_succeed_observer：\(text)__OK") //返回的text，是singleFunc(.success("OK"))发出来的"OK"
+        }).disposed(by: self.disposeBag)
+        
+        self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
+            guard let `self` = self else { return }
+            
+            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
+                print("callBack_succeed：\(text)__haode")
+            }).disposed(by: self.disposeBag)
+                        
+            //响应
+//            self.priceDispose?.dispose()
+//            self.priceDispose = nil
+//            self.priceDispose = self.viewModel.priceSpreadResponse.takeUntil(self.rx.deallocated).subscribe(onNext: { [weak self] (isOK) in
+//                guard let `self` = self else { return }
+//
+//                print("监听priceTextFld的值2：")
+//            })
+//            self.viewModel.priceSpreadSubject.onNext(true)
+            
+            
+        }).disposed(by: self.disposeBag)
+    }
+    
     //MARK: 14.有关输入框的监听
     @objc func demo14() {
         
@@ -94,16 +171,13 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
         self.observer = self.viewModel.didClickOpen("").asObservable()
         
         observer?.subscribe(onNext: { (text) in
-            print("callBack_succeed_observer：%@",text)
+            print("callBack_succeed_observer：\(text)__OK")
         }).disposed(by: self.disposeBag)
         
         self.priceTextFld.rx.text.asObservable().subscribe(onNext: {[weak self] (text) in
             guard let `self` = self else { return }
             
             let _ = self.viewModel.didClickOpen("不用回调")
-//            self.viewModel.didClickOpen("你好").subscribe(onSuccess: { (text) in
-//                print("callBack_succeed：%@",text)
-//            }).disposed(by: self.disposeBag)
                         
             //响应
 //            self.priceDispose?.dispose()
@@ -123,7 +197,8 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     //（2）另一种是创建的 Observable 序列在经过设定的一段时间后，每隔一段时间产生一个元素。
     @objc func demo13_2() {
         //延时5秒种后，每隔1秒钟发出一个元素
-        let observable = Observable<Int>.timer(5, period: 1, scheduler: MainScheduler.instance)
+        let observable = Observable<Int>.timer(5, period: 1, scheduler: MainScheduler.instance).takeUntil(self.rx.deallocated)
+        
         observable.subscribe { event in
             print(event)
         }
@@ -135,7 +210,8 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     //（1）一种是创建的 Observable 序列在经过设定的一段时间后，产生唯一的一个元素。
     @objc func demo13_1() {
         //5秒种后发出唯一的一个元素0
-        let observable = Observable<Int>.timer(5, scheduler: MainScheduler.instance)
+        let observable = Observable<Int>.timer(5, scheduler: MainScheduler.instance).takeUntil(self.rx.deallocated)
+        
         observable.subscribe { event in
             print(event)
         }
@@ -143,7 +219,8 @@ class SHRxswift_3ViewController: SHBaseTableViewController {
     
     //MARK: 12.interval() 方法
     @objc func demo12() {
-        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+        let observable = Observable<Int>.interval(1, scheduler: MainScheduler.instance).takeUntil(self.rx.deallocated)
+        
         observable.subscribe { event in
             print(event)
         }

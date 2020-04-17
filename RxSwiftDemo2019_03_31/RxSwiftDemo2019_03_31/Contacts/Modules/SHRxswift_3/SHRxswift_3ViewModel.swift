@@ -17,7 +17,7 @@ class SHRxswift_3ViewModel: NSObject {
     var priceSpreadResponse = PublishSubject<Bool>()
     
     func didClickOpen(_ text: String) -> Single<String> {
-        print("执行操作:%@",text)
+        print("执行操作:\(text)__success")
         
         
         return Single.create { (singleFunc) -> Disposable in
