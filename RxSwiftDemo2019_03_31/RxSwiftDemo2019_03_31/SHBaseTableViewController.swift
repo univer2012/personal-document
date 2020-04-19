@@ -64,6 +64,13 @@ class SHBaseTableViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    func remakeTableViewConstraints(with view: UIView) {
+        self.tableView?.snp_remakeConstraints({ (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(view.snp_bottom)
+        })
+    }
+    
     public func p_addSectionData(with classNameArray:[String], titleArray:[String],title:String) {
         var firstArray = [SGHCellModel]()
         for (idx,item) in titleArray.enumerated() {

@@ -20,8 +20,8 @@ class SH190708ContactsViewController: SHBaseTableViewController {
 
         self.title = "RxSwift Demo"
         
-        //section 1
-        let tempTitleArray = [
+        //MARK: ===========section 1
+        var tempTitleArray = [
             "1基本介绍、安装配置",
             "2响应式编程与传统式编程的比较样例",
             "使用详解3（Observable介绍、创建可观察序列）",
@@ -36,8 +36,49 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "使用详解12（算数&聚合操作符：toArray、reduce、concat）",
             "使用详解13（连接操作符：connect、publish、replay、multicast）",
             "使用详解14（其他操作符：delay、materialize、timeout等）",
-            
-            
+            "使用详解15（错误处理）",
+            "使用详解16（调试操作）",
+        ]
+        var tempClassNameArray = [
+            "SHRxswift_1ViewController",
+            "SHRxswift_2ViewController",
+            "SHRxswift_3ViewController",
+            "SHRxswift_4NewViewController", //"SHRxswift_4ViewController",
+            "SHRxswift_5NewViewController",
+            "SHRxswift_6NewViewController",
+            "SHRxswift_7NewViewController",
+            "SHRxswift_8NewViewController",
+            "SHRxswift_9NewViewController",
+            "SHRxswift_10NewViewController",
+            "SHRxswift_11NewViewController",
+            "SHRxswift_12NewViewController",
+            "SHRxswift_13NewViewController",
+            "SHRxswift_14NewViewController",
+            "SHRxswift_15NewViewController",
+            "SHRxswift_16NewViewController",
+        ]
+        self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第1部分 操作符")
+        
+        //MARK: ===========section 2
+        tempTitleArray = [
+            "使用详解17（特征序列1：Single、Completable、Maybe）",
+            "使用详解18（特征序列2：Driver）",
+            "使用详解19（特征序列3：ControlProperty、 ControlEvent）",
+        ]
+        
+        tempClassNameArray = [
+            "SHRxswift_17NewViewController",
+            "SHRxswift_18NewViewController",
+            "SHRxswift_19NewViewController",
+        ]
+        
+        self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第2部分 特征序列")
+        
+        
+        //MARK: ===========section 3
+        tempTitleArray = [
+            "使用详解21（UI控件扩展1：UILabel）",
+            "使用详解22（UI控件扩展2：UITextField、UITextView）",
             
             "5UITextView",
             "6UIButton",
@@ -77,22 +118,10 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "使用详解63 (通知NotificationCenter的使用)",
             "使用详解64（键值观察KVO的使用）",
         ]
-        let tempClassNameArray = [
-            "SHRxswift_1ViewController",
-            "SHRxswift_2ViewController",
-            "SHRxswift_3ViewController",
-            "SHRxswift_4NewViewController", //"SHRxswift_4ViewController",
-            "SHRxswift_5NewViewController",
-            "SHRxswift_6NewViewController",
-            "SHRxswift_7NewViewController",
-            "SHRxswift_8NewViewController",
-            "SHRxswift_9NewViewController",
-            "SHRxswift_10NewViewController",
-            "SHRxswift_11NewViewController",
-            "SHRxswift_12NewViewController",
-            "SHRxswift_13NewViewController",
-            "SHRxswift_14NewViewController",
-            
+        
+        tempClassNameArray = [
+            "SHRxswift_21NewViewController",
+            "SHRxswift_22ViewController",
             
             
             "SHRxswift_5ViewController",
@@ -133,6 +162,9 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "SHRxswift_63ViewController",
             "SHRxswift_64ViewController",
         ]
+        self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "第3部分 UI控件扩展")
+        
+        
         
         self.inStoryboardVCArray = [
             
@@ -157,7 +189,7 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "SHRxswift_59ViewController",
         ]
         
-        self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "Rxswift demo")
+        
         
     }
     
