@@ -24,8 +24,21 @@ class SH190708ContactsViewController: SHBaseTableViewController {
         let tempTitleArray = [
             "1基本介绍、安装配置",
             "2响应式编程与传统式编程的比较样例",
-            "3~21",
-            "4Observable订阅、事件监听、订阅销毁",
+            "使用详解3（Observable介绍、创建可观察序列）",
+            "使用详解4（Observable订阅、事件监听、订阅销毁）",
+            "使用详解5（观察者1： AnyObserver、Binder）",
+            "使用详解6（观察者2： 自定义可绑定属性）",
+            "使用详解7（Subjects、Variables）",
+            "使用详解8（变换操作符：buffer、map、flatMap、scan等）",
+            "使用详解9（过滤操作符：filter、take、skip等）",
+            "使用详解10（条件和布尔操作符：amb、takeWhile、skipWhile等）",
+            "使用详解11（结合操作符：startWith、merge、zip等）",
+            "使用详解12（算数&聚合操作符：toArray、reduce、concat）",
+            "使用详解13（连接操作符：connect、publish、replay、multicast）",
+            "使用详解14（其他操作符：delay、materialize、timeout等）",
+            
+            
+            
             "5UITextView",
             "6UIButton",
             "7UISwitch 与 UISegmentedControl",
@@ -69,6 +82,19 @@ class SH190708ContactsViewController: SHBaseTableViewController {
             "SHRxswift_2ViewController",
             "SHRxswift_3ViewController",
             "SHRxswift_4NewViewController", //"SHRxswift_4ViewController",
+            "SHRxswift_5NewViewController",
+            "SHRxswift_6NewViewController",
+            "SHRxswift_7NewViewController",
+            "SHRxswift_8NewViewController",
+            "SHRxswift_9NewViewController",
+            "SHRxswift_10NewViewController",
+            "SHRxswift_11NewViewController",
+            "SHRxswift_12NewViewController",
+            "SHRxswift_13NewViewController",
+            "SHRxswift_14NewViewController",
+            
+            
+            
             "SHRxswift_5ViewController",
             "SHRxswift_6ViewController",
             "SHRxswift_7ViewController",

@@ -54,6 +54,7 @@ class SHBaseTableViewController: UIViewController, UIGestureRecognizerDelegate {
             //设置tableView的委托
             tableV.delegate = self
             tableV.register(UITableViewCell.self, forCellReuseIdentifier: "bookmarksCell")
+            tableV.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "secHeaderIdentifier")
             self.view.addSubview(tableV)
             return tableV
         }()
@@ -65,10 +66,10 @@ class SHBaseTableViewController: UIViewController, UIGestureRecognizerDelegate {
     
     public func p_addSectionData(with classNameArray:[String], titleArray:[String],title:String) {
         var firstArray = [SGHCellModel]()
-        for (idx,item) in classNameArray.enumerated() {
+        for (idx,item) in titleArray.enumerated() {
             let cellModel = SGHCellModel()
-            cellModel.className = item
-            cellModel.title = titleArray[idx]
+            cellModel.className = classNameArray[idx]
+            cellModel.title = item
             firstArray.append(cellModel)
         }
         
@@ -87,11 +88,18 @@ extension SHBaseTableViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        return 50.0
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.sectionTitle[section]
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let tView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "secHeaderIdentifier")
+        
+        tView?.textLabel?.numberOfLines = 0
+        tView?.textLabel?.font = UIFont.systemFont(ofSize: 10)
+        tView?.textLabel?.text = self.sectionTitle[section]
+        return tView
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray[section].count
     }
@@ -152,3 +160,4 @@ extension SHBaseTableViewController: UITableViewDelegate {
         
     }
 }
+

@@ -44,6 +44,16 @@
 		044A778923753CCE00611F0C /* Rxswift56ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044A778823753CCE00611F0C /* Rxswift56ViewModel.swift */; };
 		045846D0238FCE2B00622D96 /* SHJSONSerializationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045846CF238FCE2B00622D96 /* SHJSONSerializationViewController.swift */; };
 		048019652449B47B0024FF51 /* SHRxswift_4NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048019642449B47B0024FF51 /* SHRxswift_4NewViewController.swift */; };
+		048019682449DB780024FF51 /* SHRxswift_5NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048019672449DB780024FF51 /* SHRxswift_5NewViewController.swift */; };
+		0480196C244A04C10024FF51 /* SHRxswift_6NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480196B244A04C10024FF51 /* SHRxswift_6NewViewController.swift */; };
+		0480196E244A09240024FF51 /* SHRxswift_7NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480196D244A09240024FF51 /* SHRxswift_7NewViewController.swift */; };
+		04801970244A79400024FF51 /* SHRxswift_8NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480196F244A79400024FF51 /* SHRxswift_8NewViewController.swift */; };
+		04801972244A850B0024FF51 /* SHRxswift_9NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801971244A850B0024FF51 /* SHRxswift_9NewViewController.swift */; };
+		04801974244A8EB80024FF51 /* SHRxswift_10NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801973244A8EB80024FF51 /* SHRxswift_10NewViewController.swift */; };
+		04801976244A9F450024FF51 /* SHRxswift_11NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801975244A9F450024FF51 /* SHRxswift_11NewViewController.swift */; };
+		04801978244BD4DA0024FF51 /* SHRxswift_12NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801977244BD4DA0024FF51 /* SHRxswift_12NewViewController.swift */; };
+		0480197A244BD7CF0024FF51 /* SHRxswift_13NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801979244BD7CF0024FF51 /* SHRxswift_13NewViewController.swift */; };
+		0480197C244BE05F0024FF51 /* SHRxswift_14NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480197B244BE05F0024FF51 /* SHRxswift_14NewViewController.swift */; };
 		0487D56723AF8EF600D54858 /* SHRxswift_3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */; };
 		048E23FA2383AA5300483FE6 /* UIImagePickerController+RxCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E23F92383AA5200483FE6 /* UIImagePickerController+RxCreate.swift */; };
 		04B656AC241E2143007AB032 /* SHLayerD1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B656AB241E2143007AB032 /* SHLayerD1ViewController.swift */; };
@@ -148,6 +158,16 @@
 		044A778823753CCE00611F0C /* Rxswift56ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rxswift56ViewModel.swift; sourceTree = "<group>"; };
 		045846CF238FCE2B00622D96 /* SHJSONSerializationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHJSONSerializationViewController.swift; sourceTree = "<group>"; };
 		048019642449B47B0024FF51 /* SHRxswift_4NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_4NewViewController.swift; sourceTree = "<group>"; };
+		048019672449DB780024FF51 /* SHRxswift_5NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_5NewViewController.swift; sourceTree = "<group>"; };
+		0480196B244A04C10024FF51 /* SHRxswift_6NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_6NewViewController.swift; sourceTree = "<group>"; };
+		0480196D244A09240024FF51 /* SHRxswift_7NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_7NewViewController.swift; sourceTree = "<group>"; };
+		0480196F244A79400024FF51 /* SHRxswift_8NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_8NewViewController.swift; sourceTree = "<group>"; };
+		04801971244A850B0024FF51 /* SHRxswift_9NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_9NewViewController.swift; sourceTree = "<group>"; };
+		04801973244A8EB80024FF51 /* SHRxswift_10NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_10NewViewController.swift; sourceTree = "<group>"; };
+		04801975244A9F450024FF51 /* SHRxswift_11NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_11NewViewController.swift; sourceTree = "<group>"; };
+		04801977244BD4DA0024FF51 /* SHRxswift_12NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_12NewViewController.swift; sourceTree = "<group>"; };
+		04801979244BD7CF0024FF51 /* SHRxswift_13NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_13NewViewController.swift; sourceTree = "<group>"; };
+		0480197B244BE05F0024FF51 /* SHRxswift_14NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_14NewViewController.swift; sourceTree = "<group>"; };
 		0487D56623AF8EF600D54858 /* SHRxswift_3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRxswift_3ViewModel.swift; sourceTree = "<group>"; };
 		048E23F92383AA5200483FE6 /* UIImagePickerController+RxCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxCreate.swift"; sourceTree = "<group>"; };
 		04B656AB241E2143007AB032 /* SHLayerD1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLayerD1ViewController.swift; sourceTree = "<group>"; };
@@ -479,6 +499,16 @@
 				3FB91A6222B78856006F7104 /* SHRxswift_2ViewController.swift */,
 				0426CF1A24486E8E00C87A87 /* SHRxswift_3 */,
 				048019642449B47B0024FF51 /* SHRxswift_4NewViewController.swift */,
+				048019672449DB780024FF51 /* SHRxswift_5NewViewController.swift */,
+				0480196B244A04C10024FF51 /* SHRxswift_6NewViewController.swift */,
+				0480196D244A09240024FF51 /* SHRxswift_7NewViewController.swift */,
+				0480196F244A79400024FF51 /* SHRxswift_8NewViewController.swift */,
+				04801971244A850B0024FF51 /* SHRxswift_9NewViewController.swift */,
+				04801973244A8EB80024FF51 /* SHRxswift_10NewViewController.swift */,
+				04801975244A9F450024FF51 /* SHRxswift_11NewViewController.swift */,
+				04801977244BD4DA0024FF51 /* SHRxswift_12NewViewController.swift */,
+				04801979244BD7CF0024FF51 /* SHRxswift_13NewViewController.swift */,
+				0480197B244BE05F0024FF51 /* SHRxswift_14NewViewController.swift */,
 				044A776F23741D8700611F0C /* Others */,
 				044A77642373EECA00611F0C /* ViewModel */,
 				044A77612372E0DB00611F0C /* Service */,
@@ -775,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2DC6A3237B0D1600CB8CB6 /* GeolocationService.swift in Sources */,
+				04801974244A8EB80024FF51 /* SHRxswift_10NewViewController.swift in Sources */,
 				04B656AC241E2143007AB032 /* SHLayerD1ViewController.swift in Sources */,
 				04CB437522DED3700042A456 /* SHRxswift_18ViewController.swift in Sources */,
 				044A77632373EDEA00611F0C /* SHRxswift_52GithubViewController.swift in Sources */,
@@ -786,6 +817,7 @@
 				3FB91A6522B7886C006F7104 /* SHRxswift_1ViewController.swift in Sources */,
 				8FD821312389A12F005A8A74 /* SHRxswift_60ViewController.swift in Sources */,
 				8FD82139238A5DE3005A8A74 /* SHRxswift_62MyTableViewCell.swift in Sources */,
+				04801972244A850B0024FF51 /* SHRxswift_9NewViewController.swift in Sources */,
 				3FB94F2E22C36E84009EB6D7 /* UIImageCategory.swift in Sources */,
 				044A77852375397700611F0C /* MJRefreshComponent+Rx.swift in Sources */,
 				3FB91A5A22B7862D006F7104 /* SHTabBarViewController.swift in Sources */,
@@ -793,6 +825,7 @@
 				0400F425237012DF003E26EC /* SHRxswift_44ViewController.swift in Sources */,
 				8FB043A823725726005C0524 /* SHRxswift_48ViewController.swift in Sources */,
 				044A778723753BD500611F0C /* Network56Service.swift in Sources */,
+				0480197C244BE05F0024FF51 /* SHRxswift_14NewViewController.swift in Sources */,
 				3FB94F3022C37F0C009EB6D7 /* SHRxswift_7ViewController.swift in Sources */,
 				0400F422236FF429003E26EC /* SHRxswift_43ViewController.swift in Sources */,
 				8FD82137238A5DC2005A8A74 /* SHRxswift_62ViewController.swift in Sources */,
@@ -800,11 +833,13 @@
 				3F8CFF8922D49F540067194E /* SHRxswift_17DetailViewController.swift in Sources */,
 				8FD8212F23899E2E005A8A74 /* UIapplication+Rx.swift in Sources */,
 				8FB0439823709577005C0524 /* SHRxswift_47ViewController.swift in Sources */,
+				0480196E244A09240024FF51 /* SHRxswift_7NewViewController.swift in Sources */,
 				0430DD3122E6EFEB003390A5 /* DouBanNetworkService.swift in Sources */,
 				044A775A2372B61F00611F0C /* ObservableExtension.swift in Sources */,
 				044A77582372AA7500611F0C /* SHRxswift_50ViewController.swift in Sources */,
 				044A77832375382C00611F0C /* SHRxswift_56ViewController.swift in Sources */,
 				0430DD3822E6F900003390A5 /* GitHubModel.swift in Sources */,
+				04801976244A9F450024FF51 /* SHRxswift_11NewViewController.swift in Sources */,
 				8F95F9FC22510E98000407A6 /* AppDelegate.swift in Sources */,
 				044A776C237414C200611F0C /* SHRxswift_54ViewController.swift in Sources */,
 				3F3C513222C4995D00305FFD /* SHRxswift_8ViewController.swift in Sources */,
@@ -825,14 +860,18 @@
 				3FB94F2B22C1C9DF009EB6D7 /* SHRxswift_6ViewController.swift in Sources */,
 				0430CA3822E5CD48003390A5 /* SHRxswift_20ViewController.swift in Sources */,
 				0430DD2C22E6E832003390A5 /* ObservableType+ObjectMapper.swift in Sources */,
+				048019682449DB780024FF51 /* SHRxswift_5NewViewController.swift in Sources */,
 				8F20A43223772BC20040BE9A /* Rxswift57ViewModel.swift in Sources */,
+				0480196C244A04C10024FF51 /* SHRxswift_6NewViewController.swift in Sources */,
 				0430CA3A22E5D303003390A5 /* DouBanAPI.swift in Sources */,
 				048019652449B47B0024FF51 /* SHRxswift_4NewViewController.swift in Sources */,
 				3F8CFF8122D36A440067194E /* SHRxswift_14ViewController.swift in Sources */,
+				04801978244BD4DA0024FF51 /* SHRxswift_12NewViewController.swift in Sources */,
 				8F78F3FE238D81870086A6AA /* SHCoreMotionDemoViewController.swift in Sources */,
 				3FB91A6922B78891006F7104 /* SHRxswift_4ViewController.swift in Sources */,
 				044A778923753CCE00611F0C /* Rxswift56ViewModel.swift in Sources */,
 				8F24DA0122C9977800B8E08E /* SHRxswift_10ViewController.swift in Sources */,
+				0480197A244BD7CF0024FF51 /* SHRxswift_13NewViewController.swift in Sources */,
 				044A776E237416D600611F0C /* GitHubNetwork54Service.swift in Sources */,
 				8F20A43023772B260040BE9A /* SHRxswift_57ViewController.swift in Sources */,
 				0487D56723AF8EF600D54858 /* SHRxswift_3ViewModel.swift in Sources */,
@@ -844,6 +883,7 @@
 				8FF81D76237CE291007BB516 /* SHRxswift_59ViewController.swift in Sources */,
 				3F8CFF8522D473B10067194E /* SHRxswift_16ViewController.swift in Sources */,
 				045846D0238FCE2B00622D96 /* SHJSONSerializationViewController.swift in Sources */,
+				04801970244A79400024FF51 /* SHRxswift_8NewViewController.swift in Sources */,
 				8FD8213D238A63C4005A8A74 /* SHRxswift_63ViewController.swift in Sources */,
 				044A7777237428C900611F0C /* UILabel+Rx.swift in Sources */,
 				044A77662373EEF400611F0C /* GitHubNetworkService.swift in Sources */,
