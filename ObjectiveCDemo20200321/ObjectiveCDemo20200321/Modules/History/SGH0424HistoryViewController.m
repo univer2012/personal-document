@@ -26,7 +26,7 @@
         @"SGHCyclesMemoryLeaksVC",
     ];
     
-    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:self.title];
+    [self addSectionDataWithClassNameArray:tempClassNameArray titleArray:tempTitleArray title:@"APM 系列"];
     
     [self.tableView reloadData];
 }
