@@ -10,6 +10,7 @@
 
 #import "SGH1128BookmarksViewController.h"
 #import "SGH1128ContactsViewController.h"
+#import "SGH0424HistoryViewController.h"
 
 @interface SGH161128TabBarViewController ()
 
@@ -34,7 +35,13 @@
         navigationController;
     });
     
-    self.viewControllers = @[bookmarksNavController, contactsNavController];
+    UINavigationController *historyNavController = ({
+        UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[SGH0424HistoryViewController new]];
+        navigationController.tabBarItem = [[UITabBarItem alloc]initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
+        navigationController;
+    });
+    
+    self.viewControllers = @[bookmarksNavController, contactsNavController,historyNavController];
     
     //设置选中的tabBarItem颜色
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {

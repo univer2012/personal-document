@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043A635824532F1B00C5ADE6 /* SGH0424HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A635724532F1B00C5ADE6 /* SGH0424HistoryViewController.m */; };
+		043A635F2453301B00C5ADE6 /* SGHReferenceCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A635E2453301B00C5ADE6 /* SGHReferenceCycleViewController.m */; };
+		043A6362245330B600C5ADE6 /* SGHNameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A6361245330B600C5ADE6 /* SGHNameListViewController.m */; };
+		043A6366245330F700C5ADE6 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A6364245330F700C5ADE6 /* ArrayDataSource.m */; };
+		043A63692453310800C5ADE6 /* SGHBlockLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A63682453310800C5ADE6 /* SGHBlockLeakViewController.m */; };
+		043A636C2453313800C5ADE6 /* SGHStaticAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A636B2453313800C5ADE6 /* SGHStaticAnalysisViewController.m */; };
+		043A6370245331CE00C5ADE6 /* SGHCyclesMemoryLeaksVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A636F245331CD00C5ADE6 /* SGHCyclesMemoryLeaksVC.m */; };
 		045787CC24279E8200C2DF75 /* SGHDeallocBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045787CB24279E8200C2DF75 /* SGHDeallocBlockViewController.m */; };
 		045787E42427B37B00C2DF75 /* Girl.m in Sources */ = {isa = PBXBuildFile; fileRef = 045787D92427B37B00C2DF75 /* Girl.m */; };
 		045787E52427B37B00C2DF75 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 045787DA2427B37B00C2DF75 /* Son.m */; };
@@ -383,6 +390,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043A635624532F1B00C5ADE6 /* SGH0424HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGH0424HistoryViewController.h; sourceTree = "<group>"; };
+		043A635724532F1B00C5ADE6 /* SGH0424HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGH0424HistoryViewController.m; sourceTree = "<group>"; };
+		043A635D2453301B00C5ADE6 /* SGHReferenceCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHReferenceCycleViewController.h; sourceTree = "<group>"; };
+		043A635E2453301B00C5ADE6 /* SGHReferenceCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHReferenceCycleViewController.m; sourceTree = "<group>"; };
+		043A6360245330B600C5ADE6 /* SGHNameListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHNameListViewController.h; sourceTree = "<group>"; };
+		043A6361245330B600C5ADE6 /* SGHNameListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHNameListViewController.m; sourceTree = "<group>"; };
+		043A6364245330F700C5ADE6 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
+		043A6365245330F700C5ADE6 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		043A63672453310800C5ADE6 /* SGHBlockLeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHBlockLeakViewController.h; sourceTree = "<group>"; };
+		043A63682453310800C5ADE6 /* SGHBlockLeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHBlockLeakViewController.m; sourceTree = "<group>"; };
+		043A636A2453313800C5ADE6 /* SGHStaticAnalysisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHStaticAnalysisViewController.h; sourceTree = "<group>"; };
+		043A636B2453313800C5ADE6 /* SGHStaticAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHStaticAnalysisViewController.m; sourceTree = "<group>"; };
+		043A636E245331CD00C5ADE6 /* SGHCyclesMemoryLeaksVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SGHCyclesMemoryLeaksVC.h; path = "/Users/mac/Desktop/Personal Documents/personal-document/ObjectiveCDemo20200321/ObjectiveCDemo20200321/Modules/History/Examples/1CyclesMemoryLeaks/SGHCyclesMemoryLeaksVC.h"; sourceTree = "<absolute>"; };
+		043A636F245331CD00C5ADE6 /* SGHCyclesMemoryLeaksVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SGHCyclesMemoryLeaksVC.m; path = "/Users/mac/Desktop/Personal Documents/personal-document/ObjectiveCDemo20200321/ObjectiveCDemo20200321/Modules/History/Examples/1CyclesMemoryLeaks/SGHCyclesMemoryLeaksVC.m"; sourceTree = "<absolute>"; };
 		045787CA24279E8200C2DF75 /* SGHDeallocBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGHDeallocBlockViewController.h; sourceTree = "<group>"; };
 		045787CB24279E8200C2DF75 /* SGHDeallocBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGHDeallocBlockViewController.m; sourceTree = "<group>"; };
 		045787D52427B37B00C2DF75 /* CYLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLUser.h; sourceTree = "<group>"; };
@@ -1079,6 +1100,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043A635524532EE400C5ADE6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				043A635624532F1B00C5ADE6 /* SGH0424HistoryViewController.h */,
+				043A635724532F1B00C5ADE6 /* SGH0424HistoryViewController.m */,
+				043A635924532FCF00C5ADE6 /* Examples */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		043A635924532FCF00C5ADE6 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				043A636D2453318000C5ADE6 /* 1CyclesMemoryLeaks */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		043A6363245330F700C5ADE6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				043A6364245330F700C5ADE6 /* ArrayDataSource.m */,
+				043A6365245330F700C5ADE6 /* ArrayDataSource.h */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		043A636D2453318000C5ADE6 /* 1CyclesMemoryLeaks */ = {
+			isa = PBXGroup;
+			children = (
+				043A636E245331CD00C5ADE6 /* SGHCyclesMemoryLeaksVC.h */,
+				043A636F245331CD00C5ADE6 /* SGHCyclesMemoryLeaksVC.m */,
+				043A6371245331F700C5ADE6 /* Examples */,
+			);
+			path = 1CyclesMemoryLeaks;
+			sourceTree = "<group>";
+		};
+		043A6371245331F700C5ADE6 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				043A6363245330F700C5ADE6 /* DataSource */,
+				043A635D2453301B00C5ADE6 /* SGHReferenceCycleViewController.h */,
+				043A635E2453301B00C5ADE6 /* SGHReferenceCycleViewController.m */,
+				043A6360245330B600C5ADE6 /* SGHNameListViewController.h */,
+				043A6361245330B600C5ADE6 /* SGHNameListViewController.m */,
+				043A63672453310800C5ADE6 /* SGHBlockLeakViewController.h */,
+				043A63682453310800C5ADE6 /* SGHBlockLeakViewController.m */,
+				043A636A2453313800C5ADE6 /* SGHStaticAnalysisViewController.h */,
+				043A636B2453313800C5ADE6 /* SGHStaticAnalysisViewController.m */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		045787C2242769FA00C2DF75 /* 《招聘一个靠谱的iOS》面试题参考答案Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1827,6 +1901,7 @@
 		8F310E9924264FAF00421E7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				043A635524532EE400C5ADE6 /* History */,
 				8F310E9A24264FAF00421E7A /* Contacts */,
 				8F310E9E24264FAF00421E7A /* Bookmarks */,
 			);
@@ -4751,6 +4826,7 @@
 				04F6ECB42429E87E00D7F1CB /* SGH0728CALayerViewController.m in Sources */,
 				04F6EC842429AEA000D7F1CB /* Reachability.m in Sources */,
 				8F311633242D01FA00421E7A /* SGHFilterViewController.m in Sources */,
+				043A635824532F1B00C5ADE6 /* SGH0424HistoryViewController.m in Sources */,
 				8F31163D242D01FA00421E7A /* SGHTakeLastViewController.m in Sources */,
 				8F310B952425B29300421E7A /* main.m in Sources */,
 				8F3114182426E6EF00421E7A /* SGHStringShowViewController.m in Sources */,
@@ -4778,6 +4854,7 @@
 				8F3110BE24264FB100421E7A /* SGH0429CryptographyViewController.m in Sources */,
 				8F3110B524264FB100421E7A /* GJCell.m in Sources */,
 				8F311642242D01FA00421E7A /* LxDBAnythingViewController.m in Sources */,
+				043A6370245331CE00C5ADE6 /* SGHCyclesMemoryLeaksVC.m in Sources */,
 				8F31112A24264FB100421E7A /* SGH1012PlaceholderColorViewController.m in Sources */,
 				8F31157E242995AE00421E7A /* SGH170506MyClass.m in Sources */,
 				8F31149F2426EB4C00421E7A /* SGH0618DynaAnnotationViewController.m in Sources */,
@@ -4852,10 +4929,12 @@
 				8F31157F242995AE00421E7A /* SGH0506Test.m in Sources */,
 				8F31141C2426E6EF00421E7A /* SGHNSURLSessionViewController.m in Sources */,
 				8F3110CC24264FB100421E7A /* SGH0424DreamLBSViewController.m in Sources */,
+				043A6362245330B600C5ADE6 /* SGHNameListViewController.m in Sources */,
 				8F3115C7242A5AFD00421E7A /* UIViewController+Description.m in Sources */,
 				8F311586242995AE00421E7A /* UIView+SGHTapGesture.m in Sources */,
 				8F31109124264FB100421E7A /* SHRAC12ViewModel.m in Sources */,
 				8F31162E242D01FA00421E7A /* SGHSwitchToLatestViewController.m in Sources */,
+				043A6366245330F700C5ADE6 /* ArrayDataSource.m in Sources */,
 				8F3110A924264FB100421E7A /* WBPictureMetadata.m in Sources */,
 				8F3110DB24264FB100421E7A /* SHCoreDataDemoVC.m in Sources */,
 				8F3110C024264FB100421E7A /* NSString+Hash.m in Sources */,
@@ -4892,7 +4971,9 @@
 				049678F92427C56100F2FD83 /* SGHCoreText2ViewController.m in Sources */,
 				8F3110F924264FB100421E7A /* UITableView+SHDefaultDisplay.m in Sources */,
 				8F3115DF242A60F500421E7A /* PersonModel.m in Sources */,
+				043A63692453310800C5ADE6 /* SGHBlockLeakViewController.m in Sources */,
 				8FF058D3243D5B46006F74E9 /* SGHSocket.m in Sources */,
+				043A636C2453313800C5ADE6 /* SGHStaticAnalysisViewController.m in Sources */,
 				8F3110F624264FB100421E7A /* SGH1108ActivityShareViewController.m in Sources */,
 				8F31163E242D01FA00421E7A /* SGHTimeoutViewController.m in Sources */,
 				8F311645242D01FA00421E7A /* SGHKVOViewController.m in Sources */,
@@ -4980,6 +5061,7 @@
 				8F31141F2426E6EF00421E7A /* SGHUniqueUUID_UDIDViewController.m in Sources */,
 				0457881E2427BA6300C2DF75 /* CoreTextData.m in Sources */,
 				8F31110224264FB100421E7A /* SGH1221SelectedCellsViewController.m in Sources */,
+				043A635F2453301B00C5ADE6 /* SGHReferenceCycleViewController.m in Sources */,
 				8F3110EA24264FB100421E7A /* SGH0208UncaughtExceptionViewController.m in Sources */,
 				04F6EC792429AEA000D7F1CB /* SGHPickerViewViewController.m in Sources */,
 				8F31108324264FB100421E7A /* TBXML.m in Sources */,
