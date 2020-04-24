@@ -75,10 +75,10 @@ class SHRxswift_54ViewController: UIViewController {
         
     }
     
-    func showMessage(_ message: String) {
-        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
+//    func showMessage(_ message: String) {
+//        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+//        alertController.addAction(okAction)
+//        self.present(alertController, animated: true, completion: nil)
+//    }
 }

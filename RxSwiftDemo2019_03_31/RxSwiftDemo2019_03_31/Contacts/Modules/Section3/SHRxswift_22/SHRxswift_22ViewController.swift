@@ -25,19 +25,60 @@ class SHRxswift_22ViewController: SHBaseTableViewController {
             "1.监听单个 textField 内容的变化（textView 同理）",
             "1_2.直接使用 change 事件效果也是一样的。",
             "2.将内容绑定到其他控件上",
+            "3.同时监听多个 textField 内容的变化（textView 同理）",
+            "4.事件监听",
+            "5.UITextView 独有的方法",
         ]
         var tempClassNameArray = [
             "demo1",
             "demo1_2",
             "demo2",
+            "demo3",
+            "demo4",
+            "demo5",
         ]
         self.p_addSectionData(with: tempClassNameArray, titleArray: tempTitleArray, title: "二、UITextField 与 UITextView")
     }
     
+    //MARK: 5.UITextView 独有的方法
+    /*
+     ### 附：UITextView 独有的方法
+     （1）UITextView 还封装了如下几个委托回调方法：
+
+     * didBeginEditing：开始编辑
+     * didEndEditing：结束编辑
+     * didChange：编辑内容发生改变
+     * didChangeSelection：选中部分发生变化
+     */
+    @objc func demo5() {
+        
+        self.pushToNewVC(with: "SHRxswift_22D5ViewController", title: "UITextView 独有的方法", true)
+        
+    }
+    
+    //MARK: 4.事件监听
+    ///### 4，事件监听
+    /*
+     （1）通过 rx.controlEvent 可以监听输入框的各种事件，且多个事件状态可以自由组合。除了各种 UI 控件都有的 touch 事件外，输入框还有如下几个独有的事件：
+
+     * editingDidBegin：开始编辑（开始输入内容）
+     * editingChanged：输入内容发生改变
+     * editingDidEnd：结束编辑
+     * editingDidEndOnExit：按下 return 键结束编辑
+     * allEditingEvents：包含前面的所有编辑相关事件
+
+     */
+    @objc func demo4() {
+        
+        self.pushToNewVC(with: "SHRxswift_22D4ViewController", title: "事件监听", true)
+        
+    }
     
     //MARK: 3.同时监听多个 textField 内容的变化（textView 同理）
     ///### 3，同时监听多个 textField 内容的变化（textView 同理）
     @objc func demo3() {
+        
+        self.pushToNewVC(with: "SHRxswift_22D3ViewController", title: "同时监听多个 textField 内容的变化", true)
         
     }
     

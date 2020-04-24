@@ -51,21 +51,6 @@ class SHRxswift_21NewViewController: SHBaseTableViewController {
             .disposed(by: disposeBag)
     }
     
-    //
-    func formatTimeInterval(ms: NSInteger) -> NSMutableAttributedString {
-        let string = String(format: "%0.2d:%0.2d.%0.1d", arguments: [(ms / 600) % 600, (ms % 600) / 10, ms % 10])
-        
-        //
-        let attributeString = NSMutableAttributedString(string: string)
-        //从文本0开始6个字符字体HelveticaNeue-Bold,16号
-        attributeString.addAttribute(NSAttributedString.Key.font, value: UIFont(name: "HelveticaNeue-Bold", size: 16)!, range: NSMakeRange(0, 5))
-        //设置字体颜色
-        attributeString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: NSMakeRange(0, 5))
-        //设置文字背景颜色
-        attributeString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.orange, range: NSMakeRange(0, 5))
-        return attributeString
-    }
-    
     //MARK: 一、UILabel
     ///1，将数据绑定到 text 属性上（普通文本）
     //MARK: 1.将数据绑定到 text 属性上（普通文本）
@@ -85,4 +70,22 @@ class SHRxswift_21NewViewController: SHBaseTableViewController {
             .disposed(by: disposeBag)
     }
 
+}
+
+extension UIViewController {
+    
+    //将数字转成对应的富文本
+    func formatTimeInterval(ms: NSInteger) -> NSMutableAttributedString {
+        let string = String(format: "%0.2d:%0.2d.%0.1d", arguments: [(ms / 600) % 600, (ms % 600) / 10, ms % 10])
+        
+        //
+        let attributeString = NSMutableAttributedString(string: string)
+        //从文本0开始6个字符字体HelveticaNeue-Bold,16号
+        attributeString.addAttribute(NSAttributedString.Key.font, value: UIFont(name: "HelveticaNeue-Bold", size: 16)!, range: NSMakeRange(0, 5))
+        //设置字体颜色
+        attributeString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: NSMakeRange(0, 5))
+        //设置文字背景颜色
+        attributeString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.orange, range: NSMakeRange(0, 5))
+        return attributeString
+    }
 }

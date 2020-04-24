@@ -8,6 +8,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class SGHCellModel: NSObject {
     var title: String = ""
     var className: String = ""
@@ -67,7 +70,7 @@ class SHBaseTableViewController: UIViewController, UIGestureRecognizerDelegate {
     func remakeTableViewConstraints(with view: UIView) {
         self.tableView?.snp_remakeConstraints({ (make) in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalTo(view.snp_bottom)
+            make.top.equalTo(view.snp_bottom).offset(10)
         })
     }
     
@@ -87,6 +90,43 @@ class SHBaseTableViewController: UIViewController, UIGestureRecognizerDelegate {
         self.dataArray.append(sectionArray)
         self.sectionTitle.append(title)
     }
+    
+    /// 跳转到 新的VC，
+    public func pushToNewVC(with className: String,title:String,_ inBookmarkStoryboard:Bool,selText:String = "") {
+        
+        ///解决方案来自：[Swift 通过字符串 转换成对应的 UIViewController](https://www.jianshu.com/p/d5daa8485227)
+        
+        // 1.动态获取命名空间
+        guard let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"]as? String else {
+        return;
+        }
+        // 2.根据字符串获取对应的Class并转成控制器的类型
+        if let cls = NSClassFromString(nameSpace + "." + className) as? UIViewController.Type {
+            
+            if inBookmarkStoryboard {
+                
+                let vc = UIStoryboard(name: "Bookmark", bundle: Bundle(for: cls)).instantiateViewController(withIdentifier: className)
+                vc.title = title
+                vc.hidesBottomBarWhenPushed = true
+                _ = vc.rx.viewDidLoad.asObservable().takeUntil(self.rx.deallocated).subscribe(onNext: {[weak vc] in
+                    if selText.count > 0 {
+                        vc?.executeSelector(with: selText)
+                    }
+                })
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            } else {
+
+                // 3.创建对应的控制器对象
+                let vc: UIViewController = cls.init()
+                vc.title = title
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
 }
 
 extension SHBaseTableViewController : UITableViewDataSource {
@@ -131,40 +171,26 @@ extension SHBaseTableViewController: UITableViewDelegate {
         let cellModel = self.dataArray[indexPath.section][indexPath.row]
         let className = cellModel.className
         
-        ///解决方案来自：[Swift 通过字符串 转换成对应的 UIViewController](https://www.jianshu.com/p/d5daa8485227)
-        
         if self.actionType == .newVC {
-            // 1.动态获取命名空间
-            guard let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"]as? String else{
-            return;
-            }
-            // 2.根据字符串获取对应的Class并转成控制器的类型
-            if let cls = NSClassFromString(nameSpace + "." + className) as? UIViewController.Type {
-                
-                if inStoryboardVCArray?.contains(className) ?? false {
-                    
-                    let vc = UIStoryboard(name: "Bookmark", bundle: Bundle(for: cls)).instantiateViewController(withIdentifier: className)
-                    vc.title = cellModel.title
-                    vc.hidesBottomBarWhenPushed = true
-                    self.navigationController?.pushViewController(vc, animated: true)
-                    
-                } else {
-
-                    // 3.创建对应的控制器对象
-                    let vc: UIViewController = cls.init()
-                    vc.title = cellModel.title
-                    vc.hidesBottomBarWhenPushed = true
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
-            }
+            
+            let inStoryboard = inStoryboardVCArray?.contains(className) ?? false
+            
+            self.pushToNewVC(with: className, title: cellModel.title, inStoryboard)
             
         } else {
-            //执行方法
-            let sel = NSSelectorFromString(className)
-            self.perform(sel)
+            
+            self.executeSelector(with: className)
         }
         
         
     }
 }
 
+
+extension UIViewController {
+    //执行方法
+    public func executeSelector(with selText: String) {
+        let sel = NSSelectorFromString(selText)
+        self.perform(sel)
+    }
+}

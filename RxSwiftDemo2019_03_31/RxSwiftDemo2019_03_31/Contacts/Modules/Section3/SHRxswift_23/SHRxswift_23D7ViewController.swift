@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SHRxswift_6ViewController: UIViewController {
+class SHRxswift_23D7ViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     @IBOutlet weak var button1: UIButton!

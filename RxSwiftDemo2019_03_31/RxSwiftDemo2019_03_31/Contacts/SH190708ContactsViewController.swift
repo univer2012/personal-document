@@ -79,6 +79,14 @@ class SH190708ContactsViewController: SHBaseTableViewController {
         tempTitleArray = [
             "使用详解21（UI控件扩展1：UILabel）",
             "使用详解22（UI控件扩展2：UITextField、UITextView）",
+            "使用详解23（UI控件扩展3：UIButton、UIBarButtonItem）",
+            "使用详解24（UI控件扩展4：UISwitch、UISegmentedControl）",
+            "使用详解25（UI控件扩展5：UIActivityIndicatorView、UIApplication）",
+            "使用详解26（UI控件扩展6：UISlider、UIStepper）",
+            "使用详解27（双向绑定：<->）",
+            
+            
+            
             
             "5UITextView",
             "6UIButton",
@@ -122,6 +130,12 @@ class SH190708ContactsViewController: SHBaseTableViewController {
         tempClassNameArray = [
             "SHRxswift_21NewViewController",
             "SHRxswift_22ViewController",
+            "SHRxswift_23ViewController",
+            "SHRxswift_24ViewController",
+            "SHRxswift_25ViewController",
+            "SHRxswift_26ViewController",
+            "SHRxswift_27ViewController",
+            
             
             
             "SHRxswift_5ViewController",

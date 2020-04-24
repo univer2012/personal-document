@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SHRxswift_5ViewController: UIViewController {
+class SHRxswift_22D5ViewController: UIViewController {
     
     let disposeBag = DisposeBag()
 
