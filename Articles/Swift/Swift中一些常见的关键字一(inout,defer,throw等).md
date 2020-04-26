@@ -252,3 +252,4 @@ do {
 代码中看到，`willRethrow`本身并不对错误进行处理，原因是它本身并不会差生错误。另外的，它的参数`throwCall`进行了错误的处理，`willRethrow`对`throwCall`的错误进行再次`throw`。
 
  简单来说，`rethorws`就是`throws`的传递，也即是对于throw的一个层次级别的应用。我们甚至可以进行多级传递，但是会导致代码过于复杂，不建议这么做。
+

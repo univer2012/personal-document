@@ -59,7 +59,7 @@ print(result)
 ##### 对[SequenceType](https://link.jianshu.com?t=http://swiftdoc.org/v2.0/protocol/SequenceType/)进行`map`操作
 
 **我们可以使用`map`方法遍历数组中的所有元素，并对这些元素一一进行一样的操作（函数方法）。**`map`方法返回完成操作后的数组。
- 
+
 
 ![img](https:////upload-images.jianshu.io/upload_images/1869329-e17438ddf8171bbf.png?imageMogr2/auto-orient/strip|imageView2/2/w/1188)
 
@@ -251,7 +251,7 @@ extension SequenceType {
 }
 ```
 
-通过这两个描述，就提现了`flatMap`对[SequenceType](https://link.jianshu.com?t=http://swiftdoc.org/v2.0/protocol/SequenceType/)的两个作用：
+通过这两个描述，就体现了`flatMap`对[SequenceType](https://link.jianshu.com?t=http://swiftdoc.org/v2.0/protocol/SequenceType/)的两个作用：
 
 ##### 一：压平
 
