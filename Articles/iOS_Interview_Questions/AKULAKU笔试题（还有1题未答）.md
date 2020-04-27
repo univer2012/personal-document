@@ -383,6 +383,21 @@ print(flattenResults)
 
 ## 5.GCD与NSOperationQueue有哪些异同
 
+来自：[iOS面试题01-多线程网络（★★★）](https://www.jianshu.com/p/3f6108b28598)
+
+1>GCD是纯C语言的API，NSOperationQueue是基于GCD的OC版本封装
+ 2>GCD只支持FIFO的队列，NSOperationQueue可以很方便地调整执行顺
+ 序、设置最大并发数量
+ 3>NSOperationQueue可以在轻松在Operation间设置依赖关系，而GCD
+ 需要写很多的代码才能实现
+ 4>NSOperationQueue支持KVO，可以监测operation是否正在执行
+ （isExecuted）、是否结束（isFinished），是否取消（isCanceld）
+ 5>GCD的执行速度比NSOperationQueue快
+ 任务之间不太互相依赖：GCD
+ 任务之间有依赖\或者要监听任务的执行情况：NSOperationQueue
+
+
+
 ## 6.图解MVC，MVVM架构
 
 来自：[iOS 架构模式--解密 MVC，MVP，MVVM以及VIPER架构](https://www.cnblogs.com/oc-bowen/p/6255475.html)
